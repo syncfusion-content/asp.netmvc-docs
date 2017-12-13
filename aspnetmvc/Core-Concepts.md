@@ -13,15 +13,15 @@ documentation: ug
 
 ### API Configuration
 
-Using fluent helper methods we can set values to Syncfusion Widget properties during or after the creation.
+Set the values to Syncfusion Widget properties during or after the creation by using fluent helper methods.
 
 ![](core-concepts_images/core-concepts_img1.png)
 
-In the above example, minimum & maximum range defined for DatePicker component. 
+In the above example, minimum and maximum ranges are defined for DatePicker component.
 
 ### Wiring Client Side Events
 
-Client side events can be wired in the same way as properties. But here all the client side events are grouped into **“ClientSideEvents”** Action method
+Client side events can be wired in the same way as properties. But here all the client side events are grouped into **“ClientSideEvents”** Action method.
 
 1. Specify the client side event name in string format.
 
@@ -40,7 +40,7 @@ Client side events can be wired in the same way as properties. But here all the 
      )
    ~~~
 
-2. Declare the client side events in Script sections
+2. Declare the client side events in Script sections.
 
    ~~~ cshtml
 			
@@ -63,21 +63,21 @@ Client side events can be wired in the same way as properties. But here all the 
    
 ### Invoking methods
 
-Syncfusion JavaScript widget client side methods can be accessed via their client side object. You can access the client side object via jQuery.data() utility method.   
+Syncfusion JavaScript widget client side methods can be accessed via their client side object. You can access the client side object via jQuery.data() utility method.
 
-1. Create server side component in CSHTML
+1. Create server side component in CSHTML.
 
    ~~~ cshtml
    
 	@(Html.EJ().DatePicker(“MyFirstDatepicker")
 		.MinDate(new DateTime(2016,5,1))
 		.MaxDate(new DateTime(2016,12,31))
-	    .Value(DateTime.Now.AddDays(1) )                								
+	    .Value(DateTime.Now.AddDays(1) )
 	)
 
    ~~~
    
-2. Access the client side object using jQuery.data() as shown below
+2. Access the client side object using jQuery.data() as shown in the following:
 
    ~~~ cshtml
    
@@ -92,15 +92,15 @@ Syncfusion JavaScript widget client side methods can be accessed via their clien
    
    ~~~
 
-3. Access the method from client side object as like properties access as show below
+3. Access the method from client side object like properties access, as shown in the following.
 
    ~~~ cshtml
 		
 	<script>
 		$(document).ready(function () {
-		var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");            
+		var datepickerObject = $("#MyFirstDatepicker").data("ejDatePicker");
 		datepickerObject.disable(); // to disable the datepicker object
-		var selectedDate = datepickerObject.getValue(); // to access the selected value            
+		var selectedDate = datepickerObject.getValue(); // to access the selected value
         });
 	</script>
 			

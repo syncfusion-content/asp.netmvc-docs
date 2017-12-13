@@ -12,99 +12,99 @@ documentation: ug
 ## Installation
 
 * Download the setup file (.exe) of Essential Studio for ASP.NET MVC product from this [link](http://www.syncfusion.com/downloads/aspnetmvc) with your Syncfusion account.
-* You can now follow the steps mentioned in the [setup guide](http://help.syncfusion.com/common/essential-studio/essential-studio-installer-for-individual-platform) install the specific/entire platform in your machine.
+* Follow the steps mentioned in the [setup guide](http://help.syncfusion.com/common/essential-studio/essential-studio-installer-for-individual-platform) and install the specific/entire platform in your machine.
 
-## Configuring Syncfusion NuGet Packages in Visual Studio 
+## Configuring Syncfusion NuGet Packages in Visual Studio
 
-Syncfusion ASP.NET MVC NuGet packages are available [here](http://nuget.syncfusion.com/package/aspnetmvc).
+The Syncfusion ASP.NET MVC NuGet packages are available [here](http://nuget.syncfusion.com/package/aspnetmvc).
 
-N> If you wish to use the ASP.NET MVC NuGet packages then Essential Studio or ASP.NET MVC platform installation not required to implement with Syncfusion ASP.NET MVC controls. 
+N> To use the ASP.NET MVC NuGet packages, the Essential Studio or ASP.NET MVC platform installation are not required to implement with the Syncfusion ASP.NET MVC controls.
 
-### NuGet Configuration 
+### NuGet Configuration
 
-Syncfusion NuGet Package feed links are configured in Visual Studio in the following ways,
+Syncfusion NuGet Package feed links are configured in Visual Studio by the following ways:
 
 1. Syncfusion NuGet Package Manager
 2. NuGet Package Manager settings
 
 #### Syncfusion NuGet Package Manager
 
-The steps to configure the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio are as follows,
+The steps to configure the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio are as follows:
 
-1. **Syncfusion NuGet Manager** is allows you to **add** the Syncfusion NuGet sources (for available platforms) to NuGet Package Manager. Download the [Syncfusion NuGet Manager](http://www.syncfusion.com/downloads/support/directtrac/general/ze/SyncfusionNugetManager-1610952973.zip) utility.
-2. Extract zip file and run the SyncfusionNuGetManager.exe
+1. The **Syncfusion NuGet Manager** allows you to **add** the Syncfusion NuGet sources (for available platforms) to NuGet Package Manager. Download the [Syncfusion NuGet Manager](http://www.syncfusion.com/downloads/support/directtrac/general/ze/SyncfusionNugetManager-1610952973.zip) utility.
+2. Extract zip file and run the SyncfusionNuGetManager.exe.
 3. Syncfusion NuGet Manager Window will be opened.
 4. Select the platform **ASP.NET MVC** from **“Select platforms to add”** (Left side of the window) column and click **Add>>** button. Then click **Configure** button.
 
    ![](installation-and-deployment_images/Syncfusion_NuGet_Manager_img1.jpg)
 
-5. Once Syncfusion NuGet Manager added the Syncfusion NuGet sources, the changes will be reflected in package sources of your Visual Studio. 
+5. Once Syncfusion NuGet Manager adds the Syncfusion NuGet sources, the changes will be reflected in the package sources of your Visual Studio. 
 
    ![](installation-and-deployment_images/Syncfusion_NuGet_Manager_img2.jpg)
 
-**Note:** Get the more details about Syncfusion NuGet Manager utility from [here](https://help.syncfusion.com/extension/syncfusion-nuget-packages/syncfusion-nuget-manager).
+**Note:** Get more details about Syncfusion NuGet Manager utility from [here](https://help.syncfusion.com/extension/syncfusion-nuget-packages/syncfusion-nuget-manager).
 
-#### NuGet Package Manager settings 
+#### NuGet Package Manager settings
 
-The steps to configure the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio are as follows,
+The steps to configure the Syncfusion ASP.NET MVC NuGet Packages in Visual Studio are as follows:
 
-1. In Visual Studio, navigate to `Tools | NuGet Package Manager | Package Manager Settings`, the options dialog will appear on the screen as shows below,
+1. In Visual Studio, navigate to `Tools | NuGet Package Manager | Package Manager Settings`, the options dialog will appear on the screen as shown in the following:
 
    ![](installation-and-deployment_images/NuGetConfig1.jpeg)
 
-2. Select `NuGet Package Manager | Package Sources` and click `Add` button to add the `Package Name` and `Package Source` of Syncfusion NuGet Packages.    
+2. Select `NuGet Package Manager | Package Sources` and click `Add` button to add the `Package Name` and `Package Source` of Syncfusion NuGet Packages.
 
-   **Name**: Name of the package that listed in Available package sources  
+   **Name**: Name of the package that is listed in Available package sources
    **Source**: Syncfusion ASP.NET MVC NuGet Package feed URL
-   [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc)
+   [http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc](http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc).
     
    ![](installation-and-deployment_images/NuGetConfig2.jpeg)
 
-   N> The `Source` text box in the above image denotes the location of the NuGet packages and the `Name` section, allows you to provide a unique name for NuGet Packages Source.
+   N> The `Source` text box in the above image denotes the location of the NuGet packages and the `Name` section allows you to provide a unique name for NuGet Packages Source.
    
-I> Syncfusion other platforms NuGet packages feed links are available [here](http://nuget.syncfusion.com/)
+I> Syncfusion other platforms NuGet packages feed links are available [here](http://nuget.syncfusion.com/).
 
 ### NuGet Installation
 
-Syncfusion ASP.NET MVC NuGet can install once configured the package source. The NuGet installation steps as below,
+Syncfusion ASP.NET MVC NuGet is installed once the package source is configured. The NuGet installation steps are as follows:
 
-1. Once configured the Package source with Syncfusion NuGet Packages, right click on project and choose `Manage NuGet Packages | Online | <Package Source Name>`.
+1. Once the Package source is configured with Syncfusion NuGet Packages, right click the project and choose `Manage NuGet Packages | Online | <Package Source Name>`.
 
    ![](installation-and-deployment_images/NuGetConfig3.jpeg)
 
-2. The NuGet Packages are listed which are available in package source location. Install the required packages to your application by clicking `Install` button.
+2. The available NuGet Packages are listed that in package source location. Install the required packages to your application by clicking the `Install` button.
 
-   N> NuGet packages can be install directly through the **command line** (Package Manager Console). Further details click [here](http://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-install-and-configuration#install-from-package-manager-console)
+   N> NuGet packages can be installed directly through the **command line** (Package Manager Console). For further details click [here](http://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-install-and-configuration#install-from-package-manager-console).
 
 ### Updating a NuGet Package
 
-Using the `Manage NuGet Packages` in Visual Studio, NuGet packages can be update.
+NuGet packages can be updated using the `Manage NuGet Packages` in Visual Studio.
  
-1. Right click on Project and Navigate to the `Manage NuGet Packages` and click on the `Updates` tab to check for updates.
+1. Right click the Project and Navigate to the `Manage NuGet Packages`, and then click the `Updates` tab to check for updates.
 
 2. Select the `Updates -> <Syncfusion Package Source>`. Refer to the following screenshot for more information.
 
    ![](installation-and-deployment_images/NuGetConfig4.jpeg)
 
-3. If there is a new version of NuGet you will see it in the list of available updates.
+3. If there is a new version of NuGet, you can see it in the list of available updates.
 
-4. Select NuGet Package in the list and click `Update`. When the update is complete, close and re-open all open instances of Visual Studio.
+4. Select NuGet Package in the list and click `Update`. When the update is complete, close and re-open all the open instances of Visual Studio.
 
-   N> By clicking `Update All` button, all NuGet packages are getting update. When the update is complete, close and re-open all open instances of Visual Studio. If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29).  Syncfusion ASP.NET MVC NuGet package naming structure has changed from 2015 Volume 2(v13.2.0.29). Navigate below [NuGet Package Structure](https://help.syncfusion.com/aspnetmvc/installation-and-deployment#nuget-packages-structure) topic for more information about this.  
+   N> Click the `Update All` button, to update all the NuGet packages. When the update is complete, close and re-open all the open instances of Visual Studio. The latest package cannot be updated, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). Syncfusion ASP.NET MVC NuGet package naming structure has been changed from 2015 Volume 2(v13.2.0.29). For more information refer to the [NuGet Package Structure](https://help.syncfusion.com/aspnetmvc/installation-and-deployment#nuget-packages-structure) topic.
    
-## Configuring Syncfusion NuGet Packages from command line in Linux/MAC 
+## Configuring Syncfusion NuGet Packages from command line in Linux/MAC
    
 ### NuGet Configuration
    
-1. Download the latest NuGet executable from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).  
+1. Download the latest NuGet executable from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).
 
-2. Open the downloaded executable location in command window and run the following command,
+2. Open the downloaded executable location in command window and run the following command:
 
      mono nuget.exe Sources Add –Name [Source name] –Source [source location]
 
-     For Ex: mono nuget.exe Add –Name “Syncfusion Source” –Source “http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc”
+     For example: mono nuget.exe Add –Name “Syncfusion Source” –Source “http://nuget.syncfusion.com/nuget_aspnetmvc/nuget/getsyncfusionpackages/aspnetmvc”
                                                                                   
-3. Once the Source gets added successfully the confirmation message will be shown like below.
+3. Once the Source gets added successfully the confirmation message will be shown like the following.
 
      For Linux OS :
 
@@ -116,11 +116,11 @@ Using the `Manage NuGet Packages` in Visual Studio, NuGet packages can be update
 
 ### NuGet Installation
 
-Once the NuGet source has been added, then install the NuGet package which is available in that source by using following command.
+Once the NuGet source has been added, then install the NuGet package available in that source by using the following command.
 
 mono nuget.exe install [Package name] 
 
-For Ex: mono nuget.exe install “Syncfusion.EJ” – Pre release 
+For Ex: mono nuget.exe install “Syncfusion.EJ” – Pre release
 
 For Linux OS :
 
@@ -135,13 +135,13 @@ For MAC OS :
 
 ### Overview
 
-[Bower](http://bower.io) is a package manager for the Web. Syncfusion Bower package allows you to use the Syncfusion JavaScript Widgets in an efficient way.
+The [Bower](http://bower.io) is a package manager for the Web. Syncfusion Bower package allows to use the Syncfusion JavaScript Widgets in an efficient way.
 
-I>Syncfusion JavaScript Bower package is available as [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as Syncfusion-JavaScript in the Bower registry.
+I>Syncfusion JavaScript Bower package is available in [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as Syncfusion-JavaScript in the Bower registry.
 
 ### Bower Installation
 
-To configure the Bower in your machine you need to install [node, npm](http://nodejs.org) and [git](http://git-scm.org). For more information to configure the Bower package please refer the official site for [bower](http://bower.io/#install-bower). 
+To configure the Bower in your machine you need to install [node, npm](http://nodejs.org) and [git](http://git-scm.org). For more information to configure the Bower package, please refer to the official site for [bower](http://bower.io/#install-bower).
 Syncfusion JavaScript Bower package can be configured in the following ways.
 
 1. Using command prompt.
@@ -152,43 +152,43 @@ Syncfusion JavaScript Bower package can be configured in the following ways.
 
 #### Using command prompt
 
-Perform the below steps to install Syncfusion Bower Package via command prompt in your web application.
+Perform the following steps to install the Syncfusion Bower Package via command prompt in your web application.
 
 1. Open your web project’s location in a command prompt window.
 
 2. Then run the command Bower install <package name>.
 
    ~~~
-   bower install syncfusion-javascript
+   Bower install syncfusion-javascript
    ~~~
    
    ![](Installation-and-Deployment_images/Installation-and-Deployment_img1.jpeg)
 
 3. The Bower will install the Syncfusion JavaScript files into the project location to develop with Syncfusion controls.
 
-N>To install a particular version of a Bower package, you need to provide the version as suffix of the package name while installing. For instance, run the below command, Eg: To install the package of version 13.3.0.18. 
+N>To install a particular version of a Bower package, you need to provide the version as suffix of the package name while installing. For instance, run the following command to install the package of version 13.3.0.18.
 N>'bower install Syncfusion-javascript#13.3.0.18'
 
 #### Using bower.json file
 
-In another way, you can add the packages to the bower.json file by simply specify the package name. This will install/restore the packages to your project. Please refer the below image.
+In another way, you can add the packages to the bower.json file by simply specifying the package name. This will install/restore the packages to your project. Please refer to the following image.
  
 ![](Installation-and-Deployment_images/Installation-and-Deployment_img2.jpeg)
 
-N>ASP.NET 5 (preview) projects have bower.json file by default. If your project doesn’t have bower.json file then run the below command from your project directory by Command prompt. 
+N>By default, ASP.NET 5 (preview) projects have the bower.json file. If your project doesn’t have bower.json file, run the following command from your project directory by Command prompt.
 N>'bower init'
 
 ![](Installation-and-Deployment_images/Installation-and-Deployment_img3.jpeg)
 
 #### From local directory
 
-You can install the Syncfusion Bower package from a local directory. To perform this follow the below steps.
+You can install the Syncfusion Bower package from a local directory. To perform this, follow the below steps.
 
-1. Navigate the [Syncfusion JavaScript Bower repository](https://github.com/syncfusion/JavaScript-Widgets/) location on GitHub and download the repository as zip by click the “Download ZIP” button and extract the contents in your computer’s any of the local directory.
+1. Navigate the [Syncfusion JavaScript Bower repository](https://github.com/syncfusion/JavaScript-Widgets/) location on GitHub and download the repository as zip by clicking the “Download ZIP” button, and extract the contents to any of the local directory in your computer.
 
    ![](Installation-and-Deployment_images/Installation-and-Deployment_img4.jpeg)
 
-2. Then run the install command by providing the package content’s location. 
+2. Then run the install command by providing the package content’s location.
 
    ![](Installation-and-Deployment_images/Installation-and-Deployment_img5.jpeg)
 
@@ -197,7 +197,7 @@ You can install the Syncfusion Bower package from a local directory. To perform 
 To update the installed Bower packages, run the command Bower update <package name>.
 
 ~~~
-bower update syncfusion-javascript
+Bower update syncfusion-javascript
 ~~~
 
 ![](Installation-and-Deployment_images/Installation-and-Deployment_img6.jpeg)
@@ -206,29 +206,29 @@ bower update syncfusion-javascript
 
 ### Overview
 
-npm is the Package Manager for JavaScript. npm makes it easy for JavaScript developers to share and reuse the code and it makes it easy to update the code that you're sharing.
+The npm is the Package Manager for JavaScript. It makes easy for JavaScript developers to share and reuse the code, and also easy to update the code that you have shared.
 
 ### Syncfusion npm package
 
-Syncfusion JavaScript npm package is available as [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as syncfusion-javaScript in the npm registry.
+Syncfusion JavaScript npm package is available in [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as syncfusion-javaScript in the npm registry.
 
-### Syncfusion npm Installation 
+### Syncfusion npm Installation
 
-To configure the npm,  install the [Nodejs](http://nodejs.org/) and update the npm. For more information to configure the npm packages refer the official site of [npm](https://docs.npmjs.com/getting-started/installing-node). 
+To configure the npm,  install the [Nodejs](http://nodejs.org/) and update the npm. For more information to configure the npm packages refer to the official site of [npm](https://docs.npmjs.com/getting-started/installing-node).
 
-syncfusion-javascript npm package can be configured in following ways.
+The syncfusion-javascript npm package can be configured by the following ways.
 
-1. Using Command prompt
+1. Using Command prompt.
 
 2. Using package.json file.
 
-3. From local directory
+3. From local directory.
 
 #### Using command prompt
 
-Follow the below steps to install Syncfusion JavaScript npm package via command prompt in required web application location.
+Follow the below steps to install Syncfusion JavaScript npm package via command prompt in the required web application location.
 
-1. Open project’s location in command prompt window.
+1. Open the project’s location in command prompt window.
 
 2. Run the installation command for npm.
 
@@ -238,19 +238,19 @@ Follow the below steps to install Syncfusion JavaScript npm package via command 
 
    ![](Installation-and-Deployment_images/npminstallationsteps_img1.jpeg)
 
-3. npm install the Syncfusion JavaScript assets into the project location to develop with Syncfusion controls.  
+3. npm install the Syncfusion JavaScript assets into the project location to develop with Syncfusion controls.
 
-N> As per standard Syncfusion used the 3 digit version for npm packages. To install a particular version of npm package, provide the version as suffix of the package name while installing. For instance, run the below command, 
-N> E.g. The below command installs Syncfusion JavaScript package of version 14.1.0.46. 
+N> As per standard, Syncfusion uses the 3 digit version for npm packages. To install a particular version of npm package, provide the version as suffix to the package name while installing.
+N> For instance, the following command installs Syncfusion JavaScript package of version 14.1.0.46.
 N> 'npm install Syncfusion-javascript@14.1.46'
 
 #### Using package.json file
 
-Add the Syncfusion JavaScript packages to the package.json by simply specify the package name. This will install/restore the package to the Visual Studio project. Refer the below image.
+Add the Syncfusion JavaScript packages to the package.json by simply specifying the package name. This will install/restore the package to the Visual Studio project. Refer to the following image.
 
 ![](Installation-and-Deployment_images/npminstallationsteps_img2.jpeg)
 
-N> ASP.NET 5 (preview) projects have package.json file by default. Visual Studio project doesn’t have package.json file then, run the below command using the project command prompt.  
+N> By default, ASP.NET 5 (preview) projects have package.json file. If Visual Studio project doesn’t have package.json file, run the following command using the project command prompt.
 N> 'npm init'
 
 ![](Installation-and-Deployment_images/npminstallationsteps_img3.jpeg)
@@ -259,11 +259,11 @@ N> 'npm init'
 
 Install the Syncfusion JavaScript npm package from a local directory.
 
-1. Navigate the [Syncfusion JavaScript repository](https://github.com/syncfusion/JavaScript-Widgets) location on GitHub and download the repository as zip by click the “Download ZIP” button and extract the contents in your computer’s any of the local directory.
+1. Navigate the [Syncfusion JavaScript repository](https://github.com/syncfusion/JavaScript-Widgets) location on GitHub and download the repository as zip by clicking the “Download ZIP” button, and extract the contents to any of the local directory in your computer.
 
    ![](Installation-and-Deployment_images/npminstallationsteps_img4.jpeg)
 
-2. Run the install command by providing the package content location.
+2. Run the installation command by providing the package content location.
 
    ![](Installation-and-Deployment_images/npminstallationsteps_img5.jpeg)
 
@@ -271,7 +271,7 @@ Install the Syncfusion JavaScript npm package from a local directory.
 
 #### Updating global packages
 
-To update the globally installed npm packages, run the below command to update the package by globally.
+To update the installed npm packages globally, run the following command.
 
 ~~~
 npm install g- syncfusion-javascript
@@ -281,7 +281,7 @@ npm install g- syncfusion-javascript
 
 ### Updating local packages
 
-To update the locally installed npm packages, run the below command to update the package by local location.
+To update the installed npm packages locally, run the following command.
 
 ~~~
 npm update
@@ -297,15 +297,15 @@ JSPM is a package manager for [SystemJS universal module loader](https://github.
 
 ### Syncfusion JavaScript JSPM
 
-Syncfusion JavaScript JSPM package is available as [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as Syncfusion-JavaScript in the npm registry too.
+Syncfusion JavaScript JSPM package is available in [public Git Repository](https://github.com/syncfusion/JavaScript-Widgets) and also registered as Syncfusion-JavaScript in the npm registry too.
 
-### Syncfusion JSPM Installation 
+### Syncfusion JSPM Installation
 
-#### Using Command prompt 
+#### Using Command prompt
 
-Follow the below steps to install Syncfusion JavaScript JSPM package via command prompt in required web application location.
+Follow the below steps to install Syncfusion JavaScript JSPM package via command prompt in the required web application location.
 
-1. Open project’s location in command prompt window.
+1. Open the project’s location in command prompt window.
 
 2. A) To install the Syncfusion JavaScript JSPM package via GitHub repository.
 
@@ -321,13 +321,13 @@ Follow the below steps to install Syncfusion JavaScript JSPM package via command
    jspm install npm:syncfusion-javascript
    ~~~
    
-N> As per standard Syncfusion used the 3 digit version for JSPM packages. To install a particular version of JSPM package, need to provide the version as suffix of the package name while installing. For instance, run the below command,  
-N> E.g. The below command installs Syncfusion JavaScript package of version 14.1.0.46.  
+N> As per standard, Syncfusion uses the 3 digit version for JSPM packages. To install a particular version of JSPM package, provide the version as suffix to the package name while installing.
+N> For instance, The following command installs Syncfusion JavaScript package of version 14.1.0.46.
 N> 'JSPM install syncfusion=github:syncfusion/JavaScript-Widgets@14.1.46'
 
 ### JSPM Update
 
-To update all the installed packages by using below command.
+To update all the installed packages, use the following command.
 
 ~~~
 jspm update
@@ -335,7 +335,7 @@ jspm update
 
 ![](Installation-and-Deployment_images/jspminstallationsteps_img1.jpeg)
 
-To update specific package by using below commands.
+To update specific package, use the following commands.
 
 ~~~
 jspm update npm:syncfusion-javascript
@@ -350,23 +350,23 @@ jspm update syncfusion=github:syncfusion/JavaScript-Widgets
 
 ## Deployment
 
-The MVC applications are deployed in the development server by referencing the Syncfusion assemblies appropriately. The steps are as shown below,
+The MVC applications are deployed in the development server by referencing the Syncfusion assemblies appropriately. The steps are shown in the following:
 
-* **Mark the Project directory as Application** – Here, the appropriate directory where the project file is usually saved, should be marked as Application in IIS.
-* **Reference the Syncfusion Assemblies** – The Syncfusion assemblies can be referenced in the application either from the Global Assembly Cache (GAC) or from the Application’s bin folder.
-* **Use any of the two available deployment patterns** – Default or Fast deployment pattern.
+* **Mark the Project directory as Application**: Here, the appropriate directory where the project file is usually saved, should be marked as Application in IIS.
+* **Reference the Syncfusion Assemblies**: The Syncfusion assemblies can be referenced in the application either from the Global Assembly Cache (GAC) or from the Application’s bin folder.
+* **Use any of the two available deployment patterns**: Default or Fast deployment pattern.
 
-### Default Deployment Pattern      
+### Default Deployment Pattern
 
 Deploy the application in the development server by referencing the **assemblies** from **GAC**.
 
-* **Web.config** file is configured according to the referenced **dll**. 
+* The **Web.config** file is configured according to the referenced **dll**.
 
 * When you deploy your application, ensure that the above referenced assemblies (in your **web.config** files) are present in the **GAC**. This method supports almost all the features of the control.
 
-N> With this pattern, all our **Syncfusion** assemblies run at full trust.
+N> With this pattern, all our **Syncfusion** assemblies are running with full trust.
 
-### Fast Deployment Pattern                
+### Fast Deployment Pattern
 
 Deploy the application in the development server by referencing Syncfusion assemblies in the application's **bin** folder.
 
@@ -374,55 +374,55 @@ Deploy the application in the development server by referencing Syncfusion assem
 
 * **Web.config** file is configured according to the referenced **dll**.
 
-* In this case, the control’s **DeprecateFunctionalityToRunInPartialTrust** property is turned **on** for the control to work properly. In some cases, few features may not be available. You can refer the control's documentation for more information.
+* In this case, the control’s **DeprecateFunctionalityToRunInPartialTrust** property is turned **on** for the control to work properly. In some cases, few features may not be available. Refer to the control's documentation for more information.
 
-N> If you have XML, mdb or other data files in your application, ensure that they have sufficient security permissions. Only the Authenticated Users should have access to the files and directory, so as to permit the ASP.NET code to open the file at run-time.
+N> If you have XML, mdb, or other data files in your application, ensure that they have sufficient security permissions. Only the Authenticated Users should have the access to files and directory, so as to permit the ASP.NET code to open the file at run-time.
 Also, ensure that the machine.config of the deployed system includes appropriate entries for Mozilla and so on within the <browsercaps> tag. The default entries consider these browsers as down level and hence will not render the Syncfusion controls properly.
 
-## Install Location & Samples
+## Install Location and Samples
 
-Here, the default location on your machine is illustrated where the **Essential Studio package** or the **Essential Studio for ASP.NET MVC** suite gets installed, from where the Syncfusion assemblies and dashboard samples can be accessed.
+Here, the default location on your machine is illustrated where the **Essential Studio package** or the **Essential Studio for ASP.NET MVC** suite gets installed, from that the Syncfusion assemblies and dashboard samples can be accessed.
 
-* The below specified location is the place from where all the assemblies, scripts, CSS files and samples are available,
+* The following specified location is the place where all the assemblies, scripts, CSS files, and samples are available.
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\`
 
-  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the below location,_
+  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the following location,_
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\`
 
-* The **ASP.NET MVC samples** can be accessed from the below location,
+* The **ASP.NET MVC samples** can be accessed from the following location.
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Samples`
 
-  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the below location,_
+  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the following location._
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Samples`
 
-* The Dashboard can be opened by running the **Dashboard.exe** file present within the following location,
+* The Dashboard can be opened by running the **Dashboard.exe** file present within the following location.
 
   `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
 
-  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the below location,_
+  _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** navigate to the following location._
   `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
 
-To run the local samples from dashboard and other online samples, refer the link [here](http://help.syncfusion.com/ug/common/index.html#!Documents/samples.htm).
+To run the local samples from dashboard and other online samples, refer to the link [here](http://help.syncfusion.com/ug/common/index.html#!Documents/samples.htm).
 
-## Assemblies Location & Structure
+## Assemblies Location and Structure
 
-All the Syncfusion assemblies are located in the below specified installed location on your machine,
+All the Syncfusion assemblies are located in the following specified installed location on your machine.
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}`
 
-_**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the below location,_
+_**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** navigate to the following location._
 `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}`
 
-The Syncfusion assemblies are packed in a separate folder on the basis of the following two types,
+The Syncfusion assemblies are packed in a separate folder on the basis of the following two types:
 
   * .NET Framework version
   * MVC version
   
 ### .NET Framework version-based assemblies
 
-The assemblies based on the version of the .NET Framework are packed under the folders namely **3.5**, **4.0**, **4.5** and **4.5.1** available in the above specified location. Some of the important assemblies available based on the .NET frameworks under each folders (3.5, 4.0, 4.5, 4.5.1) are listed below,
+The assemblies based on the version of the .NET Framework are packed under the folders namely **3.5**, **4.0**, **4.5**, and **4.5.1** that are available in the above specified location. Some of the important assemblies available based on the .NET frameworks under each folders (3.5, 4.0, 4.5, 4.5.1) are listed in the following.
 
 <table>
 <tr><td>
@@ -442,14 +442,14 @@ Syncfusion.DocIO.Base.dll
 
 ### MVC version-based assemblies
 
-The assemblies based on the version of the MVC Framework (MVC3, MVC4, MVC5) are packed under the folder namely **MVC** available in the below location,
+The assemblies based on the version of the MVC Framework (MVC3, MVC4, and MVC5) are packed under the folder name **MVC** that is available in the following location.
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\ {{ site.releaseversion }}\MVC`
 
-_**For example**, If you have installed the Essential Studio package within **C:\Program Files (x86)**, then navigate to the below location,_
+_**For example**, If you have installed the Essential Studio package within **C:\Program Files (x86)**, navigate to the below location._
 `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\ {{ site.releaseversion }}\MVC`
 
-Some of the important assemblies available based on the MVC versions (within each folder namely MVC3, MVC4 & MVC5) in the above specified location are listed below,
+Some of the important assemblies available based on the MVC versions (within each folder namely MVC3, MVC4, and MVC5) in the above specified location are listed in the following.
 
 <table>
 <tr><td>
@@ -463,7 +463,7 @@ Syncfusion.PdfViewer.Mvc.dll
 
 ## NuGet Packages Structure
 
-The following structure is maintained for ASP.NET MVC platform NuGet packages from 2015 Volume 2(v13.2.0.29). If we cannot get the latest package updates, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). To update Syncfusion NuGet packages latest or above version of 2015 Volume 1 Service Pack-2(v13.1.0.30), uninstall the existing packages and install the following required package manually.
+The following structure is maintained for ASP.NET MVC platform NuGet packages from 2015 Volume 2(v13.2.0.29). The latest package cannot be updated, because of the installed Syncfusion NuGet packages prior version of 2015 Volume 2(V13.2.0.29). To update the Syncfusion NuGet packages latest or above version of 2015 Volume 1 Service Pack-2(v13.1.0.30), uninstall the existing packages and install the following required package manually.
 
 <table>
    <tr>
@@ -499,7 +499,7 @@ The following structure is maintained for ASP.NET MVC platform NuGet packages fr
 			    Syncfusion.AspNet.Mvc<br/>
 		  </td>
 		  <td>
-			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate the below link.<br/>{{'<http://www.syncfusion.com/products/aspnetmvc>'| markdownify }}<br/>
+			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate to the following link.<br/>{{'<http://www.syncfusion.com/products/aspnetmvc>'| markdownify }}<br/>
 		  </td>
 		  <td>
 			    EJ.MVC<br/>
