@@ -9,13 +9,13 @@ documentation: ug
 
 # Syntax for VB
 
-Since our Syncfusion ASP.NET MVC components can render the control either by using **C#** or **VB**. As only the control declaration syntax varies across languages and other functionalities are usually performed in the client-side.
+Our Syncfusion ASP.NET MVC components can render the control either by using **C#** or **VB**. As only the control declaration syntax varies across languages and other functionalities are usually performed in the client-side.
 
-The following example code depicts the VB syntax to be used within the server-side wrapper declaration – **to** **create** **an** **Accordion** **control** using lambda expression,
+The following example code illustrates the VB syntax to be used within the server-side wrapper declaration – **to** **create** **an** **Accordion** **control** using the lambda expression.
 
 {% highlight vb %}
 
-    @Code 
+    @Code
 
     Html.EJ().Accordion("basicAccordion").Items(Sub(data)
 
@@ -31,6 +31,6 @@ The following example code depicts the VB syntax to be used within the server-si
 
 {% endhighlight %}
 
-The output for the above code will look like the one as shown below,
+The output for the above code will be like the following:
 
 ![](Syntax-VB_images/Syntax-VB_img1.jpeg)

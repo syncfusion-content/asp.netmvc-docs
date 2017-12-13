@@ -11,7 +11,7 @@ documentation: ug
 
 ## Platforms
 
-Our Syncfusion components are compatible with almost all the major platforms which are specified below,
+Our Syncfusion components are compatible with almost all the major platforms that are specified in the following:
 
 * Windows
 * Mac OS
@@ -19,7 +19,7 @@ Our Syncfusion components are compatible with almost all the major platforms whi
 
 ## Web browsers
 
-Syncfusion components are also mostly compatible with all the major browsers that we use on these days, which includes the following - 
+Syncfusion components are also mostly compatible with all the major browsers that we use on these days that includes the following. 
 
 * Internet Explorer 8+
 * Microsoft Edge
@@ -30,7 +30,7 @@ Syncfusion components are also mostly compatible with all the major browsers tha
 
 ## System Requirements
 
-To work with Syncfusion MVC components, you need to install the following 
+To work with Syncfusion MVC components, you need to install the following:
 
 * **Visual Studio 2010** or higher
 * **ASP.NET MVC3**, **MVC4**, **MVC5** and **ASP.NET Core 1.0 (RC2)**
