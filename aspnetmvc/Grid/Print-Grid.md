@@ -91,7 +91,7 @@ Some of print options are not configurable through JavaScript code. You need to 
 
 ## Print on external Button Click
 
-By default, the Grid can be print from toolbar. To print from external button action, you need to call the grid's [`print()`](http://help.syncfusion.com/js/api/ejgrid#methods:print) method from required button event.
+By default, the Grid can be print from toolbar. To print from external button action, you need to call the grid's `print()` method from required button event.
 
 {% tabs %}
  
