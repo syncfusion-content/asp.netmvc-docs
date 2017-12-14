@@ -9,7 +9,7 @@ documentation: ug
 
 # Print
 
-You need to use `print()` method from Grid instance to print the Grid. You can add Print option in Toolbar item by adding `PrintGrid` in `ToolbarItems`.
+You need to use [`print()`](https://help.syncfusion.com/api/js/ejgrid#methods:print) method from Grid instance to print the Grid. You can add Print option in Toolbar item by adding `PrintGrid` in [`toolbarItems`](https://help.syncfusion.com/api/js/ejgrid#members:toolbarsettings-toolbaritems).
 
 {% tabs %}
  
@@ -177,7 +177,7 @@ Print dialog in Chrome browser
 
 ## Print Visible Page
 
-By default, the Grid will print all records. To print current page, you need to set `PrintMode` as `CurrentPage` in `PageSettings` property.
+By default, the Grid will print all records. To print current page, you need to set [`PrintMode`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-printmode) as `CurrentPage` in `PageSettings` property.
 
 {% tabs %}
  
