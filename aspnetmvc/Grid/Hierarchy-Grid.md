@@ -61,7 +61,7 @@ public partial class GridController : Controller
 
         {
 
-            var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
 
             ViewBag.datasource = DataSource;
 
