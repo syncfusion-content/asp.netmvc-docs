@@ -31,7 +31,7 @@ N> The responsive and exporting support is not applicable for Hierarchical bindi
         })
                  .ChildGrid(child =>
                  {
-                     child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
+                     child.Datasource((IEnumerable<object>)ViewBag.datasource2)
                         .QueryString("EmployeeID")
                         .AllowPaging()
                         .PageSettings(page => page.PageSize(5))
@@ -62,8 +62,12 @@ public partial class GridController : Controller
         {
 
             var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            
+            var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
 
-            ViewBag.datasource = DataSource;
+            ViewBag.datasource = DataSource2;
+            
+            ViewBag.datasource2 = DataSource;
 
             return View();
 
@@ -94,7 +98,7 @@ The Grid can able to expand and collapse all the `ChildGrid` through programmati
         .Datasource((IEnumerable<object>)ViewBag.datasource)
         .ChildGrid(child =>
         {
-            child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
+            child.Datasource((IEnumerable<object>)ViewBag.datasource2)
                .QueryString("EmployeeID")
                .AllowPaging()
                .PageSettings(page => page.PageSize(5))
@@ -137,8 +141,12 @@ public partial class GridController : Controller
         {
 
             var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            
+            var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
 
-            ViewBag.datasource = DataSource;
+            ViewBag.datasource = DataSource2;
+            
+            ViewBag.datasource2 = DataSource;
 
             return View();
 
