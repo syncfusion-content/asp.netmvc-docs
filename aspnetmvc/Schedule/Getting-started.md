@@ -105,3 +105,7 @@ To bind the remote data directly to the Scheduler instead of passing data from t
 {% endhighlight %}
 
 To bind the data to the Scheduler from database or any other dataSources, refer [here](/aspnetmvc/schedule/data-binding).
+
+
+![](Getting-Started_images/Getting-Started_img1.png)
+
