@@ -61,7 +61,7 @@ public partial class GridController : Controller
 
         {
 
-            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             
             var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
 
@@ -140,7 +140,7 @@ public partial class GridController : Controller
 
         {
 
-            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             
             var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
 
