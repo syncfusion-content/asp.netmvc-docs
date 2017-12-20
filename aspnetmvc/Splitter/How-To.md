@@ -16,7 +16,7 @@ By default, you are provided with collapse/expand icons in **Split bar** to coll
 
 * **clickOnExpander** event is triggered when we click on the template icon.`
 
-{{% highlight CSHTML %}
+{% highlight CSHTML %}
 
 
 <div id="outterSplitter">
