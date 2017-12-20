@@ -31,7 +31,7 @@ N> The responsive and exporting support is not applicable for Hierarchical bindi
         })
                  .ChildGrid(child =>
                  {
-                     child.Datasource((IEnumerable<object>)ViewBag.datasource2)
+                     child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
                         .QueryString("EmployeeID")
                         .AllowPaging()
                         .PageSettings(page => page.PageSize(5))
@@ -61,13 +61,9 @@ public partial class GridController : Controller
 
         {
 
-            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
-            
             var DataSource2 = new NorthwindDataContext().EmployeeViews.ToList();
 
-            ViewBag.datasource = DataSource2;
-            
-            ViewBag.datasource2 = DataSource;
+            ViewBag.datasource = DataSource;
 
             return View();
 
