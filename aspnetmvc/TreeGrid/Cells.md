@@ -11,7 +11,7 @@ documentation: ug
 
 ## Tooltip
 
-In TreeGrid tooltip can be enabled using `ShowGridCellTooltip` property. Using this property tooltip can be enabled for cells both header and content.
+In TreeGrid tooltip can be enabled using the `ShowGridCellTooltip` property. Using this property tooltip can be enabled for cells both header and content.
 
 Please find the example describes the above behavior.
 
@@ -45,7 +45,7 @@ Header Tooltip
 
 It is possible to display a custom tooltip across all the TreeGrid cells using the property `CellTooltipTemplate` with the property `ShowGridCellTooltip` enabled. We need to set the template of the custom tooltip to this property.
 
-Please find code example describes the cell tooltip template support.
+Please find code example that describes the cell tooltip template support below.
 
 {% highlight CSHTML %}
 
@@ -122,9 +122,9 @@ The following output shows the result of above code example.
 
 ### Column tooltip
 
-By using the property `Columns.Tooltip` it is possible to display a custom tooltip for a specific column. The ID of the script template must be set to the `Columns.Tooltip` property.
+By using the property the `Columns.Tooltip` it is possible to display a custom tooltip for a specific column. The ID of the script template must be set to the `Columns.Tooltip` property.
 
-Please refer the following code example for setting a custom tooltip for a specific column.
+Please refer to the following code example for setting a custom tooltip for a specific column.
 
 {% highlight CSHTML %}
 
@@ -162,9 +162,9 @@ N> Template element should be enclosed with `<script>` tag with type as `“text
 
 ### Header tooltip
 
-By using the property `Columns.HeaderTooltip` it is possible to display a custom tooltip for a specific column header. The ID of the script template must be set to the `Columns.HeaderTooltip` property.
+By using the property the `Columns.HeaderTooltip` it is possible to display a custom tooltip for a specific column header. The ID of the script template must be set to the `Columns.HeaderTooltip` property.
 
-Please refer the following code example for setting a custom tooltip for a specific column header.
+Please refer to the following code example for setting a custom tooltip for a specific column header.
 
 {% highlight CSHTML %}
 
@@ -202,18 +202,18 @@ The following output shows the result of above code example.
 
 Clip mode enables the TreeGrid to clip cell content and header content when the content exceeds the boundary of the cell width. 
 
-We can specify the type of clip mode using `Columns.ClipMode` property, clip mode will be enabled for both TreeGrid content and header of that specific column.
+We can specify the type of clip mode using the `Columns.ClipMode` property, clip mode will be enabled for both TreeGrid content and header of that specific column.
 
-The below are the available clipping modes in TreeGrid,
+The below are the available clipping modes in TreeGrid.
 
 1. Clip
 2. Ellipsis
 
 ### Clip
 
-When ClipMode of Columns property set as `TreeGridColumnClipMode.Clip`, then it truncates the overflown text in the cell.
+When ClipMode of Columns property set as the `TreeGridColumnClipMode.Clip`, then it truncates the overflown text in the cell.
 
-N> 1. By default the `ClipMode` will be set as `TreeGridColumnClipMode.Clip`.
+N> 1. By default the `ClipMode` will be set as the`TreeGridColumnClipMode.Clip`.
 
 The following code example describes the above behavior.
 
@@ -244,7 +244,7 @@ The following output shows the result of above code example.
 
 ### Ellipsis
 
-When `Columns.ClipMode` property is set as `TreeGridColumnClipMode.Ellipsis` then it shows ellipsis for the overflown cell.
+When the `Columns.ClipMode` property is set as `TreeGridColumnClipMode.Ellipsis` then it shows ellipsis for the overflown cell.
 
 The following code example describes the above behavior.
 
@@ -278,7 +278,7 @@ Text wrap enables the TreeGrid to wrap cell content or header content to next li
 
 ### Header Text Wrap
 
-To enable header cell text wrap, set `HeaderTextOverflow` property as `TreeGridHeaderTextOverflow.Wrap`.
+To enable header cell text wrap, set the `HeaderTextOverflow` property as `TreeGridHeaderTextOverflow.Wrap`.
 
 N> By default the `HeaderTextOverflow` will be set as `TreeGridHeaderTextOverflow.None`.
 
@@ -302,7 +302,7 @@ The following output shows the result of above code example.
 
 ### Content Text Wrap
 
-To enable cell text wrap, set `AllowTextWrap` property as `true`.
+To enable cell text wrap, set the `AllowTextWrap` property as `true`.
 
 N> 1.By default the `AllowTextWrap` will be set as `false`.
 
