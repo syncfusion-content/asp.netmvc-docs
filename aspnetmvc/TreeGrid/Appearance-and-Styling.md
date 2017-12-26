@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the look and feel of the TreeGrid control by applying themes.
 
-You are provided the following twelve different themes in TreeGrid control.
+You are provided the following twelve different themes in the TreeGrid control.
 
 1. Flat Azure                          
 
