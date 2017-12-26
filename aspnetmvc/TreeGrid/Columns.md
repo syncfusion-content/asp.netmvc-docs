@@ -375,12 +375,12 @@ The following screenshot displays the customized column in TreeGrid control.
 
 ## Column Filtering
 
-Column Filtering in TreeGrid is used to filter the records by single or multiple column conditions. In TreeGrid control, column filtering can be enabled with AllowFiltering property, by setting this property to ‘true’, a filter bar is rendered in all available columns, providing filtering support to every columns. You can also limit filtering to specific column by setting ‘false’ to AllowFiltering property in each column object.
+Column Filtering in TreeGrid is used to filter the records by single or multiple column conditions. In TreeGrid control, column filtering can be enabled with the AllowFiltering property, by setting this property to ‘true’, a filter bar is rendered in all available columns, providing filtering support to every columns. You can also limit filtering to specific column by setting ‘false’ to the AllowFiltering property in each column object.
 
 Filtering modes can be toggled between Immediate and OnEnter modes using FilterBarMode property.
 
-* Immediate- In this mode, filtering starts with key press event.
-* OnEnter- In this mode, filtering starts when enter key is pressed.
+* Immediate: In this mode, filtering starts with key press event.
+* OnEnter: In this mode, filtering starts when enter key is pressed.
 
 Filtering type can be defined by FilterEditType property in each column object.
 
@@ -433,15 +433,15 @@ The following screenshot displays the column filtering in TreeGrid control.
 
 ## Column Chooser
 
-TreeGrid supports enabling and disabling the visibility of the columns dynamically with the ShowColumnChooser property. By using this property, the visibility of the custom columns can also be toggled. The Column chooser option is rendered as sub menu item within column menu in the TreeGrid columns.
+The TreeGrid supports enabling and disabling the visibility of the columns dynamically with the ShowColumnChooser property. By using this property, the visibility of the custom columns can also be toggled. The Column chooser option is rendered as sub menu item within column menu in the TreeGrid columns.
 
 ![](Columns_images/Columns_img3.png)
 
 
 
-The column menu is enabled with the ShowColumnChooser property and the default value for this property is false
+The column menu is enabled with the ShowColumnChooser property and the default value for this property is false.
 
-The column menu provides the following options
+The column menu provides the following options.
 
 * Sort Ascending
 * Sort Descending
@@ -482,11 +482,11 @@ You can also disable the visibility of the particular column in column collectio
 
 ### Default action buttons
 
-Using command columns in TreeGrid, we can display a separate column to perform CRUD operations.It is also possible to perform any custom actions by using custom command buttons. Command column can be defined in TreeGrid using `Commands` property.
-A command column can be customized by using `Type` and `ButtonOptions` properties.
+Using command columns in TreeGrid, we can display a separate column to perform CRUD operations. It is also possible to perform any custom actions by using custom command buttons. Command column can be defined in TreeGrid by using the `Commands` property.
+A command column can be customized by using the `Type` and `ButtonOptions` properties.
 
-* **Type** – Using this property we can add required action buttons in TreeGrid command column such as edit,delete,save and cancel.
-* **ButtonOptions** - Using this property we can customize the button in the command column with the properties available in [Button](https://help.syncfusion.com/api/js/ejbutton#members "Button").
+* **Type**: Using this property we can add required action buttons in TreeGrid command column such as edit,delete,save and cancel.
+* **ButtonOptions**: Using this property we can customize the button in the command column with the properties available in [Button](https://help.syncfusion.com/api/js/ejbutton#members "Button").
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")              
@@ -527,7 +527,7 @@ A command column can be customized by using `Type` and `ButtonOptions` propertie
 
 ### Custom buttons
 
-We can also add custom buttons to the command column by specifying text value other than default buttons to the type property. We can also bind actions to the custom button using [Click](https://help.syncfusion.com/api/js/ejbutton#events:click "click") client side event of Button.
+We can also add custom buttons to the command column by specifying text value other than default buttons to the type property. We can also bind actions to the custom button using the [Click](https://help.syncfusion.com/api/js/ejbutton#events:click "click") client-side event of Button.
 
 {% highlight CSHTML %}
   @(Html.EJ().TreeGrid("TreeGridContainer")
