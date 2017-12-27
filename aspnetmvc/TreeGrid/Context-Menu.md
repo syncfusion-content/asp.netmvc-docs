@@ -53,7 +53,7 @@ The following screenshot displays the Context menu in TreeGrid control.
 
 ## ContextMenu Customization
 
-The Context menu can be customized by adding a new custom menu item to it. In TreeGrid, context menu can be customized using the ContextMenuOpen client-ide event. This event is triggered when the context menu is rendered with mouse right click action. The following properties are available in the event.
+The Context menu can be customized by adding a new custom menu item to it. In TreeGrid, context menu can be customized using the ContextMenuOpen client-side event. This event is triggered when the context menu is rendered with mouse right click action. The following properties are available in the event.
 
 * headerText: Display text for menu item.
 * iconPath: Image location for menu item.
