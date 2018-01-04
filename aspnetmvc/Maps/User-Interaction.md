@@ -97,7 +97,7 @@ This feature enables you to select multiple Map shapes on mouse taps accompanied
 
 This feature enables you to select the shapes by dragging over the shapes. While dragging over the shapes, a rectangle is generated and the shapes that come within the rectangle is selected.
 
-You can enable this feature by setting the property `DraggingOnSelection` in the `Layers` to "_True_".
+You can enable this feature by setting the property `DraggingOnSelection` in the `Layers` to "_true_".
 
 {% highlight js %}
 
@@ -257,7 +257,7 @@ When the map is double-tapped by using mouse, the zoom in operation is performed
 
 Map shape is zoomed to the whole map area on the shape selected. Animation can be applied for that zooming with the `EnableAnimation` property as true. 
 
-You can enable this feature by setting `EnableZoomOnSelection` property value as ‘_True_’. 
+You can enable this feature by setting `EnableZoomOnSelection` property value as ‘_true_’. 
 
 When `EnableZoomOnSelection` property is set to true, then zooming of the Map control is muted on double click.
 
