@@ -461,7 +461,7 @@ This property is enabled only when `ColorPalette` property value is set to “Cu
 
 ## Tooltip
 
-The tooltip is displayed only when you set `ShowTooltip` to “True” in the shape layers. By default, it takes the property of the bound object that is referred in the `ValuePath` and displays its content on hovering the corresponding shape. 
+The tooltip is displayed only when you set `ShowTooltip` to “true” in the shape layers. By default, it takes the property of the bound object that is referred in the `ValuePath` and displays its content on hovering the corresponding shape. 
 
 
 {% highlight CSHTML %}
