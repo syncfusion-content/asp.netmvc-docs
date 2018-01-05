@@ -154,7 +154,7 @@ p.Add().ContentTemplate(
 
 
 
-The output for Splitter when EnableAutoResize is “True”.
+The output for Splitter when EnableAutoResize is “true”.
 
 
 
@@ -224,7 +224,7 @@ p =>
 
 {% endhighlight %}
 
-The output for Splitter when EnableAnimation is “True”. Expanding or collapsing the outer pane in the Splitter produces the animation effect with the animation speed.
+The output for Splitter when EnableAnimation is “true”. Expanding or collapsing the outer pane in the Splitter produces the animation effect with the animation speed.
 
 
 
@@ -256,7 +256,7 @@ Defines the pane size in the Splitter widget. The default value of PaneSize is 0
 
 ### Resizable
 
-Defines whether the pane in the Splitter is resizable or not. Setting the resizable property as “False” disables the resize option to the pane. The default value of Resizable property is true in Splitter.
+Defines whether the pane in the Splitter is resizable or not. Setting the resizable property as “false” disables the resize option to the pane. The default value of Resizable property is true in Splitter.
 
 The following steps explain the implementation of Splitter properties. 
 

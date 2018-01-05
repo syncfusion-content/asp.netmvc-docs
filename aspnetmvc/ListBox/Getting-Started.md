@@ -384,7 +384,7 @@ ListBox with Contact list items
 
 ### Enable Drag and Drop 
 
-You can drag an item from a ListBox and drop it in droppable element.To drag and drop a list item across controls or within a control, you have to set the AllowDrag and AllowDrop property as “True”. 
+You can drag an item from a ListBox and drop it in droppable element.To drag and drop a list item across controls or within a control, you have to set the AllowDrag and AllowDrop property as “true”. 
 
 Please refer the below code snippet:
 
@@ -407,7 +407,7 @@ ListBox with Drag and Drop list items
 
 Enable Multiple Selection 
 
-You can select multiple list items simultaneously in ListBox control, and move the multiple, selected items to the selection ListBox. To select multiple items in a ListBox, set the AllowMultiSelection property for the ListBox as “True”.
+You can select multiple list items simultaneously in ListBox control, and move the multiple, selected items to the selection ListBox. To select multiple items in a ListBox, set the AllowMultiSelection property for the ListBox as “true”.
 
 
 
