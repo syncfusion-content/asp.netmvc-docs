@@ -168,7 +168,7 @@ In the View page add the Splitter helper to enable the RTL functionality.
 
 
 
-The output for Splitter when EnableRTL is “True”.
+The output for Splitter when EnableRTL is “true”.
 
 
 

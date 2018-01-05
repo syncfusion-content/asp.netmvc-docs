@@ -9,7 +9,7 @@ documentation: ug
 
 # Enabling Collapsible
 
-The Splitter provides you the option to enable or disable the pane collapse functionality. You can click the icon in Split bar to collapse or expand the corresponding pane element in Splitter. Setting the Collapsible property to “False” disables the pane collapse functionality in the Splitter widget.
+The Splitter provides you the option to enable or disable the pane collapse functionality. You can click the icon in Split bar to collapse or expand the corresponding pane element in Splitter. Setting the Collapsible property to “false” disables the pane collapse functionality in the Splitter widget.
 
 ## Configure Collapsible
 
@@ -67,14 +67,14 @@ p.Add().ContentTemplate(
 {% endhighlight %}
 
 
-The output for Splitter when collapsible is set to “True” is as follows.
+The output for Splitter when collapsible is set to “true” is as follows.
 
 
 ![](Enabling-Collapsible_images/Enabling-Collapsible_img1.png)
 
 
 
-The output for Splitter when collapsible is “False”.
+The output for Splitter when collapsible is “false”.
 
 ![](Enabling-Collapsible_images/Enabling-Collapsible_img2.png)
 
