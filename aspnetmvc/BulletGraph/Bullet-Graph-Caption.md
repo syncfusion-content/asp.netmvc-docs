@@ -223,7 +223,7 @@ Bullet Graph with indicator
 
 ## Trim
 
-The title, subtitle and indicator text can be overlapped to the scale group. You can avoid the overlapped text by using the `EnableTrim` property of the CaptionSettings. The default value of the EnableTrim is true. 
+The title, subtitle and indicator text can be overlapped to the scale group. You can avoid the overlapped text by using the `EnableTrim` property of the CaptionSettings. The default value of the EnableTrim is True. 
 {% highlight html %}
 
 @(Html.EJ().BulletGraph("BulletGraph1")
