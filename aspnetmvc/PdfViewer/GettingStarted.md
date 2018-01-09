@@ -86,7 +86,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the hosted service
 
 {% highlight HTML %}
 @using Syncfusion.JavaScript
-@using Syncfusion.MVC.EJ.Extension
+@using Syncfusion.MVC.EJ
 <!DOCTYPE html>
 <html>
 <head>
@@ -160,6 +160,13 @@ namespace PdfViewerSample.WebApi
             PdfViewerHelper helper = new PdfViewerHelper();
             return helper.GetDocumentData(jsonResult);
         }
+		
+		//Post action for unloading and disposing the PDF document resources in server side from the ejPdfviewer widget.
+		public void Unload()
+        {
+            PdfViewerHelper helper = new PdfViewerHelper();
+            helper.UnLoad();
+        }
     }
 }
 {% endhighlight %}
@@ -170,7 +177,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the Web API to pro
 
 {% highlight HTML %}
 @using Syncfusion.JavaScript
-@using Syncfusion.MVC.EJ.Extension
+@using Syncfusion.MVC.EJ
 <!DOCTYPE html>
 <html>
 <head>
