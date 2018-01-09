@@ -273,3 +273,61 @@ In the above code snippet, we have created web services by using the ASP.NET web
 
 ASP.NET Web service binding
 {:.caption}
+
+## Complex Data Sorting
+
+You can perform a data operation based on nested column data and bind to the data control. Here, if you want to perform the server side data operation for the nested dataSource like sorting, grouping, filtering, searching, take, or skip then we have to define the generic type of dataSource.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource(ds => ds.URL("GetData").Adaptor(AdaptorType.UrlAdaptor))
+                .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+                {
+                    items.AddTool(ToolBarItems.ExcelExport);
+                    items.AddTool(ToolBarItems.WordExport);
+                    items.AddTool(ToolBarItems.PdfExport);
+                }))
+                .AllowSorting()
+        .AllowPaging()
+        .IsResponsive()
+
+             .Columns(col =>
+             {
+                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(90).Add();
+                 col.Field("CustomerID").HeaderText("Customer ID").Width(90).Add();
+                 col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+                 col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+                 col.Field("ShipCity").HeaderText("Ship City").TextAlign(TextAlign.Right).Width(80).Add();
+                 for (int i = 0; i < 2; i++)
+                 {
+                     col.Field("customer." + i + ".CustNum").HeaderText("Customer Number " + i).Width(60).Add();
+                     col.Field("customer." + i + ".OtherAddress").HeaderText("Customer Address2 " + i).Width(60).Add();
+                 }
+             })
+)
+
+{%endhighlight%}
+
+{% highlight c# %}
+
+public ActionResult GetData(Syncfusion.JavaScript.DataManager dm)
+        {
+            BindDataSource();
+            IEnumerable<Orders> Data =order;             
+            Syncfusion.JavaScript.DataSources.DataOperations operation = new Syncfusion.JavaScript.DataSources.DataOperations();
+                       if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+            {
+                Data = operation.PerformSorting(Data,dm.Sorted);
+            }
+
+            int count=Data.AsQueryable().Count();
+
+            return Json(new { result = Data, count = count }, JsonRequestBehavior.AllowGet);
+        }
+
+{%endhighlight%}
+
+![](MVC_Sorting_images/complexdata.png)
+
+
