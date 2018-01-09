@@ -161,7 +161,7 @@ namespace PdfViewerSample.WebApi
             return helper.GetDocumentData(jsonResult);
         }
 		
-		//Post action for unloading and disposing the PDF document resources in server side.
+		//Post action for unloading and disposing the PDF document resources in server side from the ejPdfviewer widget.
 		public void Unload()
         {
             PdfViewerHelper helper = new PdfViewerHelper();
