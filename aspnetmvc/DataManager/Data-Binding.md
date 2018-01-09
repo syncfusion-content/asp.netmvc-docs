@@ -301,7 +301,7 @@ You can perform a data operation based on nested column data and bind to the dat
                  col.Field("ShipCity").HeaderText("Ship City").TextAlign(TextAlign.Right).Width(80).Add();
                  for (int i = 0; i < 2; i++)
                  {
-                     col.Field("customer." + i + ".CustNum").HeaderText("Customer Number " + i).Width(60).Add();
+                     col.Field("customer." + i + ".CustomerNumber").HeaderText("Customer Number " + i).Width(60).Add();
                      col.Field("customer." + i + ".OtherAddress").HeaderText("Customer Address2 " + i).Width(60).Add();
                  }
              })
@@ -311,14 +311,14 @@ You can perform a data operation based on nested column data and bind to the dat
 
 {% highlight c# %}
 
-public ActionResult GetData(Syncfusion.JavaScript.DataManager dm)
+public ActionResult GetData(Syncfusion.JavaScript.DataManager dataManager)
         {
             BindDataSource();
             IEnumerable<Orders> Data =order;             
             Syncfusion.JavaScript.DataSources.DataOperations operation = new Syncfusion.JavaScript.DataSources.DataOperations();
-                       if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+                       if (dataManager.Sorted != null && dataManager.Sorted.Count > 0) //Sorting
             {
-                Data = operation.PerformSorting(Data,dm.Sorted);
+                Data = operation.PerformSorting(Data,dataManager.Sorted);
             }
 
             int count=Data.AsQueryable().Count();
