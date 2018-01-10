@@ -323,7 +323,7 @@ public ActionResult GetData(Syncfusion.JavaScript.DataManager dataManager)
 
             int count=Data.AsQueryable().Count();
 
-            return Json(new { result = Data, count = count }, JsonRequestBehavior.AllowGet);
+            return JSON(new { result = Data, count = count }, JsonRequestBehavior.AllowGet);
         }
 
 {%endhighlight%}
