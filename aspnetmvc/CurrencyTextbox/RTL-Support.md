@@ -23,7 +23,7 @@ In the View page add CurrencyTextBox helper, and configure the EnableRTL propert
 
 
 
-Output of CurrencyTextBox when EnableRTL is “True” is as follows. 
+Output of CurrencyTextBox when EnableRTL is “true” is as follows. 
 
 
 

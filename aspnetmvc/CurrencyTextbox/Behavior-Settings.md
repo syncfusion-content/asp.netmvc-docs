@@ -72,7 +72,7 @@ In the View page add CurrencyTextBox helper, and configure the EnableStrictMode 
 
 {% endhighlight %}
 
-Output when EnableStrictMode is “True” is as follows.
+Output when EnableStrictMode is “true” is as follows.
 
 ![](Behavior-Settings_images/Behavior-Settings_img4.png)
 
@@ -81,7 +81,7 @@ Currency with EnableStrictMode
 
 ## Enabled or Disabled
 
-CurrencyTextBox has an option to enable or disable its element. You can set the Enabled property as “False” to enable the Textbox controls.
+CurrencyTextBox has an option to enable or disable its element. You can set the Enabled property as “false” to enable the Textbox controls.
 
 ### Configure Enabled or Disabled 
 
@@ -92,16 +92,16 @@ In the View page add CurrencyTextBox helper, and configure the Enabled property.
 @Html.EJ().CurrencyTextbox("currency").Value("3").Enabled(false)
 {% endhighlight %}
 
-Output when Enabled is “True” and when Enabled is “False”.
+Output when Enabled is “true” and when Enabled is “false”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img5.png)
 
-CurrencyTextBox with enabled as False
+CurrencyTextBox with enabled as false
 {:.caption}
 
 ![](Behavior-Settings_images/Behavior-Settings_img6.png)
 
-CurrencyTextBox with enabled as True
+CurrencyTextBox with enabled as true
 {:.caption}
 
 ## Adjusting Textbox Size
@@ -219,7 +219,7 @@ CurrencyTextBox with minValue
 
 ## Read Only Support
 
-CurrencyTextBox supports read only option. When you enable the ReadOnly property to the control, the value cannot be changed in the CurrencyTextBox. You can set the ReadOnly property as “True” to enable this option.
+CurrencyTextBox supports read only option. When you enable the ReadOnly property to the control, the value cannot be changed in the CurrencyTextBox. You can set the ReadOnly property as “true” to enable this option.
 
 ### Configure Read Only
 
@@ -229,7 +229,7 @@ In the View page add CurrencyTextBox helper, and configure the ReadOnly property
 
 @Html.EJ().CurrencyTextbox("currency").Value("3").ReadOnly(true)
 
- Output of CurrencyTextBox when ReadOnly is “True” is as follows. CurrencyTextBox values cannot be edited or changed.
+ Output of CurrencyTextBox when ReadOnly is “true” is as follows. CurrencyTextBox values cannot be edited or changed.
 
 
 
@@ -328,7 +328,7 @@ In the View page add CurrencyTextBox helper, and configure the ShowRoundedCorner
 {% highlight CSHTML %}
 @Html.EJ().CurrencyTextbox("currency").Value("3").ShowRoundedCorner(true)
 {% endhighlight %}
-Output of CurrencyTextBox when ShowRoundedCorner is “True”.
+Output of CurrencyTextBox when ShowRoundedCorner is “true”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img15.png)
 
@@ -348,11 +348,11 @@ In the View page add CurrencyTextBox helper, and configure the ShowSpinButton pr
 @Html.EJ().CurrencyTextbox("currency").Value("3").ShowSpinButton(false)
 {% endhighlight %}
 
-Output of CurrencyTextBox when ShowSpinButton is “False”.
+Output of CurrencyTextBox when ShowSpinButton is “false”.
 
 ![](Behavior-Settings_images/Behavior-Settings_img16.png)
 
-CurrencyTextBox with ShowSpinButton is False
+CurrencyTextBox with ShowSpinButton is false
 {:.caption}
 
 ## Water Mark Text Support

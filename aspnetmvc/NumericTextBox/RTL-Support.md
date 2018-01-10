@@ -23,7 +23,7 @@ In the View page add NumericTextBox helper, and configure the EnableRTL property
 
 {% endhighlight %}
 
-Output of NumericTextBox when EnableRTL is “True” is as follows. 
+Output of NumericTextBox when EnableRTL is “true” is as follows. 
 
 ![](RTL-Support_images/RTL-Support_img1.png)
 
