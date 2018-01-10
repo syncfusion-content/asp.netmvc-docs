@@ -83,7 +83,7 @@ In the View page add PercentageTextBox helper, and configure the EnableStrictMod
 
 {% endhighlight %}
 
-Output when EnableStrictMode is “True” is as follows.
+Output when EnableStrictMode is “true” is as follows.
 
 
 
@@ -93,7 +93,7 @@ Output when EnableStrictMode is “True” is as follows.
 
 ## Enabled or Disabled
 
-PercentageTextBox has an option to enable or disable its element. You can set the Enabled property as “False” to enable the Textbox controls.
+PercentageTextBox has an option to enable or disable its element. You can set the Enabled property as “false” to enable the Textbox controls.
 
 ### Configure Enabled or Disabled 
 
@@ -107,7 +107,7 @@ In the View page add PercentageTextBox helper, and configure the Enabled propert
 
 {% endhighlight %}
 
-Output when Enabled is “True” and when Enabled is “False”.
+Output when Enabled is “true” and when Enabled is “false”.
 
 
 
@@ -245,7 +245,7 @@ Output of PercentageTextBox with MaxValue and MinValue is as follows.
 
 ## Read Only Support
 
-PercentageTextBox supports read only option. When you enable the ReadOnly property to the control, the value cannot be changed in the PercentageTextBox. You can set the ReadOnly property as “True” to enable this option.
+PercentageTextBox supports read only option. When you enable the ReadOnly property to the control, the value cannot be changed in the PercentageTextBox. You can set the ReadOnly property as “true” to enable this option.
 
 ### Configure Read Only
 
@@ -258,7 +258,7 @@ In the View page add PercentageTextBox helper, and configure the ReadOnly proper
 
 {% endhighlight %}
 
-Output of PercentageTextBox when ReadOnly is “True” is as follows. PercentageTextBox values cannot be edited or changed.
+Output of PercentageTextBox when ReadOnly is “true” is as follows. PercentageTextBox values cannot be edited or changed.
 
 
 
@@ -365,7 +365,7 @@ In the View page add PercentageTextBox helper, and configure the ShowRoundedCorn
 
 {% endhighlight %}
 
-Output of PercentageTextBox when ShowRoundedCorner is “True”.
+Output of PercentageTextBox when ShowRoundedCorner is “true”.
 
 
 
@@ -389,7 +389,7 @@ In the View page add PercentageTextBox helper, and configure the ShowSpinButton 
 
 {% endhighlight %}
 
-Output of PercentageTextBox when ShowSpinButton is “False”.
+Output of PercentageTextBox when ShowSpinButton is “false”.
 
 
 
