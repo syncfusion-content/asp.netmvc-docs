@@ -144,7 +144,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 4. You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
    ~~~ cshtml
-	</body>
+	<body>
         @RenderSection("scripts", required: false)
         @Html.EJ().ScriptManager()
     </body>
@@ -322,13 +322,13 @@ While initial creation, by default, the **Unobtrusive** setting is enabled in yo
 	  
 You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
-   ~~~ cshtml
-	</body>
+    ~~~ cshtml
+	<body>
         @RenderSection("scripts", required: false)
         @Html.EJ().ScriptManager()
     </body>
 
-   ~~~		
+   ~~~			
 	  
 	
 N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive).
@@ -369,7 +369,7 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 Refer the following assemblies in your newly created ASP.NET application that allows you to use any of the Syncfusion ASP.NET controls within it.
 
 * Syncfusion.EJ
-* Syncfusion.EJ.Web
+* Syncfusion.EJ.MVC
 
 The reference to the Syncfusion assemblies can be added to your application in either of the following ways.
 -	Referring from GAC
@@ -399,7 +399,7 @@ N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
-N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
+N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.MVC and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
 
 3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC, and Syncfusion.Core assemblies to your application from the following specified location.
 
