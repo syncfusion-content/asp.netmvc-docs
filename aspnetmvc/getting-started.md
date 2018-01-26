@@ -30,7 +30,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![](getting-started_images/getting-started_img3.png)
 
-2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC3** and keep the **other** options as default. Click **Next**.
+2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC5** and keep the **other** options as default. Click **Next**.
 
 	![](getting-started_images/getting-started_img4.png)
 	
@@ -144,7 +144,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 4. You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
    ~~~ cshtml
-	</body>
+	<body>
         @RenderSection("scripts", required: false)
         @Html.EJ().ScriptManager()
     </body>
@@ -154,7 +154,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 	
    N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive).
 
-5. Syncfusion specific stylesheets are loaded into the **Content** folder of your application, include the below specified theme reference **(default-theme/ej.web.all.min.css)** file in the **~/Views/Shared/_Layout.cshtml** file, within the head section as this file contains the default theme styles applied for all the Syncfusion MVC controls.
+5. Syncfusion specific stylesheets are loaded into the **Content** folder of your application, include the below specified theme reference **(bootstrap-theme/ej.web.all.min.css)** file in the **~/Views/Shared/_Layout.cshtml** file, within the head section as this file contains the default theme styles applied for all the Syncfusion MVC controls.
 
    ~~~ cshtml
    
@@ -283,10 +283,6 @@ The dependencies are available in the following locations of your machine. Pleas
 <td>ej.web.all.min.js</td>
 <td>&lt;Syncfusion Installed Location&gt;\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\web</td>
 </tr>
-<tr>
-<td>ej.webform.min.js</td>
-<td>&lt;Syncfusion Installed Location&gt;\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\common</td>
-</tr>
 </table>
 
 N> Example for "Syncfusion Installed location" is "C:\Program Files (x86)\Syncfusion"
@@ -297,7 +293,7 @@ Now, create a folder named `ej`, under the Scripts folder of your application an
 Solution Explorer - Script files copied into the Scripts folder of the project
 {:.caption}
 
-Once the scripts are added in your application, now it is necessary to include the reference to it in your application. This should be done within the Site.Master file, as we did previously for CSS files.
+Once the scripts are added in your application, now it is necessary to include the reference to it in your application. This should be done within the _Layout.cshtml page, as we did previously for CSS files.
 Add the following script references in the _Layout.cshtml file within the head section.
 
 {% highlight html %}
@@ -322,13 +318,13 @@ While initial creation, by default, the **Unobtrusive** setting is enabled in yo
 	  
 You need to add the script manager code in the **_Layout.cshtml** file present within the **~/Views/Shared** folder of your application. Add it before the closing body tag in the _Layout.cshtml file.
 
-   ~~~ cshtml
-	</body>
+    ~~~ cshtml
+	<body>
         @RenderSection("scripts", required: false)
         @Html.EJ().ScriptManager()
     </body>
 
-   ~~~		
+   ~~~			
 	  
 	
 N>The main reason for referring the Script manager in _Layout file is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **_Layout.cshtml** page. Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive).
@@ -336,7 +332,7 @@ N>The main reason for referring the Script manager in _Layout file is that, it c
 
 ### CDN Link reference
 
-If you want to refer the CDN links instead of the direct script and CSS references in your application, you need to make use of the following references in the Site.Master file.
+If you want to refer the CDN links instead of the direct script and CSS references in your application, you need to make use of the following references in the _Layout.cshtml page.
 
 {% highlight html %}
 
@@ -346,7 +342,7 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 
     <title><%: Page.Title %> - My ASP.NET Application</title>
 
-    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" />
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/default-theme/ej.web.all.min.css" rel="stylesheet" />
 
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
 
@@ -358,18 +354,16 @@ If you want to refer the CDN links instead of the direct script and CSS referenc
 
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script> 
 
-    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.webform.min.js"></script>
-
 </head>    
 
 {% endhighlight %}
 
 ### Assembly Reference
 
-Refer the following assemblies in your newly created ASP.NET application that allows you to use any of the Syncfusion ASP.NET controls within it.
+Refer the following assemblies in your newly created ASP.NET MVC application that allows you to use any of the Syncfusion ASP.NET MVC controls within it.
 
 * Syncfusion.EJ
-* Syncfusion.EJ.Web
+* Syncfusion.EJ.MVC
 
 The reference to the Syncfusion assemblies can be added to your application in either of the following ways.
 -	Referring from GAC
@@ -399,13 +393,15 @@ N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
-N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.Web and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
+N> In the above image, the folders 3.5, 4.0, 4.5, 4.5.1 denotes the .NET Framework version. Based on the Framework version used in your application, you can choose assemblies from the appropriate folders. The Syncfusion.EJ.MVC and other core assemblies like Syncfusion.Core, Syncfusion.EJ are available within these folders.
 
 3.	Add the Syncfusion.EJ, Syncfusion.EJ.MVC, and Syncfusion.Core assemblies to your application from the following specified location.
 
 N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5 <BR>
 For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the below location, <BR>
 C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}\4.5
+
+N> Syncfusion.Core dependency has been removed from 13.2.0.29 and it is not required to refer this assembly when you are using 13.2.0.29 and later versions.    
 
 4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown in the following.
 
@@ -423,8 +419,8 @@ In your application’s web.config file, add the below assembly information with
     <compilation debug="true" targetFramework="4.5">
           <assemblies>
 
-            <add assembly="Syncfusion.EJ, Version=14.4450.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-            <add assembly="Syncfusion.EJ.Mvc, Version=14.4500.0.15, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+            <add assembly="Syncfusion.EJ, Version=15.4450.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+            <add assembly="Syncfusion.EJ.Mvc, Version=15.4500.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
 
           </assemblies>
     </compilation>
