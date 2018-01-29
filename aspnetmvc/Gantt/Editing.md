@@ -151,13 +151,13 @@ In Gantt we can define the editing fields available in add and edit dialogs by u
         edit.AllowEditing(true);
         edit.EditMode("normal");
     })
-    .EditDialogFields(edf => 
+    .EditDialogFields(editDialog => 
     {
-        edf.Field("TaskID").EditType("stringedit").Add();
-        edf.Field("TaskName").EditType("stringedit").Add();
-        edf.Field("StartDate").EditType("datepicker").Add();
-        edf.Field("EndDate").EditType("datepicker").Add();
-        edf.Field("Duration").EditType("stringedit").Add();
+        editDialog.Field("TaskID").EditType("stringedit").Add();
+        editDialog.Field("TaskName").EditType("stringedit").Add();
+        editDialog.Field("StartDate").EditType("datepicker").Add();
+        editDialog.Field("EndDate").EditType("datepicker").Add();
+        editDialog.Field("Duration").EditType("stringedit").Add();
     })
     .Datasource(ViewBag.datasource)
 );
@@ -181,14 +181,14 @@ By default custom column fields are included in add/edit dialog's custom field t
         edit.AllowEditing(true);
         edit.EditMode("normal");
     })
-    .EditDialogFields(edf => 
+    .EditDialogFields(editDialog => 
     {
-        edf.Field("TaskID").EditType("stringedit").Add();
-        edf.Field("TaskName").EditType("stringedit").Add();
-        edf.Field("StartDate").EditType("datepicker").Add();
-        edf.Field("EndDate").EditType("datepicker").Add();
-        edf.Field("Duration").EditType("stringedit").Add();
-        edf.Field("CustomField").EditType("stringedit").DisplayInGeneralTab(true).Add();
+        editDialog.Field("TaskID").EditType("stringedit").Add();
+        editDialog.Field("TaskName").EditType("stringedit").Add();
+        editDialog.Field("StartDate").EditType("datepicker").Add();
+        editDialog.Field("EndDate").EditType("datepicker").Add();
+        editDialog.Field("Duration").EditType("stringedit").Add();
+        editDialog.Field("CustomField").EditType("stringedit").DisplayInGeneralTab(true).Add();
     })
     .ClientSideEvents(cs => cs.Load("load"))
     .Datasource(ViewBag.datasource)

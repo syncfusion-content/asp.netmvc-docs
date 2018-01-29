@@ -20,7 +20,7 @@ In Gantt, you can enable or disable taskbar and dependency line mouse hover tool
 @(Html.EJ().Gantt("Gantt")
     //...
     .EnableTaskbarTooltip(true)
-    .PredecessorMaping("Predecessors")
+    .PredecessorMapping("Predecessors")
     .Datasource(ViewBag.datasource)
 )
 
