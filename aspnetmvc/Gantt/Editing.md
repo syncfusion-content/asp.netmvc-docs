@@ -314,7 +314,7 @@ Task dependency can be added by mouse interactions by connecting connector point
 
 ### Edit Dependency
 
-Task dependency value can be edited by using edit dialog and [`updateDependency`](api/js/ejgantt#methods:updatedependency) method. Dependency edit dialog can be opened by double clicking on corresponding dependency line.
+Task dependency value can be edited by using edit dialog and [`updateDependency`](/api/js/ejgantt#methods:updatedependency) method. Dependency edit dialog can be opened by double clicking on corresponding dependency line.
 
 Client side `ActionBegin` client event will be triggered twice with different `requestType` argument values while opening of dependency dialog. First time, event will be triggered with `requestType` argument values as `beforeDependencyEditDialogOpen`, in this event we can get the current editing dependency line information, next `ActionBegin` client side event will be triggered with `requestType` argument value as `afterDependencyEditDialogOpen`, in this event we can get the information about current editing dependency line and editing elements in edit dialog. Using this event we can customize the dependency edit dialog elements.
 
@@ -347,7 +347,7 @@ The following screen shot shows the dependency edit dialog.
 
 ### Delete Dependency
 
-Task dependency can be deleted by using edit dialog and [`deleteDependency`](api/js/ejgantt#methods:deletedependency) method. The following screen shot shows the dependency edit dialog with delete option.
+Task dependency can be deleted by using edit dialog and [`deleteDependency`](/api/js/ejgantt#methods:deletedependency) method. The following screen shot shows the dependency edit dialog with delete option.
 
 ![](Editing_images/Predecessor_Editing_Dialog.png)
 
