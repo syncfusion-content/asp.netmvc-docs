@@ -257,6 +257,8 @@ Update the task details by interactions such as resizing and dragging the taskba
 
 You can also enable or disable the progress bar resizing by using the `EnableProgressBarResizing`. The following code example shows how to disable this property.
 
+{% highlight CSHTML %}
+
 @(Html.EJ().Gantt("Gantt")
     //...
     .EnableProgressBarResizing(false)
