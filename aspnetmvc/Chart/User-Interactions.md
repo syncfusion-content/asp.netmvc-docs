@@ -470,7 +470,7 @@ Trackball tooltip template is used to display the tooltip in customized template
 @(Html.EJ().Chart("chartContainer")
    //  ..
                 .Crosshair(cr => cr.Visible(true).Type(CrosshairType.Trackball)
-                .TrackballTooltipSettings(track=>track.Mode(TrackballDisplayMode.Float).tooltipTemplate("Tooltip")))
+                .TrackballTooltipSettings(track=>track.Mode(TrackballDisplayMode.Float).TooltipTemplate("Tooltip")))
   //  ..
 )
 
