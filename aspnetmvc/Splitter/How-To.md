@@ -80,7 +80,7 @@ Splitter pane size can be changed by updating model property of paneSize and by 
 {% highlight razor %}
 
 @Html.EJ().DropDownList("customersList").Datasource((IEnumerable<Customers>)ViewBag.datasource).DropDownListFields(df => df.ID("id").Text("text").Value("text")).Value("50").ClientSideEvents(e=>e.Change("change"))
-@Html.EJ().Splitter("outterSplitter").PaneProperties(
+@Html.EJ().Splitter("Splitter").PaneProperties(
     p =>
     {
         p.Add().ContentTemplate(
@@ -133,13 +133,9 @@ Splitter pane size can be changed by updating model property of paneSize and by 
         {
             border:0 none;
         }
-        #outterSpliter
+        #Splitter
         {
             margin: 0 auto;
-        }
-        .splitdiv
-        {
-            height:100%;width:100%;
         }
     </style>
 
@@ -149,7 +145,7 @@ Splitter pane size can be changed by updating model property of paneSize and by 
 
     <script>
         function change(args) {
-            var obj = $("#outterSplitter").data("ejSplitter");
+            var obj = $("#Splitter").data("ejSplitter");
             obj.model.properties[0].paneSize = args.value + "%";
             obj.refresh();
         }
