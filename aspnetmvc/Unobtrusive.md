@@ -100,17 +100,20 @@ Define the view model for DropDownList control as follows.
 
 {% highlight html %}
 
-    using System.ComponentModel.DataAnnotations;
-    public class DropValue
+    using System.ComponentModel.DataAnnotations; 
+    namespace Dropdown
     {
-        [Required(ErrorMessage = "DropDownList value is Required")]
-        public List<DropDownValue> DropData { get; set; }
+        public class DropValue
+        {
+            [Required(ErrorMessage = "DropDownList value is Required")]
+            public List<DropDownValue> DropData { get; set; }
 
-    }
-    public class DropDownValue
-    {
-        public string Text { get; set; }
-        public string Value { get; set; }
+        }
+        public class DropDownValue
+        {
+            public string Text { get; set; }
+            public string Value { get; set; }
+        }
     }
 
 {% endhighlight %}
@@ -124,22 +127,15 @@ Four sets of files are needed to implement the Unobtrusive.
 
 ![](Core_images/unobtrusive2.png)
 
-Refer to the necessary scripts files in your layout.cshtml page.
+Refer the above mentioned necessary scripts files in your layout.cshtml page.
 
 {% highlight html %}
 
-    using System.ComponentModel.DataAnnotations; 
-    public class DropValue
-    {
-        [Required(ErrorMessage = "DropDownList value is Required")]
-        public List<DropDownValue> DropData { get; set; }
-
-    }
-    public class DropDownValue
-    {
-        public string Text { get; set; }
-        public string Value { get; set; }
-    }
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/ej/ej.web.all.min.js"></script>
+    <script src="~/Scripts/ej/ej.unobtrusive.min.js"></script>
 
 {% endhighlight %}
 
@@ -148,31 +144,37 @@ After that you need to create the controller’s action methods. These render vi
 {% highlight html %}
 
     using Syncfusion.JavaScript.Models; 
-    public ActionResult DropdownlistFeatures() 
-    { 
-        BindingData(); 
-        return View(); 
-    } 
-    public void BindingData() 
-    { 
-        List<DropDownValue> data = new List<DropDownValue>() { }; 
-        data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
-        data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" }); 
-        data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" }); 
-        data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" }); 
-        data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
-        DropDownListProperties obj = new DropDownListProperties(); 
-        obj.DataSource = data;
-        DropDownListFields fields = new DropDownListFields();
-        fields.Text = "Text";
-        fields.Value = "Value"; 
-        obj.DropDownListFields = fields; ViewData["properties"] = obj; 
-    } 
-    [HttpPost]
-    public ActionResult DropdownlistFeatures(DropDownListModel model) 
-    { 
-        BindingData(); 
-        return View(model); 
+    namespace Dropdown
+    {
+        public partial class DropdownlistController: Controller
+        {
+            public ActionResult DropdownlistFeatures() 
+            { 
+                BindingData(); 
+                return View(); 
+            } 
+            public void BindingData() 
+            { 
+                List<DropDownValue> data = new List<DropDownValue>() { }; 
+                data.Add(new DropDownValue() { Value = "item1", Text = "List Item 1" });
+                data.Add(new DropDownValue() { Value = "item2", Text = "List Item 2" }); 
+                data.Add(new DropDownValue() { Value = "item3", Text = "List Item 3" }); 
+                data.Add(new DropDownValue() { Value = "item4", Text = "List Item 4" }); 
+                data.Add(new DropDownValue() { Value = "item5", Text = "List Item 5" });
+                DropDownListProperties obj = new DropDownListProperties(); 
+                obj.DataSource = data;
+                DropDownListFields fields = new DropDownListFields();
+                fields.Text = "Text";
+                fields.Value = "Value"; 
+                obj.DropDownListFields = fields; ViewData["properties"] = obj; 
+            } 
+            [HttpPost]
+            public ActionResult DropdownlistFeatures(DropDownListModel model) 
+            { 
+                BindingData(); 
+                return View(model); 
+            }
+        }
     }
 
 {% endhighlight %}
@@ -181,7 +183,7 @@ The view is created as in the following code snippet:
 
 {% highlight html %}
 
-   @using (Html.BeginForm())
+    @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
 
