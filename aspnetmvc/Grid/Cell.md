@@ -164,6 +164,11 @@ The grid has options to merge the grid cells based on the required conditions. T
 
 You can merge the rows and cells of grid, using the `rowMerge`, `colMerge` and `merge` functions available in `MergeCellInfo` event's argument.
 
+N> The following features are not supported with Cell Merging
+N> 1. Normal Mode Editing
+N> 2. Inline Mode Editing
+N> 3. Inline TemplateForm Mode Editing
+
 The following code example describes the above behavior.
 
 {% tabs %}
