@@ -351,3 +351,51 @@ The following code example describes the above behavior.
          }
 {% endhighlight  %}
 {% endtabs %}  
+
+
+## Drag Selection
+
+The [Drag](https://help.syncfusion.com/api/js/ejgrid#members:selectionsettings-enabletoggle "Drag") selection allows to perform selection of the particular row, cell or column by performing mouse dragging.  To enable drag selection, set [`allowDragSelection`](https://help.syncfusion.com/api/js/ejgrid#members:selectionsettings-enabletoggle "allowDragSelection") property of the [`selectionSettings`](https://help.syncfusion.com/api/js/ejgrid#members:selectionsettings "selectionSettings") as `true` and set the [`selectionMode`](https://help.syncfusion.com/api/js/ejgrid#members:selectionsettings-selectionmode "selectionMode") property of [`selectionSettings`](https://help.syncfusion.com/api/js/ejgrid#members:selectionsettings "selectionSettings") as `cell`. Now you can select the cells in the Grid by drgging the mouse. 
+
+N> The multi selection needs to be enabled, to select multiple cells in Grid by mouse dragging. 
+
+The following code example describes the above behavior. 
+
+{% tabs %} 
+{% highlight razor %}
+
+	  @(Html.EJ().Grid<OrdersView>("Selection")
+            .Datasource((IEnumerable<object>)ViewBag.datasource)
+            .AllowPaging()
+            .SelectionType(SelectionType.Multiple)
+            .SelectionSettings(select => { select.SelectionMode(mode => { mode.AddMode(SelectionMode.Cell); }).AllowDragSelection(true); })
+            .Columns(col =>
+            {
+                col.Field("OrderID").Add();
+                col.Field("EmployeeID").Add();   
+	            col.Field("ShipCity").Add();
+                col.Field("ShipCountry").Add(); 
+                col.Field("Freight").Add();    
+            }) 
+         )
+{% endhighlight  %}
+{% highlight c# %}
+		
+	    namespace MVCSampleBrowser.Controllers
+     	 {
+          public partial class GridController : Controller
+          {
+           public ActionResult Selection()
+             {
+                var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                ViewBag.datasource = DataSource;
+                return View();
+              }
+           }
+         }
+{% endhighlight  %}
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](selection_images/selection_img11.png)
