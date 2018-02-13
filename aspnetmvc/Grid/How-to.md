@@ -1606,6 +1606,169 @@ The following output is displayed as a result of the above code example.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
+## Export Grid to target location without download prompt(Excel, Word or PDF)
+
+In the Export method we have assigned the targetFolder to save the exported file in the specified path. The target folder is placed using the Server.MapPath.
+
+### Export Grid to target location for Excel Sheet
+
+The following code example shows how to save the Excel exported file in a target location.
+
+{% tabs %}
+
+{% highlight razor %}
+
+
+ @(Html.EJ().Grid<EmployeeView>("MasterGrid")
+        .Datasource((IEnumerable<object>)ViewBag.DataSource)
+        .AllowPaging()
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+        {
+            items.AddTool(ToolBarItems.ExcelExport);
+        }))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })        
+)
+  
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   public ActionResult GridFeatures()
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.DataSource = DataSource;
+            return View();
+            
+        }
+        public void ExportToExcel(string GridModel)
+        {
+
+            ExcelExport exp = new ExcelExport();
+            string targetFolder = Server.MapPath("") + "\\New folder\\";    // Set teh target folder using Server.MapPath
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron", true, targetFolder);    //specify the path which helps to save the excel file in local folder  
+
+        }
+   
+{% endhighlight  %}
+
+{% endtabs %} 
+
+### Export Grid to target location for Word Document
+
+The following code example shows how to save the Word exported file in a target location.
+
+{% tabs %}
+
+{% highlight razor %}
+
+
+ @(Html.EJ().Grid<EmployeeView>("MasterGrid")
+        .Datasource((IEnumerable<object>)ViewBag.DataSource)
+        .AllowPaging()
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+        {
+            items.AddTool(ToolBarItems.WordExport);
+        }))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })        
+)
+  
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   public ActionResult GridFeatures()
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.DataSource = DataSource;
+            return View();
+            
+        }
+        public void ExportToWord(string GridModel)
+        {
+
+            WordExport exp = new WordExport();
+            string targetFolder = Server.MapPath("") + "\\New folder\\";  // Set teh target folder using Server.MapPath
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron", true, targetFolder);    //specify the path which helps to save the excel file in local folder  
+
+        }
+   
+{% endhighlight  %}
+
+{% endtabs %} 
+
+### Export Grid to target location for PDF
+
+The following code example shows how to save the PDF exported file in a target location.
+
+{% tabs %}
+
+{% highlight razor %}
+
+
+ @(Html.EJ().Grid<EmployeeView>("MasterGrid")
+        .Datasource((IEnumerable<object>)ViewBag.DataSource)
+        .AllowPaging()
+        .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+        {
+            items.AddTool(ToolBarItems.PdfExport);
+        }))
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Add();
+        })        
+)
+  
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   public ActionResult GridFeatures()
+        {
+
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.DataSource = DataSource;
+            return View();
+            
+        }
+        public void ExportToPdf(string GridModel)
+        {
+
+            PdfExport exp = new PdfExport();
+            string targetFolder = Server.MapPath("") + "\\New folder\\";   // Set teh target folder using Server.MapPath
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+            exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron", true, targetFolder);   //specify the path which helps to save the excel file in local folder  
+
+        }
+   
+{% endhighlight  %}
+
+{% endtabs %}
+
 See Also
 
 For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
