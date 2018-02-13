@@ -109,7 +109,7 @@ Import feature provides support to import a word document into the editor `texta
 {% endhighlight  %}
 {% endtabs %} 
 
-## Server Dependencies
+## Import Server Dependencies
 
 Full list of assemblies needed for RTE Import are as follows
 
@@ -208,7 +208,7 @@ Export feature provides support to export editor `textarea` content into word an
 {% endhighlight  %}
 {% endtabs %} 
 
-## Server Dependencies
+## Export Server Dependencies
 
 Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for RTE Export as follows
 
