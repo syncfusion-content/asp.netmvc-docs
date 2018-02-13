@@ -1007,7 +1007,89 @@ In controller action method you are able to export all the grids available in th
 
 
 {% endhighlight %}
+
 {% endtabs %} 
+
+## DataTable Exporting
+
+Grid has support to export DataTable type datasource. This support helps when a Grid has no view model, and a DataTable is bound to a Grid.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+   @(Html.EJ().Grid<object>("DataTableGrid")
+      .Datasource((DataTable)ViewBag.dataTable)
+      .AllowPaging()
+      .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+       {
+          items.AddTool(ToolBarItems.ExcelExport);
+          items.AddTool(ToolBarItems.WordExport);
+          items.AddTool(ToolBarItems.PdfExport);
+       }))
+       .Columns(col =>
+        {
+          col.Field("ProductID").HeaderText("Product ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+          col.Field("ProductName").HeaderText("Product Name").Width(80).Add();
+          col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Width(75).Add();
+          col.Field("CategoryID").HeaderText("Category ID").Width(80).Add();
+        })
+    )
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+  public class GridController : Controller
+  {
+    DataTable _dTable = new DataTable();
+    List<Product> data = new List<Product>();
+    
+    public void GetGridDT()
+    {
+      var connection = ConfigurationManager.ConnectionStrings["NORTHWNDConnectionString"].ConnectionString;
+      using (var dataAdapter = new SqlDataAdapter("SELECT * from Products", connection))
+      {
+         dataAdapter.Fill(_dTable);
+      }
+    }
+    
+    public ActionResult GridFeatures()
+    {
+        GetGridDT();
+        ViewBag.dataTable = _dTable;
+        return View();
+    }
+    public void ExportToExcel(string GridModel)
+    {
+        ExcelExport exp = new ExcelExport();
+        GetGridDT();
+        DataTable DataSource = _dTable;
+        GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+        exp.Export(properties, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
+    }
+    public void ExportToWord(string GridModel)
+    {
+        WordExport exp = new WordExport();
+        GetGridDT();
+        DataTable DataSource = _dTable;
+        GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+        exp.Export(properties, DataSource, "Export.docx", false, false, "flat-saffron");
+    }
+    public void ExportToPdf(string GridModel)
+    {
+        PdfExport exp = new PdfExport();
+        GetGridDT();
+        DataTable DataSource = _dTable;
+        GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
+        exp.Export(properties, DataSource, "Export.pdf", false, false, "flat-saffron");
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
   
 ## Export required grid in single file
 
