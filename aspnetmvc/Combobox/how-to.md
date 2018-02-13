@@ -37,9 +37,9 @@ to the ComboBox.
 
     <script type="text/javascript">
         function onChange(e) {
-            var ctry = $('#countryList').data("ejComboBox");
-            if (e.model.value == null) ctry.option({ enabled: false });
-            else ctry.option({ enabled: true, query: new ej.Query().where('parentId', 'equal', e.model.value), value: null });
+            var country = $('#countryList').data("ejComboBox");
+            if (e.model.value == null) country.option({ enabled: false });
+            else country.option({ enabled: true, query: new ej.Query().where('parentId', 'equal', e.model.value), value: null });
         }
     </script>
 
@@ -263,7 +263,7 @@ N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.val
             <div class="row">
                 <div class="col-xs-8 col-sm-4">
                     <span class="txt">Select Country</span>
-                    @Html.EJ().ComboBox("countryList").Datasource((IEnumerable<CountryList>)ViewBag.datasource1).ComboBoxFields(h => h.Text("text").IconCss("iconclass")).AutoFill(true).Placeholder("Select").HtmlAttributes(new Dictionary<string, object> { { "name", "select" } }).ClientSideEvents(e=>e.Select("select"))
+                    @Html.EJ().ComboBox("countryList").Datasource((IEnumerable<CountryList>)ViewBag.datasource1).ComboBoxFields(h => h.Text("text")).AutoFill(true).Placeholder("Select").HtmlAttributes(new Dictionary<string, object> { { "name", "select" } }).ClientSideEvents(e=>e.Select("select"))
                 </div>             
                 <label class="errormessage"></label>
             </div>
