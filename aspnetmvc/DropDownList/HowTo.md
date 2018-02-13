@@ -245,7 +245,7 @@ Once the AJAX call is success, bind the data to the dropdown list on AJAX call b
 
 ## Remove validation error message on item selection
 
-You can remove the validaiton error message of DropDownList on selecting an item through change event using the below code.
+You can remove the validation error message of DropDownList on selecting an item through change event using the below code.
 
 {% tabs %}
 
@@ -254,7 +254,7 @@ You can remove the validaiton error message of DropDownList on selecting an item
      @model MVCApplication.Controllers.HomeController
     <form id="form1">   
 
-        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).ClientSideEvents(e => e.Change("onchange")).DropDownListFields(Df => Df.Text("Text").Value("Value")).ValidationMessage(message => message.AddMessage("required", "* Required")).ValidationRules(vr => vr.AddRule("required", true))
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).ClientSideEvents(e => e.Change("change")).DropDownListFields(Df => Df.Text("Text").Value("Value")).ValidationMessage(message => message.AddMessage("required", "* Required")).ValidationRules(vr => vr.AddRule("required", true))
 
         <br /><input type="submit" value="Submit" />
 
@@ -273,7 +273,7 @@ You can remove the validaiton error message of DropDownList on selecting an item
             // any other default options and/or rules
         });
 
-        function onchange(args){
+        function change(args){
                 this.element.valid();  //validation of dropdownlist through change event.
             }
 
