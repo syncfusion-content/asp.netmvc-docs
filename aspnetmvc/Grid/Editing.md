@@ -482,6 +482,7 @@ Before the template elements are converted to JS controls
 
 After the template elements are converted to JS controls using actionComplete event.
 
+N> To render the ej MVC form controls like DatePicker, Dropdownlist, NumericTextBox in the template edit form, from the partial view, refer the KB [`How render ejControls in the Edit Form Template of the MVC Grid`](https://www.syncfusion.com/kb/7746/how-render-ejcontrols-in-the-edit-form-template-of-the-mvc-grid "How render ejControls in the Edit Form Template of the MVC Grid?").
 
 ### Dialog
 
@@ -886,6 +887,7 @@ Before the template elements are converted to JS controls
 
 After the template elements are converted to JS controls using actionComplete event.
 
+N> To render the ej MVC form controls like DatePicker, Dropdownlist, NumericTextBox in the template edit form, from the partial view, refer the KB [`How render ejControls in the Edit Form Template of the MVC Grid`](https://www.syncfusion.com/kb/7746/how-render-ejcontrols-in-the-edit-form-template-of-the-mvc-grid "How render ejControls in the Edit Form Template of the MVC Grid?").
 
 ### Batch / Excel-like
 
