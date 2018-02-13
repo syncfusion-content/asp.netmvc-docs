@@ -1012,7 +1012,7 @@ In controller action method you are able to export all the grids available in th
 
 ## DataTable Exporting
 
-You can export a DataTable Grid in single file. This support helps when a Grid has no view model, and a DataTable is bound to a Grid.
+Grid has support to export DataTable type datasource. This support helps when a Grid has no view model, and a DataTable is bound to a Grid.
 
 {% tabs %}
  
@@ -1064,7 +1064,7 @@ You can export a DataTable Grid in single file. This support helps when a Grid h
     {
         ExcelExport exp = new ExcelExport();
         GetGridDT();
-        var DataSource = _dTable;
+        DataTable DataSource = _dTable;
         GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
         exp.Export(properties, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron");
     }
@@ -1072,7 +1072,7 @@ You can export a DataTable Grid in single file. This support helps when a Grid h
     {
         WordExport exp = new WordExport();
         GetGridDT();
-        var DataSource = _dTable;
+        DataTable DataSource = _dTable;
         GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
         exp.Export(properties, DataSource, "Export.docx", false, false, "flat-saffron");
     }
@@ -1080,7 +1080,7 @@ You can export a DataTable Grid in single file. This support helps when a Grid h
     {
         PdfExport exp = new PdfExport();
         GetGridDT();
-        var DataSource = _dTable;
+        DataTable DataSource = _dTable;
         GridProperties properties = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
         exp.Export(properties, DataSource, "Export.pdf", false, false, "flat-saffron");
     }
