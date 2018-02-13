@@ -1018,41 +1018,42 @@ You can export a DataTable Grid in single file. This support helps when a Grid h
  
 {% highlight razor %}
 
-@(Html.EJ().Grid<object>("DataTableGrid")
-   .Datasource((DataTable)ViewBag.dataTable)
-   .AllowPaging()
-   .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
-   {
-     items.AddTool(ToolBarItems.ExcelExport);
-     items.AddTool(ToolBarItems.WordExport);
-     items.AddTool(ToolBarItems.PdfExport);
-   }))
-   .Columns(col =>
-   {
-     col.Field("ProductID").HeaderText("Product ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
-     col.Field("ProductName").HeaderText("Product Name").Width(80).Add();
-     col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Width(75).Add();
-     col.Field("CategoryID").HeaderText("Category ID").Width(80).Add();
-   })
-)
+   @(Html.EJ().Grid<object>("DataTableGrid")
+      .Datasource((DataTable)ViewBag.dataTable)
+      .AllowPaging()
+      .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+       {
+          items.AddTool(ToolBarItems.ExcelExport);
+          items.AddTool(ToolBarItems.WordExport);
+          items.AddTool(ToolBarItems.PdfExport);
+       }))
+       .Columns(col =>
+        {
+          col.Field("ProductID").HeaderText("Product ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+          col.Field("ProductName").HeaderText("Product Name").Width(80).Add();
+          col.Field("SupplierID").HeaderText("Supplier ID").TextAlign(TextAlign.Right).Width(75).Add();
+          col.Field("CategoryID").HeaderText("Category ID").Width(80).Add();
+        })
+    )
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public class GridController : Controller
-
-{
+  public class GridController : Controller
+  {
     DataTable _dTable = new DataTable();
     List<Product> data = new List<Product>();
+    
     public void GetGridDT()
     {
-        var connection = ConfigurationManager.ConnectionStrings["NORTHWNDConnectionString"].ConnectionString;
-        using (var dataAdapter = new SqlDataAdapter("SELECT * from Products", connection))
-        {
-            dataAdapter.Fill(_dTable);
-        }
+      var connection = ConfigurationManager.ConnectionStrings["NORTHWNDConnectionString"].ConnectionString;
+      using (var dataAdapter = new SqlDataAdapter("SELECT * from Products", connection))
+      {
+         dataAdapter.Fill(_dTable);
+      }
     }
+    
     public ActionResult GridFeatures()
     {
         GetGridDT();
