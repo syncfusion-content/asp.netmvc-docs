@@ -1652,7 +1652,7 @@ The following code example shows how to save the Excel exported file in a target
         {
 
             ExcelExport exp = new ExcelExport();
-            string targetFolder = Server.MapPath("") + "\\New folder\\";    // Set teh target folder using Server.MapPath
+            string targetFolder = Server.MapPath("") + "\\New folder\\";    // Set the target folder using Server.MapPath
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             exp.Export(obj, DataSource, "Export.xlsx", ExcelVersion.Excel2010, false, false, "flat-saffron", true, targetFolder);    //specify the path which helps to save the excel file in local folder  
@@ -1705,7 +1705,7 @@ The following code example shows how to save the Word exported file in a target 
         {
 
             WordExport exp = new WordExport();
-            string targetFolder = Server.MapPath("") + "\\New folder\\";  // Set teh target folder using Server.MapPath
+            string targetFolder = Server.MapPath("") + "\\New folder\\";  // Set the target folder using Server.MapPath
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             exp.Export(obj, DataSource, "Export.docx", false, false, "flat-saffron", true, targetFolder);    //specify the path which helps to save the excel file in local folder  
@@ -1758,7 +1758,7 @@ The following code example shows how to save the PDF exported file in a target l
         {
 
             PdfExport exp = new PdfExport();
-            string targetFolder = Server.MapPath("") + "\\New folder\\";   // Set teh target folder using Server.MapPath
+            string targetFolder = Server.MapPath("") + "\\New folder\\";   // Set the target folder using Server.MapPath
             var DataSource = new NorthwindDataContext().OrdersViews.ToList();
             GridProperties obj = (GridProperties)Syncfusion.JavaScript.Utils.DeserializeToModel(typeof(GridProperties), GridModel);
             exp.Export(obj, DataSource, "Export.pdf", false, false, "flat-saffron", true, targetFolder);   //specify the path which helps to save the excel file in local folder  
