@@ -265,7 +265,7 @@ N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.val
                     <span class="txt">Select Country</span>
                     @Html.EJ().ComboBox("countryList").Datasource((IEnumerable<CountryList>)ViewBag.datasource1).ComboBoxFields(h => h.Text("text")).AutoFill(true).Placeholder("Select").HtmlAttributes(new Dictionary<string, object> { { "name", "select" } }).ClientSideEvents(e=>e.Select("select"))
                 </div>             
-                <label class="errormessage"></label>
+                <label class="message"></label>
             </div>
             <button type="submit" id="valid" onclick="validate()"> Validate</button>
         </div>
@@ -279,7 +279,7 @@ N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.val
             $('form[id$="form1"]').validate({
                 rules: rules,
                 errorPlacement: function (error, element) {
-                    $(error).insertAfter($(".errormessage"));
+                    $(error).insertAfter($(".message"));
                 }
             });
           }
