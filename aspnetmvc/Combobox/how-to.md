@@ -37,9 +37,9 @@ to the ComboBox.
 
     <script type="text/javascript">
         function onChange(e) {
-            var ctry = $('#countryList').data("ejComboBox");
-            if (e.model.value == null) ctry.option({ enabled: false });
-            else ctry.option({ enabled: true, query: new ej.Query().where('parentId', 'equal', e.model.value), value: null });
+            var country = $('#countryList').data("ejComboBox");
+            if (e.model.value == null) country.option({ enabled: false });
+            else country.option({ enabled: true, query: new ej.Query().where('parentId', 'equal', e.model.value), value: null });
         }
     </script>
 
@@ -58,21 +58,21 @@ to the ComboBox.
             group.Add(new groups { parentId = "d", text = "Group D" });
             group.Add(new groups { parentId = "e", text = "Group E" });
             ViewBag.datasource = group;
-            country.Add(new Countries { value = 11, parentId = "a", text = "Algeria", sprite = "flag-dz" });
-            country.Add(new Countries { value = 12, parentId = "a", text = "Armenia", sprite = "flag-am" });
-            country.Add(new Countries { value = 13, parentId = "a", text = "Bangladesh", sprite = "flag-bd" });
-            country.Add(new Countries { value = 14, parentId = "a", text = "Cuba", sprite = "flag-cu" });
-            country.Add(new Countries { value = 15, parentId = "b", text = "Denmark", sprite = "flag-dk" });
-            country.Add(new Countries { value = 16, parentId = "b", text = "Egypt", sprite = "flag-eg" });
-            country.Add(new Countries { value = 17, parentId = "c", text = "Finland", sprite = "flag-fi" });
-            country.Add(new Countries { value = 18, parentId = "c", text = "India", sprite = "flag-in" });
-            country.Add(new Countries { value = 19, parentId = "c", text = "Malaysia", sprite = "flag-my" });
-            country.Add(new Countries { value = 20, parentId = "d", text = "New Zealand", sprite = "flag-nz" });
-            country.Add(new Countries { value = 21, parentId = "d", text = "Norway", sprite = "flag-no" });
-            country.Add(new Countries { value = 22, parentId = "d", text = "Romania", sprite = "flag-ro" });
-            country.Add(new Countries { value = 23, parentId = "e", text = "Singapore", sprite = "flag-sg" });
-            country.Add(new Countries { value = 24, parentId = "e", text = "Thailand", sprite = "flag-th" });
-            country.Add(new Countries { value = 25, parentId = "e", text = "Ukraine", sprite = "flag-ua" });
+            country.Add(new Countries { value = 11, parentId = "a", text = "Algeria" });
+            country.Add(new Countries { value = 12, parentId = "a", text = "Armenia"});
+            country.Add(new Countries { value = 13, parentId = "a", text = "Bangladesh" });
+            country.Add(new Countries { value = 14, parentId = "a", text = "Cuba"});
+            country.Add(new Countries { value = 15, parentId = "b", text = "Denmark"});
+            country.Add(new Countries { value = 16, parentId = "b", text = "Egypt" });
+            country.Add(new Countries { value = 17, parentId = "c", text = "Finland" });
+            country.Add(new Countries { value = 18, parentId = "c", text = "India" });
+            country.Add(new Countries { value = 19, parentId = "c", text = "Malaysia" });
+            country.Add(new Countries { value = 20, parentId = "d", text = "New Zealand" });
+            country.Add(new Countries { value = 21, parentId = "d", text = "Norway" });
+            country.Add(new Countries { value = 22, parentId = "d", text = "Romania" });
+            country.Add(new Countries { value = 23, parentId = "e", text = "Singapore" });
+            country.Add(new Countries { value = 24, parentId = "e", text = "Thailand" });
+            country.Add(new Countries { value = 25, parentId = "e", text = "Ukraine"});
             ViewBag.datasource1 = country;
             return View();
         }
@@ -106,7 +106,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
         </div>
     </div>
     <style>
-    .mailtools {
+    .mail {
     display: block;
     background-image: url('../../Images/dropdownlist/iconsapps.png');
     height: 25px;
@@ -115,35 +115,35 @@ In the following sample, icon classes are mapped with `IconCss` field.
     background-repeat: no-repeat;
 }
 
-    .mailtools.done {
+    .mail.done {
         background-position: 0 0;
     }
 
-    .mailtools.movetofolder {
+    .mail.moveto {
         background-position: 0 -22px;
     }
 
-    .mailtools.categorize {
+    .mail.categorize {
         background-position: 0 -46px;
     }
 
-    .mailtools.flag {
+    .mail.flag {
         background-position: 0 -70px;
     }
 
-    .mailtools.forward {
+    .mail.forward {
         background-position: 0 -94px;
     }
 
-    .mailtools.newmail {
+    .mail.new {
         background-position: 0 -116px;
     }
 
-    .mailtools.reply {
+    .mail.reply {
         background-position: 0 -140px;
     }
 
-    .mailtools.meeting {
+    .mail.meeting {
         background-position: 0 -164px;
     }
 
@@ -166,14 +166,14 @@ In the following sample, icon classes are mapped with `IconCss` field.
         public static List<IconCss> GetIconList()
         {
             List<IconCss> icon = new List<IconCss>();
-            icon.Add(new IconCss { Name = "Categorize and Move", IconClass = "mailtools categorize" });
-            icon.Add(new IconCss { IconClass = "mailtools done", Name = "Done" });
-            icon.Add(new IconCss { IconClass = "mailtools flag", Name = "Flag & Move" });
-            icon.Add(new IconCss { IconClass = "mailtools forward", Name = "Forward" });
-            icon.Add(new IconCss { IconClass = "mailtools movetofolder", Name = "Move to Folder" });
-            icon.Add(new IconCss { IconClass = "mailtools newmail", Name = "New E-mail" });
-            icon.Add(new IconCss { IconClass = "mailtools meeting", Name = "New Meeting" });
-            icon.Add(new IconCss { IconClass = "mailtools reply", Name = "Reply & Delete" });
+            icon.Add(new IconCss { Name = "Categorize and Move", IconClass = "mail categorize" });
+            icon.Add(new IconCss { IconClass = "mail done", Name = "Done" });
+            icon.Add(new IconCss { IconClass = "mail flag", Name = "Flag & Move" });
+            icon.Add(new IconCss { IconClass = "mail forward", Name = "Forward" });
+            icon.Add(new IconCss { IconClass = "mail moveto", Name = "Move to Folder" });
+            icon.Add(new IconCss { IconClass = "mail new", Name = "New E-mail" });
+            icon.Add(new IconCss { IconClass = "mail meeting", Name = "New Meeting" });
+            icon.Add(new IconCss { IconClass = "mail reply", Name = "Reply & Delete" });
             return icon;
         }
          public ActionResult Icons()
@@ -249,3 +249,49 @@ Output for grouping ComboBox control is as follows.
 
 ![](Combobox_howto_images/autofill.png)
 
+
+## Validation of ComboBox using jQuery Validator
+
+Validation of ComboBox can be done on form submission using jQuery Validations by adding name attribute for ComboBox through `htmlAttributes` property. Also, you can remove this error message during item selection through select or change event of ComboBox
+
+N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js) script file should be referred for validation, for more details, refer [here](http://jqueryvalidation.org/documentation).
+
+{% highlight html%}
+
+     <form id="form1">
+        <div class="frame">
+            <div class="row">
+                <div class="col-xs-8 col-sm-4">
+                    <span class="txt">Select Country</span>
+                    @Html.EJ().ComboBox("countryList").Datasource((IEnumerable<CountryList>)ViewBag.datasource1).ComboBoxFields(h => h.Text("text")).AutoFill(true).Placeholder("Select").HtmlAttributes(new Dictionary<string, object> { { "name", "select" } }).ClientSideEvents(e=>e.Select("select"))
+                </div>             
+                <label class="message"></label>
+            </div>
+            <button type="submit" id="valid" onclick="validate()"> Validate</button>
+        </div>
+        <script>
+          function validate()
+          {
+            var rules = {};
+            $("form[id$=form1] input[name$=select]").each(function () {
+                rules[this.name] = "required";
+            });
+            $('form[id$="form1"]').validate({
+                rules: rules,
+                errorPlacement: function (error, element) {
+                    $(error).insertAfter($(".message"));
+                }
+            });
+          }
+         function select(args)
+          {
+            if(args.value!="")
+            {
+               $("label.error").css("display", "none")  //hide error message when value is selected.
+            }
+          }
+       </script>
+
+    </form>
+
+{% endhighlight%}
