@@ -11,7 +11,7 @@ documentation: ug
 
 I> This feature is applicable only for all modes.
 
-Allows us to specify the required number format that PivotGrid should use in its values by setting the `format` option. Following number formats that are supported:
+Allows us to specify the required number format that PivotGrid should use in its values by setting the `Format` option. Following number formats that are supported:
 
 * number
 * decimal
@@ -38,7 +38,7 @@ Allows us to specify the required number format that PivotGrid should use in its
 
 ### Server Mode
 
-You can set Number Format through the property `Format`. You should specify the format to the property as per the MS standard notation.
+You can set Number Format through the `Format` property. You should specify the format to the property as per the MS standard notation.
  
 private PivotReport BindDefaultData()
     {        
@@ -72,7 +72,7 @@ private PivotReport BindDefaultData()
 * FixedPoint
 * HexaDecimal
 
-N> You can set the number format through the property `Format`
+N> You can set the number format through the `Format` property.
 
 private OlapReport CreateOlapReport()
 {

@@ -57,7 +57,7 @@ By using `Fill` and `Border` properties of tooltip, you can customize its backgr
 ![](User-Interactions_images/tooltipcustomization.png) 
 
 ### Tooltip with Rounded Corners
-The tooltip properties, `Rx` and `Ry` are used to customize its corner radius.
+The tooltip properties, `RX` and `RY` are used to customize its corner radius.
 
 {% highlight CSHTML %}
 
@@ -104,7 +104,7 @@ N> By default, the value for the `Type` option in zooming is “x,y” (indicati
 
 ### Enable Scrollbar
 
-* When `zooming.enableScrollbar` option is set to true, the PivotChart is rendered along with the scroll bars for precise view of data. The data can be viewed by using scroll bar or by using mouse wheel scrolling.
+* When `zooming.EnableScrollbar` option is set to true, the PivotChart is rendered along with the scroll bars for precise view of data. The data can be viewed by using scroll bar or by using mouse wheel scrolling.
 
 {% highlight CSHTML %}
 
@@ -117,7 +117,7 @@ N> By default, the value for the `Type` option in zooming is “x,y” (indicati
 ## Marker and Crosshair
 
 ### Marker Shape Customization
-In PivotChart, you can customize the marker `Shape` with following symbols.
+In PivotChart, you can customize the marker `shape` with following symbols.
 
 * Rectangle
 * Circle
@@ -144,7 +144,7 @@ In PivotChart, you can customize the marker `Shape` with following symbols.
 ![](User-Interactions_images/marker.png) 
 
 ### Enable Crosshair and Crosshair Label
-Crosshair helps you to view the value at mouse position or touch contact point. Crosshair can be enabled by using the `Visible` option in `Crosshair` property. Crosshair label can be enabled by using the **“Visible”** option in `CrosshairLabel` property within its corresponding axis.
+Crosshair helps you to view the value at mouse position or touch contact point. Crosshair can be enabled by using the `Visible` option in `CrossHair` property. Crosshair label can be enabled by using the **“Visible”** option in `CrosshairLabel` property within its corresponding axis.
 
 {% highlight CSHTML %}
 

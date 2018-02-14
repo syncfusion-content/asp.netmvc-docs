@@ -175,7 +175,7 @@ For customizing name in WCF Service, below code snippet is used.
 
 I> This option is applicable only for PivotChart in PivotClient specifically when exported to Excel document.
 
-You can set an option to export PivotChart to an Excel document, either as image or PivotChart format itself by setting the boolean property `exportChartAsImage`, inside the `BeforeExport` event.
+You can set an option to export PivotChart to an Excel document, either as image or PivotChart format itself by setting the Boolean property `exportChartAsImage`, inside the `BeforeExport` event.
 
 N> By default PivotChart will be exported as image format to Excel document.
 
@@ -196,7 +196,7 @@ The below screenshot shows the control exported to Excel document showing its ow
 
 ## Exporting Customization
 
-You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
+You can add title and description to the exporting document by using title and description property obtained in the "BeforeExport" event.
 
 {% highlight cshtml %}
 

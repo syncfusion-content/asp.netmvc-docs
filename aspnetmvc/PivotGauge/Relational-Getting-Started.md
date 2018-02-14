@@ -59,7 +59,7 @@ The version of Syncfusion libraries based on .NET Framework and MVC version are 
 </tr>
 </table>
 
-Register the referred assemblies in Web.config files available inside Views folder and also at the root of the application.
+Register the referred assemblies in "Web.config" files available inside Views folder and also at the root of the application.
 
 {% highlight xml %}
 
@@ -75,7 +75,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 </compilation>
 {% endhighlight %}
 
-Register the required namespaces in Web.config files available inside Views folder and also at the root of the application
+Register the required namespaces in "Web.config" files available inside Views folder and also at the root of the application
 
 {% highlight xml %}
 
@@ -89,7 +89,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
     
 {% highlight xml %}
 
@@ -139,7 +139,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 ### Initialize PivotGauge
 
-Before initializing, empty the contents of Index.cshtml file under Views > Home folder and add the following codes.
+Before initializing, empty the contents of "Index.cshtml" file under Views > Home folder and add the following codes.
 
 {% highlight cshtml %}
 
@@ -263,7 +263,7 @@ The version of Syncfusion libraries based on .NET Framework and MVC version are 
 </tr>
 </table>
 
-Register the referred assemblies in Web.config files available inside Views folder and also at the root of the application.
+Register the referred assemblies in "Web.config" files available inside Views folder and also at the root of the application.
 
 {% highlight xml %}
 
@@ -280,7 +280,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 
 {% endhighlight %}
 
-Register the required namespaces in Web.config files available inside Views folder and also at the root of the application
+Register the required namespaces in "Web.config" files available inside Views folder and also at the root of the application
 
 {% highlight xml %}
 
@@ -294,7 +294,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
     
 {% highlight xml %}
 
@@ -574,7 +574,7 @@ namespace PivotGaugeDemo
 
 **Configure routing in WebAPIConfig Class**
 
-Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
+Open the "WebAPIConfig.cs" file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
 
 {% highlight c# %}
 

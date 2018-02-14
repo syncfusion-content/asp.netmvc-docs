@@ -9,7 +9,7 @@ documentation: ug
 
 # PivotClient
 
-The **PivotClient** control for ASP.NET MVC provides support to Binds both OLAP and Relational data source.  You can visualize the results in graphical and tabular formats (chart and grid).The **PivotClient** control is also used to create and edit a report on-the-fly that is stored for later use.
+The **PivotClient** control for ASP.NET MVC provides support to bind both OLAP and Relational data sources.  You can visualize the results in graphical and tabular formats (chart and grid).The **PivotClient** control is also used to create and edit a report on-the-fly that is stored for later use.
 
 
 ## Key Features

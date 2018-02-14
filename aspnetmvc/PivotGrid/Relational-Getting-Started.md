@@ -59,7 +59,7 @@ The version of Syncfusion libraries based on .NET Framework and MVC version are 
 </tr>
 </table>
 
-Register the referred assemblies in Web.config files available inside Views folder and also at the root of the application.
+Register the referred assemblies in "Web.config" files available inside Views folder and also at the root of the application.
 
 {% highlight xml %}
 
@@ -75,7 +75,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 </compilation>
 {% endhighlight %}
 
-Register the required namespaces in Web.config files available inside Views folder and also at the root of the application
+Register the required namespaces in "Web.config" files available inside Views folder and also at the root of the application
 
 {% highlight xml %}
 
@@ -89,7 +89,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
     
 {% highlight xml %}
 
@@ -139,7 +139,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 ### Initialize PivotGrid
 
-Before initializing, empty the contents of Index.cshtml file under Views > Home folder and add the following codes.
+Before initializing, empty the contents of "Index.cshtml" file under Views > Home folder and add the following codes.
 
 {% highlight html %}
 
@@ -192,7 +192,7 @@ function onLoad(args) {
 
 {% endhighlight %}
 
-The JSON data is set to the **"data"** property present inside the **"dataSource"** object. **"dataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotGrid control.
+The JSON data is set to the **"data"** property present inside the **"DataSource"** object. **"DataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotGrid control.
   
 {% highlight html %}
   
@@ -200,7 +200,7 @@ The JSON data is set to the **"data"** property present inside the **"dataSource
 
 {% endhighlight %}
 
-The above code will generate a simple PivotGrid with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
+The above code will generate a simple PivotGrid with "Country" field in Row, "Product" field in Column, and "Amount" field in Value section.
 
 ![](Getting-Started_images/purejs.png) 
 
@@ -218,9 +218,9 @@ You can sort a field either to ascending or descending order using the "sortOrde
 
 ### Sort Row/Column by Date
 
-You can sort a field either in ascending or descending order according for date type by using the **sortOrder** property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
+You can sort a field either in ascending or descending order according for date type by using the **SortOrder** property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
 
-N> To apply sorting by date, you need to specify the `format` and `formatString` in the field.
+N> To apply sorting by date, you need to specify the `Format` and `FormatString` in the field.
 
 {% highlight cshtml %}
 
@@ -250,10 +250,10 @@ function onLoad(args) {
 
 Filtering option allows you to specify a set of values that either need to be displayed or hided. Also filtering option is applicable only for Row, Column and Filter areas.
 
-**"filterItems"** object allow us to apply filtering to the fields using the following properties:
+**"FilterItems"** object allow us to apply filtering to the fields using the following properties:
 
-* filterType -  indicates whether the values should be included or excluded.
-* values -  specify an array of values that needs to be included or excluded within the particular field.
+* FilterType -  indicates whether the values should be included or excluded.
+* Values -  specify an array of values that needs to be included or excluded within the particular field.
 
 {% highlight html %}
 
@@ -343,7 +343,7 @@ MVC5</td><td>
 </tr>
 </table>
 
-Register the referenced assemblies in Web.config files available inside Views folder and also at the root of the application.
+Register the referenced assemblies in "Web.config" files available inside Views folder and also at the root of the application.
 
 {% highlight xml %}
 
@@ -365,7 +365,7 @@ Register the referenced assemblies in Web.config files available inside Views fo
 
 {% endhighlight %}
 
-Register the required namespaces in Web.config files available inside Views folder and also at the root of the application
+Register the required namespaces in "Web.config" files available inside Views folder and also at the root of the application
 
 {% highlight xml %}
 
@@ -380,7 +380,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
     
 {% highlight xml %}
 
@@ -893,7 +893,7 @@ namespace PivotGridDemo
 
 **Configure routing in WebAPIConfig Class**
 
-Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
+Open the "WebAPIConfig.cs" file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
 
 {% highlight c# %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Defer Update
 
-I> This feature is applicable only for OLAP data source bound from server-side
+I> This feature is applicable only for OLAP data source bound from server-side.
 
 Defer Update support allows the user to refresh the control on-demand and not during every user interaction. To enable this functionality, set the `EnableDeferUpdate` property to true. By default, the value is set to false.
 

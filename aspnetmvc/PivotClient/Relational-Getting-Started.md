@@ -265,7 +265,7 @@ MVC5</td><td>
 </tr>
 </table>
 
-Register the referenced assemblies in Web.config files available inside Views folder and also at the root of the application.
+Register the referenced assemblies in "Web.config" files available inside Views folder and also at the root of the application.
 
 {% highlight xml %}
 
@@ -304,7 +304,7 @@ Register the required namespaces in Web.config files available inside Views fold
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
-Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
+Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
     
 {% highlight xml %}
 
@@ -380,7 +380,7 @@ N> The above "Index.cshtml" contains WebAPI URL, which is "/Relational". If WCF 
 
 **Adding a WebAPI Controller**
 
-To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it as **“RelationalController.cs”**, click **Add**.
+To add a WebAPI controller in an existing MVC Web Application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select **WebAPI Controller Class** and name it **“RelationalController.cs”**, click **Add**.
 
 Now, WebAPI controller is added to the application successfully with the file **“RelationalController.cs”**.
 
@@ -834,7 +834,7 @@ namespace PivotClientDemo {
 
 **Configure routing in WebAPIConfig Class**
 
-Open the WebAPIConfig.cs file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
+Open the "WebApiConfig.cs" file found in **App_Start** folder. Then routing could be configured as shown in the following code example.
 
 {% highlight c# %}
 

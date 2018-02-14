@@ -9,7 +9,7 @@ documentation: ug
 
 # Drill Through
 
-Drill-through retrieves the raw items that are used to create a specific cell. To enable drill-through support, set [`enableDrillThrough`] property to true. Raw items are obtained through the [`drillThrough`] event, using which user can bind them to an external widget for precise view. 
+Drill-through retrieves the raw items that are used to create a specific cell. To enable drill-through support, set [`EnableDrillThrough`] property to true. Raw items are obtained through the [`DrillThrough`] event, using which user can bind them to an external widget for precise view. 
 
 ## OLAP
 
@@ -21,11 +21,11 @@ On clicking any value cell, the "Drill Through Information" dialog will be opene
 
 ![](DrillThrough_images/DrillThroughData.png)
 
-On clicking the "Hierarchy Selector" button which is displayed below the Grid, the "Hierarchy Selector" dialog will be opened. It consists of the dimensions which are associated with the measure of the clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the dimensions associated with this measure are alone displayed in the dialog.  
+On clicking the "Hierarchy Selector" button which is displayed below the Grid, the Hierarchy Selector dialog will be opened. It consists of the dimensions which are associated with the measure of the clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the dimensions associated with this measure are alone displayed in the dialog.  
 
 ![](DrillThrough_images/hierarchy_selector.png)
 
-By dragging and dropping the respective hierarchies and finally clicking “OK” button, drill through MDX query will be framed and executed internally and provides back the raw items through "drillThrough" event. In this example, we have bound the raw items obtained to our ejGrid widget. Please refer the code sample and screen-shot below.
+By dragging and dropping the respective hierarchies and finally clicking “OK”, drill through MDX query will be framed and executed internally and provides back the raw items through "DrillThrough" event. In this example, we have bound the raw items obtained to our ejGrid widget. Please refer the code sample and screen-shot below.
 
 ## Client Mode
 
@@ -146,7 +146,7 @@ public Dictionary<string, object> DrillThroughDataTable(string currentReport, st
 
 ## Relational
 
-To enable drill-through support, set [`enableDrillThrough`] property to true. Raw items are obtained through the [`drillThrough`] event. 
+To enable drill-through support, set [`EnableDrillThrough`] property to true. Raw items are obtained through the [`DrillThrough`] event. 
 
 {% highlight cshtml %}
 
