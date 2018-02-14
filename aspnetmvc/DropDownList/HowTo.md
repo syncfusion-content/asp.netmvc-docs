@@ -241,3 +241,65 @@ Once the AJAX call is success, bind the data to the dropdown list on AJAX call b
     }
     
 {% endhighlight %}
+
+
+## Remove validation error message on item selection
+
+You can remove the validation error message of DropDownList on selecting an item through change event using the below code.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+     @model MVCApplication.Controllers.HomeController
+    <form id="form1">   
+
+        @Html.EJ().DropDownList("DropDownList1").Datasource((IEnumerable<Data>)ViewData["DropDownSource"]).ClientSideEvents(e => e.Change("change")).DropDownListFields(Df => Df.Text("Text").Value("Value")).ValidationMessage(message => message.AddMessage("required", "* Required")).ValidationRules(vr => vr.AddRule("required", true))
+
+        <br /><input type="submit" value="Submit" />
+
+    </form>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+        $.validator.setDefaults({
+            ignore: [],
+            errorClass: 'e-validation-error', // to get the error message on jQuery validation
+            errorPlacement: function (error, element) {
+                $(error).insertAfter(element.closest(".e-widget"));
+            }
+            // any other default options and/or rules
+        });
+
+        function change(args){
+                this.element.valid();  //validation of dropdownlist through change event.
+            }
+
+				
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+            List<Data> DropdownData = new List<Data>();
+            DropdownData.Add(new Data { Value = "10", Text = "10" });
+            DropdownData.Add(new Data { Value = "20", Text = "20" });
+            DropdownData.Add(new Data { Value = "30", Text = "30" });
+            DropdownData.Add(new Data { Value = "40", Text = "40" });
+            DropdownData.Add(new Data { Value = "50", Text = "50" });
+            ViewData["DropDownSource"] = DropdownData;
+            return View();
+        }
+        public class Data
+        {
+            public string Value { get; set; }
+            public string Text { get; set; }
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
+
