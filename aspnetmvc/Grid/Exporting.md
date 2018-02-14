@@ -1115,7 +1115,7 @@ Following are the list of properties that are excluded during grid export, to re
 * enableRTL
 * cssClass
 
-##Export only visible records
+## Export only visible records
 
 
 By default the `pageSettings` is ignored in export to facilitate all pages export. To achieve current visible page record export, the `pageSettings` should be removed from ignore list using the following code.
