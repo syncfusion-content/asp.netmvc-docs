@@ -437,7 +437,7 @@ The following output is displayed as a result of the above code example.
 ## Resizing
 
 
-The The `AllowResizing` property enables the grid to set the width to columns based on resizing the grid column manually.
+The `AllowResizing` property enables the grid to set the width to columns based on resizing the grid column manually.
 
 
 ### Resizing modes
