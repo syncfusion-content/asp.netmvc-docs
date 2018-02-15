@@ -1759,3 +1759,76 @@ public partial class GridController : Controller
 
 The following output is displayed as a result of the above code example.
 ![](Hierarchy-Grid_images/Hierarchy-Grid_images2.png)
+
+## Display other Syncfusion controls in Grid columns
+
+We can display the other Syncfusion controls using `Template` property of Grid columns and `TemplateRefresh` event of ejGrid control.
+
+{% tabs %}
+
+{% highlight razor %}
+
+  @(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .AllowPaging()
+        .ClientSideEvents(cevent => cevent.TemplateRefresh("template"))
+        .Columns(col =>
+        {
+            col.HeaderText("Employee Rating").Template("#columnTemplate").Width(100).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").Width(90).Add();
+            col.Field("FirstName").HeaderText("First Name").Width(90).Add();
+            col.Field("LastName").HeaderText("Last Name").Width(90).Add();
+            col.Field("Country").HeaderText("Country").Width(80).Add();    
+        })
+  )
+  
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   namespace Grid.Controllers
+   {
+     public class GridController : Controller
+     {
+        public ActionResult GridFeatures()
+        {
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+     }
+   }
+   
+{% endhighlight  %}
+
+{% highlight js %}
+
+<script type="text/x-jsrender" id="columnTemplate">
+    {{if EmployeeID<3}}
+
+    <input type="text" class="rating" value="3" />
+
+    {{else EmployeeID>2 && EmployeeID<5}}
+
+    <input type="text" class="rating" value="3" />
+
+    {{else EmployeeID>4}}
+
+    <input type="text" class="rating" value="5" />
+
+    {{/if}}
+</script>
+
+<script type="text/javascript">
+    function template(args) {
+        $(args.cell).find(".rating").ejRating({ allowReset: false });
+    }
+</script>
+   
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+
+![](How-to_images/Display_Other_controls_img1.png)
