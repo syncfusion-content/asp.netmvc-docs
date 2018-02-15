@@ -21,7 +21,7 @@ Allows you to render PivotClient in different sizes. You can set height and widt
 
 {% endhighlight %}
 
-PivotClient with decreased size from default size
+PivotClient with decreased size from default size.
 
 ![](Layout-Customization_images/small-size.png)
 
@@ -79,7 +79,7 @@ To display Grid control by default, set `DefaultView` property under `DisplaySet
 
 ### Chart View
 
-To display Chart control by default, set the property `DefaultView` property to **Chart**.
+To display Chart control by default, set the `DefaultView` property to **Chart**.
 
 {% highlight CSHTML %}
 

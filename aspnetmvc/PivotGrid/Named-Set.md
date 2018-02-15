@@ -13,7 +13,7 @@ Named set is a multidimensional expression (MDX) that returns a set of dimension
 
 ## Client Mode
 
-You can bind the Named Sets in PivotGrid by setting it's unique name in the `FieldName` property either in row or column axis and `isNamedSets` boolean property to "true".
+You can bind the Named Sets in PivotGrid by setting it's unique name in the `FieldName` property either in row or column axis and `IsNamedSets` Boolean property to "true".
 
 {% highlight CSHTML %}
 
@@ -26,7 +26,7 @@ You can bind the Named Sets in PivotGrid by setting it's unique name in the `Fie
 
 ## Server Mode
 
-You can add Named Sets in the PivotGrid by using NamedSetElement Class in the OlapReport. 
+You can add Named Sets in the PivotGrid by using "NamedSetElement" Class in the OlapReport. 
 
 {% highlight C# %}
 

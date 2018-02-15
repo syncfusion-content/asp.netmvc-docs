@@ -437,7 +437,7 @@ public void Export(System.IO.Stream stream) {
 
 ## Exporting Customization
 
-You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
+You can add title and description to the exporting document by using title and description property obtained in the "BeforeExport" event.
 
 {% highlight CSHTML %}
 

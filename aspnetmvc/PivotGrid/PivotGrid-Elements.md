@@ -39,9 +39,9 @@ Also hyperlink option provides separate events for row header, column header, va
 ![](PivotGrid-Elements_images/hyperlink.png)
 
 ## Selection
-You can select a particular range of value cells from PivotGrid and manipulate/display them. Cell selection is applicable only for value cells and you can enable this functionality by setting `enableCellSelection` property to true.
+You can select a particular range of value cells from PivotGrid and manipulate/display them. Cell selection is applicable only for value cells and you can enable this functionality by setting `EnableCellSelection` property to true.
 
-The **"cellSelection"** event would be triggered as soon as the selection process is over, that is, when the mouse left click is released. The event argument contains a collection of JSON records and header values, which contains information about the selected cells.
+The **"CellSelection"** event would be triggered as soon as the selection process is over, that is, when the mouse left click is released. The event argument contains a collection of JSON records and header values, which contains information about the selected cells.
 
 {% highlight CSHTML %}
 

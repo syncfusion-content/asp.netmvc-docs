@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Advanced Filtering & Sorting
+# Advanced Filtering and Sorting
 
 It allows to filter and sort the field members in PivotGrid.
 

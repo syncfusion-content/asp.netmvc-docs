@@ -68,7 +68,7 @@ The PivotChart control background can be customized by using the `Background` pr
 ![](Appearance_images/backgroundcutomize.png)
 
 ### Grid Bands Customization
-By using the `AlternateGridBand` property of the axis, you can provide different color for grid rows and columns formed by the grid lines in the Chart area. The properties `odd` and `even` are used to customize the grid bands at odd and even positions respectively.
+By using the `AlternateGridBand` property of the axis, you can provide different color for grid rows and columns formed by the grid lines in the Chart area. The properties `Odd` and `Even` are used to customize the grid bands at odd and even positions respectively.
 
 {% highlight CSHTML %}
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Responsive Layout
 
-PivotClient widget supports responsive rendering based on the target device (desktop & tablet) resolution. It supports resolution up to 1024x600. You can enable responsiveness in PivotClient by setting `IsResponsive` property to true.
+PivotClient widget supports responsive rendering based on the target device (desktop and tablet) resolution. It supports resolution up to 1024x600. You can enable responsiveness in PivotClient by setting `IsResponsive` property to true.
 
 
 {% highlight CSHTML %}

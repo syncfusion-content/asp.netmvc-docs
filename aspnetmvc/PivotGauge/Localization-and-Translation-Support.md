@@ -57,7 +57,7 @@ To get the localized string based on different cultures, from OLAP Cube, we need
 
 {% endhighlight %}
 
-For Server Mode, we need to set **"Culture"** and **"OverrideDefaultFormatStrings"** properties in OlapDataManager class to a specific culture along with setting **"Locale Identifier"** in connection string. 
+For Server Mode, we need to set **"Culture"** and **"OverrideDefaultFormatStrings"** properties in "OlapDataManager" class to a specific culture along with setting **"Locale Identifier"** in connection string. 
 
 {% highlight C# %}
 

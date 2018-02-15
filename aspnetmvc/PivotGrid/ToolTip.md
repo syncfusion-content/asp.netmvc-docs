@@ -9,7 +9,7 @@ documentation: ug
 
 # ToolTip
 
-Allows you to display the details of the cell on hovering value cells. By default, tooltip is enabled.  You can disable tooltip in PivotGrid by setting the `enableToolTip` property to false.
+Allows you to display the details of the cell on hovering value cells. By default, tooltip is enabled.  You can disable tooltip in PivotGrid by setting the `EnableToolTip` property to false.
 
 {% highlight CSHTML %}
 
