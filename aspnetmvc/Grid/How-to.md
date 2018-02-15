@@ -1720,7 +1720,7 @@ The following code example explains the above behavior.
                     col.Field("OrderID").HeaderText("OrderID").TextAlign(TextAlign.Right).Width(75).Add();
                     col.Field("ShipCity").HeaderText("ShipCity").Width(100).Add();
                     col.Field("CustomerName").HeaderText("First Name").Width(100).Add();
-                    col.Field("Freight").Width(120).Add();
+                    col.Field("CustomerID").HeaderText("Customer ID").Width(120).Add();
                     col.Field("ShipName").Width(100).Add();
                 });
         })
