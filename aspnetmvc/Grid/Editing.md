@@ -1389,6 +1389,81 @@ Also, using 'DataOperations' helper class you can perform grid action at server 
 7. PerformSelect
 8. Execute
 
+### Remotesave Adaptor:
+
+RemoteSaveAdaptor is used for binding local data and performs all data operations in client-side. It interacts with server-side only for CRUD operations to pass the modified records.
+
+Refer to the following code example
+
+{% tabs %}
+
+{% highlight razor %}
+
+@(Html.EJ().Grid<object>("FlatGrid")
+                .Datasource(dataSource => dataSource.Json((IEnumerable<object>)ViewBag.datasource).UpdateURL("/Home/Update")
+                .InsertURL("/Home/Insert").RemoveURL("/Home/Remove").Adaptor(AdaptorType.RemoteSaveAdaptor))
+                .AllowPaging()
+                .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+                .ToolbarSettings(toolbar =>
+                {
+                toolbar.ShowToolbar().ToolbarItems(items =>
+                    {
+                        items.AddTool(ToolBarItems.Add);
+                        items.AddTool(ToolBarItems.Edit);
+                        items.AddTool(ToolBarItems.Delete);
+                        items.AddTool(ToolBarItems.Update);
+                        items.AddTool(ToolBarItems.Cancel);
+                    });
+                })
+            .Columns(col =>
+                {
+                col.Field("OrderID").IsPrimaryKey(true).Add();
+                col.Field("EmployeeID").Add();
+                col.Field("CustomerID").Add();
+                col.Field("ShipCountry").Add();
+                col.Field("Freight").Add();
+            })
+        )
+        
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace EJGrid.Controllers
+    {
+        public class HomeController : Controller
+        {
+            public ActionResult Index()
+            {
+                var data = OrderRepository.GetAllRecords();
+                ViewBag.dataSource = data;
+                return View();
+            }
+            public ActionResult Update(EditableOrder value)
+            {
+                OrderRepository.Update(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+            }
+            public ActionResult Insert(EditableOrder value)
+            {
+                OrderRepository.Add(value);
+                var data = OrderRepository.GetAllRecords();
+                return Json(data, JsonRequestBehavior.AllowGet);
+            }
+            public ActionResult Remove(int key)
+            {
+               OrderRepository.Delete(key);
+               var data = OrderRepository.GetAllRecords();
+               return Json(data, JsonRequestBehavior.AllowGet);
+            }
+        }
+    }
+      
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Accessing CRUD action request details in server side:
 
 The 'Server-Side' function must be declared with the following parameter name for each editing functionality.
