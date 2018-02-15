@@ -1689,3 +1689,73 @@ See Also
 
 For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
 
+## Hierarchy Grid with different foreignKeyField in parent and child table
+
+The `QueryString` property is used to filter the childGrid data based on value in parent Grid data. But when the field name provided in `QueryString` does not exists in Child Grid, then `ForeignKeyField` property is used to filter the childGrid data. If the foreign key column name differs for parent and child grid then use `ForeignKeyField` property of Grid.
+
+The following code example explains the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@(Html.EJ().Grid<EmployeeView>("HierarchyGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .Columns(col =>
+        {
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(85).Add();
+            col.Field("FirstName").HeaderText("First Name").Width(100).Add();
+            col.Field("City").Width(100).Add();
+            col.Field("Country").Width(100).Add();
+        })
+        .ChildGrid(child =>
+        {
+            child.Datasource("http://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders")
+                .QueryString("FirstName")
+                .ForeignKeyField("CustomerName")
+                .AllowPaging()
+                .PageSettings(page => page.PageSize(5))
+                .Columns(col =>
+                {
+                    col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+                    col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
+                    col.Field("CustomerName").HeaderText("First Name").Width(100).Add();
+                    col.Field("CustomerID").HeaderText("Customer ID").Width(120).Add();
+                    col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
+                });
+        })
+
+)
+
+{% endhighlight  %}
+{% highlight c# %}
+
+public partial class GridController : Controller
+
+{
+
+	//
+
+	// GET: /HierarchyGrid/
+
+	 public ActionResult HierarchyGrid()
+
+        {
+
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+}
+
+
+{% endhighlight  %}
+
+{% endtabs %} 
+
+The following output is displayed as a result of the above code example.
+![](Hierarchy-Grid_images/Hierarchy-Grid_images2.png)
