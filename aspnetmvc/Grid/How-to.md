@@ -1717,11 +1717,11 @@ The following code example explains the above behavior.
                 .PageSettings(page => page.PageSize(5))
                 .Columns(col =>
                 {
-                    col.Field("OrderID").HeaderText("OrderID").TextAlign(TextAlign.Right).Width(75).Add();
-                    col.Field("ShipCity").HeaderText("ShipCity").Width(100).Add();
+                    col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+                    col.Field("ShipCity").HeaderText("Ship City").Width(100).Add();
                     col.Field("CustomerName").HeaderText("First Name").Width(100).Add();
                     col.Field("CustomerID").HeaderText("Customer ID").Width(120).Add();
-                    col.Field("ShipName").Width(100).Add();
+                    col.Field("ShipName").HeaderText("Ship Name").Width(100).Add();
                 });
         })
 
