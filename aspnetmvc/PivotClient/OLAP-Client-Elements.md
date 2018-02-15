@@ -11,14 +11,14 @@ documentation: ug
 
 ## Cube Selector
 
-Cube Selector allows to select any one of the cubes that are available in connected database. This can be achieved with a dropdown list displaying the list of cube names. On selecting a cube from the dropdown list the corresponding cube elements get loaded.
+Cube Selector allows to select any one of the cubes that are available in connected database. This can be achieved with a drop-down list displaying the list of cube names. On selecting a cube from the drop-down list the corresponding cube elements get loaded.
 
 ![](OLAP-Client-Elements_images/cubeSelector.png)
 
 
 ## Cube Dimension Browser
 
-Cube Dimension Browser is a treeview like structure that organizes the cube elements such as dimensions, hierarchies, measures, etc., from the selected cube into independent, logical groups.
+Cube Dimension Browser is a treeview like structure that organizes the cube elements such as dimensions, hierarchies, measures, etc., from the selected cube into independent logical groups.
 
 ### Drag and Drop
 
@@ -309,7 +309,7 @@ After giving a name and clicking OK, the active report gets refreshed with the n
 
 ### Report List
 
-Report List drop down contains the names of all the reports in the report collection.
+Report List drop-down contains the names of all the reports in the report collection.
 
 ![](OLAP-Client-Elements_images/reportlist.png)
 

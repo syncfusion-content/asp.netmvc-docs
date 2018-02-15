@@ -9,11 +9,11 @@ documentation: ug
 
 # Named Sets
 
-Named Sets is a multidimensional expression (MDX) that returns a set of dimension members, which can be created by combining cube data, arithmetic operators, numbers and functions.
+Named Sets is a multidimensional expression (MDX) that returns a set of dimension members, which can be created by combining cube data, arithmetic operators, numbers, and functions.
 
 ## Client Mode
 
-You can bind the Named Sets in PivotTreeMap by setting it's unique name in the `fieldName` property either in row or column axis and `isNamedSets` boolean property to "true".
+You can bind the Named Sets in PivotTreeMap by setting it's unique name in the `FieldName` property either in row or column axis and `IsNamedSets` Boolean property to "true".
 
 {% highlight js %}
 

@@ -688,7 +688,7 @@ N> Culture files are present under **"[installed drive]:\Users\[user name]\AppDa
 Content displayed within the PivotClient control are obtained from the Relational datasource. Following are the steps to get localized as well as globalized content.
  
 * To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotClient.  
-* **“Format”** settings in PivotComputationInfo class would globalize the values appeared in PivotClient.
+* **“Format”** settings in "PivotComputationInfo" class would globalize the values appeared in PivotClient.
 
 {% highlight c# %}
 

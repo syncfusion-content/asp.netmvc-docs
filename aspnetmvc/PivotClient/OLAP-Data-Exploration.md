@@ -55,24 +55,24 @@ The following screenshot displays the data after Filtering.
 
 ## Sorting
 
-The Sorting tab in the Sorting and Filtering dialog box provides the option to sort the results by rows/columns, either in ascending or descending order.
+The Sorting tab in the Sorting And Filtering dialog box provides the option to sort the results by rows/columns, either in ascending or descending order.
   
 * **Column sorting** - Sorts the columns based on the summary values of each column.
 * **Row sorting** - Sorts the rows based on the summary values of each row.
 
-Sorting and Filtering dialog box for rows and columns are opened by clicking the corresponding icon in the toolbar.
+Sorting And Filtering dialog box for rows and columns are opened by clicking the corresponding icon in the toolbar.
 
 ![](Data-Exploration_images/columnsort.png)
 
 ![](Data-Exploration_images/rowsort.png)
 
-The following screenshot displays the Sorting and Filtering dialog box.  
+The following screenshot displays the Sorting And Filtering dialog box.  
 
 ![](Data-Exploration_images/sorting.png)
 
 The options in the Sorting tab are as follows:
 
-* **Measure** – The measure for sorting is selected from the collection of measures in drop down list.
+* **Measure** – The measure for sorting is selected from the collection of measures in drop-down list.
 * **Order** – Specifies the sorting order.
 * **Preserve Hierarchy** – Sorts the records without changing the hierarchy order.
 
@@ -82,7 +82,7 @@ The following screenshot displays the data after applying sorting in ascending o
 
 ## Grouping
 
-The data can be grouped when more than one dimension element is added to column or row in Axis Element Builder.  Based on the order of addition, data is grouped and the report is updated. In the following example, members of the **Date** dimension get grouped, with respect to the members of **Customer** dimension.  Likewise multiple dimension members can be grouped by dragging the elements from Cube Dimension Browser to Axis Element Builder. 
+The data can be grouped when more than one dimension element is added to column or row in Axis Element Builder.  Based on the order of addition, data is grouped and the report is updated. In the following example, members of the **Date** dimension get grouped, with respect to the members of **Customer** dimension.  Likewise, multiple dimension members can be grouped by dragging the elements from Cube Dimension Browser to Axis Element Builder. 
 
 ![](Data-Exploration_images/grouping.png)
 

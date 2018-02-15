@@ -81,7 +81,7 @@ Now, WCF service is added into your application successfully and it comprises of
 
 **Configuring WCF Service Class**
 
-Remove the **“DoWork”** method present inside both `OlapService.svc.cs` and `IOlapService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `OlapService.svc.cs` and `IOlapService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `OlapService.svc.cs` file and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
 
@@ -155,7 +155,7 @@ namespace PivotClientDemo
 
 **Datasource Initialization**
 
-Now, the connection string to connect OLAP Cube, PivotClient and JavaScriptSerializer instances are created immediately inside the main class in `OlapService.svc.cs` file.
+Now, the connection string to connect OLAP Cube, PivotClient and "JavaScriptSerializer" instances are created immediately inside the main class in `OlapService.svc.cs` file.
 
 {% highlight c# %}
 
@@ -637,7 +637,7 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 {% endhighlight %}
 
-N> In this example, **“PivotClientDemo”** indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OlapService” indicates the name of the WCF service created.
+N> In this example, **“PivotClientDemo”** indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OlapService” indicates the name of the created WCF service.
 
 Now, **PivotClient** is rendered with PivotChart and PivotGrid showing Customer Count over a period of fiscal years.
 

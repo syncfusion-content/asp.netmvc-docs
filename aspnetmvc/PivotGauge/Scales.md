@@ -54,7 +54,7 @@ The appearance of the scale can be customized through the following properties.
 * **MinorIntervalValue** – sets the interval between major ticks in the scale.
 * **Direction** – sets the direction of the scale.  By default it takes “Clockwise” direction.
 
-The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers` and `ShowScaleBar` properties are used to enable/disable the indicators, ticks, ranges, pointers and scale bar respectively.  By default, `ShowTicks` and `ShowPointers` are set to true, other properties are set as false.
+The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers`, and `ShowScaleBar` properties are used to enable/disable the indicators, ticks, ranges, pointers and scale bar respectively.  By default, `ShowTicks` and `ShowPointers` are set to true, and other properties are set as false.
 
 {% highlight CSHTML %}
 

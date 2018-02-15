@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotGrid to Offline Cube
 
@@ -81,7 +81,7 @@ Now, WCF service is added into your application successfully and it comprises of
 
 **Configuring WCF Service Class**
 
-Remove the **“DoWork”** method present inside both `OlapService.svc.cs` and `IOlapService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside OlapService.svc.cs and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `OlapService.svc.cs` and `IOlapService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `OlapService.svc.cs` file and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
 
@@ -226,7 +226,7 @@ namespace PivotGridDemo
 
 {% endhighlight %}
 
-Secondly, elaborate the service methods inside the main class, found in `OlapService.svc.cs` file
+Secondly, elaborate the service methods inside the main class, found in `OlapService.svc.cs` file.
 
 {% highlight c# %}
 

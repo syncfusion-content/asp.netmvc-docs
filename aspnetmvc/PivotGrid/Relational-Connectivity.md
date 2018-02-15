@@ -30,7 +30,7 @@ Now, WCF service is added into the application successfully that comprises of th
 
 **Configuring WCF Service Class**
 
-Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside `RelationalService.svc.cs` and set **“RequirementsMode”** value to **“Allowed”**.
+Remove the **“DoWork”** method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files.  Next, add **“AspNetCompatibilityRequirements”** attribute on top of main class present inside the `RelationalService.svc.cs` file and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
 

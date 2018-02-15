@@ -23,7 +23,7 @@ The property `EnableColumnResizing` adjusts the width of each column based on si
 
 ## Column Width Based on Text
 
-The property `ResizeColumnsToFit` automatically adjusts the width of each column based on the maximum content length available in the respective column.
+The `ResizeColumnsToFit` property automatically adjusts the width of each column based on the maximum content length available in the respective column.
 
 {% highlight CSHTML %}
 
