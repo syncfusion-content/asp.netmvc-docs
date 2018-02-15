@@ -1395,8 +1395,6 @@ RemoteSaveAdaptor is used for binding local data and performs all data operation
 
 Refer to the following code example
 
-{% tabs %}
-
 {% highlight razor %}
 
 @(Html.EJ().Grid<object>("FlatGrid")
@@ -1427,42 +1425,6 @@ Refer to the following code example
         
 {% endhighlight %}
 
-{% highlight c# %}
-
-namespace EJGrid.Controllers
-    {
-        public class HomeController : Controller
-        {
-            public ActionResult Index()
-            {
-                var data = OrderRepository.GetAllRecords();
-                ViewBag.dataSource = data;
-                return View();
-            }
-            public ActionResult Update(EditableOrder value)
-            {
-                OrderRepository.Update(value);
-                var data = OrderRepository.GetAllRecords();
-                return Json(data, JsonRequestBehavior.AllowGet);
-            }
-            public ActionResult Insert(EditableOrder value)
-            {
-                OrderRepository.Add(value);
-                var data = OrderRepository.GetAllRecords();
-                return Json(data, JsonRequestBehavior.AllowGet);
-            }
-            public ActionResult Remove(int key)
-            {
-               OrderRepository.Delete(key);
-               var data = OrderRepository.GetAllRecords();
-               return Json(data, JsonRequestBehavior.AllowGet);
-            }
-        }
-    }
-      
-{% endhighlight %}
-
-{% endtabs %}
 
 ### Accessing CRUD action request details in server side:
 
