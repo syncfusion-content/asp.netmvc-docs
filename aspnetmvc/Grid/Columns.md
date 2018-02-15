@@ -994,6 +994,8 @@ I> For foreign key column the sorting and grouping is based on the `ForeignKeyFi
 
 N> In remote data, server should be configured to perform select and filter operations since the Grid will try to fetch required columns using select operation and the required data using filter operation.
 
+N> To render a Hierarchy Grid with different `ForeignKeyField` in parent and child table, click [`here`](https://help.syncfusion.com/aspnetmvc/grid/how-to#hierarchy-grid-with-different-foreignkeyfield-in-parent-and-child-table "here").
+
 The following code example describes the above behavior.
 
 {% tabs %}
@@ -1228,4 +1230,3 @@ You can set the Grid's columns layout based on either Grid width or its columns 
 The following output is displayed as a result of the above code example.
 
 ![](columns_images/columns_img25.png)
-
