@@ -70,3 +70,87 @@ By default, you are provided with collapse/expand icons in **Split bar** to coll
 The output for Splitter with **Template support**.
 
 ![](How-To_images/Template_Support_img.png) 
+
+### Change the splitter pane size dynamically
+
+Splitter pane size can be changed by updating model property of paneSize and by refreshing the control using refresh public method.  As shown in the below code, based on the selected dropdown list value, pane size of splitter is changed.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@Html.EJ().DropDownList("customersList").Datasource((IEnumerable<Customers>)ViewBag.datasource).DropDownListFields(df => df.ID("id").Text("text").Value("text")).Value("50").ClientSideEvents(e=>e.Change("change"))
+@Html.EJ().Splitter("Splitter").PaneProperties(
+    p =>
+    {
+        p.Add().ContentTemplate(
+            @<div>
+                <div class="content">
+                    <h3 class="h3">
+                        Pane 1
+                    </h3>
+                </div>
+            </div>);
+        p.Add().ContentTemplate(
+            @<div>
+                   <h3 class="h3">Pane 2</h3>
+                    
+                    </div>);
+    }).Height("350")
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+        List<Customers> customer = new List<Customers>();
+        public ActionResult SplitterFeatures()
+        {
+            customer.Add(new Customers { id = "1", text = "25" });
+            customer.Add(new Customers { id = "2", text = "50" });
+            customer.Add(new Customers { id = "3", text = "75" });
+            ViewBag.datasource = customer;
+              return View();
+         } 
+          public class Customers
+         {
+             public string id { get; set; }
+             public string text { get; set; }
+         }
+
+{% endhighlight  %}
+
+{% endtabs %}  
+
+{% highlight css %}
+
+<style type="text/css" class="cssStyles">
+        .cont
+        {
+            padding: 10px 0 0 10px;
+            text-align: center;
+        }
+        #inner
+        {
+            border:0 none;
+        }
+        #Splitter
+        {
+            margin: 0 auto;
+        }
+    </style>
+
+{% endhighlight %}
+
+{% highlight javascript %}
+
+    <script>
+        function change(args) {
+            var obj = $("#Splitter").data("ejSplitter");
+            obj.model.properties[0].paneSize = args.value + "%";
+            obj.refresh();
+        }
+    </script>
+
+{% endhighlight %}
+
+![](How-To_images/Pane_Size.png) 
