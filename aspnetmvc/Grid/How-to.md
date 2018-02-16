@@ -1881,11 +1881,13 @@ The following code example explains the above behavior.
             @(Html.EJ().DropDownList("filtercolumnone")
                   .TargetID("Order")
                   .Width("120px")
+                  .WatermarkText("Select filter value one")
                   .SelectedIndex(0)
             )
             @(Html.EJ().DropDownList("filtercolumntwo")
                   .TargetID("Employee")
                   .Width("120px")
+                  .WatermarkText("Select filter value two")
                   .SelectedIndex(0)
             )
             @(Html.EJ().Button("filteri")
@@ -2104,4 +2106,4 @@ The following code example explains the above behavior.
 
 {% endtabs %}
 The following output is displayed as a result of the above code example.
-![](ExternalSearch_images/Actionswithexternalbutton_img1.png)
+![](How-to_images/Actionswithexternalbutton_img1.png)
