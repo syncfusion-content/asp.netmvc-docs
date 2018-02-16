@@ -203,7 +203,7 @@ The below screenshot shows the control exported to Excel document showing its ow
 
 ## Exporting Customization
 
-You can add title, description and enable/disable styling to the exporting document by using title, description and exportWithStyle properties respectively obtained in the `BeforeExport` event.
+You can add title and description to the exporting document by using the title and description properties respectively obtained in the `BeforeExport` event. Similarly, you can enable or disable styling on the exported document by using the `exportWithStyle` property.
 
 {% highlight cshtml %}
 
