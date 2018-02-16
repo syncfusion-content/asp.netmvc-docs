@@ -1859,14 +1859,15 @@ The following code example explains the above behavior.
 {% highlight html %}
 <table>
     <tr>
-        <td><b>CRUD</b><br>@(Html.EJ().Button("Addrecord")
+        <td>
+            <b>CRUD</b><br>@(Html.EJ().Button("Addrecord")
                   .Width("100px")
                   .ClientSideEvents(eve => { eve.Click("addRecord"); })
                   .Text("Addrecord")
             )
             @(Html.EJ().Button("Updaterecord")
                   .Width("100px")
-                  .ClientSideEvents(eve => { eve.Click("updaterecord"); })
+                  .ClientSideEvents(eve => { eve.Click("updateRecord"); })
                   .Text("Updaterecord")
             )
             @(Html.EJ().Button("DeleteRecord")
@@ -1875,34 +1876,37 @@ The following code example explains the above behavior.
                   .Text("DeleteRecord")
             )
         </td>
-        <td><b>Filtering</b><br><br>
+        <td>
+            <b>Filtering</b><br><br>
             @(Html.EJ().DropDownList("filtercolumnone")
                   .TargetID("Order")
                   .Width("120px")
-                  .SelectedItemIndex(0)
+                  .SelectedIndex(0)
             )
             @(Html.EJ().DropDownList("filtercolumntwo")
                   .TargetID("Employee")
                   .Width("120px")
-                  .SelectedItemIndex(0)
+                  .SelectedIndex(0)
             )
-        </td>
-        <div id="Order"><ul><li>10248</li><li>10249</li><li>10250</li><li>10251</li><li>10252</li></ul></div>
-        <div id="Employee"><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></div>
             @(Html.EJ().Button("filteri")
                   .Width("100px")
                   .ClientSideEvents(eve => { eve.Click("Filterfn"); })
-                  .Text("Sort")
+                  .Text("Filter")
             )
             @(Html.EJ().Button("ClearFilter")
                   .Width("100px")
                   .ClientSideEvents(eve => { eve.Click("clearfilterfn"); })
                   .Text("Clear")
             )
-        <td><b>Grouping</b><br><br>
+        </td>
+        <div id="Order"><ul><li>10001</li><li>10249</li><li>10250</li><li>10251</li><li>10252</li></ul></div>
+        <div id="Employee"><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></div>
+        <td>
+            <b>Grouping</b><br><br>
             <div id="columnName">
-                <ul><li>Order ID</li>
-                    <li>Customer ID</li>
+                <ul>
+                    <li>OrderID</li>
+                    <li>CustomerID</li>
                     <li>Freight</li>
                     <li>Verified</li>
                     <li>ShipName</li>
@@ -1911,7 +1915,7 @@ The following code example explains the above behavior.
             @(Html.EJ().DropDownList("groupcolumnname")
                 .TargetID("columnName")
                 .Width("115px")
-                .SelectedItemIndex(0)
+                .SelectedIndex(0)
                 .ClientSideEvents(eve => { eve.Change("Onchange"); })
             )
             @(Html.EJ().Button("groupColumn")
@@ -1927,7 +1931,8 @@ The following code example explains the above behavior.
                 .Text("UnGroupColumn")
             )
         </td>
-        <td><b>Sorting</b><br><br>
+        <td>
+            <b>Sorting</b><br><br>
             <div id="sortcolumnName">
                 <ul>
                     <li>Order ID</li>
@@ -1940,7 +1945,7 @@ The following code example explains the above behavior.
             @(Html.EJ().DropDownList("SortColumnName")
                   .TargetID("sortcolumnName")
                   .Width("120px")
-                  .SelectedItemIndex(0)
+                  .SelectedIndex(0)
             )
             <div id="directions">
                 <ul>
@@ -1951,16 +1956,16 @@ The following code example explains the above behavior.
             @(Html.EJ().DropDownList("Directions")
                   .TargetID("directions")
                   .Width("120px")
-                  .SelectedItemIndex(0)
+                  .SelectedIndex(0)
             )
             @(Html.EJ().Button("doSorting")
                   .Width("100px")
-                  .ClientSideEvents(eve => { eve.Click("onClick"); })
+                  .ClientSideEvents(eve => { eve.Click("Sortfn"); })
                   .Text("Sort")
             )
             @(Html.EJ().Button("clearSort")
                   .Width("100px")
-                  .ClientSideEvents(eve => { eve.Click("onClick"); })
+                  .ClientSideEvents(eve => { eve.Click("Sortfn"); })
                   .Text("Clear")
             )
         </td>
@@ -1970,7 +1975,7 @@ The following code example explains the above behavior.
 {% tabs %}
 
 {% highlight html %}
-    @(Html.EJ().Grid<EditableOrder>("FlatGrid")
+@(Html.EJ().Grid<object>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
         .AllowGrouping()
         .AllowFiltering()
@@ -1996,7 +2001,7 @@ The following code example explains the above behavior.
             col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(150).Format("{0:C}").Add();
             col.Field("OrderDate").HeaderText("Order Date").Width(200).Add();
         })
-    )
+)
 {% endhighlight  %}
 
 {% highlight c# %}
@@ -2026,18 +2031,18 @@ The following code example explains the above behavior.
 {% endhighlight  %}
 
 {% highlight js %}
-<script>
+<script type="text/javascript">
     function addRecord(){
         var gridObj = $('#FlatGrid').data("ejGrid");
         gridObj.addRecord({ "OrderID": 12333 });
     }
     function deleteRecord(){
         var gridObj = $('#FlatGrid').data("ejGrid");
-        gridObj.deleteRecord("OrderID", { OrderID: gridObj.model.dataSource[gridObj.model.selectedRowIndex].OrderID }); 
+        gridObj.deleteRecord("OrderID", { OrderID: gridObj.model.dataSource[gridObj.model.selectedRowIndex].OrderID });
     }
     function updateRecord(){
         var gridObj = $('#FlatGrid').data("ejGrid");
-        gridObj.updateRecord("OrderID", { OrderID: 10249, EmployeeID: 3 }); 
+        gridObj.updateRecord("OrderID", { OrderID: 10002, EmployeeID: 6 });
     }
     function Filterfn(args) {
         var obj = $('#FlatGrid').data("ejGrid");
@@ -2064,37 +2069,36 @@ The following code example explains the above behavior.
                 }
         }
     }
+
     function clicktoGroup(args) {
-        var gridObj = $('#FlatGrid.ClientID').data("ejGrid");
-        var dropdownobj = $('#groupcolumnname').data("ejDropDownList");
-        var groupcolumnname = dropdownobj.getValue().replace(/\s*/g, "");
-        if (this.element.attr('id').indexOf("ungroupColumn") == -1) {
-        gridObj.groupColumn(groupcolumnname);
-        $("#groupColumn").ejButton("disable");
-        $("#ungroupColumn").ejButton("enable");
+        var gridObj = $("#FlatGrid").data("ejGrid");
+        var columnName = $("#groupcolumnname").ejDropDownList("getSelectedValue");
+        if (this.element.attr("id") == "groupColumn") {
+            gridObj.groupColumn(columnName);
+                $("#groupColumn").ejButton("disable");
+                $("#unGroupColumn").ejButton("enable");
+            
         }
         else {
-                gridObj.ungroupColumn(groupcolumnname);
-                group = true;
-                $("#ungroupColumn").ejButton("disable");
-                $("#groupColumn").ejButton("enable");
+            gridObj.ungroupColumn(columnName);
+            group = true;
+            $("#unGroupColumn").ejButton("disable");
+            $("#groupColumn").ejButton("enable");
         }
     }
     function Onchange() {
-        var gridObj = $('#FlatGrid').data("ejGrid");
-        var dropdownobj = $('#groupcolumnname').data("ejDropDownList");
-        var groupcolumnname = dropdownobj.getValue().replace(/\s*/g, '');
-        if ($.inArray(groupcolumnname, gridObj.model.groupSettings.groupedColumns) != -1) {
-            $("#ungroupColumn").ejButton("enable");
+        var gridObj = $("#FlatGrid").data("ejGrid");
+        var columnName = $("#groupcolumnname").ejDropDownList("getSelectedValue");
+        if ($.inArray(columnName, gridObj.model.groupSettings.groupedColumns) != -1) {
+            $("#unGroupColumn").ejButton("enable");
             $("#groupColumn").ejButton("disable");
         }
         else {
             $("#groupColumn").ejButton("enable");
-            $("#ungroupColumn").ejButton("disable");
+            $("#unGroupColumn").ejButton("disable");
         }
     }
 </script>
-
 
 {% endhighlight %}
 
