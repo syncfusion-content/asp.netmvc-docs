@@ -11,7 +11,7 @@ documentation: ug
 
 N> This feature is applicable only for Relational data source.
 
-You can hide the **Sub Total** for respective fields in rows and columns by setting the property `ShowSubTotal` to `false`.
+You can hide the **Sub Total** for respective fields in rows and columns by setting the `ShowSubTotal` property to `false`.
 
 ## Client Mode
 

@@ -11,7 +11,7 @@ documentation: ug
 
 I> This feature is applicable only for OLAP data source.
 
-Drill-through retrieves the raw items that are used to create a specified cell. To enable drill-through support, set [`enableDrillThrough`] property to true. Raw items are obtained through the [`drillThrough`] event, using which user can bind them to an external widget for precise view. 
+Drill-through retrieves the raw items that are used to create a specified cell. To enable drill-through support, set [`EnableDrillThrough`] property to true. Raw items are obtained through the [`drillThrough`] event, using which user can bind them to an external widget for precise view. 
 
 N> Drill-through is supported in PivotGrid only when we configure and enable drill-through action at the Cube. 
 
@@ -25,7 +25,7 @@ On clicking the "Hierarchy Selector" button which is displayed below the Grid, t
 
 ![](DrillThrough_images/hierarchy_selector.png)
 
-By dragging and dropping the respective hierarchies and finally clicking “OK” button, Drill through MDX query will be framed and executed internally and provides back the raw items through "drillThrough" event. In this example, we have bound the raw items obtained to our ejGrid widget. Please refer the code sample and screen-shot below.
+By dragging and dropping the respective hierarchies and finally clicking “OK” button, Drill through MDX query will be framed and executed internally and provides back the raw items through "DrillThrough" event. In this example, we have bound the raw items obtained to our ejGrid widget. Please refer the code sample and screen-shot below.
 
 ## Client Mode
 

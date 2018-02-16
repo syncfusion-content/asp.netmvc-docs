@@ -15,7 +15,7 @@ Paging helps to improve the rendering performance of the PivotClient control by 
 
 ## Using Pager 
 
-You can enable Pager in PivotClient by setting the [`enablePaging`](/js/api/ejpivotclient#members:enablePaging) property to true. You can provide the page size and current page details for each axis through [`pagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property.
+You can enable Pager in PivotClient by setting the [`EnablePaging`](/js/api/ejpivotclient#members:enablePaging) property to true. You can provide the page size and current page details for each axis through [`PagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property.
 
 ### Client Mode
 
@@ -46,7 +46,7 @@ Following are the navigation option available in Pager.
 
 ## Using Virtual Scrolling
 
-Virtual Scrolling is a technique that allows user to view the PivotClient information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotClient by setting the [`enableVirtualScrolling`](/js/api/ejpivotclient#members:enablevirtualscrolling) property to true. You can provide the page size and current page details for each axis through [`pagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property. 
+Virtual Scrolling is a technique that allows user to view the PivotClient information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotClient by setting the [`enableVirtualScrolling`](/js/api/ejpivotclient#members:enablevirtualscrolling) property to true. You can provide the page size and current page details for each axis through [`PagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property. 
 
 ### Client Mode
 

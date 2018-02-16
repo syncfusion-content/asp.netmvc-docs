@@ -13,7 +13,7 @@ documentation: ug
 
 ### Filtering by Member
 
-By clicking Split Button of a field, Member Editor Dialog opens through which members are filtered by checking and unchecking the check boxes corresponding to the members. 
+By clicking Split Button of a field, Member Editor dialog opens through which members are filtered by checking and unchecking the check boxes corresponding to the members. 
 
 ![](Data-Exploration_images/relational-filterbymember.png)
 

@@ -18,7 +18,7 @@ We can save and load the report in two ways.
 
 ## Save Report to Database
 
-We can store the report collection of PivotClient to database, by using the [`saveReport`](/js/api/ejpivotclient#members:saveReport) event in PivotClient.
+We can store the report collection of PivotClient to database, by using the [`SaveReport`](/js/api/ejpivotclient#members:saveReport) event in PivotClient.
 
 {% highlight CSHTML %}
 
@@ -108,7 +108,7 @@ public Dictionary<string, object> SaveReportToDB(string reportName, string opera
 
 ## Save Report to Local Storage
 
-We can store the report collection of PivotClient to local storage, by setting the [`enableLocalStorage`](/js/api/ejpivotclient#members:enableLocalStorage) property to true and by defining the [`saveReport`](/js/api/ejpivotclient#members:saveReport) event of PivotClient.
+We can store the report collection of PivotClient to local storage, by setting the [`EnableLocalStorage`](/js/api/ejpivotclient#members:enableLocalStorage) property to true and by defining the [`SaveReport`](/js/api/ejpivotclient#members:saveReport) event of PivotClient.
 
 {% highlight CSHTML %}
 
@@ -130,7 +130,7 @@ function saveReportSettings(args) {
 
 ## Load Report from Database
 
-We can load the stored report collection of PivotClient from database, by using the [`fetchReport`](/js/api/ejpivotclient#members:fetchReport)  and [`loadReport`](/js/api/ejpivotclient#members:loadReport) events in PivotClient.
+We can load the stored report collection of PivotClient from database, by using the [`FetchReport`](/js/api/ejpivotclient#members:fetchReport)  and [`LoadReport`](/js/api/ejpivotclient#members:loadReport) events in PivotClient.
 
 {% highlight CSHTML %}
 
@@ -317,7 +317,7 @@ private DataTable GetDataTable()
 
 ## Load Report from Local Storage
 
-We can load the stored report collection of PivotClient from local storage, by setting the [`enableLocalStorage`](/js/api/ejpivotclient#members:enableLocalStorage) property to true and using the [`LoadReport`](/js/api/ejpivotclient#members:loadReport) and [`FetchReport`](/js/api/ejpivotclient#members:fetchReport) events in PivotClient.
+We can load the stored report collection of PivotClient from local storage, by setting the [`EnableLocalStorage`](/js/api/ejpivotclient#members:enableLocalStorage) property to true and using the [`LoadReport`](/js/api/ejpivotclient#members:loadReport) and [`FetchReport`](/js/api/ejpivotclient#members:fetchReport) events in PivotClient.
 
 {% highlight CSHTML %}
 

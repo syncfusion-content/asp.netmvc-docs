@@ -9,7 +9,7 @@ documentation: ug
 
 # KPI
 
-Key Performance Indicators (KPIs) are business metric that help to figure out the progress of an enterprise in meeting its business goals.
+Key Performance Indicators (KPI) are business metric that help to figure out the progress of an enterprise in meeting its business goals.
 
 The different indicators available in KPI are:
 

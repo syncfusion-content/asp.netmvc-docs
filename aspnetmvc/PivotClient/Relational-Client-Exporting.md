@@ -25,7 +25,7 @@ The property `ClientExportMode` takes any one of the following value:
 
 I> By default, exporting is done with the use of JSON Records maintained in client-side for both client and server modes.
 
-In order to make use of exporting with client side JSON data. The control can be exported by invoking “beforeExport” event, with an appropriate export option as parameter.
+In order to make use of exporting with client side JSON data. The control can be exported by invoking “BeforeExport” event, with an appropriate export option as parameter.
 
 {% highlight CSHTML %}
 
@@ -126,7 +126,7 @@ For WCF service, the below service method needs to be added to perform exporting
 
 I> This option is applicable only for PivotClient excel export.
 
-You can set the option for exporting excel sheet as either *.xls* or *.xlsx* format before export the document by using 'fileFormat' property obtained in the “beforeExport” event.
+You can set the option for exporting excel sheet as either *.xls* or *.xlsx* format before export the document by using 'fileFormat' property obtained in the “BeforeExport” event.
 
 N> By default excel document can be exported as ".xls" format using PivotEngine export.
 
@@ -203,7 +203,7 @@ The below screenshot shows the control exported to Excel document showing its ow
 
 ## Exporting Customization
 
-You can add title and description to the exporting document by using title and description property obtained in the "beforeExport" event.
+You can add title and description to the exporting document by using title and description property obtained in the "BeforeExport" event.
 
 {% highlight cshtml %}
 

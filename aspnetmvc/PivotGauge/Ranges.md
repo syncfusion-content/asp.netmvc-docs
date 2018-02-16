@@ -36,7 +36,7 @@ The appearance of the range can be customized through the following properties.
 
 Positioning the range could be set either through `Placement` or `DistanceFromScale` property. 
 
-N> By default, placement takes the value “near”, whereas other enumeration values available are “far” and “center”.
+N> By default, placement takes the value “Near”, whereas other enumeration values available are “Far” and “Center”.
 
 {% highlight CSHTML %}
 

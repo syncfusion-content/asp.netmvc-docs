@@ -141,7 +141,7 @@ namespace PivotTreeMaptDemo
 
 **Datasource Initialization**
 
-Now the connection string to connect OLAP Cube, PivotTreeMap and JavaScriptSerializer instances are created immediately inside the main class in `OlapService.svc.cs` file.
+Now the connection string to connect OLAP Cube, PivotTreeMap, and "JavaScriptSerializer" instances are created immediately inside the main class in `OlapService.svc.cs` file.
 
 {% highlight c# %}
 
