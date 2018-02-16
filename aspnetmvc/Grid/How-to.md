@@ -1837,21 +1837,21 @@ The following output is displayed as a result of the above code example.
 
 ### CRUD operations
 
-Using [`addRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:addRecord “addRecord”) method of Grid, you can add a record to a Grid externally without using in-built toolbar add support. While using [`addRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:addRecord “addRecord”) method it is necessary to set `AllowAdding` property as `true`.
-Using [`deleteRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:deleteRecord “deleteRecord”) method of Grid, you can delete a record to a Grid externally without using in-built toolbar delete support. While using [`deleteRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:deleteRecord “deleteRecord”) method it is necessary to set `AllowDeleting` property as `true`.
-Using [`updateRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:updateRecord “updateRecord”) method of Grid, you can update a record to a Grid externally without using in-built toolbar update support. While using [`updateRecord`](https://help.syncfusion.com/api/js/ejgrid#methods:updateRecord “updateRecord”) method it is necessary to set `AllowEditing` property as `true`.
+Using `addRecord` method of Grid, you can add a record to a Grid externally without using in-built toolbar add support. While using `addRecord` method it is necessary to set `AllowAdding` property as `true`.
+Using `deleteRecord` method of Grid, you can delete a record to a Grid externally without using in-built toolbar delete support. While using `deleteRecord` method it is necessary to set `AllowDeleting` property as `true`.
+Using `updateRecord` method of Grid, you can update a record to a Grid externally without using in-built toolbar update support. While using `updateRecord` method it is necessary to set `AllowEditing` property as `true`.
 
 ### Filtering
 
-Using [`filterColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:filterColumn “filterColumn”) method of Grid, you can filter the data in the Grid externally without using in-built filter support. While using [`filterColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:filterColumn “filterColumn”) method it is necessary to set `AllowFiltering` property as `true`.
+Using `filterColumn` method of Grid, you can filter the data in the Grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
 
 ### Grouping
 
-Using [`groupColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:groupColumn “groupColumn”) and [`ungroupColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:ungroupColumn “ungroupColumn”) method of Grid, you can group/ungroup the Grid externally without using in-built grouping support. While using [`groupColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:groupcolumn “groupColumn”) and [`ungroupColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:ungroupcolumn “ungroupColumn”) method it is necessary to set `AllowGrouping` property as `true`.
+Using `groupColumn` and `ungroupColumn` method of Grid, you can group/ungroup the Grid externally without using in-built grouping support. While using `groupColumn` and `ungroupColumn` method it is necessary to set `AllowGrouping` property as `true`.
 
 ### Sorting
 
-Using [`sortColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:sortcolumn “sortColumn”) method of Grid, you can sort the Grid externally without using in-built sorting support. While using [`sortColumn`](https://help.syncfusion.com/api/js/ejgrid#methods:sortcolumn “sortColumn”) method it is necessary to set `AllowSorting` property as `true`.
+Using `sortColumn` method of Grid, you can sort the Grid externally without using in-built sorting support. While using `sortColumn` method it is necessary to set `AllowSorting` property as `true`.
 
 The following code example explains the above behavior.
 
