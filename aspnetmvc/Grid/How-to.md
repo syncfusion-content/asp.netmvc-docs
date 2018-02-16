@@ -1859,154 +1859,245 @@ The following code example explains the above behavior.
 {% highlight html %}
 <table>
     <tr>
-        <td><b>CRUD</b><br><button id="Addrecord">Addrecord</button><br><button id="Updaterecord">Updaterecord</button><br><button id="DeleteRecord">DeleteRecord</button></td>
-        <td><b>Filtering</b><br><br><input type="text" id="filterone" /><input type="text" id="filtertwo" /><button id="filteri">Filter</button> <button id="ClearFilter">Clear Filter</button></td>
+        <td><b>CRUD</b><br>@(Html.EJ().Button("Addrecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("addRecord"); })
+                  .Text("Addrecord")
+            )
+            @(Html.EJ().Button("Updaterecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("updaterecord"); })
+                  .Text("Updaterecord")
+            )
+            @(Html.EJ().Button("DeleteRecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("deleteRecord"); })
+                  .Text("DeleteRecord")
+            )
+        </td>
+        <td><b>Filtering</b><br><br>
+            @(Html.EJ().DropDownList("filtercolumnone")
+                  .TargetID("Order")
+                  .Width("120px")
+                  .SelectedItemIndex(0)
+            )
+            @(Html.EJ().DropDownList("filtercolumntwo")
+                  .TargetID("Employee")
+                  .Width("120px")
+                  .SelectedItemIndex(0)
+            )
+        </td>
         <div id="Order"><ul><li>10248</li><li>10249</li><li>10250</li><li>10251</li><li>10252</li></ul></div>
         <div id="Employee"><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></div>
+            @(Html.EJ().Button("filteri")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("Filterfn"); })
+                  .Text("Sort")
+            )
+            @(Html.EJ().Button("ClearFilter")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("clearfilterfn"); })
+                  .Text("Clear")
+            )
         <td><b>Grouping</b><br><br>
-            <select id="columnName" class="e-ddl" data-bind="value: field">
-                <option value="OrderID" selected="selected">Order ID</option>
-                <option value="CustomerID">Customer ID</option>
-                <option value="Freight">Freight</option>
-                <option value="ShipName">Ship Name</option>
-                <option value="Verified">Verified</option>
-            </select><br>
-            <button id="groupColumn">GroupColumn</button>
-            <button id="unGroupColumn">UnGroupColumn</button>
+            <div id="columnName">
+                <ul><li>Order ID</li>
+                    <li>Customer ID</li>
+                    <li>Freight</li>
+                    <li>Verified</li>
+                    <li>ShipName</li>
+                </ul>
+            </div><br>
+            @(Html.EJ().DropDownList("groupcolumnname")
+                .TargetID("columnName")
+                .Width("115px")
+                .SelectedItemIndex(0)
+                .ClientSideEvents(eve => { eve.Change("Onchange"); })
+            )
+            @(Html.EJ().Button("groupColumn")
+                .Width("100px")
+                .Size(ButtonSize.Medium)
+                .ClientSideEvents(eve => { eve.Click("clicktoGroup"); })
+                .Text("GroupColumn")
+            )
+            @(Html.EJ().Button("unGroupColumn")
+                .Width("115px")
+                .Size(ButtonSize.Medium)
+                .ClientSideEvents(eve => { eve.Click("clicktoGroup"); })
+                .Text("UnGroupColumn")
+            )
         </td>
         <td><b>Sorting</b><br><br>
-            <select id="sortcolumnName" class="e-ddl" style="width: 100px" data-bind="value: field">
-                <option value="OrderID" selected="selected">Order ID</option>
-                <option value="CustomerID">Customer ID</option>
-                <option value="EmployeeID">Employee ID</option>
-                <option value="Freight">Freight</option>
-                <option value="OrderDate">Order Date</option>
-            </select>
-            <select id="directions" class="e-ddl" style="width: 100px" data-bind="value: field">
-                <option value="ascending" selected="selected">Ascending</option>
-                <option value="descending">Descending</option>
-            </select>
-            <button id="doSorting" style="width: 100px">Sort</button>
-            <button id="clearSort" style="width: 100px">Clear</button>
+            <div id="sortcolumnName">
+                <ul>
+                    <li>Order ID</li>
+                    <li>Customer ID</li>
+                    <li>Employee ID</li>
+                    <li>Freight</li>
+                    <li>Ship City</li>
+                </ul>
+            </div>
+            @(Html.EJ().DropDownList("SortColumnName")
+                  .TargetID("sortcolumnName")
+                  .Width("120px")
+                  .SelectedItemIndex(0)
+            )
+            <div id="directions">
+                <ul>
+                    <li>Ascending</li>
+                    <li>Descending</li>
+                </ul>
+            </div>
+            @(Html.EJ().DropDownList("Directions")
+                  .TargetID("directions")
+                  .Width("120px")
+                  .SelectedItemIndex(0)
+            )
+            @(Html.EJ().Button("doSorting")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("onClick"); })
+                  .Text("Sort")
+            )
+            @(Html.EJ().Button("clearSort")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("onClick"); })
+                  .Text("Clear")
+            )
         </td>
     </tr>
 </table>
-<div id="Grid"></div>
 
-{% endhighlight %}
+{% tabs %}
+
+{% highlight html %}
+    @(Html.EJ().Grid<EditableOrder>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .AllowGrouping()
+        .AllowFiltering()
+        .AllowPaging()
+        .AllowSorting()
+        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+        .ToolbarSettings(toolbar =>
+        {
+            toolbar.ShowToolbar().ToolbarItems(items =>
+            {
+                items.AddTool(ToolBarItems.Add);
+                items.AddTool(ToolBarItems.Edit);
+                items.AddTool(ToolBarItems.Delete);
+                items.AddTool(ToolBarItems.Update);
+                items.AddTool(ToolBarItems.Cancel);
+            });
+        })
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(150).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(200).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").Width(150).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(150).Format("{0:C}").Add();
+            col.Field("OrderDate").HeaderText("Order Date").Width(200).Add();
+        })
+    )
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    public partial class GridController : Controller
+
+{
+
+	//
+
+	// GET: /Externalbutton/
+
+	 public ActionResult Externalbutton()
+
+        {
+
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+}
+
+{% endhighlight  %}
 
 {% highlight js %}
-<script type="text/javascript">
-    $("#Grid").ejGrid({
-        dataSource : window.gridData,
-        allowPaging : true,
-        isResponsive:true,
-        allowSearching:true,
-        allowFiltering:true,
-        allowGrouping:true, 
-        allowReordering:true,
-        allowSorting:true,
-        editSettings : {
-            allowEditing : true,
-            allowAdding : true,
-            allowDeleting : true,
-            editMode : "normal"
-        },
-        toolbarSettings : {
-            showToolbar : true,
-            toolbarItems : ["add", "edit", "delete", "update", "cancel"]
-        },
-        columns : [{ field: "OrderID", headerText: "Order ID",isPrimaryKey:true, width: 70 },
-                   { field: "CustomerID", headerText: "Customer ID", width: 70 },
-                   { field: "EmployeeID", headerText: "Employee ID", width: 70},
-                   { field: "Freight", headerText: "Freight", width: 70},
-                   { field: "OrderDate", headerText: "Order Date", width: 70}]
-    });
-    $('#filterone').ejDropDownList({ targetID: "Order", watermarkText:"Select Filter value one", width: "230"});
-    $('#filtertwo').ejDropDownList({ targetID: "Employee", watermarkText:"Select Filter value two", width: "230"});
-    $("#columnName").ejDropDownList({ width: "115", selectedItemIndex: 0, change: "Groupfn" });
-    $("#groupColumn").ejButton({ size: "medium", click: "clicktoGroup", width: "100px" });
-    $("#filteri").ejButton({ size: "medium", click: "Filterfn", width: "100px" });
-    $("#unGroupColumn").ejButton({ size: "medium", click: "clicktoGroup", width: "115px" });
-    $("#Addrecord").ejButton({ size: "medium", click: "addRecord", width: "100px" });
-    $("#DeleteRecord").ejButton({ size: "medium", click: "deleteRecord", width: "100px" });
-    $("#Updaterecord").ejButton({ size: "medium", click: "updateRecord", width: "100px" });
-    $("#ClearFilter").ejButton({ size: "medium", click: "clearfilterfn", width: "100px" });
-    $("#unGroupColumn").ejButton("disable");
-    $("#sortcolumnName").ejDropDownList({ width: "120" });
-    $("#directions").ejDropDownList({ width: "120" });
-    $("#sortcolumnName").ejDropDownList("option",{"selectedItemIndex":1});
-    $("#directions").ejDropDownList("option", { "selectedItemIndex": 0 });
-    $("#doSorting,#clearSort").ejButton({ "click": "Sortfn", width: "100" });
+<script>
     function addRecord(){
-        var gridObj = $('#Grid').data("ejGrid");
+        var gridObj = $('#FlatGrid').data("ejGrid");
         gridObj.addRecord({ "OrderID": 12333 });
     }
     function deleteRecord(){
-        var gridObj = $('#Grid').data("ejGrid");
+        var gridObj = $('#FlatGrid').data("ejGrid");
         gridObj.deleteRecord("OrderID", { OrderID: gridObj.model.dataSource[gridObj.model.selectedRowIndex].OrderID }); 
     }
     function updateRecord(){
-        var gridObj = $('#Grid').data("ejGrid");
+        var gridObj = $('#FlatGrid').data("ejGrid");
         gridObj.updateRecord("OrderID", { OrderID: 10249, EmployeeID: 3 }); 
     }
-    var group = true;
     function Filterfn(args) {
-        var gridObj = $("#Grid").data("ejGrid");
-        var one = $('#filterone').data("ejDropDownList");
-        var two = $('#filtertwo').data("ejDropDownList");
+        var obj = $('#FlatGrid').data("ejGrid");
+        var one = $('#filtercolumnone').data("ejDropDownList");
+        var two = $('#filtercolumntwo').data("ejDropDownList");
         var One = one.getValue();
         var Two = two.getValue();
-        gridObj.filterColumn([{field:"OrderID",operator:"equal",value:One,predicate:"and", matchcase:true},{field:"EmployeeID",operator:"equal",value:Two,predicate:"and", matchcase:true}]);
+        obj.filterColumn([{field:"OrderID",operator:"equal",value:One,predicate:"and", matchcase:true},{field:"EmployeeID",operator:"equal",value:Two,predicate:"and", matchcase:true}]);
     }
     function clearfilterfn(args) {
-        var gridObj = $("#Grid").data("ejGrid");
+        var gridObj = $("#FlatGrid").data("ejGrid");
         gridObj.clearFiltering();
     }
     function Sortfn(args) {
-        var gridObj = $("#Grid").data("ejGrid");
-        var columnName = $("#sortcolumnName").data("ejDropDownList")._selectedValue;
-        var sortDirection = $("#directions").data("ejDropDownList")._selectedValue;
-        if (this.element.attr("id") == "doSorting") {
-            gridObj.sortColumn(columnName, sortDirection);
-        }
-        else {
-            gridObj.clearSorting();
+        var gridobj = $("#FlatGrid").data("ejGrid");
+                if (gridobj != undefined) {
+                    gridobj.clearSorting();
+                    if (this.element.attr('id').indexOf("doSorting") != -1) {
+                        var name = $('#SortColumnName').data("ejDropDownList");
+                    var direction = $('#Directions').data("ejDropDownList");
+                    var columnName = name.getValue().replace(/\s*/g, "");
+                    var sortDirection = direction.getValue().toLowerCase();
+                    gridobj.sortColumn(columnName, sortDirection);
+                }
         }
     }
-    function Groupfn() {
-        var gridObj = $("#Grid").data("ejGrid");
-        var columnName = $("#columnName").ejDropDownList("getSelectedValue");
-        if ($.inArray(columnName, gridObj.model.groupSettings.groupedColumns) != -1) {
-            $("#unGroupColumn").ejButton("enable");
+    function clicktoGroup(args) {
+        var gridObj = $('#FlatGrid.ClientID').data("ejGrid");
+        var dropdownobj = $('#groupcolumnname').data("ejDropDownList");
+        var groupcolumnname = dropdownobj.getValue().replace(/\s*/g, "");
+        if (this.element.attr('id').indexOf("ungroupColumn") == -1) {
+        gridObj.groupColumn(groupcolumnname);
+        $("#groupColumn").ejButton("disable");
+        $("#ungroupColumn").ejButton("enable");
+        }
+        else {
+                gridObj.ungroupColumn(groupcolumnname);
+                group = true;
+                $("#ungroupColumn").ejButton("disable");
+                $("#groupColumn").ejButton("enable");
+        }
+    }
+    function Onchange() {
+        var gridObj = $('#FlatGrid').data("ejGrid");
+        var dropdownobj = $('#groupcolumnname').data("ejDropDownList");
+        var groupcolumnname = dropdownobj.getValue().replace(/\s*/g, '');
+        if ($.inArray(groupcolumnname, gridObj.model.groupSettings.groupedColumns) != -1) {
+            $("#ungroupColumn").ejButton("enable");
             $("#groupColumn").ejButton("disable");
         }
         else {
             $("#groupColumn").ejButton("enable");
-            $("#unGroupColumn").ejButton("disable");
-        }
-    }
-    function clicktoGroup(args) {
-        var gridObj = $("#Grid").data("ejGrid");
-        var columnName = $("#columnName").ejDropDownList("getSelectedValue");
-        if (this.element.attr("id") == "groupColumn") {
-            gridObj.groupColumn(columnName);
-            if (group) {
-                $("#groupColumn").ejButton("disable");
-                $("#unGroupColumn").ejButton("enable");
-            }
-        }
-        else {
-            gridObj.ungroupColumn(columnName);
-            group = true;
-            $("#unGroupColumn").ejButton("disable");
-            $("#groupColumn").ejButton("enable");
+            $("#ungroupColumn").ejButton("disable");
         }
     }
 </script>
+
 
 {% endhighlight %}
 
 {% endtabs %}
 The following output is displayed as a result of the above code example.
-![](externalsearch_images/Actionswithexternalbutton_img1.png)
+![](ExternalSearch_images/Actionswithexternalbutton_img1.png)
