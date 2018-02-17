@@ -1832,3 +1832,278 @@ We can display the other Syncfusion controls using `Template` property of Grid c
 The following output is displayed as a result of the above code example.
 
 ![](How-to_images/Display_Other_controls_img1.png)
+
+## Perform Grid Actions on External button click
+
+### CRUD operations
+
+Using `addRecord` method of Grid, you can add a record to a Grid externally without using in-built toolbar add support. While using `addRecord` method it is necessary to set `AllowAdding` property as `true`.
+Using `deleteRecord` method of Grid, you can delete a record to a Grid externally without using in-built toolbar delete support. While using `deleteRecord` method it is necessary to set `AllowDeleting` property as `true`.
+Using `updateRecord` method of Grid, you can update a record to a Grid externally without using in-built toolbar update support. While using `updateRecord` method it is necessary to set `AllowEditing` property as `true`.
+
+### Filtering
+
+Using `filterColumn` method of Grid, you can filter the data in the Grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
+
+### Grouping
+
+Using `groupColumn` and `ungroupColumn` method of Grid, you can group/ungroup the Grid externally without using in-built grouping support. While using `groupColumn` and `ungroupColumn` method it is necessary to set `AllowGrouping` property as `true`.
+
+### Sorting
+
+Using `sortColumn` method of Grid, you can sort the Grid externally without using in-built sorting support. While using `sortColumn` method it is necessary to set `AllowSorting` property as `true`.
+
+The following code example explains the above behavior.
+
+{% tabs %}
+{% highlight html %}
+<table>
+    <tr>
+        <td>
+            <b>CRUD</b><br>@(Html.EJ().Button("Addrecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("addRecord"); })
+                  .Text("Addrecord")
+            )
+            @(Html.EJ().Button("Updaterecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("updateRecord"); })
+                  .Text("Updaterecord")
+            )
+            @(Html.EJ().Button("DeleteRecord")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("deleteRecord"); })
+                  .Text("DeleteRecord")
+            )
+        </td>
+        <td>
+            <b>Filtering</b><br><br>
+            @(Html.EJ().DropDownList("filtercolumnone")
+                  .TargetID("Order")
+                  .Width("120px")
+                  .WatermarkText("Select filter value one")
+                  .SelectedIndex(0)
+            )
+            @(Html.EJ().DropDownList("filtercolumntwo")
+                  .TargetID("Employee")
+                  .Width("120px")
+                  .WatermarkText("Select filter value two")
+                  .SelectedIndex(0)
+            )
+            @(Html.EJ().Button("filteri")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("Filterfn"); })
+                  .Text("Filter")
+            )
+            @(Html.EJ().Button("ClearFilter")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("clearfilterfn"); })
+                  .Text("Clear")
+            )
+        </td>
+        <div id="Order"><ul><li>10001</li><li>10249</li><li>10250</li><li>10251</li><li>10252</li></ul></div>
+        <div id="Employee"><ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul></div>
+        <td>
+            <b>Grouping</b><br><br>
+            <div id="columnName">
+                <ul>
+                    <li>OrderID</li>
+                    <li>CustomerID</li>
+                    <li>Freight</li>
+                    <li>Verified</li>
+                    <li>ShipName</li>
+                </ul>
+            </div><br>
+            @(Html.EJ().DropDownList("groupcolumnname")
+                .TargetID("columnName")
+                .Width("115px")
+                .SelectedIndex(0)
+                .ClientSideEvents(eve => { eve.Change("Onchange"); })
+            )
+            @(Html.EJ().Button("groupColumn")
+                .Width("100px")
+                .Size(ButtonSize.Medium)
+                .ClientSideEvents(eve => { eve.Click("clicktoGroup"); })
+                .Text("GroupColumn")
+            )
+            @(Html.EJ().Button("unGroupColumn")
+                .Width("115px")
+                .Size(ButtonSize.Medium)
+                .ClientSideEvents(eve => { eve.Click("clicktoGroup"); })
+                .Text("UnGroupColumn")
+            )
+        </td>
+        <td>
+            <b>Sorting</b><br><br>
+            <div id="sortcolumnName">
+                <ul>
+                    <li>Order ID</li>
+                    <li>Customer ID</li>
+                    <li>Employee ID</li>
+                    <li>Freight</li>
+                    <li>Ship City</li>
+                </ul>
+            </div>
+            @(Html.EJ().DropDownList("SortColumnName")
+                  .TargetID("sortcolumnName")
+                  .Width("120px")
+                  .SelectedIndex(0)
+            )
+            <div id="directions">
+                <ul>
+                    <li>Ascending</li>
+                    <li>Descending</li>
+                </ul>
+            </div>
+            @(Html.EJ().DropDownList("Directions")
+                  .TargetID("directions")
+                  .Width("120px")
+                  .SelectedIndex(0)
+            )
+            @(Html.EJ().Button("doSorting")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("Sortfn"); })
+                  .Text("Sort")
+            )
+            @(Html.EJ().Button("clearSort")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("Sortfn"); })
+                  .Text("Clear")
+            )
+        </td>
+    </tr>
+</table>
+
+{% tabs %}
+
+{% highlight html %}
+@(Html.EJ().Grid<object>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+        .AllowGrouping()
+        .AllowFiltering()
+        .AllowPaging()
+        .AllowSorting()
+        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+        .ToolbarSettings(toolbar =>
+        {
+            toolbar.ShowToolbar().ToolbarItems(items =>
+            {
+                items.AddTool(ToolBarItems.Add);
+                items.AddTool(ToolBarItems.Edit);
+                items.AddTool(ToolBarItems.Delete);
+                items.AddTool(ToolBarItems.Update);
+                items.AddTool(ToolBarItems.Cancel);
+            });
+        })
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(150).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(200).Add();
+            col.Field("EmployeeID").HeaderText("Employee ID").Width(150).Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(150).Format("{0:C}").Add();
+            col.Field("OrderDate").HeaderText("Order Date").Width(200).Add();
+        })
+)
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    public partial class GridController : Controller
+
+{
+
+	//
+
+	// GET: /Externalbutton/
+
+	 public ActionResult Externalbutton()
+
+        {
+
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+
+            ViewBag.datasource = DataSource;
+
+            return View();
+
+        }
+
+}
+
+{% endhighlight  %}
+
+{% highlight js %}
+<script type="text/javascript">
+    function addRecord(){
+        var gridObj = $('#FlatGrid').data("ejGrid");
+        gridObj.addRecord({ "OrderID": 12333 });
+    }
+    function deleteRecord(){
+        var gridObj = $('#FlatGrid').data("ejGrid");
+        gridObj.deleteRecord("OrderID", { OrderID: gridObj.model.dataSource[gridObj.model.selectedRowIndex].OrderID });
+    }
+    function updateRecord(){
+        var gridObj = $('#FlatGrid').data("ejGrid");
+        gridObj.updateRecord("OrderID", { OrderID: 10002, EmployeeID: 6 });
+    }
+    function Filterfn(args) {
+        var obj = $('#FlatGrid').data("ejGrid");
+        var one = $('#filtercolumnone').data("ejDropDownList");
+        var two = $('#filtercolumntwo').data("ejDropDownList");
+        var One = one.getValue();
+        var Two = two.getValue();
+        obj.filterColumn([{field:"OrderID",operator:"equal",value:One,predicate:"and", matchcase:true},{field:"EmployeeID",operator:"equal",value:Two,predicate:"and", matchcase:true}]);
+    }
+    function clearfilterfn(args) {
+        var gridObj = $("#FlatGrid").data("ejGrid");
+        gridObj.clearFiltering();
+    }
+    function Sortfn(args) {
+        var gridobj = $("#FlatGrid").data("ejGrid");
+                if (gridobj != undefined) {
+                    gridobj.clearSorting();
+                    if (this.element.attr('id').indexOf("doSorting") != -1) {
+                        var name = $('#SortColumnName').data("ejDropDownList");
+                    var direction = $('#Directions').data("ejDropDownList");
+                    var columnName = name.getValue().replace(/\s*/g, "");
+                    var sortDirection = direction.getValue().toLowerCase();
+                    gridobj.sortColumn(columnName, sortDirection);
+                }
+        }
+    }
+
+    function clicktoGroup(args) {
+        var gridObj = $("#FlatGrid").data("ejGrid");
+        var columnName = $("#groupcolumnname").ejDropDownList("getSelectedValue");
+        if (this.element.attr("id") == "groupColumn") {
+            gridObj.groupColumn(columnName);
+                $("#groupColumn").ejButton("disable");
+                $("#unGroupColumn").ejButton("enable");
+            
+        }
+        else {
+            gridObj.ungroupColumn(columnName);
+            group = true;
+            $("#unGroupColumn").ejButton("disable");
+            $("#groupColumn").ejButton("enable");
+        }
+    }
+    function Onchange() {
+        var gridObj = $("#FlatGrid").data("ejGrid");
+        var columnName = $("#groupcolumnname").ejDropDownList("getSelectedValue");
+        if ($.inArray(columnName, gridObj.model.groupSettings.groupedColumns) != -1) {
+            $("#unGroupColumn").ejButton("enable");
+            $("#groupColumn").ejButton("disable");
+        }
+        else {
+            $("#groupColumn").ejButton("enable");
+            $("#unGroupColumn").ejButton("disable");
+        }
+    }
+</script>
+
+{% endhighlight %}
+
+{% endtabs %}
+The following output is displayed as a result of the above code example.
+![](How-to_images/Actionswithexternalbutton_img1.png)
