@@ -1974,9 +1974,6 @@ The following code example explains the above behavior.
     </tr>
 </table>
 
-{% tabs %}
-
-{% highlight html %}
 @(Html.EJ().Grid<object>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
         .AllowGrouping()
