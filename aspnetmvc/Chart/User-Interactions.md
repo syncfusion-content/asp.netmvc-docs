@@ -460,23 +460,6 @@ You can able to show the trackball tooltip in two modes, using trackballTooltipS
 
 ![](User-Interactions_images/User-Interactions_img30.png)
 
-#### Trackball tooltip template:
-Trackball tooltip template is used to display the tooltip in customized template format. You can define the desired template in css style. You can enable the **toolTipTemplate**  by using the following code snippet.
-
-
-{% highlight javascript %}
-
-
-@(Html.EJ().Chart("chartContainer")
-   //  ..
-                .Crosshair(cr => cr.Visible(true).Type(CrosshairType.Trackball)
-                .TrackballTooltipSettings(track=>track.Mode(TrackballDisplayMode.Float).TooltipTemplate("Tooltip")))
-  //  ..
-)
-
-{% endhighlight %}
-
-![](User-Interactions_images/User-Interactions_img33.png)
 
 ## Highlight
 
