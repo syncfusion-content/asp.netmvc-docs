@@ -258,5 +258,75 @@ function renderComplete(){
 
 {% endhighlight %}
 
+### Click
+
+`Click` event triggers on clicking the gauges. 
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().DigitalGauge("Gauge1")
+
+.Click("click")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function click(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### DoubleClick
+
+The `DoubleClick` event is triggered when double clicking the gauges.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().DigitalGauge("Gauge1")
+
+.DoubleClick("doubleClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function doubleClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### RightClick
+
+The `RightClick` event is triggered when right clicking the gauges.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().DigitalGauge("Gauge1")
+
+.RightClick("rightClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function rightClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
 
 

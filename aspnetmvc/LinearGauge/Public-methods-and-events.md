@@ -317,6 +317,45 @@ function RenderComplete(){
 {% endhighlight %}
 
 
+### DoubleClick
+
+Triggers when the double click is released, you can use `DoubleClick` event.
+
+{% highlight cshtml %}
+
+@(Html.EJ().LinearGauge("container")
+           
+            //double click event
+            .DoubleClick("onDoubleClick")
+            //...
+        )
+
+    function onDoubleClick(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
+
+### RightClick
+
+Triggers when the right click is released, you can use `RightClick` event.
+
+{% highlight cshtml %}
+
+@(Html.EJ().LinearGauge("container")
+           
+            //right click event
+            .RightClick("onRightClick")
+            //...
+        )
+
+    function onRightClick(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
+
+
 ## Methods
 
 

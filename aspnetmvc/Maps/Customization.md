@@ -360,6 +360,92 @@ Here “MapController.cs” is populated with data of USA Election in “MapCont
 
 ![](Customization_images/Customization_img3.png)
 
+## Binding color from the datasource
+
+By using `colorPath` property, you can bind the specific field in the datasource to the map, and the shapes will be rendered based the color values available from the field you bind. 
+
+N> While setting color for map by using `colorPath` property, do not set any other color mapping hence color mapping is having higher priority than `colorPath`. 
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("maps") 
+
+		.Layers(layer =>
+
+		{
+
+			layer.ShapeData(mapData)
+
+			.ShapeDataPath("State")
+
+			.ShapePropertyPath("name")
+		
+			.DataSource(datasource)
+
+			.ShapeSettings(shape =>
+
+			{
+		
+				shape.ColorPath("ShapeFill")
+
+			})
+   		
+			.Add();
+
+		})
+
+	)  
+
+{% endhighlight %}
+ 
+![](Customization_images/Customization_img8.png)
+
+While binding color path for map, it is possible to render legend for each shape in the map. To achieve this, set the `textPath` for legend. `textPath` contains another field name in the datasource. As per the text, content in the field legend will be generated. 
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("maps") 
+
+		.Layers(layer =>
+
+		{
+
+			layer.ShapeData(mapData)
+
+			.ShapeDataPath("State")
+
+			.ShapePropertyPath("name")
+		
+			.DataSource(datasource)
+
+			.ShapeSettings(shape =>
+
+			{
+		
+				shape.ColorPath("ShapeFill")
+
+			})
+
+			.LegendSettings(legend =>
+
+			{
+		
+				legend.ShowLegend(true)
+
+				.TextPath("name")
+
+			})
+   		
+			.Add();
+
+		})
+
+	)  
+
+{% endhighlight %}
+
+![](Customization_images/Customization_img9.png)
+
 
 ## ColorPalette
 

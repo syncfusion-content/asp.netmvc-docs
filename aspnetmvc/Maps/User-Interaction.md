@@ -343,6 +343,27 @@ The panning feature enables the Map navigation. The `EnablePan` property is used
 
 {% endhighlight %}
 
+### Mouse Wheel Zoom
+
+You can zoom the Map with mouse by using mouse wheel. When the mouse is wheeled, the Map is zoomed in.
+
+You can enable this feature by setting `EnableMouseWheelZoom` property value as ‘_true_’. 
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("maps") 
+
+		.ZoomSettings(zoom=>
+
+		{
+
+			zoom.EnableMouseWheelZoom(true);
+
+		})                       
+
+ 	)      
+
+{% endhighlight %}
 
 
 ## Navigation Control

@@ -11,9 +11,29 @@ documentation: ug
 
 **TreeMap** control supports color customization to determine the exact combination of colors for tree nodes displayed in TreeMap and tooltip support to display additional information of treemap data.
 
-## Color Customization
+## Color 
 
-You can customize the colors of the leaf nodes of TreeMap using the **ColorMapping** support of the TreeMap. 
+You can customize the color of leaf nodes in **Treemap** either using ColorMapping support of the **Treemap** or mapping a field in the datasource.
+
+## Binding color from the datasource
+
+You can set color for each leaf items from data source by using `ColorPath` property. 
+
+N> While setting color, do not set any other color mapping for treemap because color mapping has higher priority than [`colorPath`](../api/ejtreemap#members:colorpath) property. And also, if [`colorPath`](../api/ejtreemap#members:colorpath) is set, the legend will be generated for each leaf item in treemap. 
+
+{% highlight CSHTML %}
+
+       @(Html.EJ().TreeMap("treemap")
+  
+         .ColorPath("fill")
+
+    .Render())
+
+
+{% endhighlight %}
+
+![](Customization_images/Customization_img5.png)
+
 
 **ColorMapping** is categorized into three different types such as,
 
