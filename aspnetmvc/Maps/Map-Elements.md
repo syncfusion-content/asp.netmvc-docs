@@ -345,6 +345,121 @@ N>Tooltip and Color Mappings for bubble is to be set as similar to tooltip and c
 ![](Map-Elements_images/Map-Elements_img3.png)
 
 
+## Add bubbles to the map
+
+You can set color for each bubble by using `ColorPath` property in bubble settings. 
+
+N> While settings color for bubbles by using `ColorPath`, do not set any other color mapping hence color mapping is having higher priority than `colorPath`. 
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")            
+
+	.Layers(layer =>
+
+	{
+
+		layer.EnableMouseHover(true)
+
+		.ShapeData(mapData)
+
+		.DataSource(population_data)
+
+		.ShapeSettings(ss =>
+
+		{
+
+			ss.ColorPath("ShapeFill")
+
+		})
+
+		.BubbleSettings(bs =>
+
+		{
+
+			bs.ValuePath("Population ")
+
+			.ShowBubble(true)
+
+			.MinValue(20)
+
+			.MaxValue(40)
+
+			.ColorPath("fill");
+
+		})
+
+		.Add();
+
+	})
+
+	)
+{% endhighlight %}
+
+![](Map-Elements_images/Map-Elements_img7.png)
+
+While binding `colorPath` for bubbles, it is possible to render the legend for each bubble. To achieve this, set the `textPath` for legend. `textPath` contains another field name in the datasource. As per the text, content in the field legend will be generated. 
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("container")            
+
+	.Layers(layer =>
+
+	{
+
+		layer.EnableMouseHover(true)
+
+		.ShapeData(mapData)
+
+		.DataSource(population_data)
+
+		.ShapeSettings(ss =>
+
+		{
+
+			ss.ColorPath("ShapeFill")
+
+		})
+
+		.BubbleSettings(bs =>
+
+		{
+
+			bs.ValuePath("Population ")
+
+			.ShowBubble(true)
+
+			.MinValue(20)
+
+			.MaxValue(40)
+
+			.ColorPath("fill");
+
+		})
+
+		.LegendSettings(bs =>
+
+		{
+
+			ls.ShowLegend(true)
+
+			.TextPath("name");
+
+		})
+
+		.Add();
+
+	})
+
+	)
+{% endhighlight %}
+
+![](Map-Elements_images/Map-Elements_img8.png)
+
+
+
+
 ## Legend
 
 A legend is a key used on a map, contains swatches of symbols with descriptions. It provides valuable information for interpreting what the map is displaying you, and can be represented in various colors, shapes or other identifiers based on the data. It gives a breakdown of what each symbol represents throughout the map.

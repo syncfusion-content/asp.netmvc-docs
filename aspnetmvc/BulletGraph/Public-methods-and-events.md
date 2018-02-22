@@ -343,3 +343,76 @@ function load(){
 {% endhighlight %}
 
 
+### Click
+
+Click event fires on clicking the bullet graph.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().BulletGraph("bullet1")
+
+.Click("click")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function click(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### DoubleClick
+
+DoubleClick event fires on double clicking the bullet graph.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().BulletGraph("bullet1")
+
+.DoubleClick("doubleClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function doubleClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### RightClick
+
+RightClick event fires on right clicking the bullet graph.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().BulletGraph("bullet1")
+
+.RightClick("rightClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function rightClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
