@@ -221,3 +221,129 @@ If the treemap drilldown item is selected, then `DrillDownItemSelected` event wi
     }
 
 {% endhighlight %}
+
+
+## ItemRendering
+
+`ItemRendering` event will trigger while rendering each item in treemap.
+
+<table class="params">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th class="last">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="name">{% highlight html %}originalEvent{% endhighlight %}</td>
+            <td class="type"><span class="param-type">object</span></td>
+            <td class="description last">Returns each leaf items in treemap</td>
+        </tr>
+    </tbody>
+</table>
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().TreeMap("treemap")
+        .ItemRendering("itemRendering")
+    )
+    function itemRendering(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
+
+## LegendItemRendering
+
+`LegendItemRendering` event will trigger while rendering each legend item in treemap.
+
+<table class="params">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th class="last">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="name">{% highlight html %}originalEvent{% endhighlight %}</td>
+            <td class="type"><span class="param-type">object</span></td>
+            <td class="description last">Returns each legend item in treemap</td>
+        </tr>
+    </tbody>
+</table>
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().TreeMap("treemap")
+        .LegendItemRendering("legendItemRendering")
+    )
+    function legendItemRendering(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
+
+
+### Click
+
+`Click` event will trigger while clicking an item in the treemap.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().TreeMap("treemap")
+
+.Click("click")
+
+)
+ 
+function click(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### DoubleClick
+
+`DoubleClick` event will trigger while double clicking an item in the treemap
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().TreeMap("treemap")
+
+.DoubleClick("doubleClick")
+
+)
+
+function doubleClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### RightClick
+
+`RightClick` event will trigger while right clicking an item in the treemap.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().TreeMap("treemap")
+
+.RightClick("rightClick")
+
+)
+ 
+function rightClick(){
+    // Do Something
+}
+
+{% endhighlight %}

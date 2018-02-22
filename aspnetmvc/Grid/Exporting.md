@@ -231,6 +231,10 @@ N> Excel File will be exported in the collapsed state with the expand/collapse i
 {% endhighlight  %}
 {% endtabs %}
 
+N> 1. The dataSource passed to the exporting method is compared with Grid column while exporting, when a column is not defined in the Grid dataSource, it is obtained as null value and hence throws a null exception. To avoid the above exception ensure that the columns bound to the Grid are defined in the Grid dataSource before exporting the Grid.
+
+N> 2. To export the dynamic list of objects in grid use the typebuilder concept refer [`link`](https://www.syncfusion.com/kb/7620/how-to-export-dynamic-list-using-typebuilder-in-grid "link")
+
 ## Server Dependencies
 
 Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for the Grid Export is as follows.

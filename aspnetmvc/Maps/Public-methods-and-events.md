@@ -314,3 +314,168 @@ function ZoomedOut(){
 }
 
 {% endhighlight %}
+
+### ShapeRendering
+
+The `ShapeRendering` event is triggered while rendering each shape in the map.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.ShapeRendering("shape")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function shape(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
+### BubbleRendering
+
+The `BubbleRendering` event is triggered while rendering each bubble in the map.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.BubbleRendering("bubble")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function bubble(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
+### LegendItemRendering
+
+The `LegendItemRendering` event is triggered before rendering each legend in the map.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.LegendItemRendering("legend")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function legend(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
+### Click
+
+Triggers while clicking on the layers of the map, you can use `Click` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.Click("click")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function click(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### DoubleClick
+
+Triggers while double clicking on the layers of the map, you can use `DoubleClick` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.DoubleClick("doubleClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function doubleClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### RightClick
+
+Triggers while right clicking on the layers of the map, you can use `RightClick` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.RightClick("rightClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function rightClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### Load
+
+Triggers before loading the map, you can use `Load` event.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.Load("load")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function load(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+

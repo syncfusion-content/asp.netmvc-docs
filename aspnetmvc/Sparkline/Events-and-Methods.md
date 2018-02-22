@@ -221,3 +221,79 @@ The `SparklineMouseLeave` event is fired on moving mouse outside the sparkline.
 </script>
 
 {% endhighlight %}
+
+### Click
+
+The `Click` event is fired on clicking the sparkline.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Sparkline("container")
+
+.Click("onClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+
+<script type="text/javascript">
+    function onClick(sender) {
+                //Do something
+    }
+</script>
+
+{% endhighlight %}
+
+### DoubleClick
+
+The `DoubleClick` event is fired on double clicking the sparkline.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Sparkline("container")
+
+.DoubleClick("onDoubleClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+<script type="text/javascript">
+    function onDoubleClick(sender) {
+                //Do something
+    }
+</script>
+
+{% endhighlight %}
+
+### RightClick
+
+The `RightClick` event is fired on right clicking the sparkline.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Sparkline("container")
+
+.RightClick("onRightClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+<script type="text/javascript">
+    function onRightClick(sender) {
+                //Do something
+    }
+</script>
+
+{% endhighlight %}
