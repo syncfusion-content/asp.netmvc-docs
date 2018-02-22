@@ -396,5 +396,77 @@ function legendItemClick(){
 
 {% endhighlight %}
 
+### Click
+
+Fires when clicking the sunburst points, you can use `Click` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().SunburstChart("SunburstChart1")
+
+.Click("click")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function click(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### DoubleClick
+
+Fires when double clicking the sunburst points, you can use `DoubleClick` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().SunburstChart("SunburstChart1")
+
+.DoubleClick("doubleClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function doubleClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### RightClick
+
+Fires when right clicking the sunburst points, you can use `RightClick` event.
+
+
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().SunburstChart("SunburstChart1")
+
+.RightClick("rightClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function rightClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
 
 

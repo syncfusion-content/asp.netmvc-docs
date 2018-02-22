@@ -29,9 +29,9 @@ If you set `EnableDeferredUpdate` to true, the `RangeChanged` event gets fired a
 Deferred update
 {:.caption}
 
-## Use of Destroy method 
+## Methods 
 
-`_destroy`: function
+### Destroy
 
 This method is used to destroy the **RangeNavigator** widget. 
 
@@ -51,7 +51,7 @@ This method is used to destroy the **RangeNavigator** widget.
 
 ## Handle Events
 
-### `Load`: function
+### Load
 
 This event is fired when **RangeNavigator** is loading. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
 
@@ -76,7 +76,7 @@ This event is fired when **RangeNavigator** is loading. A parameter **sender** i
 
 {% endhighlight %}
 
-### `Loaded`: function
+### Loaded
 
 This event is handled when the **RangeNavigator** gets loaded. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
 
@@ -102,7 +102,7 @@ This event is handled when the **RangeNavigator** gets loaded. A parameter **sen
 
 {% endhighlight  %}
 
-### `RangeChanged`: function
+### RangeChanged
 
 This event gets fired whenever the selected range changes in **RangeNavigator**. A parameter **sender** is passed to the handler. Using **sender.selectedRangeSettings**, you can access the start and end value of range for the selected region. 
 {% highlight CSHTML %}
@@ -127,7 +127,7 @@ This event gets fired whenever the selected range changes in **RangeNavigator**.
 
 {% endhighlight %}
 
-### `SelectedRangeStart` : function
+### SelectedRangeStart
 
 This event is fired when starting to change the slider position in **RangeNavigator**. A parameter **sender** is passed to the handler. Using **sender.selectedRangeSettings**, you can access the start value of range for the selected region. 
 
@@ -152,7 +152,7 @@ This event is fired when starting to change the slider position in **RangeNaviga
 
 {% endhighlight %}
 
-### `SelectedRangeEnd` : function
+### SelectedRangeEnd
 
 This event is fired when selection ends in **RangeNavigator**. A parameter **sender** is passed to the handler. Using sender.selectedRangeSettings, you can access the end value of range for the selected region. 
 
@@ -177,7 +177,7 @@ This event is fired when selection ends in **RangeNavigator**. A parameter **sen
 
 {% endhighlight %}
 
-### `ScrollStart` : function
+### ScrollStart
 
 This event is fired when starting to change the scrollbar position of **RangeNavigator**. A parameter **sender** is passed to the handler. Using sender.data startRange and sender.data endRange, you can access the scrollbar position starting and ending range value on changed scrollbar. 
 
@@ -199,7 +199,7 @@ This event is fired when starting to change the scrollbar position of **RangeNav
 
 {% endhighlight %}
 
-### `ScrollEnd` : function
+### ScrollEnd
 
 This event is fired while ending the change in scrollbar position of **RangeNavigator**. A parameter **sender** is passed to the handler. Using data oldRange and data newRange, you can access the scrollbar position old and new range values on changing scrollbar. 
 
@@ -221,7 +221,7 @@ This event is fired while ending the change in scrollbar position of **RangeNavi
 
 {% endhighlight %}
 
-### `ScrollChanged` : function
+### ScrollChanged
 
 This event is fired when changing the scrollbar position of **RangeNavigator**. A parameter **sender** is passed to the handler. Using data oldRange and data newRange, you can access the old and new range values of changed scrollbar position. 
 
@@ -230,6 +230,75 @@ This event is fired when changing the scrollbar position of **RangeNavigator**. 
 @(Html.EJ().RangeNavigator("container")
     
 .ScrollChanged(loadingData)
+
+)
+<script type="text/javascript">
+
+   function loadingData(sender) 
+   {
+	   	console.log(sender.type);
+   }
+
+</script>  
+
+{% endhighlight %}
+
+### Click
+
+`Click` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
+
+{% highlight javascript %}
+
+@(Html.EJ().RangeNavigator("container")
+    
+.Click(loadingData)
+
+)
+<script type="text/javascript">
+
+   function loadingData(sender) 
+   {
+	   	console.log(sender.type);
+   }
+
+</script>  
+
+{% endhighlight %}
+
+
+### DoubleClick
+
+`DoubleClick` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
+
+
+{% highlight javascript %}
+
+@(Html.EJ().RangeNavigator("container")
+    
+.DoubleClick(loadingData)
+
+)
+<script type="text/javascript">
+
+   function loadingData(sender) 
+   {
+	   	console.log(sender.type);
+   }
+
+</script>  
+
+{% endhighlight %}
+
+### RightClick
+
+`RightClick` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
+
+
+{% highlight javascript %}
+
+@(Html.EJ().RangeNavigator("container")
+    
+.RightClick(loadingData)
 
 )
 <script type="text/javascript">

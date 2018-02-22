@@ -1593,3 +1593,41 @@ The `RangeMouseMove` event is triggered when moving mouse on ranges.
     }
 
 {% endhighlight %}
+
+### DoubleClick
+
+The `DoubleClick` event is triggered when double clicking the gauges.
+
+{% highlight cshtml %}
+
+@(Html.EJ().CircularGauge("gauge")
+           
+            //double click event
+            .DoubleClick("onDoubleClick")
+            //...
+        )
+
+    function onDoubleClick(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
+
+### RightClick
+
+The `RightClick` event is triggered when right clicking the gauges.
+
+{% highlight cshtml %}
+
+@(Html.EJ().CircularGauge("gauge")
+           
+            //right click event
+            .RightClick("onRightClick")
+            //...
+        )
+
+    function onRightClick(sender) { 
+        // do something
+    }
+
+{% endhighlight %}
