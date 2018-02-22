@@ -247,7 +247,7 @@ This event is fired when changing the scrollbar position of **RangeNavigator**. 
 
 `Click` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
 
-{% highlight javascript %}
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("container")
     
@@ -271,7 +271,7 @@ This event is fired when changing the scrollbar position of **RangeNavigator**. 
 `DoubleClick` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
 
 
-{% highlight javascript %}
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("container")
     
@@ -294,7 +294,7 @@ This event is fired when changing the scrollbar position of **RangeNavigator**. 
 `RightClick` event is handled when the **RangeNavigator** gets clicked. A parameter **sender** is passed to the handler. Using **sender.model**, you can access the RangeNavigator properties. 
 
 
-{% highlight javascript %}
+{% highlight CSHTML %}
 
 @(Html.EJ().RangeNavigator("container")
     

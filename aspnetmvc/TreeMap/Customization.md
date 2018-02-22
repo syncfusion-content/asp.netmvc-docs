@@ -17,20 +17,18 @@ You can customize the color of leaf nodes in **Treemap** either using ColorMappi
 
 ## Binding color from the datasource
 
-You can set color for each leaf items from data source by using [`colorPath`](../api/ejtreemap#members:colorpath) property. 
+You can set color for each leaf items from data source by using `ColorPath` property. 
 
 N> While setting color, do not set any other color mapping for treemap because color mapping has higher priority than [`colorPath`](../api/ejtreemap#members:colorpath) property. And also, if [`colorPath`](../api/ejtreemap#members:colorpath) is set, the legend will be generated for each leaf item in treemap. 
 
-{% highlight js %}
+{% highlight CSHTML %}
 
-        jQuery(function ($) {
+       @(Html.EJ().TreeMap("treemap")
+  
+         .ColorPath("fill")
 
-            $("#treemapContainer").ejTreeMap({
-                // ...  
-                colorPath : ‘fill’
-                // ...  
-            });
-        });
+    .Render())
+
 
 {% endhighlight %}
 
