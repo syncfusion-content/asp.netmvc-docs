@@ -9,7 +9,7 @@ documentation: ug
 
 # Sparkline
 
-Sparkline are easy to interpret and it conveys much more information to the user by visualizing the data in a small amount of space. Here sparkline were placed inside the cell. It creates the Sparkline based on the selected cell range’s data. You can use `allowSparkline` property to enable/disable Sparkline.
+Sparkline are easy to interpret and it conveys much more information to the user by visualizing the data in a small amount of space. Here sparkline were placed inside the cell. It creates the Sparkline based on the selected cell range’s data. You can use `AllowSparkline` property to enable/disable Sparkline.
 
 
 ## Types of Sparkline 
@@ -62,11 +62,12 @@ The following code example describes the above behavior,
 function loadComplete() {
         var  xlSparkline = this.XLSparkline;
         if(!this.isImport) {
-           this.mergeCells("F3:G4", true)
+           this.sheetRename("Sparkline Chart");
+           this.mergeCells("F3:G4", true);
            xlSparkline.createSparkline("A5:D5", "F3", "Column", {highPointColor: "red", negativePointColor: "black", startPointColor: "green"} );
-           this.mergeCells("F8:G8", true)
+           this.mergeCells("F8:G8", true);
            xlSparkline.createSparkline("B2:B4", "F8", "Winloss");
-           this.mergeCells("F10:G11", true)
+           this.mergeCells("F10:G11", true);
            xlSparkline.createSparkline("C3:C5", "F10",  "Line", {markerSettings:{visible:true},highPointColor: "red", negativePointColor: "black", startPointColor: "green"} );
                     
         }
