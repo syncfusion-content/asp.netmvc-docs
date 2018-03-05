@@ -90,7 +90,7 @@ The following code example describes the above behavior.
 
             ExcelExport exp = new ExcelExport();
             var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-            var treedata = this.GetDefaultData();
+            var treeData = this.GetDefaultData();
 
             List<ExportChartData> chartData = new List<ExportChartData>();
             chartData.Add(new ExportChartData("John", 10));
@@ -102,7 +102,7 @@ The following code example describes the above behavior.
             
             Dictionary<string, object> items = new Dictionary<string, object>();
             items.Add("ejGrid",EmployeeData);
-            items.Add("ejTreeGrid", treedata);
+            items.Add("ejTreeGrid", treeData);
             items.Add("ejChart", chartData);
             
             exp.ExportAll(val, items, "Export.xlsx", ExcelVersion.Excel2010, "flat-saffron");
