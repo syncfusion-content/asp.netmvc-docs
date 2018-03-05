@@ -9,15 +9,16 @@ documentation: ug
 #  Exporting Multiple Syncfusion Controls
 
 
-Exporting multiple controls is the process of exporting multiple Syncfusion control like Chart, Grid, TreeGrid in a single document. 
-This can be achieved by calling `ej.exportAll` method on an external button click with parameter as URL (either to export Excel or PDF) and controls ID’s need to be export as an array.  In the server side we can handle exporting multiple control either Excel or PDF exporting by calling `ExportAll` method
+Support has been added to export multiple Syncfusion controls like Grid, Chart, TreeGrid, etc., in a single document.
+This can be achieved by calling `ej.exportAll` method with multiple parameter. One by passing as URL (either to export Excel or PDF) and other by passing multiple controls ID’s as an array. 
+In the server side we can handle exporting multiple control either Excel or PDF exporting by calling `ExportAll` method
 
 The following code example describes the above behavior.
  
 {% tabs %}  
 {% highlight razor %} 
 
-          @Html.EJ().Button("ExcelExport").Size(ButtonSize.Medium).ShowRoundedCorner(true).Text("Excel Export").ClientSideEvents(eve=>eve.Click("ExcelExport"))
+     @Html.EJ().Button("ExcelExport").Size(ButtonSize.Medium).ShowRoundedCorner(true).Text("Excel Export").ClientSideEvents(eve=>eve.Click("ExcelExport"))
 
     @Html.EJ().Button("PdfExport").Size(ButtonSize.Medium).ShowRoundedCorner(true).Text("Pdf Export").ClientSideEvents(eve => eve.Click("PdfExport"))
 
@@ -89,8 +90,8 @@ The following code example describes the above behavior.
             Dictionary<string, string> val =controlModel.AllKeys.ToDictionary(k => k, v=>controlModel[v]);
 
             ExcelExport exp = new ExcelExport();
-            var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-            var treeData = this.GetDefaultData();
+            var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();   //DataSource for Grid.
+            var treeData = this.GetDefaultData();                                           //DataSource for TreeGrid.
 
             List<ExportChartData> chartData = new List<ExportChartData>();
             chartData.Add(new ExportChartData("John", 10));
@@ -98,7 +99,7 @@ The following code example describes the above behavior.
             chartData.Add(new ExportChartData("Peter", 18));
             chartData.Add(new ExportChartData("James", 11));
             chartData.Add(new ExportChartData("Mary", 9.7));
-            var chartDataSource = chartData;
+            var chartDataSource = chartData;                                                 //DataSource for Chart
             
             Dictionary<string, object> items = new Dictionary<string, object>();
             items.Add("ejGrid",EmployeeData);
@@ -115,8 +116,8 @@ The following code example describes the above behavior.
 
             PdfExport exp = new PdfExport();
 
-            var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-            var treeData = this.GetDefaultData();
+            var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();    //DataSource for TreeGrid.
+            var treeData = this.GetDefaultData();                                            //DataSource for TreeGrid.
 
             List<ExportChartData> chartData = new List<ExportChartData>();
             chartData.Add(new ExportChartData("John", 10));
@@ -124,7 +125,7 @@ The following code example describes the above behavior.
             chartData.Add(new ExportChartData("Peter", 18));
             chartData.Add(new ExportChartData("James", 11));
             chartData.Add(new ExportChartData("Mary", 9.7));
-            var chartDataSource = chartData;
+            var chartDataSource = chartData;                                                 //DataSource for Chart
 
             Dictionary<string, object> items = new Dictionary<string, object>();
             items.Add("ejGrid", EmployeeData);
