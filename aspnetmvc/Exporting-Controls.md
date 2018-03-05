@@ -52,7 +52,7 @@ The following code example describes the above behavior.
 
     )
     
-      @(Html.EJ().Chart("Chartcontainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
+      @(Html.EJ().Chart("ChartContainer").ChartArea(cr => cr.Border(ab => ab.Color("transparent")))
               .Border(border => border.Opacity(1))
               .Series(sr =>
                   {
@@ -63,7 +63,7 @@ The following code example describes the above behavior.
                               pt.X("Peter").Y(18).Add();
                               pt.X("James").Y(11).Add();
                               pt.X("Mary").Y(9.7).Add();
-                          }).Name("Person").Type(SeriesType.Column).XName("Xvalue").YName("YValue1").EnableAnimation(true).Tooltip(tl => tl.Visible(true)).Add();
+                          }).Name("Person").Type(SeriesType.Column).XName("XValue").YName("YValue1").EnableAnimation(true).Tooltip(d => d.Visible(true)).Add();
                   })
               
               .EnableCanvasRendering(true))
@@ -98,12 +98,12 @@ The following code example describes the above behavior.
             chartData.Add(new ExportChartData("Peter", 18));
             chartData.Add(new ExportChartData("James", 11));
             chartData.Add(new ExportChartData("Mary", 9.7));
-            var chartdata = chartData;
+            var chartDataSource = chartData;
             
             Dictionary<string, object> items = new Dictionary<string, object>();
             items.Add("ejGrid",EmployeeData);
             items.Add("ejTreeGrid", treeData);
-            items.Add("ejChart", chartData);
+            items.Add("ejChart", chartDataSource);
             
             exp.ExportAll(val, items, "Export.xlsx", ExcelVersion.Excel2010, "flat-saffron");
         }
@@ -116,7 +116,7 @@ The following code example describes the above behavior.
             PdfExport exp = new PdfExport();
 
             var EmployeeData = new NorthwindDataContext().EmployeeViews.Take(5).ToList();
-            var treedata = this.GetDefaultData();
+            var treeData = this.GetDefaultData();
 
             List<ExportChartData> chartData = new List<ExportChartData>();
             chartData.Add(new ExportChartData("John", 10));
@@ -124,12 +124,12 @@ The following code example describes the above behavior.
             chartData.Add(new ExportChartData("Peter", 18));
             chartData.Add(new ExportChartData("James", 11));
             chartData.Add(new ExportChartData("Mary", 9.7));
-            var chartdata = chartData;
+            var chartDataSource = chartData;
 
             Dictionary<string, object> items = new Dictionary<string, object>();
             items.Add("ejGrid", EmployeeData);
-            items.Add("ejTreeGrid", treedata);
-            items.Add("ejChart", chartData);
+            items.Add("ejTreeGrid", treeData);
+            items.Add("ejChart", chartDataSource);
 
             exp.ExportAll(val, items, "Export.pdf", "flat-saffron");
         }
@@ -140,7 +140,7 @@ The following code example describes the above behavior.
 
         <script>
         function ExcelExport(args) {
-                ej.exportAll("/Grid/ExcelExport", ['MasterGrid', 'Chartcontainer', 'TreeGridContainer'])
+                ej.exportAll("/Grid/ExcelExport", ['MasterGrid', 'ChartContainer', 'TreeGridContainer'])
            }
             
         function PdfExport(args) {
