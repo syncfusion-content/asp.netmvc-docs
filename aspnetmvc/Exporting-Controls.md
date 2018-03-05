@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Core Concepts | ASP.NET MVC | Syncfusion
-description: Core Concepts 
+title: ExportingControls | ASP.NET MVC | Syncfusion
+description: ExportingControls 
 platform: ejmvc
 control: Common 
 documentation: ug
