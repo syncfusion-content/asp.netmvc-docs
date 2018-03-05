@@ -13,7 +13,7 @@ The Gantt has support to display tooltip for both taskbars and for column cells.
 
 ## Taskbar and dependency line tooltip
 
-In Gantt, you can enable or disable taskbar and dependency line mouse hover tooltip by using the `EnableTaskbarTooltip` property. The default value of this property was `true`. The following code example shows, how to enable the taskbar and dependency line tooltip in Gantt.
+In Gantt, you can enable or disable taskbar and dependency line mouse hover tooltip by using the `EnableTaskbarTooltip` property. The default value of this property is `true`. The following code example shows, how to enable the taskbar and dependency line tooltip in Gantt.
 
 {% highlight CSHTML %}
 
