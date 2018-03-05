@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ExportingControls | ASP.NET MVC | Syncfusion
-description: ExportingControls 
+title: Exporting Multiple Syncfusion Controls | ASP.NET MVC | Syncfusion
+description: Exporting Multiple Syncfusion Controls
 platform: ejmvc
 control: Common 
 documentation: ug
