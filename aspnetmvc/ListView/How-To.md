@@ -17,7 +17,7 @@ Enable the property [PersistSelection](https://help.syncfusion.com/api/js/ejlist
  
 {% highlight html %}
 
-@Html.EJ().ListView("localListView").Width(400).DataSource((IEnumerable<CarsList>)ViewBag.datasource).FieldSettings(fs => fs.Text("text")).PersistSelection(true)
+@Html.EJ().ListView("localListView").Width(400).DataSource((IEnumerable<CarsList>)ViewBag.datasource).FieldSettings(sf => sf.Text("text")).PersistSelection(true)
 
   @Html.EJ().Button("button").ShowRoundedCorner(true).Text("Submit").ClientSideEvents(e => e.Click("click"))
  
@@ -65,7 +65,7 @@ Multiple items can be selected by using [EnableCheckMark](https://help.syncfusio
 
 {% highlight html %}
 
-@Html.EJ().ListView("localListView").Width(400).DataSource((IEnumerable<CarsList>)ViewBag.datasource).EnableCheckMark(true).FieldSettings(fs => fs.Text("text"))
+@Html.EJ().ListView("localListView").Width(400).DataSource((IEnumerable<CarsList>)ViewBag.datasource).EnableCheckMark(true).FieldSettings(sf => sf.Text("text"))
 
 @Html.EJ().Button("button").ShowRoundedCorner(true).Text("Submit").ClientSideEvents(e => e.Click("click"))
  
