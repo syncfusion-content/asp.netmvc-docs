@@ -9,16 +9,16 @@ documentation: ug
 
 # Getting Started
 
-This section explains briefly about how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like Paging, Filtering, Grouping and Summary. The following screenshot illustrates the Grid control.
+This section explains briefly about how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like paging, filtering, grouping and summary. The following screenshot illustrates the grid control.
 
 ![](Getting-Started_images/Getting-Started_img.png)
 
-## Create your first Grid in MVC
+## Create your first grid in MVC
 
-The following steps explain creating first grid with an empty datasource.
+The following steps explain creating first grid with an empty datasource:
 
-1.  Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
-2.  Add a Grid control in View file with an empty datasource as like as follows. In `Columns` definition, the `TextAlign` property allows you to align text of the columns, the `Width` property is used to define width of the columns and `Format` property allows you to format the particular columns value.
+1.  Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and add necessary dll’s and script files.
+2.  Add a grid control in view file with an empty datasource as like as follows. In `Columns` definition, the `TextAlign` property allows you to align text of the columns, the `Width` property is used to define width of the columns and `Format` property allows you to format the particular columns value.
 
 {% highlight razor %}
 	
@@ -48,7 +48,7 @@ You can execute the above code sample to render an empty Grid is rendered with s
 
 ## Data binding
 
-You can bind the data to Grid control using `DataSource` property.
+You can bind the data to grid control using the `DataSource` property.
 
 {% highlight razor %}
 
@@ -97,10 +97,10 @@ You can bind the data to Grid control using `DataSource` property.
 ![](Getting-Started_images/Getting-Started_img3.png)
 
 
-## Enable Paging
+## Enable paging
 
-[`Paging`](http://help.syncfusion.com/aspnetmvc/grid/paging) feature can be enabled by `AllowPaging` property of Grid control. This adds the pager in the bottom of the grid, using that pager you can display the grid records in paged view. The page size can be customized using `PageSize' property
-`PageSettings` property.
+The [`Paging`](http://help.syncfusion.com/aspnetmvc/grid/paging) feature can be enabled by the `AllowPaging` property of grid control. This adds the pager in the bottom of the grid, using that pager you can display the grid records in paged view. The page size can be customized using the `PageSize`
+and `PageSettings` property.
 
 {% highlight razor %}
 
@@ -147,9 +147,9 @@ You can bind the data to Grid control using `DataSource` property.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
-## Enable Filtering
+## Enable filtering
 
-[`Filtering`](http://help.syncfusion.com/aspnetmvc/grid/filtering) feature in Grid is used to facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. Filtering feature can be enabled by AllowFiltering property. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using `FilterType` property of FilterSettings.
+The [`Filtering`](http://help.syncfusion.com/aspnetmvc/grid/filtering) feature in the grid is used to facilitate the extraction of a subset of records that meets certain criteria. You can apply Filter to one or more columns. Filtering feature can be enabled by the AllowFiltering property. By default, the filter bar row is displayed to perform filtering, you can change the filter type by using the `FilterType` property of FilterSettings.
 
 
 {% highlight razor %}
@@ -205,9 +205,9 @@ You can bind the data to Grid control using `DataSource` property.
 ![](Getting-Started_images/Getting-Started_img7.png)
 
 
-## Enable Grouping
+## Enable grouping
 
-['Grouping'](http://help.syncfusion.com/aspnetmvc/grid/grouping) feature in Grid is used to consolidate Grid data into groups. Grouping allows the categorization of records based on specified columns. You can enable grouping feature by `AllowGrouping` property. Columns can be grouped dynamically by drag and drop the grid column header to the group drop area. The initial grouping can be done by adding required column names in `GroupedColumns` property of `GroupSettings` property.
+The ['Grouping'](http://help.syncfusion.com/aspnetmvc/grid/grouping) feature in the grid is used to consolidate grid data into groups. Grouping allows the categorization of records based on specified columns. You can enable grouping feature by the `AllowGrouping` property. Columns can be grouped dynamically by drag and drop of the grid column header to the group drop area. The initial grouping can be done by adding required column names in the `GroupedColumns` property of `GroupSettings` property.
 
 {% highlight razor %}
 
@@ -264,9 +264,9 @@ You can bind the data to Grid control using `DataSource` property.
 ![](Getting-Started_images/Getting-Started_img8.png)
 
 
-## Add Summaries
+## Add summaries
 
-[`Summaries`](http://help.syncfusion.com/aspnetmvc/grid/summary) can be enabled by setting the `ShowSummary` to true and adding required summary rows and columns in the `SummaryRows` property. 
+The [`Summaries`](http://help.syncfusion.com/aspnetmvc/grid/summary) can be enabled by setting the `ShowSummary` to true and adding required summary rows and columns in the `SummaryRows` property. 
 
 The following code example shows the option to enable group summary.
 
