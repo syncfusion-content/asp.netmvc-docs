@@ -62,7 +62,7 @@ I> The given excluded properties can be included in persist state using the `_ig
 
 ## Accessing currently stored state
 
-Persisted state can be accessed through local storage using the corresponding key name. Key name is the combination of plugin name and control id.
+The persisted state can be accessed through local storage using the corresponding key name. Key name is the combination of plugin name and control id.
 
 {% highlight js %}
 var gridStateString = window.localStorage.ejGridGrid; // grid state as string
