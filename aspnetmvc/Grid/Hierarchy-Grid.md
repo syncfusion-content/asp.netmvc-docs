@@ -79,9 +79,9 @@ public partial class GridController : Controller
 ![](Hierarchy-Grid_images/HierarchyGrid_img1.png)
 
 
-## Expand or Collapse All Child's
+## Expand or collapse all child's
 
-The Grid can able to expand and collapse all the `ChildGrid` through programmatically using [`expandAll`](http://help.syncfusion.com/js/api/ejgrid#methods:expandall "expandAll") and [`collapseAll`](http://help.syncfusion.com/js/api/ejgrid#methods:collapseall "collapseAll") method.
+The grid can able to expand and collapse all the `ChildGrid` through programmatically using [`expandAll`](http://help.syncfusion.com/js/api/ejgrid#methods:expandall "expandAll") and [`collapseAll`](http://help.syncfusion.com/js/api/ejgrid#methods:collapseall "collapseAll") method.
 
 {% tabs %}
 

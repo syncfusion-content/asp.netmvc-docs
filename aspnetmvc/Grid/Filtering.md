@@ -72,7 +72,7 @@ The following output is displayed as a result of the previous code example.
 
 You can enable menu filter by setting `FilterType` as `Menu` in `FilterSettings`
 
-There is an option to show or hide the additional filter options in the menu by setting `ShowPredicate` as `true` or `false` in `FilterSettings` respectively.
+There is an option to show or hide the additional filter options in the menu by setting the `ShowPredicate` as `true` or `false` in `FilterSettings` respectively.
 
 N> For the `FilterType` property you can assign either `string` value ("Menu") or `enum` value (`Syncfusion.JavaScript.FilterType.Menu`).
 
@@ -244,7 +244,7 @@ The following image describes the previous mentioned behavior.
 ![](filtering_images/filtering_img12.png)
 
 
-### Case Sensitivity
+### Case sensitivity
 
 To perform filter operation with case sensitive in excel styled filter menu mode by setting `EnableCaseSensitivity` as `true`.
 
@@ -394,7 +394,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `StartsWith` operator will be used for string filter
+                Always `StartsWith` operator will be used for the string filter
             </td>
             <td>
                 String
@@ -408,7 +408,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `Equal` operator will be used for Date filter 
+                Always `Equal` operator will be used for the Date filter 
             </td>
             <td>
                 Date
@@ -422,7 +422,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `Equal` operator will be used for Boolean filter
+                Always `Equal` operator will be used for the Boolean filter
             </td>
             <td>
                 Boolean
@@ -671,7 +671,7 @@ Usually enabling the AllowFiltering, will create default textbox in grid FilterB
 It has three functions. They are the following:
 
 1. `create` - It is used to create the control at time of initialize.
-2. `read`   - It is used to read the Filter value selected.
+2. `read`   - It is used to read the filter value selected.
 3. `write`  - It is used to render the control and assign the value selected for filtering.
 
 

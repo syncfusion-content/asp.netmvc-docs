@@ -17,7 +17,7 @@ This section explains briefly about how to create a Grid in your application wit
 
 The following steps explain creating first grid with an empty datasource:
 
-1.  Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and add necessary dll’s and script files.
+1.  Create Syncfusion ASP.NET MVC application. You can refer to [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and add necessary dll’s and script files.
 2.  Add a grid control in view file with an empty datasource as like as follows. In `Columns` definition, the `TextAlign` property allows you to align text of the columns, the `Width` property is used to define width of the columns and `Format` property allows you to format the particular columns value.
 
 {% highlight razor %}
@@ -42,7 +42,7 @@ The following steps explain creating first grid with an empty datasource:
 		 
 {% endhighlight  %}
    
-You can execute the above code sample to render an empty Grid is rendered with specified column headers.
+You can execute the above code sample to render an empty grid is rendered with specified column headers.
 
 ![](Getting-Started_images/Getting-Started_img2.png)
 

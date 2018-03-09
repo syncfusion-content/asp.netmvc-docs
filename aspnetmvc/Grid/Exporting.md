@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting
 
-The `Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar the `ExcelExport`, `WordExport`, `PdfExport` toolbar items needs to be added in grid tool bar using the `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of Grid object to export.The code sample for this is as follows.
+The `Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, the `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar the `ExcelExport`, `WordExport` and `PdfExport` toolbar items needs to be added in grid tool bar using the `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of grid object to export. The code sample for this is as follows.
 
 {% tabs %}
  
@@ -231,13 +231,13 @@ N> Excel file will be exported in the collapsed state with the expand/collapse i
 {% endhighlight  %}
 {% endtabs %}
 
-N> 1. The dataSource passed to the exporting method is compared with Grid column while exporting, when a column is not defined in the grid dataSource, it is obtained as null value and hence throws a null exception. To avoid the above exception ensure that the columns bound to the grid are defined in the grid dataSource before exporting the grid.
+N> 1. The dataSource passed to the exporting method is compared with grid column while exporting, when a column is not defined in the grid dataSource, it is obtained as null value and hence throws a null exception. To avoid the above exception ensure that the columns bound to the grid are defined in the grid dataSource before exporting the grid.
 
-N> 2. To export the dynamic list of objects in grid use the typebuilder concept refer [`link`](https://www.syncfusion.com/kb/7620/how-to-export-dynamic-list-using-typebuilder-in-grid "link")
+N> 2. To export the dynamic list of objects in the grid use the typebuilder concept refer to this [`link`](https://www.syncfusion.com/kb/7620/how-to-export-dynamic-list-using-typebuilder-in-grid "link")
 
-## Server Dependencies
+## Server dependencies
 
-Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for the Grid Export is as follows.
+Export Helper functions are available in the assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio builds. Full list of assemblies needed for the grid export is as follows.
 
     1.  Syncfusion.EJ
     2.  Syncfusion.EJ.Export
@@ -258,7 +258,7 @@ Currently server helper function allows following three types of exporting.
 
 ##  Server side handlers
 
-In MVC, exporting is achieved by using action controller method. In controller method, Grid property is passed as string parameter and you need to deserialize it into the Grid Property. By using the `Export` server method, you can export the Grid into excel, PDF and word documents.
+In MVC, exporting is achieved by using action controller method. In controller method, grid property is passed as string parameter and you need to deserialize it into the grid Property. By using the `Export` server method, you can export the grid into excel, PDF and word documents.
 
 {% tabs %}
  
@@ -367,7 +367,7 @@ In MVC, exporting is achieved by using action controller method. In controller m
 
 {% endtabs %} 
 
-On Exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel Exporting, ExportToWord for Word Exporting and ExportToPdf for PDF Exporting. The default controller name in routing path is the Grid view page’s Controller name. For instance, when the Grid is rendered in GridFeatures View Page of the Home Controller, then on Excel exporting Grid Content the default routing path will be ~/Home/ExportToExcel.
+On exporting, the default routing path to server-side that contains the action name as ExportToExcel for Excel exporting, ExportToWord for Word exporting and ExportToPdf for PDF exporting. The default controller name in routing path is the grid view page’s controller name. For instance, when the grid is rendered in GridFeatures View Page of the Home Controller, then on Excel exporting grid Content the default routing path will be ~/Home/ExportToExcel.
 
 
 
@@ -902,7 +902,7 @@ public class GridController : Controller
 
 ##  Multiple exporting
 
-The `AllowMultipleExporting` property allows you to export multiple grids into same file. Once you enable the `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
+The `AllowMultipleExporting` property allows you to export multiple grids into the same file. Once you enable the `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
 In controller action method you are able to export all the grids available in the current page. The code sample for this is as follows.
 
 {% tabs %}
@@ -1016,7 +1016,7 @@ In controller action method you are able to export all the grids available in th
 
 ## DataTable exporting
 
-Grid has support to export DataTable type datasource. This support helps when a Grid has no view model, and a DataTable is bound to a Grid.
+The grid has support to export DataTable type datasource. This support helps when a grid has no view model, and a DataTable is bound to a grid.
 
 {% tabs %}
  
@@ -1542,7 +1542,7 @@ The background color of the alternative row of the grid content.</td></tr>
 
 ## Exporting server events
 
-The `Exporting` feature supports server-side event handler. You can handle server-side event while exporting grid to various files such as Excel, PDF and Word. The various server-side events available in Exporting and its argument types are listed in the following table.
+The `Exporting` feature supports server-side event handler. You can handle server-side event while exporting grid to various files such as Excel, PDF and Word. The various server-side events available in exporting and its argument types are listed in the following table.
 
 <table>
 <tr>
