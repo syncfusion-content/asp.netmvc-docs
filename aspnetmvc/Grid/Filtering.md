@@ -8,15 +8,15 @@ documentation: ug
 ---
 # Filtering
 
-Filtering helps to view particular or related records from dataSource which meets a given filtering criteria. To enable filter, set `AllowFiltering`property as`true`.   
+Filtering helps to view the particular or related records from dataSource which meets a given filtering criteria. To enable filter, set the `AllowFiltering` property as`true`.   
 
-The Grid supports three types of filter, they are
+The Grid supports three types of filter, they are the following.
 
 1. Filter Bar
 2. Menu 
 3. Excel
 
-And also four types of filter menu is available in all filter types, they are
+Four types of filter menu is available in all filter types, they are the following.
 
 1. String 
 2. Numeric 
@@ -26,9 +26,9 @@ And also four types of filter menu is available in all filter types, they are
 The corresponding filter menu is opened based on the column type.
 
 N>  1. Need to specify the `Type` of column, when first record data value is empty or null otherwise the filter menu is not opened. 
-N>  2. The default filter type is Filter bar, when `AllowFiltering` is enabled and `FilterType` is not set.
+N>  2. The default filter type is Filter bar, when the `AllowFiltering` is enabled and `FilterType` is not set.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -63,22 +63,22 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img1.png)
 
 
-## Menu Filter
+## Menu filter
 
 You can enable menu filter by setting `FilterType` as `Menu` in `FilterSettings`
 
-There is an option to show or hide the additional filter options in the Menu by setting `ShowPredicate` as `true` or `false` in `FilterSettings` respectively.
+There is an option to show or hide the additional filter options in the menu by setting the `ShowPredicate` as `true` or `false` in `FilterSettings` respectively.
 
-N> For `FilterType` property you can assign either `string` value ("Menu") or `enum` value (`Syncfusion.JavaScript.FilterType.Menu`).
+N> For the `FilterType` property you can assign either `string` value ("Menu") or `enum` value (`Syncfusion.JavaScript.FilterType.Menu`).
 
-We can also filter a specified range of values by using the `between` operator for the column type `number`, `date` and `datetime`.
+A specified range of values can be filtered by using the `between` operator for the column type `number`, `date` and `datetime`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -114,7 +114,7 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img2.png)
 
@@ -135,9 +135,9 @@ Boolean Filter
 
 ## Excel-like filter
 
-You can enable excel menu by setting  `FilterType` as` Excel` in `FilterSettings` . The excel menu contains an option such as Sorting, Clear filter, submenu for advanced filtering.
+You can enable excel menu by setting  `FilterType` as` Excel` in the `FilterSettings` . The excel menu contains an option such as sorting, clear filter, submenu for advanced filtering.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -173,11 +173,11 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img6.png)
 
-### Filtering Between Values
+### Filtering between values
 
 By using the custom filter feature of the Excel filter, we can filter between values of the column. The following screenshot depicts the usage of "Between" option of the custom filter dialog.
 
@@ -187,14 +187,14 @@ By using the custom filter feature of the Excel filter, we can filter between va
 
 ### Checkbox list generation:
 
-By default, the checkbox list is generated from distinct values of the filter column from dataSource which gives an option to search and select the required items.
+By default, the checkbox list is generated from the distinct values of the filter column from dataSource which gives an option to search and select the required items.
 
-Also on checkbox list generation, if the number of distinct values are greater than 1000, then the excel filter will display only first 1000 values and show "Not all items shown" label to ensure the best performance on rendering and searching. However this limit has been customized according to your requirement by setting `MaxFilterChoices` with required limit in integer.
+Also, on checkbox list generation, if the number of distinct values are greater than 1000, then the excel filter will display only first 1000 values and show "Not all items shown" label to ensure the best performance on rendering and searching. However this limit has been customized according to your requirement by setting the `MaxFilterChoices` with required limit in integer.
 
 N> 1. Using excel filter events you can change the dataSource of the checkbox list. 
 N> 2. `Query` of checkbox list can also be changed using excel filter events.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -230,7 +230,7 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img7.png)
 
@@ -239,16 +239,16 @@ The following output is displayed as a result of the above code example.
 
 When filtering is done multiple times on the same column then the previously filtered values on the column will be cleared. So, to retain the old values `Add current selection to filter` checkbox can be used which is displayed when data is searched in the search bar.
 
-The following image describes the above mentioned behavior.
+The following image describes the previous mentioned behavior.
 
 ![](filtering_images/filtering_img12.png)
 
 
-### Case Sensitivity
+### Case sensitivity
 
 To perform filter operation with case sensitive in excel styled filter menu mode by setting `EnableCaseSensitivity` as `true`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -284,16 +284,16 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img8.png)
 
 
-## Filter Bar
+## Filter bar
 
-'Filter bar' row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the `FilterType` as `FilterBar`.
+The 'Filter bar' row is located next to column header of grid. You can filter the records with different expressions depending upon the column type. To show the filter bar row, set the `FilterType` as `FilterBar`.
 
-List of Filter bar Expressions:
+List of filter bar expressions:
 
 You can enter the below filter expressions manually in the filter bar.
 
@@ -394,7 +394,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `StartsWith` operator will be used for string filter
+                Always `StartsWith` operator will be used for the string filter
             </td>
             <td>
                 String
@@ -408,7 +408,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `Equal` operator will be used for Date filter 
+                Always `Equal` operator will be used for the Date filter 
             </td>
             <td>
                 Date
@@ -422,7 +422,7 @@ You can enter the below filter expressions manually in the filter bar.
                 N/A
             </td>
             <td>
-                Always `Equal` operator will be used for Boolean filter
+                Always `Equal` operator will be used for the Boolean filter
             </td>
             <td>
                 Boolean
@@ -431,7 +431,7 @@ You can enter the below filter expressions manually in the filter bar.
     </table>
 	
 	
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -467,25 +467,25 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img9.png)
 
 
 Filter bar modes:
 
-This specifies the grid to start the filter action while typing in the filter bar or after pressing the enter key based on `FilterBarMode`.There are two types of `FilterBarMode`, they are
+This specifies the grid to start the filter action while typing in the filter bar or after pressing the enter key based on the `FilterBarMode`.There are two types of `FilterBarMode`, they are the following.
 
 1. OnEnter
 2. Immediate
 
-N> For `FilterBarMode` property you can assign either `string` value (OnEnter) or `enum` value (`Syncfusion.JavaScript.FilterBarMode.OnEnter`).
+N> For the `FilterBarMode` property you can assign either `string` value (OnEnter) or `enum` value (`Syncfusion.JavaScript.FilterBarMode.OnEnter`).
 
 Filter bar message:
 
-The filter bar message is supported only for the `FilterType` as 'FilterBar'. The filtered data with column name is displayed in the grid pager itself. By default `ShowFilterBarStatus` is 'true'.
+The filter bar message is supported only for the `FilterType` as 'FilterBar'. The filtered data with column name is displayed in the grid pager itself. By default the `ShowFilterBarStatus` is 'true'.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -521,16 +521,16 @@ The following code example describes the above behavior.
 {% endhighlight  %}    
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img10.png)
 
 
 ## Filter Operators
 
-The grid controls uses filter operators from `DataManager`, which are used at the time of filtering.
+The grid controls uses filter operators from the `DataManager`, which are used at the time of filtering.
 
-List of Column type and Filter operators
+List of column type and filter operators.
 
 <table>
         <tr>
@@ -665,17 +665,17 @@ List of Column type and Filter operators
         </tr>
     </table>
 
-## FilterBar Template
+## FilterBar template
 
-Usually enabling AllowFiltering, will create default textbox in Grid FilterBar. So, Using [`FilterBarTemplate`] property of `Columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
-It has three functions. They are    
+Usually enabling the AllowFiltering, will create default textbox in grid FilterBar. So, Using the [`FilterBarTemplate`] property of `Columns` we can render any other controls like AutoComplete, DropDownList etc in filterbar to filter the grid data for the particular column.  
+It has three functions. They are the following:
 
 1. `create` - It is used to create the control at time of initialize.
-2. `read`   - It is used to read the Filter value selected.
+2. `read`   - It is used to read the filter value selected.
 3. `write`  - It is used to render the control and assign the value selected for filtering.
 
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 
@@ -759,7 +759,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %} 
 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](filtering_images/filtering_img11.png)
 {:caption}
