@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-All text in Grid can be localized using `ej.Grid.Locale` object. Please find the table with list of properties and its value in locale object.
+All text in the grid can be localized using the `ej.Grid.Locale` object. Please find the table with list of properties and its value in locale object.
 
 <table>
 <tr>
@@ -185,7 +185,7 @@ Select date</td></tr>
 <tr>
 <td>
 EmptyDataSource</td><td>
-DataSource must not be empty at initial load since columns are generated from dataSource in AutoGenerate Column Grid</td></tr>
+DataSource must not be empty at initial load since columns are generated from the dataSource in AutoGenerate column grid</td></tr>
 <tr>
 <td>
 True</td><td>
@@ -225,11 +225,11 @@ Ungrouping</td></tr>
 <tr>
 <td>
 SortInAscendingOrder</td><td>
-Sort In Ascending Order</td></tr>
+Sort in ascending order</td></tr>
 <tr>
 <td>
 SortInDescendingOrder</td><td>
-Sort In Descending Order</td></tr>
+Sort in descending order</td></tr>
 <tr>
 <td>
 NextPage</td><td>
@@ -347,10 +347,10 @@ ej.Grid.Locale["de-DE"] = {
 I> You need to change pager locale in `ej.Pager.Locale` object.
 
 
-## Excel-Filter Localization
+## Excel-filter localization
 
 
-All text in Excel-Filter can be localized using `ej.ExcelFilter.Locale` object. Please find the table with list of properties and its value in locale object.
+All text in Excel-filter can be localized using the `ej.ExcelFilter.Locale` object. Please find the table with list of properties and its value in locale object.
 
 <table>
 <tr>
@@ -360,11 +360,11 @@ Text</th></tr>
 <tr>
 <td>
 SortNoSmaller</td><td>
-Sort Smallest to Largest</td></tr>
+Sort Smallest to largest</td></tr>
 <tr>
 <td>
 SortNoLarger</td><td>
-Sort Largest to smallest</td></tr>
+Sort largest to smallest</td></tr>
 <tr>
 <td>
 SortTextAscending</td><td>
@@ -388,7 +388,7 @@ Sort By Color</td></tr>
 <tr>
 <td>
 SortByCellColor</td><td>
-Sort By Cell Color</td></tr>
+Sort By Cell color</td></tr>
 <tr>
 <td>
 SortByFontColor:</td><td>
@@ -412,27 +412,27 @@ FilterColorOptions</td><td>
 <tr>
 <td>
 FilterByCellColor</td><td>
-Filter By Cell Color</td></tr>
+Filter By cell color</td></tr>
 <tr>
 <td>
 FilterByFontColor</td><td>
-Filter By Font Color</td></tr>
+Filter By font color</td></tr>
 <tr>
 <td>
 ClearFilter</td><td>
-Clear Filter</td></tr>
+Clear filter</td></tr>
 <tr>
 <td>
 NumberFilter</td><td>
-Number Filter</td></tr>
+Number filter</td></tr>
 <tr>
 <td>
 TextFilter</td><td>
-Text Filter</td></tr>
+Text filter</td></tr>
 <tr>
 <td>
 DateFilter</td><td>
-Date Filter</td></tr>
+Date filter</td></tr>
 <tr>
 <td>
 StringMenuOptions</td><td>
@@ -456,7 +456,7 @@ Top10MenuOptions</td><td>
 <tr>
 <td>
 title</td><td>
-Custom Filter</td></tr>
+Custom filter</td></tr>
 <tr>
 <td>
 PredicateOr</td><td>
@@ -472,7 +472,7 @@ OK</td></tr>
 <tr>
 <td>
 MathCase</td><td>
-Match Case</td></tr>
+Match case</td></tr>
 <tr>
 <td>
 Cancel</td><td>
@@ -480,7 +480,7 @@ Cancel</td></tr>
 <tr>
 <td>
 NoResult</td><td>
-No Match Found</td></tr>
+No Match found</td></tr>
 <tr>
 <td>
 CheckBoxStatusMsg</td><td>
@@ -581,11 +581,11 @@ ej.ExcelFilter.Locale["de-DE"] = {
 
 ![](Localization_images/Globalizationandlocalization._img2.png)
 
-I> We have uploaded the predefined language packs for some commonly used cultures in [`this`](https://github.com/syncfusion/ej-global/tree/master/l10n) github location. Refer to the github location for getting the predefined language packs for the corresponding culture. The culture file has localized texts for all the Syncfusion controls.
+I> We have uploaded the pre-defined language packs for some commonly used cultures in [`this`](https://github.com/syncfusion/ej-global/tree/master/l10n) github location. Refer to the github location for getting the pre-defined language packs for the corresponding culture. The culture file has localized texts for all the Syncfusion controls.
 
 ## Globalization
 
-`ej.globalize` library is used to globalize numeric values in Grid control using `Format` property in `Columns`. Globalize values will be automatically used when `Locale` property is set with locale string value for example `en-US`.
+The `ej.globalize` library is used to globalize numeric values in the grid control using `Format` property in `Columns`. Globalize values will be automatically used when `Locale` property is set with locale string value for example `en-US`.
 
 {% tabs %}
 
@@ -647,13 +647,13 @@ public partial class GridController : Controller
 
 ![](Localization_images/Globalizationandlocalization._img3.png)
 
-I> In the above example, you need to use `globalize.culture.de-DE` script file to globalize values. 
+I> In the above example, you need to use the `globalize.culture.de-DE` script file to globalize values. 
 
 {% seealso %} [localization](http://helpjs.syncfusion.com/js/localization) {% endseealso %}
 
-## Right to Left - RTL
+## Right to left - RTL
 
-By default, Grid render its text and layout from left to right. To customize Grid's direction, you can change direction from LTR to RTL by using `EnableRTL` as true.
+By default, the grid render its text and layout from left to right. To customize grid's direction, you can change direction from LTR to RTL by using `EnableRTL` as true.
 
 {% tabs %}
 

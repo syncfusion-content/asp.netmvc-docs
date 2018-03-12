@@ -10,7 +10,7 @@ documentation: ug
 
 ##  Apply formatting for columns dynamically
 
-Column format can be used dynamically to change data values format with the help of the public method. The following code example illustrates the Essential JavaScript with column formatting in public method.
+Column format can be used dynamically to change data values format with the help of the public method. The following codesample illustrates the Essential JavaScript with column formatting in public method.
 
 {% highlight js %}
 
@@ -114,14 +114,14 @@ namespace SyncfusionMvcApplication3.Controllers
 {% endtabs %}
 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Disable-double-click-edit_img1.png)
 
 
-## Customize Drag and Drop element while grouping
+## Customize drag and drop element while grouping
 
-In this section, you can learn how to customize drag and drop element. This drag and drop element is framed by using CSS classes with default values. When you want to change or customize drag and drop element, then just override default values of CSS class values. e-cloneproperties is the name of drag and drop element in CSS class.
+In this section, you can learn how to customize drag and drop element. This drag and drop element is framed by using CSS classes with default values. When you want to change or customize drag and drop element, then just override default values of CSS class values. The e-cloneproperties is the name of drag and drop element in CSS class.
 
 {% tabs %}
  
@@ -174,13 +174,13 @@ namespace MVCSampleBrowser.Controllers
 
 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Customize-Drag-and-Drop-element-while-grouping_img1.png)
 
-## Display Tooltip
+## Display tooltip
 
-To apply tooltip for cells, You need to use `CustomAttributes` in columns. For more reference, about [`CustomAttributes`](http://help.syncfusion.com/aspnetmvc/grid/columns#custom-attribute).
+To apply tooltip for cells, You need to use the `CustomAttributes` in columns. For more reference, about the [`CustomAttributes`](http://help.syncfusion.com/aspnetmvc/grid/columns#custom-attribute).
 
 {% tabs %}
 
@@ -244,11 +244,11 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 {% endtabs %}   
 
-## Set Dynamic DataSource to Grid
+## Set dynamic dataSource to grid
 
-Grid control is capable of updating its dataSource as and when required. Grid method “DataSource” helps in achieving this and in this method parameter, you have to pass the new dataSource as List Collection.
+Grid control is capable of updating its dataSource as and when required. The grid method “DataSource” helps in achieving this and in this method parameter, you have to pass the new dataSource as list collection.
 
-For instance, consider a textbox above Grid and depending on its value, you can update a new datasource to Grid dynamically.
+For instance, consider a textbox previous the grid and depending on its value, you can update a new datasource to the grid dynamically.
 
 {% tabs %}
  
@@ -367,11 +367,11 @@ The following screenshot illustrates the output.
 ![](How-to_images/Set-Dynamic-DataSource-to-Grid_img1.png)
 
 
-## Custom Binding for Grid CRUD operation
+## Custom binding for grid CRUD operation
 
-In Grid control DataManager is used for data processing. The adaptors of dataManager are customizable that can be extended for custom Binding with server-side for Grid CRUD operation.
+In the grid control DataManager is used for data processing. The adaptors of dataManager are customizable that can be extended for custom binding with server-side for grid CRUD operation.
 
-For instance bind the data to Grid by using “remoteSaveAdaptor” and extend it to modify its update method to bind edited record values of Grid as “FormCollection” in server-side.
+For instance bind the data to grid by using the “remoteSaveAdaptor” and extend it to modify its update method to bind edited record values of grid as “FormCollection” in the server-side.
 
 {% tabs %}
 
@@ -570,7 +570,7 @@ namespace EJGrid.Controllers
   
 ## Binding SignalR endpoint
 
-Grid  supports SignalR features for live updates in record. Please find the below option to configure signalR with Grid. 
+Grid  supports the SignalR features for live updates in record. Please find the below option to configure signalR with Grid. 
 
 1) Before configure SignalR with ejGrid. You need to Setup SignalR configuration in Visual Studio project. For reference, please find the link.
 
@@ -683,12 +683,12 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 {% endtabs %}   
 
-## Copy data from Excel to Grid
+## Copy data from Excel to grid
 
-This [blog](https://www.syncfusion.com/blogs/post/Copying-and-Pasting-Excel-Sheet-Data-to-Grid-ASPNET-MVC.aspx) is about conversion of Excel to JSON data. After got JSON data you can bind it to Grid. 
+This [blog](https://www.syncfusion.com/blogs/post/Copying-and-Pasting-Excel-Sheet-Data-to-Grid-ASPNET-MVC.aspx) is about conversion of Excel to JSON data. After got JSON data you can bind it to the grid. 
 
 
-## Use NHibernate with Grid
+## Use NHibernate with grid
 
 ### NHibernate
 
@@ -696,7 +696,7 @@ NHibernate is an object-relational mapping (ORM) solution for the Microsoft .NET
 
 ### Populate Grid with data by using NHibernate
 
-You can populate the Grid with data obtained by using NHibernate. The UrlAdaptor can be used for data binding and to handle the request and response from the server. You can use the CRUD URL mappers (InsertUrl/UpdateUrl/RemoveUrl/CrudUrl) to provide the action/method to be called while editing.
+You can populate the Grid with data obtained by using the NHibernate. The UrlAdaptor can be used for data binding and to handle the request and response from the server. You can use the CRUD URL mappers (InsertUrl/UpdateUrl/RemoveUrl/CrudUrl) to provide the action/method to be called while editing.
 
 The Grid initialization is as follows.
 
@@ -945,7 +945,7 @@ public static class AppSession
 
 {% endhighlight  %}
 
-N> In the above code example, the ORM mapping is performed by using the XML-documents and the mapping files are Employee.cfg.xml and EmployeeMap.hbm.xml
+N> In the previous code example, the ORM mapping is performed by using the XML-documents and the mapping files are Employee.cfg.xml and EmployeeMap.hbm.xml
 
 ## Adding comments in the Exported file (Excel, Word or PDF)
 
@@ -1006,7 +1006,7 @@ The following screenshot displays the exported grid with comments added to cells
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img1.png)
 
-### Adding Comments in Exported Word document
+### Adding comments in exported Word document
 
 We can add comments to the word document using the AppendComment method in the WComment class of the DocIO namespace. We can traverse through the required row/cell with the help of WTable class and thus can append the comment to the table cell.
 
@@ -1062,9 +1062,9 @@ The following screenshot shows the exported grid with comments added to the docu
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img2.png)
 
-### Adding Comments in Exported PDF document
+### Adding comments in exported PDF document
 
-We can add comments to a PDF documents using the annotation support provided in the PDF namespace. The Annotation added can be of any format such as freeTextAnnotation, popUpAnnotation, LineAnnotation etc., Based on our requirement, we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
+We can add comments to a PDF documents using the annotation support provided in the PDF namespace. The annotation added can be of any format such as freeTextAnnotation, popUpAnnotation and LineAnnotation etc., based on the requirement we can add annotation which is available under Syncfusion.Pdf.Interactive namespace.
 
 {% tabs %}
 
@@ -1188,7 +1188,7 @@ Using the Range Text property and SetValue method of the XlsIO IRange Class, we 
 {% endhighlight %}
 {% endtabs %}
 
-### Adding header and footer in Exported Word document
+### Adding header and footer in exported Word document
 
 We can add header and footer to the word document using the HeadersFooters property in the WHeadersFooters class of the DocIO namespace. We can create an instance of the IWParagraph class and append the header/footer text to it using the AppendText method.
 
@@ -1253,9 +1253,9 @@ We can add header and footer to the word document using the HeadersFooters prope
 {% endhighlight %}
 {% endtabs %}
 
-### Adding header and footer in Exported PDF document
+### Adding header and footer in the exported PDF document
 
-We can add header/footer to a PDF documents using PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
+We can add header/footer to a PDF documents using the PdfPageTemplateElement class. The header and footer can contain any types of element including dynamic fields.
 
 {% tabs %}
 
@@ -1321,9 +1321,9 @@ We can add header/footer to a PDF documents using PdfPageTemplateElement class. 
 {% endhighlight %}
 {% endtabs %}
 
-## External Search in Grid
+## External search in grid
 
-Using `search` method of grid, you can search the string in grid externally without using in-built toolbar search support. While using `search` method it is necessary to set `AllowSearching` property as `true`. The following code example explains the above behavior.
+Using `search` method of grid, you can search the string in grid externally without using in-built toolbar search support. While using the `search` method it is necessary to set the `AllowSearching` property as `true`. The following code example explains the previous behavior.
 {% tabs %}
 {% highlight razor %}
 <input type="text" id="search" class="e-ejinputtext" />
@@ -1374,11 +1374,11 @@ namespace SyncfusionMvcApplication3.Controllers
 }
 {% endhighlight %}
 {% endtabs %}
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 ![](How-to_images/ExternalSearching_img1.jpeg)
 
 
-##  Configure Grid through Grid Model properties
+##  Configure grid through grid Model properties
     
 There comes a time when you want to set Grid properties other than using Grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to Grid Helper.
 
@@ -1422,21 +1422,21 @@ The following code example shows you how to set Grid properties such as `AllowPa
 {% endhighlight  %}
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Configure Grid through Grid Model properties_img1.png)
 
 ##  Work with partial views
 
-The Grid can be rendered in either `Unobtrusive` or `Non-unobtrusive` mode.
+The grid can be rendered in either `Unobtrusive` or `Non-unobtrusive` mode.
        
-In unobtrusive mode, to load grid from partial view via AJAX, in the success callback, the partial view should be parsed using `ej.widget.init` method.  
+In unobtrusive mode, to load grid from partial view via AJAX, in the success callback, the partial view should be parsed using the `ej.widget.init` method.  
 
  N> The `ej.widget.init` method is available in `ej.unobtrusive.min.js` file.
     
- N> If  `InitUnobtrusiveInScriptManager`  key is set in appSettings of web config then the `Html.EJ().ScriptManager()` should be placed in the partial view.
+ N> If  the `InitUnobtrusiveInScriptManager`  key is set in appSettings of web config then the `Html.EJ().ScriptManager()` should be placed in the partial view.
 
- The following code example describes the above behavior.
+ The following code example describes the previous behavior.
 
 {% tabs %}   
 {% highlight razor %}
@@ -1491,7 +1491,7 @@ In unobtrusive mode, to load grid from partial view via AJAX, in the success cal
 {% endhighlight  %}
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Work with partial views_img1.png)
 
@@ -1500,7 +1500,7 @@ In non-unobtrusive mode, to load grid from partial view via AJAX, the `ScriptMan
 
 N> The `Html.EJ().ScriptManager()` which is placed in the Layout page will not initiate control rendering in partial view hence every partial view should have their own `ScriptManager`.
 
-The following code example describes the above behavior.
+The following code sample describes the previous behavior.
 
 {% tabs %}   
 {% highlight razor %}
@@ -1555,13 +1555,13 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Work with partial views_img2.png)
 
-## Rendering the grid using Grid Properties in server-side
+## Rendering the grid using grid properties in server-side
 
-The GridProperties helps to render the Grid control in server-side.
+The GridProperties helps to render the grid control in server-side.
 
 The following code example which will explain to render the grid control in server-side.
 
@@ -1602,12 +1602,12 @@ The following code example which will explain to render the grid control in serv
 
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
 
-## Export Grid to target location without download prompt(Excel, Word or PDF)
+## Export grid to target location without download prompt(Excel, Word or PDF)
 
 In the Export method we have assigned the target location to save the exported file in the specified path. The target location is placed using the Server.MapPath.
 
@@ -1689,11 +1689,11 @@ See Also
 
 For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
 
-## Hierarchy Grid with different foreignKeyField in parent and child table
+## Hierarchy grid with different foreignKeyField in parent and child table
 
-The `QueryString` property is used to filter the childGrid data based on value in parent Grid data. But when the field name provided in `QueryString` does not exists in Child Grid, then `ForeignKeyField` property is used to filter the childGrid data. If the foreign key column name differs for parent and child grid then use `ForeignKeyField` property of Grid.
+The `QueryString` property is used to filter the childGrid data based on value in parent grid data. But when the field name provided in the `QueryString` does not exists in Child grid, then the `ForeignKeyField` property is used to filter the childGrid data. If the foreign key column name differs for parent and child grid then use the `ForeignKeyField` property of grid.
 
-The following code example explains the above behavior.
+The following code example explains the previous behavior.
 
 {% tabs %}
 
@@ -1757,12 +1757,12 @@ public partial class GridController : Controller
 
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 ![](Hierarchy-Grid_images/Hierarchy-Grid_images2.png)
 
-## Display other Syncfusion controls in Grid columns
+## Display other Syncfusion controls in grid columns
 
-We can display the other Syncfusion controls using `Template` property of Grid columns and `TemplateRefresh` event of ejGrid control.
+We can display the other Syncfusion controls using the `Template` property of grid columns and `TemplateRefresh` event of ejGrid control.
 
 {% tabs %}
 
@@ -1829,31 +1829,31 @@ We can display the other Syncfusion controls using `Template` property of Grid c
 
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](How-to_images/Display_Other_controls_img1.png)
 
-## Perform Grid Actions on External button click
+## Perform grid actions on external button click
 
 ### CRUD operations
 
-Using `addRecord` method of Grid, you can add a record to a Grid externally without using in-built toolbar add support. While using `addRecord` method it is necessary to set `AllowAdding` property as `true`.
-Using `deleteRecord` method of Grid, you can delete a record to a Grid externally without using in-built toolbar delete support. While using `deleteRecord` method it is necessary to set `AllowDeleting` property as `true`.
-Using `updateRecord` method of Grid, you can update a record to a Grid externally without using in-built toolbar update support. While using `updateRecord` method it is necessary to set `AllowEditing` property as `true`.
+Using the `addRecord` method of grid, you can add a record to a grid externally without using in-built toolbar add support. While using the `addRecord` method it is necessary to set the `AllowAdding` property as `true`.
+Using `deleteRecord` method of grid, you can delete a record to a grid externally without using in-built toolbar delete support. While using the  `deleteRecord` method it is necessary to set the `AllowDeleting` property as `true`.
+Using `updateRecord` method of grid, you can update a record to a grid externally without using in-built toolbar update support. While using the `updateRecord` method it is necessary to set the `AllowEditing` property as `true`.
 
 ### Filtering
 
-Using `filterColumn` method of Grid, you can filter the data in the Grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
+Using the `filterColumn` method of grid, you can filter the data in the Grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
 
 ### Grouping
 
-Using `groupColumn` and `ungroupColumn` method of Grid, you can group/ungroup the Grid externally without using in-built grouping support. While using `groupColumn` and `ungroupColumn` method it is necessary to set `AllowGrouping` property as `true`.
+Using the `groupColumn` and `ungroupColumn` method of grid, you can group/ungroup the grid externally without using in-built grouping support. While using the `groupColumn` and `ungroupColumn` method it is necessary to set the `AllowGrouping` property as `true`.
 
 ### Sorting
 
-Using `sortColumn` method of Grid, you can sort the Grid externally without using in-built sorting support. While using `sortColumn` method it is necessary to set `AllowSorting` property as `true`.
+Using the `sortColumn` method of grid, you can sort the grid externally without using in-built sorting support. While using the `sortColumn` method it is necessary to set the y`AllowSorting` property as `true`.
 
-The following code example explains the above behavior.
+The following code example explains the previous behavior.
 
 {% tabs %}
 {% highlight html %}
@@ -2102,5 +2102,5 @@ The following code example explains the above behavior.
 {% endhighlight %}
 
 {% endtabs %}
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 ![](How-to_images/Actionswithexternalbutton_img1.png)
