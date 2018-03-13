@@ -947,7 +947,7 @@ public static class AppSession
 
 N> In the previous code example, the ORM mapping is performed by using the XML-documents and the mapping files are Employee.cfg.xml and EmployeeMap.hbm.xml
 
-## Adding comments in the Exported file (Excel, Word or PDF)
+## Adding comments in the exported file (Excel, Word or PDF)
 
 We can add comments in the exported file while exporting the grid control.
 
@@ -1125,7 +1125,7 @@ The following screenshot displays the exported grid with comments added to cells
 
 ![](How-to_images/Add-comments-in-the-Exported-file_img3.png)
 
-## Adding header and footer in the Exported file (Excel, Word or PDF)
+## Adding header and footer in the exported file (Excel, Word or PDF)
 
 We can add header and footer in the exported file while exporting the grid control.
 
@@ -1378,15 +1378,15 @@ The following output is displayed as a result of the previous code example.
 ![](How-to_images/ExternalSearching_img1.jpeg)
 
 
-##  Configure grid through grid Model properties
+##  Configure grid through the grid model properties
     
-There comes a time when you want to set Grid properties other than using Grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to Grid Helper.
+There comes a time when you want to set grid properties other than using grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to grid Helper.
 
 We can set grid properties in server-side using the  `GridProperties`  class and use it in view page using grid Helper overload.
 
 In addition to `id` parameter of grid helper we can also pass `GridProperties` Model as another parameter to grid helper. 
 
-The following code example shows you how to set Grid properties such as `AllowPaging`, `DataSource` and `Columns` in Controller using `GridProperties` class.
+The following code example shows you how to set grid properties such as `AllowPaging`, `DataSource` and `Columns` in Controller using `GridProperties` class.
 
 {% tabs %}   
 {% highlight razor %}
