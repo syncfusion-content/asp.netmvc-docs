@@ -248,7 +248,7 @@ namespace MVCSampleBrowser.Controllers
 
 Grid control is capable of updating its dataSource as and when required. The grid method “DataSource” helps in achieving this and in this method parameter, you have to pass the new dataSource as list collection.
 
-For instance, consider a textbox previous the grid and depending on its value, you can update a new datasource to the grid dynamically.
+For instance, consider a textbox above the grid and depending on its value, you can update a new datasource to the grid dynamically.
 
 {% tabs %}
  
