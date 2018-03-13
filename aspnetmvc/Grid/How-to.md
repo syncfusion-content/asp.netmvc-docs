@@ -572,7 +572,7 @@ namespace EJGrid.Controllers
 
 Grid  supports the SignalR features for live updates in record. Please find the below option to configure signalR with Grid. 
 
-1) Before configure SignalR with ejGrid. You need to Setup SignalR configuration in Visual Studio project. For reference, please find the link.
+1) Before configure SignalR with the ejGrid. You need to setup the SignalR configuration in Visual Studio project. For reference, please find the link given below.
 
 N> [signalR](http://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr#setup "signalr") 
 
@@ -696,9 +696,9 @@ NHibernate is an object-relational mapping (ORM) solution for the Microsoft .NET
 
 ### Populate Grid with data by using NHibernate
 
-You can populate the Grid with data obtained by using the NHibernate. The UrlAdaptor can be used for data binding and to handle the request and response from the server. You can use the CRUD URL mappers (InsertUrl/UpdateUrl/RemoveUrl/CrudUrl) to provide the action/method to be called while editing.
+You can populate the grid with data obtained by using the NHibernate. The UrlAdaptor can be used for data binding and to handle the request and response from the server. You can use the CRUD URL mappers (InsertUrl/UpdateUrl/RemoveUrl/CrudUrl) to provide the action/method to be called while editing.
 
-The Grid initialization is as follows.
+The grid initialization is as follows.
 
 {% tabs %}
 
@@ -1382,9 +1382,9 @@ The following output is displayed as a result of the previous code example.
     
 There comes a time when you want to set Grid properties other than using Grid builder i.e., in the Controller side. At the time you can pass `GridProperties` Model instance as a parameter to Grid Helper.
 
-We can set Grid properties in server-side using  `GridProperties`  class and use it in view page using Grid Helper overload.
+We can set grid properties in server-side using the  `GridProperties`  class and use it in view page using grid Helper overload.
 
-In addition to `id` parameter of Grid helper we can also pass `GridProperties` Model as another parameter to Grid helper. 
+In addition to `id` parameter of grid helper we can also pass `GridProperties` Model as another parameter to grid helper. 
 
 The following code example shows you how to set Grid properties such as `AllowPaging`, `DataSource` and `Columns` in Controller using `GridProperties` class.
 
@@ -1843,7 +1843,7 @@ Using `updateRecord` method of grid, you can update a record to a grid externall
 
 ### Filtering
 
-Using the `filterColumn` method of grid, you can filter the data in the Grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
+Using the `filterColumn` method of grid, you can filter the data in the grid externally without using in-built filter support. While using `filterColumn` method it is necessary to set `AllowFiltering` property as `true`.
 
 ### Grouping
 
