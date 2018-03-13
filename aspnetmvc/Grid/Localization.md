@@ -185,7 +185,7 @@ Select date</td></tr>
 <tr>
 <td>
 EmptyDataSource</td><td>
-DataSource must not be empty at initial load since columns are generated from the dataSource in AutoGenerate column grid</td></tr>
+DataSource must not be empty at initial load since columns are generated from the dataSource in AutoGenerate Column Grid</td></tr>
 <tr>
 <td>
 True</td><td>
@@ -197,7 +197,7 @@ False</td></tr>
 <tr>
 <td>
 UnGroup</td><td>
-Click here to ungroup</td></tr>
+Click here to Ungroup</td></tr>
 <tr>
 <td>
 AddRecord</td><td>
@@ -388,7 +388,7 @@ Sort By Color</td></tr>
 <tr>
 <td>
 SortByCellColor</td><td>
-Sort By Cell color</td></tr>
+Sort By Cell Color</td></tr>
 <tr>
 <td>
 SortByFontColor:</td><td>
@@ -412,27 +412,27 @@ FilterColorOptions</td><td>
 <tr>
 <td>
 FilterByCellColor</td><td>
-Filter By cell color</td></tr>
+Filter By Cell Color</td></tr>
 <tr>
 <td>
 FilterByFontColor</td><td>
-Filter By font color</td></tr>
+Filter By Font Color</td></tr>
 <tr>
 <td>
 ClearFilter</td><td>
-Clear filter</td></tr>
+Clear Filter</td></tr>
 <tr>
 <td>
 NumberFilter</td><td>
-Number filter</td></tr>
+Number Filter</td></tr>
 <tr>
 <td>
 TextFilter</td><td>
-Text filter</td></tr>
+Text Filter</td></tr>
 <tr>
 <td>
 DateFilter</td><td>
-Date filter</td></tr>
+Date Filter</td></tr>
 <tr>
 <td>
 StringMenuOptions</td><td>
@@ -456,7 +456,7 @@ Top10MenuOptions</td><td>
 <tr>
 <td>
 title</td><td>
-Custom filter</td></tr>
+Custom Filter</td></tr>
 <tr>
 <td>
 PredicateOr</td><td>
@@ -472,7 +472,7 @@ OK</td></tr>
 <tr>
 <td>
 MathCase</td><td>
-Match case</td></tr>
+Match Case</td></tr>
 <tr>
 <td>
 Cancel</td><td>
@@ -480,7 +480,7 @@ Cancel</td></tr>
 <tr>
 <td>
 NoResult</td><td>
-No Match found</td></tr>
+No Match Found</td></tr>
 <tr>
 <td>
 CheckBoxStatusMsg</td><td>
