@@ -225,11 +225,11 @@ Ungrouping</td></tr>
 <tr>
 <td>
 SortInAscendingOrder</td><td>
-Sort in ascending order</td></tr>
+Sort In Ascending Order</td></tr>
 <tr>
 <td>
 SortInDescendingOrder</td><td>
-Sort in descending order</td></tr>
+Sort In Descending Order</td></tr>
 <tr>
 <td>
 NextPage</td><td>
@@ -360,11 +360,11 @@ Text</th></tr>
 <tr>
 <td>
 SortNoSmaller</td><td>
-Sort Smallest to largest</td></tr>
+Sort Smallest to Largest</td></tr>
 <tr>
 <td>
 SortNoLarger</td><td>
-Sort largest to smallest</td></tr>
+Sort Largest to Smallest</td></tr>
 <tr>
 <td>
 SortTextAscending</td><td>
