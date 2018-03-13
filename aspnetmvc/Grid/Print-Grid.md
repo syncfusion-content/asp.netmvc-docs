@@ -9,7 +9,7 @@ documentation: ug
 
 # Print
 
-You need to use `print()` method from Grid instance to print the Grid. You can add Print option in Toolbar item by adding `PrintGrid` in `ToolbarItems`.
+Use the `print()` method from Grid instance to print the grid. You can add Print option in Toolbar item by adding the `PrintGrid` in `ToolbarItems`.
 
 {% tabs %}
  
@@ -80,18 +80,18 @@ namespace SyncfusionMvcApplication1.Controllers
 ![](Print-Grid_images/Print_img1.png)
 
 
-## Page Setup
+## Page setup
 
-Some of print options are not configurable through JavaScript code. You need to customize layout, paper size, margins options through browser's page setup dialog. Please find the following guidelines link to browser page setup.
+Some of the print options are not configurable through JavaScript code. You need to customize layout, paper size and margins options through browser's page setup dialog. Please find the following guidelines link to browser page setup.
 
 * [Chrome](https://support.google.com/chrome/answer/1379552?hl=en)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
 * [IE](http://www.helpteaching.com/help/print/index.htm) 
 
-## Print on external Button Click
+## Print on external button click
 
-By default, the Grid can be print from toolbar. To print from external button action, you need to call the grid's `print()` method from required button event.
+By default, the grid can be print from toolbar. To print from external button action, you need to call the grid's `print()` method from the required button event.
 
 {% tabs %}
  
@@ -175,9 +175,9 @@ Grid with external button for Print
 
 Print dialog in Chrome browser
 
-## Print Visible Page
+## Print visible page
 
-By default, the Grid will print all records. To print current page, you need to set `PrintMode` as `CurrentPage` in `PageSettings` property.
+By default, the grid will print all records. To print current page, you need to set the `PrintMode` as `CurrentPage` in the `PageSettings` property.
 
 {% tabs %}
  
