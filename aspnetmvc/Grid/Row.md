@@ -9,9 +9,9 @@ documentation: ug
 # Row
 It represents the record details that are fetched from the datasource.
 
-## Row Hover
-You can see the mouse hovering effect on the corresponding grid rows using `EnableRowHover` property. By default its value is `true`.
-The following code example describes the above behavior.
+## Row hover
+You can see the mouse hovering effect on the corresponding Grid rows using the `EnableRowHover` property. By default its value is `true`.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  razor %}
@@ -45,19 +45,19 @@ The following code example describes the above behavior.
       }
 {% endhighlight  %}
 {% endtabs %} 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Row_images/Row_img1.png)
 
-## Details Template
+## Details template
 
-It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the `DetailsTemplate` property. And also you can change HTML elements in detail template row into JavaScript controls using `DetailsDataBound ` event.
+It provides a detailed view /additional information about each row of the grid. You can render any type of JsRender template and assign the script template id in the `DetailsTemplate` property. Also, you can change HTML elements in detail template row into JavaScript controls using  the `DetailsDataBound ` event.
 
-On enabling details template, new column will be added in grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
+On enabling details template, new column will be added in the grid with an expander button in it and that can be expanded or collapsed to show or hide the underlying details row respectively.
 
 N> It's a standard way to enclose the template within the `script` tag with `type` as "text/x-jsrender".
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  razor %}
@@ -125,14 +125,14 @@ The following code example describes the above behavior.
 </script>
 {% endhighlight  %}
 {% endtabs %}
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Row_images/Row_img2.png)
 
 ## Row Template
 
-Row template enables you to set the customized look and behavior to grid all rows. `RowTemplate` property can be used bind the `id` of HTML template.
-The following code example describes the above behavior.
+Row template enables you to set the customized look and behavior to grid all rows. The `RowTemplate` property can be used bind the `id` of HTML template.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  js %}
@@ -217,13 +217,13 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight  %}
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Row_images/Row_img3.png)
 
 ## Alternate row styling
 
-Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using `EnableAltRow` property. 
+Alternate row styling enhances the readability of grid rows by setting different background color for every alternate row. You can enable the alternative row styling in grid by using the `EnableAltRow` property. 
 
 By default its value is `true`, so the following code example describes the how to turn off alternate row behavior.
 
@@ -260,22 +260,22 @@ By default its value is `true`, so the following code example describes the how 
      }
 {% endhighlight  %}
 {% endtabs %} 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Row_images/Row_img4.png)
 
 
 ## Drag-and-Drop
 
-Grid rows can be reordered, dropped to another Grid or custom control by enabling `AllowRowDragAndDrop` Grid property.
+The grid rows can be reordered, dropped to another grid or custom control by enabling the `AllowRowDragAndDrop` grid property.
 
-N> To enable selection of multiple rows by mouse dragging on Grid rows, `SelectionType` property of Grid must be set to “multiple”.
+N> To enable selection of multiple rows by mouse dragging on grid rows, the `SelectionType` property of grid must be set to the “multiple”.
 
 ### Reorder
 
-By simply enabling the property `AllowRowDragAndDrop`, Grid rows can be reordered within the same Grid.
+By simply enabling the property `AllowRowDragAndDrop`, grid rows can be reordered within the same grid.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  razor %}
@@ -338,13 +338,13 @@ The following output is displayed after reordering rows.
 ![](Row_images/Row_img6.png)
 {:After Drop}
 
-### Grid-to-Grid
+### Grid-to-grid
 
-To drag and drop rows between two Grid, enable the Grid property `AllowRowDragAndDrop` and specify the target Grid ID in `DropTargetID` property of Grid `RowDropSettings`.
+To drag and drop rows between two grid, enable the grid property `AllowRowDragAndDrop` and specify the target grid ID in `DropTargetID` property of the grid `RowDropSettings`.
 
-Dragged and Dropped rows can be mapped to server-side using `RowDragMapper` and `RowDropMapper` property of Grid `RowDropSettings`.
+Dragged and Dropped rows can be mapped to server-side using the `RowDragMapper` and `RowDropMapper` property of grid `RowDropSettings`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  razor %}
@@ -446,25 +446,25 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %} 
 
-The following output is displayed before dropping Grid rows.
+The following output is displayed before dropping grid rows.
 
 ![](Row_images/Row_img7.png)
 {:Before Drop}
 
-The following output is displayed after dropping Grid rows.
+The following output is displayed after dropping grid rows.
 
 ![](Row_images/Row_img8.png)
 {:After Drop}
 
-### Grid-to-Custom control
+### Grid-to-custom control
 
 You can also drag and drop grid rows to any custom control. For instance, let it be a form.
 
-Enable the Grid property `AllowRowDragAndDrop` and specify the target form element ID in `DropTargetID` property of Grid `RowDropSettings`.
+Enable the grid property `AllowRowDragAndDrop` and specify the target form element ID in `DropTargetID` property of grid `RowDropSettings`.
 
-On dropping the Grid records on Form element, Grid event “RowDrop” would be triggered by which we can populate input elements in Form.
+On dropping the grid records on form element, grid event “RowDrop” would be triggered by which we can populate input elements in form.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight  razor %}
@@ -541,14 +541,14 @@ function rowDropHandler(args) {
 {% endhighlight  %}
 {% endtabs %} 
 
-The following output is displayed before dropping the rows on Form.
+The following output is displayed before dropping the rows on form.
 
 ![](Row_images/Row_img9.png)
 {:Before Drop}
 
-The following output is displayed after dropping the rows on Form.
+The following output is displayed after dropping the rows on form.
 
 ![](Row_images/Row_img10.png)
 {:After Drop}
 
-N>   The default behavior of drag and drop between Grid or any other controls is as cut and paste. For copy and paste behavior specify the drag behavior in `DragBehavior` property of `RowDropSettings` as "DragBehavior.Copy".
+N>   The default behavior of drag and drop between grid or any other controls is as cut and paste. For copy and paste behavior specify the drag behavior in the `DragBehavior` property of `RowDropSettings` as "DragBehavior.Copy".
