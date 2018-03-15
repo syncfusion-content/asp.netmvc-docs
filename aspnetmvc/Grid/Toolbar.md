@@ -9,41 +9,41 @@ documentation: ug
 
 # Toolbar
 
-Toolbar can be shown by defining `ShowToolbar` property in `ToolbarSettings`. Toolbar has option to add default items in `ToolbarItems` and customized items in `CustomToolbarItems`.
+Toolbar can be shown by defining the `ShowToolbar` property in `ToolbarSettings`. Toolbar has option to add default items in the `ToolbarItems` and customized items in the `CustomToolbarItems`.
 
-## Default Toolbar items
+## Default toolbar items
 
 The following table shows default toolbar items and its action. 
 
 <table>
 <tr>
 <th>
-Default toolbar items</th><th>
+Default toolbar items.</th><th>
 Action</th></tr>
 <tr>
 <td>
 Add</td><td>
-Add a new row</td></tr>
+Add a new row.</td></tr>
 <tr>
 <td>
 Edit</td><td>
-Edit an existing</td></tr>
+Edit an existing.</td></tr>
 <tr>
 <td>
 Delete</td><td>
-Delete a row</td></tr>
+Delete a row.</td></tr>
 <tr>
 <td>
 Update</td><td>
-Update edited or added row</td></tr>
+Update edited or added row.</td></tr>
 <tr>
 <td>
 Cancel</td><td>
-Cancel edited or added row</td></tr>
+Cancel edited or added row.</td></tr>
 <tr>
 <td>
 Search</td><td>
-Search text in records</td></tr>
+Search text in records.</td></tr>
 </table>
 
 {% tabs %}
@@ -109,12 +109,12 @@ namespace SyncfusionMvcApplication1.Controllers
 ![](Toolbar_images/Toolbar_img1.png)
 
 
-I> `AllowAdding`, `AllowEditing` and `AllowDeleting` need to be enabled for add, delete, edit, save & cancel in `ToolbarItems`. `AllowSearching` to be enabled while adding Search in toolbar to perform search action.
+I> The `AllowAdding`, `AllowEditing` and `AllowDeleting` need to be enabled for add, delete, edit and save & cancel in the `ToolbarItems`. The `AllowSearching` to be enabled while adding Search in toolbar to perform search action.
 
 
-## Custom Toolbar items
+## Custom toolbar items
 
-Custom toolbar is used to create your own toolbar items in toolbar. It can add by defining `CustomToolbarItems` in `ToolbarSettings`.  Actions for this customized toolbar is defined in `ToolbarClick` event.
+Custom toolbar is used to create your own toolbar items in toolbar. It can be added by defining `CustomToolbarItems` in the `ToolbarSettings`.  Actions for this customized toolbar is defined in the `ToolbarClick` event.
 
 {% tabs %}
 {% highlight C# %}

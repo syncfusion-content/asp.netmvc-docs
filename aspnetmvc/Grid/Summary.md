@@ -9,7 +9,7 @@ documentation: ug
 
 # Summary 
 
-Summary rows visibility can be controlled by `ShowSummary` property and it can be added to grid by using `SummaryRow` array property. The following code example describes the above behavior.
+Summary rows visibility can be controlled by the `ShowSummary` property and it can be added to grid by using the `SummaryRow` array property. The following code sample describes this.
 
 
 {% tabs %}
@@ -59,9 +59,9 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img1.png)
 
-## Supported Aggregates 
+## Supported aggregates 
 
-Following are the supported list of aggregates 
+Following are the supported list of aggregates: 
 
 * Sum
 * Average
@@ -70,10 +70,10 @@ Following are the supported list of aggregates
 * False Count
 * True Count
 
-### Sum, Average, Maximum and minimum
+### Sum, average, maximum and minimum
 
 
-Summaries with `Sum`,`Average`,`Maximum` and `Minimum` aggregate can be defined by using  `SummaryType` in `SummaryColumns` collections. These aggregate are used in `Number` column.
+Summaries with `Sum`,`average`,`maximum` and `minimum` aggregate can be defined by using the `SummaryType` in `SummaryColumns` collections. These aggregate are used in the `Number` column.
 
 {% tabs %}
 
@@ -124,9 +124,9 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img2.png)
 
-### True and False Count 
+### True and false count 
 
-Summaries with `True` and `False` count aggregate can be defined by using `SummaryType`,`SummaryColumns` collections. `True` and `False` count aggregates are used for Boolean columns.
+Summaries with `True` and `False` count aggregate can be defined by using the `SummaryType`,`SummaryColumns` collections. The `True` and `False` count aggregates are used for boolean columns.
 
 {% tabs %}
 
@@ -178,9 +178,9 @@ namespace SyncfusionMvcApplication3.Controllers
 ![](Summary_images/summaryGrid_img3.png)
 
 
-## Custom Summary
+## Custom summary
 
-Custom Summary can be used to create summary values based on your required custom logic and calculations. To enable Custom Summary, `SummaryType` should be `Custom` and `CustomSummaryValue` property need to define as function. In this property `CustomSummaryValue` function, you need to use Grid instance to access `model.dataSource` and `model.currentViewData`. After the custom calculation, the returned value will be displayed in corresponding Summary cell.
+Custom summary can be used to create summary values based on your required custom logic and calculations. To enable custom summary, the `SummaryType` should be `Custom` and `CustomSummaryValue` property need to defined as function. In the `CustomSummaryValue` function, you need to use the grid instance to access `model.dataSource` and `model.currentViewData`. After the custom calculation, the returned value will be displayed in corresponding summary cell.
 {% tabs %}
 
 {% highlight razor %}
@@ -243,9 +243,9 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img4.png)
 
-## Group Summary
+## Group summary
 
-Group Summary is used to summarize values of a particular column based on group and it shows at bottom of each Group. To enable Group Summary for particular Group, you need to define `ShowTotalSummary` as false.
+Group summary is used to summarize values of a particular column based on group and it shows at bottom of each group. To enable group Summary for particular group, you need to define the `ShowTotalSummary` as false.
 
 {% tabs %}
 
@@ -306,11 +306,11 @@ namespace SyncfusionMvcApplication3.Controllers
 ![](Summary_images/summaryGrid_img5.png)
 
 
-W> Minimum one column should be grouped to show summary details.
+W> Minimum one column should be grouped to show the summary details.
 
-## Group Caption Summary
+## Group caption summary
 
-To show summaries in each Group's Caption row, particular summary row should have `ShowTotalSummary` as `false` and `ShowCaptionSummary` as `true`.
+To show summaries in each group's caption row, particular summary row should have the `ShowTotalSummary` as `false` and the `ShowCaptionSummary` as `true`.
 {% tabs %}
 
 {% highlight razor %}
@@ -370,13 +370,13 @@ namespace SyncfusionMvcApplication3.Controllers
 ![](Summary_images/summaryGrid_img6.png)
 
 
-W> Minimum one column should be grouped to show summary details.
+W> Minimum one column should be grouped to the show summary details.
 
-## Summary Template
+## Summary template
 
-Using `Template` property of `SummaryColumns` you can render any type of JsRender templates or customizing the summary value.
+Using the `Template` property of `SummaryColumns` you can render any type of JsRender templates or customizing the summary value.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 
@@ -435,13 +435,13 @@ namespace SyncfusionMvcApplication3.Controllers
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Summary_images/summaryGrid_img9.png)
 
 ## Format
 
-To format Summary values, `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer [**globalize.js**](https://github.com/jquery/globalize/tree/v0.1.1#)
+To format summary values, the `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer to the [**globalize.js**](https://github.com/jquery/globalize/tree/v0.1.1#)
 
 {% tabs %}
 
@@ -490,11 +490,11 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img7.png)
 
-## Handling Aggregation in server side
+## Handling aggregation in server-side
 
-The Aggregation at server side is handled by using `aggregate` key. While using remote data, Summary Row must be handled by returning summary column datasource into the `aggregate` property of `result` object.
+The Aggregation at server-side is handled by using the `aggregate` key. While using remote data, summary row must be handled by returning summary column datasource into the `aggregate` property of `result` object.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 
@@ -576,7 +576,7 @@ namespace MvcApplication4.Controllers
 {% endhighlight %}
 {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](Summary_images/summaryGrid_img8.png)
 
