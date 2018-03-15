@@ -1176,3 +1176,17 @@ To upload the data from the given path
 </td>
 </tr>
 </table>
+
+## Customize the Root Folder name in FileExplorer
+
+You can set the alias name for root folder name in FileExplorer by using rootFolderName API. It is used to replace the actual root folder name in the FileExplorer UI. Refer to the below code block for set the alias name for root folder name in FileExplorer.
+
+ {% highlight razor %}
+    
+    @(Html.EJ().FileExplorer("fileExplorer")
+        .Path("~/FileExplorerContent/")
+        .RootFolderName ("This PC")
+        .AjaxAction(@Url.Content("FileActionDefault"))
+    )
+    
+{% endhighlight %}
