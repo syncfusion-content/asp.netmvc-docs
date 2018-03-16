@@ -1,4 +1,4 @@
----
+﻿---
 title: How To | FileExplorer | ASP.NET MVC | Syncfusion
 description: “How to do” section for FileExplorer
 platform: ejmvc
@@ -1176,3 +1176,17 @@ To upload the data from the given path
 </td>
 </tr>
 </table>
+
+## Customize the Root Folder name in FileExplorer
+
+You can set the alias name to the root folder of FileExplorer by using `rootFolderName` API. It is used to replace the actual root folder name in the FileExplorer UI. Refer to the below code to set the alias name for the root folder of FileExplorer.
+
+ {% highlight razor %}
+    
+    @(Html.EJ().FileExplorer("fileExplorer")
+        .Path("~/FileExplorerContent/")
+        .RootFolderName ("This PC")
+        .AjaxAction(@Url.Content("FileActionDefault"))
+    )
+    
+{% endhighlight %}
