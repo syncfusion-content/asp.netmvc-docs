@@ -1,4 +1,4 @@
-﻿---
+---
 title: How To | FileExplorer | ASP.NET MVC | Syncfusion
 description: “How to do” section for FileExplorer
 platform: ejmvc
