@@ -8,9 +8,9 @@ documentation: ug
 --- 
 # Searching
 
-The grid has an option to search its content using the JavaScript method `search` with search key as parameter. Also, it provides an option to integrate Search text box in grid toolbar, by adding `Search` toolbar item in `ToolbarItems` property of `ToolbarSettings`.
+The Grid has an option to search its content using the JavaScript method `search` with search key as parameter. Also, it provides an option to integrate Search text box in grid toolbar, by adding  the`Search` toolbar item in `ToolbarItems` property of `ToolbarSettings`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %} 
 {% highlight razor %}
@@ -47,18 +47,18 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](searching_images/searching_img1.png)
 
 
-## Initial Searching
+## Initial searching
 
-While initializing the grid, there is an option to display only the searched data in grid. To perform initial searching, define `Fields`, `Operator`, `Key` and `IgnoreCase` in `SearchSettings` property.
+While initializing the grid, there is an option to display only the searched data in grid. To perform initial searching, define `Fields`, `Operator`, `Key` and `IgnoreCase` in the `SearchSettings` property.
 
- N> `Key` value must be passed as `string`.
+ N> The `Key` value must be passed as `string`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %} 
 {% highlight razor %}
@@ -96,7 +96,7 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](searching_images/searching_img2.png)
 
