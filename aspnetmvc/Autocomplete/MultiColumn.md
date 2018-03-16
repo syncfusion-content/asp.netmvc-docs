@@ -2,6 +2,7 @@
 layout: post
 title: Multiple Columns | AutoComplete | ASP.NET MVC | Syncfusion
 description: multiple columns
+platform: ejmvc
 control: AutoComplete
 documentation: ug
 ---
