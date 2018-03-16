@@ -124,7 +124,7 @@ namespace SyncfusionMvcApplication3.Controllers
 
 ![](Summary_images/summaryGrid_img2.png)
 
-### True and false count 
+### True and False count 
 
 Summaries with `True` and `False` count aggregate can be defined by using the `SummaryType`,`SummaryColumns` collections. The `True` and `False` count aggregates are used for boolean columns.
 
