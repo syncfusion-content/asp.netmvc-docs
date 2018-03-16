@@ -50,8 +50,11 @@ To modify the Grid appearance, you need to override default CSS of the grid. Ple
             <td>
                 e-gridheader
             </td>
+            <td>
+                This is class is added in the root element of header element.
+            </td>    
         </tr>
-        <tr>
+          <tr>  
             
             <td>
                 e-table
