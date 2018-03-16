@@ -197,7 +197,7 @@ False</td></tr>
 <tr>
 <td>
 UnGroup</td><td>
-Click here to Ungroup</td></tr>
+Click here to ungroup</td></tr>
 <tr>
 <td>
 AddRecord</td><td>
@@ -364,7 +364,7 @@ Sort Smallest to Largest</td></tr>
 <tr>
 <td>
 SortNoLarger</td><td>
-Sort Largest to Smallest</td></tr>
+Sort Largest to smallest</td></tr>
 <tr>
 <td>
 SortTextAscending</td><td>
