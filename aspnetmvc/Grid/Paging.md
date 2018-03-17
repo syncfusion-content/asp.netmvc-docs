@@ -8,9 +8,9 @@ documentation: ug
 ---
 # Paging
 
- You can display the grid records in paged view, by setting `AllowPaging` property as `true`.
+ You can display the grid records in paged view, by setting the `AllowPaging` property as `true`.
 
-The code snippet to enable paging is follows.
+The code sample to enable paging is as follows.
 
 {% tabs %}
 {% highlight razor %}
@@ -45,7 +45,7 @@ The code snippet to enable paging is follows.
  {% endhighlight  %}
  {% endtabs %} 
  
- The following output is displayed as a result of the above code example.
+ The following output is displayed as a result of the previous code example.
  
  ![](Paging_images/Paging_img1.png)
 
@@ -54,7 +54,7 @@ The code snippet to enable paging is follows.
 
 You can pass the current page information as a query string while navigating to other page. To enable query string, set the `EnableQueryString` property of `PageSettings` as `true`.
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -91,7 +91,7 @@ The following code example describes the above behavior.
  {% endhighlight  %}
  {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
  ![](Paging_images/Paging_img2.png)
 
@@ -104,7 +104,7 @@ Apart from default pager, there is an option to render a specific custom templat
 
  N> It's a standard way to enclose the `Template`  within the `script` tag with `type` as "text/x-jsrender".
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% tabs %} 
 
@@ -169,15 +169,15 @@ The following code example describes the above behavior.
 {% endhighlight  %} 
  {% endtabs %}  
  
- The following output is displayed as a result of the above code example.
+ The following output is displayed as a result of the previous code example.
 
 ![](Paging_images/Paging_img3.png)
 
 ## Pager with pageSize drop down
 
-There is an option to set the size of page by means of selecting from the page size values available at the dropdown in pager. Once selected it updates the pageSize value accordingly. To render drop down in pager, provide the pageSize values you wish to display in drop down as `List` to `PageSizeList` property of `PageSettings`.
+There is an option to set the size of page by means of selecting from the page size values available at the dropdown in pager. Once selected it updates the pageSize value accordingly. To render drop down in pager, provide the pageSize values you wish to display in drop down as `List` to the `PageSizeList` property of `PageSettings`.
 
-The following code example describes the above behavior.
+The following code sample describes the previous behavior.
 
 {% tabs %}
 {% highlight razor %}
@@ -217,15 +217,15 @@ The following code example describes the above behavior.
  {% endhighlight  %}
  {% endtabs %} 
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
  ![](Paging_images/Paging_img6.png)
  
  ## Pager with pageSettings
 
-We can customize the default page settings, such as [`pageCount`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagecount "pageCount"), [`pageSize`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagesize "pageSize")  of the Grid's pager by using [`pageSettings`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings "pageSettings") property of Grid control. 
+We can customize the default page settings, such as the [`pageCount`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagecount "pageCount"), [`pageSize`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagesize "pageSize")  of the grid's pager by using the [`pageSettings`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings "pageSettings") property of grid control. 
 
-The following code example describes the above behavior.
+The following code example describes the previous behavior.
 
 {% highlight html %}
 <div id="Grid"></div>
@@ -242,6 +242,6 @@ $(function () {
 });
 {% endhighlight %}
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![](paging_images/paging_img7.png)
