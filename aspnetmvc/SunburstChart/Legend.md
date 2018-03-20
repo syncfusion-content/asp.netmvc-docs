@@ -2,7 +2,7 @@
 layout: post
 title: legend
 description: Learn how to add and customize the legnds in Sunburst Chart.
-platform: aspnetmvc
+platform: ejmvc
 control: SunburstChart
 documentation: ug
 ---
