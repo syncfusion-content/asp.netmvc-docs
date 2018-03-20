@@ -2,7 +2,7 @@
 layout: post
 title: Sunburst Zooming
 description: Learn how to Zoom the SunburstChart for better data visualization
-platform: aspnetmvc
+platform: ejmvc
 control: SunburstChart
 documentation: ug
 ---
