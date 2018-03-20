@@ -2,7 +2,7 @@
 layout: post
 title: Selection
 description: What are the different modes of selection present in the Sunburst Chart
-platform: aspnetmvc
+platform: ejmvc
 control: SunburstChart
 documentation: ug
 ---
