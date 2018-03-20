@@ -2,7 +2,7 @@
 layout: post
 title: Tooltip
 description: Learn how to add Tooltip to Sunburstchart .
-platform: aspnetmvc
+platform: ejmvc
 control: Sunburst Chart
 documentation: ug
 ---

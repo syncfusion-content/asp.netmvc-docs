@@ -2,7 +2,7 @@
 layout: post
 title: Sunburst elements 
 description: Learn how to customize the sunburst segments 
-platform: aspnetmvc
+platform: ejmvc
 control: SunburstChart
 documentation: ug
 ---
