@@ -19,7 +19,7 @@ You can customize the color of leaf nodes in **Treemap** either using ColorMappi
 
 You can set color for each leaf items from data source by using `ColorPath` property. 
 
-N> While setting color, do not set any other color mapping for treemap because color mapping has higher priority than [`colorPath`](../api/ejtreemap#members:colorpath) property. And also, if [`colorPath`](../api/ejtreemap#members:colorpath) is set, the legend will be generated for each leaf item in treemap. 
+N> While setting color, do not set any other color mapping for treemap because color mapping has higher priority than `ColorPath` property. And also, if `ColorPath` is set, the legend will be generated for each leaf item in treemap. 
 
 {% highlight CSHTML %}
 
