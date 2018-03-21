@@ -25,7 +25,7 @@ Right-to-Left or RTL describes the ability of application to handle and responds
 
 In default legend, after setting `EnableRTL` is set as true, legend text will be rendered first, and then legend icon will be rendered. 
 
-![](/js/Maps/Globalization-and-Localization_images/Globalization-and-Localization_images1.png)
+![](Globalization-and-Localization_images/Globalization-and-Localization_images1.png)
 
 ## Interactive legend
 
