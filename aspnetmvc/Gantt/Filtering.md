@@ -19,9 +19,9 @@ It is possible to filter one or more columns at initial load by providing the `F
 @(Html.EJ().Gantt("GanttContainer")
 .FilterSettings(filter =>
 {
-	filter.FilteredColumns(filtercolumn =>
+	filter.FilteredColumns(filtered =>
 		{
-			filtercolumn.Value("plan").Field("taskName").Predicate("and").Operator(FilterOperatorType.StartsWith).Add();
+			filtered.Value("plan").Field("taskName").Predicate("and").Operator(FilterOperatorType.StartsWith).Add();
 		});
 })
 )@(Html.EJ().ScriptManager())

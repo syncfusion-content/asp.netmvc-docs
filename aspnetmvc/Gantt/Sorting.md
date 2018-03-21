@@ -56,8 +56,8 @@ Gantt control can be rendered with sorted columns initially, this can be achieve
 .AllowSorting(true)
 .SortSettings(sort=>
 	{
-	 sort.SortedColumns(sortcolumn =>
-		 sortcolumn.Field("taskName").Direction(SortOrder.Descending).Add());
+	 sort.SortedColumns(sorted =>
+		 sorted.Field("taskName").Direction(SortOrder.Descending).Add());
 	})
 .Datasource(ViewBag.datasource)
 )@(Html.EJ().ScriptManager())
