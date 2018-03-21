@@ -9,9 +9,9 @@ documentation: ug
 
 # Context Menu
 
-## Default Context Menu
+## Default Menu Items
 
-The default context menu contains the following options.
+Context menu in Gantt has the following default menu items.
 
 * Task Details
 * Add New Task
@@ -19,90 +19,107 @@ The default context menu contains the following options.
 * Outdent
 * Delete
 
-The following code example shows you how to enable the default context menu in Gantt control.
-
+Context menu in Gantt can be enabled by using `EnableContextMenu` property.
+The following code example explains how to enable the context menu in Gantt control.
 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-
+  //.
  .EnableContextMenu(true)
-
- .Datasource(ViewBag.datasource)
-
- )
+ )@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
-
-The following screenshot shows the Default Context Menu in Gantt control.
-
-
+The following screenshot shows the default context menu in Gantt control.
 
 ![](Context-Menu_images/Context-Menu_img1.png)
 
-Default Context Menu
-{:.caption}
+## Custom Menu Item
 
-## Custom Context Menu
-
-You can add custom context menu option in Gantt control. The following code example shows you how to add the custom context menu option in Gantt control.
+It is possible to add a custom context menu item in Gantt control by using `ContextMenuOpen` event. The following code example explains on how to add the custom context menu item.
 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-
+  //..
  .EnableContextMenu(true)
-
- .ClientSideEvents(options =>
-
- {
-
-     options.ContextMenuOpen("contextMenuOpen");
-
- })
-
- .Datasource(ViewBag.datasource)
-
- )
-
-
-@section ScriptSection{
-
-   <script type="text/javascript">
-
-       function contextMenuOpen(args) {
-
-           args.contextMenuItems.push(
-
-               {
-
-                   headerText: "ExpandAll",
-
-                   iconPath: "url(../images/Expand All.png)",
-
-                   evenHandler: function () {
-
-                       //event handler for custom menu items
-
-                   }
-
-               });
-       }
-
-     </script>
-
+ .ClientSideEvents(eve=>
+		  {
+				  eve.ContextMenuOpen("contextMenuOpen");
+		  })
+ )@(Html.EJ().ScriptManager()) 
+<script type="text/javascript">
+     function contextMenuOpen(args) {
+            args.contextMenuItems.push({
+                headerText: "Expand/Collapse",
+                menuId: "expand",
+                iconPath: "url(Expand-02-WF.png)",
+                eventHandler: function () {
+                    //event handler for custom menu items
+                }
+            })
+        }
+</script>
 
 {% endhighlight %}
 
-
-
-The screenshot of the Custom Context Menu items in Gantt control is as follows.
-
+The screenshot of the custom context menu items in Gantt control is as follows.
 
 ![](Context-Menu_images/Context-Menu_img2.png)
 
-Custom Context Menu
-{:.caption}
+### Custom menu item with sub menu item
+
+It is possible to create a custom menu item with a sub menu, by mapping the parentMenuId property from the contextMenuItems argument in the `ContextMenuOpen` event.
+
+The following code example explains on how to add sub context menu for custom menu items.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("Gantt")
+  //..
+ .EnableContextMenu(true)
+ .ClientSideEvents(eve=>
+		  {
+				  eve.ContextMenuOpen("contextMenuOpen");
+		  })
+ )@(Html.EJ().ScriptManager()) 
+ <script type="text/javascript">
+           args.contextMenuItems.push({
+                headerText: "Expand/Collapse",
+                menuId: "expand",
+                iconPath: "url(Navigation-Up-02-WF.png)",
+                eventHandler: function () {
+                    //event handler for custom menu items
+                }
+            });
+
+            args.contextMenuItems.push({
+                headerText: "ExpandAll",
+                menuId: "expandAll",
+                parentMenuId: "expand",
+                iconPath: "url(Expand-02-WF.png)",
+                eventHandler: function () {
+                    //event handler for custom menu items
+                }
+            });
+
+            args.contextMenuItems.push({
+                headerText: "CollapseAll",
+                menuId: "collapseAll",
+                parentMenuId: "expand",
+                iconPath: "url(shrink2.png)",
+                eventHandler: function () {
+                    //event handler for custom menu items
+                }
+            });
+	}
+</script>
+
+{% endhighlight %}
+
+The screenshot of the custom context menu items in Gantt control is as follows.
+
+![](Context-Menu_images/Context-Menu_img3.png)
+
+[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttcontextmenu) here to view the online demo sample for custom context menu in Gantt.

@@ -13,11 +13,21 @@ Resources are represented by staff, equipment and materials etc. In Gantt contro
 
 ## Resource Collection
 
-Resource collection contains details about the resources that are used in the project. Resources are `List` object that contains id and name of the resources and this collection is mapped to the Gantt control using `Resources` property.
+The resource collection contains details about the resources that are used in the project. Resources are `List` object that contains id and name of the resources and this collection is mapped to the Gantt control using `Resources` property.
 Id and name field of the resources are mapped by using the `ResourceIdMapping` and `ResourceNameMapping` properties.
 The following code snippets shows resource collection object and how it assinged to Gantt control.
 
 {% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("Gantt")
+    //…
+    .ResourceIdMapping("ResourceId")
+    .ResourceNameMapping("ResourceName")
+    .Resources(ViewBag.resource)
+)
+{% endhighlight %}
 
 {% highlight C# %}
 
@@ -46,16 +56,6 @@ public ActionResult Resource()
      return ResourceCollection;
  }
 
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Gantt("Gantt")
-    //…
-    .ResourceIdMapping("ResourceId")
-    .ResourceNameMapping("ResourceName")
-    .Resources(ViewBag.resource)
-)
 {% endhighlight %}
 
 {% endtabs %}  
@@ -173,28 +173,88 @@ Refer this [link](/aspnetmvc/gantt/editing) to know more about editing in Gantt 
 The following screenshot shows the resource edit option in Gantt.
 
 ![](Resources_images/Resources_img4.png)
+
 Editing resource with cell edit
 {:.caption}
 
 ![](Resources_images/Resources_img3.png)
+
 Editing resource with edit dialog
 {:.caption}
 
 N> While editing, resource values are saved with resource unit value when resource unit is not equal to 100% like below.
-{% highlight javascript %}
-   {
-       "taskId": 3,
-        //...
-	    "resourceId": [{ resourceId: 2, unit: 50 }]
-    }
+
+{% highlight C# %}
+
+public ActionResult Resource()
+{
+    ViewBag.datasource = GetData();
+    //...
+    return View();
+}
+
+public class ResourceObject
+{
+    public int ResourceId { get; set; }
+    public int ResourceUnit { get; set; }
+}
+
+public class ResourceData
+{
+    //...
+    public List<ResourceObject> Resources { get; set; }
+}
+
+public List<ResourceData> GetData()
+{
+    //..
+    List<ResourceData> list = new List<ResourceData>();
+    list.Add(new ResourceData()
+        {
+            //...
+            Resources = new List<ResourceObject>(){ new ResourceObject(){ ResourceId=2, ResourceUnit=50}},
+            //..
+        }
+}
+
 {% endhighlight %}
+
 N> When resource unit is 100%, resource value is stored with ID only.
-{% highlight javascript %}
-    {
-       "taskId": 3,
-        //...
-	    "resourceId": [2]
-    }
+
+{% highlight C# %}
+
+public ActionResult Resource()
+{
+    ViewBag.datasource = GetData();
+    //...
+    return View();
+}
+
+public class ResourceObject
+{
+    public int ResourceId { get; set; }
+    public int ResourceUnit { get; set; }
+}
+
+public class ResourceData
+{
+    //...
+    public List<ResourceObject> Resources { get; set; }
+}
+
+public List<ResourceData> GetData()
+{
+    //..
+    List<ResourceData> list = new List<ResourceData>();
+    list.Add(new ResourceData()
+        {
+            //...
+            Resources = new List<ResourceObject>(){ new ResourceObject(){ 2 }},
+            //..
+        }
+}
+
 {% endhighlight %}
+
 N> The unit values are updated to the resources assigned to the Gantt tasks, only when mapping resource units data source field using the `ResourceUnitMapping` property.
-N> Resource unit will be updated while editing the duration and work fields with respective to task type.
+N> Resource unit will be updated while editing the duration and work fields with respective to [task type](/aspnetmvc/gantt/work-field "Task types available in Gantt").

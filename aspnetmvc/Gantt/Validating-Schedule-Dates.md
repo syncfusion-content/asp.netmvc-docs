@@ -13,35 +13,23 @@ Validating schedule dates is used to change the schedule start date and end date
 
 PrevTimeSpan and NextTimeSpan toolbar items are used to create new time span based on the schedule mode.
 
-
-
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-
 	// ...
-
 	.ScheduleStartDate(“02/01/2014”)
-
 	.ScheduleEndDate(“03/14/2016”)
-
-	.ToolBarSettings(tbs=>tbs.showToolBar(true)
-
-	.ToolbarItems(new List<GanttToolbarItems>()
-
-	{ GanttToolbarItems.PrevTimeSpan,
-
-	  GanttToolbarItems.NextTimeSpan,
-
-	}))
-
-
- .Render())
+	.ToolbarSettings(tbs=>
+		 {
+			 tbs.ShowToolbar(true);
+			 tbs.ToolbarItems(new List<GanttToolBarItems>(){
+				 GanttToolBarItems.PrevTimeSpan,
+				 GanttToolBarItems.NextTimeSpan,
+			 });
+		 }) 
+)@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
-
-
-
 
 The following screenshot illustrates the output of the above code.
 
