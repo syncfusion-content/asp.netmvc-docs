@@ -48,7 +48,7 @@ public class GanttController : Controller
                 Progress = 40,
                 Children = (new List<GanttDurationUnitData>()
                     {
-                        new GanttDuratioUnitData()
+                        new GanttDurationUnitData()
                         {
                             TaskID = 2,
                             TaskName = "Child Task 1",
