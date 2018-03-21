@@ -39,14 +39,14 @@ public class GanttController : Controller
         public static List<GanttDuratioUnitData> GetData()
         {
             List<GanttDuratioUnitData> list = new List<GanttDuratioUnitData>();
-            list.Add(new GanttDuratioUnitData()
+            list.Add(new GanttDurationUnitData()
             {
                 TaskID = 1,
                 TaskName = "Parent Task 1",
                 StartDate = "02/27/2017",
                 Duration = "5day",
                 Progress = 40,
-                Children = (new List<GanttDuratioUnitData>()
+                Children = (new List<GanttDurationUnitData>()
                     {
                         new GanttDuratioUnitData()
                         {
@@ -56,7 +56,7 @@ public class GanttController : Controller
                             Duration = "5d",
                             Progress = 40
                         },
-                        new GanttDuratioUnitData()
+                        new GanttDurationUnitData()
                         {
                             TaskID = 3,
                             TaskName = "Child Task 2",
@@ -65,7 +65,7 @@ public class GanttController : Controller
                             DurationUnit="hour",
                             Progress = 40,
                         },
-                        new GanttDuratioUnitData()
+                        new GanttDurationUnitData()
                         {
                             TaskID = 4,
                             TaskName = "Child Task 3",
@@ -80,7 +80,7 @@ public class GanttController : Controller
             return list;
         }
 
-        public class GanttDuratioUnitData
+        public class GanttDurationUnitData
         {
             //..
             public string Duration { get; set; }
@@ -90,7 +90,7 @@ public class GanttController : Controller
 {% endhighlight %}
 
 {% highlight CSHTML %}
- @(Html.EJ().Gantt("ganttdurtionunits")
+ @(Html.EJ().Gantt("ganttsample1")
 	    //..
 	   .DurationMapping("Duration")
 	   .DurationUnitMapping("DurationUnit")	  
@@ -105,7 +105,7 @@ N> 1. The default value of the `DurationUnit` property is GanttDurationUnit.Day.
 Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
 
 {% highlight CSHTML %}
- @(Html.EJ().Gantt("ganttdurtionunits")
+ @(Html.EJ().Gantt("ganttsample1")
 	    //..
 	   .DurationMapping("Duration")	  
     )@(Html.EJ().ScriptManager())
