@@ -18,7 +18,7 @@ Also it is possible to localize all the texts in the Gantt control with specific
 
 `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\assets\scripts\i10n`
 
-The following code example explains on how to localize the control in French culture
+Culture of the Gantt control can be defined by using `Locale` property.The following code example explains on how to localize the control in French culture
 
 {% highlight javascript %}
 
@@ -432,7 +432,6 @@ The default date format used in the Gantt control is “MM/dd/yyyy”. Date form
 {% highlight javascript %}
 
 @(Html.EJ().Gantt("Gantt")
-
     //…
 
     .DateFormat("dd/MM/yyyy")
