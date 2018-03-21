@@ -72,7 +72,7 @@ The following code example explains how to bind the hierarchical data in Gantt.
                             EndDate="02/12/2014",
                             Duration = 4,
                             PercentDone = 40,
-                            Predescessor = "2"
+                            Predecessor = "2"
                         },
                        //..
                     })
@@ -91,7 +91,7 @@ The following code example explains how to bind the hierarchical data in Gantt.
             public int Duration { get; set; }
             public int PercentDone { get; set; }
             public List<DefaultData> Children { get; set; }
-            public string Predescessor { get; set; }
+            public string Predecessor { get; set; }
 
         }
     }
@@ -141,7 +141,7 @@ Gantt can be rendered from self-referential data structures, by mapping the task
 public class GanttController : Controller
     {
         //
-        // GET: /GanttSelfRefernce/
+        // GET: /GanttSelfReference/
 
         public ActionResult GanttSelfReference()
         {
@@ -219,7 +219,7 @@ public class GanttController : Controller
             public string Name { get; set; }
             public int Duration { get; set; }
             public int PercentDone { get; set; }
-            public string Predescessor { get; set; }
+            public string Predecessor { get; set; }
             public int? ParentId { get; set; }
 
         }
@@ -228,7 +228,7 @@ public class GanttController : Controller
 
 {% highlight CSHTML %}
 
- @(Html.EJ().Gantt("ganttselfreference")
+ @(Html.EJ().Gantt("ganttsample2")
               .TaskIdMapping("Id")
               .TaskNameMapping("Name")
               .StartDateMapping("StartDate")

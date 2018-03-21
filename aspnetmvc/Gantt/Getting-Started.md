@@ -424,7 +424,7 @@ By default Gantt control was rendered with `100%` width and `450px` height, we c
 <script>
     @(Html.EJ().Gantt("GanttContainer")
      //...
-     .SizeSettings(sz=>sz.Height("350px").Width("700px"))
+     .SizeSettings(size=>size.Height("350px").Width("700px"))
      )@(Html.EJ().ScriptManager())
 </script>
 
