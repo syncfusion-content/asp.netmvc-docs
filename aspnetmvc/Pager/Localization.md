@@ -1,14 +1,14 @@
 ---
 layout: post
-title: globalization
-description: globalization
+title: localization
+description: localization
 platform: asp.net mvc
 control: Pager
 documentation: ug
 
 ---
 
-# Globalization
+# Localization
 
 Pager has been provided with built in localization support with different culture.
 
