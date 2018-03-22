@@ -60,106 +60,107 @@ Simple Gantt chart
 
 3. Add the following code example in the Index.cshtml file to create a Gantt control in the View page.	
 
- {% tabs %}
+{% tabs %}
   
+{% highlight CSHTML %}
+@(Html.EJ().Gantt("GanttContainer")
+    .TaskIdMapping("TaskID")//Provide name of the property which contains task id in the data source
+    .TaskNameMapping("TaskName")//Provide name of the property which contains task name
+    .StartDateMapping("StartDate")//Provide name of the property which contains start date of the task
+    .DurationMapping("Duration")//Provide name of the property which contains duration of the task
+    .ProgressMapping("Progress")//Provide name of the property which contains progress of the task
+    .ScheduleStartDate("02/01/2014")//Provide schedule header start date
+    .ScheduleEndDate("03/14/2014")//Provide schedule header end date
+    .ChildMapping("SubTasks")//Provide name of the property which contains subtask of the task
+    .TreeColumnIndex(1)
+    .SizeSettings(ss=>ss.Width("700").Height("300"))
+    .Datasource(ViewBag.datasource) //Provides data source for Gantt
+    )
+@(Html.EJ().ScriptManager())
+{% endhighlight %}
+
 {% highlight C# %}
 
-	public class DefaultData
-        {
-            public string StartDate { get; set; }
-            public string EndDate { get; set; }
-            public int TaskID { get; set; }
-            public string TaskName { get; set; }
-            public int Duration { get; set; }
-            public int Progress { get; set; }
-            public List<DefaultData> SubTasks { get; set; }
-            public string Predecessors { get; set; }
-            public List<int> ResourceID { get; set; }
-        }
+public class DefaultData
+    {
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public List<DefaultData> SubTasks { get; set; }
+        public string Predecessors { get; set; }
+        public List<int> ResourceID { get; set; }
+    }
 
-	 public class GanttDefaultData
+    public class GanttDefaultData
+    {
+        public static List<DefaultData> GetData()
         {
-            public static List<DefaultData> GetData()
-            {
-                List<DefaultData> tasks = new List<DefaultData>();
-                tasks.Add(new DefaultData()
-                    {
-                        TaskID = 1,
-                        TaskName = "Design",
-                        StartDate = "02/10/2014",
-                        EndDate = "02/14/2014",
-                        Duration = 6,
-
-                    });
-                tasks[0].SubTasks = new List<DefaultData>();
-                tasks[0].SubTasks.Add(new DefaultData()
+            List<DefaultData> tasks = new List<DefaultData>();
+            tasks.Add(new DefaultData()
                 {
-                    TaskID = 2,
-                    TaskName = "Software Specification",
+                    TaskID = 1,
+                    TaskName = "Design",
+                    StartDate = "02/10/2014",
+                    EndDate = "02/14/2014",
+                    Duration = 6,
+
+                });
+            tasks[0].SubTasks = new List<DefaultData>();
+            tasks[0].SubTasks.Add(new DefaultData()
+            {
+                TaskID = 2,
+                TaskName = "Software Specification",
+                StartDate = "02/10/2014",
+                EndDate = "02/12/2014",
+                Duration = 3,
+                Progress = 60,
+                ResourceID = new List<int>() { 2 }
+            });
+            tasks[0].SubTasks.Add(new DefaultData()
+                {
+                    TaskID = 3,
+                    TaskName = "Develop prototype",
                     StartDate = "02/10/2014",
                     EndDate = "02/12/2014",
                     Duration = 3,
-                    Progress = 60,
-                    ResourceID = new List<int>() { 2 }
-                });
-                tasks[0].SubTasks.Add(new DefaultData()
-                 {
-                     TaskID = 3,
-                     TaskName = "Develop prototype",
-                     StartDate = "02/10/2014",
-                     EndDate = "02/12/2014",
-                     Duration = 3,
-                     Progress = 100,
-                     Predecessors = "2FS",
-                     ResourceID = new List<int>() { 3 }
-                 });
-                tasks[0].SubTasks.Add(new DefaultData()
-                {
-                    TaskID = 4,
-                    TaskName = "Get approval from customer",
-                    StartDate = "02/13/2014",
-                    EndDate = "02/14/2014",
-                    Duration = 2,
                     Progress = 100,
-                    Predecessors = "3FS",
-                    ResourceID = new List<int>() { 1 }
+                    Predecessors = "2FS",
+                    ResourceID = new List<int>() { 3 }
                 });
-                tasks[0].SubTasks.Add(new DefaultData()
-                {
-                    TaskID = 5,
-                    TaskName = "Design complete",
-                    StartDate = "02/14/2014",
-                    EndDate = "02/14/2014",
-                    Duration = 0,
-                    Predecessors = "4FS"
-                });
-                return tasks;
-            }
+            tasks[0].SubTasks.Add(new DefaultData()
+            {
+                TaskID = 4,
+                TaskName = "Get approval from customer",
+                StartDate = "02/13/2014",
+                EndDate = "02/14/2014",
+                Duration = 2,
+                Progress = 100,
+                Predecessors = "3FS",
+                ResourceID = new List<int>() { 1 }
+            });
+            tasks[0].SubTasks.Add(new DefaultData()
+            {
+                TaskID = 5,
+                TaskName = "Design complete",
+                StartDate = "02/14/2014",
+                EndDate = "02/14/2014",
+                Duration = 0,
+                Predecessors = "4FS"
+            });
+            return tasks;
         }
+    }
 
-	public ActionResult SimpleGantt()
-	{
-		var DataSource = GanttDefaultData.GetData();
-		ViewBag.datasource = DataSource;         
-		return View();
-	}       
+public ActionResult SimpleGantt()
+{
+    var DataSource = GanttDefaultData.GetData();
+    ViewBag.datasource = DataSource;         
+    return View();
+}       
   {% endhighlight %}
-
-{% highlight CSHTML %}
- @(Html.EJ().Gantt("GanttContainer")
-        .TaskIdMapping("TaskID")//Provide name of the property which contains task id in the data source
-        .TaskNameMapping("TaskName")//Provide name of the property which contains task name
-        .StartDateMapping("StartDate")//Provide name of the property which contains start date of the task
-        .DurationMapping("Duration")//Provide name of the property which contains duration of the task
-        .ProgressMapping("Progress")//Provide name of the property which contains progress of the task
-		.ScheduleStartDate("02/01/2014")//Provide schedule header start date
-        .ScheduleEndDate("03/14/2014")//Provide schedule header end date
-        .ChildMapping("SubTasks")//Provide name of the property which contains subtask of the task
-        .TreeColumnIndex(1)
-        .SizeSettings(ss=>ss.Width("700").Height("300"))
-        .Datasource(ViewBag.datasource) //Provides data source for Gantt
-        )@(Html.EJ().ScriptManager())
-{% endhighlight %}
 
 {% endtabs %}  
    
@@ -178,24 +179,25 @@ Gantt control contains the toolbar options to Add, Edit, Delete, Search, Indent,
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-  .ToolbarSettings(ts =>
-	 {
-	 ts.ShowToolbar(true);
-	 ts.ToolbarItems(new List<GanttToolBarItems>()
-		{
-              GanttToolBarItems.Add,
-              GanttToolBarItems.Edit,
-              GanttToolBarItems.Delete,
-              GanttToolBarItems.Update,
-              GanttToolBarItems.Cancel,
-              GanttToolBarItems.Indent,
-              GanttToolBarItems.Outdent,
-              GanttToolBarItems.ExpandAll,
-              GanttToolBarItems.CollapseAll,
-              GanttToolBarItems.Search			                        
-		});
-	 })
-)@(Html.EJ().ScriptManager())                   
+    .ToolbarSettings(ts =>
+    {
+        ts.ShowToolbar(true);
+        ts.ToolbarItems(new List<GanttToolBarItems>()
+        {
+            GanttToolBarItems.Add,
+            GanttToolBarItems.Edit,
+            GanttToolBarItems.Delete,
+            GanttToolBarItems.Update,
+            GanttToolBarItems.Cancel,
+            GanttToolBarItems.Indent,
+            GanttToolBarItems.Outdent,
+            GanttToolBarItems.ExpandAll,
+            GanttToolBarItems.CollapseAll,
+            GanttToolBarItems.Search	             		                        
+        });
+    })
+    )
+@(Html.EJ().ScriptManager())                   
 {% endhighlight %}
 
 The following screen shot displays a Tool bar in Gantt.
@@ -204,7 +206,7 @@ The following screen shot displays a Tool bar in Gantt.
 Toolbar in Gantt chart
 {:.caption}
 
-N> Add, Edit, Delete options are enabled when enabling the AllowEditing, AllowAdding, AllowDeleting in the `EditSettings`.
+N> Add, Edit, Delete options are enabled when enabling the `AllowEditing`, `AllowAdding`, `AllowDeleting` in the `EditSettings`.
 
 ## Enable sorting 
 
@@ -216,11 +218,12 @@ Enable the multicolumn sorting in Gantt by setting `AllowMultiSorting` to `true`
 
 {% highlight CSHTML %}
 
-  @(Html.EJ().Gantt("GanttContainer")  
-   //...         
-  .AllowSorting(true)
-  .AllowMultiSorting(true)
- )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")  
+    //...         
+    .AllowSorting(true)
+    .AllowMultiSorting(true)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -247,18 +250,19 @@ Modify the predecessor details of a task by using mouse interactions by setting 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-   //...                   
-   .AllowGanttChartEditing(true)
-   .PredecessorMapping("Predecessor") // Predecessor editing
-   .EditSettings(edit =>
-    {
-         edit.AllowEditing(true);
-         edit.AllowAdding(true);
-         edit.AllowDeleting(true);
-         edit.EditMode("cellEditing");
-         edit.AllowIndent(true);
+    //...                   
+    .AllowGanttChartEditing(true)
+    .PredecessorMapping("Predecessor") // Predecessor editing
+    .EditSettings(edit =>
+    {
+        edit.AllowEditing(true);
+        edit.AllowAdding(true);
+        edit.AllowDeleting(true);
+        edit.EditMode("cellEditing");
+        edit.AllowIndent(true);
     })
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -273,10 +277,11 @@ You can enable the context menu in Gantt by setting the `EnableContextMenu` as `
 
 {% highlight CSHTML %}
                
- @(Html.EJ().Gantt("GanttContainer")              
+@(Html.EJ().Gantt("GanttContainer")              
     //...
     .EnableContextMenu(true)
- )@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -293,10 +298,11 @@ You can enable the column menu in Gantt, by setting the `ShowColumnChooser` as `
 
 {% highlight CSHTML %}
                
- @(Html.EJ().Gantt("GanttContainer")              
+@(Html.EJ().Gantt("GanttContainer")              
     //...
     .ShowColumnChooser(true)
- )@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -317,10 +323,11 @@ You can show the relationship in tasks, by using the `PredecessorsMapping` prope
 
 {% highlight CSHTML %}
 
-     @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .PredecessorMapping("Predecessor")
-     )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...
+    .PredecessorMapping("Predecessor")
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 The following screen shot displays the relationship between tasks.
@@ -360,17 +367,11 @@ In Gantt control, you can display and assign the resource for each task. Create 
 public ActionResult SimpleGantt()
 
   {
-
      var DataSource = GanttDefaultData.GetData();
-
      ViewBag.datasource = DataSource;
-
      var Resources = ResourceList.GetData();
-
      ViewBag.resources = Resources;
-
      return View();
-
   }   
 {% endhighlight %}
 
@@ -378,15 +379,16 @@ Add the following code example in the index.cshtml file, to create the Gantt con
 
 {% highlight CSHTML %}
 
-  @(Html.EJ().Gantt("GanttContainer")
-       //...          
-        .ResourceInfoMapping("ResourceID")//Field name which contains resource details for the task 
-        .ResourceNameMapping("ResourceName")//resource Name mapping
-        .ResourceIdMapping("ResourceID")//resource Id Mapping
-        //...
-        .Resources(ViewBag.resources)//resource collection dataSource
-        .Datasource(ViewBag.datasource) //Provides data source for Gantt
-      )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...          
+    .ResourceInfoMapping("ResourceID")//Field name which contains resource details for the task 
+    .ResourceNameMapping("ResourceName")//resource Name mapping
+    .ResourceIdMapping("ResourceID")//resource Id Mapping
+    //...
+    .Resources(ViewBag.resources)//resource collection dataSource
+    .Datasource(ViewBag.datasource) //Provides data source for Gantt
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screen shot displays resource allocation for tasks in Gantt.
@@ -401,10 +403,11 @@ In Gantt, you can on or off weekends high lighting by setting the `HighlightWeek
 
 {% highlight CSHTML %}
 
-     @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .HighlightWeekends(false)
-     )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...
+    .HighlightWeekends(false)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -422,10 +425,11 @@ By default Gantt control was rendered with `100%` width and `450px` height, we c
 <div id="GanttContainer"></div>
 
 <script>
-    @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .SizeSettings(size=>size.Height("350px").Width("700px"))
-     )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...
+    .SizeSettings(size=>size.Height("350px").Width("700px"))
+)
+@(Html.EJ().ScriptManager())
 </script>
 
 {% endhighlight %}
@@ -438,10 +442,11 @@ In Gantt, we can add additional information about the tasks, this information ca
 {% tabs %}
 {% highlight CSHTML %}
 
-     @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .NotesMapping("notesContent")
-     )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...
+    .NotesMapping("notesContent")
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 {% highlight C# %}
@@ -461,11 +466,12 @@ In Gantt, we can add additional information about the tasks, this information ca
             public static List<DefaultData> GetData()
             {
                 List<DefaultData> list = new List<DefaultData>();
+                //..
                 list.Add(new DefaultData()
                 {
-                    Id = 1,
-                    Name = "Parent Task 1",
-					notesContent="we can show additional information here",
+                    Id = 4,
+                    Name = "Develop prototype",
+                    notesContent = "we can show additional information here",
                     //..                    
                 });                  
                 return list;
@@ -502,10 +508,11 @@ Milestones are used to denote the important event/stages in project management. 
 {% tabs %}
 {% highlight CSHTML %}
 
-     @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .MilestoneMapping("isMileStone")
-     )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("GanttContainer")
+    //...
+    .MilestoneMapping("isMileStone")
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 {% highlight C# %}
@@ -525,11 +532,22 @@ Milestones are used to denote the important event/stages in project management. 
             public static List<DefaultData> GetData()
             {
                 List<DefaultData> list = new List<DefaultData>();
+                //..
                 list.Add(new DefaultData()
                 {
-                    Id = 1,
-                    Name = "Parent Task 1",
-					isMileStone= false,
+                    Id = 4,
+                    Name = "Develop prototype",
+					isMileStone = false,
+                    //..                    
+                });  
+                list.Add(new DefaultData()
+                {
+                    Id = 5,
+                    Name = "Get approval from customer",
+                    StartDate = new Date("02/10/2014"),
+                    EndDate = new Date("02/14/2014"),
+                    Duration = 2,
+					isMileStone = true,
                     //..                    
                 });                  
                 return list;

@@ -27,7 +27,33 @@ In hierarchical data binding subtasks or child tasks collections are identified 
 The following code example explains how to bind the hierarchical data in Gantt.
 
 {% tabs %}
-  
+
+{% highlight CSHTML %}
+
+@using Syncfusion.JavaScript
+@using Syncfusion.MVC.EJ
+
+<!DOCTYPE html>    
+<html>
+<head>
+         @*Add script reference and style reference here*@
+</head>
+<body>			 
+ @(Html.EJ().Gantt("ganttsample2")
+    .TaskIdMapping("Id")
+    .TaskNameMapping("Name")
+    .StartDateMapping("StartDate")
+    .DurationMapping("Duration")
+    .ProgressMapping("PercentDone")              
+    .TreeColumnIndex(1)
+    .ChildMapping("Children")              
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())  
+</body>
+</html>
+{% endhighlight %}
+
 {% highlight C# %}
 
  public class GanttController : Controller
@@ -97,30 +123,6 @@ The following code example explains how to bind the hierarchical data in Gantt.
     }
 {% endhighlight %}
 
-{% highlight CSHTML %}
-
-@using Syncfusion.JavaScript
-@using Syncfusion.MVC.EJ
-
-<!DOCTYPE html>    
-<html>
-<head>
-         @*Add script reference and style reference here*@
-</head>
-<body>			 
- @(Html.EJ().Gantt("ganttsample2")
-              .TaskIdMapping("Id")
-              .TaskNameMapping("Name")
-              .StartDateMapping("StartDate")
-              .DurationMapping("Duration")
-              .ProgressMapping("PercentDone")              
-              .TreeColumnIndex(1)
-              .ChildMapping("Children")              
-              .Datasource(ViewBag.datasource)
-    )@(Html.EJ().ScriptManager())  
-</body>
-</html>
-{% endhighlight %}
 {% endtabs %}
 
 The output of the above steps is as follows.
@@ -135,6 +137,21 @@ Gantt can be rendered from self-referential data structures, by mapping the task
 * Parent task ID field- This field must contain values to identify the parent nodes. It should be mapped to the `ParentTaskIdMapping` property.
 
 {% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("ganttsample2")
+    .TaskIdMapping("Id")
+    .TaskNameMapping("Name")
+    .StartDateMapping("StartDate")
+    .DurationMapping("Duration")
+    .ProgressMapping("PercentDone")              
+    .ParentTaskIdMapping("ParentId")              
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
+	
+{% endhighlight %}
 
 {% highlight C# %}
 
@@ -226,19 +243,6 @@ public class GanttController : Controller
     }
 {% endhighlight %}
 
-{% highlight CSHTML %}
-
- @(Html.EJ().Gantt("ganttsample2")
-              .TaskIdMapping("Id")
-              .TaskNameMapping("Name")
-              .StartDateMapping("StartDate")
-              .DurationMapping("Duration")
-              .ProgressMapping("PercentDone")              
-              .ParentTaskIdMapping("ParentId")              
-              .Datasource(ViewBag.datasource)
-    )@(Html.EJ().ScriptManager())
-	
-{% endhighlight %}
 {% endtabs %}  
 
 The following screenshot shows the output of the above steps.
@@ -258,13 +262,14 @@ The following code example describes the above behavior.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-      .TaskIdMapping("TaskID")
-      .TaskNameMapping("TaskName")
-      .ParentTaskIdMapping("ParentID")      
-      .StartDateMapping("StartDate")
-      .EndDateMapping("EndDate")
-      .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas"))
-)@(Html.EJ().ScriptManager())
+    .TaskIdMapping("TaskID")
+    .TaskNameMapping("TaskName")
+    .ParentTaskIdMapping("ParentID")      
+    .StartDateMapping("StartDate")
+    .EndDateMapping("EndDate")
+    .Datasource(ds => ds.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas"))
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -283,13 +288,14 @@ The following code example describes the above behavior.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-      .TaskIdMapping("TaskID")
-      .TaskNameMapping("TaskName")
-      .ParentTaskIdMapping("ParentID")      
-      .StartDateMapping("StartDate")
-      .EndDateMapping("EndDate")
-      .Datasource(ds => ds.URL("api/Home/GetGanttData"))
-)@(Html.EJ().ScriptManager())
+    .TaskIdMapping("TaskID")
+    .TaskNameMapping("TaskName")
+    .ParentTaskIdMapping("ParentID")      
+    .StartDateMapping("StartDate")
+    .EndDateMapping("EndDate")
+    .Datasource(ds => ds.URL("api/Home/GetGanttData"))
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -330,9 +336,10 @@ The below code example shows how to use this property.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-      .EnableVirtualization(true)
-      //..
-)@(Html.EJ().ScriptManager())
+    .EnableVirtualization(true)
+    //..
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

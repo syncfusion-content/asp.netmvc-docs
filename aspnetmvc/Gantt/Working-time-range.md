@@ -17,12 +17,13 @@ The below code snippet explains on how to define the working time range for the 
 
 @(Html.EJ().Gantt("Gantt")
 	// ...
-	 .DayWorkingTime(dt=>
-		 {
-			 dt.From("08:00 AM").To("12:00 PM").Add();
-			 dt.From("01:00 PM").To("05:00 PM").Add();
-		 })    
-)@(Html.EJ().ScriptManager())
+	.DayWorkingTime(dt=>
+	{
+		dt.From("08:00 AM").To("12:00 PM").Add();
+		dt.From("01:00 PM").To("05:00 PM").Add();
+	})    
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

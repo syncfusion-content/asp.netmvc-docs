@@ -30,7 +30,8 @@ Row can be added in Gantt from toolbar while the `EditSettings.AllowAdding` prop
 	 {
 		 edit.AllowAdding(true);
 	 })
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -47,7 +48,8 @@ New rows can either be added above or below the selected rows by using the defau
 	 {
 		 edit.AllowAdding(true);
 	 })
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 
@@ -70,14 +72,15 @@ The below code example explains on adding a row using a custom button.
 
 @(Html.EJ().Gantt("GanttContainer")
      //...
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 $("#addRow").click(function(args) {
     //Create Gantt object
     var ganttObj = $("#GanttContainer").data("ejGantt");
     // data to be added
     var data = {
-        taskID: 5,
+        taskID: 7,
         taskName: "New Task",
         startDate: "02/13/2014",
         endDate: "02/14/2014",
@@ -104,13 +107,14 @@ The following code explains about enabling the row drag and drop with the defaul
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .AllowDragAndDrop(true)
-	 .DragTooltip(dt =>
-		 {
-			 dt.ShowTooltip(true);
-		 })
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowDragAndDrop(true)
+    .DragTooltip(dt =>
+    {
+        dt.ShowTooltip(true);
+    })
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -130,24 +134,25 @@ The following code shows how to render row drag tooltip with tooltip template.
 
 {% highlight CSHTML %}
 <script id="customTooltip" type="text/x-jsrender">
-    <tr>
-        <td class="border" style='height:30px;'>
-            <div>{{"{{"}}:#data['TaskId'] {{}}}}</div>
-        </td>
-        <td class="border" style='height:30px;'>
-            <div>{{"{{"}}:#data['TaskName'] {{}}}}</div>
-        </td>
-    </tr>
+<tr>
+    <td class="border" style='height:30px;'>
+        <div>{{"{{"}}:#data['TaskId'] {{}}}}</div>
+    </td>
+    <td class="border" style='height:30px;'>
+        <div>{{"{{"}}:#data['TaskName'] {{}}}}</div>
+    </td>
+</tr>
 </script>
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .AllowDragAndDrop(true)
-	 .DragTooltip(dt =>
-		 {
-			 dt.ShowTooltip(true);
-			 dt.TooltipTemplate("#customTooltip");
-		 })
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowDragAndDrop(true)
+    .DragTooltip(dt =>
+        {
+            dt.ShowTooltip(true);
+            dt.TooltipTemplate("#customTooltip");
+        })
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 ![](Rows_images/Rows_img6.png)
@@ -159,15 +164,16 @@ In Gantt, `RowDragStart`, `RowDrag` and `RowDragStop` events are triggered on ro
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .AllowDragAndDrop(true)
-	 .ClientSideEvents(eve =>
-		{
-			eve.RowDrag("rowDrag");
-			eve.RowDragStart("rowDragStart");
-			eve.RowDragStop("rowDragStop");                            
-		})
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowDragAndDrop(true)
+    .ClientSideEvents(eve =>
+    {
+        eve.RowDrag("rowDrag");
+        eve.RowDragStart("rowDragStart");
+        eve.RowDragStop("rowDragStop");                            
+    })
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 
@@ -195,9 +201,10 @@ In Gantt, it is possible to enable or disable the alternate row background using
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .EnableAltRow(false)
-)@(Html.EJ().ScriptManager())
+    //...
+    .EnableAltRow(false)
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -218,9 +225,10 @@ The alternate rows background can be changed by setting the background color for
 </head>
 
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .EnableAltRow(true)
-)@(Html.EJ().ScriptManager())
+    //...
+    .EnableAltRow(true)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 ![](Rows_images/Rows_img5.png)
@@ -232,9 +240,10 @@ It is possible to change the height of the row in Gantt by setting row height in
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-     //...
-	 .RowHeight(60)
-)@(Html.EJ().ScriptManager())
+    //...
+    .RowHeight(60)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -253,7 +262,8 @@ All tasks available in Gantt was rendered in collapsed state by setting `EnableC
 @(Html.EJ().Gantt("Gantt")
      //...
 	.EnableCollapseAll(true)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -273,7 +283,8 @@ In Gantt, we can render some tasks in collapsed state and some tasks in expanded
      //...
 	.ExpandStateMapping("ExpandState")
 	.Datasource(ViewBag.datasource)	
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -304,7 +315,7 @@ In Gantt, we can render some tasks in collapsed state and some tasks in expanded
                         new DefaultData()
                         {
                             Id = 2,
-                            Name = "Software Specification",
+                            Name = "Design",
                             ExpandState = false,
                         },
                         //..
@@ -331,8 +342,9 @@ Gantt tasks can be expanded/collapsed dynamically by using [`expandCollapseRecor
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-     //...	
-)@(Html.EJ().ScriptManager())
+    //...	
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 $("#expandCollapseTask").click(function () {
@@ -352,18 +364,19 @@ All the tasks in Gantt will be expanded/collapsed by clicking `expandAll` and `c
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-     //...
-     .ToolbarSettings(ts =>
-		 {
-			 ts.ShowToolbar(true);
-			 ts.ToolbarItems(new List<GanttToolBarItems>()
-				{
-					 //..
-                 GanttToolBarItems.ExpandAll,
-                 GanttToolBarItems.CollapseAll	                                                       
-				});
-		 })	 
-)@(Html.EJ().ScriptManager())
+    //...
+    .ToolbarSettings(ts =>
+        {
+            ts.ShowToolbar(true);
+            ts.ToolbarItems(new List<GanttToolBarItems>()
+            {
+                    //..
+                GanttToolBarItems.ExpandAll,
+                GanttToolBarItems.CollapseAll	                                                       
+            });
+        })	 
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 $("#expandAllTasks").click(function () {
@@ -386,14 +399,15 @@ On expand action `Expanding` and `Expanded` event will be triggered with current
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-     //...
-	.ExpandStateMapping("ExpandState")
-	.ClientSideEvents(eve =>
-		{
-			eve.Expanding("expanding");
-			eve.Collapsing("collapsing");                                                        
-		})
-)@(Html.EJ().ScriptManager())
+    //...
+    .ExpandStateMapping("ExpandState")
+    .ClientSideEvents(eve =>
+    {
+        eve.Expanding("expanding");
+        eve.Collapsing("collapsing");                                                        
+    })
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 function expanding(args) {

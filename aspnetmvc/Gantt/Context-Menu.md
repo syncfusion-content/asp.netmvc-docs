@@ -25,9 +25,10 @@ The following code example explains how to enable the context menu in Gantt cont
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-  //.
- .EnableContextMenu(true)
- )@(Html.EJ().ScriptManager())
+    //.
+    .EnableContextMenu(true)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -42,13 +43,14 @@ It is possible to add a custom context menu item in Gantt control by using `Cont
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-  //..
- .EnableContextMenu(true)
- .ClientSideEvents(eve=>
-		  {
-				  eve.ContextMenuOpen("contextMenuOpen");
-		  })
- )@(Html.EJ().ScriptManager()) 
+    //..
+    .EnableContextMenu(true)
+    .ClientSideEvents(eve=>
+        {
+            eve.ContextMenuOpen("contextMenuOpen");
+        })
+    )
+@(Html.EJ().ScriptManager()) 
 <script type="text/javascript">
      function contextMenuOpen(args) {
             args.contextMenuItems.push({
@@ -77,13 +79,14 @@ The following code example explains on how to add sub context menu for custom me
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-  //..
- .EnableContextMenu(true)
- .ClientSideEvents(eve=>
-		  {
-				  eve.ContextMenuOpen("contextMenuOpen");
-		  })
- )@(Html.EJ().ScriptManager()) 
+    //..
+    .EnableContextMenu(true)
+    .ClientSideEvents(eve=>
+            {
+                    eve.ContextMenuOpen("contextMenuOpen");
+            })
+    )
+@(Html.EJ().ScriptManager()) 
  <script type="text/javascript">
            args.contextMenuItems.push({
                 headerText: "Expand/Collapse",

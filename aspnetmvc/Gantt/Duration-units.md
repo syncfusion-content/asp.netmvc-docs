@@ -25,6 +25,17 @@ Each task in the project can be defined with different duration units and the du
 The below code snippet explains the mapping of duration unit data source field to the Gantt control using the `DurationUnitMapping` property.
 
 {% tabs %}  
+
+{% highlight CSHTML %}
+@(Html.EJ().Gantt("ganttsample1")
+    //..
+    .DurationMapping("Duration")
+    .DurationUnitMapping("DurationUnit")	  
+    )
+@(Html.EJ().ScriptManager())
+
+{% endhighlight %}
+
 {% highlight C# %}
 public class GanttController : Controller
     {
@@ -89,14 +100,6 @@ public class GanttController : Controller
     }
 {% endhighlight %}
 
-{% highlight CSHTML %}
- @(Html.EJ().Gantt("ganttsample1")
-	    //..
-	   .DurationMapping("Duration")
-	   .DurationUnitMapping("DurationUnit")	  
-    )@(Html.EJ().ScriptManager())
-
-{% endhighlight %}
 {% endtabs %}
 N> 1. The default value of the `DurationUnit` property is GanttDurationUnit.Day.
 
@@ -105,10 +108,11 @@ N> 1. The default value of the `DurationUnit` property is GanttDurationUnit.Day.
 Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
 
 {% highlight CSHTML %}
- @(Html.EJ().Gantt("ganttsample1")
-	    //..
-	   .DurationMapping("Duration")	  
-    )@(Html.EJ().ScriptManager())
+@(Html.EJ().Gantt("ganttsample1")
+    //..
+    .DurationMapping("Duration")	  
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

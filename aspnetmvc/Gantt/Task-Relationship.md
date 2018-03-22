@@ -48,10 +48,11 @@ Task relationships are defined in data source as string value and this values ar
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.PredecessorMapping("Predecessor")
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+	//...
+	.PredecessorMapping("Predecessor")
+	.Datasource(ViewBag.datasource)
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -128,10 +129,11 @@ We can define offset with various offset duration units for predecessors by usin
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.PredecessorMapping("Predecessor")
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+	//...
+	.PredecessorMapping("Predecessor")
+	.Datasource(ViewBag.datasource)
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -159,14 +161,17 @@ We can define offset with various offset duration units for predecessors by usin
 				{
 					new DefaultData()
 					{
+						//..
 						Predecessor: "3FS+2d",                         
 					},
 					 new DefaultData()
 					{
+						//..
 						Predecessor: "3FS+16h",                            
 					},
 					 new DefaultData()
 					{
+						//..
 						Predecessor: "3FS+960m",                            
 					},
 					//..
@@ -193,11 +198,12 @@ By default Gantt tasks date values are validated as per predecessor task and it'
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.EnablePredecessorValidation(false)
-.PredecessorMapping("Predecessor")
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+	//...
+	.EnablePredecessorValidation(false)
+	.PredecessorMapping("Predecessor")
+	.Datasource(ViewBag.datasource)
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -256,12 +262,13 @@ The below code snippet explains enabling the **respectLink** validation mode whi
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.ClientSideEvents(eve =>
-	{                       
-		eve.ActionBegin("actionBegin");
-	})
-)@(Html.EJ().ScriptManager())
+	//...
+	.ClientSideEvents(eve =>
+		{                       
+			eve.ActionBegin("actionBegin");
+		})
+	)
+@(Html.EJ().ScriptManager())
  <script type="text/javascript">
  function actionBegin(args) {
 		if (args.requestType == "validateLinkedTask") {
@@ -294,12 +301,13 @@ The following code example explains this.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.ClientSideEvents(eve =>
-	{                       
-		eve.ActionBegin("actionBegin");
-	})
-)@(Html.EJ().ScriptManager())
+	//...
+	.ClientSideEvents(eve =>
+		{                       
+			eve.ActionBegin("actionBegin");
+		})
+	)
+@(Html.EJ().ScriptManager())
  <script type="text/javascript">
  function actionBegin(args) {
 	 if (args.requestType == "validateLinkedTask") {

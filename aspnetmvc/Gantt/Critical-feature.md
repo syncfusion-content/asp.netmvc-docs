@@ -18,16 +18,17 @@ You can enable/disable the critical path in Gantt by using toolbar button, and t
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-.ToolbarSettings(toolbar =>
-  {
-	  toolbar.ShowToolbar(true);
-	  toolbar.ToolbarItems(new List<GanttToolBarItems>()
-		  {
-			   //..
-			 GanttToolBarItems.CriticalPath
-		  });
-  }) 
-)@(Html.EJ().ScriptManager())
+    .ToolbarSettings(toolbar =>
+    {
+        toolbar.ShowToolbar(true);
+        toolbar.ToolbarItems(new List<GanttToolBarItems>()
+            {
+                //..
+                GanttToolBarItems.CriticalPath
+            });
+    }) 
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

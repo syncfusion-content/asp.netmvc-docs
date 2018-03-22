@@ -17,7 +17,8 @@ The following code example explains how to destroy Gantt control.
 
 @(Html.EJ().Gantt("gantt")    
     //..
-)
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">  
 $("#gantt").ejGantt("destroy");

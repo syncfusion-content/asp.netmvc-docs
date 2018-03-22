@@ -34,7 +34,8 @@ In the Week schedule mode, the upper part of the schedule header displays the we
   .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Week)
   .WeekHeaderFormat("MMM dd , yyyy ")
   .DayHeaderFormat("ddd "))
-)@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -52,14 +53,13 @@ In the Week schedule mode, the upper part of the schedule header displays the Mo
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...                             
+    //...         
+    .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Month)
+    .MonthHeaderFormat("MMM yyyy")
+    .WeekHeaderFormat("M/dd"))
+    )
+@(Html.EJ().ScriptManager())
 
-.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Month)
-
-.MonthHeaderFormat("MMM yyyy")
-
-.WeekHeaderFormat("M/dd"))
-)@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screenshot illustrates the Month Schedule in Gantt control.
@@ -76,14 +76,11 @@ In the Week schedule mode, the upper schedule header displays the Years whereas 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-.ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Year)
-
-.YearHeaderFormat("yyyy")
-
-.MonthHeaderFormat("MMM"))
-
-)@(Html.EJ().ScriptManager())
+    .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Year)
+    .YearHeaderFormat("yyyy")
+    .MonthHeaderFormat("MMM"))
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screen shot shows the Year Schedule in Gantt control.
@@ -100,16 +97,12 @@ In the Week schedule mode, the upper part of the header displays the Days wherea
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-  //...
-
- .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Day)
-
- .DayHeaderFormat("dd,MM,yy ")
-
- .HourHeaderFormat("HH"))
-
-)@(Html.EJ().ScriptManager())
+    //...
+    .ScheduleHeaderSettings(sh=>sh.ScheduleHeaderType(GanttScheduleHeaderType.Day)
+    .DayHeaderFormat("ddd ")
+    .HourHeaderFormat("HH"))
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -139,17 +132,15 @@ The Hour Schedule Mode supports both the Minute and Hour duration units.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("ganttContainer")
-
-	   .DateFormat("M/d/yyyy hh:mm:ss tt")
-
-	   .DurationUnit(GanttDurationUnit.Minute)
-
-	   .ScheduleHeaderSettings(sh =>
-	   {		 
-		 sh.ScheduleHeaderType(GanttScheduleHeaderType.Hour);
-		 sh.MinutesPerInterval(GanttMinutesPerInterval.FiveMinutes); 	   
-	  })
-)@(Html.EJ().ScriptManager())	   
+    .DateFormat("M/d/yyyy hh:mm:ss tt")
+    .DurationUnit(GanttDurationUnit.Minute)
+    .ScheduleHeaderSettings(sh =>
+    {		 
+        sh.ScheduleHeaderType(GanttScheduleHeaderType.Hour);
+        sh.MinutesPerInterval(GanttMinutesPerInterval.FiveMinutes); 	   
+    })
+    )
+@(Html.EJ().ScriptManager())	   
 
 {% endhighlight %}
 
@@ -168,13 +159,13 @@ In week schedule mode, week starts with Sunday by default. But we can customize 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("ganttContainer")
-	  .ScheduleHeaderSettings(sh =>
-              {
-                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Week);                  
-                  sh.WeekStartDay(3);
-              })
-)		   
-
+    .ScheduleHeaderSettings(sh =>
+    {
+        sh.ScheduleHeaderType(GanttScheduleHeaderType.Week);                  
+        sh.WeekStartDay(3);
+    })
+    )		   
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 ## Rounding off timescale (schedule) start date
@@ -191,12 +182,13 @@ The value `Auto`, automatically calculates the schedule header depending on the 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("ganttContainer")
-	  .ScheduleHeaderSettings(sh =>
-              {
-                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Year);
-                  sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Month);                 
-              })
+    .ScheduleHeaderSettings(sh =>
+            {
+                sh.ScheduleHeaderType(GanttScheduleHeaderType.Year);
+                sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Month);                 
+            })
 )		   
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

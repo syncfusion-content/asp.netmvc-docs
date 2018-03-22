@@ -21,14 +21,12 @@ The following code example explains how to define the SplitterPosition property 
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Gantt("gantt")
-    
+@(Html.EJ().Gantt("gantt")    
     .SplitterPosition("50%")
-
     //also you can define with pixel value as 
-
     //.SplitterPosition(”650”) (or) .SplitterPosition(”650px”)
-)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

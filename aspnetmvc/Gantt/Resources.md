@@ -26,7 +26,8 @@ The following code snippets shows resource collection object and how it assinged
     .ResourceIdMapping("ResourceId")
     .ResourceNameMapping("ResourceName")
     .Resources(ViewBag.resource)
-)
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight C# %}
@@ -66,6 +67,16 @@ The following code snippet shows how to assign the resource for each task and ma
 
 {% tabs %}
 
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("Gantt")
+    //…
+    .ResourceInfoMapping("Resources")
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
+{% endhighlight %}
+
 {% highlight C# %}
 
 public ActionResult Resource()
@@ -90,18 +101,10 @@ public List<ResourceData> GetData()
             //...
             Resources =new List<int>(){2},
             //..
-        }
+        });
+        return list;
 }
 
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Gantt("Gantt")
-    //…
-    .ResourceInfoMapping("Resources")
-    .Datasource(ViewBag.datasource)
-)
 {% endhighlight %}
 
 {% endtabs %}  
@@ -115,6 +118,17 @@ Resource unit value is mapped to the Gantt tasks from the datasource using `Reso
 The below code snippets shows how to assign resource unit value.
 
 {% tabs %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().Gantt("Gantt")
+    //…
+    .ResourceInfoMapping("Resources")
+    .ResourceUnitMapping("ResourceUnit")  
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
+{% endhighlight %}
 
 {% highlight C# %}
 
@@ -146,19 +160,10 @@ public List<ResourceData> GetData()
             //...
             Resources = new List<ResourceObject>(){ new ResourceObject(){ ResourceId=2, ResourceUnit=50}},
             //..
-        }
+        });
+        return list;
 }
 
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
-@(Html.EJ().Gantt("Gantt")
-    //…
-    .ResourceInfoMapping("Resources")
-    .ResourceUnitMapping("ResourceUnit")  
-    .Datasource(ViewBag.datasource)
-)
 {% endhighlight %}
 
 {% endtabs %}  
@@ -214,7 +219,8 @@ public List<ResourceData> GetData()
             //...
             Resources = new List<ResourceObject>(){ new ResourceObject(){ ResourceId=2, ResourceUnit=50}},
             //..
-        }
+        });
+        return list;
 }
 
 {% endhighlight %}
@@ -230,16 +236,10 @@ public ActionResult Resource()
     return View();
 }
 
-public class ResourceObject
-{
-    public int ResourceId { get; set; }
-    public int ResourceUnit { get; set; }
-}
-
 public class ResourceData
 {
     //...
-    public List<ResourceObject> Resources { get; set; }
+    public List<int> Resources { get; set; }
 }
 
 public List<ResourceData> GetData()
@@ -249,9 +249,10 @@ public List<ResourceData> GetData()
     list.Add(new ResourceData()
         {
             //...
-            Resources = new List<ResourceObject>(){ new ResourceObject(){ 2 }},
+            Resources =new List<int>(){2},
             //..
-        }
+        });
+        return list;
 }
 
 {% endhighlight %}

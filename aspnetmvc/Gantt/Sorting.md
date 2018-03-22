@@ -18,10 +18,11 @@ Gantt allows the tasks to be sorted in ascending or descending order based on th
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//..
-.AllowSorting(true)
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    //..
+    .AllowSorting(true)
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -32,11 +33,12 @@ Gantt allows you to sort multiple columns by clicking the desired column headers
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.AllowSorting(true)
-.AllowMultiSorting(true)
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowSorting(true)
+    .AllowMultiSorting(true)
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screenshot shows the output of multicolumn sorting in Gantt control.
@@ -52,15 +54,16 @@ Gantt control can be rendered with sorted columns initially, this can be achieve
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.AllowSorting(true)
-.SortSettings(sort=>
-	{
-	 sort.SortedColumns(sorted =>
-		 sorted.Field("taskName").Direction(SortOrder.Descending).Add());
-	})
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowSorting(true)
+    .SortSettings(sort=>
+        {
+        sort.SortedColumns(sorted =>
+            sorted.Field("taskName").Direction(SortOrder.Descending).Add());
+        })
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screenshot shows the output of above code example.
@@ -74,9 +77,10 @@ Columns in Gantt control can be sorted dynamically by using [`sortColumn`](/api/
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.AllowSorting(true)
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowSorting(true)
+    )
+@(Html.EJ().ScriptManager())
 
  <script type="text/javascript">
 $("#sort_column").click(function(){ 
@@ -106,11 +110,12 @@ Multiple columns in Gantt can be sorted dynamically by using `setModel` method w
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//...
-.AllowSorting(true)
-.AllowMultiSorting(true)
-.Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    //...
+    .AllowSorting(true)
+    .AllowMultiSorting(true)
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 $("#sort_column").click(function() {

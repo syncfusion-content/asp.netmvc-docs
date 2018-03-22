@@ -19,17 +19,14 @@ Code snippets for enabling the serial number is as follows.
 
 @(Html.EJ().Gantt("GanttSerialNumber")
      //...
-.EnableSerialNumber(true)
-
-)@(Html.EJ().ScriptManager())
+    .EnableSerialNumber(true)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
 The following screenshot displays the Serial number column in Gantt control.
 
 ![](Serial-Number_images/Serial_img1.png)
-
-Serial Number
-{:.caption}
 
 The serial number column will be resequenced automatically on performing any actions which will change the row indexes of the tasks such as row drag and drop, deleting, adding.

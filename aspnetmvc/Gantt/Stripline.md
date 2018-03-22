@@ -19,13 +19,14 @@ Stripline in Gantt control is used to highlight the important event in Gantt cha
    {
         new Syncfusion.JavaScript.Models.StripLine()
          { 
-                    Day="01/02/2014", 
+                    Day="03/02/2014", 
                     Label="Project Release", 
                     LineStyle="dotted",
                     LineColor="blue",
                     LineWidth=2 }, 
         })
-})@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -33,5 +34,3 @@ The following screenshot shows stripline in Gantt control.
 
 ![](Stripline_images/Stripline_img1.png)
 
-Stripline
-{:.caption}

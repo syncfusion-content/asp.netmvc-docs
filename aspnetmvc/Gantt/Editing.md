@@ -32,7 +32,8 @@ The following code example shows you how to enable the `cellEditing` in Gantt co
         edit.EditMode("cellEditing");
     })
     .Datasource(ViewBag.datasource)
-) @(Html.EJ().ScriptManager())
+    ) 
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -53,7 +54,8 @@ Currently editing cell value can be saved by clicking the save toolbar icon or c
         edit.EditMode("cellEditing");
     })
     .Datasource(ViewBag.datasource)
-) @(Html.EJ().ScriptManager())
+    ) 
+@(Html.EJ().ScriptManager())
 <script>
 
 $("#save_button").click(function () {
@@ -77,7 +79,8 @@ Currently editing cell value can be restored with old value by using cancel tool
         edit.EditMode("cellEditing");
     })
     .Datasource(ViewBag.datasource)
-) @(Html.EJ().ScriptManager())
+    ) 
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -103,7 +106,8 @@ In cell editing action `BeginEdit` and `EndEdit` client side events are triggere
     })
     .ClientSideEvents(cs => cs.BeginEdit("beginEdit"))
     .Datasource(ViewBag.datasource)
-) @(Html.EJ().ScriptManager())
+    ) 
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -131,7 +135,8 @@ Update the task details through edit dialog by setting `EditMode` as `normal`. T
         edit.EditMode("normal");
     })
     .Datasource(ViewBag.datasource)
-) @(Html.EJ().ScriptManager())
+     ) 
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -160,7 +165,8 @@ In Gantt we can define the editing fields available in add and edit dialogs by u
         editDialog.Field("Duration").EditType("stringedit").Add();
     })
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -192,7 +198,8 @@ By default custom column fields are included in add/edit dialog's custom field t
     })
     .ClientSideEvents(cs => cs.Load("load"))
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -223,7 +230,8 @@ Gantt add and edit dialogs can be opened dynamically by using [`openAddDialog`](
         edit.EditMode("normal");
     })
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 $("#openAddDialog").click(function(){
@@ -248,7 +256,8 @@ Update the task details by interactions such as resizing and dragging the taskba
 @(Html.EJ().Gantt("Gantt")
     //...
     .AllowGanttChartEditing(true)    
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -260,7 +269,8 @@ You can also enable or disable the progress bar resizing by using the `EnablePro
     //...
     .EnableProgressBarResizing(false)
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -275,7 +285,8 @@ On taskbar edit action `TaskbarEditing` and `TaskbarEdited` client side event wi
     .AllowGanttChartEditing(true)
     .ClientSideEvents(cs => cs.TaskbarEditing("taskbarEditing").TaskbarEdited("taskbarEdited"))
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 function taskbarEditing(args) {
@@ -301,7 +312,8 @@ In Gantt, we can add, edit, update the task dependencies by mouse interactions, 
     .AllowGanttChartEditing(true)
     .PredecessorMapping("Predecessors")
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -325,7 +337,8 @@ Client side `ActionBegin` event will be triggered twice with different `requestT
     .PredecessorMapping("Predecessors")
     .ClientSideEvents(cs => cs.ActionBegin("actionBegin"))
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -361,7 +374,8 @@ Gantt record's value can be dynamically updated by using [`updateRecordByTaskId`
 @(Html.EJ().Gantt("Gantt")
     //...
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+ )
+@(Html.EJ().ScriptManager())
 
 <script>
 $("#updateRecordByTaskId").click(function () {
@@ -412,7 +426,8 @@ The following code snippet explains how to enable delete confirmation message in
         edit.AllowDeleting(true);
         edit.ShowDeleteConfirmDialog(true);
     })    
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -442,7 +457,8 @@ Task indent option in Gantt was enabled by setting `EditSettings.AllowIndent` as
         });
     })
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -492,7 +508,8 @@ Task outdent option in Gantt was enabled by setting `EditSettings.AllowIndent` a
         });
     })
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -542,7 +559,8 @@ Task delete option in Gantt was enabled by setting `EditSettings.AllowDeleting` 
         });
     })
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 <script>
 
@@ -578,6 +596,7 @@ In Gantt, all editing options can be disabled by setting `ReadOnly` property as 
     //...
     .ReadOnly(true)
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}

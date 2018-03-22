@@ -14,7 +14,8 @@ Id value of Gantt tasks can be changed dynamically by using [`updateTaskId`](/ap
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("gantt")
     //..      
-)
+	)
+@(Html.EJ().ScriptManager())
 
 $("#update_task_id").click(function () {
 	var ganttObj = $("#gantt").ejGantt("instance");
