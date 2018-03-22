@@ -17,10 +17,9 @@ The following code example explains how to change weekend/non-working days
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-
     .WorkWeek(new List<string>() { "Sunday","Monday","Tuesday","Wednesday","Thursday" })
-
-)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

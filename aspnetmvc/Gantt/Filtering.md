@@ -17,14 +17,15 @@ It is possible to filter one or more columns at initial load by providing the `F
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-.FilterSettings(filter =>
-{
-	filter.FilteredColumns(filtered =>
-		{
-			filtered.Value("plan").Field("taskName").Predicate("and").Operator(FilterOperatorType.StartsWith).Add();
-		});
-})
-)@(Html.EJ().ScriptManager())
+  .FilterSettings(filter =>
+  {
+    filter.FilteredColumns(filtered =>
+    {
+      filtered.Value("plan").Field("taskName").Predicate("and").Operator(FilterOperatorType.StartsWith).Add();
+    });
+  })
+  )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -42,7 +43,8 @@ The below code snippet explains the above behavior.
 <button id="filterColumn">Filter Column</button>
 @(Html.EJ().Gantt("GanttContainer")
    //..
-)@(Html.EJ().ScriptManager())
+ )
+@(Html.EJ().ScriptManager())
 <script type="text/javascript">
 
 $("#filterColumn").click(function (args) {
@@ -65,7 +67,8 @@ The below code snippet explains the above behavior.
 
 @(Html.EJ().Gantt("GanttContainer")
    //..
-)@(Html.EJ().ScriptManager())
+ )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 

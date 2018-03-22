@@ -29,15 +29,12 @@ Each holiday can be defined with `Day`, `Label`, `Background` properties. The fo
        })
 	.Datasource(ViewBag.datasource)
 )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
 The following screenshot shows the output of Holidays in Gantt control.
 
-
 ![](Holidays_images/Holidays_img1.png)
-
-Holidays
-{:.caption}
 
 We can also load holidays from SQL database into Gantt. [Click](https://www.syncfusion.com/kb/8566/how-to-load-holidays-from-database-into-gantt) here to view our knowledge base for this.

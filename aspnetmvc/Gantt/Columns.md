@@ -7,9 +7,9 @@ control: Gantt
 documentation: ug
 ---
 
-# Columns
+# Gantt Columns
 
-The column displays the information from a bounded data source and it will be editable to update the task details through TreeGrid.
+ Gantt column displays the information from a bounded data source and it will be editable to update the task details through TreeGrid.
 
 ## Column Edit Types
 
@@ -32,18 +32,19 @@ It is possible to format a column using `Load` event. The following code example
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-      //...
-	 .ClientSideEvents(eve=>
-		 {
-			 eve.Load("load");
-		 })
- )@(Html.EJ().ScriptManager())
-  <script>
-        function load(args){
-            var columns = this.getColumns();
-            columns[5]["format"] = "{0:p0}";
-        }
-  </script>
+    //...
+    .ClientSideEvents(eve=>
+    {
+        eve.Load("load");
+    })
+    )
+@(Html.EJ().ScriptManager())
+<script>
+    function load(args){
+        var columns = this.getColumns();
+        columns[5]["format"] = "{0:p0}";
+    }
+</script>
 {% endhighlight %}
 
 N> For more numeric format strings, please refer to this [link](https://msdn.microsoft.com/library/dwhawy9k(v=vs.100).aspx).
@@ -59,9 +60,10 @@ The following code example shows you how to enable the column resize feature in 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-      //...
-	 .AllowColumnResize(true)
- )@(Html.EJ().ScriptManager())
+    //...
+    .AllowColumnResize(true)
+    )
+ @(Html.EJ().ScriptManager())
   
 {% endhighlight %}
 
@@ -82,26 +84,27 @@ The following code example shows you how to display a column with resource image
     {{"{{"}}/if{{}}}}
 </script>
 @(Html.EJ().Gantt("Gantt")
-  //...
- .ResourceInfoMapping("ResourceID")
- .ResourceNameMapping("ResourceName")
- .ResourceIdMapping("ResourceID")
- .ClientSideEvents(eve=>
-		 {
-			 eve.Load("load");
-		 })
- .Resources(ViewBag.datasource1)
- )@(Html.EJ().ScriptManager())
- <script>
-        function load(args){
-            var Gantt = $("#Gantt").ejGantt("instance");
-            var columns = Gantt.getColumns();
-            columns[2].visible = columns[3].visible = false;
-            columns[4].isTemplateColumn = true;
-            columns[4].templateID = "columnTemplate";
-            columns[4].width = "172";
-        }
-  </script>
+    //...
+    .ResourceInfoMapping("ResourceID")
+    .ResourceNameMapping("ResourceName")
+    .ResourceIdMapping("ResourceID")
+    .ClientSideEvents(eve=>
+            {
+                eve.Load("load");
+            })
+    .Resources(ViewBag.datasource1)
+    )
+ @(Html.EJ().ScriptManager())
+<script>
+    function load(args){
+        var Gantt = $("#Gantt").ejGantt("instance");
+        var columns = Gantt.getColumns();
+        columns[2].visible = columns[3].visible = false;
+        columns[4].isTemplateColumn = true;
+        columns[4].templateID = "columnTemplate";
+        columns[4].width = "172";
+    }
+</script>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -189,11 +192,12 @@ Sort Ascending and Sort Descending options can be enabled or disabled with the `
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-     // ...
+    // ...
     .ShowColumnChooser(true)
     .AllowSorting(true)
     .AllowMultiSorting(true)
- )@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
  
 {% endhighlight %}
 
@@ -225,21 +229,22 @@ These fields can be customized with the `ColumnDialogFields` property. The follo
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-     // ...
+    // ...
     .ShowColumnChooser(true)
     .ShowColumnOptions(true)
     .ColumnDialogFields(new List <GanttColumnDialogFields>(){
-		 GanttColumnDialogFields.Field,
-		 GanttColumnDialogFields.HeaderText,
-		 GanttColumnDialogFields.EditType
-		 })
- )@(Html.EJ().ScriptManager())
+        GanttColumnDialogFields.Field,
+        GanttColumnDialogFields.HeaderText,
+        GanttColumnDialogFields.EditType
+    })
+    )
+@(Html.EJ().ScriptManager())
  
 {% endhighlight %}
 
 ![](Columns_images/Columns_img6.png)
 
-## Change Visibility Of The Columns Dynamically
+## Change visibility of the columns dynamically
 
 Gantt columns visibility can be changed dynamically by using [`showColumn`](/api/js/ejgantt#methods:showcolumn "showColumn(headerText)") and [`hideColumn`](/api/js/ejgantt#methods:hidecolumn "hideColumn(headerText)") methods. The below code example shows how to change the visibility of the column in Gantt dynamically.
 
@@ -248,20 +253,21 @@ Gantt columns visibility can be changed dynamically by using [`showColumn`](/api
 <button id="show_column">Show</button>
 @(Html.EJ().Gantt("gantt")
     //..
- )@(Html.EJ().ScriptManager())
-  <script type="text/javascript">
-        $("#hide_column").click(function () {
-            var ganttObj = $("#gantt").ejGantt("instance");
-            var column = ganttObj.getColumns()[0];
-            ganttObj.hideColumn(column.headerText);
-        });
+    )
+@(Html.EJ().ScriptManager())
+<script type="text/javascript">
+    $("#hide_column").click(function () {
+        var ganttObj = $("#gantt").ejGantt("instance");
+        var column = ganttObj.getColumns()[0];
+        ganttObj.hideColumn(column.headerText);
+    });
 
-        $("#show_column").click(function () {
-            var ganttObj = $("#gantt").ejGantt("instance");
-            var column = ganttObj.getColumns()[0];
-            ganttObj.showColumn(column.headerText);
-        });
-    </script>
+    $("#show_column").click(function () {
+        var ganttObj = $("#gantt").ejGantt("instance");
+        var column = ganttObj.getColumns()[0];
+        ganttObj.showColumn(column.headerText);
+    });
+</script>
 {% endhighlight %}
 
 ## Change Tree/Expander Column
@@ -271,9 +277,10 @@ Tree/Expander column is a column in Gantt which has icons to expand/collapse the
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-     // ...
+    // ...
     .TreeColumnIndex(2)
- )@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
  
 {% endhighlight %}
 

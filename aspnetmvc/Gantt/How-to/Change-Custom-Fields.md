@@ -19,7 +19,6 @@ The following code example explains how to display custom fields in general tab
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("gantt")
-
     .AddDialogFields(ads =>
     {
         ads.Field("TaskID").Add();
@@ -38,8 +37,8 @@ The following code example explains how to display custom fields in general tab
         eds.Field("Notes").Add();
         eds.Field("ExpectedDate").DisplayInGeneralTab(true).Add();
     })
-
-)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

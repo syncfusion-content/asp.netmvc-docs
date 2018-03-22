@@ -26,7 +26,8 @@ When the `TaskSchedulingMode` property is set as `Auto` scheduling mode, all the
      //...
 	.TaskSchedulingMode(GanttTaskSchedulingMode.Auto)
 	.Datasource(ViewBag.datasource)	
-)@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -42,7 +43,8 @@ When the `TaskSchedulingMode` property is set as `Manual` scheduling mode, all t
      //...
 	.TaskSchedulingMode(GanttTaskSchedulingMode.Manual)
     .ValidateManualTasksOnLinking(false)
-)@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -58,7 +60,8 @@ When the `TaskSchedulingMode` property is set as `Custom`, the scheduling mode f
      //...
 	.TaskSchedulingMode(GanttTaskSchedulingMode.Manual)
     .ValidateManualTasksOnLinking(false)
-)@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -93,14 +96,14 @@ When the `TaskSchedulingMode` property is set as `Custom`, the scheduling mode f
                             Id = 2,
                             Name = "Software Specification",
                             StartDate = "02/10/2014",
-                            EndDate="02/12/2014",                            
+                            EndDate = "02/12/2014",                            
                         },
                         new DefaultData()
                         {
                             Id = 3,
                             Name = "Develop Prototype",
                             StartDate = "02/10/2014",
-                            EndDate="02/12/2014",
+                            EndDate = "02/12/2014",
 							isManual = true,
                         },
                        //..

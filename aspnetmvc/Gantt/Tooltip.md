@@ -22,7 +22,8 @@ In Gantt, you can enable or disable taskbar and dependency line mouse hover tool
     .EnableTaskbarTooltip(true)
     .PredecessorMapping("Predecessors")
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -46,7 +47,8 @@ It is possible to enable or disable the tooltip while performing editing actions
     //...
     .EnableTaskbarDragTooltip(true)
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -60,7 +62,8 @@ It is possible to enable or disable the TreeGrid cell tooltip in mouse hover by 
     //...
     .ShowGridCellTooltip(true)
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -78,7 +81,8 @@ It is also possible to display tooltip only for expander column by setting the `
     //...
     .ShowGridExpandCellTooltip(true)
     .Datasource(ViewBag.datasource)
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

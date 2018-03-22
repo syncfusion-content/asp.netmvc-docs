@@ -16,8 +16,9 @@ Work Breakdown Structure(WBS) in Gantt represents the entire project activities 
 @(Html.EJ().Gantt("Gantt")
 	// ...
 	.EnableWBS(true)
-    .EnableWBSPredecessor(true)
-)@(Html.EJ().ScriptManager())
+	.EnableWBSPredecessor(true)
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

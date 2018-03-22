@@ -15,19 +15,20 @@ When setting the `timescaleStartDateMode` property as month, the project will st
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-   .ScheduleHeaderSettings(sh =>
-              {
-                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Month);  
-                  sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Month);		  
-		  sh.MonthHeaderFormat("MMM yyyy");
-                  sh.WeekHeaderFormat("M/dd");
-		  sh.WeekStartDay(1);
-              })
+    .ScheduleHeaderSettings(sh =>
+        {
+            sh.ScheduleHeaderType(GanttScheduleHeaderType.Month);  
+            sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Month);		  
+            sh.MonthHeaderFormat("MMM yyyy");
+            sh.WeekHeaderFormat("M/dd");
+            sh.WeekStartDay(1);
+        })
     .ClientSideEvents(cs =>
-            {
-                 cs.Load("load");                 
-            }) 
-)
+        {
+            cs.Load("load");                 
+        }) 
+    )
+@(Html.EJ().ScriptManager())
 <script type="text/javascript">     
     function load(args) {         
        var ganttObj = $("#Gantt").data("ejGantt");
@@ -44,18 +45,19 @@ When setting the `timescaleStartDateMode` property as Year, the project will sta
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-   .ScheduleHeaderSettings(sh =>
-              {
-                  sh.ScheduleHeaderType(GanttScheduleHeaderType.Month);                  
-	          sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Year);				 
-                  sh.WeekHeaderFormat("M/dd");
-	          sh.WeekStartDay(1);
-              })
-	.ClientSideEvents(cs =>
-            {
-                 cs.Load("load");                 
-            }) 
-)
+.ScheduleHeaderSettings(sh =>
+    {
+        sh.ScheduleHeaderType(GanttScheduleHeaderType.Month);                  
+        sh.TimescaleStartDateMode(GanttTimescaleRoundMode.Year);				 
+        sh.WeekHeaderFormat("M/dd");
+        sh.WeekStartDay(1);
+    })
+    .ClientSideEvents(cs =>
+    {
+        cs.Load("load");                 
+    }) 
+    )
+@(Html.EJ().ScriptManager())
 <script type="text/javascript">     
     function load(args) {         
        var ganttObj = $("#Gantt").data("ejGantt");

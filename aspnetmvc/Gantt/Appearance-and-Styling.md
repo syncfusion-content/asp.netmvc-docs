@@ -21,17 +21,18 @@ And you can change the background of weekends available in timescale by using `W
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-       //...
- .ScheduleHeaderSettings(sh=>
-		 {
-			 sh.WeekHeaderFormat("MMM yyyy");
-			 sh.DayHeaderFormat("d");
-			 sh.HourHeaderFormat("HH");
-			 sh.MonthHeaderFormat("MMM");
-			 sh.YearHeaderFormat("yyyy");
-			 sh.WeekendBackground("#F2F2F2");                         
-		 })
-)@(Html.EJ().ScriptManager())
+    //...
+    .ScheduleHeaderSettings(sh=>
+        {
+            sh.WeekHeaderFormat("MMM yyyy");
+            sh.DayHeaderFormat("d");
+            sh.HourHeaderFormat("HH");
+            sh.MonthHeaderFormat("MMM");
+            sh.YearHeaderFormat("yyyy");
+            sh.WeekendBackground("#F2F2F2");                         
+        })
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following screenshot shows the customized format schedule header in Gantt control.
@@ -46,14 +47,18 @@ The following code example shows how to use this properties.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-//..
-.ScheduleHeaderSettings(sh=>
-	  {
-			sh.TimescaleUnitSize("70%");
-	  })  
-)@(Html.EJ().ScriptManager())
+    //..
+    .ScheduleHeaderSettings(sh=>
+        {
+            sh.TimescaleUnitSize("70%");
+        })  
+    )
+@(Html.EJ().ScriptManager())
+
 {% endhighlight %}
+
 The following screenshot shows the output of above code example.
+
 ![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
 Schedule header units with `300%` width value
@@ -72,10 +77,11 @@ Background color of child taskbars and parent taskbars can be customized by usin
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-        //..
-       .TaskbarBackground("#1764d7")
-       .ParentTaskbarBackground("#91dc88")  
-)@(Html.EJ().ScriptManager())
+    //..
+    .TaskbarBackground("#1764d7")
+    .ParentTaskbarBackground("#91dc88")  
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -88,10 +94,11 @@ Height of child taskbars and parent taskbars can be customized by using `Taskbar
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-        //..
-       .TaskbarHeight(30)
-       .RowHeight(40)  
-)@(Html.EJ().ScriptManager())
+    //..
+    .TaskbarHeight(30)
+    .RowHeight(40)  
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -107,12 +114,13 @@ The following code example shows how to use this properties.
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-        //..
-       .ProgressbarBackground("#8c83b1")
-       .ParentProgressbarBackground("#af2f2f")
-       .ProgressbarHeight(80)
-       .ShowProgressStatus(true)  
-)@(Html.EJ().ScriptManager())
+    //..
+    .ProgressbarBackground("#8c83b1")
+    .ParentProgressbarBackground("#af2f2f")
+    .ProgressbarHeight(80)
+    .ShowProgressStatus(true)  
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -128,11 +136,12 @@ The Taskbar can be customized based on the task information in Gantt control by 
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-.ClientSideEvents(eve =>
-{
-	eve.QueryTaskbarInfo("queryTaskbarInfo");
-})
-)@(Html.EJ().ScriptManager())
+    .ClientSideEvents(eve =>
+    {
+        eve.QueryTaskbarInfo("queryTaskbarInfo");
+    })
+    )
+@(Html.EJ().ScriptManager())
 <script type="text/javascript">
        function queryTaskbarInfo(args){
           //queryTaskbarInfo will be triggered when a taskbar is rendered
@@ -149,7 +158,7 @@ The Taskbar can be customized based on the task information in Gantt control by 
                 }
             }
 		}
-	</script>
+</script>
 {% endhighlight %}
 
 The following screenshot shows the customized taskbar in Gantt control.
@@ -165,7 +174,8 @@ Width and background color of dependency line in Gantt can be customized by usin
 @(Html.EJ().Gantt("Gantt")
     .ConnectorlineWidth(2)
     .ConnectorLineBackground("#0aecb8")
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -181,7 +191,8 @@ Background color of weekends in Gantt can be changed by using [`weekendBackgroun
 @(Html.EJ().Gantt("Gantt")
          //..
     .WeekendBackground("rgba(116, 195, 231, 0.26)")    
-)@(Html.EJ().ScriptManager())
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -214,15 +225,15 @@ The theme (Gradient lime) can be applied to the Gantt control by using the style
 
 {% highlight html %}
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-        <title>Getting Started with Gantt Control for JavaScript</title>
-        <!-- style sheet for default theme(gradient lime) -->
-        <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /> 
-        //...
-    </html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <title>Getting Started with Gantt Control for JavaScript</title>
+    <!-- style sheet for default theme(gradient lime) -->
+    <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" /> 
+    //...
+</html>
 
 {% endhighlight %}
 
@@ -235,20 +246,22 @@ The following screenshot shows the Gantt control with `Gradient-lime` theme.
 In Gantt `CssClass` property was used to apply different customized styles to multiple Gantt controls available in same page. The following code example shows how to apply different background color for each Gantt control's toolbar element.
 
 {% highlight html %}
-    <style>
-        .c-class1.e-gantt .e-toolbar {
-            background-color: rgba(169, 45, 45, 0.31);
-        }
-        .c-class2.e-gantt .e-toolbar {
-            background-color: rgba(0, 128, 0, 0.2);
-        }
-    </style>
-     @(Html.EJ().Gantt("GanttContainer")
-         .CssClass("c-class1")
-     )
-	 @(Html.EJ().Gantt("GanttContainer1")
-         .CssClass("c-class2")
-     )@(Html.EJ().ScriptManager())
+<style>
+    .c-class1.e-gantt .e-toolbar {
+        background-color: rgba(169, 45, 45, 0.31);
+    }
+    .c-class2.e-gantt .e-toolbar {
+        background-color: rgba(0, 128, 0, 0.2);
+    }
+</style>
+@(Html.EJ().Gantt("GanttContainer")
+    .CssClass("c-class1")
+    )
+@(Html.EJ().Gantt("GanttContainer1")
+    .CssClass("c-class2")
+    )
+@(Html.EJ().ScriptManager())
+
 {% endhighlight %}
 
 The below screenshot shows the output of above code example.
@@ -262,26 +275,28 @@ While rendering the rows in Grid part of Gantt `RowDataBound` event and `QueryCe
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-.ClientSideEvents(eve =>
-{
-	eve.QueryCellInfo("queryCellInfo");
-	eve.RowDataBound("rowDataBound");
-})
-)@(Html.EJ().ScriptManager())
+    .ClientSideEvents(eve =>
+    {
+        eve.QueryCellInfo("queryCellInfo");
+        eve.RowDataBound("rowDataBound");
+    })
+    )
+@(Html.EJ().ScriptManager())
 <script type="text/javascript">
-        function queryCellInfo(args) {
-            if (args.column.mappingName == "progress") {
-                if (args.data.item["progress"] < 80)
-                    $(args.cellElement).css("background-color", "rgba(255, 0, 0, 0.12)");
-                else
-                    $(args.cellElement).css("background-color", "rgba(86, 226, 86, 0.25)");
-            }
+    function queryCellInfo(args) {
+        if (args.column.mappingName == "progress") {
+            if (args.data.item["progress"] < 80)
+                $(args.cellElement).css("background-color", "rgba(255, 0, 0, 0.12)");
+            else
+                $(args.cellElement).css("background-color", "rgba(86, 226, 86, 0.25)");
         }
-        function rowDataBound(args) {
-            if (args.data.item["taskID"] == 5)
-                $(args.rowElement).css("background-color", "rgba(251, 255, 0, 0.24)");
-        }
-	</script>
+    }
+    function rowDataBound(args) {
+        if (args.data.item["taskID"] == 5)
+            $(args.rowElement).css("background-color", "rgba(251, 255, 0, 0.24)");
+    }
+</script>
+
 {% endhighlight %}
 
 The below screenshot shows the output of above code example.

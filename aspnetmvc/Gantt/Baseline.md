@@ -18,12 +18,13 @@ The following code example shows how to enable baseline in Gantt control.
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-         //...
+        //...
         .BaselineStartDateMapping("baselineStartDate") //Mapping BaselineStartDate to Gantt
         .BaselineEndDateMapping("baselineEndDate") //Mapping BaselineEndDate to Gantt
         .RenderBaseline(true) //Show/Hide the baseline in Gantt
         .BaselineColor("#fba41c")
-)@(Html.EJ().ScriptManager())
+        )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -32,7 +33,4 @@ The following code example shows how to enable baseline in Gantt control.
 The following screenshot shows the baseline in Gantt control.
 
 ![](Baseline_images/Baseline_img1.png)
- 
-Baseline
-{:.caption}
 

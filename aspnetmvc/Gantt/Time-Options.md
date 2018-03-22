@@ -24,20 +24,35 @@ Use the following code example for setting different time scales of working hour
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-
-//...
-
-.WorkingTimeScale(GanttWorkingTimeScale.TimeScale24Hours)
-
-.Datasource(ViewBag.datasource)
-
-)@(Html.EJ().ScriptManager())
-
+    //...
+    .WorkingTimeScale(GanttWorkingTimeScale.TimeScale24Hours)
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 Use the following code example for including time options in start date and end date of a task.
 
 {% tabs %}
+
+{% highlight CSHTML %}
+@(Html.EJ().Gantt("Gantt")
+    .TaskIdMapping("TaskId")
+    .TaskNameMapping("TaskName")
+    .StartDateMapping("StartDate")
+    .DurationMapping("Duration")
+    .ProgressMapping("Progress")            
+    .DateFormat("M/d/yyyy hh:mm:ss tt")
+    .ScheduleStartDate("02/01/2014 00:00:00 AM")
+    .WorkingTimeScale(GanttWorkingTimeScale.TimeScale24Hours)
+    .ScheduleEndDate("03/14/2016 00:00:00 PM")
+    .ChildMapping("SubTasks")
+    .TreeColumnIndex(1)
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
+	
+{% endhighlight %}
 
 {% highlight C# %}
 
@@ -120,29 +135,8 @@ public class GanttController : Controller
     }
 {% endhighlight %}
 
-{% highlight CSHTML %}
-@(Html.EJ().Gantt("Gantt")
-            .TaskIdMapping("TaskId")
-            .TaskNameMapping("TaskName")
-            .StartDateMapping("StartDate")
-            .DurationMapping("Duration")
-            .ProgressMapping("Progress")            
-            .DateFormat("M/d/yyyy hh:mm:ss tt")
-            .ScheduleStartDate("02/01/2014 00:00:00 AM")
-            .WorkingTimeScale(GanttWorkingTimeScale.TimeScale24Hours)
-            .ScheduleEndDate("03/14/2016 00:00:00 PM")
-            .ChildMapping("SubTasks")
-            .TreeColumnIndex(1)
-            .Datasource(ViewBag.datasource)
-    )@(Html.EJ().ScriptManager())
-	
-{% endhighlight %}
-
 {% endtabs %}  
 
 Execute the above code to render the following output.
 
 ![](Time-Options_images/Time-Options_img1.png)
-
-Gantt with Time Options
-{:.caption}

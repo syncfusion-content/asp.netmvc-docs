@@ -31,8 +31,8 @@ The following code example explains how to bind the hierarchical data.
     .ResourceNameMapping("ResourceName")
     //...
     .Datasource(ViewBag.datasource)
-)
-
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}
@@ -102,8 +102,8 @@ The following code example explains how to bind the flat data.
     //...
     .Resources(ViewBag.resources)
     .Datasource(ViewBag.datasource)
- )
-
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}
@@ -187,7 +187,7 @@ The below code snippet explains grouping of the resources in resource allocation
     .Resources(ViewBag.resources)
     .Datasource(ViewBag.datasource)
 )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}

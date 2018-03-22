@@ -17,7 +17,8 @@ The below code snippet explains mapping the work value from the data source.
 @(Html.EJ().Gantt("Gantt")
 	// ...
 	.WorkMapping("estimatedWork")    
-)@(Html.EJ().ScriptManager())
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -42,7 +43,8 @@ The below code snippet explains how to change work unit property in Gantt.
 @(Html.EJ().Gantt("Gantt")
 	// ...
 	.WorkUnit(GanttWorkUnit.Minute)
-)@(Html.EJ().ScriptManager())
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -63,7 +65,8 @@ The following code snippet explains how to set taskType property in Gantt,
 @(Html.EJ().Gantt("Gantt")
 	// ...
 	.TaskType(GanttTaskType.FixedWork)
-)@(Html.EJ().ScriptManager())
+	)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

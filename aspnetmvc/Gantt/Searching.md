@@ -27,7 +27,8 @@ The following code example shows you how to add search option in Gantt toolbar.
 				 GanttToolBarItems.Search   //To search the task
 			 });
      })   	
-)@(Html.EJ().ScriptManager())
+)
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

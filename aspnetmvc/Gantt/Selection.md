@@ -15,8 +15,9 @@ The row selection in Gantt can be enabled or disabled, by using the  `AllowSelec
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
   //...
- .AllowSelection(true)
- )@(Html.EJ().ScriptManager())
+  .AllowSelection(true)
+  )
+ @(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 ### Selecting a row on initial load
@@ -25,9 +26,10 @@ You can select a row on load time by setting the index of the row to `SelectedRo
 
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
-     //...
-    .SelectedRowIndex(3)
-)@(Html.EJ().ScriptManager())
+   //...
+  .SelectedRowIndex(3)
+  )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 ![](Selection_images/Selection_img1.png)
@@ -40,7 +42,8 @@ You can also select a row programmatically by setting index of the row value to 
  <button onclick="selectRow()">SelectRow</button>
 @(Html.EJ().Gantt("Gantt")
   //...
- )@(Html.EJ().ScriptManager())
+  )
+ @(Html.EJ().ScriptManager())
 
 <script type="text/javascript">     
     function selectRow() {         
@@ -57,10 +60,11 @@ The following code example explains how to enable multiple selection in Gantt.
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
   //...
- .AllowSelection(true)
- .SelectionType(GanttSelectionType.Multiple)
- .SelectionMode(GanttSelectionMode.Row)
-)@(Html.EJ().ScriptManager())
+  .AllowSelection(true)
+  .SelectionType(GanttSelectionType.Multiple)
+  .SelectionMode(GanttSelectionMode.Row)
+  )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The output of the Gantt with multiple row selection is as follows.
@@ -75,16 +79,17 @@ You can also select multiple rows programmatically  by using `selectMultipleRows
 {% highlight CSHTML %}
  <button onclick="selectMultipleRow()">selectMultipleRow</button>
 @(Html.EJ().Gantt("Gantt")
-   .SelectionType(GanttSelectionType.Multiple)
-   .SelectionMode(GanttSelectionMode.Row)
- )@(Html.EJ().ScriptManager())
+  .SelectionType(GanttSelectionType.Multiple)
+  .SelectionMode(GanttSelectionMode.Row)
+  )
+ @(Html.EJ().ScriptManager())
 
 <script type="text/javascript">     
-    function selectMultipleRow() {         
-       var ganttObj = $("#Gantt").data("ejGantt"),
-           multipleRowIndex = [1,0,5,7];  		    
-	   ganttObj.selectMultipleRows(multipleRowIndex);
-        }
+function selectMultipleRow() {         
+    var ganttObj = $("#Gantt").data("ejGantt"),
+        multipleRowIndex = [1,0,5,7];  		    
+  ganttObj.selectMultipleRows(multipleRowIndex);
+    }
 <script>
 {% endhighlight %}
 
@@ -95,21 +100,22 @@ While selecting a row in Gantt, `RowSelecting` and `RowSelected` event will be t
 {% highlight CSHTML %}
 
 @(Html.EJ().Gantt("Gantt")
-   //
- .AllowSelection(true)
- .SelectionType(GanttSelectionType.Multiple)
- .SelectionMode(GanttSelectionMode.Row)
- .ClientSideEvents(eve =>
-	{
-		eve.RowSelecting("rowSelecting");
-	})
-)@(Html.EJ().ScriptManager())
+    //
+  .AllowSelection(true)
+  .SelectionType(GanttSelectionType.Multiple)
+  .SelectionMode(GanttSelectionMode.Row)
+  .ClientSideEvents(eve =>
+  {
+    eve.RowSelecting("rowSelecting");
+  })
+  )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 function rowSelecting(args) {
-	if (args.data.taskId == 5) // prevent selection of Task id 5
-		args.cancel = true;
-        }
+if (args.data.taskId == 5) // prevent selection of Task id 5
+  args.cancel = true;
+      }
 </script>
 
 {% endhighlight %}
@@ -124,7 +130,8 @@ Find the code example below to enable the cell selection in Gantt.
 @(Html.EJ().Gantt("Gantt")
    //
  .SelectionMode(GanttSelectionMode.Cell)
-)@(Html.EJ().ScriptManager()) 
+  )
+@(Html.EJ().ScriptManager()) 
 {% endhighlight %}
 
 The following screen shots shows you cell selection.
@@ -140,7 +147,8 @@ You can also select multiple cells by setting `SelectionType` property as `Multi
    //
  .SelectionType(GanttSelectionType.Multiple)
  .SelectionMode(GanttSelectionMode.Cell)
-)@(Html.EJ().ScriptManager()) 
+  )
+@(Html.EJ().ScriptManager()) 
 {% endhighlight %}
 
 ![](Selection_images/Selection_img3.png)
@@ -154,20 +162,20 @@ You can select the cells programmatically using [`selectCells`](/api/js/ejgantt#
 @(Html.EJ().Gantt("Gantt")
    .SelectionType(GanttSelectionType.Multiple)
    .SelectionMode(GanttSelectionMode.Cell)
- )
-
+  )
+@(Html.EJ().ScriptManager()) 
 <script type="text/javascript">     
-    function selectCells() {         
-           var ganttObj = $("#GanttContainer").data("ejGantt");
-                cellIndex = [{
-                              rowIndex: 2,
-                              cellIndex: 1
-                              }, {
-                              rowIndex: 3,
-                              cellIndex: 1
-                              }];
-           ganttObj.selectCells(cellIndex);
-        }
+function selectCells() {         
+    var ganttObj = $("#GanttContainer").data("ejGantt");
+        cellIndex = [{
+                      rowIndex: 2,
+                      cellIndex: 1
+                      }, {
+                      rowIndex: 3,
+                      cellIndex: 1
+                      }];
+    ganttObj.selectCells(cellIndex);
+}
 <script>
 {% endhighlight %}
 
@@ -191,7 +199,8 @@ The `CellSelected` event will be triggered on completion of cell selection actio
 	{
 		eve.CellSelecting("cellSelecting");
 	})
-)@(Html.EJ().ScriptManager())
+  )
+@(Html.EJ().ScriptManager())
 
 <script type="text/javascript">
 function cellSelecting(args) {
@@ -210,9 +219,10 @@ The following code example describes how to enable multiple selection in Gantt.
 {% highlight CSHTML %}
 @(Html.EJ().Gantt("Gantt")
   //...
- .SelectionType(GanttSelectionType.Multiple)
- .SelectionMode(GanttSelectionMode.Row)
-)@(Html.EJ().ScriptManager()) 
+  .SelectionType(GanttSelectionType.Multiple)
+  .SelectionMode(GanttSelectionMode.Row)
+  )
+@(Html.EJ().ScriptManager()) 
 {% endhighlight %}
 
 The following output is displayed the result of multiple selection in touch device environment.
