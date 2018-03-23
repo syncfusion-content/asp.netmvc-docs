@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Download and Installation in Windows | Xamarin Forms | Syncfusion
-description: Download and Installation in Windows
-platform: xamarin
-control: Download and Installation
+title: NuGet Packages in Windows | ASP.NET MVC | Syncfusion
+description: NuGet Packages in Windows
+platform: ASP.NET MVC
+control: NuGet Packages
 documentation: ug
 ---
 
