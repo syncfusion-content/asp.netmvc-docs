@@ -142,7 +142,7 @@ The NuGet Command Line Interface (CLI), nuget.exe, provides the full extent of N
 
 1.	Download the latest NuGet CLI from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).
 
-N> To update the existing nuget.exe to latest version use the following command:
+    N> To update the existing nuget.exe to latest version use the following command:
 
     ~~~
     nuget update -self
@@ -268,7 +268,7 @@ Using the NuGet CLI, all the NuGet packages in the project can be updated to the
 
 1.	Download the latest NuGet CLI from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).
 
-N> To update the existing nuget.exe to latest version use the following command: 
+    N> To update the existing nuget.exe to latest version use the following command: 
 
     ~~~
     nuget update -self
