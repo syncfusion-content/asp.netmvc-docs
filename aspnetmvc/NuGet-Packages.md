@@ -2,7 +2,7 @@
 layout: post
 title: NuGet Packages | ASP.NET MVC | Syncfusion
 description: NuGet Packages
-platform: ASP.NET MVC
+platform: ejmvc
 control: NuGet Packages
 documentation: ug
 ---
