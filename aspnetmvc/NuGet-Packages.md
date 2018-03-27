@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NuGet Packages | ASP.NET MVC | Syncfusion
+title: ASP.NET MVC | NuGet Packages | Syncfusion
 description: NuGet Packages
 platform: ejmvc
 control: NuGet Packages
