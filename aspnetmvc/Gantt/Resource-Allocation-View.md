@@ -21,6 +21,8 @@ User can bind two types of data structure to Gantt in resource allocation view,
 ### Hierarchical data source binding
 The following code example explains how to bind the hierarchical data.
 
+{% tabs %}
+
 {% highlight cshtml %}
 
 @(Html.EJ().Gantt("ResourceViewGantt")
@@ -29,8 +31,8 @@ The following code example explains how to bind the hierarchical data.
     .ResourceNameMapping("ResourceName")
     //...
     .Datasource(ViewBag.datasource)
-)
-
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}
@@ -80,8 +82,14 @@ public ActionResult ResourceView()
 
 {% endhighlight %}
 
+{% endtabs %}
+
+
 ### Flat data binding
+
 The following code example explains how to bind the flat data.
+
+{% tabs %}
 
 {% highlight cshtml %}
 
@@ -94,8 +102,8 @@ The following code example explains how to bind the flat data.
     //...
     .Resources(ViewBag.resources)
     .Datasource(ViewBag.datasource)
- )
-
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}
@@ -153,12 +161,16 @@ The following code example explains how to bind the flat data.
 
 {% endhighlight %}
 
+{% endtabs %}
+
 ![](Resource-Allocation-View_images/ResourceView_2.png)
 
 ## Grouping
 The resources and the tasks assigned to those resources can be grouped into categories. The property `GroupCollection` is used to define the groups to be displayed in the project. The properties `GroupIdMapping` and `GroupNameMapping` are used to map the group details.
 
 The below code snippet explains grouping of the resources in resource allocation view.
+
+{% tabs %}
 
 {% highlight cshtml %}
 
@@ -175,7 +187,7 @@ The below code snippet explains grouping of the resources in resource allocation
     .Resources(ViewBag.resources)
     .Datasource(ViewBag.datasource)
 )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 {% highlight c# %}
@@ -248,6 +260,8 @@ The below code snippet explains grouping of the resources in resource allocation
             return View();
         }
 {% endhighlight %}
+
+{% endtabs %}
 
 The below screen shot depicts a resource view in a project with 3 groups.
 
