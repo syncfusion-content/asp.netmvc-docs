@@ -13,14 +13,12 @@ The below code example explains how to achieve this requirement.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().Gantt("gantt")
-    
+@(Html.EJ().Gantt("gantt")    
     .ClientSideEvents(eve =>
     {
-      eve.TaskbarEditing("taskbarEditing");
-    })
-    
-)
+        eve.TaskbarEditing("taskbarEditing");
+    })    
+    )
 <script type="text/javascript">  
 function taskbarEditing(args) {
     args.roundOffDuration = true;

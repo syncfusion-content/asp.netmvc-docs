@@ -24,57 +24,37 @@ The following code example shows how to define template for taskbars in Gantt.
 {% highlight CSHTML %}
 
 <script type="text/x-jsrender" id="taskbarTemplate">
-
     <div class="e-gantt-template-taskbar bg-color">
-
         <div>
-
             //…
-
         </div>
-
         <div class="e-gantt-template-progressbar">
-
         </div>
-
     </div>
-
 </script>
 
 <script type="text/x-jsrender" id="parentTaskbarTemplate">
-
     <div class="e-gantt-template-taskbar">
-
         //…
-
         <div class="e-gantt-template-progressbar">
-
         </div>
-
     </div>
-
 </script>
 
 <script type="text/x-jsrender" id="milestoneTemplate">
-
     <div class="e-gantt-template-milestone" style="background-color:transparent;">
-
         <div class="e-gantt-milestone milestone-top"></div>
-
         <div class="e-gantt-milestone milestone-bottom"></div>
-
     </div>
-
 </script>
 
 @(Html.EJ().Gantt("Gantt")
     //...
     .TaskbarTemplate("#taskbarTemplate")
     .ParentTaskbarTemplate("#parentTaskbarTemplate")
-    .MilestoneTemplate("#milestoneTemplate")
-    .Datasource(ViewBag.datasource)
-);
-
+    .MilestoneTemplate("#milestoneTemplate")   
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -101,9 +81,9 @@ The following code example explains how to set task name field as right label an
 @(Html.EJ().Gantt("Gantt")
     //...
     .LeftTaskLabelMapping("TaskName")
-    .RightTaskLabelMapping("TaskID")
-    .Datasource(ViewBag.datasource)
-);
+    .RightTaskLabelMapping("TaskID")    
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -118,39 +98,27 @@ It is possible to customize the task labels with templates, by using `RightTaskL
 {% highlight CSHTML %}
 
 <script id="rightLabelTemplate" type="text/x-jsrender">
-
-    {{"{{"}}if #data['resourceNames']{{}}}}
-
-    <div>
-
-        {{"{{"}}for resourceInfo{{}}}}
-
-        <img src="14.2.0.26/themes/web/content/images/gantt/{{"{{"}}:resourceName{{}}}}.png" height="30px" />
-
-        <span style="margin-left:5px;">{{"{{"}}:resourceName{{}}}}</span> {{"{{"}}:~_getSeparator(#get("array").data.length,#index){{}}}} {{"{{"}}/for{{}}}}
-
-    </div>
-
-    {{/if}}
-
+{{"{{"}}if #data['resourceNames']{{}}}}
+<div>
+    {{"{{"}}for resourceInfo{{}}}}
+    <img src="themes/web/content/images/gantt/{{"{{"}}:resourceName{{}}}}.png" height="30px" />
+    <span style="margin-left:5px;">{{"{{"}}:resourceName{{}}}}</span> {{"{{"}}:~_getSeparator(#get("array").data.length,#index){{}}}} {{"{{"}}/for{{}}}}
+</div>
+{{/if}}
 </script>
 
 <script id="leftLabelTemplate" type="text/x-jsrender">
-
-    <div style="padding-top:5px;">
-
-        <span>{{"{{"}}:#data['taskName']{{}}}}  [{{"{{"}}:status{{}}}}%]</span>
-
-    </div>
-
+<div style="padding-top:5px;">
+    <span>{{"{{"}}:#data['taskName']{{}}}}  [{{"{{"}}:status{{}}}}%]</span>
+</div>
 </script>
 
 @(Html.EJ().Gantt("Gantt")
     //...
     .RightTaskLabelTemplate("#rightLabelTemplate")
-    .LeftTaskLabelTemplate("#leftLabelTemplate")
-    .Datasource(ViewBag.datasource)
-);
+    .LeftTaskLabelTemplate("#leftLabelTemplate")    
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -171,49 +139,31 @@ The following code example shows how to customize the tooltip.
 {% highlight CSHTML %}
 
 <script type="text/x-jsrender" id="tooltipTemplate">
-
     <table>
-
        {{"{{"}}if #data['resourceNames']{{}}}}
-
         <tr>
-
-            <td rowspan="3" style="padding:3px"><img src="14.2.0.26/themes/web/content/images/gantt/{{"{{"}}:#data['resourceNames']{{}}}}.png" height="40px" /></td>
-
+            <td rowspan="3" style="padding:3px"><img src="themes/web/content/images/gantt/{{"{{"}}:#data['resourceNames']{{}}}}.png" height="40px" /></td>
             <td style="padding:3px"><b>Task done By:</b></td>
-
             <td style="padding:3px">{{"{{"}}:#data['resourceNames']{{}}}}</td>
-
         </tr>
-
         {{/if{{}}}}
-
         <tr>
-
             <td style="padding:3px"><b>Starts On:</b></td>
-
             <td style="padding:3px">{{"{{"}}:~_ganttDateFormatter("startDate"){{}}}}</td>
-
         </tr>
-
         <tr>
-
             <td style="padding:3px"><b>Ends On:</b></td>
-
             <td style="padding:3px">{{"{{"}}:~_ganttDateFormatter("endDate"){{}}}}</td>
-
         </tr>
-
     </table>
-
 </script>
-
 
 @(Html.EJ().Gantt("Gantt")
     //...
     .TaskbarTooltipTemplateId("tooltipTemplate")
     .Datasource(ViewBag.datasource)
-);
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -260,9 +210,10 @@ The default dependency tooltip in Gantt can be customized by using `PredecessorT
 
 @(Html.EJ().Gantt("Gantt")
     //...
-    .PredecessorTooltipTemplate("#ToolTipTemplate")
-    .Datasource(ViewBag.datasource)
-);
+	.EnableTaskbarTooltip(true)
+    .PredecessorTooltipTemplate("#ToolTipTemplate")    
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -309,7 +260,8 @@ TreeGrid part tooltip can also be customized using `CellTooltipTemplate` propert
     .ShowGridCellTooltip(true)
     .CellTooltipTemplate("#CustomToolTip")
     .Datasource(ViewBag.datasource)
-);
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -365,9 +317,9 @@ Taskbar editing tooltip can be customized by using `TaskbarEditingTooltipTemplat
 
 @(Html.EJ().Gantt("Gantt")
     //...
-    .TaskbarEditingTooltipTemplateId("taskbar_editing_tooltip_template")
-    .Datasource(ViewBag.datasource)
-);
+    .TaskbarEditingTooltipTemplateId("taskbar_editing_tooltip_template")    
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -394,9 +346,9 @@ Progress bar editing tooltip can be customized by using `ProgressbarTooltipTempl
 
 @(Html.EJ().Gantt("Gantt")
     //...
-    .ProgressbarTooltipTemplateId("progressbar_editing_tooltip_template")
-    .Datasource(ViewBag.datasource)
-);
+    .ProgressbarTooltipTemplateId("progressbar_editing_tooltip_template")    
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 

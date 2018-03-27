@@ -8,32 +8,34 @@ documentation: ug
 ---
 # Export
 
-Exporting feature provides support to export Gantt content to excel and PDF files. To export the contents, the `ExcelExport` and `PdfExport` toolbar items must be added in the toolbar using the `ToolbarItems` property of `ToolbarSettings`. When you click, the toolbar exporting icons, it internally invokes the export public method of Gantt object to export.
-
+Gantt provides support to export the contents in PDF and excel. 
+To export the contents, the `ExcelExport` and `PdfExport` toolbar items must be included in the `ToolbarSettings.ToolbarItems` property. 
+And you need to call the [`export`](/api/js/ejgantt#methods:export "export(action, [serverEvent], [multipleExport])") method with the export mapper as parameter in the toolbar button click action. We can export multiple Gantt control in same file by using multiple exporting support, this can be enabled by setting `AllowMultipleExporting` property as `true`.
 The below code snippet explains the above behavior,
 
 {% tabs %}
-{% highlight razor %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-//...
-.ToolbarSettings(tool =>
- {
-       tool.ShowToolbar(true);
-       tool.ToolbarItems(new List<GanttToolBarItems>()
-       {                      
-	      GanttToolBarItems.PdfExport, 
-	      GanttToolBarItems.ExcelExport
-       });
- })
-.Datasource(ViewBag.datasource)
-)
+    //...
+    .ToolbarSettings(tool =>
+    {
+        tool.ShowToolbar(true);
+        tool.ToolbarItems(new List<GanttToolBarItems>()
+        {                      
+            GanttToolBarItems.PdfExport, 
+            GanttToolBarItems.ExcelExport
+        });
+    })
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public partial class GanttController : Controller
+public class GanttController : Controller
     {
         public ActionResult GanttExporting()
         {
@@ -50,7 +52,7 @@ public partial class GanttController : Controller
             settings.Locale = Request.Form["locale"];
             exp.Export(obj, datasource, settings, "Gantt");
         }
-        public void ExportToExcel(string GanttModel)
+         public void ExportToExcel(string GanttModel)
         {
             ExcelExport exp = new ExcelExport();
             var DataSource = this.GetEditingDataSource();
@@ -58,18 +60,18 @@ public partial class GanttController : Controller
             exp.Export(obj, DataSource, "GanttExport.xlsx", ExcelVersion.Excel2010, new GanttExportSettings() { Theme = ExportTheme.FlatSaffron });
         }
 
-        private GanttProperties ConvertGanttObject(string gridProperty)
+         private GanttProperties ConvertGanttObject(string gridProperty)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
             GanttProperties gridProp = new GanttProperties();
-            foreach (KeyValuePair<string, object> dataSource in div)
+            foreach (KeyValuePair<string, object> ds in div)
             {
-                var property = gridProp.GetType().GetProperty(dataSource.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
+                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
                 if (property != null)
                 {
                     Type type = property.PropertyType;
-                    string serialize = serializer.Serialize(dataSource.Value);
+                    string serialize = serializer.Serialize(ds.Value);
                     object value = serializer.Deserialize(serialize, type);
                     property.SetValue(gridProp, value, null);
                 }
@@ -80,6 +82,8 @@ public partial class GanttController : Controller
 
 {% endhighlight %}
 {% endtabs %} 
+
+The PDF and Excel exporting services for Gantt are explained in detail [here](https://help.syncfusion.com/js/gantt/services-reference).
 
 The below screen shot shows Gantt with excel and PDF exporting enabled.
 ![](Export_images/Export_img1.png)
@@ -104,23 +108,24 @@ Currently server helper function allows following two types of exporting.
 Mappers is used to change the default routing path for exporting. By using `Mappers` you can change any action name in controller and the action can be in any controller (Need not to be in Gantt View Page Controller).
 
 {% tabs %} 
-{% highlight razor %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-//...
-.Mappers(map => map.ExportToPdfAction("PdfAction").ExportToExcelAction("ExcelAction"))
-.ToolbarSettings(tool =>
- {
-        tool.ShowToolbar(true);
-        tool.ToolbarItems(new List<GanttToolBarItems>()
-        {                      
-              GanttToolBarItems.PdfExport,
-	GanttToolBarItems.ExcelExport
+    //...
+    .Mappers(map => map.ExportToPdfAction("PdfAction").ExportToExcelAction("ExcelAction"))
+    .ToolbarSettings(tool =>
+    {
+            tool.ShowToolbar(true);
+            tool.ToolbarItems(new List<GanttToolBarItems>()
+            {                      
+                GanttToolBarItems.PdfExport,
+                GanttToolBarItems.ExcelExport
 
-        });
- })
-//...
-)
+            });
+    })
+    //...
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -159,22 +164,22 @@ Multiple export is used for export more than one Gantt object in the same file. 
 The following code example describes exporting multiple Gantt in PDF format
 
 {% tabs %} 
-{% highlight razor %}
+{% highlight CSHTML %}
 
 @(Html.EJ().Gantt("GanttContainer")
-//...
-.AllowMultipleExporting(true)
-.ToolbarSettings(tool =>
- {
-        tool.ShowToolbar(true);
-        tool.ToolbarItems(new List<GanttToolBarItems>()
-        {                      
-              GanttToolBarItems.PdfExport
-        });
- })
- .Mappers(map => map.ExportToPdfAction("MultipleExportToPDF")
-.Datasource(ViewBag.datasource)
-)
+    //...
+    .AllowMultipleExporting(true)
+    .ToolbarSettings(tool =>
+    {
+            tool.ShowToolbar(true);
+            tool.ToolbarItems(new List<GanttToolBarItems>()
+            {                      
+                GanttToolBarItems.PdfExport
+            });
+    })
+    .Mappers(map => map.ExportToPdfAction("MultipleExportToPDF"))
+    .Datasource(ViewBag.datasource)
+    )
 
 @(Html.EJ().Gantt("GanttContainer1")
 //...
@@ -185,6 +190,7 @@ The following code example describes exporting multiple Gantt in PDF format
 //...
 .Datasource(ViewBag.datasource2)
 )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -226,6 +232,8 @@ public partial class GanttController : Controller
 
 {% endhighlight %}
 {% endtabs %} 
+
+[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttmultipleexporting) here to view the online demo sample for multiple exporting.
 
 ## Export Theme
 The Gantt export supports the below themes, 
