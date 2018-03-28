@@ -9,14 +9,30 @@ documentation: ug
 
 # Overview
 
-The Gantt control is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects and also you can update the project schedule through interactions like editing, dragging and resizing.
+The Essential JavaScript Gantt control is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects and also you can update the project schedule through interactions like editing, dragging and resizing.
 
-## Key Features:
+**Key Features**
 
 * Sorting
 * Editing
+* Filtering
 * Task relationship
 * Stripline
 * Baseline
-* Localization   
-* Resource display
+* Timeline customization
+* Work break down structure
+* Taskbar customization
+* Task label customization
+* Localization
+* Resources
+* Resource allocation view
+* Critical path
+* Selection
+* Task scheduling modes
+* Work breakdown structure
+* Exporting
+* Row drag and drop
+* Sequencing tasks
+* Searching
+* Holidays
+* Work and effort driven tasks

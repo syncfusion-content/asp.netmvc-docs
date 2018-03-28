@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar
 
-In Gantt we can show/hide the Toolbar by using [`ShowToolbar`](https://help.syncfusion.com/api/js/ejgantt#members:toolbarsettings-showtoolbar "showToolbar") property.We can add default toolbar items by [`ToolbarItems`](https://help.syncfusion.com/api/js/ejgantt#members:toolbarsettings-toolbaritems "toolbarItems"). User can also create a custom toolbar items by using [`CustomToolbarItems`](https://help.syncfusion.com/api/js/ejgantt#members:toolbarsettings-customToolbarItems "customToolbarItems").
+In Gantt we can show/hide the Toolbar by using `ShowToolbar` property.We can add default toolbar items by `ToolbarItems`. User can also create a custom toolbar items by using `CustomToolbarItems`.
 
 ## Default Toolbar Items
 Using Gantt default toolbar items we can perform below operations.
@@ -46,35 +46,36 @@ Using Gantt default toolbar items we can perform below operations.
 
 We can enable Gantt toolbar by using below code example:
 {% highlight CSHTML %}
-  @(Html.EJ().Gantt("Gantt")                   
-                   .ToolbarSettings(toolbar =>
-                   {
-                       toolbar.ShowToolbar(true);
-                       toolbar.ToolbarItems(new List<GanttToolBarItems>()
-                       {
-                           GanttToolBarItems.Add,
-                           GanttToolBarItems.Edit,
-                           GanttToolBarItems.Delete,
-                           GanttToolBarItems.Update,
-                           GanttToolBarItems.Cancel,
-                           GanttToolBarItems.Indent,
-                           GanttToolBarItems.Outdent,
-                           GanttToolBarItems.ExpandAll,
-                           GanttToolBarItems.CollapseAll,
-                           GanttToolBarItems.NextTimeSpan,
-                           GanttToolBarItems.PrevTimeSpan,
-                           GanttToolBarItems.Search,
-                           GanttToolBarItems.PdfExport,
-                           GanttToolBarItems.ExcelExport,
-                           GanttToolBarItems.CriticalPath                           
-                       });
-                   })                   
-        )
+@(Html.EJ().Gantt("Gantt")                   
+    .ToolbarSettings(toolbar =>
+    {
+        toolbar.ShowToolbar(true);
+        toolbar.ToolbarItems(new List<GanttToolBarItems>()
+        {
+            GanttToolBarItems.Add,
+            GanttToolBarItems.Edit,
+            GanttToolBarItems.Delete,
+            GanttToolBarItems.Update,
+            GanttToolBarItems.Cancel,
+            GanttToolBarItems.Indent,
+            GanttToolBarItems.Outdent,
+            GanttToolBarItems.ExpandAll,
+            GanttToolBarItems.CollapseAll,
+            GanttToolBarItems.NextTimeSpan,
+            GanttToolBarItems.PrevTimeSpan,
+            GanttToolBarItems.Search,
+            GanttToolBarItems.PdfExport,
+            GanttToolBarItems.ExcelExport,
+            GanttToolBarItems.CriticalPath                           
+        });
+    })                   
+    )
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 The following screenshot displays the toolbar option in Gantt control.
 ![](Toolbar_images/Toolbar_img1.png)
 
-N> To perform add,edit,delete,cancel,update,indent,outdent using Toolbar items we need to enable add/edit/delete/indent using [`EditSettings`](https://help.syncfusion.com/api/js/ejGantt#members:editsettings "editSettings").
+N> To perform add,edit,delete,cancel,update,indent,outdent using Toolbar items we need to enable add/edit/delete/indent using `EditSettings`.
  
 ## Custom Toolbar Items
 
@@ -86,49 +87,51 @@ CustomToolbarItems allows us to insert custom icons and custom template in Gantt
 
 * **TooltipText**-Displays tooltip text for the custom icons. 
 
-To insert EJ Controls in Gantt toolbar we need to initiate the control in [`Create`](https://help.syncfusion.com/api/js/ejgantt#events:create "create") client side event.In [`ToolbarClick`](https://help.syncfusion.com/api/js/ejgantt#events:toolbarclick "toolbarclick") client side event we can bind actions to the custom toolbar items.
+To insert EJ Controls in Gantt toolbar we need to initiate the control in `Create` client side event.In `ToolbarClick` client side event we can bind actions to the custom toolbar items.
 
 {% highlight CSHTML %}
-    @(Html.EJ().Gantt("ToolbarTemplate")                  
-           .ToolbarSettings(toolbar =>
+@(Html.EJ().Gantt("ToolbarTemplate")                  
+    .ToolbarSettings(toolbar =>
+    {
+        toolbar.ShowToolbar(true);
+        toolbar.CustomToolbarItems(ct =>
             {
-              toolbar.ShowToolbar(true);
-              toolbar.CustomToolbarItems(ct =>
-                 {
-                   ct.TemplateID("#ColumnVisibility").TooltipText("Column Visibility").Add();                                  
-                   ct.Text("Reset").TooltipText("Reset").Add();
-                  });                          
-            })                   
-           .ClientSideEvents(cs =>
-           {
-                 cs.ToolbarClick("toolbarClick");
-                 cs.Create("create");
-            })                 
-        )        
-    <script id="ColumnVisibility" type="text/x-jsrender">
-        <input id="dropdownContainer" />
-    </script>
-    <script type="text/javascript">     
-        function toolbarClick(args) {
-            if (args.itemName == "Reset") {
-               //we can bind the custom actions here
-            }
-        }
-	//Here we can append custom EJ controls
-        function create(args) {            
-            $("#dropdownContainer").ejDropDownList({ });   
-        }
-    </script>
-     <style type="text/css" class="cssStyles">
-     	#ToolbarTemplate_ColumnVisibility {
-            padding-top: 2px;
-            padding-bottom: 0px;
-        }
-        .Reset:before {
-            content: "\e677";
-        }
-    </style>
+            ct.TemplateID("#ColumnVisibility").TooltipText("Column Visibility").Add();                                  
+            ct.Text("Reset").TooltipText("Reset").Add();
+            });                          
+    })                   
+    .ClientSideEvents(cs =>
+    {
+            cs.ToolbarClick("toolbarClick");
+            cs.Create("create");
+    })                 
+)
+@(Html.EJ().ScriptManager())        
+<script id="ColumnVisibility" type="text/x-jsrender">
+    <input id="dropdownContainer" />
+</script>
+<script type="text/javascript">     
+function toolbarClick(args) {
+    if (args.itemName == "Reset") {
+        //we can bind the custom actions here
+    }
+}
+//Here we can append custom EJ controls
+function create(args) {            
+    $("#dropdownContainer").ejDropDownList({ });   
+}
+</script>
+<style type="text/css" class="cssStyles">
+#ToolbarTemplate_ColumnVisibility {
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+.Reset:before {
+    content: "\e677";
+}
+</style>
 {% endhighlight %}
+
 ![](Toolbar_images/Toolbar_img2.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/gantt/gantttoolbartemplate) here to view the demo sample for custom toolbar item
