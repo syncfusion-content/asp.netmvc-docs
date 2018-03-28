@@ -154,3 +154,56 @@ Splitter pane size can be changed by updating model property of paneSize and by 
 {% endhighlight %}
 
 ![](How-To_images/Pane_Size.png) 
+
+## Render Splitter from Code behind
+
+Splitter can be rendered from the code behind by initializing the required properties in controller and passing those properties via **ViewData** or **Model** to the client side
+
+The following code illustrates the initialization of Splitter properties in the controller.
+
+{% highlight c# %}
+
+//Namespace to get the JavaScript (Splitter) component properties
+using Syncfusion.JavaScript.Models;
+
+namespace MvcApplication.Controllers
+{
+    public class SplitterController: Controller
+    {
+        public ActionResult SplitterFeatures()
+        {
+
+            //Initializing the splitter model
+
+            SplitterProperties splitterObj = new SplitterProperties();
+
+            //Initializing the split panes and other properties
+
+            splitterObj.PaneProperties.Add(new PaneProperties() { Collapsible = true, Expandable = true, ContentTemplate = new Syncfusion.JavaScript.MvcTemplate<PaneProperties> { RazorViewTemplate = (data) => { return "Pane 1"; } } });
+            splitterObj.PaneProperties.Add(new PaneProperties() { Collapsible = true, Expandable = true, ContentTemplate = new Syncfusion.JavaScript.MvcTemplate<PaneProperties> { RazorViewTemplate = (data) => { return "Pane 2"; } } });
+
+            splitterObj.Orientation = Syncfusion.JavaScript.Orientation.Vertical;
+            splitterObj.Height = "300px";
+            splitterObj.Width = "500px";
+
+
+             //Passing Splitter properties using the ViewData
+
+             ViewData["SplitterModel"] = splitterObj;
+
+             return View();
+        }
+    }
+}
+
+{% endhighlight %}
+
+Binding the Splitter properties passed via **ViewData** from the controller in the client side as below.
+
+{% highlight CSHTML %}
+
+@{
+    Html.EJ().Splitter("Splitter", (Syncfusion.JavaScript.Models.SplitterProperties)ViewData["SplitterModel"]).Render();
+}
+
+{% endhighlight %}

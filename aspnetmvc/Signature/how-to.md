@@ -109,3 +109,52 @@ We can detect whether not there has been any input to the signature control sinc
     </script>   
 
 {% endhighlight %}
+
+## Render Signature from Code behind
+
+Signature can be rendered from the code behind by initializing the required properties in controller and passing those properties via **ViewData** or **Model** to the client side
+
+The following code illustrates the initialization of Signature properties in the controller.
+
+{% highlight c# %}
+
+//Namespace to get the JavaScript (Signature) component properties
+using Syncfusion.JavaScript.Models;
+
+namespace MvcApplication.Controllers
+{
+    public class SignatureController: Controller
+    {
+        public ActionResult SignatureFeatures()
+        {
+
+            //Initializing the Signature model
+
+            SignatureProperties signObj = new SignatureProperties();
+
+            //Initializing the other properties 
+
+            signObj.Height = "200px";
+            signObj.IsResponsive = true;
+            signObj.StrokeWidth = 5;
+
+           //Passing Signature properties using the ViewData
+
+             ViewData["SignModel"] = signObj;
+
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+
+Binding the Signature properties passed via **ViewData** from the controller in the client side as below.
+
+{% highlight CSHTML %}
+
+@{
+    Html.EJ().Signature("sign1", (Syncfusion.JavaScript.Models.SignatureProperties)ViewData["SignModel"]).Render();
+}
+
+{% endhighlight %}
