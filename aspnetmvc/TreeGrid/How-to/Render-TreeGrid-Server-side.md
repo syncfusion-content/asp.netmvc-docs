@@ -7,11 +7,11 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Rendering the TreeGrid using TreeGrid properties in server-side
+# Rendering the TreeGrid using TreeGridProperties in server-side
 
-The TreeGridProperties helps to render the TreeGrid control in server-side.
+The `TreeGridProperties` helps to render the TreeGrid control in server-side.
 
-The following code example which will explain to render the TreeGrid control in server-side.
+The following code example explains how to render the TreeGrid control in server-side.
 
 {% tabs %}
 
@@ -54,6 +54,6 @@ The following code example which will explain to render the TreeGrid control in 
 
 {% endtabs %} 
 
-The below screenshot show the output of above code example.
+The below screenshot shows the output of above code example.
 
 ![](Render-TreeGrid-Server-side-images/TreeGrid_img1.png)
