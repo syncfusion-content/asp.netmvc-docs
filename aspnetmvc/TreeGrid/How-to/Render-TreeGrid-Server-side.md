@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Rendering the TreeGrid using TreeGridProperties in server-side
+# Rendering the TreeGrid control using TreeGridProperties in server-side
 
 The `TreeGridProperties` helps to render the TreeGrid control in server-side.
 
