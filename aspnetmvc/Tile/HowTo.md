@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to - Tab control for Syncfusion ASP.NET MVC
-description: How To Section in tab control for Syncfusion ASP.NET MVC
-platform: js
-control: Tab
+title: How to - Tile control for Syncfusion ASP.NET MVC
+description: How To Section in Tile control for Syncfusion ASP.NET MVC
+platform: ejmvc
+control: Tile
 documentation: ug
 ---
 
