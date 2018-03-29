@@ -7,7 +7,7 @@ control: Gantt
 documentation: ug
 ---
 
-# Rendering the Gantt using Gantt properties in server-side
+# Rendering the Gantt control using GanttProperties in server-side
 
 The `GanttProperties` helps to render the Gantt control in server-side.
 
