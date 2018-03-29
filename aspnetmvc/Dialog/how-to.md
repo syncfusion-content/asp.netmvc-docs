@@ -184,3 +184,62 @@ Initialize Footer in Dialog widgets by adding the script section as below.
 
 ![Create Alert Dialog](how-to_images\dialog-footer1.png)
 
+## Render Dialog from Code behind
+
+Dialog can be rendered from the code behind by initializing the required properties in controller and passing those properties via **ViewData** or **Model** to the client side.
+
+The following code illustrates the initialization of Dialog properties in the controller.
+
+{% highlight c# %}
+
+//Namespace to get the JavaScript (Dialog) component properties
+
+using Syncfusion.JavaScript;
+using Syncfusion.JavaScript.Models;
+
+namespace MvcApplication.Controllers
+{
+    public class DialogController : Controller
+    {
+        public ActionResult DialogFeatures()
+        {
+            //Initializing the Dialog model
+
+            DialogProperties DialogObj = new DialogProperties();
+
+            //Initializing the content and other properties
+
+            DialogObj.ShowOnInit = true;
+            DialogObj.Title = "My Dialog";
+            DialogObj.ContentTemplate = new MvcTemplate<object>
+            {
+                RazorViewTemplate = (data) =>
+                {
+                    return "This is Dialog content";
+                }
+            };
+            DialogObj.Width = "550";
+            DialogObj.IsResponsive = true;
+
+            //Passing Dialog properties using the ViewData
+
+            ViewData["DialogModel"] = DialogObj;
+
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+
+Binding the Dialog properties passed via **ViewData** from the controller in the client side as below.
+
+{% highlight CSHTML %}
+
+@{
+
+        Html.EJ().Dialog("basicDialog", (Syncfusion.JavaScript.Models.DialogProperties)ViewData["DialogModel"]).Render();   // render the Dialog in view
+
+}
+
+{% endhighlight %}
