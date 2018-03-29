@@ -99,3 +99,62 @@ Multiple items can be selected by using [EnableCheckMark](https://help.syncfusio
 
 {% endhighlight %}
     
+
+## Render ListView from Code behind
+
+ListView can be rendered from the code behind by initializing the required properties in controller and passing those properties via **ViewData** or **Model** to the client side
+
+The following code illustrates the initialization of ListView properties in the controller.
+
+{% highlight c# %}
+
+//Namespace to get the JavaScript (ListView) component properties
+using Syncfusion.JavaScript.Models;
+
+namespace MvcApplication.Controllers
+{
+    public class ListViewController: Controller
+    {
+
+        public ActionResult ListviewFeatures()
+        {
+
+              //Initializing the Listbox model
+
+          ListViewProperties ListviewObj = new ListViewProperties();
+
+
+            //Initializing the data as items and other properties 
+
+            ListViewProperties ListviewObj = new ListViewProperties();
+            ListviewObj.ShowHeader = false;
+            ListviewObj.Width = 200;
+            List<ListViewItem> obj = new List<ListViewItem>();
+            obj.Add(new ListViewItem() { Text = "Home" });
+            obj.Add(new ListViewItem() { Text = "Profile" });
+            obj.Add(new ListViewItem() { Text = "Photos" });
+            obj.Add(new ListViewItem() { Text = "Location" });
+
+            ListviewObj.Items = obj;
+            ListviewObj.EnableCheckMark = true;
+
+            //Passing Listview properties using the ViewData
+
+            ViewData["ListModel"] = ListObj;
+
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+
+Binding the ListView properties passed via **ViewData** from the controller in the client side as below.
+
+{% highlight CSHTML %}
+
+@{
+    Html.EJ().ListView("Listview", (Syncfusion.JavaScript.Models.ListViewProperties)ViewData["ListViewModel"]).Render();
+}
+
+{% endhighlight %}
