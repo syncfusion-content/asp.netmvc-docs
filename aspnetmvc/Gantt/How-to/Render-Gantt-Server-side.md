@@ -9,9 +9,9 @@ documentation: ug
 
 # Rendering the Gantt using Gantt properties in server-side
 
-The GanttProperties helps to render the Gantt control in server-side.
+The `GanttProperties` helps to render the Gantt control in server-side.
 
-The following code example which will explain to render the Gantt control in server-side.
+The following code example explains how to render the Gantt control in server-side.
 
 {% tabs %}
 
@@ -56,6 +56,6 @@ The following code example which will explain to render the Gantt control in ser
 
 {% endtabs %} 
 
-The below screenshot show the output of above code example.
+The below screenshot shows the output of above code example.
 
 ![](Render-Gantt-Server-side-images/Gantt_img1.png)
