@@ -46,26 +46,26 @@ namespace PivotGrid
     {
         public ActionResult PivotGridFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotGridProperties pgrid = new Syncfusion.JavaScript.Models.PivotGridProperties();
+            Syncfusion.JavaScript.Models.PivotGridProperties pivotgrid = new Syncfusion.JavaScript.Models.PivotGridProperties();
 
-            PivotDataSource pgridDS = new PivotDataSource();
+            PivotDataSource pivotgridDS = new PivotDataSource();
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "Country", FieldCaption = "Country" });
             rows.Add(new Field() { FieldName = "State", FieldCaption = "State" });
-            pgridDS.Rows = rows;
+            pivotgridDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "Product", FieldCaption = "Product" });
-            pgridDS.Columns = cols;
+            pivotgridDS.Columns = cols;
 
-            pgrid.Load = "load";
+            pivotgrid.Load = "load";
 
             List<Field> values = new List<Field>();
             values.Add(new Field() { FieldName = "Amount" });
-            pgridDS.Values = values;
-            pgrid.DataSource = pgridDS;
-            return View(pgrid);
+            pivotgridDS.Values = values;
+            pivotgrid.DataSource = pivotgridDS;
+            return View(pivotgrid);
         }
     }
 }
@@ -99,30 +99,30 @@ namespace PivotGrid
     {
         public ActionResult PivotGridFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotGridProperties pgrid = new Syncfusion.JavaScript.Models.PivotGridProperties();
+            Syncfusion.JavaScript.Models.PivotGridProperties pivotgrid = new Syncfusion.JavaScript.Models.PivotGridProperties();
 
-            PivotDataSource pgridDS = new PivotDataSource();
-            pgridDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
-            pgridDS.Cube = "Adventure Works";
-            pgridDS.Catalog = "Adventure Works DW 2008 SE";
+            PivotDataSource pivotgridDS = new PivotDataSource();
+            pivotgridDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
+            pivotgridDS.Cube = "Adventure Works";
+            pivotgridDS.Catalog = "Adventure Works DW 2008 SE";
 
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "[Date].[Fiscal]" });
-            pgridDS.Rows = rows;
+            pivotgridDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "[Customer].[Customer Geography]" });
-            pgridDS.Columns = cols;
+            pivotgridDS.Columns = cols;
 
 
             List<MeasuresItems> measures = new List<MeasuresItems>();
             measures.Add(new MeasuresItems() { FieldName = "[Measures].[Internet Sales Amount]" });
             List<Field> values = new List<Field>();
             values.Add(new Field() { Measures = measures, Axis = Syncfusion.JavaScript.AxisName.Column });
-            pgridDS.Values = values;
-            pgrid.DataSource = pgridDS;
-            return View(pgrid);
+            pivotgridDS.Values = values;
+            pivotgrid.DataSource = pivotgridDS;
+            return View(pivotgrid);
         }
     }
 }

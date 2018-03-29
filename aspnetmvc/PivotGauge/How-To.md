@@ -45,26 +45,26 @@ namespace PivotGauge
     {
         public ActionResult PivotGaugeFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotGaugeProperties pgauge = new Syncfusion.JavaScript.Models.PivotGaugeProperties();
+            Syncfusion.JavaScript.Models.PivotGaugeProperties pivotgauge = new Syncfusion.JavaScript.Models.PivotGaugeProperties();
 
-            PivotDataSource pgaugeDS = new PivotDataSource();
+            PivotDataSource pivotgaugeDS = new PivotDataSource();
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "Country", FieldCaption = "Country" });
             rows.Add(new Field() { FieldName = "State", FieldCaption = "State" });
-            pgaugeDS.Rows = rows;
+            pivotgaugeDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "Product", FieldCaption = "Product" });
-            pgaugeDS.Columns = cols;
+            pivotgaugeDS.Columns = cols;
 
-            pgauge.Load = "load";
+            pivotgauge.Load = "load";
 
             List<Field> values = new List<Field>();
             values.Add(new Field() { FieldName = "Amount" });
-            pgaugeDS.Values = values;
-            pgauge.DataSource = pgaugeDS;
-            return View(pgauge);
+            pivotgaugeDS.Values = values;
+            pivotgauge.DataSource = pivotgaugeDS;
+            return View(pivotgauge);
         }
     }
 }
@@ -98,30 +98,30 @@ namespace PivotGauge
     {
         public ActionResult PivotGaugeFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotGaugeProperties pgauge = new Syncfusion.JavaScript.Models.PivotGaugeProperties();
+            Syncfusion.JavaScript.Models.PivotGaugeProperties pivotgauge = new Syncfusion.JavaScript.Models.PivotGaugeProperties();
 
-            PivotDataSource pgaugeDS = new PivotDataSource();
-            pgaugeDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
-            pgaugeDS.Cube = "Adventure Works";
-            pgaugeDS.Catalog = "Adventure Works DW 2008 SE";
+            PivotDataSource pivotgaugeDS = new PivotDataSource();
+            pivotgaugeDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
+            pivotgaugeDS.Cube = "Adventure Works";
+            pivotgaugeDS.Catalog = "Adventure Works DW 2008 SE";
 
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "[Date].[Fiscal]" });
-            pgaugeDS.Rows = rows;
+            pivotgaugeDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "[Customer].[Customer Geography]" });
-            pgaugeDS.Rows = cols;
+            pivotgaugeDS.Rows = cols;
 
 
             List<MeasuresItems> measures = new List<MeasuresItems>();
             measures.Add(new MeasuresItems() { FieldName = "[Measures].[Internet Sales Amount]" });
             List<Field> values = new List<Field>();
             values.Add(new Field() { Measures = measures, Axis = Syncfusion.JavaScript.AxisName.Column });
-            pgaugeDS.Values = values;
-            pgauge.DataSource = pgaugeDS;
-            return View(pgauge);
+            pivotgaugeDS.Values = values;
+            pivotgauge.DataSource = pivotgaugeDS;
+            return View(pivotgauge);
         }
     }
 }

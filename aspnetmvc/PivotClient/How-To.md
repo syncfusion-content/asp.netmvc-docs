@@ -46,26 +46,26 @@ namespace PivotClient
     {
         public ActionResult PivotClientFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotClientProperties pclient = new Syncfusion.JavaScript.Models.PivotClientProperties();
+            Syncfusion.JavaScript.Models.PivotClientProperties pivotclient = new Syncfusion.JavaScript.Models.PivotClientProperties();
 
-            PivotDataSource pclientDS = new PivotDataSource();
+            PivotDataSource pivotclientDS = new PivotDataSource();
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "Country", FieldCaption = "Country" });
             rows.Add(new Field() { FieldName = "State", FieldCaption = "State" });
-            pclientDS.Rows = rows;
+            pivotclientDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "Product", FieldCaption = "Product" });
-            pclientDS.Columns = cols;
+            pivotclientDS.Columns = cols;
 
-             pclient.Load = "load";
+             pivotclient.Load = "load";
 
             List<Field> values = new List<Field>();
             values.Add(new Field() { FieldName = "Amount" });
-            pclientDS.Values = values;
-            pclient.DataSource = pclientDS;
-            return View(pclient);
+            pivotclientDS.Values = values;
+            pivotclient.DataSource = pivotclientDS;
+            return View(pivotclient);
         }
     }
 }
@@ -99,29 +99,29 @@ namespace PivotClient
     {
         public ActionResult PivotClientFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotClientProperties pclient = new Syncfusion.JavaScript.Models.PivotClientProperties();
+            Syncfusion.JavaScript.Models.PivotClientProperties pivotclient = new Syncfusion.JavaScript.Models.PivotClientProperties();
 
-            PivotDataSource pclientDS = new PivotDataSource();
-            pclientDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
-            pclientDS.Cube = "Adventure Works";
-            pclientDS.Catalog = "Adventure Works DW 2008 SE";
+            PivotDataSource pivotclientDS = new PivotDataSource();
+            pivotclientDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
+            pivotclientDS.Cube = "Adventure Works";
+            pivotclientDS.Catalog = "Adventure Works DW 2008 SE";
 
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "[Date].[Fiscal]" });
-            pclientDS.Rows = rows;
+            pivotclientDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "[Customer].[Customer Geography]" });
-            pclientDS.Columns = cols;
+            pivotclientDS.Columns = cols;
 
             List<MeasuresItems> measures = new List<MeasuresItems>();
             measures.Add(new MeasuresItems() { FieldName = "[Measures].[Internet Sales Amount]" });
             List<Field> values = new List<Field>();
             values.Add(new Field() { Measures = measures, Axis = Syncfusion.JavaScript.AxisName.Column });
-            pclientDS.Values = values;
-            pclient.DataSource = pclientDS;
-            return View(pclient);
+            pivotclientDS.Values = values;
+            pivotclient.DataSource = pivotclientDS;
+            return View(pivotclient);
         }
     }
 }

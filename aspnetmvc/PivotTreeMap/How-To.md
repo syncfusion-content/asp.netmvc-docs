@@ -37,30 +37,30 @@ namespace PivotTreeMap
     {
         public ActionResult PivotTreeMapFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotTreeMapProperties ptreemap = new Syncfusion.JavaScript.Models.PivotTreeMapProperties();
+            Syncfusion.JavaScript.Models.PivotTreeMapProperties pivottreemap = new Syncfusion.JavaScript.Models.PivotTreeMapProperties();
 
-            PivotDataSource ptreemapDS = new PivotDataSource();
-            ptreemapDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
-            ptreemapDS.Cube = "Adventure Works";
-            ptreemapDS.Catalog = "Adventure Works DW 2008 SE";
+            PivotDataSource pivottreemapDS = new PivotDataSource();
+            pivottreemapDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
+            pivottreemapDS.Cube = "Adventure Works";
+            pivottreemapDS.Catalog = "Adventure Works DW 2008 SE";
 
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "[Date].[Fiscal]" });
-            ptreemapDS.Rows = rows;
+            pivottreemapDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "[Customer].[Customer Geography]" });
-            ptreemapDS.Columns = cols;
+            pivottreemapDS.Columns = cols;
 
 
             List<MeasuresItems> measures = new List<MeasuresItems>();
             measures.Add(new MeasuresItems() { FieldName = "[Measures].[Internet Sales Amount]" });
             List<Field> values = new List<Field>();
             values.Add(new Field() { Measures = measures, Axis = Syncfusion.JavaScript.AxisName.Column });
-            ptreemapDS.Values = values;
-            ptreemap.DataSource = ptreemapDS;
-            return View(ptreemap);
+            pivottreemapDS.Values = values;
+            pivottreemap.DataSource = pivottreemapDS;
+            return View(pivottreemap);
         }
     }
 }

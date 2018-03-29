@@ -46,26 +46,26 @@ namespace PivotChart
     {
         public ActionResult PivotChartFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotChartProperties pchart = new Syncfusion.JavaScript.Models.PivotChartProperties();
+            Syncfusion.JavaScript.Models.PivotChartProperties pivotchart = new Syncfusion.JavaScript.Models.PivotChartProperties();
 
-            PivotDataSource pchartDS = new PivotDataSource();
+            PivotDataSource pivotchartDS = new PivotDataSource();
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "Country", FieldCaption = "Country" });
             rows.Add(new Field() { FieldName = "State", FieldCaption = "State" });
-            pchartDS.Rows = rows;
+            pivotchartDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "Product", FieldCaption = "Product" });
-            pchartDS.Columns = cols;
+            pivotchartDS.Columns = cols;
 
-            pchart.Load = "load";
+            pivotchart.Load = "load";
 
             List<Field> values = new List<Field>();
             values.Add(new Field() { FieldName = "Amount" });
-            pchartDS.Values = values;
-            pchart.DataSource = pchartDS;
-            return View(pchart);
+            pivotchartDS.Values = values;
+            pivotchart.DataSource = pivotchartDS;
+            return View(pivotchart);
         }
     }
 }
@@ -99,30 +99,30 @@ namespace PivotChart
     {
         public ActionResult PivotChartFeatures()
         {
-            Syncfusion.JavaScript.Models.PivotChartProperties pchart = new Syncfusion.JavaScript.Models.PivotChartProperties();
+            Syncfusion.JavaScript.Models.PivotChartProperties pivotchart = new Syncfusion.JavaScript.Models.PivotChartProperties();
 
-            PivotDataSource pchartDS = new PivotDataSource();
-            pchartDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
-            pchartDS.Cube = "Adventure Works";
-            pchartDS.Catalog = "Adventure Works DW 2008 SE";
+            PivotDataSource pivotchartDS = new PivotDataSource();
+            pivotchartDS.Data = "https://bi.syncfusion.com/olap/msmdpump.dll";
+            pivotchartDS.Cube = "Adventure Works";
+            pivotchartDS.Catalog = "Adventure Works DW 2008 SE";
 
 
             List<Field> rows = new List<Field>();
             rows.Add(new Field() { FieldName = "[Date].[Fiscal]" });
-            pchartDS.Rows = rows;
+            pivotchartDS.Rows = rows;
 
             List<Field> cols = new List<Field>();
             cols.Add(new Field() { FieldName = "[Customer].[Customer Geography]" });
-            pchartDS.Rows = cols;
+            pivotchartDS.Rows = cols;
 
 
             List<MeasuresItems> measures = new List<MeasuresItems>();
             measures.Add(new MeasuresItems() { FieldName = "[Measures].[Internet Sales Amount]" });
             List<Field> values = new List<Field>();
             values.Add(new Field() { Measures = measures, Axis = Syncfusion.JavaScript.AxisName.Column });
-            pchartDS.Values = values;
-            pchart.DataSource = pchartDS;
-            return View(pchart);
+            pivotchartDS.Values = values;
+            pivotchart.DataSource = pivotchartDS;
+            return View(pivotchart);
         }
     }
 }
