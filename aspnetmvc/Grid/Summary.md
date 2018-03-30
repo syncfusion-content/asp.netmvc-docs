@@ -428,7 +428,7 @@ namespace SyncfusionMvcApplication3.Controllers
 {% highlight js %}
 
 <script id="templateData" type="text/x-jsrender">
-     Freight has Average of {{:summaryValue}} in  dollars
+     Freight has Average of {{"{{"}}:summaryValue{{"}}"}} in  dollars
 </script>
 
 {% endhighlight %}
