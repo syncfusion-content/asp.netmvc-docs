@@ -41,3 +41,10 @@ The TreeGrid is an efficient control designed for representing the hierarchical 
 
 * **Column Template** - To render custom columns along with customized expand-collapse icon.
 
+* **Command Column** - Allows you to perform custom action or default CRUD actions using TreeGrid column.
+
+* **Row Template** - To customize the TreeGrid rows and alt rows.
+
+* **Column Reordering** - Provides Support to drag any column and drop it at any position in the TreeGrid's column header row, allowing columns to be repositioned at the required place.
+
+* **Resize columns** - Provides option for resizing the columns.
