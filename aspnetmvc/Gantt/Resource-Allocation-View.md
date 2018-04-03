@@ -333,11 +333,11 @@ In resource allocation view also, we can update the task details dynamically on 
 
 The below screenshot shows the result of above code example.
 
-![](/js/Gantt/Resource-Allocation-View_images/ResourceView_19.png)
+![](Resource-Allocation-View_images/ResourceView_19.png)
 Before update
 {:.caption}
 
-![](/js/Gantt/Resource-Allocation-View_images/ResourceView_19.png)
+![](Resource-Allocation-View_images/ResourceView_20.png)
 After update
 {:.caption}
 
