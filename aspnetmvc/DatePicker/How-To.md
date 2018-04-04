@@ -59,3 +59,48 @@ EJMVC DatePicker is responsive control, you have to just set the input element w
 
 
 {% endhighlight %}
+
+## Render Datepicker from Code behind
+
+DatePicker can be rendered from the code behind by initializing the required properties in controller and passing those properties via **ViewData** or **Model** to the client side.
+
+The following code illustrates the initialization of DatePicker properties in the controller.
+
+{% highlight c# %}
+
+//Namespace to get the JavaScript (DatePicker) component properties
+using Syncfusion.JavaScript.Models;
+
+namespace MvcApplication.Controllers
+{
+    public class DatePickerController : Controller
+    {
+        // GET: DatePicker
+        public ActionResult DatePickerFeatures()
+        {
+            //Initializing the DatePicker model
+
+            DatePickerProperties DateObj = new DatePickerProperties();
+
+            //Initializing the datasource and other properties
+            DateObj.Width = "300px";
+            DateObj.Value = "12/12/2018";
+
+            //Passing DatePicker properties using the ViewData
+            ViewData["DateModel"] = DateObj;
+            return View();
+        }
+    }
+}
+
+{% endhighlight %}
+
+Binding the DatePicker properties passed via **ViewData** from the controller in the client side as below.
+
+{% highlight CSHTML %}
+
+@{
+    Html.EJ().DatePicker("searchCustomer",(Syncfusion.JavaScript.Models.DatePickerProperties)ViewData["DateModel"]).Render();
+}
+
+{% endhighlight %}
