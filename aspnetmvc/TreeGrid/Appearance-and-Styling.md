@@ -26,6 +26,10 @@ The following are the available themes in TreeGrid control.
 11. Gradient Saffron
 12. Gradient Saffron Dark
 13. Bootstrap
+14. High Contrast 01
+15. High Contrast 02
+16. Material
+17. Office-365
 
 You can apply the theme (Gradient lime) to the TreeGrid control by using the style sheet from the online link as follows.
 
@@ -79,9 +83,9 @@ The below screenshot shows the output of above code example.
 
 ## Customize rows and cells
 
-In TreeGrid, while rendering rows  `RowDataBound` event will be triggered for rows. Similarly `QueryCellInfo` event will be triggered for every cells. Using these events we can customize the tree grid rows and cells at initial load.
+In TreeGrid, while rendering rows  `RowDataBound` event will be triggered for rows. Similarly `QueryCellInfo` event will be triggered for every cells. Using these events we can customize the TreeGrid rows and cells at initial load.
 
-The below code example shows how to customize the rows and cells in tree grid.
+The below code example shows how to customize the rows and cells in TreeGrid.
 
 {% highlight CSHTML %}
 

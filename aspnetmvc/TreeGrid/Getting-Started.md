@@ -13,9 +13,9 @@ documentation: ug
 
 This section explains briefly about the control structure and how to create a TreeGrid.
 
-1. First, create a new MVC Razor project; please refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started)  documentation to create new project and add necessary DLL’s and script files.
+1. First, create a new MVC Razor project, please refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation to create new project and add necessary DLL’s and script files.
 
-2. Create a data source in Controllers/HomeController.cs file, We can bind datasource to TreeGrid using Datasource property.
+2. Create a data source in Controllers/HomeController.cs file, We can bind datasource to TreeGrid using `Datasource` property.
 
 3. Add the following code example in the Index.cshtml file to create a TreeGrid control in the View page.	
 
@@ -167,7 +167,7 @@ Simple TreeGrid
 
 ## Enable Toolbar
 
-TreeGrid control contains the toolbar options to Add, Edit, Delete, Search,  Expand and Collapse all records. You can enable toolbar using `ToolbarSettings`.
+TreeGrid control contains the toolbar options to Add, Edit, Delete, Cancel, Update, Search, ExpandAll and CollapseAll operations, you can enable the toolbar by using `ToolbarSettings` property.
 
 {% highlight CSHTML %}
 
@@ -197,17 +197,17 @@ The following screen shot displays a Toolbar in TreeGrid.
 Toolbar in TreeGrid
 {:.caption}
 
-N> Add, Edit, Delete options are enabled when enabling the `AllowEditing`, `AllowAdding`, `AllowDeleting` in the `EditSettings`.
+N> Add, Edit, Delete options are enabled by `AllowEditing`, `AllowAdding`, `AllowDeleting` in the `EditSettings`.
 
 [Click](toolbar) here to refer more details for TreeGrid ToolbarSettings.
 
 ## Enable Sorting
 
-The TreeGrid control contains sorting functionality to arrange the data in ascending or descending order based on a particular column.
+The TreeGrid control contains sorting functionality to arrange the data in **ascending** or **descending** order based on a particular column.
 
 ### Multicolumn Sorting
 
-You can enable the multicolumn sorting in TreeGrid by setting `AllowMultiSorting` as `true` .You can sort multiple columns in TreeGrid, by selecting the desired column header when holding the **CTRL** key.
+You can enable the multicolumn sorting in TreeGrid by setting `AllowMultiSorting` as `true` .You can sort multiple columns in TreeGrid by selecting the desired column header when holding the **CTRL** key.
 
 {% highlight CSHTML %}
 
@@ -224,7 +224,7 @@ You can enable the multicolumn sorting in TreeGrid by setting `AllowMultiSorting
 
 ## Enable Editing
 
-You can enable Editing in TreeGrid using `EditSettings` illustrated in the following code example.
+You can enable editing in TreeGrid by using `EditSettings` property and it is illustrated in the following code example.
 
 {% highlight CSHTML %}
 
@@ -246,8 +246,8 @@ You can enable Editing in TreeGrid using `EditSettings` illustrated in the follo
 
 ## Enable Context Menu
 
-The **Context menu** in TreeGrid control is used to manipulate (add, edit and delete) the tree grid rows. 
-In TreeGrid, context menu can be enabled with `ContextMenuSettings` property. The `ContextMenuSettings` property contains two inner properties `ShowContextMenu` and `ContextMenuItems`.
+The **Context menu** in TreeGrid control is used to manipulate (add, edit and delete) the TreeGrid rows. 
+In TreeGrid, context menu can be enabled by `ContextMenuSettings` property. The `ContextMenuSettings` property contains two inner properties `ShowContextMenu` and `ContextMenuItems`.
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("treegrid1")	
@@ -264,14 +264,14 @@ In TreeGrid, context menu can be enabled with `ContextMenuSettings` property. Th
 @(Html.EJ().ScriptManager())
 {% endhighlight %}
 
-The following screenshot displays the Context menu in TreeGrid control.
+The following screenshot displays the context menu in TreeGrid control.
 
 ![](Getting-Started_images/Context-Menu.png)
 
-TreeGrid with Enable Context menu option
+TreeGrid with context menu
 {:.caption}
 
-[Click](context-menu) here to refer more details for TreeGrid Editing.
+[Click](context-menu) here to refer more details for TreeGrid context menu.
 
 ## Enable Column Menu
 
@@ -288,9 +288,12 @@ You can enable the column menu in TreeGrid, by setting the `ShowColumnChooser` a
 
 {% endhighlight %}
 
-The following screen shot displays TreeGrid control in which column chooser option is enabled
+The following screenshot displays the column chooser in TreeGrid control.
 
 ![](Getting-Started_images/columnMenu.png)
+
+TreeGrid with column chooser
+{:.caption}
 
 ## Define dimension of TreeGrid
 
@@ -311,8 +314,8 @@ By default TreeGrid control was rendered with `100%` width and `450px` height, w
 
 {% endhighlight %}
 
-N> TreeGrid control will automatically update the width and height value based on container element on window resize action, this can be enabled by setting `IsResponsive` property as `true` for this `Height` and `Width` value will be defined in percentage.
-N> We can also render TreeGrid with auto height by setting `SizeSettings.Height` as `auto`.
+N> 1.TreeGrid control will automatically update the width and height value based on container element on window resize action, this can be enabled by setting `IsResponsive` property as `true` for this `Height` and `Width` value will be defined in percentage.
+N> 2.We can also render TreeGrid with auto height by setting `SizeSettings.Height` as `auto`.
 
 
 

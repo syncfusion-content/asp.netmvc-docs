@@ -12,7 +12,7 @@ documentation: ug
 
 TreeGrid provides support for displaying records in paginated view. Paging can be enabled in TreeGrid by setting the `AllowPaging` property as `true`.
 
-The below code snippet explains enabling paging in TreeGrid.
+The below code snippet explains enable paging in TreeGrid.
 
 {% highlight CSHTML %}
 
@@ -157,9 +157,9 @@ function complete(args) {
 The below image displays TreeGrid with paging template.
 ![](Paging_images/Paging_img2.png)
 
-It is possible to navigate to a specific page with a custom action instead from pager button click action, using the [`gotoPage`]( /api/js/ejtreegrid#methods:gotopage "gotoPage") method.
+It is possible to navigate to a specific page with a custom action instead of clicking pager button by using the [`gotoPage`]( /api/js/ejtreegrid#methods:gotopage "gotoPage") method.
 
-The below code snippet explains calling the method to navigate to the 3rd page in TreeGrid
+The below code snippet explains how to navigate to 3rd page in TreeGrid by using `gotoPage` method
 
 {% highlight CSHTML %}
 

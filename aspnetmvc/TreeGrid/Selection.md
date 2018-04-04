@@ -203,7 +203,7 @@ $("#selectCells").click(function () {
 
 It is possible to disable cell selection for a specific column by setting `AllowCellSelection` as `false` in the column definition.
 
-The below code snippet explains how to disable cell selection for specific column in tree grid
+The below code snippet explains how to disable cell selection for specific column in TreeGrid
 
 {% highlight CSHTML %}
 
@@ -344,6 +344,8 @@ The output of the TreeGrid with checkbox enabled in task name column.
 
 ![](Selection_images/Selection_img7.png)
 
+The index of the checkbox column can be changed at run-time using the [`updateCheckboxColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:updatecheckboxcolumn "updateCheckboxColumn") method. The index of the column in which the checkbox should be displayed is passed as the method parameter.
+
 ## MultiSelection – Touch Option
 
 It is possible to select cells using touch action in TreeGrid. TreeGrid provides support for both single selection and multiple cell selection using touch action. For multiple cell selection, when we tap on a cell a helper icon will be displayed using that we can select multiple cells.
@@ -370,7 +372,7 @@ The following output is displayed the result of multiple selection in touch devi
 
 It is possible to clear the selection in TreeGrid at run-time using the [`clearSelection`](/api/js/ejtreegrid#methods:clearselection "clearSelection") method.
 
-The specific row will be deselected when the row index is passed as the method parameter. If the index is not passed, then all the selected rows in tree grid will be deselected.
+The specific row will be deselected when the row index is passed as the method parameter. If the index is not passed, then all the selected rows in TreeGrid will be deselected.
 
 {% highlight CSHTML %}
 

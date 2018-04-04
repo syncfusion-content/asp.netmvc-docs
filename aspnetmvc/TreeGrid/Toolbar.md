@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar
 
-In TreeGrid we can show/hide the Toolbar by using [`ShowToolbar`](https://help.syncfusion.com/api/js/ejtreegrid#members:toolbarsettings-showtoolbar "showToolbar") property.We can add default toolbar items by [`ToolbarItems`](https://help.syncfusion.com/api/js/ejtreegrid#members:toolbarsettings-toolbaritems "toolbarItems"). User can also create a custom toolbar items by using [`CustomToolbarItems`](https://help.syncfusion.com/api/js/ejtreegrid#members:toolbarsettings-customToolbarItems "customToolbarItems").
+In TreeGrid we can show/hide the Toolbar by using `ShowToolbar` property.We can add default toolbar items by `ToolbarItems`. User can also create a custom toolbar items by using `CustomToolbarItems`.
 
 ## Default Toolbar Items
 Using TreeGrid default toolbar items we can perform below operations.
@@ -56,7 +56,7 @@ We can enable TreeGrid toolbar by using below code example:
 The following screenshot displays the toolbar option in TreeGrid control.
 ![](Toolbar_images/Toolbar_img1.png)
 
-N> To perform add,edit,delete,cancel,update using Toolbar items we need to enable add/edit/delete using [`EditSettings`](https://help.syncfusion.com/api/js/ejtreegrid#members:editsettings "editSettings").
+N> To perform add,edit,delete,cancel,update using Toolbar items we need to enable add/edit/delete using `EditSettings`.
   
 ## Custom Toolbar Items
 
@@ -68,7 +68,7 @@ CustomToolbarItems allows us to insert custom icons and custom template in TreeG
 
 * **TooltipText**-Displays tooltip text for the custom icons. 
 
-To insert EJ Controls in TreeGrid toolbar we need to initiate the control in [`Create`](https://help.syncfusion.com/api/js/ejtreegrid#events:create "create") client side event.In [`ToolbarClick`](https://help.syncfusion.com/api/js/ejtreegrid#events:toolbarclick "toolbarclick") client side event we can bind actions to the custom toolbar items.
+To insert EJ Controls in TreeGrid toolbar we need to initiate the control in `Create` client side event.In `ToolbarClick` client side event we can bind actions to the custom toolbar items.
 
 {% highlight CSHTML %}
      @(Html.EJ().TreeGrid("TreeGridContainer")              

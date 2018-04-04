@@ -31,12 +31,12 @@ The below code example shows how to enable add option in TreeGrid.
 
 ![](Editing_images/addnewRowBefore.png)
 
-The above screenshot shows before add a new record in tree grid.
+The above screenshot shows before add a new record in TreeGrid.
 {:.caption}
 
 ![](Editing_images/addnewRowAfter.png)
 
-The above screenshot shows after add a new record in tree grid.
+The above screenshot shows after add a new record in TreeGrid.
 {:.caption}
 
 ## Add row position
@@ -49,7 +49,7 @@ Using the `EditSettings.RowPosition` parameter, user can able to insert the reco
 * BelowSelectedRow: Below to the selected row
 * Child: As a child to the selected row 
 
-The below code example shows how to set row position for new record add in tree grid.
+The below code example shows how to set row position for new record add in TreeGrid.
 
 {% highlight CSHTML %}
 
@@ -73,7 +73,7 @@ The above screenshot shows new record added in row position of `Child`.
 
 Using [`addRow`](/api/js/ejtreegrid#methods:addrow "addRow") method records can be added dynamically to the TreeGrid. Before calling this method, you should enable the `AllowAdding` property.
 
-The below code snippet explains dynamically inserting a record in tree grid. The record will be inserted as a child node to the current selected record.
+The below code snippet explains dynamically inserting a record in TreeGrid. The record will be inserted as a child node to the current selected record.
 
 {% highlight CSHTML %}
 
@@ -138,7 +138,7 @@ The output of TreeGrid with `CellEditing` is as follows.
 
 In cell edit action `BeginEdit` and `EndEdit` events are triggered before and after the editing action. Cell editing for specific cell can be prevented by using `BeginEdit` event.
 
-The following code example show, how to prevent cell editing in tree grid.
+The following code example show, how to prevent cell editing in TreeGrid.
 
 {% highlight CSHTML %}
 
@@ -221,7 +221,7 @@ The add and edit dialogs can be opened on custom actions instead of toolbar icon
 
 In dialog editing action `ActionBegin` and `ActionComplete` client side events are triggered before and after the edit action. Dialog editing for specific row can be prevented by using `ActionBegin` event.
 
-The following code example show, how to prevent dialog editing in tree grid.
+The following code example show, how to prevent dialog editing in TreeGrid.
 
 {% highlight CSHTML %}
 
@@ -296,7 +296,7 @@ The above screenshot shows TreeGrid with different Edit type.
 
 ### Assign data source for drop down edit type
 
-In TreeGrid, we need to assign the data source for drop down list control to populate the suggestion list while editing the column in tree grid. The `DropdownData` property is used to set the drop down list data source in TreeGrid control.
+In TreeGrid, we need to assign the data source for drop down list control to populate the suggestion list while editing the column in TreeGrid. The `DropdownData` property is used to set the drop down list data source in TreeGrid control.
 
 The following code example shows how to set data source for drop down edit type.
 {% tabs %}
@@ -350,7 +350,7 @@ public class TreeGridController : Controller
 
 ![](Editing_images/dropdownEdit.png)
 
-The above screenshot shows drop down edit type in tree grid.
+The above screenshot shows drop down edit type in TreeGrid.
 {:.caption}
 
 ## Dialog Template
@@ -448,7 +448,7 @@ $("#edit").click(function () {
 
 In TreeGrid we can perform edit action by single or double click using `BeginEditAction` , default value of this property is `DblClick`.
 
-The following code example shows how to enable single click edit in tree grid.
+The following code example shows how to enable single click edit in TreeGrid.
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -540,19 +540,19 @@ The below code example shows how to enable delete option in TreeGrid.
 
 ![](Editing_images/beforeDelete.png)
 
-The above screenshot shows before delete a record in tree grid.
+The above screenshot shows before delete a record in TreeGrid.
 {:.caption}
 
 ![](Editing_images/afterDelete.png)
 
-The above screenshot shows after delete a record in tree grid.
+The above screenshot shows after delete a record in TreeGrid.
 {:.caption}
 
 ## Delete confirmation message
 
 Delete confirmation message is used to get the confirmation from the user before deleting action. This confirmation message can be enabled by setting `ShowDeleteConfirmDialog` property as `true`.
 
-The following code snippet explains how to enable delete confirmation message in tree grid.
+The following code snippet explains how to enable delete confirmation message in TreeGrid.
 
 {% highlight CSHTML %}
 

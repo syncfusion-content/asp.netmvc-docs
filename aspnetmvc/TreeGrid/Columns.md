@@ -9,13 +9,13 @@ documentation: ug
 
 # Columns
 
-Column definitions specified in the `Columns` option defines how the data in the **dataSource** have to be displayed, formatted and edited in TreeGrid. The values in the **dataSource** can be mapped to the appropriate column using the `Field` property of the corresponding column object.
+Column definitions specified in the `Columns` option defines how the data in the **DataSource** have to be displayed, formatted and edited in TreeGrid. The values in the **DataSource** can be mapped to the appropriate column using the `Field` property of the corresponding column object.
 
 ## Editing type
 
 The edit type of a column can be defined using the `EditType` property of the column object.
 
-The following example shows how to define the edit type in a column,
+The following example shows how to define the `EditType` in a column,
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -28,9 +28,9 @@ The following example shows how to define the edit type in a column,
 
 {% endhighlight %}
 
-The column editors can be further customized using the `EditOptions` property of the column object. 
+The column editors can be further customized by using the `EditOptions` property of column object. 
 
-The following example shows how to define additional properties to customize the date edit type,
+The following example shows how to define additional properties to the date picker control,
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -50,7 +50,7 @@ The following example shows how to define additional properties to customize the
 
 The values in each column can be formatted using the `Format` property of the column object.
 
-The following example shows how to specify the numeric format string to display currency, percentage symbols and date values in a column.
+The following code example shows how to format the numeric and date values in TreeGrid column,
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -66,16 +66,14 @@ The following example shows how to specify the numeric format string to display 
 
 {% endhighlight %}
 
-N>
-For more numeric format strings, please refer this [link](https://msdn.microsoft.com/library/dwhawy9k(v=vs.100).aspx).
-
-For more date format strings, please refer this [link](https://msdn.microsoft.com/library/az4se3k1(v=vs.100).aspx).
+N> 1.For more numeric format strings, please refer this [link](https://msdn.microsoft.com/library/dwhawy9k(v=vs.100).aspx).
+N> 2.For more date format strings, please refer this [link](https://msdn.microsoft.com/library/az4se3k1(v=vs.100).aspx).
 
 ## Defining column width
 
-In TreeGrid, it is possible to define width for a specific column by setting `Width` property of column.
+In TreeGrid, it is possible to define width for a specific column by setting `Width` property to the column object.
 
-The below code snippet shows how to set width for specific column.
+The below code snippet shows how to set width for specific column,
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -93,15 +91,13 @@ The below code snippet shows how to set width for specific column.
 {% endhighlight %}
 
 
-The below screenshot shows TreeGrid render with specific column width.
+The below screenshot shows the TreeGrid rendered with specific column width values.
 
 ![](Columns_images/Columns_img13.png)
 
 ### Defining common width for the columns
 
-The TreeGrid control provide the support to set same width for all the columns in tree grid using `CommonWidth` property.
-
-The below code snippet shows how to set common width for tree grid columns.
+The TreeGrid control provides the support to set same width for all the available columns and this can be done by using `CommonWidth` property.
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -119,7 +115,7 @@ The below screenshot shows TreeGrid render with common width.
 
 ### Header text
 
-Using the `HeaderText` property, you can provide the title for a specific column. The below code snippet shows how to set header text for the columns.
+Using the `HeaderText` property, you can provide the title for a specific column. The below code snippet shows how to set `HeaderText` for TreeGrid columns.
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -137,7 +133,9 @@ Using the `HeaderText` property, you can provide the title for a specific column
 
 ### Text wrapping
 
-It is possible to wrap the header text or the title for the column, when the content exceeds the column width using the `HeaderTextOverflow` property. By default this property is set to **None**. To enable wrapping of header text, you have to set the `HeaderTextOverflow` property to **‘Wrap’**. The below code snippet demonstrates this.
+It is possible to wrap the header text or the title of the column when the content exceeds the column width using `HeaderTextOverflow` property. By default this property is set to **None**. 
+To enable wrapping of header text, you have to set the `HeaderTextOverflow` property as **Wrap**. 
+The below code snippet demonstrates this.
 
 {% highlight CSHTML %}
 @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -147,11 +145,13 @@ It is possible to wrap the header text or the title for the column, when the con
 
 {% endhighlight %}
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridtextwrap) here to view the online demo sample for text wrapping.
+
 ### Header Template
 
-Using the `HeaderTemplateID` property, you can specify the Id of the script element, which contains the JsRender template, to the specific column.
+TreeGrid column's header template was defined by using `HeaderTemplateID` property. The value of this property should be a valid JsRender template.
 
-Following code snippet shows how to set the header template,   
+The following code snippet shows how to set the header template for TreeGrid columns,
 
 {% highlight CSHTML %}
 
@@ -194,6 +194,8 @@ The below screenshot depicts column headers with custom templates.
 
 ![](Columns_images/Columns_img1.png)
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnheadertemplate) here to view the online demo sample for header template.
+
 ## Frozen Columns
 
 Specific columns can be frozen by enabling the `IsFrozen` property of the respective column object. The columns which are frozen remain static while scrolling the content horizontally. You can also freeze or unfreeze a column during runtime, by selecting Freeze or Unfreeze menu item in the column menu. These set of menu options will be displayed in all the columns when the `IsFrozen` property is enabled in any of the columns. However you can control the visibility of these menu options in a particular column by enabling/disabling the `AllowFreezing` property of that specific column.
@@ -219,13 +221,13 @@ The below screenshot depicts TreeGrid with frozen columns,
 
 ![](Columns_images/Columns_img2.png)
 
-It is also possible to freeze all the preceding columns at run-time by choosing *Freeze Preceding Columns* option in the column menu or by using the [`freezePrecedingColumns`](https://help.syncfusion.com/api/js/ejtreegrid#methods:freezeprecedingcolumns "freezePrecedingColumns") method, the column field name, for which the columns preceding it to be frozen should be passed as the method parameter.
+It is also possible to freeze all the preceding columns at run-time by choosing **Freeze Preceding Columns** option in the column menu or by using the [`freezePrecedingColumns`](https://help.syncfusion.com/api/js/ejtreegrid#methods:freezeprecedingcolumns "freezePrecedingColumns") method, the column field name, for which the columns preceding it to be frozen should be passed as the method parameter.
 
 ![](Columns_images/Columns_img3.png)
 
-### Freezing columns using method
+### Freeze columns using method
 
-Columns can also be frozen or unfrozen with custom actions using the [`freezeColumn`](/api/js/ejtreegrid#methods:freezecolumn "freezeColumn") method.
+Columns can also be frozen or unfrozen on any custom actions using the [`freezeColumn`](/api/js/ejtreegrid#methods:freezecolumn "freezeColumn") method.
 The column's field name which is to be frozen/unfrozen should be passed as the method parameter, along with the freeze state.
 
 {% highlight CSHTML %}
@@ -243,6 +245,8 @@ treegridObj.freezeColumn(field, true);
 
 {% endhighlight %}
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridfrozencolumns) here to view the online demo sample for frozen column.
+
 ## Resizing
 
 You can resize the column width to view the hidden text of the cell. This feature can be enabled by setting the `AllowColumnResize` property to true.
@@ -258,7 +262,7 @@ You can resize the column width to view the hidden text of the cell. This featur
 
 ### Column resize mode
 
-In Treegrid, it is possible to provide different column resizing mode using `ResizeMode` property of `ColumnResizeSettings`.
+In TreeGrid, it is possible to provide different column resizing mode by using `ResizeMode` property of `ColumnResizeSettings` property.
 
 The below are the types of column resize modes available in TreeGrid,
 
@@ -266,7 +270,7 @@ The below are the types of column resize modes available in TreeGrid,
 * Next column - Columns are stretched with control width at load time. When resize the column the current column width is updated based on stretching columns in control width.
 * Fixed Columns - Column are rendered with given width value at load time. Only the current column width is changed while resizing the column.
 
-The following code snippet explains how to set column resize mode in tree grid.
+The following code snippet explains how to set column resize mode in TreeGrid,
 
 {% highlight CSHTML %}
 
@@ -282,13 +286,16 @@ The following code snippet explains how to set column resize mode in tree grid.
 
 ![](Columns_images/Columns_img15.png)
 
-The above screenshot shows the tree grid render with `FixedColumns` resize mode.
+The above screenshot shows the TreeGrid rendered with `FixedColumns` resize mode.
 {:.caption}
+
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnresize) here to view the online demo sample for column resizing.
 
 ## Checkbox column 
 
-It is possible to display a column as checkbox column in TreeGrid by enabling the `DisplayAsCheckbox` property and by setting the `EditType` property as `Boolean` for the column .  If the `DisplayAsCheckbox` property is set as false, then the column will be displayed as string column with the value mapped from the data source.
-The following code snippet explains how to display a checkbox column in TreeGrid.
+It is possible to display a column value as checkbox in TreeGrid by enabling the `DisplayAsCheckbox` property and by setting the `EditType` property as `Boolean` for that column. 
+If the `DisplayAsCheckbox` property was set as `false`, then the column value will be displayed as string with the value mapped from the data source.
+The following code snippet explains how to display a checkbox column in TreeGrid,
 
 {% highlight CSHTML %}
 
@@ -306,20 +313,18 @@ The below screen shot depicts the `Approved` column in TreeGrid displayed as a c
 
 ![](Columns_images/Columns_img8.png)
 
-The index of the checkbox column can be changed at run-time using the [`updateCheckboxColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:updatecheckboxcolumn "updateCheckboxColumn") method. The index of the column in which the checkbox should be displayed is passed as the method parameter.
-
 ## Column Template
 
 Column Template is used to customize the column’s look and feel based on requirement.
 
-The following code example shows you how to display the icon in the TreeGrid column.
+The following code example shows you how to display the icon in the TreeGrid column,
 
 * `TemplateID` - Using the `TemplateID` property, you can specify the Id of the script element, which contains the template for the column.
 * `Template` - HTML templates can be specified in the `Template` property of the particular column as a string (HTML element).
 
-However, you need to enable the `IsTemplateColumn` property for the specific column to display the custom template instead of default template.
+Column template support was enabled for that column by setting `IsTemplateColumn` as `true`.
 
-Following code example show how to define template for the column.
+The following code example show how to define template for the column,
 
 {% highlight CSHTML %}
 
@@ -348,11 +353,13 @@ Following code example show how to define template for the column.
 
 ![](Columns_images/Columns_img4.png)
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumntemplate) here to view the online demo sample for frozen column.
+
 ## Column Menu
 
-Column menu can be displayed in column header by enabling the `ShowColumnChooser`.
+Column menu can be displayed in column header by setting `ShowColumnChooser` property as `true`.
 
-Following are the items displayed in the column menu,
+The following are the items displayed in the column menu,
 
 * **Column Chooser** – Displays all the column names, you can enable or disable a column by check or uncheck the respective column name in the column chooser menu.
 * **Sort Ascending & Sort Descending** – Used to sort the items in the column. These menu options will be displayed only when you set the `AllowSorting` property as true. To perform multilevel sorting, the `AllowMultiSorting` property should be enabled.
@@ -375,7 +382,6 @@ Following are the items displayed in the column menu,
 
 ![](Columns_images/Columns_img5.png)
 
-
 The column menu also provides support for some of the additional column options such as,
 
 * Insert column left
@@ -385,7 +391,7 @@ The column menu also provides support for some of the additional column options 
 
 The column options can be enabled or disabled with the `ShowColumnOptions` property, default value of this property is `false`.
 
-Following code example shows how to enable the column option in tree grid.
+The following code example shows how to enable the column option in TreeGrid,
 
 {% highlight CSHTML %}
 
@@ -403,13 +409,13 @@ Following code example shows how to enable the column option in tree grid.
 The above screenshot shows insert column dialog in TreeGrid  
 {:.caption}
 
-The TreeGrid columns can also be renamed or deleted at run-time with custom actions using the [`renameColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:renamecolumn "renameColumn") and [`deleteColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:deletecolumn "deleteColumn") methods.
+The TreeGrid columns can also be renamed or deleted at run-time on any custom actions using the [`renameColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:renamecolumn "renameColumn") and [`deleteColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:deletecolumn "deleteColumn") methods.
 
-### Customizing the insert column dialog.
+### Customize insert column dialog fields
 
-It is possible to add or remove the `Columns` properties in insert column dialog using `ColumnDialogFields` property. In insert column option `Field`, `HeaderText` and `EditType` properties are necessary to create a new column, so this fields are unable to remove from insert column option.
+It is possible to add or remove the `Columns` properties in insert column dialog using `ColumnDialogFields` property. In insert column dialog `Field`, `HeaderText` and `EditType` properties are necessary to create a new column, so these fields are unable to remove from insert column option.
 
-Following code example shows how to customize the insert column option in tree grid.
+The following code example shows how to customize the insert column option in TreeGrid,
 
 {% highlight CSHTML %}
 
@@ -434,13 +440,13 @@ Following code example shows how to customize the insert column option in tree g
 
 ![](Columns_images/Columns_img19.png)
 
-The above screenshot shows customized insert column dialog in tree grid.  
+The above screenshot shows customized insert column dialog in TreeGrid.  
 {:.caption}
 
 ### Hide specific column in column chooser list
 It is possible to hide the specific column in column chooser list by settings `ShowInColumnChooser` as `false` in the column definition.
 
-Following code example shows how to hide specific column in column chooser list
+The following code example shows how to hide specific column in column chooser list,
 
 {% highlight CSHTML %}
 
@@ -462,7 +468,7 @@ The above screenshot shows TreeGrid column chooser rendered without `Task Id` co
 
 ## Show/Hide columns using method
 
-It is possible to toggle the visibility of the columns using the [`hideColumn`](/api/js/ejtreegrid#methods:hidecolumn "hideColumn") and [`showColumn`](/api/js/ejtreegrid#methods:showcolumn "showColumn") methods. The column's header text should be passed as the method parameter which is to be hidden.
+It is possible to toggle the visibility of the columns using the [`hideColumn`](/api/js/ejtreegrid#methods:hidecolumn "hideColumn") and [`showColumn`](/api/js/ejtreegrid#methods:showcolumn "showColumn") methods. The column's header text should be passed as the method parameter which is to be shown/hidden.
 
 {% highlight CSHTML %}
 
@@ -476,6 +482,8 @@ It is possible to toggle the visibility of the columns using the [`hideColumn`](
 	treegridObj.showColumn("Order ID");
 </script>
 {% endhighlight %}
+
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnchooser) here to view the online demo sample for column menu.
 
 ## Command Column
 
@@ -525,6 +533,8 @@ A command column can be customized by using the `Type` and `ButtonOptions` prope
 
 ![](Columns_images/Columns_img9.png)
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcommandcolumn) here to view the online demo sample for command column.
+
 ### Custom buttons
 
 We can also add custom buttons to the command column by specifying text value other than default buttons to the type property. We can also bind actions to the custom button using the [Click](https://help.syncfusion.com/api/js/ejbutton#events:click "click") client-side event of Button.
@@ -561,9 +571,9 @@ We can also add custom buttons to the command column by specifying text value ot
 
 ## Tree column/ Expander column 
 
-The position of the expander column which acts as tree column, can be changed using the `TreeColumnIndex` property.
+The position of the expander column/tree column can be changed by using the `TreeColumnIndex` property.
 
-Following code example shows how to change the position of the expander column.
+The following code example shows how to change the position of the expander column,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -573,13 +583,13 @@ Following code example shows how to change the position of the expander column.
 
 {% endhighlight %}
 
-The tree column index can be also be changed at run-time by using the [`columnIndex`](https://help.syncfusion.com/api/js/ejtreegrid#methods:columnindex "columnIndex")
+The `TreeColumnIndex` can also be changed at run-time by using the [`columnIndex`](https://help.syncfusion.com/api/js/ejtreegrid#methods:columnindex "columnIndex") method.
 
 ## Visibility
 
-Columns can be hidden on loading by setting the `Visible` property as false.
+The visibility of TreeGrid column can be customized by using`Visible` property. TreeGrid columns column be hidden by setting `Visible` property as `false`.
 
-Following code example explains how to hide the fourth column.
+The following code example explains how to hide the fourth column,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -600,12 +610,11 @@ Following code example explains how to hide the fourth column.
 
 ## Read-only
 
-A column can be made read-only by setting the `AllowEditing` property as false.
+A column can be made read-only by setting the `AllowEditing` property as `false`.
 
-N>
-By setting Columns.AllowEditing as false that specific column alone is made as read only, and by setting the EditSettings.AllowEditing as false the entire TreeGrid is made read-only.
+N> By setting `Columns.AllowEditing` as `false` that specific column alone is made as read-only, and by setting the `EditSettings.AllowEditing` as `false` the entire TreeGrid is made read-only.
 
-The below code snippet demonstrates this.
+The below code snippet demonstrates this,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -684,11 +693,13 @@ The below image displays the TreeGrid with validation rule applied for a date co
 
 ![](Columns_images/Columns_img7.png)
 
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcustomvalidation) here to view the online demo sample for TreeGrid validation support.
+
 ## Column Reorder
 
-Column reorder is used to change the order of the column. In ejTreeGrid, `AllowColumnReordering` property is used to enable the column re-order, default value of this property is false.
+Column reorder support was used to change the order of the column by mouse interactions. In TreeGrid, `AllowColumnReordering` property was used to enable this support and the default value of this property was `false`.
 
-Following code example explains how to enable column reorder in tree grid
+The following code example explains how to enable column reorder in TreeGrid,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -699,14 +710,16 @@ Following code example explains how to enable column reorder in tree grid
 
 ![](Columns_images/Columns_img11.png)
 
-The above screenshot shows the column reorder in tree grid.
+The above screenshot shows the column reorder in TreeGrid.
 {:.caption}
 
-The TreeGrid columns can also be reordered using the [`reorderColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:reordercolumn "reorderColumn") method, where the column field name and the target index should be passed as the method parameters.
+The TreeGrid columns can also be reordered by using the [`reorderColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:reordercolumn "reorderColumn") method, where the column field name and the target index should be passed as the method parameters.
+
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnreorder) here to view the online demo sample for column re-ordering.
 
 ## Text Alignment
 
-In TreeGrid, it is possible to align both content and header text of particular column using the `TextAlign` and `HeaderTextAlign` property of columns.
+In TreeGrid, it is possible to align both content and header text of particular column by using the `TextAlign` and `HeaderTextAlign` property of columns.
 There are four possible ways to align content and header text of column, they are
 
 1. Left
@@ -714,9 +727,9 @@ There are four possible ways to align content and header text of column, they ar
 3. Center
 4. Justify
 
-N> 1. The TextAlign property will affect both content and header text of the grid, when HeaderTextAlign is not set in column definition.
+N> The `TextAlign` property will affect both content and header text of the TreeGrid, when `HeaderTextAlign` is not set in the column definition.
 
-Following code example explains how to set text alignment for content and header text in tree grid
+The following code example explains how to set text alignment for content and header text in TreeGrid,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -735,13 +748,13 @@ Following code example explains how to set text alignment for content and header
 
 ![](Columns_images/Columns_img12.png)
 
-The above screenshot shows tree grid render with text alignment and header text alignment.
+The above screenshot shows TreeGrid render with text alignment and header text alignment.
 {:.caption}
 
 ### Customize the column at initial load
 In TreeGrid, it is possible to customize the column at load time using `Load` event.
 
-The following code examples shows how to customize the column at load time
+The following code examples shows how to customize the column at load time,
 
 {% highlight CSHTML %}
  @(Html.EJ().TreeGrid("TreeGridContainer")
@@ -773,10 +786,10 @@ function load(args) {
 
 ![](Columns_images/Columns_img20.png)
 
-The above screen shot shows tree grid render with column customization
+The above screenshot shows TreeGrid rendered with customized column.
 
-## Column object
+## Get Column Object
 
-The column object which consists the list of columns available in TreeGrid can be retrieved using the [`getColumnByHeaderText`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnbyheadertext "getColumnByHeaderText") and [`getColumnByField`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnbyfield "getColumnByField") methods.In the method `getColumnByHeaderText` the header text defined for the column should be passed as the method parameter while in the method `getColumnByField` the column field name should be passed as method parameter.
+The column object which consists the list of columns available in TreeGrid and we can get the particular column details by using the [`getColumnByHeaderText`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnbyheadertext "getColumnByHeaderText") and [`getColumnByField`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnbyfield "getColumnByField") methods.
 
-To fetch the column index using the column field name, the method [`getColumnIndexByField`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnindexbyfield "getColumnIndexByField") should be called with field name as parameter. And to retrieve the datasource field name assigned to a column by using the column header text the method [`getFieldNameByHeaderText`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getfieldnamebyheadertext "getFieldNameByHeaderText") should be called.
+Similarly we can get the column index by using the [`getColumnIndexByField`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getcolumnindexbyfield "getColumnIndexByField") method. To use this method we have to pass the field name as parameter. And we can get the field name of the column by using its `HeaderText` value by using [`getFieldNameByHeaderText`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getfieldnamebyheadertext "getFieldNameByHeaderText") method.

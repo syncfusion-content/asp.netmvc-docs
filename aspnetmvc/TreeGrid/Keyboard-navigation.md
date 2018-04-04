@@ -7,7 +7,7 @@ control: TreeGrid
 ---
 # Keyboard navigation
 
-Tree grid control supports the following keyboard shortcuts for performing various actions and keyboard navigation can be enabled/disabled by `AllowKeyboardNavigation` property
+TreeGrid control supports the following keyboard shortcuts for performing various actions and keyboard navigation can be enabled/disabled by `AllowKeyboardNavigation` property
 
 **Home** **:** To select the first row.
 

@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# TreeGrid Printing
+# Printing
 
 TreeGrid provides support to print the contents. To print the TreeGrid the print toolbar item must be added to [ToolbarSettings.ToolbarItems](/api/js/ejgantt#members:toolbarsettings-toolbaritems) property. The below code example shows how to enable print in TreeGrid.
 
@@ -23,6 +23,10 @@ TreeGrid provides support to print the contents. To print the TreeGrid the print
     )
 
 {% endhighlight %}
+
+The below screen shot shows TreeGrid with printing enabled.
+
+![](Printing_images/Printing_img1.png)
 
 The print preview window will be opened by clicking on this toolbar icon. 
 

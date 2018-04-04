@@ -88,7 +88,7 @@ The following code shows how to add sorted column in TreeGrid.
    
 {% endhighlight %}
 
-![](TreeGrid/Sorting_images/Sorting_img2.png)
+![](Sorting_images/Sorting_img2.png)
 
 The above screenshot shows TreeGrid rendered with descending order of **Task Name** column.
 {:.caption}

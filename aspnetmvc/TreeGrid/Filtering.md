@@ -10,7 +10,7 @@ documentation: ug
 # Filtering
 
 Filtering helps to view specific or related records from data source which meets a given filtering criteria. To enable filtering in TreeGrid, set the `AllowFiltering` as `true`.
-The `FilterSettings` property is used to customize the filtering in tree grid.
+The `FilterSettings` property is used to customize the filtering in TreeGrid.
 
 TreeGrid provides support for the following filtering modes.
 
@@ -376,7 +376,7 @@ The below code example explains filtering the TreeGrid content using toolbar sea
 
 {% endhighlight %}
 
-If the toolbar search textbox is not enabled in TreeGrid, and still if the contents need to be filtered at initial load using the `searchSettings` property, then the user should enable the [`allowSearching`](https://help.syncfusion.com/api/js/ejtreegrid#members:allowsearching "allowSearching") property along with search settings.
+If the toolbar search textbox is not enabled in TreeGrid, and still if the contents need to be filtered at initial load using the `SearchSettings` property, then the user should enable the `AllowSearching` property along with search settings.
 
 {% highlight CSHTML %}
 

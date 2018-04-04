@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding
 
-Data Binding is the process that establishes a connection between the application and different kinds of data sources such as business objects.
+Data Binding is the process that establishes a connection between the application and different kinds of datasources such as business objects.
 
 ## Local Data Binding
 
@@ -22,9 +22,9 @@ Two types of Data Binding are possible with TreeGrid control,
 
 ### Hierarchical Datasource Binding
 
-The `ChildMapping` property is used to map the child records in hierarchy data source.
+The `ChildMapping` property is used to map the child records in hierarchical datasource.
 
-The following code example shows you how to bind the Hierarchical local data into the TreeGrid control.
+The following code example shows you how to bind the hierarchical local data into the TreeGrid control.
 
 {% tabs %}
 
@@ -183,7 +183,7 @@ The output of the above steps is as follows:
 
 ![](Data-Binding_images/Data-Binding_img1.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridlocalbinding) here to view the online demo sample for Hierarchical Data Binding.
+[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridlocalbinding) here to view the online demo sample for hierarchical databinding.
 
 ### Self-Referential Data Binding (Flat Data)
 
@@ -372,7 +372,7 @@ The following screenshot shows the output of the above steps,
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridselfreference) here to view the online demo sample for Self-Referential Data Binding.
+[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridselfreference) here to view the online demo sample for self-referential databinding.
 
 ## Remote data binding
 
@@ -383,16 +383,16 @@ TreeGrid provides `Load on Demand` support for rendering remote data. Load on de
 * Expanding root nodes.
 * Navigating pages, with paging enabled in TreeGrid.
 
-When load on demand is enabled, all the root nodes are rendered in collapsed state at initial load.
+When load on demand is enabled all the root nodes are rendered in collapsed state at initial load.
 
-When load on demand support is enabled in TreeGrid with paging, the current or active page’s root node alone will be rendered in collapsed state. On expanding the root node, the child nodes will be loaded from the remote server. 
+When load on demand support is enabled in TreeGrid with paging, the current or active page's root node alone will be rendered in collapsed state. On expanding the root node the child nodes will be loaded from the remote server. 
 
-When a root node is expanded, its child nodes are rendered and are cached locally, such that on consecutive expand/collapse actions on root node, the child nodes are loaded from the cache instead from the remote server.
+When the root node is expanded its child nodes are rendered and are cached locally, such that on consecutive expand/collapse actions on root node, the child nodes are loaded from the cache instead from the remote server.
 
-Similarly, if the user navigates to a new page, the root nodes of that specific page, will be rendered with request to the remote server.
+Similarly if the user navigates to a new page, the root nodes of that specific page will be rendered with request to the remote server.
 
 N> 1. Load on demand support in TreeGrid can be enabled only for remote data.
-N> 2. For better initial load time performance, we need to define the “HasChildMapping” property.
+N> 2. For better initial load time performance, we need to define the `HasChildMapping` property.
 
 Load on demand support in TreeGrid can be enabled by the following ways,
 
@@ -427,7 +427,7 @@ The output for load on demand support in TreeGrid:
 ![](Data-Binding_images/Data-Binding_img3.png)
 ![](Data-Binding_images/Data-Binding_img4.png)
 
-The following code snippet shows on how to enable load on demand support using  [`EnableLoadOnDemand`](https://help.syncfusion.com/api/js/ejtreegrid#members:enableLoadOnDemand "enableLoadOnDemand") property.
+The following code snippet shows on how to enable load on demand support using  `EnableLoadOnDemand` property.
 
 {% highlight CSHTML %}
 
@@ -446,7 +446,7 @@ The following output shows how load on demand works for expanding action
 
 ### Load at once:
 
-On remote data binding, for every action such as paging, sorting, filtering, the data will be fetched from remote server each time. To avoid requesting the data from the remote server for each action, we can set TreeGrid to load all the data on initialization and make all the data operations in client side. To enable this, we can use Offline property of `ej.DataManager`. the following code example explains this.
+On remote data binding, for every action such as paging, sorting, filtering the data will be fetched from the remote server each time. To avoid requesting the data from the remote server for each action, we can set TreeGrid to load all the data on initialization and make all the data operations in client side. To enable this, we have to set `Offline` property of `ej.DataManager` as `true`, the following code example explains this.
 
 {% highlight CSHTML %}
 
@@ -491,5 +491,4 @@ The below code example shows how to use this property.
 
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridvirtualization) here to view the online demo sample for Virtualization
-
+[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridvirtualization) here to view the online demo sample for virtualization.
