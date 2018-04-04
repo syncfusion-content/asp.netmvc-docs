@@ -261,10 +261,10 @@ The following code shows how to render row drag tooltip with JsRender template.
 
 <script id="customTooltip" type="text/x-jsrender">
 	<tr>
-		<td class="border" style='height:30px;border:1px solid black;width:100px;color:red'>
+		<td style='height:30px'>
 			<div>{{"{{"}}:#data['TaskId']{{}}}}</div>
 		</td>
-		<td class="border" style='height:30px;border:1px solid black;width:100px;color:red'>
+		<td style='height:30px'>
 			<div>{{"{{"}}:#data['TaskName']{{}}}}</div>
 		</td>        
 	</tr>
