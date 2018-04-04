@@ -49,7 +49,7 @@ Binding the RadioButton properties passed via **ViewData** from the controller i
 {% highlight CSHTML %}
 
 @{
-    Html.EJ().RadioButton("searchCustomer",(Syncfusion.JavaScript.Models.RadioButtonProperties)ViewData["Colorodel"]).Render();
+    Html.EJ().RadioButton("searchCustomer",(Syncfusion.JavaScript.Models.RadioButtonProperties)ViewData["BtnModel"]).Render();
 }
 
 {% endhighlight %}

@@ -48,7 +48,7 @@ Binding the Button properties passed via **ViewData** from the controller in the
 {% highlight CSHTML %}
 
 @{
-    Html.EJ().Button("searchCustomer",(Syncfusion.JavaScript.Models.ButtonProperties)ViewData["Colorodel"]).Render();
+    Html.EJ().Button("searchCustomer",(Syncfusion.JavaScript.Models.ButtonProperties)ViewData["BtnModel"]).Render();
 }
 
 {% endhighlight %}

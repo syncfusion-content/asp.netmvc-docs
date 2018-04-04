@@ -50,7 +50,7 @@ Binding the ToggleButton properties passed via **ViewData** from the controller 
 {% highlight CSHTML %}
 
 @{
-    Html.EJ().ToggleButton("searchCustomer",(Syncfusion.JavaScript.Models.ToggleButtonProperties)ViewData["Colorodel"]).Render();
+    Html.EJ().ToggleButton("searchCustomer",(Syncfusion.JavaScript.Models.ToggleButtonProperties)ViewData["BtnModel"]).Render();
 }
 
 {% endhighlight %}

@@ -35,7 +35,7 @@ namespace MvcApplication.Controllers
             ColorObj.Value = "#278787";
 
             //Passing ColorPicker properties using the ViewData
-            ViewData["ColorModel"] = ColorObjObj;
+            ViewData["ColorModel"] = ColorObj;
             return View();
         }
     }
@@ -48,7 +48,7 @@ Binding the ColorPicker properties passed via **ViewData** from the controller i
 {% highlight CSHTML %}
 
 @{
-    Html.EJ().ColorPicker("searchCustomer",(Syncfusion.JavaScript.Models.ColorPickerProperties)ViewData["Colorodel"]).Render();
+    Html.EJ().ColorPicker("searchCustomer",(Syncfusion.JavaScript.Models.ColorPickerProperties)ViewData["ColorModel"]).Render();
 }
 
 {% endhighlight %}

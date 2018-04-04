@@ -49,7 +49,7 @@ Binding the Checkbox properties passed via **ViewData** from the controller in t
 {% highlight CSHTML %}
 
 @{
-    Html.EJ().CheckBox("searchCustomer",(Syncfusion.JavaScript.Models.CheckBoxProperties)ViewData["Colorodel"]).Render();
+    Html.EJ().CheckBox("searchCustomer",(Syncfusion.JavaScript.Models.CheckBoxProperties)ViewData["BtnModel"]).Render();
 }
 
 {% endhighlight %}
