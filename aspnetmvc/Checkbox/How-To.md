@@ -31,9 +31,9 @@ namespace MvcApplication.Controllers
             CheckBoxProperties BtnObj = new CheckBoxProperties();
 
             //Initializing the datasource and other properties
-              BtnObj.Checked = true;
-              BtnObj.Text = "Checkbox";
-              BtnObj.ShowRoundedCorner = true;
+            BtnObj.Checked = true;
+            BtnObj.Text = "Checkbox";
+            BtnObj.ShowRoundedCorner = true;
 
             //Passing Checkbox properties using the ViewData
             ViewData["BtnModel"] = BtnObj;

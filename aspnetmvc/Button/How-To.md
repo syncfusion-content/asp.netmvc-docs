@@ -31,8 +31,8 @@ namespace MvcApplication.Controllers
             ButtonProperties BtnObj = new ButtonProperties();
 
             //Initializing the datasource and other properties
-             BtnObj.Text = "Button";
-             BtnObj.ShowRoundedCorner = true;
+            BtnObj.Text = "Button";
+            BtnObj.ShowRoundedCorner = true;
 
             //Passing Button properties using the ViewData
             ViewData["BtnModel"] = BtnObj;

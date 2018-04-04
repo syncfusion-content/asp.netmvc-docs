@@ -31,9 +31,9 @@ namespace MvcApplication.Controllers
             RadioButtonProperties BtnObj = new RadioButtonProperties();
 
             //Initializing the datasource and other properties
-             BtnObj.Checked = true;
-             BtnObj.Size = RadioButtonSize.Medium;
-             BtnObj.Text = "Computer";
+            BtnObj.Checked = true;
+            BtnObj.Size = RadioButtonSize.Medium;
+            BtnObj.Text = "Computer";
 
             //Passing RadioButton properties using the ViewData
             ViewData["BtnModel"] = BtnObj;

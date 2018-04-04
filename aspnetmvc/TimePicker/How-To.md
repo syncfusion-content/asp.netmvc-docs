@@ -31,9 +31,9 @@ namespace MvcApplication.Controllers
             TimePickerProperties TimeObj = new TimePickerProperties();
 
             //Initializing the datasource and other properties
-              TimeObj.Width = "300px";
-              TimeObj.Interval= 60;
-              TimeObj.Value = "10:10 AM";
+            TimeObj.Width = "300px";
+            TimeObj.Interval= 60;
+            TimeObj.Value = "10:10 AM";
 
             //Passing TimePicker properties using the ViewData
             ViewData["TimeModel"] = TimeObj;

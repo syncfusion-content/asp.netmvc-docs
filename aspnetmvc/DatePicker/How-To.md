@@ -83,9 +83,9 @@ namespace MvcApplication.Controllers
             DatePickerProperties DateObj = new DatePickerProperties();
 
             //Initializing the datasource and other properties
-             DateObj.Width = "300px";
-             DateObj.Value = "12/12/2018";
-             
+            DateObj.Width = "300px";
+            DateObj.Value = "12/12/2018";
+
             //Passing DatePicker properties using the ViewData
             ViewData["DateModel"] = DateObj;
             return View();

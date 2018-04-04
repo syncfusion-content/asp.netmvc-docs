@@ -23,7 +23,7 @@ namespace MvcApplication.Controllers
 {
     public class DateRangePickerController : Controller
     {
-        // GET: DateRangepicker
+        // GET: DateRangePicker
         public ActionResult DateRangePickerFeatures()
         {
             //Initializing the DateRangePicker model
@@ -31,9 +31,9 @@ namespace MvcApplication.Controllers
             DateRangePickerProperties DateObj = new DateRangePickerProperties();
 
             //Initializing the datasource and other properties
-             DateObj.Width = "300px";
-             DateObj.StartDate = "2/2/2018";
-             DateObj.EndDate = "2/25/2018";
+            DateObj.Width = "300px";
+            DateObj.StartDate = "2/2/2018";
+            DateObj.EndDate = "2/25/2018";
 
             //Passing DateRangePicker properties using the ViewData
             ViewData["DateModel"] = DateObj;

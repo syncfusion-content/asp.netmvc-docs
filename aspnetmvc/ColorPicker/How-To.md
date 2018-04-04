@@ -31,8 +31,8 @@ namespace MvcApplication.Controllers
             ColorPickerProperties ColorObj = new ColorPickerProperties();
 
             //Initializing the datasource and other properties
-              ColorObj.ShowPreview= true;
-              ColorObj.Value = "#278787";
+            ColorObj.ShowPreview= true;
+            ColorObj.Value = "#278787";
 
             //Passing ColorPicker properties using the ViewData
             ViewData["ColorModel"] = ColorObjObj;
