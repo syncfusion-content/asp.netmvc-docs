@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting| TreeGrid | ASP.NET MVC | Syncfusion
+title: Exporting | TreeGrid | ASP.NET MVC | Syncfusion
 description: exporting
 platform: ejmvc
 control: TreeGrid
@@ -13,33 +13,17 @@ Exporting feature provides support to export TreeGrid content to excel and PDF f
 The below code snippet explains the above behavior,
 
 {% tabs %}
-{% highlight razor %}
-
-@(Html.EJ().TreeGrid("TreeGridContainer")
-//...
-.ToolbarSettings(tool =>
- {
-       tool.ShowToolbar(true);
-       tool.ToolbarItems(new List<TreeGridToolBarItems>()
-       {                      
-	      TreeGridToolBarItems.PdfExport, 
-	      TreeGridToolBarItems.ExcelExport
-       });
- })
-.Datasource(ViewBag.datasource)
-)
-
-{% endhighlight %}
 
 {% highlight c# %}
 
-public partial class TreeGridController  : Controller
+public class TreeGridController  : Controller
     {
-        public ActionResult TreeGridExporting()
+         public ActionResult TreeGridExporting()
         {
-            ViewBag.datasource = this.GetDataSource();
+            ViewBag.datasource = this.GetEditingDataSource();
             return View();
         }
+
         public void ExportToPdf(string TreeGridModel)
         {
             PdfExport exp = new PdfExport();
@@ -60,13 +44,13 @@ public partial class TreeGridController  : Controller
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
             TreeGridProperties gridProp = new TreeGridProperties();
-            foreach (KeyValuePair<string, object> dataSource in div)
+            foreach (KeyValuePair<string, object> ds in div)
             {
-                var property = gridProp.GetType().GetProperty(dataSource.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
+                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
                 if (property != null)
                 {
                     Type type = property.PropertyType;
-                    string serialize = serializer.Serialize(dataSource.Value);
+                    string serialize = serializer.Serialize(ds.Value);
                     object value = serializer.Deserialize(serialize, type);
                     property.SetValue(gridProp, value, null);
                 }
@@ -76,9 +60,30 @@ public partial class TreeGridController  : Controller
     }
 
 {% endhighlight %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+    //...
+    .ToolbarSettings(tool =>
+    {
+        tool.ShowToolbar(true);
+        tool.ToolbarItems(new List<TreeGridToolBarItems>()
+        {                      
+            TreeGridToolBarItems.PdfExport, 
+            TreeGridToolBarItems.ExcelExport
+        });
+    })
+    .Datasource(ViewBag.datasource)
+    )
+@(Html.EJ().ScriptManager())
+
+{% endhighlight %}
+
 {% endtabs %} 
 
 The below screen shot shows TreeGrid with excel and Pdf exporting enabled.
+
 ![](Export_images/Export_img1.png)
 
 ## Server dependencies
@@ -101,29 +106,10 @@ Currently server helper function allows following two types of exporting.
 Mappers is used to change the default routing path for exporting. By using `Mappers` you can change any action name in controller and the action can be in any controller (Need not to be in TreeGrid View Page Controller).
 
 {% tabs %} 
-{% highlight razor %}
-
-@(Html.EJ().TreeGrid("TreeGridContainer")
-//...
-.Mappers(map => map.ExportToPdfAction("PdfAction")).ExportToExcelAction("ExcelAction"))
-.ToolbarSettings(tool =>
- {
-        tool.ShowToolbar(true);
-        tool.ToolbarItems(new List<TreeGridToolBarItems>()
-        {                      
-            TreeGridToolBarItems.PdfExport,
-	        TreeGridToolBarItems.ExcelExport
-
-        });
- })
-//...
-)
-
-{% endhighlight %}
 
 {% highlight c# %}
 
-    public partial class TreeGridController : Controller
+    public  class TreeGridController : Controller
     {
          public void PdfAction(string TreeGridModel)
         {
@@ -142,47 +128,51 @@ Mappers is used to change the default routing path for exporting. By using `Mapp
     }
 
 {% endhighlight %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+    //...
+    .Mappers(map => map.ExportToPdfAction("PdfAction")).ExportToExcelAction("ExcelAction"))
+    .ToolbarSettings(tool =>
+    {
+            tool.ShowToolbar(true);
+            tool.ToolbarItems(new List<TreeGridToolBarItems>()
+            {                      
+                TreeGridToolBarItems.PdfExport,
+                TreeGridToolBarItems.ExcelExport
+
+            });
+    })   
+    )
+@(Html.EJ().ScriptManager())
+
+{% endhighlight %}
+
 {% endtabs %} 
 
+[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridexporting) here to view the online demo sample for Exporting.
+
 ## Multiple exporting
+
 Multiple export is used for export more than one TreeGrid object in the same file. Multiple export in TreeGrid can be enabled by setting `AllowMultipleExporting` property to `true`. TreeGrid properties of all the TreeGrid which are available in current page are passed as string array parameter to controller action method.
 
 The following code example describes exporting multiple TreeGrid in PDF format
 
 {% tabs %} 
-{% highlight razor %}
-
-@(Html.EJ().TreeGrid("TreeGridContainer")
-//...
-.AllowMultipleExporting(true)
-.ToolbarSettings(tool =>
- {
-        tool.ShowToolbar(true);
-        tool.ToolbarItems(new List<TreeGridToolBarItems>()
-        {                      
-              TreeGridToolBarItems.PdfExport
-        });
- })
-.Mappers(map => map.ExportToPdfAction("MultipleExportToPDF")
-.Datasource(ViewBag.datasource)
-)
-
-@(Html.EJ().TreeGrid("TreeGridContainer1")
-//...
- .Datasource(ViewBag.datasource1)
-)
-
-@(Html.EJ().TreeGrid("TreeGridContainer2")
-//...
-.Datasource(ViewBag.datasource2)
-)
-
-{% endhighlight %}
 
 {% highlight c# %}
 
-public partial class TreeGridController : Controller
+public class TreeGridController : Controller
 {
+        public ActionResult TreeGridMultipleExporting()
+        {
+            ViewBag.datasource1 = this.GetPlanDataSource();
+            ViewBag.datasource2 = this.GetDesignDataSource();
+            ViewBag.datasource3 = this.GetImplementationDataSource();
+            return View();
+        }
+
         public void MultipleExportToPdf(string[] TreeGridModel)
         {
             PdfExport exp = new PdfExport();
@@ -209,10 +199,70 @@ public partial class TreeGridController : Controller
                 count++;
             }
         }
+
+        public void MultipleExportToExcel(string[] TreeGridModel)
+        {
+            ExcelExport exp = new ExcelExport();
+            IWorkbook  workbook = null;
+            int count = 1;
+            foreach (string gridProperty in TreeGridModel)
+            {
+                TreeGridProperties gridProp = this.ConvertTreeGridObject(gridProperty);
+                if (count == 1)
+                {
+                    workbook = exp.Export(gridProp, this.GetPlanDataSource(), new TreeGridExportSettings() { Theme = ExportTheme.FlatSaffron }, true, "Planning Phase");
+                }
+                else if (count == 2)
+                {
+                    exp.Export(gridProp, this.GetDesignDataSource(), new TreeGridExportSettings() { Theme = ExportTheme.FlatSaffron }, workbook, true, "Design Phase");
+                }
+                else
+                {
+                    exp.Export(gridProp, this.GetImplementationDataSource(), "ExcelExport.xlsx", ExcelVersion.Excel2010, new TreeGridExportSettings() { Theme = ExportTheme.FlatSaffron }, workbook, false, "Implementation Phase");
+                }
+                count++;
+            }
+        }
 }
 
 {% endhighlight %}
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+    //...
+    .AllowMultipleExporting(true)
+    .ToolbarSettings(tool =>
+    {
+            tool.ShowToolbar(true);
+            tool.ToolbarItems(new List<TreeGridToolBarItems>()
+            {                      
+                TreeGridToolBarItems.PdfExport,
+                TreeGridToolBarItems.ExcelExport
+            });
+    })
+    .Mappers(map => map.ExportToPdfAction("MultipleExportToPdf").ExportToExcelAction("MultipleExportToExcel"))
+    .Datasource(ViewBag.datasource1)
+    )
+
+@(Html.EJ().TreeGrid("TreeGridContainer1")
+    //...
+    .AllowMultipleExporting(true)
+    .Datasource(ViewBag.datasource2)
+    )
+
+@(Html.EJ().TreeGrid("TreeGridContainer2")
+    //...
+    .AllowMultipleExporting(true)
+    .Datasource(ViewBag.datasource3)
+    )
+@(Html.EJ().ScriptManager())
+
+{% endhighlight %}
+
 {% endtabs %} 
+
+[Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridmultipleexporting) here to view the online demo sample for Multiple Exporting.
 
 ## Export Theme
 The TreeGrid export supports the below themes, 
