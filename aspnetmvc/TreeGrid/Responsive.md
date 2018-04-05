@@ -15,11 +15,10 @@ Please find the example describes the above behavior.
 
 {% highlight CSHTML %}
 
-@(Html.EJ().TreeGrid("TreeGridContainer")                              
-
+@(Html.EJ().TreeGrid("TreeGridContainer") 
     .IsResponsive(true)
-
-)
+    )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight  %}
 
@@ -83,37 +82,25 @@ Insert column options in tablet layout
 
 ## Changing responsive width using method
 
-You can change the minimum responsive width dynamically by using public method `updateResponsiveMinWidth(width)` by passing the width as an argument.
+You can change the minimum responsive width dynamically by using public method [`updateResponsiveMinWidth(width)`](https://help.syncfusion.com/api/js/ejtreegrid#methods:updateresponsiveminwidth) by passing the width as an argument.
 The TreeGrid control get works in responsive mode only when the window width is below the minimum responsive width.
 
 Please find the example describes the above behavior.
 
-{% highlight html %}
+{% highlight CSHTML %}
 
 <button id="minResponsiveWidth">minResponsiveWidth</button>
 
-{% endhighlight %}
-
-{% highlight CSHTML %}
-
 @(Html.EJ().TreeGrid("TreeGridContainer")                              
-
     .IsResponsive(true)
-
-)
-
-{% endhighlight  %}
-
-{% highlight js %}
-<script>
+    )
+@(Html.EJ().ScriptManager())
 
 $("#minResponsiveWidth").click(function (args) {
-    treegridObj = $("# TreeGridContainer ").data("ejTreeGrid");
+    treegridObj = $("#TreeGridContainer ").data("ejTreeGrid");
     treegridObj.updateResponsiveMinWidth(600);
  });
-
-</script>
-{% endhighlight %}
+{% endhighlight  %}
 
 The following output is displayed as a result of the above code example
 
@@ -136,8 +123,8 @@ The following code example explains how to set priority for column
         co.Field("EndDate").HeaderText("End Date").Priority(5).Add();
         co.Field("Duration").HeaderText("Duration").Priority(6).Add();
         co.Field("Progress").HeaderText("Progress").Priority(6).Add();
-    }
-)          
+    }) 
+@(Html.EJ().ScriptManager())         
 {% endhighlight %}
 
 ![](Responsive_images/priority-column.png)

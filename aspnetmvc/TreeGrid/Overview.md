@@ -17,7 +17,7 @@ The TreeGrid is an efficient control designed for representing the hierarchical 
 
 * **Sorting** - Supports _n_ levels of sorting.
 
-* **Filtering** - Supports filtering records with filter bar and menu filtering modes.
+* **Filtering** - Supports filtering records with filterbar,menu and excel filtering modes.
 
 * **Virtualization** - Supports rendering large number of hierarchical data at once. 
 
@@ -41,3 +41,10 @@ The TreeGrid is an efficient control designed for representing the hierarchical 
 
 * **Column Template** - To render custom columns along with customized expand-collapse icon.
 
+* **Command Column** - Allows you to perform custom action or default CRUD actions using TreeGrid column.
+
+* **Row Template** - To customize the TreeGrid rows.
+
+* **Column Reordering** - Provides support to re-arrange the column order.
+
+* **Resize columns** - Provides option for resizing the columns.

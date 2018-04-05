@@ -18,15 +18,10 @@ Please find the example describes the above behavior.
 {% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
-   .ChildMapping("Children")
-
    .ShowGridCellTooltip(true)
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output shows the result of above code example.
@@ -103,16 +98,12 @@ Please find code example that describes the cell tooltip template support below.
 </script>
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
     //..
-
    .ShowGridCellTooltip(true)
-
    .CellTooltipTemplate("cellTooltipTemplate")
-
    .Datasource(ViewBag.datasource)
-
     )
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
 
@@ -135,22 +126,16 @@ Please refer to the following code example for setting a custom tooltip for a sp
 </script>
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
    .ChildMapping("Children")
-
    .Columns(co =>
-
     {
       //..
       co.Field("taskName").headerText("Task Name").Tooltip("template").Add();
       //..
-
     })
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 
@@ -175,22 +160,16 @@ Please refer to the following code example for setting a custom tooltip for a sp
 </script>
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
    .ChildMapping("Children")
-
    .Columns(co =>
-
     {
       //..
       co.Field("taskID").headerText("Task Id").HeaderTooltip("template").Add();
       //..
-
     })
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output shows the result of above code example.
@@ -220,22 +199,16 @@ The following code example describes the above behavior.
 {% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
    .ChildMapping("Children")
-
    .Columns(co =>
-
     {
       //..
       co.Field("taskID").headerText("Task Id").ClipMode(TreeGridColumnClipMode.Clip).Add();
       //..
-
     })
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output shows the result of above code example.
@@ -251,22 +224,16 @@ The following code example describes the above behavior.
 {% highlight CSHTML %}
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
-
    .ChildMapping("Children")
-
    .Columns(co =>
-
     {
       //..
       co.Field("taskID").headerText("Task Id").ClipMode(TreeGridColumnClipMode.Ellipsis).Add();
       //..
-
     })
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output is shows the result of the above code example.
@@ -288,12 +255,10 @@ The following code example describes the above behavior.
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
     //..
-
    .HeaderTextOverflow(TreeGridHeaderTextOverflow.Wrap)
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output shows the result of above code example.
@@ -314,13 +279,10 @@ The following code example describes the above behavior.
 
 @(Html.EJ().TreeGrid("TreeGridContainer")
     //..
-
    .AllowTextWrap(true)
-
    .Datasource(ViewBag.datasource)
-
     )
-
+@(Html.EJ().ScriptManager())
 {% endhighlight %}
 
 The following output shows the result of above code example.
