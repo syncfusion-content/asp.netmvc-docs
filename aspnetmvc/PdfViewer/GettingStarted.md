@@ -137,7 +137,7 @@ namespace PdfViewerSample.WebApi
         {
             PdfViewerHelper helper = new PdfViewerHelper();
             if (jsonResult.ContainsKey("isInitialLoading"))
-                helper.Load(HttpContext.Current.Server.MapPath("~/Data/HTTP Succinctly.pdf"));
+                helper.Load(HttpContext.Current.Server.MapPath("~/App_Data/HTTP Succinctly.pdf"));
             return JsonConvert.SerializeObject(helper.ProcessPdf(jsonResult));
         }
         //Post action for processing the PDF documents when uploading to the ejPdfviewer widget.
@@ -191,7 +191,7 @@ Add below code snippet to Index.cshtml. Here, PDF viewer uses the Web API to pro
 <body>
     <div>
         <div style="width:100%;height:780px;">
-            @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("../../api/PdfViewer")
+            @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer"))
             .PdfService(Syncfusion.JavaScript.PdfViewerEnums.PdfService.Local))
         </div>
     </div>
