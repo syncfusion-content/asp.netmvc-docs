@@ -29,9 +29,9 @@ The following code illustrates the rendering of WaitingPopup using WaitingPopup 
 	
     public ActionResult Index()
         {
-             WaitingPopupProperties wpObj = new WaitingPopupProperties();
-            wpObj.ShowOnInit = true;
-            return View(wpObj);
+             WaitingPopupProperties Obj = new WaitingPopupProperties();
+            Obj.ShowOnInit = true;
+            return View(Obj);
         }
 	
 {% endhighlight %}

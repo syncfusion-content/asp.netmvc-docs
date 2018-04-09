@@ -397,8 +397,7 @@ The following code illustrates the rendering of Tooltip using Tooltip properties
 {% highlight razor %}
     
     <div class="control">
-         JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the 
-         <a id="link1"><u> ECMAScript </u> </a>language specification. 
+	      Alongside HTML and CSS, JavaScript is one of the three essential technologies of <a id="link1"><u> World&nbsp;Wide&nbsp;Web </u> </a>content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins.        
     </div>
   @{
        Html.EJ().Tooltip("link1", (Syncfusion.JavaScript.Models.TooltipProperties)ViewData["tooltip"]).Render();
@@ -412,9 +411,9 @@ The following code illustrates the rendering of Tooltip using Tooltip properties
     public ActionResult Index()
         {
            
-            TooltipProperties tooltipobj = new TooltipProperties();
-            tooltipobj.Content = "ECMAScript (or ES) is a trademarked scripting-language specification standardized by Ecma International in ECMA-262 and ISO/IEC 16262";
-            ViewData["tooltip"] = tooltipobj;
+            TooltipProperties obj = new TooltipProperties();
+            obj.Content = "The World Wide Web (WWW) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet.";
+            ViewData["tooltip"] = obj;
             return View();
         }
 	

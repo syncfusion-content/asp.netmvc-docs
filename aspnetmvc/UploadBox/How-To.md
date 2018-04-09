@@ -28,11 +28,11 @@ The following code illustrates the rendering of UploadBox using UploadBox proper
 	
      public ActionResult Index()
         {
-            UploadboxProperties uploadobj = new UploadboxProperties();
-            uploadobj.ExtensionsAllow = ".jpg,.png";
-            uploadobj.SaveUrl = "SaveDefault";
-            uploadobj.RemoveUrl = "RemoveDefault";
-            ViewData["upload"] = uploadobj;
+            UploadboxProperties upload = new UploadboxProperties();
+            upload.ExtensionsAllow = ".jpg,.png";
+            upload.SaveUrl = "SaveDefault";
+            upload.RemoveUrl = "RemoveDefault";
+            ViewData["upload"] = upload;
             return View();
         }
         public ActionResult SaveDefault(IEnumerable<HttpPostedFileBase> UploadDefault)

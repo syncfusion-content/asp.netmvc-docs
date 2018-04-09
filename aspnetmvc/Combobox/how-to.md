@@ -314,13 +314,13 @@ The following code illustrates the rendering of ComboBox using ComboBox properti
 	
     public ActionResult Index()
         {
-            ComboBoxProperties comboobj = new ComboBoxProperties();
-            comboobj.DataSource = "http://js.syncfusion.com/ejServices/wcf/NorthWind.svc/";
-            comboobj.Query = "ej.Query().from('Suppliers').select('SupplierID', 'ContactName').take(10)";
-            comboobj.ComboBoxFields.Text = "ContactName";
-            comboobj.ComboBoxFields.Value = "SupplierID";
-            comboobj.Width = "300";
-            return View(comboobj);
+            ComboBoxProperties combobox = new ComboBoxProperties();
+            combobox.DataSource = "http://js.syncfusion.com/ejServices/wcf/NorthWind.svc/";
+            combobox.Query = "ej.Query().from('Suppliers').select('SupplierID', 'ContactName').take(10)";
+            combobox.ComboBoxFields.Text = "ContactName";
+            combobox.ComboBoxFields.Value = "SupplierID";
+            combobox.Width = "300";
+            return View(combobox);
         }
 	
 {% endhighlight %}

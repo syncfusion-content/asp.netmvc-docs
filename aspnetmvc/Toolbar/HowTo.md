@@ -32,9 +32,9 @@ The following code illustrates the rendering of Toolbar using Toolbar properties
             obj.Add(new ToolbarBaseItem() { SpriteCssClass= "e-icon e-cut" ,TooltipText="cut"});
             obj.Add(new ToolbarBaseItem() { SpriteCssClass = "e-icon e-copy", TooltipText = "copy" });
             obj.Add(new ToolbarBaseItem() { SpriteCssClass = "e-icon e-paste", TooltipText = "paste" });
-            ToolbarProperties toolbarobj = new ToolbarProperties();
-            toolbarobj.Items = obj;
-            ViewData["toolbar"] = toolbarobj;
+            ToolbarProperties toolbar = new ToolbarProperties();
+            toolbar.Items = obj;
+            ViewData["toolbar"] = toolbar;
             return View();
         }
 	

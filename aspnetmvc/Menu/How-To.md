@@ -36,11 +36,11 @@ The following code illustrates the rendering of Menu using Menu properties from 
             obj.Add(new MenuBaseItem() { Text = "Purchase" });
             obj.Add(new MenuBaseItem() { Text = "Resources" });
             obj.Add(new MenuBaseItem() { Text = "Company" });
-            MenuProperties menuobj = new MenuProperties();
-            menuobj.Items = obj;
-            menuobj.Width = "150";
-            menuobj.Orientation = Syncfusion.JavaScript.Orientation.Vertical;
-            ViewData["Menu"] = menuobj;
+            MenuProperties menu = new MenuProperties();
+            menu.Items = obj;
+            menu.Width = "150";
+            menu.Orientation = Syncfusion.JavaScript.Orientation.Vertical;
+            ViewData["Menu"] = menu;
             return View();
         }
 	
