@@ -56,7 +56,7 @@ The following code illustrates the rendering of Tab using Tab properties from co
             TabProperties tab = new TabProperties();
             tab.Items.Add(new TabBaseItem() { ID = "javaScript", Text = "JavaScript", ContentTemplate = new MvcTemplate<TabBaseItem> { RazorViewTemplate = (data) => { return "JavaScript (JS) is an interpreted computer programming language"; } } });
             tab.Items.Add(new TabBaseItem() { ID = "cSharp", Text = "C Sharp", ContentTemplate = new MvcTemplate<TabBaseItem> { RazorViewTemplate = (data) => { return " C# is intended to be a simple, modern, general-purpose, object-oriented programming language."; } } });
-            tab.Items.Add(new TabBaseItem() { ID = "vb", Text = "VB.Net", ContentTemplate = new MvcTemplate<TabBaseItem> { RazorViewTemplate = (data) => { return "  The command-line compiler, VBC.EXE, is installed as part of the freeware .NET Framework SDK."; } } });
+            tab.Items.Add(new TabBaseItem() { ID = "vb", Text = "VB.Net", ContentTemplate = new MvcTemplate<TabBaseItem> { RazorViewTemplate = (data) => { return "  The command-line compiler, VBC.EXE, is installed as part of the Freeware .NET Framework SDK."; } } });
             ViewData["tab"] = tab;
             return View();
         }
