@@ -389,3 +389,45 @@ In the partial view, the RTE is rendered as follows
 @{Html.EJ().RTE("Id1").Width("100%").ContentTemplate(@<p>  </p>).ShowHtmlSource(true).ShowFooter(true).Value(RTEPartialView.Models.RTEModel.text).Render();}
 
 {% endhighlight %}
+
+## Render RichTextEditor from code behind
+
+RichTextEditor can be rendered from the code behind by initializing the required properties in controller and passing those properties via ViewData or Model to the client side
+
+The following code illustrates the rendering of RichTextEditor using RichTextEditor properties from code behind.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+       @model  Syncfusion.JavaScript.Models.RTEproperties
+
+    @{
+
+        Html.EJ().RTE("rteSample", (Syncfusion.JavaScript.Models.RTEproperties)ViewData["RTEModel"]).Render();   // render the RTE in view
+
+    }
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+            RTEproperties RTEObj = new RTEproperties();
+            RTEObj.ContentTemplate = new MvcTemplate<object>
+            {
+                RazorViewTemplate = (data) =>
+                {
+                    return "This is RTE content";
+                }
+            };
+            RTEObj.Width = "550";
+            RTEObj.IsResponsive = true;
+            ViewData["RTEModel"] = RTEObj;
+            return View(RTEObj);
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
