@@ -303,3 +303,32 @@ You can remove the validation error message of DropDownList on selecting an item
 
 {% endtabs %}
 
+## Render DropDownList from code behind
+
+DropDownList can be rendered from the code behind by initializing the required properties in controller and passing those properties via ViewData or Model to the client side
+
+The following code illustrates the rendering of DropDownList using DropDownList properties from code behind.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+        @{Html.EJ().DropDownList("Customer", Model).Render(); }
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+            DropDownListProperties DDLObj = new DropDownListProperties();
+            DDLObj.DataSource = "http://js.syncfusion.com/ejServices/wcf/NorthWind.svc/";
+            DDLObj.Query = "ej.Query().from('Suppliers').select('SupplierID', 'ContactName').take(10)";
+            DDLObj.DropDownListFields.Text = "ContactName";
+            DDLObj.DropDownListFields.Value = "SupplierID";
+            return View(DDLObj);
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}

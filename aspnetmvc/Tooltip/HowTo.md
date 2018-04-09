@@ -385,3 +385,40 @@ Using this property, Links can be provided in Tooltip content where user can nav
     @Html.EJ().Tooltip("test").Content("JavaScript is the programming language of HTML and the Web.").CloseMode(CloseMode.Auto).AutoCloseTimeout(2000)
 
 {% endhighlight %}
+
+## Render Tooltip from code behind
+
+Tooltip can be rendered from the code behind by initializing the required properties in controller and passing those properties via ViewData or Model to the client side
+
+The following code illustrates the rendering of Tooltip using Tooltip properties from code behind.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+    <div class="control">
+	      Alongside HTML and CSS, JavaScript is one of the three essential technologies of <a id="link1"><u> World&nbsp;Wide&nbsp;Web </u> </a>content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins.        
+    </div>
+  @{
+       Html.EJ().Tooltip("link1", (Syncfusion.JavaScript.Models.TooltipProperties)ViewData["tooltip"]).Render();
+    }
+
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+           
+            TooltipProperties obj = new TooltipProperties();
+            obj.Content = "The World Wide Web (WWW) is an information space where documents and other web resources are identified by URLs, interlinked by hypertext links, and can be accessed via the Internet.";
+            ViewData["tooltip"] = obj;
+            return View();
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
+
+

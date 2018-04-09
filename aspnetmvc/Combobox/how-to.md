@@ -295,3 +295,34 @@ N> [jquery.validate.min](http://cdn.syncfusion.com/js/assets/external/jquery.val
     </form>
 
 {% endhighlight%}
+
+## Render ComboBox from code behind
+
+ComboBox can be rendered from the code behind by initializing the required properties in controller and passing those properties via ViewData or Model to the client side
+
+The following code illustrates the rendering of ComboBox using ComboBox properties from code behind.
+
+{% tabs %}
+
+{% highlight razor %}
+    
+       @{Html.EJ().ComboBox("Customer", Model).Render(); }
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+            ComboBoxProperties combobox = new ComboBoxProperties();
+            combobox.DataSource = "http://js.syncfusion.com/ejServices/wcf/NorthWind.svc/";
+            combobox.Query = "ej.Query().from('Suppliers').select('SupplierID', 'ContactName').take(10)";
+            combobox.ComboBoxFields.Text = "ContactName";
+            combobox.ComboBoxFields.Value = "SupplierID";
+            combobox.Width = "300";
+            return View(combobox);
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
