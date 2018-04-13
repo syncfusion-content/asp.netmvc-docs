@@ -238,7 +238,7 @@ You can customize the **labelFormat** for both PrimaryYAxis and custom axes.
 
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Axes(ax => { ax.LabelFormat("n1").Add(); }).PrimaryYAxis(py => { py.LabelFormat("c1").Add(); })
+@Html.EJ().Pivot().PivotChart("PivotChart1").Axes(ax => { ax.LabelFormat("n1").Add(); }).PrimaryYAxis(primary => { primary.LabelFormat("c1").Add(); })
 //....
 
 {% endhighlight %}
@@ -250,7 +250,7 @@ You can customize the title for axes by the **title** property.
 
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Axes(ax => { ax.Title(title=>title.Text("Internet Sales Amount")).Add(); }).PrimaryYAxis(py => { py.Title(title=>title.Text("Customer Count")).Add(); })
+@Html.EJ().Pivot().PivotChart("PivotChart1").Axes(ax => { ax.Title(title=>title.Text("Internet Sales Amount")).Add(); }).PrimaryYAxis(primary => { primary.Title(title=>title.Text("Customer Count")).Add(); })
 //....
 
 {% endhighlight %}
