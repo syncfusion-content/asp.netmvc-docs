@@ -16,8 +16,10 @@ Grid `DataSource` property allows to bind datasource as the instance of one of t
 *	REST Service URL as string.
 *	Table – Allows to bind HTML Table and it accepts table template script "ID".
 *	ORM components such as Entity Framework/Linq to SQL.
-     
+
 We can also bind the above type of datasource by using lambda Expressions of Grid `DataSource` Property.
+
+N> To update the dataSource after Grid rendered, use `dataSource` method of Grid. Refer to this [link](https://help.syncfusion.com/aspnetmvc/grid/how-to#set-dynamic-datasource-to-grid) for more information.
   
 In the following section, let us see on how to bind various datasources to Grid using `DataSource` API.
   
