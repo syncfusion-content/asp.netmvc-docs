@@ -1156,6 +1156,8 @@ Requires the element to be the same as another.</td></tr>
 
 Grid supports all the standard validation methods of jQuery, please refer the jQuery validation documentation [link](http://jqueryvalidation.org/documentation/# "link") for more information.
 
+To return custom validation message from server end, please refer the this KB [link](https://www.syncfusion.com/kb/7135/how-to-return-custom-message-from-controller-when-crud-action-fails).
+
 The following code example describes the above behavior.
 
 {% tabs %}
