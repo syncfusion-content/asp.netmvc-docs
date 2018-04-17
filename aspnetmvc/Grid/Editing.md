@@ -1156,6 +1156,8 @@ Requires the element to be the same as another.</td></tr>
 
 Grid supports all the standard validation methods of jQuery, please refer the jQuery validation documentation [link](http://jqueryvalidation.org/documentation/# "link") for more information.
 
+To return custom validation message from server end, please refer this KB [link](https://www.syncfusion.com/kb/7135/how-to-return-custom-message-from-controller-when-crud-action-fails).
+
 The following code example describes the above behavior.
 
 {% tabs %}
@@ -1389,7 +1391,7 @@ Also, using 'DataOperations' helper class you can perform grid action at server 
 7. PerformSelect
 8. Execute
 
-### Remotesave Adaptor:
+### RemoteSave Adaptor:
 
 RemoteSaveAdaptor is used for binding local data and performs all data operations in client-side. It interacts with server-side only for CRUD operations to pass the modified records.
 
