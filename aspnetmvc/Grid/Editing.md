@@ -893,6 +893,7 @@ N> To render the EJ MVC form controls like DatePicker, Dropdownlist, NumericText
 
 Users can start editing by clicking a cell and typing data into it. Edited cell will be marked while navigating to next cell or any other row, so that you know which fields or cells has been edited. Set `EditMode` as `Batch` to enable batch editing.
 
+N> `getBatchChanges` method of grid holds the unsaved record changes.
 N> Refer the KB [link](http://www.syncfusion.com/kb/3016/how-to-suppress-grid-confirmation-messages# "link") for "How to suppress grid confirmation messages" in batch mode.
 
 The following code example describes the above behavior.
