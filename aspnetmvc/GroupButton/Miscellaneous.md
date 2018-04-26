@@ -2,7 +2,7 @@
 layout: post
 title: Miscellaneous | GroupButton | ASP.NET MVC | Syncfusion
 description: miscellaneous
-platform: aspnet mvc
+platform: ejmvc
 control: GroupButton
 documentation: ug
 ---

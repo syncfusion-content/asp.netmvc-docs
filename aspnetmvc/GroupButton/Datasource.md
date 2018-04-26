@@ -2,7 +2,7 @@
 layout: post
 title: Easy Customization | GroupButton | ASP.NET MVC | Syncfusion
 description: easy customization
-platform: aspnet mvc
+platform: ejmvc
 control: GroupButton 
 documentation: ug
 ---
