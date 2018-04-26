@@ -2,7 +2,7 @@
 layout: post
 title: localization
 description: localization
-platform: asp.net mvc
+platform: ejmvc
 control: Pager
 documentation: ug
 

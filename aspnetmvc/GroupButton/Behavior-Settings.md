@@ -2,7 +2,7 @@
 layout: post
 title: Button Type | GroupButton | ASP.NET MVC | Syncfusion
 description: Groupbutton
-platform: aspnet mvc
+platform: ejmvc
 control: GroupButton
 documentation: ug
 ---

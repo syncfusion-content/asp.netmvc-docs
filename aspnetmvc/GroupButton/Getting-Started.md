@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started | GroupButton | ASP.NET MVC | Syncfusion
 description: getting started
-platform: aspnet MVC
+platform: ejmvc
 control: GroupButton
 documentation: ug
 ---

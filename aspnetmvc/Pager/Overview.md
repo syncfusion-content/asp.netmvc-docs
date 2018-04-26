@@ -2,9 +2,10 @@
 layout: post
 title: Overview
 description: overview
-platform: asp.net mvc
+platform: ejmvc
 control: Pager
 documentation: ug
+
 ---
 
 # Overview
