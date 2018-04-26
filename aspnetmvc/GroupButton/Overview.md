@@ -2,7 +2,7 @@
 layout: post
 title: Overview | GroupButton | ASP.NET Webforms | Syncfusion
 description: overview
-platform: aspnet
+platform: ejmvc
 control: GropuButton
 documentation: ug
 ---

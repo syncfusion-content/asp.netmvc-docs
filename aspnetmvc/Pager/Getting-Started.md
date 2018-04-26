@@ -2,7 +2,7 @@
 layout: post
 title: Getting-Started
 description: getting started
-platform: asp.net mvc
+platform: ejmvc
 control: Pager
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: behavior settings
 description: behavior settings
-platform: asp.net mvc
+platform: ejmvc
 control: Pager
 documentation: ug
 ---
