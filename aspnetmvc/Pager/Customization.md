@@ -2,7 +2,7 @@
 layout: post
 title: customization
 description: customization
-platform: asp.net mvc
+platform: ejmvc
 control: Pager
 documentation: ug
 ---

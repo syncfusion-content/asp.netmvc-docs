@@ -2,7 +2,7 @@
 layout: post
 title: RTL Support | Button | ASP.NET MVC | Syncfusion
 description: rtl support
-platform: aspnet mvc
+platform: ejmvc
 control: GroupButton
 documentation: ug
 ---
