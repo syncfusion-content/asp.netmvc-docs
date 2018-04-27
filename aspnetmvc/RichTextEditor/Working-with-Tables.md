@@ -2,7 +2,7 @@
 layout: post
 title: Working with Tables opreation in RichTextEditor widget for Syncfusion Essential JS
 description: Working with Tables customization for RichTextEditor widget
-platform: js
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Tables, Insert Row, Remove Row, Remove Columns, Insert Columns

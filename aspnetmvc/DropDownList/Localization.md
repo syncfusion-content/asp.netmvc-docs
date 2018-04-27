@@ -2,7 +2,7 @@
 layout: post
 title: Localization in DropDownList control for Syncfusion ASP.NET MVC
 description: Describes about Localization in DropDownList control for Syncfusion ASP.NET MVC
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 ---

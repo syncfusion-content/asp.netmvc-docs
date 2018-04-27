@@ -2,7 +2,7 @@
 layout: post
 title: Sorting in ComboBox control for Syncfusion ASP.NET MVC
 description: Sorting support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: sortorder

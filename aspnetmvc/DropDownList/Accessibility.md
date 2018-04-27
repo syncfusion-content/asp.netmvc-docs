@@ -2,7 +2,7 @@
 layout: post
 title: Web Accessbility in DropDownList control for Syncfusion ASP.NET MVC
 description: Web accessibliy support to DropDownList control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Keyboard Navigation, DropDownList, Accessibility

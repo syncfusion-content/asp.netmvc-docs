@@ -2,7 +2,7 @@
 layout: post
 title: Working with hyperlink customization in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Working with Hyperlinks customization in RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Hyperlinks

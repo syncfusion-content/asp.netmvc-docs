@@ -2,7 +2,7 @@
 layout: post
 title: Footer in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Footer to format the RichTextEditor widget's content
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Footer, Clear Format, Re-sizer, HTML Tag info, Characters Count, Word Count

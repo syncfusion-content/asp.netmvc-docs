@@ -2,7 +2,7 @@
 layout: post
 title: Getting started in ComboBox control for Syncfusion ASP.NET MVC
 description: Getting started
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: allowCustom, ComboBox, dataSource, popupHeight, popupWidth

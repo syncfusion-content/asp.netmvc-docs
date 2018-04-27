@@ -2,7 +2,7 @@
 layout: post
 title: Working with content selection in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Working with content selection in RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Select All, Select a Range, Get Selection

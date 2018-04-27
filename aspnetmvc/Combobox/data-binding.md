@@ -2,7 +2,7 @@
 layout: post
 title: Data Binding in ComboBox control for Syncfusion ASP.NET MVC
 description: DataBinding support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: remote data, ComboBox, json data, local data

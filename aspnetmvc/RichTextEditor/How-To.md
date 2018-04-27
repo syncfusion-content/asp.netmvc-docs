@@ -2,7 +2,7 @@
 layout: post
 title: RichTextEditor control for Syncfusion Essential ASP.NET MVC
 description: RichTextEditor widget (toolbar, content area, and footer)
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Partial View, Export to word document/pdf, Browser Spell checker
