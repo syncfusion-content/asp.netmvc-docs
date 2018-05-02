@@ -199,7 +199,7 @@ The PDF document can also be loaded during the PDF viewer control initialization
 N> If the name of the PDF document is only set in the DocumentPath property, the PDF document must be available in the folder which is specified in the Load action method in the controller
 
 {% highlight javascript %}
-@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").DocumentPath(“HTTP Succintly”))
+@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").DocumentPath(“HTTP Succinctly”))
 {% endhighlight %}
 
 #### 5.Unload the documents from PDF viewer control

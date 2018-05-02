@@ -283,7 +283,7 @@ The signature tool of the PDF viewer contains an option to include handwritten s
 
 {% highlight javascript %}
 <script>
-    $(“#pdfviewer”).data(“ejPdfViewer”).showSigntureTool(false);
+    $(“#pdfviewer”).data(“ejPdfViewer”).showSignatureTool(false);
 </script>
 {% endhighlight %}
 
