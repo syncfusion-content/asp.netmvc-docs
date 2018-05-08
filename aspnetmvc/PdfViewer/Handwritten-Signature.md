@@ -24,7 +24,7 @@ The following code snippet describes how to disable the signature tool in the wi
 
 **Enable or Disable handwritten signature**
 
-The adding of handwritten signature feature in the PDF document can be enabled or disabled using the EnableSignture property.
+The adding of handwritten signature feature in the PDF document can be enabled or disabled using the EnableSignature property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableSignature(true))
