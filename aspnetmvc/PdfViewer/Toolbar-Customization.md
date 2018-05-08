@@ -79,7 +79,7 @@ Contains selection tool.
 </tr>
 </table>
 
-The PDF viewer control has an option to show or hide these grouped items in the default toolbar. You can hide or display any of these tools by using the [toolbarSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#members:toolbarsettings) property. The following code snippet describes how to show the magnification tools in the widget.
+The PDF viewer control has an option to show or hide these grouped items in the default toolbar. You can hide or display any of these tools by using the toolbarSettings property. The following code snippet describes how to show the magnification tools in the widget.
 
 {% highlight javascript %}
 <div style="width:100%;height:780px;">
@@ -88,7 +88,7 @@ The PDF viewer control has an option to show or hide these grouped items in the 
 </div>
 {% endhighlight %}
 
-The PDF viewer control also has an option to show or hide the complete default toolbar. You can achieve this by using the [showToolbar(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showtoolbar) method. The following code snippet describes how to hide the default toolbar in the widget.
+The PDF viewer control also has an option to show or hide the complete default toolbar. You can achieve this by using the showToolbar(bool) method. The following code snippet describes how to hide the default toolbar in the widget.
 
 {% highlight javascript %}
 <script>
@@ -110,7 +110,7 @@ The magnification tools of the PDF viewer contain ZoomIn, ZoomOut, Zoom, FitPage
 
 fitToPage()
 
-You can fit the page size of the PDF document loaded in the PDF viewer control using the [fitToPage()] (https://help.syncfusion.com/api/js/ejpdfviewer#fittopage) method. 
+You can fit the page size of the PDF document loaded in the PDF viewer control using the fitToPage() method. 
 
 {% highlight javascript %}
 <script>
@@ -120,7 +120,7 @@ You can fit the page size of the PDF document loaded in the PDF viewer control u
 
 fitToWidth()
 
-You can fit the page width of the PDF document loaded in the PDF viewer control using the [fitToWidth()] (https://help.syncfusion.com/api/js/ejpdfviewer#fittowidth) method. 
+You can fit the page width of the PDF document loaded in the PDF viewer control using the fitToWidth() method. 
 
 {% highlight javascript %}
 <script>
@@ -130,7 +130,7 @@ You can fit the page width of the PDF document loaded in the PDF viewer control 
 
 zoomIn()
 
-You can zoom the PDF document page loaded in the PDF viewer control using [zoomIn()] (https://help.syncfusion.com/api/js/ejpdfviewer#zoomin)  method. The maximum zoom percentage is 400%.
+You can zoom the PDF document page loaded in the PDF viewer control using zoomIn() method. The maximum zoom percentage is 400%.
 
 {% highlight javascript %}
 <<script>
@@ -140,7 +140,7 @@ You can zoom the PDF document page loaded in the PDF viewer control using [zoomI
 
 zoomOut()
 
-You can zoom out the PDF document page loaded in the PDF viewer control using the [zoomOut()] (https://help.syncfusion.com/api/js/ejpdfviewer#zoomout) method. The minimum zoom percentage is 50%.
+You can zoom out the PDF document page loaded in the PDF viewer control using the zoomOut() method. The minimum zoom percentage is 50%.
 
 {% highlight javascript %}
 <script>
@@ -150,7 +150,7 @@ You can zoom out the PDF document page loaded in the PDF viewer control using th
 
 zoomTo(zoomValue)
 
-The PDF document page loaded in the PDF viewer control can be zoomed to a specific value using the [zoomTo(zoomValue)] (https://help.syncfusion.com/api/js/ejpdfviewer#zoomtozoomvalue) method.
+The PDF document page loaded in the PDF viewer control can be zoomed to a specific value using the zoomTo(zoomValue) method.
 
 {% highlight javascript %}
 <script>
@@ -160,7 +160,7 @@ The PDF document page loaded in the PDF viewer control can be zoomed to a specif
 
 zoomPercentage
 
-The [zoomPercentage] (https://help.syncfusion.com/api/js/ejpdfviewer#zoompercentage-number) property of the PDF viewer control returns the current zoom value of the PDF document.
+The zoomPercentage property of the PDF viewer control returns the current zoom value of the PDF document.
 
 {% highlight javascript %}
 <script>
@@ -171,7 +171,7 @@ The [zoomPercentage] (https://help.syncfusion.com/api/js/ejpdfviewer#zoompercent
 
 **Navigation Tools**
 
-The navigation tools of the PDF viewer contain GoToNext, GoToPrevious, and current page number tools in the default toolbar. The PDF viewer control also has an option to show or hide the navigation tools in the default toolbar. You can achieve this by using the [showPageNavigationTools(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#showpagenavigationtoolsshow) method. The following code snippet describes how to hide the navigation tools in the default toolbar in the widget.
+The navigation tools of the PDF viewer contain GoToNext, GoToPrevious, and current page number tools in the default toolbar. The PDF viewer control also has an option to show or hide the navigation tools in the default toolbar. You can achieve this by using the showPageNavigationTools(bool) method. The following code snippet describes how to hide the navigation tools in the default toolbar in the widget.
 
 {% highlight javascript %}
 <script>
@@ -183,7 +183,7 @@ The navigation tools of the PDF viewer contain GoToNext, GoToPrevious, and curre
 
 goToPreviousPage()
 
-The previous page of the PDF document from the current page can be navigated in the PDF viewer using [goToPreviousPage()] (https://help.syncfusion.com/api/js/ejpdfviewer#gotopreviouspage) method.
+The previous page of the PDF document from the current page can be navigated in the PDF viewer using goToPreviousPage() method.
 
 {% highlight javascript %}
 <script>
@@ -193,7 +193,7 @@ The previous page of the PDF document from the current page can be navigated in 
 
 goToNextPage()
 
-The next page of the PDF document from the current page can be navigated in the PDF viewer using the [goToNextPage()] (https://help.syncfusion.com/api/js/ejpdfviewer#gotonextpage) method.
+The next page of the PDF document from the current page can be navigated in the PDF viewer using the goToNextPage() method.
 
 {% highlight javascript %}
 <script>
@@ -203,7 +203,7 @@ The next page of the PDF document from the current page can be navigated in the 
 
 goToFirstPage()
 
-The first page of the PDF document can be navigated in the PDF viewer using the [goToFirstPage()] () method.
+The first page of the PDF document can be navigated in the PDF viewer using the goToFirstPage() method.
 
 {% highlight javascript %}
 <script>
@@ -213,7 +213,7 @@ The first page of the PDF document can be navigated in the PDF viewer using the 
 
 goToLastPage()
 
-The last page of the PDF document can be navigated in the PDF viewer using the [goToLastPage()] () method.
+The last page of the PDF document can be navigated in the PDF viewer using the goToLastPage() method.
 
 {% highlight javascript %}
 <script>
@@ -223,7 +223,7 @@ The last page of the PDF document can be navigated in the PDF viewer using the [
 
 goToPage(pageNumber)
 
-The specific page in the PDF document can be navigated using the [goToPage(pageNumber)] () method. If the page is not available for the given pageNumber, the PDF viewer retains the existing page in view.
+The specific page in the PDF document can be navigated using the goToPage(pageNumber) method. If the page is not available for the given pageNumber, the PDF viewer retains the existing page in view.
 
 {% highlight javascript %}
 <script>
@@ -233,7 +233,7 @@ The specific page in the PDF document can be navigated using the [goToPage(pageN
 
 **Text Markup Annotation Tools**
 
-The text markup annotation tools of the PDF viewer contain strikeout, highlight, and underline tools in the default toolbar. The PDF viewer control also has an option to show or hide the text markup annotation tools in the default toolbar. You can achieve this by using the [showTextMarkupAnnotationTools(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showtextmarkupannotati) method. The following code snippet describes how to hide the text markup annotation tools in the default toolbar in the widget.
+The text markup annotation tools of the PDF viewer contain strikeout, highlight, and underline tools in the default toolbar. The PDF viewer control also has an option to show or hide the text markup annotation tools in the default toolbar. You can achieve this by using the showTextMarkupAnnotationTools(bool) method. The following code snippet describes how to hide the text markup annotation tools in the default toolbar in the widget.
 
 {% highlight javascript %}
 <script>
@@ -243,7 +243,7 @@ The text markup annotation tools of the PDF viewer contain strikeout, highlight,
 
 **Print Tool**
 
-The print tool of the PDF viewer contains an option to print the PDF document. When the print button is clicked, the changes made in the PDF document will be printed along with the document using the browser’s default printer settings. The PDF viewer control provides the option to show or hide the print tool in the default toolbar. You can achieve this by using the [showPrintTools(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showprinttools) method.
+The print tool of the PDF viewer contains an option to print the PDF document. When the print button is clicked, the changes made in the PDF document will be printed along with the document using the browser’s default printer settings. The PDF viewer control provides the option to show or hide the print tool in the default toolbar. You can achieve this by using the showPrintTools(bool) method.
 
 {% highlight javascript %}
 <script>
@@ -251,7 +251,7 @@ The print tool of the PDF viewer contains an option to print the PDF document. W
 </script>
 {% endhighlight %}
 
-The printing of the PDF document can be achieved in the client side by calling the [print()] (https://help.syncfusion.com/api/js/ejpdfviewer#print) method. 
+The printing of the PDF document can be achieved in the client side by calling the print() method. 
 
 {% highlight javascript %}
 <script>
@@ -261,7 +261,7 @@ The printing of the PDF document can be achieved in the client side by calling t
 
 **Download Tool**
 
-The download tool of the PDF viewer contains an option to download the PDF document. When the download button is clicked, the changes made in the PDF document will be saved in a copy of the original PDF document and it will be downloaded in the browser. The PDF viewer control provides the option to show or hide the download tool in the default toolbar. You can achieve this by using the [showDownloadTool(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showdownloadtool) method.
+The download tool of the PDF viewer contains an option to download the PDF document. When the download button is clicked, the changes made in the PDF document will be saved in a copy of the original PDF document and it will be downloaded in the browser. The PDF viewer control provides the option to show or hide the download tool in the default toolbar. You can achieve this by using the showDownloadTool(bool) method.
 
 {% highlight javascript %}
 <script>
@@ -269,7 +269,7 @@ The download tool of the PDF viewer contains an option to download the PDF docum
 </script>
 {% endhighlight %}
 
-The PDF document can be downloaded in the client side by calling the [download()] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:download) method.
+The PDF document can be downloaded in the client side by calling the download() method.
 
 {% highlight javascript %}
 <script>
@@ -277,9 +277,9 @@ The PDF document can be downloaded in the client side by calling the [download()
 </script>
 {% endhighlight %}
 
-*8Signature tool**
+**Signature tool**
 
-The signature tool of the PDF viewer contains an option to include handwritten signatures in the PDF document. The PDF viewer control provides the option to show or hide the signature tool in the default toolbar. You can achieve this by using the [showSignatureTool(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showsignaturetool) method.
+The signature tool of the PDF viewer contains an option to include handwritten signatures in the PDF document. The PDF viewer control provides the option to show or hide the signature tool in the default toolbar. You can achieve this by using the showSignatureTool(bool) method.
 
 {% highlight javascript %}
 <script>
@@ -289,7 +289,7 @@ The signature tool of the PDF viewer contains an option to include handwritten s
 
 **Selection tool**
 
-The selection tool of the PDF viewer control contains options for selection and panning interaction modes. The PDF viewer control provides the option to show or hide the selection tool in the default toolbar. You can achieve this by using the [showSelectionTool(bool)] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:showselectiontool) method.
+The selection tool of the PDF viewer control contains options for selection and panning interaction modes. The PDF viewer control provides the option to show or hide the selection tool in the default toolbar. You can achieve this by using the showSelectionTool(bool) method.
 
 {% highlight javascript %}
 <script>
@@ -363,7 +363,7 @@ The text search can be canceled and the highlighted occurrences from the PDF vie
 
 BeforePrint
 
-When the print option is clicked, the beforePrint event will be triggered before printing the PDF document from the PDF viewer control. We can define the event method using the [BeforePrint] (https://help.syncfusion.com/api/js/ejpdfviewer#events:beforeprint) property of the control.
+When the print option is clicked, the beforePrint event will be triggered before printing the PDF document from the PDF viewer control. We can define the event method using the BeforePrint property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.BeforePrint(“beforePrint”)))
@@ -376,7 +376,7 @@ When the print option is clicked, the beforePrint event will be triggered before
 
 AfterPrint
 
-sAfter the printing process is completed, the afterPrint event will be triggered. We can define the event method using the [AfterPrint] (https://help.syncfusion.com/api/js/ejpdfviewer#events:afterprint) property of the control.
+After the printing process is completed, the afterPrint event will be triggered. We can define the event method using the AfterPrint property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.AfterPrint(“afterPrint”)))
@@ -389,7 +389,7 @@ sAfter the printing process is completed, the afterPrint event will be triggered
 
 ZoomChanged
 
-When the zoom value of the PDF document is changed using the magnification tools, the zoomChange event will be triggered. We can define the event method using the [ZoomChanged] (https://help.syncfusion.com/api/js/ejpdfviewer#zoomchange) property of the control.
+When the zoom value of the PDF document is changed using the magnification tools, the zoomChange event will be triggered. We can define the event method using the ZoomChanged property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.ZoomChanged(“zoomChanged”)))
@@ -402,7 +402,7 @@ When the zoom value of the PDF document is changed using the magnification tools
 
 PageClicked
 
-When a page of the PDF document is clicked, the pageClick event will be triggered. We can define the event method using the [PageClicked] (https://help.syncfusion.com/api/js/ejpdfviewer#pageclick) property of the control.
+When a page of the PDF document is clicked, the pageClick event will be triggered. We can define the event method using the PageClicked property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.PageClicked(“pageClicked”)))
@@ -417,7 +417,7 @@ When a page of the PDF document is clicked, the pageClick event will be triggere
 
 The toolbar can be customized by hiding the existing toolbar. 
 
-The following code snippet shows how to create a customer toolbar by using the [client side APIs] (https://help.syncfusion.com/api/js/ejpdfviewer).
+The following code snippet shows how to create a customer toolbar by using the client side APIs
 
 {% highlight html %}
 <body>

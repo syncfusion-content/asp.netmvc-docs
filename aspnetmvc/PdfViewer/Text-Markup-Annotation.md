@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF viewer control supports adding text markup annotations in the PDF documents. The control also renders the existing text markup annotations from the PDF document when the document is loaded in it.
 
-The text markup annotation tools in the default toolbar can be enabled or disabled using the [toolbarSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#toolbarsettings-object) property.
+The text markup annotation tools in the default toolbar can be enabled or disabled using the toolbarSettings property.
 
 The following code snippet describes how to show only the text markup annotation tools in the control.
 
@@ -25,25 +25,25 @@ The following screenshot shows the PDF viewer with the PDF documents containing 
 
 **Enable or Disable the text markup annotations**
 
-The adding and modifying of the text markup annotations can be enabled or disabled using the [EnableTextMarkupAnnotations] (https://help.syncfusion.com/api/js/ejpdfviewer#enabletextmarkupannotations-boolean) property.
+The adding and modifying of the text markup annotations can be enabled or disabled using the EnableTextMarkupAnnotations property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableTextMarkupAnnotations(true))
 {% endhighlight %}
 
-The adding and modifying of the highlight annotations can be enabled or disabled using the [EnableHighlightAnnotation] (https://help.syncfusion.com/api/js/ejpdfviewer#enablehighlightannotation-boolean) property.
+The adding and modifying of the highlight annotations can be enabled or disabled using the EnableHighlightAnnotation property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableHighlightAnnotation(true))
 {% endhighlight %}
 
-The adding and modifying of the strikethrough annotations can be enabled or disabled using the [EnableStrikethroughAnnotation] (https://help.syncfusion.com/api/js/ejpdfviewer#enablestrikethroughannotation-boolean) property.
+The adding and modifying of the strikethrough annotations can be enabled or disabled using the EnableStrikethroughAnnotation property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableStrikethroughAnnotation(true))
 {% endhighlight %}
 
-The adding and modifying of the underline annotations can be enabled or disabled using the [EnableUnderlineAnnotation] (https://help.syncfusion.com/api/js/ejpdfviewer#enableunderlineannotation-boolean) property.
+The adding and modifying of the underline annotations can be enabled or disabled using the EnableUnderlineAnnotation property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableUnderlineAnnotation(true))
@@ -51,7 +51,7 @@ The adding and modifying of the underline annotations can be enabled or disabled
 
 **Providing settings for text markup annotations**
 
-You can get or set the settings of the highlight annotations using the [highlightSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#members:highlightsetting) property. The highlightSettings property is used to set the [color] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingscolor-string), [opacity] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingsopacity-number), [author] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingsauthor-string), [subject] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingssubject-string), [modifiedDate] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingsmodifieddate-string), and [isLocked] (https://help.syncfusion.com/api/js/ejpdfviewer#highlightsettingsislocked-boolean) properties of the highlight annotations.
+You can get or set the settings of the highlight annotations using the highlightSettings property. The highlightSettings property is used to set the color, opacity, author, subject, modifiedDate and isLocked properties of the highlight annotations.
 
 {% highlight javascript %}
  $(function () {
@@ -59,7 +59,7 @@ You can get or set the settings of the highlight annotations using the [highligh
         });
 {% endhighlight %}
 
-You can get or set the settings of the strikethrough annotations using the [strikethroughSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettings-object) property. The strikethroughSettings property is used to set the [color] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingscolor-string), [opacity] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingsopacity-number), [author] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingsauthor-string), [subject] https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingssubject-string(), [modifiedDate] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingsmodifieddate-string), and [isLocked] (https://help.syncfusion.com/api/js/ejpdfviewer#strikethroughsettingsislocked-boolean) properties of the strikethrough annotations.
+You can get or set the settings of the strikethrough annotations using the strikethroughSettings property. The strikethroughSettings property is used to set the color, opacity, author, subject, modifiedDate, and isLocked properties of the strikethrough annotations.
 
 {% highlight javascript %}
  $(function () {
@@ -68,7 +68,7 @@ You can get or set the settings of the strikethrough annotations using the [stri
         });
 {% endhighlight %}
 
-You can get or set the settings of the underline annotations using the [underlineSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettings-object) property. The underlineSettings property is used to set the [color] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingscolor-string), [opacity] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingsopacity-number), [author] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingsauthor-string), [subject] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingssubject-string), [modifiedDate](https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingsmodifieddate-string), and [isLocked] (https://help.syncfusion.com/api/js/ejpdfviewer#underlinesettingsislocked-boolean) properties of the underline annotations.
+You can get or set the settings of the underline annotations using the underlineSettings property. The underlineSettings property is used to set the color, opacity, author, subject, modifiedDate, and isLocked properties of the underline annotations.
 
 {% highlight javascript %}
  $(function () {
@@ -81,7 +81,7 @@ You can get or set the settings of the underline annotations using the [underlin
 
 The text markup annotations are added to the PDF document using the text markup annotation tools provided in the toolbar of the PDF viewer control.
 
-The annotations can be added to the PDF document from the client side using the [annotationType] (https://help.syncfusion.com/api/js/ejpdfviewer#annotationtype-enum) property and [addAnnotation] (https://help.syncfusion.com/api/js/ejpdfviewer#methods:addannotation) method.
+The annotations can be added to the PDF document from the client side using the annotationType property and addAnnotation method.
 
 {% highlight javascript %}
 var pdfviewerObj = $("#pdfviewer").data("ejPdfViewer");
@@ -92,7 +92,7 @@ The colorpicker control is provided in the text markup annotation tools to selec
 
 ![](Text-Markup-Annotation_images/Text_Markup_Annotations_img2.png)
 
-When the text markup annotation is added in the PDF document, the annotationAdd event will be triggered in the control. The event method can be defined using the [AnnotationAdd] (https://help.syncfusion.com/api/js/ejpdfviewer#annotationadd) property of the control.
+When the text markup annotation is added in the PDF document, the annotationAdd event will be triggered in the control. The event method can be defined using the AnnotationAdd property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.AnnotationAdd(“annotationAdded”)))
@@ -119,7 +119,7 @@ The properties of the text markup annotations in the PDF document can be edited 
 
 N> The isLocked property of the text markup annotation will lock the properties of the selected annotation. The property of the text markup annotation can be modified once the isLocked property is disabled.
 
-When a property of the text markup annotation is changed in the PDF viewer control, annotationPropertiesChange event will be triggered in the control. The event method can be defined using the [AnnotationPropertiesChange] (https://help.syncfusion.com/api/js/ejpdfviewer#annotationpropertieschange) property of the control.
+When a property of the text markup annotation is changed in the PDF viewer control, annotationPropertiesChange event will be triggered in the control. The event method can be defined using the AnnotationPropertiesChange property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.AnnotationPropertiesChange(“annotationPropertiesChanged”)))
@@ -132,7 +132,7 @@ The following screenshot shows the properties window used for editing the proper
 
 ![](Text-Markup-Annotation_images/Text_Markup_Annotations_img4.png)
 
-The annotationDelete event will be triggered in the control when the text markup annotation in the PDF document is deleted. The event method can be defined using the [AnnotationDelete] (https://help.syncfusion.com/api/js/ejpdfviewer#annotationremove) property of the control.
+The annotationDelete event will be triggered in the control when the text markup annotation in the PDF document is deleted. The event method can be defined using the AnnotationDelete property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.AnnotationDelete(“annotationDeleted”)))
@@ -141,7 +141,7 @@ function annotationDeleted (args) {
         }
 {% endhighlight %}
 
-You can [undo] (https://help.syncfusion.com/api/js/ejpdfviewer#undo) and [redo] (https://help.syncfusion.com/api/js/ejpdfviewer#redo) the changes made to text markup annotations included in the PDF documents using the undo() and redo() methods.
+You can undo and redo the changes made to text markup annotations included in the PDF documents using the undo() and redo() methods.
 
 {% highlight javascript %}
  function undoChanges() {

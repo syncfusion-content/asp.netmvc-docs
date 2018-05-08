@@ -19,7 +19,7 @@ In this mode, the text selection can be performed in the PDF document loaded in 
 
 ### Enable or disable the Text selection
 
-The text selection in the PDF viewer control can be enabled or disabled using the [EnableTextSelection] (https://help.syncfusion.com/api/js/ejpdfviewer#members:enabletextselection) property.
+The text selection in the PDF viewer control can be enabled or disabled using the EnableTextSelection property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableTextSelection(true))

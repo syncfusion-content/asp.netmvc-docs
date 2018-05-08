@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF viewer supports adding handwritten signatures into the PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
 
-The PDF viewer control has an option in the [toolbarSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#members:toolbarsettings) property to enable or disable the signature button in the default toolbar.
+The PDF viewer control has an option in the toolbarSettings property to enable or disable the signature button in the default toolbar.
 
 The following code snippet describes how to disable the signature tool in the widget.
 
@@ -24,7 +24,7 @@ The following code snippet describes how to disable the signature tool in the wi
 
 **Enable or Disable handwritten signature**
 
-The adding of handwritten signature feature in the PDF document can be enabled or disabled using the [EnableSignture] (https://help.syncfusion.com/api/js/ejpdfviewer#members:enablesignature) property.
+The adding of handwritten signature feature in the PDF document can be enabled or disabled using the EnableSignture property.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").EnableSignature(true))
@@ -32,7 +32,7 @@ The adding of handwritten signature feature in the PDF document can be enabled o
 
 **Providing settings for hand written signature**
 
-You can get or set the settings of the handwritten signature using the signatureSettings property. The [signatureSettings] (https://help.syncfusion.com/api/js/ejpdfviewer#signaturesettings-object) property is used to set the [color] (https://help.syncfusion.com/api/js/ejpdfviewer#signaturesettingscolor-string) and [opacity] (https://help.syncfusion.com/api/js/ejpdfviewer#signaturesettingsopacity-number) of the hand written signature.
+You can get or set the settings of the handwritten signature using the signatureSettings property. The signatureSettings property is used to set the color and opacity of the hand written signature.
 
 {% highlight javascript %}
 <script type="text/javascript">
@@ -52,7 +52,7 @@ The handwritten signature can be added by drawing the signature content in the s
 
 ![](Signature_images/Signature_img3.png)
 
-When the handwritten signature is added in the PDF document, the signatureAdd event will be triggered in the control. The event method can be defined using the [SignatureAdd] (https://help.syncfusion.com/api/js/ejpdfviewer#signatureadd) property of the control.
+When the handwritten signature is added in the PDF document, the signatureAdd event will be triggered in the control. The event method can be defined using the SignatureAdd property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.SignatureAdd(“signatureAdded”)))
@@ -67,7 +67,7 @@ When the handwritten signature is added in the PDF document, the signatureAdd ev
 
 The handwritten signature content can be moved to the specified location within the page bounds by using touch gestures, arrow keys, and mouse. We can also resize the handwritten signature content by maintaining the aspect ratio.
 
-When the handwritten signature is resized in the PDF viewer control, the signatureResize event will be triggered in the control. The event method can be defined using the [SignatureResize] (https://help.syncfusion.com/api/js/ejpdfviewer#signatureresize) property of the control.
+When the handwritten signature is resized in the PDF viewer control, the signatureResize event will be triggered in the control. The event method can be defined using the SignatureResize property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.SignatureResize(“signatureResize”)))
@@ -82,7 +82,7 @@ The selected handwritten signature content can be deleted using the “Delete”
 
 ![](Signature_images/Signature_img4.png)     
 
-When the handwritten signature is deleted from the PDF document, the signatureDelete event will be triggered in the control. The event method can be defined using the [SignatureDelete] (https://help.syncfusion.com/api/js/ejpdfviewer#signaturedelete) property of the control.       
+When the handwritten signature is deleted from the PDF document, the signatureDelete event will be triggered in the control. The event method can be defined using the SignatureDelete property of the control.       
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.SignatureDelete(“signatureDelete”)))
@@ -93,7 +93,7 @@ When the handwritten signature is deleted from the PDF document, the signatureDe
 </script>
 {% endhighlight %}
 
-You can undo and redo the changes made to the handwritten signatures included in the PDF document using the [undo()] (https://help.syncfusion.com/api/js/ejpdfviewer#undo) and [redo()] (https://help.syncfusion.com/api/js/ejpdfviewer#redo) methods. 
+You can undo and redo the changes made to the handwritten signatures included in the PDF document using the undo() and redo() methods. 
 
 {% highlight javascript %}
 <script type="text/javascript">
@@ -124,7 +124,7 @@ You can also change the opacity of the added signature in the “properties” o
 
 ![](Signature_images/Signature_img8.png)  
 
-When a property of the handwritten signature is changed in the PDF viewer control, the signaturePropertiesChange event will be triggered in the control. The event method can be defined using the [SignaturePropertiesChange] (https://help.syncfusion.com/api/js/ejpdfviewer#signaturepropertieschange) property of the control.
+When a property of the handwritten signature is changed in the PDF viewer control, the signaturePropertiesChange event will be triggered in the control. The event method can be defined using the SignaturePropertiesChange property of the control.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.SignaturePropertiesChange (“signaturePropertiesChanged”)))

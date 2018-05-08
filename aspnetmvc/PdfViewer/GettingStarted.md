@@ -156,7 +156,7 @@ To render the PDF viewer in unobtrusive mode, refer to the **ej.unobtrusive.js**
 
 #### 1.Setting ServiceUrl and PdfService
 
-To initialize the PDF viewer control, use the [ServiceUrl] (https://help.syncfusion.com/api/js/ejpdfviewer#serviceurl-string) property that is necessary to access the service from which the PDF document is loaded and processed for the control. The [PdfService] (https://help.syncfusion.com/api/js/ejpdfviewer#pdfservice-enum) property can also be used to specify the location of the supporting PDF service.
+To initialize the PDF viewer control, use the ServiceUr property that is necessary to access the service from which the PDF document is loaded and processed for the control. The PdfService property can also be used to specify the location of the supporting PDF service.
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").PdfService(“Local”))
@@ -172,7 +172,7 @@ The Web API action methods must be available in the server (Web API controller) 
 
 #### 3.Load PDF documents from client side
 
-The PDF documents can be loaded in the PDF viewer control using the [load()] (https://help.syncfusion.com/api/js/ejpdfviewer#loadfilename) method in the client side. The path of the PDF document and the base64 string of the document can be used to load the PDF document.
+The PDF documents can be loaded in the PDF viewer control using the load() method in the client side. The path of the PDF document and the base64 string of the document can be used to load the PDF document.
 
 N> If the name of the PDF document is only passed as parameter in the load() method, the PDF document must be available in the folder which is specified in the Load action method in the controller.
 
@@ -181,7 +181,7 @@ var pdfviewer=$(“#pdfviewer”).data(“ejPdfViewer”);
 pdfviewer.load(“HTTP Succinctly”);
 {% endhighlight %}
 
-When the PDF document is loaded in the PDF viewer control, the documentLoad event will be triggered. We can define the event method using the [DocumentLoaded] (https://help.syncfusion.com/api/js/ejpdfviewer#documentload) property of the control.
+When the PDF document is loaded in the PDF viewer control, the documentLoad event will be triggered. We can define the event method using the DocumentLoaded property of the control.
 
 {% highlight HTML %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.DocumentLoaded(“documentLoaded”)))
@@ -194,7 +194,7 @@ When the PDF document is loaded in the PDF viewer control, the documentLoad even
 
 #### 4.Load the documents during control initialization
 
-The PDF document can also be loaded during the PDF viewer control initialization using the [DocumentPath] (https://help.syncfusion.com/api/js/ejpdfviewer#documentpath-string) property. The path of the PDF document and the base64 string of the document can be used to load the PDF document.
+The PDF document can also be loaded during the PDF viewer control initialization using the DocumentPath property. The path of the PDF document and the base64 string of the document can be used to load the PDF document.
 
 N> If the name of the PDF document is only set in the DocumentPath property, the PDF document must be available in the folder which is specified in the Load action method in the controller
 
@@ -204,14 +204,14 @@ N> If the name of the PDF document is only set in the DocumentPath property, the
 
 #### 5.Unload the documents from PDF viewer control
 
-The PDF document loaded in the PDF viewer control can be unloaded using the [unload()] (https://help.syncfusion.com/api/js/ejpdfviewer#unload) method in the client side.
+The PDF document loaded in the PDF viewer control can be unloaded using the unload() method in the client side.
 
 {% highlight javascript %}
 var pdfviewer=$(“#pdfviewer”).data(“ejPdfViewer”);
 pdfviewer.unload();
 {% endhighlight %}
 
-When the PDF document is unloaded from the PDF viewer control, the documentUnload event will be triggered. You can define the event method using the [DocumentUnloaded] (https://help.syncfusion.com/api/js/ejpdfviewer#documentunload) property of the control.
+When the PDF document is unloaded from the PDF viewer control, the documentUnload event will be triggered. You can define the event method using the DocumentUnloaded property of the control.
 
 {% highlight Html %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.DocumentUnloaded(“documentUnloaded”)))
@@ -226,7 +226,7 @@ When the PDF document is unloaded from the PDF viewer control, the documentUnloa
 
 **Destroy** 
 
-When the PDF viewer control is destroyed, the Destroy event will be triggered. You can define the event method using the [Destroy] (https://help.syncfusion.com/api/js/ejpdfviewer#destroy) property of the control.
+When the PDF viewer control is destroyed, the Destroy event will be triggered. You can define the event method using the Destroy property of the control.
 
 {% highlight Html %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.Destroy(“destroyed”)))
@@ -239,7 +239,7 @@ When the PDF viewer control is destroyed, the Destroy event will be triggered. Y
 
 **HyperlinkClicked**
 
-When the hyperlinks available in the PDF document is clicked, the hyperlinkClick event will be triggered. You can define the event method using the [HyperlinkClicked] (https://help.syncfusion.com/api/js/ejpdfviewer#hyperlinkclick) property of the control
+When the hyperlinks available in the PDF document is clicked, the hyperlinkClick event will be triggered. You can define the event method using the HyperlinkClicked property of the control
 
 {% highlight Html %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.HyperlinkClicked(“hyperlinkClick”)))
@@ -252,7 +252,7 @@ When the hyperlinks available in the PDF document is clicked, the hyperlinkClick
 
 **AjaxRequestFailure**
 
-When the AJAX requests from the client to the API controller is failed, ajaxRequestFailure event will be triggered. You can define the event method using the [AjaxRequestFailure] (https://help.syncfusion.com/api/js/ejpdfviewer#ajaxrequestfailure) property of the control.
+When the AJAX requests from the client to the API controller is failed, ajaxRequestFailure event will be triggered. You can define the event method using the AjaxRequestFailure property of the control.
 
 {% highlight Html %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.AjaxRequestFailure(“ajaxFailureRequest”)))
@@ -377,9 +377,7 @@ Add the following code snippet to Index.cshtml. Here, the PDF viewer uses the We
 </html>
 {% endhighlight %}
 
-### Output
-
-Sample: 
+**Sample:**
 
 <http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_MVCsample517121195>
 

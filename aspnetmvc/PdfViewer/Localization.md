@@ -11,7 +11,7 @@ documentation: ug
 
 The text labels provided in the PDF viewer control can be localized using the collection of localized strings using ej.PdfViewer.Locale for different cultures. By default, the PDF viewer control is localized in “**en-US**” culture.
 
-The different locale value for the PDF viewer control can be specified using the [locale] (https://help.syncfusion.com/api/js/ejpdfviewer#locale-string) property. 
+The different locale value for the PDF viewer control can be specified using the locale property. 
 
 {% highlight javascript %}
 @(Html.EJ().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer")).Locale("de-DE"))
