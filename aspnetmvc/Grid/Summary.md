@@ -229,11 +229,9 @@ namespace SyncfusionMvcApplication3.Controllers
 {% highlight js %}
 
 <script type="text/javascript">
-  function currency() {
-      //to get grid instance
-      var gridObj = $("#Grid").ejGrid("instance");
+  function currency(args,data) {
       //ej.sum is aggregate to add data's of freight from datasource
-      return ej.sum(gridObj.model.dataSource, "Freight");
+      return ej.sum(data, "Freight");
   }
   </script>
 
