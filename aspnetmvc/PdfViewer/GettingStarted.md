@@ -104,7 +104,7 @@ protected void Application_Start()
 
 #### Add References
 
-Add reference to the following assemblies from [NuGet package:] (https://help.syncfusion.com/extension/syncfusion-nuget-packages/web-nuget-packages-details)
+Add reference to the following assemblies from [NuGet package:](https://help.syncfusion.com/extension/syncfusion-nuget-packages/web-nuget-packages-details)
 
  * System.Web.Http
  * System. Web.Http.WebHost
@@ -125,11 +125,13 @@ Add the following references that are necessary for the PDF viewer control and s
 
 Find the scripts for the PDF viewer control and style sheets in any of the following locations: 
 
-Local Disk: [Click here] (https://help.syncfusion.com/js/installation-and-deployment# "Installation and deployment") to know more about script and style sheets installed in local machine.
-CDN Link: [Click here] (https://help.syncfusion.com/js/cdn# "CDN scripts and styles links") to know more about script and style sheets available online.
-NuGet Package: [Click here] (https://help.syncfusion.com/js/installation-and-deployment#configuring-syncfusion-nuget-packages "Configuring Syncfusion NuGet Packages") to know more about script and style sheets available in NuGet package.
+Local Disk: [Click here](https://help.syncfusion.com/js/installation-and-deployment# "Installation and deployment") to know more about script and style sheets installed in local machine.
 
-N> For getting started, you can use the ej.web.all.min.js file, which encapsulates all the ej widgets and frameworks in a single file. In production, it is highly recommended to use [custom script generator] (http://csg.syncfusion.com/) to create custom script file with required widgets and its dependencies to reduce the size of the script file.
+CDN Link: [Click here](https://help.syncfusion.com/js/cdn# "CDN scripts and styles links") to know more about script and style sheets available online.
+
+NuGet Package: [Click here](https://help.syncfusion.com/js/installation-and-deployment#configuring-syncfusion-nuget-packages "Configuring Syncfusion NuGet Packages") to know more about script and style sheets available in NuGet package.
+
+N> For getting started, you can use the ej.web.all.min.js file, which encapsulates all the ej widgets and frameworks in a single file. In production, it is highly recommended to use [custom script generator](http://csg.syncfusion.com/) to create custom script file with required widgets and its dependencies to reduce the size of the script file.
 
 Add the script files and CSS files in the &#60;title&#62; tag of View page.
 

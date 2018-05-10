@@ -865,7 +865,7 @@ The following code snippet illustrates you to change the localization to German 
 
 Sample
 
-http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_Localization1640980798   
+<http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_Localization1640980798>
 
 The following screenshot shows the PDF viewer with tooltip in German language.
 
