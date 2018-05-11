@@ -480,7 +480,7 @@ The following code illustrates how to set content from db
 
 {% highlight c# %}
 	
-    public ActionResult Index()
+    public ActionResult GetData()
         {
            var NewContent = "<p>This is <b>New</b> content from the <i>Controller</i></p>";   
             return Content(NewContent);   //return data from db
