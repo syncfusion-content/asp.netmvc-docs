@@ -133,7 +133,7 @@ zoomIn()
 You can zoom the PDF document page loaded in the PDF viewer control using zoomIn() method. The maximum zoom percentage is 400%.
 
 {% highlight javascript %}
-<<script>
+<script>
     $(“#pdfviewer”).data(“ejPdfViewer”).zoomIn();
 </script>
 {% endhighlight %}
