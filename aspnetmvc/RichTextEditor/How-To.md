@@ -457,7 +457,7 @@ The following code illustrates how to set content from db
     <script>   
         var rteObj;   
        $(function () {   
-           $("#setbtn").on("click", function () {   
+           $("#set").on("click", function () {   
               $.ajax({   
                 url: "@Url.Action("GetData", "Home")",   
                 type: "GET",   
@@ -467,7 +467,7 @@ The following code illustrates how to set content from db
                 }   
             });   
         });   
-        $("#getbtn").on("click", function () {   
+        $("#get").on("click", function () {   
              alert(rteObj.getHtml()); //get content from RTE   
             });   
      });   
