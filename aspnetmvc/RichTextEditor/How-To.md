@@ -431,3 +431,61 @@ The following code illustrates the rendering of RichTextEditor using RichTextEdi
 {% endhighlight %}
 
 {% endtabs %}
+
+## Display content from db and post content to db in RTE
+
+We can use [setHtml()](https://help.syncfusion.com/api/js/ejrte#methods:sethtml) method in the RTE control to display the content from the database into RTE.We can edit this content in RTE and get the modified content through [getHtml()](https://help.syncfusion.com/api/js/ejrte#methods:gethtml) method of RTE and pass this to controller and save in your database.   
+
+The following code illustrates how to set content from db 
+
+{% tabs %}
+
+{% highlight razor %}
+    
+       <div>   
+        @{Html.EJ().RTE("rteSample").ContentTemplate(@<p>   
+           &lt;p&gt;&lt;b&gt;Description:&lt;/b&gt;&lt;/p&gt; &lt;p&gt;The Rich Text Editor   
+           (RTE) control is an easy to render in client side. Customer easy to edit the contents   
+           and get the HTML content for the displayed content. A rich text editor control provides   
+           users with a toolbar that helps them to apply rich text formats to the text entered   
+           in the text area. &lt;/p&gt; &lt;p&gt;&lt;b&gt;   
+       </p>).ClientSideEvents(e=> e.Create("onCreate")).Render();}   
+     </div>   
+     <br /><br />   
+    <button id="setbtn" >Import content from Server</button>   
+    <button id="getbtn">Get Content from RTE</button>   
+    <script>   
+        var rteObj;   
+       $(function () {   
+           $("#setbtn").on("click", function () {   
+              $.ajax({   
+                url: "@Url.Action("GetData", "Home")",   
+                type: "GET",   
+                contentType: "application/json; charset=utf-8",   
+                success: function (e) {   
+                    rteObj.setHtml(e); //set content from server   
+                }   
+            });   
+        });   
+        $("#getbtn").on("click", function () {   
+             alert(rteObj.getHtml()); //get content from RTE   
+            });   
+     });   
+     function onCreate() {   
+        rteObj = this;   
+     }   
+    </script>   
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+    public ActionResult Index()
+        {
+           var NewContent = "<p>This is <b>New</b> content from the <i>Controller</i></p>";   
+            return Content(NewContent);   //return data from db
+        }
+	
+{% endhighlight %}
+
+{% endtabs %}
