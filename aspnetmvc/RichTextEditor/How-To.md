@@ -452,8 +452,8 @@ The following code illustrates how to set content from db
        </p>).ClientSideEvents(e=> e.Create("onCreate")).Render();}   
      </div>   
      <br /><br />   
-    <button id="setbtn" >Import content from Server</button>   
-    <button id="getbtn">Get Content from RTE</button>   
+    <button id="set" >Import content from Server</button>   
+    <button id="get">Get Content from RTE</button>   
     <script>   
         var rteObj;   
        $(function () {   
