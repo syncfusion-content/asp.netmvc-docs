@@ -2,7 +2,7 @@
 layout: post
 title: Validation in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Validation to format the RichTextEditor widget's content
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Validation, Validation Rules, Validation Messages

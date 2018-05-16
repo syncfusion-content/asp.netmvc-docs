@@ -2,7 +2,7 @@
 layout: post
 title: Data binding in DropDownList control for Syncfusion ASP.NET MVC
 description: Describes about the data binding in DropDownList control for Syncfusion ASP.NET MVC
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Validation, DropDownList, dropdown, jQuery Validator, Client side Validation, Server side Validation

@@ -2,7 +2,7 @@
 layout: post
 title: Searching in the DropDownList control for Syncfusion ASP.NET MVC
 description: Description about searching in the DropDownList control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: DropDownList, dropdown, Filtering, Server Filtering, Search, Incremental Search, Filter Search

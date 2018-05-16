@@ -2,7 +2,7 @@
 layout: post
 title: State Persistance with DropDownList control for Syncfusion ASP.NET MVC
 description: State Persistence support to DropDownList control for Syncfusion ASP.NET MVC
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Persistence, DropDownList, dropdown, State Persistence

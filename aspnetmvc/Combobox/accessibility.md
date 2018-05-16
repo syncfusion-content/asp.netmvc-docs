@@ -2,7 +2,7 @@
 layout: post
 title: Accessibility in ComboBox control for Syncfusion ASP.NET MVC
 description:  Accessibility support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: keyboard support, ComboBox, aria attributes, keyboard interaction

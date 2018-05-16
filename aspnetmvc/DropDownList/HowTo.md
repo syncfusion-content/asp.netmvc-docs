@@ -2,7 +2,7 @@
 layout: post
 title: How to - DropDownList control for Syncfusion ASP.NET MVC
 description: How To Section in DropDownList control for Syncfusion ASP.NET MVC
-platform: js
+platform: ejmvc
 control: DropDownList
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: How to ComboBox control for Syncfusion ASP.NET MVC
 description: How to
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: dataBind, ComboBox, cascading, autofill, icons

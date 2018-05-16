@@ -2,7 +2,7 @@
 layout: post
 title: Working with Lists related operation in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Working with Lists related changes in RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Create a Lists, Custom Lists, customOrderedList, customUnorderedList

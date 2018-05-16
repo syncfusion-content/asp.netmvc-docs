@@ -2,7 +2,7 @@
 layout: post
 title: Localization in ComboBox control for Syncfusion ASP.NET MVC
 description: Localization support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: locale, ComboBox

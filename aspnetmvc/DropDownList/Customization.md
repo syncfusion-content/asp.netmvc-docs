@@ -2,7 +2,7 @@
 layout: post
 title: Customization in DropDownList control for Syncfusion ASP.NET MVC
 description: Customization in DropDownList control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Customization, DropDownList, dropdown, watermark text

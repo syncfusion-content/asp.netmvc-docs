@@ -2,7 +2,7 @@
 layout: post
 title: Context in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Context to format the RichTextEditor widget's content
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Find and Replace

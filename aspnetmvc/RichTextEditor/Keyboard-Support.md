@@ -2,7 +2,7 @@
 layout: post
 title: Keyboard Support for RichTextEditor widget in Syncfusion Essential ASP.NET MVC
 description: Keyboard navigation Support for RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Keyboard Support
