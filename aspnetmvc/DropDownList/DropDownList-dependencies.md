@@ -2,7 +2,7 @@
 layout: post
 title: Dependencies of the DropDownList control for Syncfusion ASP.NET MVC
 description: Dependencies of the DropDownList control for Syncfusion ASP.NET MVC 
-platform: ASP.NET MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 ---

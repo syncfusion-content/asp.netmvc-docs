@@ -2,7 +2,7 @@
 layout: post
 title: Getting started in ComboBox control for Syncfusion ASP.NET MVC
 description: Getting started
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: allowCustom, ComboBox, dataSource, popupHeight, popupWidth
@@ -30,7 +30,7 @@ The ComboBox can be initialized as:
                 Html.EJ()
                     .ComboBox("select")
                     .Width("100%")
-                    .Datasource((IEnumerable<Flowers>)ViewBag.datasource)
+                    .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
                     .ComboBoxFields(f=>f.Text("text"))
                     .Placeholder("Select")
                     .Render();
@@ -42,28 +42,23 @@ The ComboBox can be initialized as:
 
 {% highlight c# %}
 
-public class Flowers
+public class CarsList
     {
         public string text { get; set; }
-        public static List<Flowers> GetFlowers()
+        public static List<CarsList> GetCarsList()
         {
-            List<Flowers> flower = new List<Flowers>();
-            flower.Add(new Flowers { text = "Anemone Galilee" });
-            flower.Add(new Flowers { text = "Allium drumstick" });
-            flower.Add(new Flowers { text = "Artichoke thistle" });
-            flower.Add(new Flowers { text = "Boronia" });
-            flower.Add(new Flowers { text = "Bouvardia" });
-            flower.Add(new Flowers { text = "Blue lace flower" });
-            flower.Add(new Flowers { text = "Bird of paradise" });
-            flower.Add(new Flowers { text = "Cone flower" });
-            flower.Add(new Flowers { text = "Cosmos" });
-            flower.Add(new Flowers { text = "Calla lily white" });
-            flower.Add(new Flowers { text = "Common Yarrow" });
-            return flower;
+           List<CarsList> car = new List<CarsList>();
+            car.Add(new CarsList { text = "Audi S6" });
+            car.Add(new CarsList { text = "Austin-Healey" });
+            car.Add(new CarsList { text = "Alfa Romeo" });
+            car.Add(new CarsList { text = "Aston Martin" });
+            car.Add(new CarsList { text = "BMW 7" });
+            car.Add(new CarsList { text = "Bentley Mulsanne" });
+            return car;
         }
         public ActionResult Default()
         {
-            ViewBag.datasource = GetFlowers();
+            ViewBag.datasource = GetCarsList();
             return View();
         }
     }
@@ -120,7 +115,7 @@ The ComboBox allows the user to give input as custom value which is not required
                     .Width("100%")
                     .Datasource((IEnumerable<Flowers>)ViewBag.datasource)
                     .AllowCustom(true)
-                    .ComboBoxFields(f=>f.Text("text").Value("id"))
+                    .ComboBoxFields(f=>f.Text("text").Value("text"))
                     .Placeholder("Select")
                     .Render();
             }
@@ -131,29 +126,23 @@ The ComboBox allows the user to give input as custom value which is not required
 
 {% highlight c# %}
 
-public class Flowers
+public class CarsList
     {
         public string text { get; set; }
-        public int id { get; set; }
-        public static List<Flowers> GetFlowers()
+        public static List<CarsList> GetCarsList()
         {
-            List<Flowers> flower = new List<Flowers>();
-            flower.Add(new Flowers { text = "Anemone Galilee", id=0 });
-            flower.Add(new Flowers { text = "Allium drumstick", id=1 });
-            flower.Add(new Flowers { text = "Artichoke thistle" id=2 });
-            flower.Add(new Flowers { text = "Boronia" id=3 });
-            flower.Add(new Flowers { text = "Bouvardia" id=4 });
-            flower.Add(new Flowers { text = "Blue lace flower" id=5 });
-            flower.Add(new Flowers { text = "Bird of paradise" id=6 });
-            flower.Add(new Flowers { text = "Cone flower" id=7 });
-            flower.Add(new Flowers { text = "Cosmos" id=8 });
-            flower.Add(new Flowers { text = "Calla lily white" id=9 });
-            flower.Add(new Flowers { text = "Common Yarrow" id=10 });
-            return flower;
+           List<CarsList> car = new List<CarsList>();
+            car.Add(new CarsList { text = "Audi S6" });
+            car.Add(new CarsList { text = "Austin-Healey" });
+            car.Add(new CarsList { text = "Alfa Romeo" });
+            car.Add(new CarsList { text = "Aston Martin" });
+            car.Add(new CarsList { text = "BMW 7" });
+            car.Add(new CarsList { text = "Bentley Mulsanne" });
+            return car;
         }
         public ActionResult Default()
         {
-            ViewBag.datasource = GetFlowers();
+            ViewBag.datasource = GetCarsList();
             return View();
         }
     }
@@ -184,7 +173,7 @@ In the following sample, popup list's width and height are configured.
                 Html.EJ()
                     .ComboBox("select")
                     .Width("100%")
-                    .Datasource((IEnumerable<Flowers>)ViewBag.datasource)
+                    .Datasource((IEnumerable<CarsList>)ViewBag.datasource)
                     .PopupHeight("200px")
                     .PopupWidth("200px")
                     .Placeholder("Select")
@@ -197,28 +186,23 @@ In the following sample, popup list's width and height are configured.
 
 {% highlight c# %}
 
-public class Flowers
+public class CarsList
     {
         public string text { get; set; }
-        public static List<Flowers> GetFlowers()
+        public static List<CarsList> GetCarsList()
         {
-            List<Flowers> flower = new List<Flowers>();
-            flower.Add(new Flowers { text = "Anemone Galilee" });
-            flower.Add(new Flowers { text = "Allium drumstick" });
-            flower.Add(new Flowers { text = "Artichoke thistle" });
-            flower.Add(new Flowers { text = "Boronia" });
-            flower.Add(new Flowers { text = "Bouvardia" });
-            flower.Add(new Flowers { text = "Blue lace flower" });
-            flower.Add(new Flowers { text = "Bird of paradise" });
-            flower.Add(new Flowers { text = "Cone flower" });
-            flower.Add(new Flowers { text = "Cosmos" });
-            flower.Add(new Flowers { text = "Calla lily white" });
-            flower.Add(new Flowers { text = "Common Yarrow" });
-            return flower;
+           List<CarsList> car = new List<CarsList>();
+            car.Add(new CarsList { text = "Audi S6" });
+            car.Add(new CarsList { text = "Austin-Healey" });
+            car.Add(new CarsList { text = "Alfa Romeo" });
+            car.Add(new CarsList { text = "Aston Martin" });
+            car.Add(new CarsList { text = "BMW 7" });
+            car.Add(new CarsList { text = "Bentley Mulsanne" });
+            return car;
         }
         public ActionResult Default()
         {
-            ViewBag.datasource = GetFlowers();
+            ViewBag.datasource = GetCarsList();
             return View();
         }
     }

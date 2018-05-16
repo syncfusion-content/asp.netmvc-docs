@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with RichTextEditor control for Syncfusion Essential ASP.NET MVC
 description: Getting started with RichTextEditor and configure the toolbar and other functionalities.
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Getting Started, Toolbar–Configuration, Setting the content, Getting the content

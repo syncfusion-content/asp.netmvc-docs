@@ -2,7 +2,7 @@
 layout: post
 title: XHTML Validation in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Import a word document into the RichTextEditor and Export the widget's content into a word or PDF file
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor,server side XHTML Validation, RTE import, RTE export, export to PDF, export to Word

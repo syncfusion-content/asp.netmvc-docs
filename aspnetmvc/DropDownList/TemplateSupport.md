@@ -2,7 +2,7 @@
 layout: post
 title: Template support with DropDownList control for Syncfusion ASP.NET MVC
 description: Template Support with DropDownList control for Syncfusion ASP.NET MVC
-platform: js
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Template Support, DropDownList, dropdown, Header Template

@@ -2,7 +2,7 @@
 layout: post
 title: Getting started with DropDownList control for Syncfusion ASP.NET MVC
 description: To get start with DropDownList by adding references.
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: DropDownList, dropdown, Populating data

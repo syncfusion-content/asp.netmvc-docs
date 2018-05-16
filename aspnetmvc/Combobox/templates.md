@@ -2,7 +2,7 @@
 layout: post
 title: Templates in ComboBox control for Syncfusion ASP.NET MVC
 description: Template support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: itemTemplate, ComboBox, groupTemplate, headerTemplate, footerTemplate, noRecordsTemplate, actionFailureTemplate

@@ -2,7 +2,7 @@
 layout: post
 title: Localization with RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Initialize the RichTextEditor widget with specified Localization  
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Localization

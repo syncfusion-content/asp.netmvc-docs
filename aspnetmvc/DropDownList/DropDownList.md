@@ -2,7 +2,7 @@
 layout: post
 title: OverView of the DropDownList control for Syncfusion ASP.NET MVC
 description: OverView of the DropDownList control for Syncfusion ASP.NET MVC 
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 ---

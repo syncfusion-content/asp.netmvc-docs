@@ -2,7 +2,7 @@
 layout: post
 title: Rendering Mode in DropDownList control for Syncfusion ASP.NET MVC
 description: Describes about rendering mode in DropDownList control for Syncfusion ASP.NET MVC.
-platform: mvc
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Rendering, DropDownList, dropdown, Rendering Mode

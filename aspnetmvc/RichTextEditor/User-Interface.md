@@ -2,7 +2,7 @@
 layout: post
 title: User Interface for the RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: User Interface for RichTextEditor widget (toolbar, content area, and footer)
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Toolbar Configuration, Toolbar Items
