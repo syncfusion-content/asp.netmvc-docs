@@ -2,7 +2,7 @@
 layout: post
 title: Zoom and Print related operation in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Working with zoom and printrelated changes in RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, Zoom, Print 

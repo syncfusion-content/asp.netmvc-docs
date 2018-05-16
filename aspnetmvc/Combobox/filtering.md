@@ -2,7 +2,7 @@
 layout: post
 title: Filtering in ComboBox control for Syncfusion ASP.NET MVC
 description: Filtering support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: allowFiltering, ComboBox, updateData, case sensitive filtering, filter type, minimum filter character

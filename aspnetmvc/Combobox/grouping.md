@@ -2,7 +2,7 @@
 layout: post
 title: Grouping in ComboBox control for Syncfusion ASP.NET MVC
 description: Grouping support to ComboBox control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: groupBy, ComboBox, groupTemplate

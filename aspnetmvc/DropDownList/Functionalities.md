@@ -2,7 +2,7 @@
 layout: post
 title: Functionalities in the DropDownList control for Syncfusion ASP.NET MVC
 description: Functionalities in the DropDownList control for Syncfusion ASP.NET MVC
-platform: mvc
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: DropDownList, dropdown, Selection, Grouping, Sorting

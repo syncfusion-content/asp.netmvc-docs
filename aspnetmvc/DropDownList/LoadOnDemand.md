@@ -3,7 +3,7 @@
 layout: post
 title: Load on demand with DropDownList control for Syncfusion ASP.NET MVC
 description: Load on demand support to DropDownList control for Syncfusion ASP.NET MVC
-platform: MVC
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: loadOnDemand, DropDownList, dropdown

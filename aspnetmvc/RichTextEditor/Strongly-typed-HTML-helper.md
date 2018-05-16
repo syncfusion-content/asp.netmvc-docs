@@ -2,7 +2,7 @@
 layout: post
 title: XHTML Validation in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: XHTML Validation to format the RichTextEditor widget's content
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, HTML helper, Strongly typed

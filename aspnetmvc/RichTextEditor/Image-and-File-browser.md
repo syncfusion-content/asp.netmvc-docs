@@ -2,7 +2,7 @@
 layout: post
 title: Image and File browser in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Configuring and working with Image and File browser in RichTextEditor  
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, File browser, Image, Image Browser

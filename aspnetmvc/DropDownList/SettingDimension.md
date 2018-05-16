@@ -2,7 +2,7 @@
 layout: post
 title: Demension in DropDownList control for Syncfusion ASP.NET MVC
 description: Setting Dimensions to DropDownList control for Syncfusion ASP.NET MVC 
-platform: js
+platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: Auto Sizing, DropDownList, dropdown, popup size

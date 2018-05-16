@@ -2,7 +2,7 @@
 layout: post
 title: Cleanup elements when copy paste from MSWord to RichTextEditor widget
 description: Cleanup elements when copy paste from MSWord to RichTextEditor widget
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 keywords: RichTextEditor, cleanup, paste-cleanup

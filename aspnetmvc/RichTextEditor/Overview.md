@@ -2,7 +2,7 @@
 layout: post
 title: Overview Of the RichTextEditor widget for Syncfusion Essential ASP.NET MVC
 description: Overview for the RichTextEditor
-platform: ASP.NET MVC
+platform: ejmvc
 control: RTE
 documentation: ug
 
