@@ -220,6 +220,41 @@ Specifies the zoom factor for map zoom value, you can use `factor` property.
 
 {% endhighlight %}
 
+### Animation Duration
+
+Specifies `AnimationDuration` for map shapes while zooming. Default value is 600 milliseconds.
+
+
+{% highlight CSHTML %}
+
+	@(Html.EJ().Map("maps") 
+
+		.Layers(layer =>
+
+		{
+
+			layer.ShapeData(mapData)                  
+
+		 	.Add();
+
+		})
+
+		.ZoomSettings(zoom=>
+
+		{
+
+			zoom.EnableZoom(true)
+
+		  	.Factor(1)
+
+			.AnimationDuration(1000)
+		  	
+		})               
+
+	)      
+
+{% endhighlight %}
+
 
 ### Additional Options to Zoom the Map
 

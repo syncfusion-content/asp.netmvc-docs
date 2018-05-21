@@ -548,6 +548,56 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 ![](Map-Elements_images/Map-Elements_img4.png)
 
 
+## Shapes/Bubbles selection on legend item click
+
+You can select a specific shapes or bubbles while clicking on the corresponding legend item through disabling the `ToggleVisibility` option of the legend. The default value of ToggleVisibility option is **false**. 
+
+{% highlight CSHTML %}
+
+
+	@(Html.EJ().Map("container")
+
+	.Layers(layer =>
+
+	{
+
+		layer.LegendSettings(ml =>
+
+		{
+
+			ml .ShowLegend(true)
+
+			.Height(20)
+
+			.Width(60)
+
+			.PositionX(80)
+			   			
+			.PositionY(90)
+
+			.Type('layers')
+
+			.ToggleVisibility(true);
+
+		 })
+
+	})
+
+	)
+
+
+
+{% endhighlight %}
+
+![](Map-Elements_images/Map-Elements_img9.png)
+
+Map with shapes and legend items, before toggle.
+
+![](Map-Elements_images/Map-Elements_img10.png)
+
+After toggle the visibility of Australia shape
+
+
 ### Interactive Legend
 
 The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. You can enable this option by setting `Mode` property in `LegendSettings` value as “Interactive” and default value of `Mode` property is “Default” to enable the normal legend.

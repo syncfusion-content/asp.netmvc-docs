@@ -120,6 +120,41 @@ map.zoom();
 {% endhighlight %}
 
 
+### addMarkers(layerIndex,sublayerIndex)
+
+Add markers dynamically based on layer and sublayer index value, you can use `addMarkers` method.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("Map1"))
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+var map = $("#Map1").data("ejMap");
+map.addMarkers();
+   
+{% endhighlight %}
+
+
+### refreshLayer(layerIndex,sublayerIndex,markers)
+
+Method to reload the shape marker with updated values, you can use `refreshLayer` method.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("Map1"))
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+var map = $("#Map1").data("ejMap");
+map.refreshLayer();
+   
+{% endhighlight %}
+
 
 ## Events
 
@@ -477,5 +512,97 @@ function load(){
 }
 
 {% endhighlight %}
+
+
+### Legend Item Click
+
+The `LegendItemClick` event is triggered on clicking the legend item.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.LegendItemClick("legendItemClick")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function legendItemClick(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
+### MarkerEnter
+
+The `MarkerEnter` event is triggered on entering into the marker shape.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.MarkerEnter("markerEnter")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function markerEnter(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### MarkerLeave
+
+The `MarkerLeave` event is triggered on leaving from the marker shape.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.MarkerLeave("markerLeave")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function markerLeave(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+### Refreshed
+
+The `Refreshed` event is triggered after refreshing the map items.
+
+{% highlight CSHTML %}
+ 
+@(Html.EJ().Map("container")
+
+.Refreshed("refreshed")
+
+)
+
+{% endhighlight %}
+
+{% highlight js %}
+ 
+function refreshed(){
+    // Do Something
+}
+
+{% endhighlight %}
+
+
 
 

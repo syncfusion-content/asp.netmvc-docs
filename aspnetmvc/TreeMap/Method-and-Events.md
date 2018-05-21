@@ -28,6 +28,24 @@ documentation: ug
 
 {% endhighlight %}
 
+
+## DrillDown()
+
+`drillDown()` method is used to reload the treemap with updated values.
+
+#### Returns: void
+{% highlight CSHTML %}
+
+    @(Html.EJ().TreeMap("treemap"))
+
+    <script type="text/javascript">
+        $("#treemap").ejTreeMap();
+        var treemapObj = $("#treemap").data("ejTreeMap");
+        treemapObj.drillDown();
+    </script>
+
+{% endhighlight %}
+
 ## Events
 
 ## TreeMapItemSelected
