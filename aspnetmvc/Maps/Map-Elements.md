@@ -591,11 +591,11 @@ You can select a specific shapes or bubbles while clicking on the corresponding 
 
 ![](Map-Elements_images/Map-Elements_img9.png)
 
-Map with shapes and legend items, before toggle.
+Map with bubble and legend items, before toggle.
 
 ![](Map-Elements_images/Map-Elements_img10.png)
 
-After toggle the visibility of Australia shape
+After toggle the visibility of Brazil bubble shape
 
 
 ### Interactive Legend
