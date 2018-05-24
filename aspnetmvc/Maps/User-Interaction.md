@@ -222,7 +222,7 @@ Specifies the zoom factor for map zoom value, you can use `factor` property.
 
 ### Animation Duration
 
-Specifies `AnimationDuration` for shapes. Default value is 600 milliseconds.
+To specify smooth transition on zooming the layers, you can use `AnimationDuration` property and the default value is 600 milliseconds.
 
 
 {% highlight CSHTML %}

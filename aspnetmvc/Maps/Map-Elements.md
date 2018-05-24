@@ -548,9 +548,9 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 ![](Map-Elements_images/Map-Elements_img4.png)
 
 
-## Shapes/Bubbles selection on legend item click
+## Toggle Legend
 
-You can select a specific shapes or bubbles while clicking on the corresponding legend item through disabling the `ToggleVisibility` option of the legend. The default value of ToggleVisibility option is **false**. 
+You can toggle the visibility of shapes or bubbles by clicking on the corresponding legend item by using the property `ToggleVisibility` in legendSettings. Its default value is **false**. 
 
 {% highlight CSHTML %}
 
@@ -575,7 +575,7 @@ You can select a specific shapes or bubbles while clicking on the corresponding 
 			   			
 			.PositionY(90)
 
-			.Type('layers')
+			.Type('bubbles')
 
 			.ToggleVisibility(true);
 
@@ -591,11 +591,11 @@ You can select a specific shapes or bubbles while clicking on the corresponding 
 
 ![](Map-Elements_images/Map-Elements_img9.png)
 
-Map with bubble and legend items, before toggle.
+_Map with bubble and legend items, before toggle_.
 
 ![](Map-Elements_images/Map-Elements_img10.png)
 
-After toggle the visibility of Brazil bubble shape
+_After toggle visibility of the legend item Brazil_.
 
 
 ### Interactive Legend

@@ -105,7 +105,7 @@ _After Drill Down_
 
 ### Rendering Treemap with specific drilldown level
 
-We have provided support to render treemap with drilled state based on the specified value from the below mentioned API.
+Treemap can be rendered with any level instead of initial level based on the specified value to the below properties,
 
 •	`DrillDownValue` – get the value of the tree map item to render initially.  
 
@@ -218,4 +218,4 @@ Additionally, we have open technique to process the `DrillDown` activity.
 
 ![](Drill-Down-Support_images/Drill-Down-Support_img3.png)
 
-Treemap with modified level in initial view
+_Treemap with modified level in initial view_

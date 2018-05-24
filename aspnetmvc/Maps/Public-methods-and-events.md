@@ -122,7 +122,9 @@ map.zoom();
 
 ### addMarkers(layerIndex,sublayerIndex)
 
-Add markers dynamically based on layer and sublayer index value, you can use `addMarkers` method.
+Method to add the markers dynamically based on layer and sublayer index value, you can use
+`addMarkers` method.
+
 
 {% highlight CSHTML %}
  
@@ -539,7 +541,7 @@ function legendItemClick(){
 
 ### MarkerEnter
 
-The `MarkerEnter` event is triggered on entering into the marker shape.
+The `MarkerEnter` event is triggered, when mouse enter into the marker shape.
 
 {% highlight CSHTML %}
  
@@ -561,7 +563,7 @@ function markerEnter(){
 
 ### MarkerLeave
 
-The `MarkerLeave` event is triggered on leaving from the marker shape.
+The `MarkerLeave` event is triggered, when mouse leave from the marker shape.
 
 {% highlight CSHTML %}
  
