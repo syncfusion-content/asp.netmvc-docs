@@ -565,15 +565,7 @@ You can toggle the visibility of shapes or bubbles by clicking on the correspond
 
 		{
 
-			ml .ShowLegend(true)
-
-			.Height(20)
-
-			.Width(60)
-
-			.PositionX(80)
-			   			
-			.PositionY(90)
+			ml .ShowLegend(true)			
 
 			.Type('bubbles')
 
