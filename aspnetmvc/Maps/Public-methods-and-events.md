@@ -120,7 +120,7 @@ map.zoom();
 {% endhighlight %}
 
 
-### addMarkers(layerIndex,sublayerIndex)
+### addMarkers(layerIndex, sublayerIndex)
 
 Method to add the markers dynamically based on layer and sublayer index value, you can use
 `addMarkers` method.
@@ -140,7 +140,7 @@ map.addMarkers();
 {% endhighlight %}
 
 
-### refreshLayer(layerIndex,sublayerIndex,markers)
+### refreshLayer(layerIndex, sublayerIndex, markers)
 
 Method to reload the shape marker with updated values, you can use `refreshLayer` method.
 
