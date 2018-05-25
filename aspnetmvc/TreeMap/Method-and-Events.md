@@ -13,7 +13,7 @@ documentation: ug
 
 ## Refresh()
 
-`refresh()` method is used to reload the treemap with updated values.
+The [`refresh()`] method is used to reload the treemap with updated values.
 
 {% highlight CSHTML %}
 
@@ -30,7 +30,7 @@ documentation: ug
 
 ## DrillDown()
 
-`drillDown()` method is used to drill down the tree map level dynamically with specified data and level.
+The [`drillDown()`] method is used to drill-down the tree map level dynamically with specified data and level.
 
 {% highlight CSHTML %}
 

@@ -548,9 +548,9 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 ![](Map-Elements_images/Map-Elements_img4.png)
 
 
-## Toggle Legend
+## Toggle legend
 
-You can toggle the visibility of shapes or bubbles by clicking on the corresponding legend item by using the property `ToggleVisibility` in legendSettings. Its default value is **false**. 
+You can toggle the visibility of shapes and bubbles by clicking the corresponding legend item using the  `ToggleVisibility` property in legendSettings. The default value of this property is **false**. 
 
 {% highlight CSHTML %}
 
@@ -583,11 +583,11 @@ You can toggle the visibility of shapes or bubbles by clicking on the correspond
 
 ![](Map-Elements_images/Map-Elements_img9.png)
 
-_Map with bubble and legend items, before toggle_.
+_Before toggle the visibility of bubble and legend items_.
 
 ![](Map-Elements_images/Map-Elements_img10.png)
 
-_After toggle visibility of the legend item Brazil_.
+_After toggle the visibility of the legend item Brazil_.
 
 
 ### Interactive Legend

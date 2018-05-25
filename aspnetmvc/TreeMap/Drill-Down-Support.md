@@ -103,15 +103,15 @@ _Before Drill Down_
 _After Drill Down_
 
 
-### Rendering Treemap with specific drilldown level
+### Rendering tree map with specific drill-down level
 
-Treemap can be rendered with any level instead of initial level based on the specified value to the below properties,
+The tree map can be rendered with any level instead of initial level based on the specified value to the following properties,
 
-•	`DrillDownValue` – get the value of the tree map item to render initially.  
+•	`DrillDownValue` – Gets the value of the tree map item to render initially.  
 
-•	`DrillDownLevel` – get the level index.
+•	`DrillDownLevel` – Gets the level index.
 
-Additionally, we have open technique to process the `DrillDown` activity.
+Additionally, an open technique is available to process the `DrillDown` activity.
 
 
 {% highlight C# %}
