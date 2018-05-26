@@ -13,9 +13,8 @@ documentation: ug
 
 ## Refresh()
 
-`refresh()` method is used to reload the treemap with updated values.
+The [`refresh()`] method is used to reload the treemap with updated values.
 
-#### Returns: void
 {% highlight CSHTML %}
 
     @(Html.EJ().TreeMap("treemap"))
@@ -24,6 +23,23 @@ documentation: ug
         $("#treemap").ejTreeMap();
         var treemapObj = $("#treemap").data("ejTreeMap");
         treemapObj.refresh();
+    </script>
+
+{% endhighlight %}
+
+
+## DrillDown()
+
+The [`drillDown()`] method is used to drill-down the tree map level dynamically with specified data and level.
+
+{% highlight CSHTML %}
+
+    @(Html.EJ().TreeMap("treemap"))
+
+    <script type="text/javascript">
+        $("#treemap").ejTreeMap();
+        var treemapObj = $("#treemap").data("ejTreeMap");
+        treemapObj.drillDown();
     </script>
 
 {% endhighlight %}
