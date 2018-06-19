@@ -101,3 +101,121 @@ _Before Drill Down_
 
 
 _After Drill Down_
+
+
+### Rendering tree map with specific drill-down level
+
+The tree map can be rendered with any level instead of initial level based on the specified value to the following properties,
+
+•	`DrillDownValue` – Gets the value of the tree map item to render initially.  
+
+•	`DrillDownLevel` – Gets the level index.
+
+Additionally, an open technique is available to process the `DrillDown` activity.
+
+
+{% highlight C# %}
+
+	public class TreeMapPopulationData
+
+	{
+
+		public string Continent { get; set; }
+
+		public string Region { get; set; }
+
+		public double Growth { get; set; }
+
+		public long Population { get; set; }
+
+		public static List<TreeMapPopulationData> GetData()
+
+		{
+
+			List<TreeMapPopulationData> population = new List<TreeMapPopulationData>();
+
+
+			population.Add(new TreeMapPopulationData() { Continent: "Europe", Country: "France", Population: 65605000 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "Europe", Country: "Germany", Population: 81993000 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "Africa", Country: "Egypt", Population: 83661000 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "Africa", Country: "Nigeria", Population: 170901000 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "North America", Country: "Mexico", Population: 112336538 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "North America", Country: "USA", Population: 315645000 });
+
+			population.Add(new TreeMapPopulationData() { Continent: "Asia", Country: "Indonesia", Population: 237641326 });
+
+			return population;
+
+		}
+
+	}
+
+
+
+{% endhighlight %}
+
+
+{% highlight CSHTML %}
+
+
+	@(Html.EJ().TreeMap("treemap")
+
+		.DataSource(datasource)
+
+		.EnableDrillDown(true)   
+
+		.DrillDownHeaderColor("#199DAF")
+
+		.DrillDownSelectionColor("#199DAF")
+
+		.DrillDownValue("North America")
+
+		.DrillDownLevel(1)
+
+		.WeightValuePath("Population")
+
+		.Levels(lv =>
+
+		{
+
+			lv.GroupPath("Continent")                                    
+
+			  .HeaderHeight(25)
+
+			  .GroupGap(5)
+
+			  .ShowLabels(true).Add();
+
+			lv.GroupPath("Country")                                    
+
+			  .HeaderHeight(25)
+
+			  .GroupGap(0)
+
+			  .ShowLabels(true).Add();
+
+			lv.GroupPath("Name")                                   
+
+			  .HeaderHeight(25)
+
+			  .GroupGap(0)
+
+			  .ShowLabels(true).Add();
+
+		})
+
+	)
+
+
+
+{% endhighlight %}
+
+
+![](Drill-Down-Support_images/Drill-Down-Support_img3.png)
+
+_Treemap with modified level in initial view_
