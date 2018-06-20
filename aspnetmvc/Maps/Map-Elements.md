@@ -548,48 +548,6 @@ N> Here, Equal Color Mapping code sample for shapeSettings with color mappings i
 ![](Map-Elements_images/Map-Elements_img4.png)
 
 
-## Toggle legend
-
-You can toggle the visibility of shapes and bubbles by clicking the corresponding legend item using the  `ToggleVisibility` property in legendSettings. The default value of this property is **false**. 
-
-{% highlight CSHTML %}
-
-
-	@(Html.EJ().Map("container")
-
-	.Layers(layer =>
-
-	{
-
-		layer.LegendSettings(ml =>
-
-		{
-
-			ml .ShowLegend(true)			
-
-			.Type('bubbles')
-
-			.ToggleVisibility(true);
-
-		 })
-
-	})
-
-	)
-
-
-
-{% endhighlight %}
-
-![](Map-Elements_images/Map-Elements_img9.png)
-
-_Before toggle the visibility of bubble and legend items_.
-
-![](Map-Elements_images/Map-Elements_img10.png)
-
-_After toggle the visibility of the legend item Brazil_.
-
-
 ### Interactive Legend
 
 The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. You can enable this option by setting `Mode` property in `LegendSettings` value as “Interactive” and default value of `Mode` property is “Default” to enable the normal legend.
