@@ -10,7 +10,7 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, Populate Data
 
 # Populate Data
 
-TreeView can be populated with local or remote data source using a property [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html), which is the member of “**TreeViewFields**” property.
+TreeView can be populated with local or remote data source using a property [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html), which is the member of “**TreeViewFields**” property.
 
 In TreeView, you should use “**TreeViewFields**” property to go with data source. It specifies the mapping fields for the data source to receive the data, query to process the data and field mappers to map the data members.
 
@@ -346,7 +346,7 @@ In the controller page, create a data list which contains the details about tree
     
     
     
-Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
+Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
     
     
     
@@ -401,7 +401,7 @@ The nested object support is provided for the TreeView component. Please find th
     
     
     
-Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
+Above data can be directly assigned to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html) property and mapping data fields with respect to the mapper field in order to form TreeView.
     
     
     
@@ -432,11 +432,11 @@ The following steps explain how you can bind remote data to TreeView control.
 
 ### OData
 
-**OData** is a standardized protocol for creating and consuming data. You can bind [OData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView” control.
+**OData** is a standardized protocol for creating and consuming data. You can bind [OData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView” control.
     
    **Using Datasource(DataSource) API**
     
-   Create an object for [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSource_members.html#) class using OData service URL and then assign it to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView”. 
+   Create an object for [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSource_members.html#) class using OData service URL and then assign it to [DataSource](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.TreeViewFieldsBuilder~Datasource.html#) API of “TreeView”. 
     
     
     
@@ -468,7 +468,7 @@ The following steps explain how you can bind remote data to TreeView control.
     
    **Using Datasource(Action&lt;DataSourceBuilder&gt;) API**
     
-   Here directly, you can specify the OData service URL using Action<[DataSourceBuilder](http://help.syncfusion.com/cr/cref_files/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSourceBuilder_members.html#)> 
+   Here directly, you can specify the OData service URL using Action<[DataSourceBuilder](http://help.syncfusion.com/cr/cref_files/aspnetmvc/ejmvc/Syncfusion.EJ~Syncfusion.JavaScript.DataSourceBuilder_members.html#)> 
     
     
     
