@@ -121,6 +121,8 @@ Add the following references that are necessary for the PDF viewer control and s
 * Syncfusion.EJ.PdfViewer
 * Syncfusion.EJ.MVC
 
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key "Syncfusion Licensing Overview") to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
+
 #### Add Scripts and Styles
 
 Find the scripts for the PDF viewer control and style sheets in any of the following locations: 
