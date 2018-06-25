@@ -638,3 +638,60 @@ function collapsing(args) {
 </script>
 
 {% endhighlight %}
+
+## Summary Row
+
+Summary rows in TreeGrid are used to summarize every hierarchy with the set of predefined summary types using the column values. Using the `SummaryRows` property, user can define the summary rows in TreeGrid and the title for each summary row can be defined using the `SummaryRows.Title` property. And summary for the columns in TreeGrid can be defined by using the `SummaryRows.SummaryColumns` property. Summary rows are enabled by setting the `ShowSummaryRow` property as `true`. The total summary row is the overall summary row displayed for all the rows in the TreeGrid and its visibility can be defined by using the `ShowTotalSummary` property.
+
+### Defining summary columns
+
+Using the **SummaryType** property, user can define the type of summary to be displayed in a column. 
+The **DataMember** property is used the map the field values which is used for summary calculations. 
+The **DisplayColumn** property is used to specify the column in which the summary to be displayed.
+The **Prefix** and **Suffix** properties are used to define the text should be displayed along with the summary column value. 
+The **Format** property is used for formatting the summary column value.
+The below code snippet explains defining a summary row in TreeGrid,
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer") 
+    .ShowSummaryRow(true)
+    .ShowTotalSummary(true)
+    .SummaryRows(rows =>
+        {
+            rows.Title("Maximum").SummaryColumns(col =>
+                {
+                    col.SummaryType(TreeGridSummaryType.Maximum)
+                        .DataMember("TotalUnits")
+                        .Prefix("Individual maximum unit = ")
+                        .DisplayColumn("TotalUnits").Add();
+                    col.SummaryType(TreeGridSummaryType.Maximum)
+                        .DataMember("TotalCosts")
+                        .Prefix("Individual maximum Cost = ")
+                        .DisplayColumn("TotalCosts")
+                        .Format("{0:C}").Add();
+                }).Add();
+            rows.Title("Total").SummaryColumns(summary =>
+                {
+                    summary.SummaryType(TreeGridSummaryType.Sum)
+                        .DataMember("TotalCosts")
+                        .Prefix("Total costs = ")
+                        .DisplayColumn("TotalCosts")
+                        .Format("{0:C}").Add();
+                    summary.SummaryType(TreeGridSummaryType.Sum)
+                        .DataMember("UnitWeight")
+                        .Prefix("Total weight = ")
+                        .DisplayColumn("UnitWeight")
+                        .Suffix("Pounds").Add();
+                }).Add();
+        })
+    )
+@(Html.EJ().ScriptManager())
+
+{% endhighlight %}
+
+The below screenshot shows the output of above code example..
+
+![](Rows_images/Rows_img11.png)
+
+[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridsummaryrow) here to view the demo sample for Summary Row.
