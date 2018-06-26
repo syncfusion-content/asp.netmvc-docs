@@ -383,7 +383,7 @@ Add the following code snippet to Index.cshtml. Here, the PDF viewer uses the We
 
 **Sample:**
 
-<http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_MVCsample517121195>
+<http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_GettingStarted-1550599436>
 
 Run the sample and you will see the PDF viewer control as in the below screenshot.
 
