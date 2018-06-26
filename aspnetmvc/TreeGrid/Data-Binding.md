@@ -394,7 +394,10 @@ Similarly if the user navigates to a new page, the root nodes of that specific p
 N> 1. Load on demand support in TreeGrid can be enabled only for remote data.
 N> 2. For better initial load time performance, we need to define the `HasChildMapping` property.
 
-Load on demand support in TreeGrid can be enabled by using the property `EnableLoadOnDemand`.
+Load on demand support in TreeGrid can be enabled by the following ways,
+
+1. By enabling `EnableLoadOnDemand` property of TreeGrid control
+2. By enabling `CrossDomain` property while binding data source using ejDataManager control.
 
 The following code explains how to use Load on Demand in TreeGrid Control,
 
@@ -404,7 +407,6 @@ The following code explains how to use Load on Demand in TreeGrid Control,
     .IdMapping("TaskID")
     .ParentIdMapping("ParentID")
     .HasChildMapping("isParent")
-    .EnableLoadOnDemand(true)
     .EnableVirtualization(true)
     .Columns(co =>
     {
@@ -424,6 +426,17 @@ The output for load on demand support in TreeGrid:
 
 ![](Data-Binding_images/Data-Binding_img3.png)
 ![](Data-Binding_images/Data-Binding_img4.png)
+
+The following code snippet shows on how to enable load on demand support using  `EnableLoadOnDemand` property.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+    .EnableLoadOnDemand(true)         
+    .Datasource(dataSource => dataSource.URL("http://js.syncfusion.com/demos/ejServices/Wcf/TreeGridGantt/TreeGantt.svc/SelfReferenceDatas"))
+    )
+@(Html.EJ().ScriptManager())
+{% endhighlight %}
 
 The following output shows how load on demand works for expanding action
 
