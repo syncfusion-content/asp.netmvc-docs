@@ -516,5 +516,5 @@ Run the sample. You can view the PDF viewer with custom toolbar.
 
 **Sample:**
 
-<http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_CustomToolbar2041738230>
+<http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewer_CustomToolbar-656684563>
 
