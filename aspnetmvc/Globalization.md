@@ -68,7 +68,7 @@ To Internationalize any of our Syncfusion components/page into particular cultur
 
 The steps to globalize the MVC application are as follows:
 
-1. Specify the target culture in **web.config** file under <kbd> <system.web> </kbd> root.
+1. Specify the target culture in **web.config** file under `<system.web>` root.
 
    ~~~ xml
    
@@ -102,3 +102,20 @@ The steps to globalize the MVC application are as follows:
 
    ~~~
    
+Please refer the below DatePicker sample which uses globalization,
+Follow the above steps 1 and 2 and then add the control in the view page
+{% tabs %}
+
+    {% highlight html %}
+
+        @Html.EJ().DatePicker("DatePick").Value("28/05/2016").Width("100%")
+        
+        
+    {% endhighlight %}
+
+
+{% endtabs %}
+
+The following screenshot exhibits the output of the above code,
+
+![](Globalization_images/globalization.png)
