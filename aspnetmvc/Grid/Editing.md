@@ -95,18 +95,23 @@ Example</th></tr>
 <tr>
 <td>
 NumericTextBox </td><td>
-{{ '[TextBoxes]' | markdownify }} </td><td>
+{{ '[TextBoxes](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.Models.EditorProperties_properties.html)' | markdownify }} </td><td>
 NumericEditOptions(new EditorProperties() { DecimalPlaces = 2,  })</td></tr>
 <tr>
 <td>
 DatePicker </td><td>
-{{ '[DatePicker]' | markdownify }} </td><td>
+{{ '[DatePicker](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.Models.DatePickerProperties_properties.html)' | markdownify }} </td><td>
 DateEditOptions(new DatePickerProperties() { ButtonText="Now"})</td></tr>
 <tr>
 <td>
 DateTimePicker</td><td>
-{{ '[DateTimePicker]' | markdownify }} </td><td>
-DateTimeEditOptions(new DateTimePickerProperties() {})</td></tr>
+{{ '[DateTimePicker](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.Models.DateTimePickerProperties_properties.html)' | markdownify }} </td><td>
+DateTimeEditOptions(new DateTimePickerProperties() {Enabled=False})</td></tr>
+<tr>
+<td>
+DropDownList</td><td>
+{{ '[DropDownList](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ~Syncfusion.JavaScript.Models.DropDownListProperties_properties.html)' | markdownify }} </td><td>
+&lt;DropDownEditOptions(new DropDownListProperties() {ShowCheckbox=True})/&gt;</td></tr>
 </table>
 
 N> 1. If `EditType` is not set, then by default it will display the input element ("string") while editing a column.
