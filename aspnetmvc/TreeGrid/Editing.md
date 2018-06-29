@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
 description: editing
@@ -304,7 +304,7 @@ In Batch editing, the Edit mode can be changed to "Cell" or "Row" with "BatchEdi
            
            edit.EditMode(TreeGridEditMode.BatchEditing);
 
-           edit.BatchEditSettings(be => { be.EditMode(TreeGridBatchEditMode.Cell); });
+           edit.BatchEditSettings(be => { be.EditMode(TreeGridBatchEditMode.Row); });
 
        })
 
