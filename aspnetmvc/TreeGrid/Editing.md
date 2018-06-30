@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
 description: editing
@@ -108,6 +108,7 @@ TreeGrid supports the below editModes, 
 * Cell Editing
 * Row Editing
 * Dialog Editing
+* Batch Editing
 
 You can enable editing in TreeGrid by enabling the property `AllowEditing`.
 
@@ -256,6 +257,66 @@ function actionComplete(args) {
 {% endhighlight %}
 
 N> While saving the edited record `ActionComplete` event will be triggered with updated record value in `data` argument and `requestType` as `recordUpdate`. Using this event we can update the database.
+
+### Batch Editing
+
+In TreeGrid control to save the all the Add, Edit and Delete changes to database with single action, set the `EditMode` as batchEditing.
+
+The following code example shows you how to enable the `BatchEditing` in TreeGrid control.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+
+.EditSettings(edit =>
+
+       {
+
+           edit.AllowEditing(true);
+
+           edit.BeginEditAction(TreeGridBeginEditAction.Click);
+           
+           edit.EditMode(TreeGridEditMode.BatchEditing);
+
+       })
+
+)
+
+{% endhighlight %}
+
+The output of the TreeGrid with `BatchEditing` is as follows.
+
+![](Editing_images/batchedit.png)
+
+In Batch editing, the Edit mode can be changed to "Cell" or "Row" with "BatchEditSettings" property as per the following code example.
+
+{% highlight CSHTML %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+
+.EditSettings(edit =>
+
+       {
+
+           edit.AllowEditing(true);
+
+           edit.BeginEditAction(TreeGridBeginEditAction.Click);
+           
+           edit.EditMode(TreeGridEditMode.BatchEditing);
+
+           edit.BatchEditSettings(be => { be.EditMode(TreeGridBatchEditMode.Row); });
+
+       })
+
+)
+
+{% endhighlight %}
+
+The output of the TreeGrid with `BatchEditSettings` and `EditMode` is as follows.
+
+![](Editing_images/batcheditrow.png)
+
+N> After modifying all the changes in TreeGrid, on clicking "Save" button the [`actionComplete`](https://help.syncfusion.com/api/js/ejtreegrid#events:actioncomplete) event will be triggered with updated records in `batchChanges` argument and `requestType` as `batchSave`. Using this event we can update the all the modified records to database.
 
 ## Edit type and its params
 
