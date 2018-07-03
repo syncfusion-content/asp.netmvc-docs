@@ -2103,3 +2103,71 @@ The following code example explains the previous behavior.
 {% endtabs %}
 The following output is displayed as a result of the previous code example.
 ![](How-to_images/Actionswithexternalbutton_img1.png)
+
+## Getting Datasource of Grid in Sorted Order
+
+Grid column can be sorted and after sorting, the datasource can be obtained in the same order using `sortBy` query and `executeLocal` method of DataManager.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+  @(Html.EJ().Button("Sorting")
+                  .Width("100px")
+                  .ClientSideEvents(eve => { eve.Click("GetSortedData"); })
+                  .Text("GetSortedData")
+)
+
+@(Html.EJ().Grid<object>("FlatGrid")
+                  .Datasource((IEnumerable<object>)ViewBag.datasource)                                   
+                  .AllowPaging()
+                  .AllowSorting()
+                  .AllowMultiSorting()
+                  .Columns(col =>
+                     {
+                       col.Field("OrderID").HeaderText("Order ID").Width(75).Add();
+                       col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+                       col.Field("EmployeeID").HeaderText("Employee ID").Width(75).Add();
+                       col.Field("ShipCity").HeaderText("Verified").Width(110).Add();
+                     }))
+  
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   namespace Grid.Controllers
+   {
+     public class GridController : Controller
+     {
+        public ActionResult GridFeatures()
+        {
+            var DataSource = new NorthwindDataContext().EmployeeViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+     }
+   }
+   
+{% endhighlight  %}
+
+{% highlight js %}
+
+<script type="text/javascript">
+   function GetSortedData(args) {
+            var obj = $(".e-grid").ejGrid("instance");   
+            var Sort = obj.model.sortSettings.sortedColumns;  
+            var query = ej.Query();               
+            if(obj.model.sortSettings.sortedColumns.length){
+                for(var i=Sort.length-1;i>=0;i--){        
+                  query.sortBy(Sort[i].field, Sort[i].direction); 
+                }
+            var SortedDatasource = ej.DataManager(obj.model.dataSource).executeLocal(query); 
+    }
+}
+</script>
+   
+{% endhighlight  %}
+
+{% endtabs %}
