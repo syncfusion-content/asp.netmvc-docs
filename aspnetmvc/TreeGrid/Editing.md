@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
 description: editing
@@ -288,7 +288,7 @@ The output of the TreeGrid with `BatchEditing` is as follows.
 
 ![](Editing_images/batchedit.png)
 
-In Batch editing, the Edit mode can be changed to "Cell" or "Row" with "BatchEditSettings" property as per the following code example.
+In Batch editing, the Edit mode can be changed to `Cell` or `Row` with `BatchEditSettings` property as per the following code example.
 
 {% highlight CSHTML %}
 
@@ -316,7 +316,7 @@ The output of the TreeGrid with `BatchEditSettings` and `EditMode` is as fol
 
 ![](Editing_images/batcheditrow.png)
 
-N> After modifying all the changes in TreeGrid, on clicking "Save" button the [`actionComplete`](https://help.syncfusion.com/api/js/ejtreegrid#events:actioncomplete) event will be triggered with updated records in `batchChanges` argument and `requestType` as `batchSave`. Using this event we can update the all the modified records to database.
+N> After modifying all the changes in TreeGrid, on clicking `Save` button the [`actionComplete`](https://help.syncfusion.com/api/js/ejtreegrid#events:actioncomplete) event will be triggered with updated records in `batchChanges` argument and `requestType` as `batchSave`. Using this event we can update the all the modified records to database.
 
 ## Edit type and its params
 
