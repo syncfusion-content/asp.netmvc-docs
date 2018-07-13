@@ -43,8 +43,12 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files.
 
 	![](getting-started_images/getting-started_img6.png)
+
+5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx) post for understanding the licensing changes introduced in Essential Studio.
+
+	![](getting-started_images/getting-started_img21.png)
 	
-5. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
+6. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
 
    ~~~ cshtml
 		
@@ -52,7 +56,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
    ~~~
 
-6. Compile and execute the application. You can able to see the following output in the browser.
+7. Compile and execute the application. You can able to see the following output in the browser.
 
 	![](getting-started_images/getting-started_img7.png)
 	
