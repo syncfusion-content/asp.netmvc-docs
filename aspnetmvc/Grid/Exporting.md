@@ -233,7 +233,7 @@ N> Excel file will be exported in the collapsed state with the expand/collapse i
 
 N> 1. The dataSource passed to the exporting method is compared with grid column while exporting, when a column is not defined in the grid dataSource, it is obtained as null value and hence throws a null exception. To avoid the above exception ensure that the columns bound to the grid are defined in the grid dataSource before exporting the grid.
 
-N> 2. To export the dynamic list of objects in the grid use the typebuilder concept refer to this [`link`](https://www.syncfusion.com/kb/7620/how-to-export-dynamic-list-using-typebuilder-in-grid "link")
+N> 2. To export the dynamic list of objects in the grid use the TypeBuilder concept refer to this [`link`](https://www.syncfusion.com/kb/7620/how-to-export-dynamic-list-using-typebuilder-in-grid "link")
 
 ## Server dependencies
 
