@@ -373,7 +373,7 @@ The following code example describes the above behavior.
         <script>
             var employeeData = @Html.Raw(ViewBag.employeeData);
             function onLoad(args) {
-                 this.model.dataSource.Adaptor = new ej.ForeignKeyAdaptor([{ field: "EmployeeID", foreignKeyField: "EmployeeID", foreignKeyValue: "FirstName", dataSource: employeeData }], "JsonAdaptor");
+                 this.model.dataSource.adaptor = new ej.ForeignKeyAdaptor([{ foreignKeyField: "EmployeeID", foreignKeyValue: "FirstName", dataSource: employeeData }], "JsonAdaptor");
              }
        </script>
 {% endhighlight  %}
