@@ -909,25 +909,47 @@ In controller action method you are able to export all the grids available in th
  
 {% highlight razor %}
 
-    @(Html.EJ().Grid<EmployeeView>("Grid")
-    .DataSource((System.Data.DataTable)ViewBag.datasource1)
-    .AllowMultipleExporting()
-    .AllowPaging()
-    .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
-    {
-        items.AddTool(ToolBarItems.ExcelExport);
-        items.AddTool(ToolBarItems.WordExport);
-        items.AddTool(ToolBarItems.PdfExport);
-    }))
-    .Mappers(map => map.ExportToExcelAction("ExportToExcel").ExportToPdfAction("/Home/ExportToExcel").ExportToWordAction("MultipleExportToWord"))
-    .Columns(col =>
-    {
-        col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(125).Add();
-        col.Field("FirstName").HeaderText("First Name").Width(100).Add();
-        col.Field("LastName").HeaderText("Last Name").Width(100).Add();
-        col.Field("Title").HeaderText("Title").Width(150).Add();
+<div class="label1">
+        Employee Grid
+    </div>
+    @(Html.EJ().Grid<EmployeeView>("MasterGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource1)
+        .SelectedRowIndex(0)
+        .AllowMultipleExporting()
+                 .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+                        {
+                            items.AddTool(ToolBarItems.ExcelExport);
+                            items.AddTool(ToolBarItems.WordExport);
+                            items.AddTool(ToolBarItems.PdfExport);
+                        }))
+                        .Mappers(map => map.ExportToExcelAction("MultipleExportToExcel").ExportToPdfAction("MultipleExportToPdf").ExportToWordAction("MultipleExportToWord"))
+        .Columns(col =>
+        {
+            col.Field("EmployeeID").HeaderText("Employee ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(100).Add();
+            col.Field("FirstName").HeaderText("First Name").Width(100).Add();
+            col.Field("LastName").HeaderText("Last Name").Width(100).Add();
+            col.Field("Title").HeaderText("Title").Width(90).Add();
+            col.Field("BirthDate").HeaderText("Birth Date").TextAlign(TextAlign.Right).Width(100).Format("{0:MM/dd/yyyy}").Add();
+            col.Field("Country").Width(120).HeaderText("Country").Add();
 
-    })
+        })
+    )
+    <div class="label1">
+        Orders Grid
+    </div>
+    @(Html.EJ().Grid<OrdersView>("DetailGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource2)
+        .AllowPaging(false)
+        .Columns(col =>
+        {
+            col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(125).Add();
+            col.Field("CustomerID").HeaderText("Customer ID").Width(100).Add();
+            col.Field("Freight").Width(100).Format("{0:C}").TextAlign(TextAlign.Right).Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(150).Add();
+            col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(100).Format("{0:MM/dd/yyyy}").Add();
+            col.Field("ShipCountry").Width(100).HeaderText("Ship Country").Add();
+
+        })
     )
 
 {% endhighlight  %}
