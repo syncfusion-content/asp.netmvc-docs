@@ -476,7 +476,71 @@ The following output is displayed as a result of the above code example.
 
 ![](Grouping_images/Grouping_img10.png)
 
+## Handling grouped records count in server-side    
 
+When binding remote data to grid with on-demand data loading, only current page data knowledge is available to grid and so grouped records count would be shown based on current Page only. 
+
+This can be rectified when bindng data to grid using [UrlAdaptor](https://help.syncfusion.com/js/datamanager/data-adaptors#url-adaptor) of DataManager. The grouped column values should be passed into the `groupDs` property of return object from server-side along with datsource and count.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+ 
+{% highlight razor %}
+
+@(Html.EJ().Grid<OrdersView>("Grouping")
+
+  .Datasource(datasource => datasource.URL("/Grid/DataSource").Adaptor("UrlAdaptor"))
+  .AllowSorting()
+  .AllowGrouping()
+  .AllowPaging()
+.Columns(col =>
+{
+    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Width(75).Add();
+    col.Field("CustomerID").HeaderText("Customer ID").Width(80).Add();
+    col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).Width(75).Add();
+    col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+    col.Field("OrderDate").HeaderText("Order Date").TextAlign(TextAlign.Right).Width(80).Format("{0:MM/dd/yyyy}").Add();
+})
+) 
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    namespace MVCSampleBrowser.Controllers
+        {
+            public class GridController : Controller
+              { 
+                public ActionResult GridFeatures()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.DataSource = DataSource;
+                   return View();
+                 }
+                public ActionResult UrlDataSource(DataManager dm)
+                 {
+                    IEnumerable DataSource = OrderRepository.GetAllRecords();
+                    int cnt = DataSource.AsQueryable().Count();
+                    IEnumerable GroupDs = new List<object>(); ;
+                    DataOperations ds = new DataOperations();
+                    List<string> str = new List<string>();
+                    if (dm.Group != null)
+                        GroupDs = ds.PerformSelect(DataSource, dm.Group); //Pass grouped column recordsgrouping
+                    if (dm.Sorted != null)
+                        DataSource = ds.PerformSorting(DataSource, dm.Sorted);
+                    DataSource = ds.PerformSkip(DataSource, dm.Skip);
+                    DataSource = DataSource.AsQueryable().Take(dm.Take);
+                    return Json(new {result = DataSource, count =cnt, groupDs = GroupDs }, JsonRequestBehavior.AllowGet);
+                 }  
+             }     
+        } 
+{% endhighlight  %}   
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](Grouping_images/Grouping_img11.png)
 
 
 
