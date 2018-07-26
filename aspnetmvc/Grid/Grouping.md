@@ -521,17 +521,17 @@ The following code example describes the above behavior.
                 public ActionResult UrlDataSource(DataManager dm)
                  {
                     IEnumerable DataSource = new NorthwindDataContext().OrdersViews.ToList();
-                    int cnt = DataSource.AsQueryable().Count();
+                    int count = DataSource.AsQueryable().Count();
                     IEnumerable GroupDs = new List<object>(); ;
                     DataOperations ds = new DataOperations();
                     List<string> str = new List<string>();
                     if (dm.Group != null)
-                        GroupDs = ds.PerformSelect(DataSource, dm.Group); //Pass grouped column recordsgrouping
+                        GroupDs = ds.PerformSelect(DataSource, dm.Group); //Pass grouped column records
                     if (dm.Sorted != null)
                         DataSource = ds.PerformSorting(DataSource, dm.Sorted);
                     DataSource = ds.PerformSkip(DataSource, dm.Skip);
                     DataSource = DataSource.AsQueryable().Take(dm.Take);
-                    return Json(new {result = DataSource, count =cnt, groupDs = GroupDs }, JsonRequestBehavior.AllowGet);
+                    return Json(new {result = DataSource, count =count, groupDs = GroupDs }, JsonRequestBehavior.AllowGet);
                  }  
              }     
         } 
