@@ -7,12 +7,7 @@ control: Common
 documentation: ug
 ---
 
-# Installation and Deployment
-
-## Installation
-
-* Download the setup file (.exe) of Essential Studio for ASP.NET MVC product from this [link](http://www.syncfusion.com/downloads/aspnetmvc) with your Syncfusion account.
-* Follow the steps mentioned in the [setup guide](http://help.syncfusion.com/common/essential-studio/essential-studio-installer-for-individual-platform) and install the specific/entire platform in your machine.
+# Configuration and Deployment
 
 ## Configuring Syncfusion Bower Packages
 
@@ -268,35 +263,33 @@ Here, the default location on your machine is illustrated where the **Essential 
 
 * The following specified location is the place where all the assemblies, scripts, CSS files, and samples are available.
 
-  `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\`
+  `(installed location)\Syncfusion\Essential Studio\{platform}\{{ site.releaseversion }}\`
 
   _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the following location,_
-  `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\`
+  `C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\`
 
 * The **ASP.NET MVC samples** can be accessed from the following location.
 
-  `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Samples`
+  `(installed location)\Syncfusion\Essential Studio\{platform}\{{ site.releaseversion }}\Samples`
 
   _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** then navigate to the following location._
-  `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Samples`
+  `C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Samples`
 
-* The Dashboard can be opened by running the **Dashboard.exe** file present within the following location.
+* The Dashboard can be opened by running the **Syncfusion Control Panel.exe** file present within the following location.
 
-  `(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
+  `(installed location)\Syncfusion\Essential Studio\{Platform}\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
 
   _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** navigate to the following location._
-  `C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
-
-To run the local samples from dashboard and other online samples, refer to the link [here](http://help.syncfusion.com/ug/common/index.html#!Documents/samples.htm).
+  `C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Infrastructure\Dashboard\4.0`
 
 ## Assemblies Location and Structure
 
 All the Syncfusion assemblies are located in the following specified installed location on your machine.
 
-`(installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}`
+`(installed location)\Syncfusion\Essential Studio\{platform}\{{ site.releaseversion }}\precompiledassemblies`
 
 _**For example**, If you have installed the Essential Studio package within **C:\Program Files(x86),** navigate to the following location._
-`C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\{{ site.releaseversion }}`
+`C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\precompiledassemblies`
 
 The Syncfusion assemblies are packed in a separate folder on the basis of the following two types:
 
