@@ -490,9 +490,10 @@ The following code example describes the above behavior.
 
 @(Html.EJ().Grid<OrdersView>("Grouping")
 
-  .Datasource(datasource => datasource.URL("/Grid/DataSource").Adaptor("UrlAdaptor"))
+  .Datasource(datasource => datasource.URL("/Grid/UrlDataSource").Adaptor("UrlAdaptor"))
   .AllowSorting()
   .AllowGrouping()
+  .GroupSettings(group => { group.GroupedColumns(col => { col.Add("EmployeeID"); }); })
   .AllowPaging()
   .Columns(col =>
 {
