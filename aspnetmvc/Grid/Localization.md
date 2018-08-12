@@ -379,10 +379,10 @@ ej.Grid.Locale["de-DE"] = {
 I> You need to change pager locale in `ej.Pager.Locale` object.
 
 
-## Excel-Filter Localization
+## Excel-filter Localization
 
 
-All text in Excel-Filter can be localized using the `ej.ExcelFilter.Locale` object. Please find the table with list of properties and its value in locale object.
+All text in Excel-filter can be localized using the `ej.ExcelFilter.Locale` object. Please find the table with list of properties and its value in locale object.
 
 <table>
 <tr>
