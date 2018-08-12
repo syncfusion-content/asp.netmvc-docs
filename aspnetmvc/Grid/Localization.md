@@ -248,26 +248,18 @@ PagerInfo</td><td>
 {0} of {1} pages ({2} items)</td></tr>
 <tr>
 <td>
-NextPage</td><td>
-Next Page</td></tr>
 firstPageTooltip</td><td>
 Go to first page</td></tr>
 <tr>
 <td>
-PreviousPage</td><td>
-Previous Page</td></tr>
 lastPageTooltip</td><td>
 Go to last page</td></tr>
 <tr>
 <td>
-FirstPage</td><td>
-First Page</td></tr>
 nextPageTooltip</td><td>
 Go to next page</td></tr>
 <tr>
 <td>
-LastPage</td><td>
-Last Page</td></tr>
 previousPageTooltip</td><td>
 Go to previous page</td></tr>
 <tr>
