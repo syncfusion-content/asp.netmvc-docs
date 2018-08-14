@@ -391,6 +391,40 @@ This property has the below sub properties with the default values:
 
 **MaxFileSize**: The property limits the maximum file size to upload. It accepts the value in bytes.
 
+If you want to upload more than 4 MB files in FileExplorer, you should specify the **maxRequestLength** attribute in webconfig file and specify the **MaxFileSize** property to upload it. Please check the below code block.
+
+{% highlight razor %}
+
+<httpRuntime targetFramework="4.6" maxRequestLength="2147483647"executionTimeout="1600" requestLengthDiskThreshold="2147483647" /> 
+     
+<system.webServer> 
+    <security> 
+      <requestFiltering> 
+        <requestLimits maxAllowedContentLength="3221225472" /> 
+      </requestFiltering> 
+    </security> 
+… 
+</system.webServer> 
+
+{% endhighlight %}
+
+{% highlight razor %}
+
+@(Html.EJ().FileExplorer("fileExplorer")
+            .Path("~/Content/images/FileExplorer/")
+            .AjaxAction(@Url.Content("/FileExplorer/FileActionDefault"))
+            .UploadSettings(settings =>
+                settings.MaxFileSize(3221225472)
+            )
+    )
+{% endhighlight %}
+
+To know more details, please check the below reference link and sample.
+
+Reference Link: https://stackoverflow.com/questions/16287706/how-to-upload-large-files-using-mvc-4?answertab=active#tab-top
+
+Sample: http://www.syncfusion.com/downloads/support/directtrac/210600/ze/UploadFileSizeProblem-1398338221.zip
+
 **AutoUpload**: when you enable this property, the upload action performed automatically after select the files. When you disable this property, it shows a confirmation dialog with the selected file details and perform the upload action on press the “upload” button.
 
 In the view page, add FileExplorer helper and specify the upload settings as shown below
