@@ -47,7 +47,9 @@ In the view page, add TreeView helper as shown below. It will render the TreeVie
     
 ## TreeView using Data Binding
 
-Another way of creating TreeView is binding with the data source, you can bind local data source to create a TreeView. 
+Another way of creating TreeView is binding with the data source, you can bind local data source to create a TreeView.
+
+The [beforeLoad](https://help.syncfusion.com/api/js/ejtreeview#events:beforeload) event will be triggered before loading nodes into TreeView.
 
 Render TreeView with local data source.
 
