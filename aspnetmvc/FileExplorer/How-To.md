@@ -1253,12 +1253,12 @@ FTPFileExplorerOperations operation= new FTPFileExplorerOperations();
 {% endhighlight %}
 
 **Step 4:** Add FTP Storage path that is viewed by FileExplorer.
-You will create FTP URL like “ftp://localhost/filebrowser/” (Port number may vary).
+You will create FTP URL like “ftp://localhost/FileBrowser/” (Port number may vary).
 After that, you need to specify the FTP folder path and AJAX action handler name as shown in below code block.
 
 {% highlight razor %}
 
-@Html.EJ().FileExplorer("fileexplorer").Path("ftp:// localhost /filebrowser/").AjaxAction(@Url.Content("/FileExplorer/FileActionDefault"))
+@Html.EJ().FileExplorer("fileexplorer").Path("ftp:// localhost /FileBrowser/").AjaxAction(@Url.Content("/FileExplorer/FileActionDefault"))
 
 {% endhighlight %}
 
