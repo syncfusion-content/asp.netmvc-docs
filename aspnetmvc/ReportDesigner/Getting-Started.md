@@ -58,11 +58,9 @@ The following screenshot displays how to select the project template with razor 
    * Syncfusion.Gauge.Wpf
    * Syncfusion.SfMaps.Wpf
    
-   > Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies
+   > Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Assemblies
 
    > Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting assemblies from ASP.NET WebApi NuGet package.
-
-3. Click OK.
 
 #### Add Scripts and Styles
 
@@ -294,7 +292,7 @@ namespace ReportDesignerDemo
 
 ### WebAPI Routing
 
-1. Right-click the project and select Add and select Global.asax file from the listed templates.
+1. Right-click the project and select Add and select `Global Application Class` from the listed templates.
 
     ![](Getting-Started_images/Getting-Started_img5.png)
 
