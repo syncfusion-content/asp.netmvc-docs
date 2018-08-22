@@ -84,6 +84,18 @@ The following code example shows how data annotation works in Grid Control.
              @model IEnumerable<EditableOrder>
              @(Html.EJ().Grid<EditableOrder>("FlatGrid")
                         .Datasource(Model)
+                        .EditSettings(edit => { edit.AllowAdding().AllowDeleting().AllowEditing(); })
+                        .ToolbarSettings(toolbar =>
+                        {
+                         toolbar.ShowToolbar().ToolbarItems(items =>
+                            {
+                                items.AddTool(ToolBarItems.Add);
+                                items.AddTool(ToolBarItems.Edit);
+                                items.AddTool(ToolBarItems.Delete);
+                                items.AddTool(ToolBarItems.Update);
+                                items.AddTool(ToolBarItems.Cancel);
+                            });
+                        })
                         .AllowPaging()
                   )
 {% endhighlight  %}
@@ -91,39 +103,53 @@ The following code example shows how data annotation works in Grid Control.
             
         namespace EJGrid.Controllers
          {
-         public class EditableOrder
-          {
-           [Display(Name = "Order ID")]
-           public int OrderID
+        public class EditableOrder
+        {
+            [Display(Name = "Order ID")]
+            [Key]
+            [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+            public int OrderID
             {
-              get;
-              set;
+                get;
+                set;
             }
-           [Display(Name = "Emp ID")]
-           public int? EmployeeID
+            [Display(Name = "Emp ID")]
+            [Required]
+            public int? EmployeeID
             {
-              get;
-              set;
+                get;
+                set;
             }
-           [Display(Name = "Freight")]
-           public decimal? Freight
+            [Display(Name = "Freight")]
+            [DisplayFormat(DataFormatString = "{0:C2}")]
+            public decimal? Freight
             {
-              get;
-              set;
-           }
-          [Display(Name = "Country")]
-          public string ShipCountry
-           {
-             get;
-             set;
-           }
-          [Display(Name = "City")]
-          public string ShipCity
-           {
-             get;
-             set;
-           }
-         }
+                get;
+                set;
+            }
+            [Display(Name = "Country")]
+            [Editable(false)]
+            public string ShipCountry
+            {
+                get;
+                set;
+            }
+            [Display(Name = "City")]
+            [MinLength(3)]
+            [MaxLength(10)]
+            public string ShipCity
+            {
+                get;
+                set;
+            }
+            [Display(Name = "Ship Name")]
+            [ScaffoldColumn(false)]
+            public string ShipName
+            {
+                get;
+                set;
+            }
+        }
          public class HomeController : Controller
           {
            public ActionResult Index()

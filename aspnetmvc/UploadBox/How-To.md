@@ -2,6 +2,7 @@
 layout: post
 title:  How To | UploadBox | ASP.NET MVC | Syncfusion Server-side rendering
 description: How to section of UploadBox widget
+platform: ejmvc
 control: UploadBox
 documentation: ug
 ---

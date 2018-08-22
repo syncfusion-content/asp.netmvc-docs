@@ -1190,3 +1190,78 @@ You can set the alias name to the root folder of FileExplorer by using `rootFold
     )
     
 {% endhighlight %}
+
+## Use the FTP connection using FileExplorer
+
+You can access your FTP service using our FileExplorer component and can manage your files easily.
+
+### FTP Login
+
+First you will need the FTP account login information. You can connect with the primary username and password or an FTP account. The FTP server is open to the public, using anonymous access. But most of the FTP servers are password protected. 
+Username: username or user@example.com
+Password: The password that was created for the user you are using.
+
+### FTP with FileExplorer server
+
+In this FTP application, we have provided “FTPFileOperationController” file, which contains “FileActionDefault” action method. When you make AJAX request to this controller part, “FileActionDefault” method will be called after based on ActionType” parameter value, then it calls the corresponding built-in FTP file handling methods such as ‘Read’, ‘Search’, ‘Download’, ‘Upload’, ‘Remove’, ‘Rename’ which are available in our “FTPFileExplorerOperations” class.
+
+### Steps to create FileExplorer application to access FTP server
+
+**Step 1:** Create a new ASP.NET MVC project using Visual Studio.
+
+**Step 2:** Include **“FTPFileExplorerOperations”** file in that application. This file contains built-in file handling methods which helps to connect our FileExplorer with FTP service.
+
+**Step 3:** Add **“FileExplorerController.cs”** file in the controller part of FTP project.
+
+This file, contains action handler methods. Based on the request parameters, it helps to call the built-in file handling methods of **FTPFileExplorerOperations** and perform corresponding actions.
+
+{% highlight c# %}
+
+public ActionResult FileActionDefault(FileExplorerParams args)
+        {
+FTPFileExplorerOperations operation= new FTPFileExplorerOperations();
+        // FTP Operations
+        switch (args.ActionType)
+        {
+            case "Read":
+                return Json(operation.Read(args.Path, args.ExtensionsAllow));
+            case "CreateFolder":
+                return Json(operation.CreateFolder(args.Path, args.Name));
+            case "Paste":
+                return Json(operation.Paste(args.LocationFrom, args.LocationTo, args.Names, args.Action, args.CommonFiles));
+            case "Remove":
+                return Json(operation.Remove(args.Names, args.Path));
+            case "Rename":
+                return Json(operation.Rename(args.Path, args.Name, args.NewName, args.CommonFiles));
+            case "GetDetails":
+                return Json(operation.GetDetails(args.Path, args.Names));
+            case "Download":
+                operation.Download(args.Path, args.Names);
+                break;
+            case "GetImage":
+                operation.GetImage(args.Path, args.Names);
+                break;
+            case "Upload":
+                operation.Upload(args.FileUpload, args.Path);
+                break;
+            case "Search":
+                return Json(operation.Search(args.Path, args.ExtensionsAllow, args.SearchString, args.CaseSensitive));
+        }
+        return Json("");
+}
+
+{% endhighlight %}
+
+**Step 4:** Add FTP Storage path that is viewed by FileExplorer.
+You will create FTP URL like “ftp://localhost/FileBrowser/” (Port number may vary).
+After that, you need to specify the FTP folder path and AJAX action handler name as shown in below code block.
+
+{% highlight razor %}
+
+@Html.EJ().FileExplorer("fileexplorer").Path("ftp:// localhost /FileBrowser/").AjaxAction(@Url.Content("/FileExplorer/FileActionDefault"))
+
+{% endhighlight %}
+
+We have prepared a demo based on above steps, please refer this.
+
+[http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations-1690670324.zip](http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations-1690670324.zip#)

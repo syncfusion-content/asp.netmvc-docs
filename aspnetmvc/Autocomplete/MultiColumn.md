@@ -49,9 +49,10 @@ The following steps explain the configuration of the Multiple Columns for an Aut
         
     .MultiColumnSettings(obj => obj.Enable(true).Columns(obj1 =>
     {
-    obj1.Field("uniqueKey").HeaderText("Unique Key").Add();
-    obj1.Field("text").HeaderText("Text").Add();
-    }).ShowHeader(true).SearchColumnIndices(new List<int> { 0,1,2,3 }).StringFormat("{0}"))
+    obj1.Field("EmployeeID").HeaderText("EmployeeID").Add();
+    obj1.Field("FirstName").HeaderText("FirstName").Add();
+    obj1.Field("City").HeaderText("City").Add();
+    }).ShowHeader(true).SearchColumnIndices(new List<int> { 0,1,2 }).StringFormat("{0}"))
 
         </div>
         
