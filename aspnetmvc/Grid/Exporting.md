@@ -121,7 +121,7 @@ The `Exporting` feature provides support to export Grid data into excel, word an
 
 The grid will be exported with its child grid. This can be achieved by enabling the `IncludeChildGrid` property of the respective exporting classes like `GridExcelExport`, `GridWordExport` and `GridPdfExport` and include the dataSource needed for ChildGrid in the GridProperties object after deserializing them. Remaining procedures will be same as the normal grid exporting.
 
-N> Excel file will be exported in the collapsed state with the expand/collapse icon whereas other file-formats like Pdf and Word will be exported in the expanded state.
+N> Excel file will be exported in the collapsed state with the expand/collapse icon whereas other file-formats like PDF and Word will be exported in the expanded state.
 
 {% tabs %}
  
