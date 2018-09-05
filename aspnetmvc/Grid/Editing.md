@@ -1800,7 +1800,9 @@ The following code example describes the above behavior.
     // POST odata/Orders
         public async Task<Order> Post(Order order) 
         {
-             // Perform ADD operation
+            db.Orders.Add(order);
+            await db.SaveChangesAsync();
+            return order;
             
         }
 
@@ -1823,8 +1825,10 @@ The following code example describes the above behavior.
         // PUT odata/Orders(5)
         public async Task<Order> Put(Order order) 
         {
-            
-           //Edit operation in database
+            var entity =  await db.Orders.FindAsync(order.OrderID);
+            db.Entry(entity).CurrentValues.SetValues(order);
+            await db.SaveChangesAsync();
+            return order;
         }
 
 {% endhighlight %}
@@ -1846,8 +1850,15 @@ The following code example describes the above behavior.
        // DELETE odata/Orders(5)
         public async Task<IHttpActionResult> Delete([FromODataUri] int key)
         {
-            
-         // Delete operation in database            
+             var od = await db.Orders.FindAsync(key);
+            if (od == null)
+            {
+                return NotFound();
+            }
+
+            db.Orders.Remove(od);
+            await db.SaveChangesAsync();
+            return StatusCode(HttpStatusCode.NoContent);          
         }
 
 {% endhighlight %}
