@@ -1646,7 +1646,7 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 
 {% highlight c# %}
-      public ActionResult CrudUpdate(EditableOrder value, string action)
+      public ActionResult CrudUpdate(EditableOrder value, string action, int key)
         {
 	       if (action == "update")
                 OrderRepository.Update(value);
