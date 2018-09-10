@@ -88,7 +88,7 @@ Add the script files and CSS files in the &lt;head&gt; tag of the _Layout.csh
 
 #### Add Control in View page
 
-Add the following code example in the Index.cshtml page that is already created. Set the desired ReportPath and ServiceUrl to ReportDesigner.
+Add the following code example in the Index.cshtml page that is already created. Set the desired ServiceUrl to ReportDesigner.
 
 {% highlight CSHTML %}
 
@@ -99,7 +99,7 @@ Add the following code example in the Index.cshtml page that is already create
     ViewBag.Title = "Index";
 }
 <div>
-    @{Html.EJ().ReportDesigner("designer").ServiceUrl("/api/ReportDesigner").ReportPath("~/App_Data/Catagory1/Website Visitor Analysis").Render();}
+    @{Html.EJ().ReportDesigner("designer").ServiceUrl("/api/ReportDesigner").Render();}
 </div>
 
 {% endhighlight %}
