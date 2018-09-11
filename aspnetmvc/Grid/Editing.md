@@ -1554,7 +1554,9 @@ The following code example describes the above behavior.
      
       public ActionResult Insert(EditableOrder value)
       {
-	        //Insert record in database
+        OrderRepository.Add(value);
+        var data = OrderRepository.GetAllRecords();
+        return Json(value, JsonRequestBehavior.AllowGet);
       }
 {% endhighlight %}
 
@@ -1571,10 +1573,12 @@ The following code example describes the above behavior.
 
 {% highlight c# %}
           
-          public ActionResult Update(EditableOrder value)
-            {
-	            //Update record in database
-            }
+public ActionResult Update(EditableOrder value)
+{
+    OrderRepository.Update(value);
+    var data = OrderRepository.GetAllRecords();
+    return Json(value, JsonRequestBehavior.AllowGet);
+}
 {% endhighlight %}
 
 The updated record details are bound to the 'value' parameter. Please refer the below image.
@@ -1589,11 +1593,13 @@ Using `RemoveURL` property, you can specify the controller action mapping URL to
 The following code example describes the above behavior.
 
 {% highlight c# %}
-       
-       public ActionResult Remove(int key)
-        {
-	         //Delete record in database
-        }
+
+public ActionResult Remove(int key)
+{
+  OrderRepository.Delete(key);
+  var data = OrderRepository.GetAllRecords();
+  return Json(key, JsonRequestBehavior.AllowGet);
+}
 {% endhighlight %}
 
 The deleted record primary key value is bound to the 'key' parameter. Please refer the below image.
@@ -1640,9 +1646,15 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 
 {% highlight c# %}
-      public ActionResult CrudUpdate(EditableOrder value, string action)
+      public ActionResult CrudUpdate(EditableOrder value, string action, int key)
         {
-	           //Delete record in database
+	       if (action == "update")
+                OrderRepository.Update(value);
+            else if (action == "insert")
+                OrderRepository.Add(value);
+            else if (action == "remove")
+                OrderRepository.Delete(key);
+            return Json(value, JsonRequestBehavior.AllowGet);
         }
 {% endhighlight %}
 
@@ -1696,7 +1708,14 @@ The following code example describes the above behavior.
 
 	public ActionResult BatchUpdate(string action, List<EditableOrder> added, List<EditableOrder> changed, List<EditableOrder> deleted, int? key)
 		{
-				//Save the batch changes in database
+			 if (changed != null)
+                OrderRepository.Update(changed);
+            if (deleted != null)
+                OrderRepository.Delete(deleted);
+            if (added != null)
+                OrderRepository.Add(added);
+            var data = OrderRepository.GetComplexRecords();
+            return Json(new { changed = changed, added = added, deleted = deleted }, JsonRequestBehavior.AllowGet);
 	    }
 
 {% endhighlight %}
@@ -1781,7 +1800,9 @@ The following code example describes the above behavior.
     // POST odata/Orders
         public async Task<Order> Post(Order order) 
         {
-             // Perform ADD operation
+            db.Orders.Add(order);
+            await db.SaveChangesAsync();
+            return order;
             
         }
 
@@ -1804,8 +1825,10 @@ The following code example describes the above behavior.
         // PUT odata/Orders(5)
         public async Task<Order> Put(Order order) 
         {
-            
-           //Edit operation in database
+            var entity =  await db.Orders.FindAsync(order.OrderID);
+            db.Entry(entity).CurrentValues.SetValues(order);
+            await db.SaveChangesAsync();
+            return order;
         }
 
 {% endhighlight %}
@@ -1827,8 +1850,15 @@ The following code example describes the above behavior.
        // DELETE odata/Orders(5)
         public async Task<IHttpActionResult> Delete([FromODataUri] int key)
         {
-            
-         // Delete operation in database            
+            var data = await db.Orders.FindAsync(key);
+            if (data == null)
+            {
+                return NotFound();
+            }
+
+            db.Orders.Remove(data);
+            await db.SaveChangesAsync();
+            return StatusCode(HttpStatusCode.NoContent);          
         }
 
 {% endhighlight %}
