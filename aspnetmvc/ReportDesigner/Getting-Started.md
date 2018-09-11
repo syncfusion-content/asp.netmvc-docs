@@ -13,7 +13,7 @@ This section explains briefly about how to create a ReportDesigner in your web 
 
 ## Project Creation
 
-The following screenshots displays the Project Creation Wizard in Visual Studio 2012
+The following screenshots displays the Project Creation Wizard in Visual Studio 2013
 
 Create a new ASP.NET MVC4 Web Application project by selecting the **WEB** category from the listed project template in Microsoft Visual Studio IDE.
 
@@ -31,7 +31,7 @@ The following screenshot displays how to select the project template with razor 
 
 #### Add References
 
-1. In the Solution Explorer, right-click the References folder and then click `Add Reference`.
+1. In the Solution Explorer, right-click the `References` folder and then click `Add Reference`.
 
    ![](Getting-Started_images/Getting-Started_img2.png)
 	
@@ -66,7 +66,7 @@ The following screenshot displays how to select the project template with razor 
 
 Add the script files and CSS files in the &lt;head&gt; tag of the _Layout.cshtml page.
 
-> Use the following code example while adding scripts and styles.
+Use the following code example while adding scripts and styles.
 
 {% highlight CSHTML %}
 
@@ -88,7 +88,7 @@ Add the script files and CSS files in the &lt;head&gt; tag of the _Layout.csh
 
 #### Add Control in View page
 
-Add the following code example in the Index.cshtml page that is already created. Set the desired ServiceUrl to ReportDesigner.
+Add the following code example in the Index.cshtml page that is already created. Set the desired `ServiceUrl` to ReportDesigner.
 
 {% highlight CSHTML %}
 
@@ -103,8 +103,6 @@ Add the following code example in the Index.cshtml page that is already create
 </div>
 
 {% endhighlight %}
-
-> Add your report files to your application’s App_Data folder. You can obtain sample rdl/rdlc files from Syncfusion installed location(%userprofile%\AppData\Local\Syncfusion\EssentialStudio\{{ site.releaseversion }}\Common\Data\ejReportTemplate). {{ site.releaseversion }} is the Essential Studio Release Version.
 
 ### Add WebAPI controller for ReportDesigner
 
@@ -331,39 +329,6 @@ On running the application, Report Designer will be rendered like below.
 
 ![](Getting-Started_images/Getting-Started_img7.png)
 
-## Integrate the component with Report Server
-
-Report Designer can be integrated with the Report Server by using below code snippet. After integrating you can open, browse and edit the reports in the Report Server using Report designer.
-
-Set the Report Server `serviceUrl` and `serviceAuthorizationToken` in the ReportDesigner properties.
-
-{% highlight html %}
-<div id="container" style="position: absolute; height: 100%; width: 100%;"></div>
-<script type="text/javascript">
-   $(function () {
-            var dataValue = "";
-            var apiRequest = new Object();
-            apiRequest.password = "demo";
-            apiRequest.userid = "guest";
-            $.ajax({
-                type: "POST",
-                url: "http://reportserver.syncfusion.com/api/get-user-key",
-                data: apiRequest,
-                success: function (data) {
-                    dataValue = data.Token;
-                    var token = JSON.parse(dataValue);
-                    $("#container").ejReportDesigner(
-                    {
-                       serviceUrl: 'http://reportserver.syncfusion.com/ReportService/api/Designer',
-                       serviceAuthorizationToken: token['token_type'] + ' ' + token['access_token']
-                    });
-                }
-            });
-   });
-</script>
-
-{% endhighlight %}
-
 ## Integrate the component with External Server
 
 Report Designer can be integrated with the External Server or Server file browsing by using below code snippet. After integrating you can open, browse and edit the reports in External Server or Application Data using Report designer.
@@ -472,3 +437,8 @@ namespace EJServices.Controllers
 }
 
 {% endhighlight %}
+
+>NOTE: 
+You can refer the External Server sample and service from the installed location :
+API Service: %public%\Documents\Syncfusion\ASP.NET MVC\{{ site.releaseversion }}\Samples\web\WebAPI\ReportDesignerController.cs .
+External Server: %public%\Documents\Syncfusion\ASP.NET MVC\{{ site.releaseversion }}\Samples\web\WebAPI\ExternalReportServer.cs
