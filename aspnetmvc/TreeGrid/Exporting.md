@@ -82,7 +82,7 @@ public class TreeGridController  : Controller
 
 {% endtabs %} 
 
-The below screen shot shows TreeGrid with excel and Pdf exporting enabled.
+The below screen shot shows TreeGrid with excel and PDF exporting enabled.
 
 ![](Export_images/Export_img1.png)
 
