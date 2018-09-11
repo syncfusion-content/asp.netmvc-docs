@@ -1850,13 +1850,13 @@ The following code example describes the above behavior.
        // DELETE odata/Orders(5)
         public async Task<IHttpActionResult> Delete([FromODataUri] int key)
         {
-             var od = await db.Orders.FindAsync(key);
-            if (od == null)
+            var data = await db.Orders.FindAsync(key);
+            if (data == null)
             {
                 return NotFound();
             }
 
-            db.Orders.Remove(od);
+            db.Orders.Remove(data);
             await db.SaveChangesAsync();
             return StatusCode(HttpStatusCode.NoContent);          
         }
