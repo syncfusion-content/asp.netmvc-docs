@@ -46,7 +46,9 @@ The following screenshot displays how to select the project template with razor 
    * System.Net.Http
    * System.Net.Http.WebRequest
    * System.Net.Http.Formatting
-   * Syncfusion.Compression.Base   
+   * Syncfusion.Compression.Base 
+   * Syncfusion.EJ
+   * Syncfusion.EJ.MVC  
    * Syncfusion.EJ.ReportViewer
    * Syncfusion.EJ.ReportDesigner
    * Syncfusion.Pdf.Base
@@ -133,7 +135,7 @@ using Syncfusion.EJ.ReportDesigner;
 using System.IO;
 using Reporting.ExternalServer;
 
-namespace ReportDesignerDemo
+namespace ReportDesignerSample
 {
     public class ReportDesignerController : ApiController, Syncfusion.EJ.ReportDesigner.IReportDesignerController
     {
@@ -323,122 +325,14 @@ namespace ReportDesignerDemo
 
 {% endhighlight %}
 
-### Run the Application
-
-On running the application, Report Designer will be rendered like below.
-
-![](Getting-Started_images/Getting-Started_img7.png)
-
-## Integrate the component with External Server
-
-Report Designer can be integrated with the External Server or Server file browsing by using below code snippet. After integrating you can open, browse and edit the reports in External Server or Application Data using Report designer.
-
-{% highlight CSHTML %}
-
-@using Syncfusion.JavaScript
-@using Syncfusion.MVC.EJ
-
-@{
-    ViewBag.Title = "Index";
-}
-<h2>Index</h2>
-<div>
-    @{Html.EJ().ReportDesigner("designer").ServiceUrl("/api/ReportDesigner").Render();}
-</div>
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-using Syncfusion.EJ.ReportViewer;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using Syncfusion.Reports.EJ;
-using System.Collections;
-using System.Web;
-using Syncfusion.EJ.ReportDesigner;
-using System.IO;
-using Reporting.ExternalServer;
-
-namespace EJServices.Controllers
-{
-    public class ReportDesignerController : ApiController, Syncfusion.EJ.ReportDesigner.IReportDesignerController
-    {
-        public ReportDesignerController()
-        {
-            ExternalServer externalServer = new ExternalServer();
-            externalServer.ReportServerUrl = "Your Path";
-            ReportDesignerHelper.ReportingServer = externalServer;
-        }
-
-        public FileModel GetFile(string filename, bool isOverride)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetFilePath(string key)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<FileModel> GetFiles(FileType fileType)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpGet]
-        public object GetImage(string key, string image)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost]
-        public object PostDesignerAction(Dictionary<string, object> jsonResult)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool UploadFile(HttpPostedFile httpPostedFile)
-        {
-            throw new NotImplementedException();
-        }
-
-        [HttpPost]
-        public void UploadReportAction()
-        {
-            throw new NotImplementedException();
-        }
-
-        public object GetResource(string key, string resourcetype, bool isPrint)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnInitReportOptions(ReportViewerOptions reportOption)
-        {
-            reportOption.ReportModel.ReportingServer = this.Server;
-            reportOption.ReportModel.ReportServerUrl = this.ServerURL;
-            reportOption.ReportModel.ReportServerCredential = new NetworkCredential("Sample", "Password");
-        }
-
-        public void OnReportLoaded(ReportViewerOptions reportOption)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object PostReportAction(Dictionary<string, object> jsonResult)
-        {
-            throw new NotImplementedException();
-        }
-    }
-}
-
-{% endhighlight %}
 
 >NOTE: 
 You can refer the External Server sample and service from the installed location :
 API Service: %public%\Documents\Syncfusion\ASP.NET MVC\{{ site.releaseversion }}\Samples\web\WebAPI\ReportDesignerController.cs .
 External Server: %public%\Documents\Syncfusion\ASP.NET MVC\{{ site.releaseversion }}\Samples\web\WebAPI\ExternalReportServer.cs
+
+### Run the Application
+
+On running the application, Report Designer will be rendered like below.
+
+![](Getting-Started_images/Getting-Started_img7.png)
