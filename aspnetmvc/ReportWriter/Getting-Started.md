@@ -54,7 +54,7 @@ To create a new CSHTML view page in the application follow the below steps.
    * Syncfusion.Shared.Wpf
    * Syncfusion.XlsIO.Base  
    
-   N> You can get the above assemblies from the installed location %localappdata%\Syncfusion\ReportsSDK\Samples\Common\Assemblies   
+   N> Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Assemblies   
 
 ### Registering Assemblies within the Web.config file  
 
