@@ -26,7 +26,7 @@ The following screenshot displays how to select the project template with razor 
 
 ![](Getting-Started_images/Getting-Started_img3.png)
 
-Select an empty template and click Ok.
+Select an empty template and click OK.
 
 ### Add References
 
