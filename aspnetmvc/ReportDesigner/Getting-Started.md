@@ -112,6 +112,35 @@ Select an empty template and click OK.
 
     {% endhighlight %}
 
+### Modify WebApiConfig.cs
+
+1. Open the WebApiConfig.cs file from `App_Start` folder of your application.
+
+    ![](Getting-Started_images/Getting-Started_img22.png)
+
+2. Modify the **routeTemplate** to map to the API controller of **ReportDesignerSample** project as follows.
+
+    {% highlight C# %}
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Http;
+    namespace ReportDesignerSample
+    {
+        public static class WebApiConfig
+        {
+            public static void Register(HttpConfiguration config)
+            {
+                config.Routes.MapHttpRoute(
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{action}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                );
+            }
+        }
+    }
+    {% endhighlight %}
+
 ### Add View page
 
 1. Create a new folder **ReportDesigner** in `Views` folder.
@@ -213,11 +242,11 @@ Use the above code example while adding scripts and styles.
 
 1. To render the Report Designer in unobtrusive mode, refer to the **ej.unobtrusive.js** script file in &lt;head&gt; of Index.cshtml page.
 
-{% highlight CSHTML %}
+    {% highlight CSHTML %}
 
-<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
+    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
 
-{% endhighlight %}
+    {% endhighlight %}
 
 2. Set **UnobtrusiveJavaScriptEnabled** to true in Web.config file of your application.
 
@@ -230,6 +259,8 @@ Use the above code example while adding scripts and styles.
 Set **UnobtrusiveJavaScriptEnabled** to false in Web.config file of your application.
 
 ![](Getting-Started_images/Getting-Started_img17.png)
+
+>  Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive) for more details.
 
 ### Registering namespaces within Web.config
 
@@ -255,8 +286,11 @@ Add the following code example in the &lt;body&gt; tag of the `Index.cshtml` p
 <div>
     @{Html.EJ().ReportDesigner("designer").ServiceUrl("/api/DesignerAPI").Render();}
 </div>
+@(Html.EJ().ScriptManager())
 
 {% endhighlight %}
+
+> The main reason for referring the **Script manager** in Index.cshtml is that, it can be referred as common by all the View files present within your application. If **unobtrusive** is set to true in the application, the script manager can be excluded, as the control is initialized using HTML5 attributes. Also for control rendering, you need to include **ej.unobtrusive.min.js** file along with ej.web.all.min.js in **Index.cshtml** page.
 
 ### Add WebAPI controller for ReportDesigner
 
@@ -406,35 +440,21 @@ If `Global Application Class` file already exists in your application skip the b
 
 3. Click Add.
 
-    ![](Getting-Started_images/Getting-Started_img5.png)
+    ![](Getting-Started_images/Getting-Started_img21.png)
  
-#### Route WebAPI
+#### Configuring Global.asax.cs
 
-Open the `Global Application Class` file in the application and modify the WebAPI routing in Application_Start event as follows.
+The WebApiConfig.cs and RouteConfig.cs must be configured in the Application_Start() method of Global.asax.cs
 
-{% highlight c# %}
+{% highlight C# %}
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
-using System.Web.Http;
-
-namespace ReportDesignerSample
+protected void Application_Start()
 {
-    public class Global : System.Web.HttpApplication
-    {
-        protected void Application_Start(object sender, EventArgs e)
-        {
-            System.Web.Http.GlobalConfiguration.Configuration.Routes.MapHttpRoute(
-            name: "DefaultApi",
-            routeTemplate: "api/{controller}/{action}/{id}",
-            defaults: new { id = RouteParameter.Optional });
-            AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", true);
-        }
-    }
+    AreaRegistration.RegisterAllAreas();
+    WebApiConfig.Register(GlobalConfiguration.Configuration);
+    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+    RouteConfig.RegisterRoutes(RouteTable.Routes);
+    BundleConfig.RegisterBundles(BundleTable.Bundles);
 }
 
 {% endhighlight %}
