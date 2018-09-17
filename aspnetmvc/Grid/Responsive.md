@@ -140,9 +140,9 @@ Searching in mobile layout
 	  {
 	 	col.Field("OrderID").HeaderText("Order ID").Width("90").IsPrimaryKey(true).ValidationRules(v => v.AddRule("required", true).AddRule("number", true)).TextAlign(TextAlign.Right).Add();
         col.Field("CustomerID").HeaderText("Customer ID").Width("100").ValidationRules(v => v.AddRule("required", true)).Add();
-        col.Field("EmployeeID").HeaderText("Employee ID").EditType(EditingType.Dropdown).TextAlign(TextAlign.Right).Width("90").Add();           
-        col.Field("ShipCity").HeaderText("Ship City").Width("120").EditType(EditingType.Dropdown).Add();
-	 	col.Field("Freight").HeaderText("Freight").Width("110").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Format("{0:C}").Add();
+        col.Field("EmployeeID").HeaderText("Employee ID").EditType(EditingType.DropdownEdit).TextAlign(TextAlign.Right).Width("90").Add();           
+        col.Field("ShipCity").HeaderText("Ship City").Width("120").EditType(EditingType.DropdownEdit).Add();
+	 	col.Field("Freight").HeaderText("Freight").Width("110").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Format("{0:C}").Add();
 	  })
     )
     

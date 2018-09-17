@@ -74,11 +74,11 @@ The AllowEditOnDblClick property can be set as true to enable editing the record
 
 	col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
 
-	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
+	col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
 
-	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.Numeric).Add();
+	col.Field("EmployeeID").HeaderText("Employee ID").TextAlign(TextAlign.Right).EditType(EditingType.NumericEdit).Add();
 
-	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+	col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.DropdownEdit).Add();
 
 })
 

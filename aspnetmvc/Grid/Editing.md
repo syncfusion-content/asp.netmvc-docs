@@ -114,8 +114,8 @@ DropDownList</td><td>
 &lt;DropDownEditOptions(new DropDownListProperties() {ShowCheckbox=True})/&gt;</td></tr>
 </table>
 
-N> 1. If `EditType` is not set, then by default it will display the input element ("string") while editing a column.
-N> 2. For `EditType` property you can assign either `string` value ("Numeric") or `enum` value (`Syncfusion.JavaScript.EditingType.Numeric`).
+N> 1. If `EditType` is not set, then by default it will display the input element ("stringEdit") while editing a column.
+N> 2. For `EditType` property you can assign either `string` value ("NumericEdit") or `enum` value (`Syncfusion.JavaScript.EditingType.NumericEdit`).
 
 The following code example describes the above behavior 
 
@@ -140,12 +140,12 @@ The following code example describes the above behavior
             .Columns(col =>
                {
 			       col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
-                   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+                   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.DropdownEdit).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).DateEditOptions(new DatePickerProperties() { ButtonText="Now"}).Format("{0:MM/dd/yyyy}").Add();            
-                   col.Field("Verified").HeaderText("Verified").EditType(EditingType.Boolean).Add();
+                   col.Field("Verified").HeaderText("Verified").EditType(EditingType.BooleanEdit).Add();
 
                 }))      
 {% endhighlight  %}
@@ -286,9 +286,9 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
-                   col.Field("ShipCountry").HeaderText("Ship Country").EditType(EditingType.Dropdown).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+                   col.Field("ShipCountry").HeaderText("Ship Country").EditType(EditingType.DropdownEdit).Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
                }))      
 
@@ -343,8 +343,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
                 }))      
@@ -412,8 +412,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-                   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+                   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.DropdownEdit).Add();
 				             
               }))  
  
@@ -517,8 +517,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
                }))      
@@ -584,8 +584,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.DropdownEdit).Add();
                      
               }))  
 {% endhighlight  %}
@@ -687,8 +687,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                 {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
                 }))      
@@ -751,8 +751,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                             
              }))      
@@ -819,8 +819,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.Dropdown).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("ShipCity").HeaderText("Ship City").EditType(EditingType.DropdownEdit).Add();
               }))  
 {% endhighlight  %}
 {% highlight c# %}
@@ -925,8 +925,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
                }))      
@@ -985,8 +985,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
               }))      
@@ -1045,8 +1045,8 @@ The following code example describes the above behavior.
             .Columns(col =>
                {
                    col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).TextAlign(TextAlign.Right).Add();
-				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.String).Add();
-				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
+				   col.Field("CustomerID").HeaderText("Customer ID").EditType(EditingType.StringEdit).Add();
+				   col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).NumericEditOptions(new EditorProperties() { DecimalPlaces = 2 }).Add();
                    col.Field("ShipCountry").HeaderText("Ship Country").Add();
                    col.Field("OrderDate").HeaderText("Order Date").EditType(EditingType.Datepicker).Format("{0:MM/dd/yyyy}").Add();            
              }))      
@@ -1190,7 +1190,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).ValidationRules(v => v.AddRule("required",true).AddRule("number", true)).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").ValidationRules(v => v.AddRule("required", true).AddRule("minlength", 3)).Add();
 			    col.Field("ShipCity").HeaderText("Ship City").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).ValidationRules(v => v.AddRule("range", "[0,1000]")).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).ValidationRules(v => v.AddRule("range", "[0,1000]")).Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
             }))      
 {% endhighlight  %}
@@ -1251,7 +1251,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").ValidationRules(v => v.AddRule("customRegex", 5)).Add();
 			    col.Field("ShipCity").HeaderText("Ship City").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).ValidationRules(rule => rule.AddRule("customCompare", new List<object>() { 0, 1000 })).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).ValidationRules(rule => rule.AddRule("customCompare", new List<object>() { 0, 1000 })).Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
               }))  
             
@@ -1339,7 +1339,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Add();
 				col.Field("EmployeeID").HeaderText("Employee ID").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                 col.Field("ShipCity").HeaderText("Ship City").Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
              }))      
@@ -1639,7 +1639,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Add();
 				col.Field("EmployeeID").HeaderText("Employee ID").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                 col.Field("ShipCity").HeaderText("Ship City").Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
             }))      
@@ -1698,7 +1698,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Add();
 				col.Field("EmployeeID").HeaderText("Employee ID").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                 col.Field("ShipCity").HeaderText("Ship City").Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
              }))      
@@ -1904,7 +1904,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Add();
 			    col.Field("ShipCity").HeaderText("Ship City").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
              }))  
 {% endhighlight %}
@@ -1964,7 +1964,7 @@ The following code example describes the above behavior.
                 col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                 col.Field("CustomerID").HeaderText("Customer ID").Add();
 			    col.Field("ShipCity").HeaderText("Ship City").Add();
-                col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).Add();
+                col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).Add();
                 col.Field("ShipCountry").HeaderText("Ship Country").Add();
               }))  
 {% endhighlight %}
@@ -2025,7 +2025,7 @@ The following code example describes the above behavior.
                  col.Field("OrderID").HeaderText("Order ID").IsPrimaryKey(true).Add();
                  col.Field("CustomerID").HeaderText("Customer ID").Add();
 			     col.Field("ShipCity").HeaderText("Ship City").DefaultValue("Bern").Add();
-                 col.Field("Freight").HeaderText("Freight").EditType(EditingType.Numeric).DefaultValue(45).Add();
+                 col.Field("Freight").HeaderText("Freight").EditType(EditingType.NumericEdit).DefaultValue(45).Add();
                  col.Field("ShipCountry").HeaderText("Ship Country").DefaultValue("Brazil").Add();
                }))  
 {% endhighlight %}
