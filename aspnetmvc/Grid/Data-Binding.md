@@ -19,7 +19,7 @@ Grid `DataSource` property allows to bind datasource as the instance of one of t
 
 We can also bind the above type of datasource by using lambda Expressions of Grid `DataSource` Property.
 
-N> To update the dataSource after Grid rendered, use `dataSource` method of Grid. Refer to this [link](https://help.syncfusion.com/aspnetmvc/grid/how-to#set-dynamic-datasource-to-grid) for more information.
+N> 1. To update the dataSource after Grid rendered, use `dataSource` method of Grid. Refer to this [link](https://help.syncfusion.com/aspnetmvc/grid/how-to#set-dynamic-datasource-to-grid) for more information.
 
 N> 2. DateTime values, retrieved from server-end or database, will be converted based on the local time zone. To avoid the local time zone conversion, refer this knowledge base [link](https://www.syncfusion.com/kb/8613/how-to-convert-dates-to-utc-format).
   
