@@ -901,7 +901,7 @@ The following code example describes the above behavior.
                 {
                     col.Field("OrderID").IsPrimaryKey(true).Add();
                     col.Field("EmployeeID").Add();
-                    col.Field("Freight").EditType(EditingType.Numeric).Add();
+                    col.Field("Freight").EditType(EditingType.NumericEdit).Add();
                     col.Field("ShipCountry").Add();
                     col.HeaderText("Manage Records").Commands(command =>
                     {
