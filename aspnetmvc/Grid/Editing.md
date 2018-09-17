@@ -114,8 +114,8 @@ DropDownList</td><td>
 &lt;DropDownEditOptions(new DropDownListProperties() {ShowCheckbox=True})/&gt;</td></tr>
 </table>
 
-N> 1. If `EditType` is not set, then by default it will display the input element ("string") while editing a column.
-N> 2. For `EditType` property you can assign either `string` value ("Numeric") or `enum` value (`Syncfusion.JavaScript.EditingType.NumericEdit`).
+N> 1. If `EditType` is not set, then by default it will display the input element ("stringEdit") while editing a column.
+N> 2. For `EditType` property you can assign either `string` value ("NumericEdit") or `enum` value (`Syncfusion.JavaScript.EditingType.NumericEdit`).
 
 The following code example describes the above behavior 
 
