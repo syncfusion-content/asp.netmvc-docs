@@ -543,6 +543,7 @@ namespace MvcApplication4.Controllers
      public ActionResult DataSource(DataManager dataManager)
        {
             IEnumerable DataSource = OrderRepository.GetAllRecords();
+            DataResult result = new DataResult();
 		    DataOperations dataOperations = new DataOperations();
             List<string> aggregateFields = new List<string>();
             if (dataManager.Aggregates != null)
