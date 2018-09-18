@@ -543,17 +543,18 @@ namespace MvcApplication4.Controllers
      public ActionResult DataSource(DataManager dataManager)
        {
             IEnumerable DataSource = OrderRepository.GetAllRecords();
+            DataResult result = new DataResult();
 		    DataOperations dataOperations = new DataOperations();
             List<string> aggregateFields = new List<string>();
             if (dataManager.Aggregates != null)
              {
                for (var i = 0; i < dataManager.Aggregates.Count; i++)
                string.Add(dataManager.Aggregates[i].Field);
-               result.aggregate = datasource.PerformSelect(DataSource, aggregateFields);
+               result.aggregate = dataOperations.PerformSelect(DataSource, aggregateFields);
              }
 
-       DataSource = datasource.PerformSkip(DataSource, dataManager.Skip);
-       result.result = datasource.PerformTake(DataSource, dataManager.Take);
+       DataSource = dataOperations.PerformSkip(DataSource, dataManager.Skip);
+       result.result = dataOperations.PerformTake(DataSource, dataManager.Take);
        result.count = DataSource.AsQueryable().Count();
        return Json(result, JsonRequestBehavior.AllowGet);
 
