@@ -385,7 +385,7 @@ The following code example describes the previous behavior.
 	.ShowSummary()
 	.SummaryRow(row =>
 	{
-		row.ShowTotalSummary(false).SummaryColumns(col => 
+		row.Title("Average").SummaryColumns(col => 
 		{ 
 			col.SummaryType(SummaryType.Average)
 			.Format("{0:C2}")
