@@ -900,6 +900,144 @@ public class GridController : Controller
 
 {% endtabs %}
 
+## Exporting with Custom Summary
+
+In Exporting, custom summary needs be handled using `QueryCustomSummaryInfo` server-side event.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+
+    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+        .Datasource((IEnumerable<object>)ViewBag.datasource)
+                .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
+                {
+                    items.AddTool(ToolBarItems.ExcelExport);
+                    items.AddTool(ToolBarItems.WordExport);
+                    items.AddTool(ToolBarItems.PdfExport);
+                }))
+        .AllowPaging()
+        .ShowSummary()
+         .SummaryRow(row =>
+         {
+
+             row.Title("Currency").SummaryColumns(col => {
+                 col.SummaryType(SummaryType.Custom).CustomSummaryValue("currency").DisplayColumn("Freight").Format("{0:C2}").Add();
+             }).Add();
+
+         })
+        .Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").TextAlign(TextAlign.Right).Width(75).Add();
+            col.Field("OrderDate").HeaderText("Order Date").Width(80).TextAlign(TextAlign.Right).Format("{0:MM/dd/yyyy}").Add();
+            col.Field("Freight").HeaderText("Freight").TextAlign(TextAlign.Right).Width(75).Format("{0:C}").Add();
+            col.Field("ShipName").HeaderText("Ship Name").Width(110).Add();
+            col.Field("ShipCity").HeaderText("Ship City").Width(90).Add();
+            col.Field("ShipCountry").HeaderText("Ship Country").Width(90).Add();
+        }))
+{% endhighlight  %}
+
+{% highlight c# %}
+
+   namespace Grid.Controllers
+   {
+     public class GridController : Controller
+     {
+        public ActionResult GridFeatures()
+        {
+            var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
+                public void ExportToExcel(string GridModel)
+        {
+            ExcelExport exp = new ExcelExport();
+            GridExcelExport GridExp = new GridExcelExport();
+            GridExp.QueryCustomSummaryInfo = SummaryCellInfo;
+            GridExp.Theme = "flat-saffron";
+            GridExp.FileName = "Export.xlsx";
+            var DataSource = new NorthwindDataContext().OrdersViews.Take(100).ToList();
+            GridProperties obj = ConvertGridObject(GridModel);
+            exp.Export(obj, DataSource, GridExp);
+        }
+        public void ExportToWord(string GridModel)
+        {
+            WordExport exp = new WordExport();
+            GridWordExport GridExp = new GridWordExport();
+            GridExp.QueryCustomSummaryInfo = SummaryCellInfo;
+            GridExp.Theme = "flat-saffron";
+            GridExp.FileName = "Export.docx";
+            var DataSource = new NorthwindDataContext().OrdersViews.Take(100).ToList();
+            GridProperties obj = ConvertGridObject(GridModel);
+            exp.Export(obj, DataSource, GridExp);
+        }
+        public void ExportToPdf(string GridModel)
+        {
+            PdfExport exp = new PdfExport();
+            GridPdfExport GridExp = new GridPdfExport();
+            GridExp.QueryCustomSummaryInfo = SummaryCellInfo;
+            GridExp.Theme = "flat-saffron";
+            GridExp.FileName = "Export.pdf";
+            var DataSource = new NorthwindDataContext().OrdersViews.Take(100).ToList();
+            GridProperties obj = ConvertGridObject(GridModel);
+            exp.Export(obj, DataSource, GridExp);
+        }
+        private object SummaryCellInfo(IQueryable arg1, SummaryColumn arg2)
+        {
+            var rs = 0; double dol = 0;
+            if (arg2.DisplayColumn == "Freight")
+            {
+                rs = 100000;
+                dol = 0.017;
+            }
+
+            return (rs * dol);
+        }
+        private GridProperties ConvertGridObject(string gridProperty)
+        {
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            IEnumerable div = (IEnumerable)serializer.Deserialize(gridProperty, typeof(IEnumerable));
+            GridProperties gridProp = new GridProperties();
+            foreach (KeyValuePair<string, object> ds in div)
+            {
+                var property = gridProp.GetType().GetProperty(ds.Key, BindingFlags.Instance | BindingFlags.Public | BindingFlags.IgnoreCase);
+                if (property != null)
+                {
+                    Type type = property.PropertyType;
+                    string serialize = serializer.Serialize(ds.Value);
+                    object value = serializer.Deserialize(serialize, type);
+                    property.SetValue(gridProp, value, null);
+                }
+            }
+            return gridProp;
+        }
+     }
+   }
+   
+{% endhighlight  %}
+
+{% highlight js %}
+
+<script type="text/javascript">
+   function GetSortedData(args) {
+            var obj = $("#FlatGrid").ejGrid("instance");   
+            var Sort = obj.model.sortSettings.sortedColumns;  
+            var query = ej.Query();               
+            if(obj.model.sortSettings.sortedColumns.length){
+                for(var i=Sort.length-1;i>=0;i--){        
+                  query.sortBy(Sort[i].field, Sort[i].direction); 
+                }
+            var SortedDatasource = ej.DataManager(obj.model.dataSource).executeLocal(query); 
+    }
+}
+</script>
+   
+{% endhighlight  %}
+
+{% endtabs %}
+
 ##  Multiple exporting
 
 The `AllowMultipleExporting` property allows you to export multiple grids into the same file. Once you enable the `AllowMultipleExporting`, grid properties of all the grid which are available in current page are passed as string array parameter to controller action method.
