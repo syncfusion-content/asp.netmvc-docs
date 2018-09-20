@@ -139,9 +139,9 @@ Custom summary can be used to create summary values based on your required custo
     {
         su.Title("Custom Summary").
             SummaryColumns(
-            summarycol =>
+            summary =>
             {
-                summarycol.SummaryType(TreeGridSummaryType.Custom)
+                summary.SummaryType(TreeGridSummaryType.Custom)
                   .CustomSummaryValue("sum")
                   .DisplayColumn("Progress").Add();
             }).Add();
