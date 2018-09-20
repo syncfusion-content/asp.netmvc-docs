@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains briefly about how to create a **ReportDesigner** in your ASP.NET MVC application.
 
-## Project Creation
+## Create your first ReportDesigner application in ASP.NET MVC
 
 The following screenshots displays the Project Creation Wizard in Visual Studio 2013
 
@@ -28,13 +28,13 @@ The following screenshot displays how to select the project template with razor 
 
 Select an empty template and click OK.
 
-### Add References
+## Add Assembly References
 
 1. In the Solution Explorer, right-click the `References` folder and then click `Add Reference`.
 
     ![](Getting-Started_images/Getting-Started_img2.png) 
 
-2. Add the following references to the project that are necessary for using the report designer control and  set the Copy Local property to **True**.
+2. Add the following Syncfusion assemblies to the project that are necessary for using the report designer control.
 
    * Syncfusion.Chart.Wpf
    * Syncfusion.Compression.Base
@@ -54,7 +54,7 @@ Select an empty template and click OK.
 
     > Refer the other assemblies from the installed location, [Installed Location]:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Assemblies
 
-3.  Add reference to the following assemblies from [NuGet package](https://help.syncfusion.com/extension/syncfusion-nuget-packages/web-nuget-packages-details "Web NuGet Package Details").
+3.  Add the following WebAPI assemblies from [NuGet package](https://www.nuget.org/packages/Microsoft.AspNet.WebApi/ "Web NuGet Package Details").
 
     * System.Web.Http
     * System.Web.Http.WebHost
@@ -63,7 +63,7 @@ Select an empty template and click OK.
 
     > The System.Web.Routing and System.Net.Http assemblies are also required, which are referred by default when creating the project.
 
-### Add Controller 
+## Add Controller 
 
 1. Right-Click on the **Controllers** folder in the project and select `Add` then select `Controller`.
 
@@ -79,67 +79,38 @@ Select an empty template and click OK.
 
 ### Modify RouteConfig.cs
 
-1. Open the RouteConfig.cs file from `App_Start` folder of your application.
+1.Open the RouteConfig.cs file from `App_Start` folder of your application.
 
-    ![](Getting-Started_images/Getting-Started_img15.png)
+![](Getting-Started_images/Getting-Started_img15.png)
 
-2. Modify the controller name to map to the **ReportDesigner** controller as follows.
+2.Modify the controller name to map to the **ReportDesigner** controller as follows.
 
-    {% highlight C# %}
+{% highlight C# %}
 
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
-    using System.Web.Mvc;
-    using System.Web.Routing;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
 
-    namespace ReportDesignerSample
+namespace ReportDesignerSample
+{
+    public class RouteConfig
     {
-        public class RouteConfig
+        public static void RegisterRoutes(RouteCollection routes)
         {
-            public static void RegisterRoutes(RouteCollection routes)
-            {
-                routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-                routes.MapRoute(
-                    name: "Default",
-                    url: "{controller}/{action}/{id}",
-                    defaults: new { controller = "ReportDesigner", action = "Index", id = UrlParameter.Optional }
-                );
-            }
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "ReportDesigner", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
+}
 
-    {% endhighlight %}
-
-### Modify WebApiConfig.cs
-
-1. Open the WebApiConfig.cs file from `App_Start` folder of your application.
-
-    ![](Getting-Started_images/Getting-Started_img22.png)
-
-2. Modify the **routeTemplate** to map to the API controller of **ReportDesignerSample** project as follows.
-
-    {% highlight C# %}
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web.Http;
-    namespace ReportDesignerSample
-    {
-        public static class WebApiConfig
-        {
-            public static void Register(HttpConfiguration config)
-            {
-                config.Routes.MapHttpRoute(
-                    name: "DefaultApi",
-                    routeTemplate: "api/{controller}/{action}/{id}",
-                    defaults: new { id = RouteParameter.Optional }
-                );
-            }
-        }
-    }
-    {% endhighlight %}
+{% endhighlight %}
 
 ### Add View page
 
@@ -160,31 +131,29 @@ Select an empty template and click OK.
     ![](Getting-Started_images/Getting-Started_img14.png)
 
 
-### Add Scripts and Styles
+## Add Scripts and Styles
 
 For complete dependencies list of report designer control [Click here](/aspnetmvc/ReportDesigner/Dependencies).
 
-* Add the below code snippet in the Index.cshtml page.
+Add the below code snippet in the Index.cshtml page.
 
-    {% highlight CSHTML %}
+{% highlight CSHTML %}
 
-    @using Syncfusion.JavaScript
-    @using Syncfusion.MVC.EJ
+@using Syncfusion.JavaScript
+@using Syncfusion.MVC.EJ
 
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <title>@ViewBag.Title</title>
-    </head>
-    <body>
-    </body>
-    </html>
-    {% endhighlight %} 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+</head>
+<body>
+</body>
+</html>
+{% endhighlight %} 
 
-* Add the script files and theme files in the &lt;head&gt; tag of the Index.cshtml page.
-
-**Themes**
+### Themes
 
 {% highlight CSHTML %}
 
@@ -193,9 +162,9 @@ For complete dependencies list of report designer control [Click here](/aspnetmv
 
 {% endhighlight %} 
 
-**Scripts**
+### Scripts
 
-**External dependencies**
+#### External dependencies
 
 {% highlight CSHTML %}
 
@@ -205,7 +174,7 @@ For complete dependencies list of report designer control [Click here](/aspnetmv
 
 {% endhighlight %} 
 
-**Internal dependencies**
+#### Internal dependencies
 
 Refer the below scripts to render report designer control.
 
@@ -216,7 +185,7 @@ Refer the below scripts to render report designer control.
  
 {% endhighlight %} 
 
-**Code Mirror**
+##### Code Mirror
 
 To edit the SQL queries with syntax highlighter need to refer the below code mirror scripts and themes.
 
@@ -232,29 +201,29 @@ To edit the SQL queries with syntax highlighter need to refer the below code mir
 
 {% endhighlight %} 
 
-Use the above code example while adding scripts and styles.
+Add the script files and theme file references in the &lt;head&gt; tag of the Index.cshtml page.
 
 > Also the scripts and styles can be referred from the installed location, [Installed Location]:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\JavaScript\assets
 
 ### Unobtrusive Mode
 
-**Enable unobtrusive mode**
+#### Enable unobtrusive mode
 
-1. To render the Report Designer in unobtrusive mode, refer to the **ej.unobtrusive.js** script file in &lt;head&gt; of Index.cshtml page.
+1.To render the Report Designer in unobtrusive mode, refer to the **ej.unobtrusive.js** script file in &lt;head&gt; of Index.cshtml page.
 
-    {% highlight CSHTML %}
+{% highlight CSHTML %}
 
-    <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
+<script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
 
-    {% endhighlight %}
+{% endhighlight %}
 
-2. Set **UnobtrusiveJavaScriptEnabled** to true in Web.config file of your application.
+2.Set **UnobtrusiveJavaScriptEnabled** to true in Web.config file of your application.
 
-    ![](Getting-Started_images/Getting-Started_img18.png)
+![](Getting-Started_images/Getting-Started_img18.png)
 
-    ![](Getting-Started_images/Getting-Started_img16.png)
+![](Getting-Started_images/Getting-Started_img16.png)
 
-**Disable unobtrusive mode**
+#### Disable unobtrusive mode
 
 Set **UnobtrusiveJavaScriptEnabled** to false in Web.config file of your application.
 
@@ -296,7 +265,7 @@ Add the following code example in the &lt;body&gt; tag of the `Index.cshtml` p
 
 The MVC ReportDesigner uses WebApi services to process the report file and process the request from control.
 
-**Add Controller**
+#### Add Controller
 
 1. Right-Click on the project and select `Add` then click `New Item`. 
 
@@ -424,40 +393,35 @@ namespace ReportDesignerSample
 
 {% endhighlight %}
 
-### WebAPI Routing
+### Modify WebApiConfig.cs
 
-If `Global Application Class` file already exists in your application skip the below **Add Global Application Class** section.
+1. Open the WebApiConfig.cs file from `App_Start` folder of your application.
 
-#### Add Global Application Class
+    ![](Getting-Started_images/Getting-Started_img22.png)
 
-1. Right-Click on the project and select `Add` then click `New Item`. 
+2. Modify the **routeTemplate** to map to the API controller of **ReportDesignerSample** project as follows.
 
-    ![](Getting-Started_images/Getting-Started_img4.png)
+    {% highlight C# %}
 
-2. Select `Global Application Class` from the listed templates and name it as `Global.asax`.
-
-    ![](Getting-Started_images/Getting-Started_img5.png)
-
-3. Click Add.
-
-    ![](Getting-Started_images/Getting-Started_img21.png)
- 
-#### Configuring Global.asax.cs
-
-The WebApiConfig.cs and RouteConfig.cs must be configured in the Application_Start() method of Global.asax.cs
-
-{% highlight C# %}
-
-protected void Application_Start()
-{
-    AreaRegistration.RegisterAllAreas();
-    WebApiConfig.Register(GlobalConfiguration.Configuration);
-    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-    RouteConfig.RegisterRoutes(RouteTable.Routes);
-    BundleConfig.RegisterBundles(BundleTable.Bundles);
-}
-
-{% endhighlight %}
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Http;
+    namespace ReportDesignerSample
+    {
+        public static class WebApiConfig
+        {
+            public static void Register(HttpConfiguration config)
+            {
+                config.Routes.MapHttpRoute(
+                    name: "DefaultApi",
+                    routeTemplate: "api/{controller}/{action}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                );
+            }
+        }
+    }
+    {% endhighlight %}
 
 ### Run the Application
 
