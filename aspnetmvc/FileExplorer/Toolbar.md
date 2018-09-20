@@ -447,9 +447,9 @@ If you want to upload more than 4 MB files in FileExplorer, you should specify t
 
 To know more details, please check the below reference link and sample.
 
-Reference Link: https://stackoverflow.com/questions/16287706/how-to-upload-large-files-using-mvc-4?answertab=active#tab-top
+[Reference Link](https://stackoverflow.com/questions/16287706/how-to-upload-large-files-using-mvc-4?answertab=active#tab-top)
 
-Sample: http://www.syncfusion.com/downloads/support/directtrac/210600/ze/UploadFileSizeProblem-1398338221.zip
+[Sample](http://www.syncfusion.com/downloads/support/directtrac/210600/ze/UploadFileSizeProblem-1398338221.zip)
 
 **AutoUpload**: when you enable this property, the upload action performed automatically after select the files. When you disable this property, it shows a confirmation dialog with the selected file details and perform the upload action on press the “upload” button.
 
