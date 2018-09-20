@@ -902,7 +902,7 @@ public class GridController : Controller
 
 ## Exporting with Custom Summary
 
-In Exporting, custom summary needs be handled using `QueryCustomSummaryInfo` server-side event.
+In Exporting, custom summary needs to be handled using `QueryCustomSummaryInfo` server-side event.
 
 The following code example describes the above behavior.
 
@@ -910,7 +910,7 @@ The following code example describes the above behavior.
 
 {% highlight razor %}
 
-    @(Html.EJ().Grid<OrdersView>("FlatGrid")
+    @(Html.EJ().Grid<object>("FlatGrid")
         .Datasource((IEnumerable<object>)ViewBag.datasource)
                 .ToolbarSettings(toolBar => toolBar.ShowToolbar().ToolbarItems(items =>
                 {
@@ -951,7 +951,7 @@ The following code example describes the above behavior.
             ViewBag.datasource = DataSource;
             return View();
         }
-                public void ExportToExcel(string GridModel)
+        public void ExportToExcel(string GridModel)
         {
             ExcelExport exp = new ExcelExport();
             GridExcelExport GridExp = new GridExcelExport();
@@ -1021,17 +1021,11 @@ The following code example describes the above behavior.
 {% highlight js %}
 
 <script type="text/javascript">
-   function GetSortedData(args) {
-            var obj = $("#FlatGrid").ejGrid("instance");   
-            var Sort = obj.model.sortSettings.sortedColumns;  
-            var query = ej.Query();               
-            if(obj.model.sortSettings.sortedColumns.length){
-                for(var i=Sort.length-1;i>=0;i--){        
-                  query.sortBy(Sort[i].field, Sort[i].direction); 
-                }
-            var SortedDatasource = ej.DataManager(obj.model.dataSource).executeLocal(query); 
+    function currency() {
+            var rs = 100000;
+            var dol = 0.017;
+            return (rs * dol);
     }
-}
 </script>
    
 {% endhighlight  %}
