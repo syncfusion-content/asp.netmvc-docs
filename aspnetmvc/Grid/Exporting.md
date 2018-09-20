@@ -986,14 +986,14 @@ The following code example describes the above behavior.
         }
         private object SummaryCellInfo(IQueryable arg1, SummaryColumn arg2)
         {
-            var rs = 0; double dol = 0;
+            var rs = 0; double dl = 0;
             if (arg2.DisplayColumn == "Freight")
             {
                 rs = 100000;
-                dol = 0.017;
+                dl = 0.017;
             }
 
-            return (rs * dol);
+            return (rs * dl);
         }
         private GridProperties ConvertGridObject(string gridProperty)
         {
