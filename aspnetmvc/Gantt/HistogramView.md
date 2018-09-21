@@ -43,8 +43,8 @@ The following code example explains how to bind the resource histogram view for 
     .ResourceNameMapping("ResourceName")
     .ResourceIdMapping("ResourceID")
     //..
-    .Resources(ViewBag.historesources)
-    .Datasource(ViewBag.histoData)
+    .Resources(ViewBag.histogramresources)
+    .Datasource(ViewBag.histogramData)
 )
 @(Html.EJ().ScriptManager())
 {% endhighlight %}
@@ -90,15 +90,15 @@ The following code snippet shows how to synchronize the resource histogram view 
     .ResourceNameMapping("ResourceName")
     .ResourceIdMapping("ResourceID")
     .ClientSideEvents(cs => {
-        cs.Load("histoLoad").SplitterResized("splitterResized").ActionComplete("actionComplete");
+        cs.Load("load").SplitterResized("splitterResized").ActionComplete("actionComplete");
     })
     //..
-    .Resources(ViewBag.historesources)
-    .Datasource(ViewBag.histoData)
+    .Resources(ViewBag.histogramresources)
+    .Datasource(ViewBag.histogramData)
 )
 @(Html.EJ().ScriptManager())
 <script type="text/javascript">
-    function histoLoad(args) {
+    function load(args) {
         this.isProjectViewData = true;
     }
     function splitterResized(args) {
