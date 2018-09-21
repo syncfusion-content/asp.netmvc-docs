@@ -126,3 +126,39 @@ function expandCollapse() {
 {% endhighlight %}
 
 [Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridsummaryrow) here to view the demo sample for summary row in TreeGrid.
+
+## Custom Summary
+
+Custom summary can be used to create summary values based on your required custom logic and calculations. To enable the custom summary, the `SummaryType` should be set to 'Custom' and the `CustomSummaryValue` property should be defined as function. After the custom calculation, the returned value will be displayed in the corresponding summary cell.
+
+{% highlight html %}
+
+@(Html.EJ().TreeGrid("TreeGridContainer")
+    .ShowSummaryRow(true)
+    .SummaryRows(su =>
+    {
+        su.Title("Custom Summary").
+            SummaryColumns(
+            summary =>
+            {
+                summary.SummaryType(TreeGridSummaryType.Custom)
+                  .CustomSummaryValue("sum")
+                  .DisplayColumn("Progress").Add();
+            }).Add();
+    })
+    )
+
+    {% endhighlight %}
+    {% highlight js %}
+    <script>
+        function sum(args, data) {
+            //ej.sum is aggregate to add data of total costs from datasource
+            return ej.sum(data, "TotalCosts");
+        }
+    </script>
+
+{% endhighlight %}
+
+The output of the tree grid with custom summary value is obtained as follows.
+
+![](SummaryRows_images/CustomSummary_img1.png)
