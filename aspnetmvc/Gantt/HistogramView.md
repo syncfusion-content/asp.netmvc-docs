@@ -101,7 +101,6 @@ The following code snippet shows how to synchronize the resource histogram view 
     function histoLoad(args) {
         this.isProjectViewData = true;
     }
-
     function splitterResized(args) {
         if (args.isOnResize == false) return;
         if (this._id == "GanttContainer") {
@@ -110,7 +109,6 @@ The following code snippet shows how to synchronize the resource histogram view 
             $("#GanttContainer").ejGantt("setSplitterPosition", args.currentSplitterPosition);
         }
     }
-
     function actionComplete(args) {
         if (args.requestType == "scroll" && args.scrollDirection == "horizontal") {
             var scrollLeft = args.scrollLeft;
@@ -162,7 +160,6 @@ The following code snippet shows how to synchronize the resource histogram view 
     .ResourceNameMapping("ResourceName")
     //..
     .ClientSideEvents(cs => {
-
         cs.ActionComplete("actionComplete");
         cs.SplitterResized("splitterResized");
     })
@@ -198,7 +195,6 @@ The following code snippet shows how to synchronize the resource histogram view 
     function load(args) {
         this.isProjectViewData = false;
     }
-
     function splitterResized(args) {
         if (args.isOnResize == false) return;
         if (this._id == "GanttContainer") {
@@ -207,7 +203,6 @@ The following code snippet shows how to synchronize the resource histogram view 
             $("#GanttContainer").ejGantt("setSplitterPosition", args.currentSplitterPosition);
         }
     }
-
     function actionComplete(args) {
         if (args.requestType == "scroll" && args.scrollDirection == "horizontal") {
             var scrollLeft = args.scrollLeft;
