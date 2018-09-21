@@ -117,7 +117,7 @@ The `Exporting` feature provides support to export Grid data into excel, word an
 {% endhighlight  %}
 {% endtabs %}
 
-# Hierarchy grid exporting
+## Hierarchy grid exporting
 
 The grid will be exported with its child grid. This can be achieved by enabling the `IncludeChildGrid` property of the respective exporting classes like `GridExcelExport`, `GridWordExport` and `GridPdfExport` and include the dataSource needed for ChildGrid in the GridProperties object after deserializing them. Remaining procedures will be same as the normal grid exporting.
 
