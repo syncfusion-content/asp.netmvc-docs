@@ -43,7 +43,7 @@ The following code example explains how to bind the resource histogram view for 
     .ResourceNameMapping("ResourceName")
     .ResourceIdMapping("ResourceID")
     //..
-    .Resources(ViewBag.histogramresources)
+    .Resources(ViewBag.resources)
     .Datasource(ViewBag.histogramData)
 )
 @(Html.EJ().ScriptManager())
@@ -93,7 +93,7 @@ The following code snippet shows how to synchronize the resource histogram view 
         cs.Load("load").SplitterResized("splitterResized").ActionComplete("actionComplete");
     })
     //..
-    .Resources(ViewBag.histogramresources)
+    .Resources(ViewBag.resources)
     .Datasource(ViewBag.histogramData)
 )
 @(Html.EJ().ScriptManager())
