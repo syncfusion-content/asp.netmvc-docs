@@ -24,7 +24,7 @@ Electricity Bill Calculator
 
 ASP.NET MVC Editors renders built-in features like keyboard navigation, min and max range and flexible API’s. 
 
-1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/currencytextbox/getting-started). 
+1. Create a MVC Project and add necessary Dll’s and Scripts. Refer [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started#). 
 2. Add necessary helper elements to render the Editor components.
 
    ~~~ html
