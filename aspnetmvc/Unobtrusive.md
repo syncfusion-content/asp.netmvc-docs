@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unobtrusive | ASP.NET MVC | Syncfusion
-description: Unobtrusive
+description: Explain the unobtrusive support is to achieve the clear separation of both the HTML content and behavior.
 platform: ejmvc
 control: Common 
 documentation: ug

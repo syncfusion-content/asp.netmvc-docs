@@ -1,6 +1,6 @@
 ---
 title: Overview| FileExplorer | ASP.NET MVC | Syncfusion
-description: FileExplorer introduction with key features.
+description: FileExplorer introduction with key features for component provides all the functionalities that is available in EJ FileExplorer.
 platform: ejmvc
 control: FileExplorer
 documentation: UG
