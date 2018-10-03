@@ -27,7 +27,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 1. Create an MVC Project and add necessary assembly, scripts, and styles to it.
 
-   Refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/slider/getting-started)
+   Refer [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started#)
 
 2. Add the following code example for Slider to the corresponding view page.
 
