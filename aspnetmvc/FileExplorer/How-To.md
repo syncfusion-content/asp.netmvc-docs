@@ -615,7 +615,7 @@ Here you need to implement new class by sub classing the existing “**BasicFile
     
     {% endhighlight %}
     
-Also we have option to configure the AJAX request in client side, please refer link: [http://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings](http://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings) 
+Also we have option to configure the AJAX request in client side, please refer link: [https://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings](https://help.syncfusion.com/js/fileexplorer/behavior-settings#customize-the-ajax-request-settings) 
 
 ## Managing files that is available in SQL database
 
@@ -645,7 +645,7 @@ You can manage the files that are available in database using our FileExplorer c
     
 After creating the object for “SQLFileExplorerOperations” class in controller part, you have to call the corresponding built-in file operation handling methods available in “SQLFileExplorerOperations” class based on the file operation type.
 
-We have prepared the following sample based on this, [FileExplorer Sample](http://www.syncfusion.com/downloads/support/directtrac/153129/ze/ServerOperations-1702691750#)
+We have prepared the following sample based on this, [FileExplorer Sample](https://www.syncfusion.com/downloads/support/directtrac/153129/ze/ServerOperations-1702691750#)
 
 
 ### File Access permission for the files that is available in SQL database
@@ -669,7 +669,7 @@ The FileExplorer provides method to assign permissions or access rights to speci
 
 For this, we have prepared the sample and you can get it from the below link
 
-[sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/ServerOperations-291041509.zip)
+[sample](https://www.syncfusion.com/downloads/support/directtrac/general/ze/ServerOperations-291041509.zip)
 
 N> Here we have fetched the file permissions from the SQL table for the files located in SQL database.
 
@@ -951,7 +951,7 @@ You can add custom column in grid view of “FileExplorer”. To achieve this re
     
     {% endhighlight %}
     
-In the view page, add the custom column in grid using “[GridSettings](http://help.syncfusion.com/js/api/ejfileexplorer#members:gridsettings)” API of “FileExplorer”.
+In the view page, add the custom column in grid using “[GridSettings](https://help.syncfusion.com/js/api/ejfileexplorer#members:gridsettings)” API of “FileExplorer”.
 
     {% highlight razor %}
 
@@ -988,7 +988,7 @@ In older versions (Before 13.3.0.7), you can easily create the FileExplorer wid
     {% endhighlight %}
     
 
-In above code block, “Path” denotes the filesystem path that are to be explored and “AjaxAction” specifies the URL of server side AJAX handling method that handles file operations of FileExplorer control. So “[Path](http://help.syncfusion.com/js/api/ejfileexplorer#members:path)” and “[AjaxAction](http://help.syncfusion.com/js/api/ejfileexplorer#members:ajaxaction)” are the mandatory configuration at here.
+In above code block, “Path” denotes the filesystem path that are to be explored and “AjaxAction” specifies the URL of server side AJAX handling method that handles file operations of FileExplorer control. So “[Path](https://help.syncfusion.com/js/api/ejfileexplorer#members:path)” and “[AjaxAction](https://help.syncfusion.com/js/api/ejfileexplorer#members:ajaxaction)” are the mandatory configuration at here.
 
 2. Add the following code example to the corresponding controller page
 
@@ -1211,7 +1211,7 @@ In this FTP application, we have provided “FTPFileOperationController” file,
 
 **Step 2:** Include **“FTPFileExplorerOperations”** file in that application. This file contains built-in file handling methods which helps to connect our FileExplorer with FTP service.
 
-[http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations901960089.zip](http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations901960089.zip#)
+[https://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations901960089.zip](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPFileExplorerOperations901960089.zip#)
 
 **Step 3:** Add **“FileExplorerController.cs”** file in the controller part of FTP project.
 
@@ -1266,4 +1266,4 @@ After that, you need to specify the FTP folder path and AJAX action handler name
 
 We have prepared a demo based on above steps, please refer this.
 
-[http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPMVC1739148525.zip](http://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPMVC1739148525.zip#)
+[https://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPMVC1739148525.zip](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FTPMVC1739148525.zip#)
