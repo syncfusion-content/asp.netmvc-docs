@@ -693,7 +693,7 @@ If your server is located in Intranet Zone, In IE Browser, confirmation dialog w
 
 To suppress this warning, you need to specify the "*Access data sources across domains*" setting to “allow”.
 
-![](HowTo_images/HowTo_img1.jpeg)
+![HowTo_img1](HowTo_images/HowTo_img1.jpeg)
 
 **Option 2: Using JSONP for cross-origin request**
 
@@ -1029,7 +1029,7 @@ In above code block, “Path” denotes the filesystem path that are to be explo
     
 Once you have completed the above steps, you will get an output like below.
 
-![](HowTo_images/HowTo_img2.png)
+![HowTo_img2](HowTo_images/HowTo_img2.png)
 
 FileExplorerOperations is a predefined class, which is used to perform File Explorer-based operations like read, createFolder, download, upload, rename, paste, getImage. It minimizes the work load on server-side.
 

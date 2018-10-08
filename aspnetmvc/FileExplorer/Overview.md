@@ -14,7 +14,7 @@ For a live demo of FileExplorer check the online sample from [here](https://mvc
 
 N> The FileExplorer control was officially added with the Essential Studio ASP.NET MVC package from the v13.1 release only.
 
-![](Overview_images/Overview_img1.jpeg)
+![Overview_img1](Overview_images/Overview_img1.jpeg)
 
 ## Key features
 
