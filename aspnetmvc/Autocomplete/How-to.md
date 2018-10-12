@@ -61,9 +61,9 @@ Binding the Autocomplete properties passed via **ViewData** from the controller 
 
 ## How to set autocomplete default value
 
-You can select a single value from the autocomplete widget at initial rendering state.  You can assign a value at an initially rendering of autocomplete using value property.
+You can select a single value from the autocomplete widget at initial rendering state.  You can assign a value at an initially rendering of autocomplete using the `Value` property. 
 
-Please find the below code for your reference.
+Refer to the following code.
 
 {% tabs %}
 
@@ -96,19 +96,19 @@ Please find the below code for your reference.
 
 {% endtabs %}  
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![howto](how-to_images/howto1.png)
 
-Autocomplete specified default value string are present in datasource text mapping value, the hidden input value holds corresponding ‘key’ field value for validation purpose.  For example, the Autocomplete default value ‘Arizona’ text is present on datasource ‘countryName’ field and also mapped for autocomplete ‘text’ property.  The ‘Arizona’ text holds the key value of ‘s3’.  So, hidden input value holds the ‘s3’ value.  
+If you are set autocomplete `Value` string that is present in the data source, the hidden input value holds the corresponding ‘key’ value.  This is used for validation purpose in the autocomplete.  For example,  The ‘Arizona’ text holds the key value of ‘s3’.  The autocomplete default value ‘Arizona’ text is present in the ‘countryName’ field of data source and also this field is mapped for the autocomplete ‘text’ property. So, hidden input value holds the ‘s3’ value.
 
-Please find the below screenshot for above code hidden input state.
+The following screenshot illustrates the previous hidden input state of code.
 
 ![howto](how-to_images/howto2.png)
 
-Autocomplete specified default value string are not present on datasource text mapping value, the hidden input value holds corresponding autocomplete string value for validation purpose.  For example, the Autocomplete default value ‘New York’ text is not presented on datasource ‘countryName’ field and also mapped this field for autocomplete ‘text’ property.  So, the hidden input value holds the ‘New York’ string.
+If you are set autocomplete `Value` string that is not present in the data source, the hidden input value holds the autocomplete value.  For example, the autocomplete default value ‘New York’ text is not present in the ‘countryName’ field of data source.  So, the hidden input value holds the ‘New York’ string. 
 
-Please find the below code for above behavior.
+Refer to the following code sample.
 
 {% highlight razor %}
 
@@ -116,15 +116,15 @@ Please find the below code for above behavior.
 
 {% endhighlight  %}
 
-Please find the below screenshot for above code hidden input state.
+The following screenshot illustrates the previous hidden input state of code.
 
 ![howto](how-to_images/howto3.png)
 
 ### remote data
 
-You can also set default value into autocomplete using urlAdaptor.
+You can also set default value into autocomplete using urlAdaptor. 
 
-Please find the below code for your reference.
+Refer to the following code sample.
 
 {% tabs %}
 
@@ -172,21 +172,21 @@ Please find the below code for your reference.
 
 {% endtabs %}
 
-Now, autocomplete triggered server side post and data manger hold where query with field name which shows mapped datasource fields text property.  
+The autocomplete `Value` property triggers a server-side post when remote data used on autocomplete.  The server side data manger holds `where` query which contains field `name` as autocomplete `Text` property.
 
-Please find the below screenshot for the datamanager where query.
+Find the following screenshot for the data manager where query.
 
 ![howto](how-to_images/howto6.png)
 
-Please find the below output for the above code.
+Find the following output for the previous code.
 
 ![howto](how-to_images/howto7.png)
 
 ## How to show text on autocomplete using key value
 
-You can set the value of Autocomplete textbox based on a given key value.  The `selectValueByKey` property is used to select autocomplete value based on specified key value.
+You can set the value of autocomplete text box based on a given key value.  The `SelectValueByKey` property is used to select autocomplete value based on the specified key value. 
 
-Please find the below code for your reference.
+Refer to the following code sample. 
 
 {% tabs %}
 
@@ -219,23 +219,23 @@ Please find the below code for your reference.
 
 {% endtabs %}
 
-For example, `selectValueByKey` property holds the ‘s2’ value that is mapped for autocomplete fields key value data.  The corresponding data fields text value ‘Alaska’ is shown on autocomplete control.
+For example, the `SelectValueByKey` property specified value as ‘s2’ in autocomplete.  The corresponding `Text` value `Alaska` is shown in the autocomplete text.
 
-The following output is displayed as a result of the above code example.
+The following output is displayed as a result of the previous code example.
 
 ![howto](how-to_images/howto4.png)
 
-If you are specifying ‘selectValueByKey’ property into autocomplete control, the hidden input value stores a specified key value.
+If you are specifying the `SelectValueByKey` property into autocomplete control, the hidden input value stores a specified key value. 
 
-Please find the below screenshot for your reference.
+Refer to the following screenshot. 
 
 ![howto](how-to_images/howto5.png)
 
 ### Remote data
 
-You can set the value of Autocomplete textbox based on a given key value using `selectValueByKey` property with ‘urlAdaptor’.  
+You can set the value of autocomplete text box based on a given key value using the `SelectValueByKey` property using ‘urlAdaptor’. 
 
-Please find the below code for your reference.
+Refer to the following code snippet.
 
 {% tabs %}
 
@@ -283,12 +283,12 @@ Please find the below code for your reference.
 
 {% endtabs %}
 
-Now, autocomplete triggered server side post and data manger holds where query with field name which shows mapped datasource fields `key` property.  
+The autocomplete `SelectValueByKey` property triggers a server-side post when remote data used on autocomplete.  The server side data manger holds `where` query which contains field name as autocomplete `Key` property.
 
-Please find the below screenshot for the datamanager where query.
+Find the following screenshot for the data manager where query.
 
 ![howto](how-to_images/howto8.png)
 
-Please find the below output for the above code.
+Find the output for the previously given code as follows.
 
 ![howto](how-to_images/howto9.png)
