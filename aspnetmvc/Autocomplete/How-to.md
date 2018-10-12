@@ -58,3 +58,237 @@ Binding the Autocomplete properties passed via **ViewData** from the controller 
 }
 
 {% endhighlight %}
+
+## How to set autocomplete default value
+
+You can select a single value from the autocomplete widget at initial rendering state.  You can assign a value at an initially rendering of autocomplete using value property.
+
+Please find the below code for your reference.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@Html.EJ().Autocomplete("selectState").Datasource((IEnumerable<states>)ViewBag.datasource).AutocompleteFields(field => field.Key("index").Text("countryName")).Value("Arizona") 
+  
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    public partial class AutocompleteController : Controller{
+         List<states> state = new List<states>();
+         public ActionResult AutocompleteFeatures()
+         {
+            state.Add(new states { index = "s1", countryName = "Alabama" });
+            state.Add(new states { index = "s2", countryName = "Alaska" });
+            state.Add(new states { index = "s3", countryName = "Arizona" });
+            ViewBag.datasource = state;
+            return View();
+         }
+    }
+    public class states
+    {
+        public string index { get; set; }
+        public string countryName { get; set; }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %}  
+
+The following output is displayed as a result of the above code example.
+
+![](how-to_images/howto1.png)
+
+Autocomplete specified default value string are present in datasource text mapping value, the hidden input value holds corresponding ‘key’ field value for validation purpose.  For example, the Autocomplete default value ‘Arizona’ text is present on datasource ‘contryName’ field and also mapped for autocomplete ‘text’ property.  The ‘Arizona’ text holds the key value of ‘s3’.  So, hidden input value holds the ‘s3’ value.  
+
+Please find the below screenshot for above code hidden input state.
+
+![](how-to_images/howto2.png)
+
+Autocomplete specified default value string are not present on datasource text mapping value, the hidden input value holds corresponding autocomplete string value for validation purpose.  For example, the Autocomplete default value ‘New York’ text is not presented on datasource ‘contryName’ field and also mapped this field for autocomplete ‘text’ property.  So, the hidden input value holds the ‘New York’ string.
+
+Please find the below code for above behavior.
+
+{% highlight razor %}
+
+@Html.EJ().Autocomplete("selectState").Datasource((IEnumerable<states>)ViewBag.datasource).AutocompleteFields(field => field.Key("index").Text("countryName")).Value("New York")
+
+{% endhighlight  %}
+
+Please find the below screenshot for above code hidden input state.
+
+![](how-to_images/howto3.png)
+
+### remote data
+
+You can also set default value into autocomplete using urlAdaptor.
+
+Please find the below code for your reference.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@Html.EJ().Autocomplete("selectCar").Datasource(dataSource => dataSource.URL(Url.Action("GetOutletsForAutocomplete", "Autocomplete")).Adaptor(AdaptorType.UrlAdaptor)).AutocompleteFields(field => field.Text("Name").Key("Id")).Value("Two")
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+       public ActionResult GetOutletsForAutocomplete(DataManager dm)
+        {
+            var models = GetTestData();
+
+            IEnumerable Data = GetTestData();
+            Syncfusion.JavaScript.DataSources.DataOperations operation = new Syncfusion.JavaScript.DataSources.DataOperations();
+
+            var data = operation.Execute(models, dm);
+            if (dm.Where != null && dm.Where.Count > 0) //Filtering 
+            {
+                data = operation.PerformWhereFilter(models, dm.Where, dm.Where[0].Operator);
+            }
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+       public class AutocompleteModel
+       {
+           [Display(Name = "Id")]
+           public string Id { get; set; }
+           [Display(Name = "Name")]
+           public string Name { get; set; }
+       }
+
+       private List<AutocompleteModel> GetTestData()
+        {
+            var list = new List<AutocompleteModel>();
+            list.Add(new AutocompleteModel(){ Id = "1", Name = "One"});
+            list.Add(new AutocompleteModel(){ Id = "2", Name = "Two"});
+            list.Add(new AutocompleteModel(){ Id = "3", Name = "Three"});
+            return list;
+        }
+
+{% endhighlight  %}
+
+{% endtabs %}
+
+Now, autocomplete triggered server side post and datamanger hold where query with field name which shows mapped datasource fields text property.  
+
+Please find the below screenshot for the datamanager where query.
+
+![](how-to_images/howto6.png)
+
+Please find the below output for the above code.
+
+![](how-to_images/howto7.png)
+
+## How to show text on autocomplete using key value
+
+You can set the value of Autocomplete textbox based on a given key value.  The `selectValueByKey` property is used to select autocomplete value based on specified key value.
+
+Please find the below code for your reference.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@Html.EJ().Autocomplete("selectState").Datasource((IEnumerable<states>)ViewBag.datasource).AutocompleteFields(field => field.Key("index").Text("countryName")).SelectValueByKey("s2")
+  
+{% endhighlight  %}
+
+{% highlight c# %}
+
+    public partial class AutocompleteController : Controller{
+         List<states> state = new List<states>();
+         public ActionResult AutocompleteFeatures()
+         {
+            state.Add(new states { index = "s1", countryName = "Alabama" });
+            state.Add(new states { index = "s2", countryName = "Alaska" });
+            state.Add(new states { index = "s3", countryName = "Arizona" });
+            ViewBag.datasource = state;
+            return View();
+         }
+    }
+    public class states
+    {
+        public string index { get; set; }
+        public string countryName { get; set; }
+    }
+
+{% endhighlight  %}
+
+{% endtabs %}
+
+For example, `selectValueByKey` property holds the ‘s2’ value that is mapped for autocomplete fields key value data.  The corresponding data fields text value ‘Alaska’ is shown on autocomplete control.
+
+The following output is displayed as a result of the above code example.
+
+![](how-to_images/howto4.png)
+
+If you are specifying ‘selectValueByKey’ property into autocomplete control, the hidden input value stores a specified key value.
+
+Please find the below screenshot for your reference.
+
+![](how-to_images/howto5.png)
+
+### Remote data
+
+You can set the value of Autocomplete textbox based on a given key value using `selectValueByKey` property with ‘urlAdaptor’.  
+
+Please find the below code for your reference.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@Html.EJ().Autocomplete("selectCar").Datasource(dataSource => dataSource.URL(Url.Action("GetOutletsForAutocomplete", "Autocomplete")).Adaptor(AdaptorType.UrlAdaptor)).AutocompleteFields(field => field.Text("Name").Key("Id")).SelectValueByKey("2")
+
+{% endhighlight  %}
+
+{% highlight c# %}
+
+       public ActionResult GetOutletsForAutocomplete(DataManager dm)
+        {
+            var models = GetTestData();
+
+            IEnumerable Data = GetTestData();
+            Syncfusion.JavaScript.DataSources.DataOperations operation = new Syncfusion.JavaScript.DataSources.DataOperations();
+
+            var data = operation.Execute(models, dm);
+            if (dm.Where != null && dm.Where.Count > 0) //Filtering 
+            {
+                data = operation.PerformWhereFilter(models, dm.Where, dm.Where[0].Operator);
+            }
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+       public class AutocompleteModel
+       {
+           [Display(Name = "Id")]
+           public string Id { get; set; }
+           [Display(Name = "Name")]
+           public string Name { get; set; }
+       }
+
+       private List<AutocompleteModel> GetTestData()
+        {
+            var list = new List<AutocompleteModel>();
+            list.Add(new AutocompleteModel(){ Id = "1", Name = "One"});
+            list.Add(new AutocompleteModel(){ Id = "2", Name = "Two"});
+            list.Add(new AutocompleteModel(){ Id = "3", Name = "Three"});
+            return list;
+        }
+
+{% endhighlight  %}
+
+{% endtabs %}
+
+Now, autocomplete triggered server side post and datamanger holds where query with field name which shows mapped datasource fields `key` property.  
+
+Please find the below screenshot for the datamanager where query.
+
+![](how-to_images/howto8.png)
+
+Please find the below output for the above code.
+
+![](how-to_images/howto9.png)
