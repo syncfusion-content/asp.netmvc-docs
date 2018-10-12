@@ -61,7 +61,7 @@ Binding the Autocomplete properties passed via **ViewData** from the controller 
 
 ## How to set autocomplete default value
 
-You can assign a value at an initially rendering of autocomplete using `Value` property which is used to select a single value from the autocomplete widget at initial rendering state. 
+You can set a value into autocomplete at initial rendering using `Value` property which is used to select a single value from the autocomplete widget at initial rendering state. 
 
 Refer to the following code.
 
