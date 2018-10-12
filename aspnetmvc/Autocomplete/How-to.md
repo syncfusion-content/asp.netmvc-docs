@@ -98,15 +98,15 @@ Please find the below code for your reference.
 
 The following output is displayed as a result of the above code example.
 
-![](how-to_images/howto1.png)
+![howto](how-to_images/howto1.png)
 
-Autocomplete specified default value string are present in datasource text mapping value, the hidden input value holds corresponding ‘key’ field value for validation purpose.  For example, the Autocomplete default value ‘Arizona’ text is present on datasource ‘contryName’ field and also mapped for autocomplete ‘text’ property.  The ‘Arizona’ text holds the key value of ‘s3’.  So, hidden input value holds the ‘s3’ value.  
+Autocomplete specified default value string are present in datasource text mapping value, the hidden input value holds corresponding ‘key’ field value for validation purpose.  For example, the Autocomplete default value ‘Arizona’ text is present on datasource ‘countryName’ field and also mapped for autocomplete ‘text’ property.  The ‘Arizona’ text holds the key value of ‘s3’.  So, hidden input value holds the ‘s3’ value.  
 
 Please find the below screenshot for above code hidden input state.
 
-![](how-to_images/howto2.png)
+![howto](how-to_images/howto2.png)
 
-Autocomplete specified default value string are not present on datasource text mapping value, the hidden input value holds corresponding autocomplete string value for validation purpose.  For example, the Autocomplete default value ‘New York’ text is not presented on datasource ‘contryName’ field and also mapped this field for autocomplete ‘text’ property.  So, the hidden input value holds the ‘New York’ string.
+Autocomplete specified default value string are not present on datasource text mapping value, the hidden input value holds corresponding autocomplete string value for validation purpose.  For example, the Autocomplete default value ‘New York’ text is not presented on datasource ‘countryName’ field and also mapped this field for autocomplete ‘text’ property.  So, the hidden input value holds the ‘New York’ string.
 
 Please find the below code for above behavior.
 
@@ -118,7 +118,7 @@ Please find the below code for above behavior.
 
 Please find the below screenshot for above code hidden input state.
 
-![](how-to_images/howto3.png)
+![howto](how-to_images/howto3.png)
 
 ### remote data
 
@@ -172,15 +172,15 @@ Please find the below code for your reference.
 
 {% endtabs %}
 
-Now, autocomplete triggered server side post and datamanger hold where query with field name which shows mapped datasource fields text property.  
+Now, autocomplete triggered server side post and data manger hold where query with field name which shows mapped datasource fields text property.  
 
 Please find the below screenshot for the datamanager where query.
 
-![](how-to_images/howto6.png)
+![howto](how-to_images/howto6.png)
 
 Please find the below output for the above code.
 
-![](how-to_images/howto7.png)
+![howto](how-to_images/howto7.png)
 
 ## How to show text on autocomplete using key value
 
@@ -223,13 +223,13 @@ For example, `selectValueByKey` property holds the ‘s2’ value that is mapped
 
 The following output is displayed as a result of the above code example.
 
-![](how-to_images/howto4.png)
+![howto](how-to_images/howto4.png)
 
 If you are specifying ‘selectValueByKey’ property into autocomplete control, the hidden input value stores a specified key value.
 
 Please find the below screenshot for your reference.
 
-![](how-to_images/howto5.png)
+![howto](how-to_images/howto5.png)
 
 ### Remote data
 
@@ -283,12 +283,12 @@ Please find the below code for your reference.
 
 {% endtabs %}
 
-Now, autocomplete triggered server side post and datamanger holds where query with field name which shows mapped datasource fields `key` property.  
+Now, autocomplete triggered server side post and data manger holds where query with field name which shows mapped datasource fields `key` property.  
 
 Please find the below screenshot for the datamanager where query.
 
-![](how-to_images/howto8.png)
+![howto](how-to_images/howto8.png)
 
 Please find the below output for the above code.
 
-![](how-to_images/howto9.png)
+![howto](how-to_images/howto9.png)
