@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DataBinding | Kanban | ASP.NET MVC | Syncfusion
-description: DataBinding
+description: Databinding is used to show the different binding of adaptor section using ASP.NET MVC Kanban control. 
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -94,7 +94,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img1.png)
+![IEnumerable](Data_Binding_images/Data_Bind_img1.png)
 
 ## Entity Framework
 
@@ -146,7 +146,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img2.png)
+![Entity Framework](Data_Binding_images/Data_Bind_img2.png)
 
 ## LINQ to SQL
 
@@ -168,8 +168,8 @@ The following code example describes the above behavior.
                   .KeyField("Status")
                   .Fields(field =>
                   {                    
-                          field.Content("Summary");
-                        
+                          field.Content("Summary")
+                                .PrimaryKey("Id");
                   })
 )
 
@@ -196,7 +196,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img3.png)
+![LINQ to SQL](Data_Binding_images/Data_Bind_img3.png)
 
 ## WCF DataService / OData Service
 
@@ -233,7 +233,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img4.png)
+![OData Service](Data_Binding_images/Data_Bind_img4.png)
 
 ## ODataV4 Service
 
@@ -269,7 +269,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img5.png)
+![ODataV4 Service](Data_Binding_images/Data_Bind_img5.png)
 
 ## WebAPI
 
@@ -287,7 +287,7 @@ The following code example describes the above behavior.
         {
             col.HeaderText("Backlog").Key("Backlog ").Add();
             col.HeaderText("In Progress").Key("InProgress ").Add();
-            col.HeaderText("Testing").Key("Testing ").Add();
+            col.HeaderText("Close").Key("Done ").Add();
         })
         .KeyField("Status")
         .Fields(field =>
@@ -331,7 +331,116 @@ Please refer the following link for common WebAPI creation.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img6.png)
+![WebAPI](Data_Binding_images/Data_Bind_img6.png)
 
+## URL Adaptor
 
+You can use the `UrlAdaptor` of `DataManager` when binding `DataSource` from remote data. At initial load of Kanban, using URL property of DataManager, data are fetched from remote data and bound to Kanban. You can map CRUD operation in Kanban to Server-Side Controller action using the property `CrudURL`.
 
+The following code example describes the above behavior.
+
+{% tabs %}
+
+{% highlight razor %}
+ 
+    @(Html.EJ().Kanban("Kanban")
+       .DataSource(data => data.URL("GetData").CrudURL("Crud").Adaptor(AdaptorType.UrlAdaptor))
+                   .Columns(col =>
+                   {
+                       col.HeaderText("Backlog").Key("Open").ShowAddButton(true).Add();
+                       col.HeaderText("In Progress").Key("InProgress").Add();
+                       col.HeaderText("Done").Key("Close").Add();
+                   })
+                           .CustomToolbarItems(custom =>
+                                       {
+                                           custom.Template("#Delete").Add();
+                                       })
+                  .EditSettings(edit =>
+                          {
+                              edit.AllowAdding(true)
+                                  .AllowEditing(true)
+                                  .EditItems(e =>
+                                  {
+                                      e.Field("Id").Add();
+                                      e.Field("Status").Add();
+                                      e.Field("Assignee").Add();
+                                      e.Field("Estimate").Add();
+                                      e.Field("Summary").Add();
+                                  }).EditMode(KanbanEditMode.Dialog);
+                          })
+                  .KeyField("Status")
+                  .Fields(field =>
+                  {
+                      field.Content("Summary")
+                           .PrimaryKey("Id")
+                           .Priority("RankId");
+                  })
+                  .ClientSideEvents(eve => eve.ToolBarClick("toolbarClick"))
+    )
+    
+    <script type="text/javascript">
+     function toolbarClick(args) {
+        if (args.itemName == "Delete" && this.element.find(".e-kanbancard").hasClass("e-cardselection")) {
+            var selected = this.element.find(".e-cardselection");
+            this.KanbanEdit.deleteCard(selected.attr("id"));
+        }
+
+       }
+      </script>
+     <script id="Delete" type="text/template">
+       <a class="e-customdelete  e-icon" />
+     </script>
+     <style type="text/css" class="cssStyles">
+       .e-customdelete:before {
+          content: "\e800";
+          line-height: 26px;
+          min-height: 26px;
+          min-width: 14px;
+          display: inline-block;
+       }
+     </style>
+ 
+{% endhighlight  %}
+
+Also when you use `UrlAdaptor`, you need to return the data as JSON and the JSON object must contain a properties result & count. The `result` holds the `dataSource` as its value and `count` holds the total cards count as its value.
+
+The following code example describes the above behavior.
+
+{% highlight c# %}
+
+    public ActionResult GetData(Syncfusion.JavaScript.DataManager value)
+       {
+           var DataSource = db.Tasks.ToList();
+           DataResult result1 = new DataResult();
+           DataOperations operation = new DataOperations();
+           result1.result = DataSource;
+           result1.count = DataSource.AsQueryable().Count();
+           if (value.Skip > 0)
+               result1.result = operation.PerformSkip(result1.result, value.Skip);
+           if (value.Take > 0)
+               result1.result = operation.PerformTake(result1.result, value.Take);
+           return Json(result1, JsonRequestBehavior.AllowGet);
+       }
+    public class DataResult
+    {
+        public IEnumerable result { get; set; }
+        public int count { get; set; }
+    }
+         
+{% endhighlight  %}
+
+{% endtabs %} 
+
+Please refer to the below screenshot.
+
+![URL Adaptor](Editing_images/editing_img6.png)
+
+Using `DataOperations` helper class you can perform Kanban action at server side. The in-built methods that we have provided in the `DataOperations` class are listed below.
+
+1.	PerformTake
+2.	PerformSelect
+3.	Execute
+
+For more information about the Server-Side operation you can refer the below link.
+
+[`Persisting Data in Server`](https://help.syncfusion.com/aspnetmvc/kanban/editing#persisting-data-in-server) 
