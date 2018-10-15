@@ -94,7 +94,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img1.png)
+![IEnumerable](Data_Binding_images/Data_Bind_img1.png)
 
 ## Entity Framework
 
@@ -146,7 +146,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img2.png)
+![Entity Framework](Data_Binding_images/Data_Bind_img2.png)
 
 ## LINQ to SQL
 
@@ -196,7 +196,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img3.png)
+![LINQ to SQL](Data_Binding_images/Data_Bind_img3.png)
 
 ## WCF DataService / OData Service
 
@@ -233,7 +233,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img4.png)
+![OData Service](Data_Binding_images/Data_Bind_img4.png)
 
 ## ODataV4 Service
 
@@ -269,7 +269,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img5.png)
+![ODataV4 Service](Data_Binding_images/Data_Bind_img5.png)
 
 ## WebAPI
 
@@ -331,7 +331,7 @@ Please refer the following link for common WebAPI creation.
 
 The following output is displayed as a result of the above code example.
 
-![](Data_Binding_images/Data_Bind_img6.png)
+![WebAPI](Data_Binding_images/Data_Bind_img6.png)
 
 ## URL Adaptor
 
@@ -433,7 +433,7 @@ The following code example describes the above behavior.
 
 Please refer to the below screenshot.
 
-![](Editing_images/editing_img6.png)
+![URL Adaptor](Editing_images/editing_img6.png)
 
 Using `DataOperations` helper class you can perform Kanban action at server side. The in-built methods that we have provided in the `DataOperations` class are listed below.
 
