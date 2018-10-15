@@ -138,11 +138,11 @@ The following code example describes the above behavior.
 
 The following output is displayed before dropping Kanban cards.
 
-![](Drag_and_Drop_images/drag_and_drop_img2.png) 
+![Before external drop](Drag_and_Drop_images/drag_and_drop_img2.png) 
 
 The following output is displayed after dropping Kanban cards.
 
-![](Drag_and_Drop_images/drag_and_drop_img3.png) 
+![After external drop](Drag_and_Drop_images/drag_and_drop_img3.png) 
 
 ### See Also
 
@@ -271,8 +271,8 @@ The following code example describes the above behavior.
 
 The following output is displayed before dropping the cards on Grid.
 
-![](Drag_and_Drop_images/drag_and_drop_img4.png)
+![Before drop](Drag_and_Drop_images/drag_and_drop_img4.png)
 
 The following output is displayed after dropping the cards on Grid.
 
-![](Drag_and_Drop_images/drag_and_drop_img5.png)
+![After drop](Drag_and_Drop_images/drag_and_drop_img5.png)
