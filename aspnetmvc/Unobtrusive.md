@@ -139,7 +139,7 @@ Refer the above mentioned necessary scripts files in your layout.cshtml page.
 
 {% endhighlight %}
 
-N> While creating sample through Syncfusion ProjectTemplate or SampleCreator "ej.unobtrusive.min.js" file will be found in "Scripts/ej" folder whereas installing nuget will ship the "ej.unobtrusive.min.js" file inside "Scripts/ej/common" folder. Modify the script reference in Layout page based on this folder structure.
+N> While creating a sample through Syncfusion ProjectTemplate or SampleCreator, the "ej.unobtrusive.min.js" file will be found in the "Scripts/ej" folder whereas installing NuGet will ship the "ej.unobtrusive.min.js" file inside the "Scripts/ej/common" folder. Modify the script reference in the layout page based on this folder structure.
 
 After that you need to create the controller’s action methods. These render views on the UI and bind a model with the view. So let us create a controller as follows:
 
