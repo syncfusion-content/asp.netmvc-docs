@@ -134,7 +134,7 @@ You can customize built-in text and messages based on your culture. The below ex
                         .Width("150");
                     column.Add()
                         .Field("dateModified")
-                        .HeaderText("Anderungsdatum")
+                        .HeaderText("Date Modified")
                         .Width("150");
                     column.Add()
                         .Field("type")
@@ -142,7 +142,7 @@ You can customize built-in text and messages based on your culture. The below ex
                         .Width("150");
                     column.Add()
                         .Field("size")
-                        .HeaderText("GroBe")
+                        .HeaderText("Size")
                         .Width("90")
                         .TextAlign(TextAlign.Right)
                         .HeaderTextAlign(TextAlign.Left);
