@@ -118,6 +118,40 @@ For example the culture code for German is “**de-DE**”.
 
 You can customize built-in text and messages based on your culture. The below example shows the usage of FileExplorer with German (de-DE) culture.
     
+     {% highlight razor %}
+    
+        @(Html.EJ().FileExplorer("fileExplorer")
+            .Path("~/resources/")
+            .AjaxAction(@Url.Content("FileActionDefault"))
+            .Width("900")
+            .Locale("de-DE")
+            .GridSettings(settings =>
+                settings.Column(column =>
+                {
+                    column.Add()
+                        .Field("name")
+                        .HeaderText("Name")
+                        .Width("150");
+                    column.Add()
+                        .Field("dateModified")
+                        .HeaderText("Änderungsdatum")
+                        .Width("150");
+                    column.Add()
+                        .Field("type")
+                        .HeaderText("Art")
+                        .Width("150");
+                    column.Add()
+                        .Field("size")
+                        .HeaderText("Größe")
+                        .Width("90")
+                        .TextAlign(TextAlign.Right)
+                        .HeaderTextAlign(TextAlign.Left);
+                }
+                )
+            )
+        )
+        
+    {% endhighlight %}
     {% highlight javascript %}
     
         ej.FileExplorer.Locale["de-DE"] = {
