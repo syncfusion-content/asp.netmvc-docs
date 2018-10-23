@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Unobtrusive | ASP.NET MVC | Syncfusion
-description: Unobtrusive
+description: Explain the unobtrusive support is to achieve the clear separation of both the HTML content and behavior.
 platform: ejmvc
 control: Common 
 documentation: ug
@@ -88,7 +88,7 @@ Render the DropDownList control as follows in your view page and enable the unob
 
 When the above code is executed on the browser, the DropDownList control will be rendered with the following equivalent HTML DOM attributes created for it.
 
-![](Core_images/unobtrusive1.png)
+![Unobtrusive1](Core_images/unobtrusive1.png)
 
 ## Enabling Client Side Validation
 
@@ -125,7 +125,7 @@ Four sets of files are needed to implement the Unobtrusive.
 •	The Unobtrusive extensions to Validate
 •	Ej unobtrusive library 
 
-![](Core_images/unobtrusive2.png)
+![Unobtrusive2](Core_images/unobtrusive2.png)
 
 Refer the above mentioned necessary scripts files in your layout.cshtml page.
 
@@ -138,6 +138,8 @@ Refer the above mentioned necessary scripts files in your layout.cshtml page.
     <script src="~/Scripts/ej/ej.unobtrusive.min.js"></script>
 
 {% endhighlight %}
+
+N> While creating a sample through Syncfusion ProjectTemplate or SampleCreator, the "ej.unobtrusive.min.js" file will be found in the "Scripts/ej" folder, whereas ,installing NuGet will ship the "ej.unobtrusive.min.js" file inside the "Scripts/ej/common" folder. Modify the script reference in the layout page based on this folder structure.
 
 After that you need to create the controller’s action methods. These render views on the UI and bind a model with the view. So let us create a controller as follows:
 
@@ -196,7 +198,7 @@ The view is created as in the following code snippet:
 
 When the above code is executed on the browser, the DropDownList control will be rendered with the following equivalent HTML DOM attributes created for it.
 
-![](Core_images/unobtrusive3.png)
+![Unobtrusive3](Core_images/unobtrusive3.png)
 
 Now, some interesting new attributes are there to look at:
 •	data-val specifies that the DropDownList needs validation.

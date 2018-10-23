@@ -1,6 +1,6 @@
 ---
 title: Access Control | FileExplorer | ASP.NET MVC | Syncfusion
-description: Control the File Management on server side 
+description: Control the File Management on server side for permissions or access rights to specific users and group of users.
 platform: ejmvc
 control: FileExplorer
 documentation: UG
