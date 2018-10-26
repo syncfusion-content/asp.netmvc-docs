@@ -375,7 +375,7 @@ The following structure is maintained for ASP.NET MVC platform NuGet packages fr
 			    Syncfusion.AspNet.Mvc<br/>
 		  </td>
 		  <td>
-			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate to the following link.<br/>{{'<http://www.syncfusion.com/products/aspnetmvc>'| markdownify }}<br/>
+			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate to the following link.<br/>{{'<http://www.syncfusion.com/aspnet-mvc-ui-controls>'| markdownify }}<br/>
 		  </td>
 		  <td>
 			    EJ.MVC<br/>
