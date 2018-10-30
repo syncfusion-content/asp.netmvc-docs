@@ -96,5 +96,4 @@ Add the below script to the view page
 {% endhighlight %}
 
 
-N> The same way we can render the iframe and image content for the Dialog widget by specifying the `ContentType` as “iframe” and “image” respectively and also by specifying the proper location in the `ContentUrl` property.
-
+N> The same way we can render the iframe and image content for the Dialog widget by specifying the `ContentType` as “iframe” and “image” respectively and also by specifying the proper location in the `ContentUrl` property.  If you wish to dynamically change the dialog content, you can set the `ContentUrl` and the `ContentType` property through setModel on any action.
