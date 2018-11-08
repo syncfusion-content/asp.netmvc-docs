@@ -241,19 +241,6 @@ When the PDF viewer control is destroyed, the Destroy event will be triggered. Y
 </script>
 {% endhighlight %}
 
-**HyperlinkClicked**
-
-When the hyperlinks available in the PDF document is clicked, the hyperlinkClick event will be triggered. You can define the event method using the HyperlinkClicked property of the control
-
-{% highlight Html %}
-@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.HyperlinkClicked(“hyperlinkClick”)))
-<script type="text/javascript">
-        function hyperlinkClick (args) {
-            alert("The hyperlink in the PDF document is clicked.");
-        }
-</script>
-{% endhighlight %}
-
 **AjaxRequestFailure**
 
 When the AJAX requests from the client to the API controller is failed, ajaxRequestFailure event will be triggered. You can define the event method using the AjaxRequestFailure property of the control.
@@ -263,6 +250,19 @@ When the AJAX requests from the client to the API controller is failed, ajaxRequ
 <script type="text/javascript">
         function ajaxFailureRequest (args) {
             alert("The AJAX request to the server is failed.");
+        }
+</script>
+{% endhighlight %}
+
+### HyperlinkClicked
+
+When the hyperlinks available in the PDF document is clicked, the hyperlinkClick event will be triggered. You can define the event method using the HyperlinkClicked property of the control
+
+{% highlight Html %}
+@(Html.EJ().PdfViewer("pdfviewer").ServiceUrl("https://js.syncfusion.com/ejServices/api/PdfViewer").ClientSideEvents(e=>e.HyperlinkClicked(“hyperlinkClick”)))
+<script type="text/javascript">
+        function hyperlinkClick (args) {
+            alert("The hyperlink in the PDF document is clicked.");
         }
 </script>
 {% endhighlight %}
