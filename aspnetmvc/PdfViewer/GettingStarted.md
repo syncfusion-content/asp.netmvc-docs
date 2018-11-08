@@ -16,21 +16,21 @@ This section explains how to add and use a PDF viewer control in your web applic
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category and ASP.NET MVC4 Web Application template, and then click OK. The following screenshot displays the Project Creation Wizard in Visual Studio 2012:
 
-![](GettingStarted_images/GettingStarted_img1.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img1.jpeg)
 
 The following screenshot displays how to select the project template with razor view engine:
 
-![](GettingStarted_images/GettingStarted_img2.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img2.jpeg)
 
 ### Add Controller and View page
 
 Add new MVC controller in the Controllers folder and name it as **PdfSampleController.cs**
 
-![](GettingStarted_images/GettingStarted_img3.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img3.jpeg)
 
 Create a new folder **PdfSample** in views and add new view **Index.cshtml** in it.
 
-![](GettingStarted_images/GettingStarted_img4.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img4.jpeg)
 
 ### Modify RouteConfig.cs
 
@@ -298,9 +298,9 @@ Add the following code snippet to Index.cshtml. Here, the PDF viewer uses hosted
 
 Add new folder **WebApi** in the solution and add new Web API Controller Class. Name it as **PdfViewerController** and click OK
 
-![](GettingStarted_images/GettingStarted_img5.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img5.jpeg)
 
-![](GettingStarted_images/GettingStarted_img6.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img6.jpeg)
 
 Replace the below code in the PdfViewerController.cs
 
@@ -387,5 +387,5 @@ Add the following code snippet to Index.cshtml. Here, the PDF viewer uses the We
 
 Run the sample and you will see the PDF viewer control as in the below screenshot.
 
-![](GettingStarted_images/GettingStarted_img7.jpeg)
+![GettingStarted](GettingStarted_images/GettingStarted_img7.jpeg)
 
