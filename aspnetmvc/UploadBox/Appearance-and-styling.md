@@ -174,7 +174,7 @@ The following steps explain the configuration of CssClass property in UploadBox.
  
 	<style class="cssStyles">
 
-	  .custom .e-select
+	  .custom.e-uploadbox.e-widget .e-selectpart.e-select
 	  {
 
 		background-color: #FFFFCC;
@@ -184,6 +184,11 @@ The following steps explain the configuration of CssClass property in UploadBox.
 		font-family: sans-serif;
 
 	}
+	
+	.custom.e-uploadbox.e-widget .e-selectpart.e-select:hover .e-inputbtn
+	{ 
+        background-color: #1e90ff;
+     } 
 
 	</style>
 
