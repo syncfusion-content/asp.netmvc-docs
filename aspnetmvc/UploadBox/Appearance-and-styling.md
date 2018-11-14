@@ -59,7 +59,7 @@ The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img1.png)
+![Style](Appearance-and-styling_images/Appearance-and-styling_img1.png)
 
 
 
@@ -111,7 +111,7 @@ The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img2.png)
+![Dialog](Appearance-and-styling_images/Appearance-and-styling_img2.png)
 
 
 
@@ -200,7 +200,7 @@ The following screenshot displays the output.
 
 
 
-![](Appearance-and-styling_images/Appearance-and-styling_img3.png)
+![customcss](Appearance-and-styling_images/Appearance-and-styling_img3.png)
 
 
 
