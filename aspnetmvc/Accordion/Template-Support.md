@@ -9,6 +9,8 @@ documentation: ug
 
 # Template Support
 
+## Content Template
+
 The Content template option provided in MVC is used to specify the HTML elements inside the Accordion control. You can use this option to load any HTML elements and display it in the Accordion panels as per your requirement.
 
 The following code example explains how to use content template option in the Accordion control.
@@ -95,10 +97,66 @@ The following code example explains how to use content template option in the Ac
 
 Output:
 
-![](Template-Support_images/Template-Support_img1.png)
+![ content template ](Template-Support_images/Template-Support_img1.png)
 
+## Header Template
 
+The Header template option provided in MVC is used to specify the HTML elements inside the Accordion control.
 
+The following code example explains how to use header template option in the Accordion control.
 
+{% highlight CSHTML %}
 
+@{
+    ViewBag.Title = "Accordion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model AccordionIcons.AccordionController.SI_MODULO
+<h2>Accordion</h2>
+<br/>
+<br/>
+<div id = "ControlRegion">
+    <div style="width: 400px;">
+        @{Html.EJ().Accordion("iconAccordion").Items(data =>
+        {
+            foreach (var m in Model.image)
+            {
+                var node = data.Add().Text(m.text).HeaderTemplate(@<div>
+                <image class='logos' src='http://js.syncfusion.com/demos/web/content/images/Employees/@m.imageID' />
+                </div>).ContentTemplate(@<div> This is just a sample text.</div>);
+            }
+        }).Render();}
+    </div>
+<style type="text/css">
+.logos {
+    float: left;
+    height: 35px;
+    margin: -6px 1px 2px -5px;
+    width: 35px;
+}
+    </style>
+</div>
 
+{% endhighlight %}
+
+{% highlight C# %}
+
+List<ImagesID> list = new List<ImagesID>();
+public ActionResult AccordionFeatures()
+ {
+   SI_MODULO model = new SI_MODULO();
+   list.Add(new ImagesID { imageID = "6.png", text = "Volkswagen" });
+   list.Add(new ImagesID { imageID = "7.png", text = "Mitsubishi" });
+   list.Add(new ImagesID { imageID = "8.png", text = "Mercedes-Benz" });
+   model.image = list;
+   return View(model);
+ }
+public class ImagesID {
+    public string imageID { get; set; }
+    public string text { get; set; }
+}
+public class SI_MODULO {
+public List<ImagesID> image { get; set; }
+}
+
+{% endhighlight %}
