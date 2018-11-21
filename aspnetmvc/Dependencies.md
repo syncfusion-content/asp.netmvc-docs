@@ -44,6 +44,8 @@ Other than the above specified assemblies, Scripts and StyleSheets are the two e
 * When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related CSS files are present within the **mobile** folder and all the CSS files related to web components are available within the **web** folder. You can copy the required CSS files from the location depicted below and use it in your application.
 
   ![](Dependencies_images/Dependencies_img2.jpeg)
+  
+ N> From the 2018 Volume 2 release, the scripts and css files will be shipped in installed location based on platform. For example, `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript\{{ site.releaseversion }}\JavaScript\assets\css`
 
 ## EJ Icon Package
 
