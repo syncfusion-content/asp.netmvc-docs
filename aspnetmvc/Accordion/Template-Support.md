@@ -97,7 +97,7 @@ The following code example explains how to use content template option in the Ac
 
 Output:
 
-![](Template-Support_images/Template-Support_img1.png)
+![ content template ](Template-Support_images/Template-Support_img1.png)
 
 ## Header Template
 
