@@ -30,7 +30,7 @@ Other than the above specified assemblies, Scripts and StyleSheets are the two e
 
 * When you navigate to the above location, you can see the folder named **external**, where the common script libraries (like jQuery, jQuery.easing, JsRender, and so on) are available and in the **scripts** folder, the Syncfusion components UI scripts are available in a minified format. You can copy the required scripts from the location depicted below and use it in your application.
 
-  ![](Dependencies_images/Dependencies_img1.jpeg)
+  ![Dependencies](Dependencies_images/Dependencies_img1.jpeg)
 
 ## StyleSheet
 
@@ -43,7 +43,9 @@ Other than the above specified assemblies, Scripts and StyleSheets are the two e
 
 * When you navigate to the above location, you can see 2 folders namely **mobile** and **web**. The mobile related CSS files are present within the **mobile** folder and all the CSS files related to web components are available within the **web** folder. You can copy the required CSS files from the location depicted below and use it in your application.
 
-  ![](Dependencies_images/Dependencies_img2.jpeg)
+  ![Styles](Dependencies_images/Dependencies_img2.jpeg)
+  
+ N> From the 2018 Volume 2 release, the scripts and css files will be shipped in installed location based on platform. For example, `C:\Program Files (x86)\Syncfusion\Essential Studio\JavaScript\{{ site.releaseversion }}\JavaScript\assets\css`
 
 ## EJ Icon Package
 
@@ -61,7 +63,7 @@ You have to include the common-images folder in the specified theme folder for d
 
 The “default-theme” folder CSS contains the “ej.widgets.all.min.css/ej.web.all.min.css” and “ej.theme.min.css” files. The “ej.widgets.core.min.css” file is outside the default theme folder as shown in the following:
 
-![](IconLibrary_images/themefolder.png)
+![Icons](IconLibrary_images/themefolder.png)
 
 Theme files are available in the following location:
 
@@ -138,7 +140,7 @@ N>  Make sure the CSS file (ej.widgets.all.min.css/ej.web.all.min.css) is referr
 
 Execute the above code to render the following output.
 
-![](IconLibrary_images/output.png)
+![IconLibrary](IconLibrary_images/output.png)
 
 **Step 3:**
 
