@@ -85,7 +85,7 @@ The following code illustrates the way to use pushFile property for Upload.
                             <h3>Choose a file here to update file details.</h3>     
                         </td>
                         <td>
-                            <input type="file" id="fileselect" />
+                            <input type="file" id="select" />
                         </td>
                    </tr>
                     <tr>
@@ -111,15 +111,15 @@ The following code illustrates the way to use pushFile property for Upload.
        </div>
     </div>
     <script>
-        var rawFiledetails;
+        var details;
         var fileName;
-        $("#fileselect").on("change", function () {
-            rawFiledetails = this.files[0]; //get file details selected through input
+        $("#select").on("change", function () {
+            details = this.files[0]; //get file details selected through input
              fileName = $('input[type=file]').val().replace(/C:\\fakepath\\/i, ''); //get selected filename 
         });
         function push() {
-            if (fileName && rawFiledetails != null) {
-                var Files = { name: fileName, rawFile: rawFiledetails } //Files structure
+            if (fileName && details != null) {
+                var Files = { name: fileName, rawFile: details } //Files structure
                 var push = $("#UploadDefault").data("ejUploadbox");
                 push.setModel({ pushFile: { Files } });//push files to UploadBox
             }
