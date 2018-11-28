@@ -304,7 +304,7 @@ N> Data should be returned only as the serialized string (JsonConvert.SerializeO
 
 **In client-side**
 
-In the client-side [ajaxRequestSuccess](https://help.syncfusion.com/api/js/ejpdfviewer#ajaxrequestsuccess) event, you can get the encrypted responseData as argument. It must be decrypted and the original JSON data should be send to the [setJSONdata()](https://help.syncfusion.com/api/js/ejpdfviewer#setjsondatajsondata) for rendering the PDF document in PDF Viewer.
+In the client-side [ajaxRequestSuccess](https://help.syncfusion.com/api/js/ejpdfviewer#ajaxrequestsuccess) event, you can get the encrypted responseData as argument. It must be decrypted and the original JSON data should be send to the [setJSONData()](https://help.syncfusion.com/api/js/ejpdfviewer#setjsondatajsondata) for rendering the PDF document in PDF Viewer.
 
 {% highlight javascript %}
 $(function () {
