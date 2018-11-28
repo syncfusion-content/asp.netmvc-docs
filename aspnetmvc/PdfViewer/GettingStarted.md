@@ -295,7 +295,7 @@ N> Data should be returned only as the serialized string (JsonConvert.SerializeO
             //Create the JSON object
             var json = new Object();
             //Add additional/encrypted data to the JSON data
-            json = new { pdfdata = helper.ProcessPdf(jsonResult), extradata = data, }; 
+            json = new { pdfData = helper.ProcessPdf(jsonResult), additionalData = data, }; 
             //Serialize the JSON data         
             string output = JsonConvert.SerializeObject(json);      
             //Return to the client   
@@ -316,7 +316,7 @@ $(function () {
             //Parse JSON data to get the original data
             var jsData = JSON.parse(args.responseData);
             //Send the decrypted data for further rendering
-            pdfviewerObj.setJSONData(jsData["pdfdata"]);
+            pdfviewerObj.setJSONData(jsData["pdfData"]);
         }
 
 {% endhighlight %}
