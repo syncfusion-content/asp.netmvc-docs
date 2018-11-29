@@ -267,6 +267,63 @@ When the hyperlinks available in the PDF document is clicked, the hyperlinkClick
 </script>
 {% endhighlight %}
 
+### Updating the PDF Viewer size based on the parent element
+
+####updateViewerSize()
+
+The PDF Viewer is resized based on the parent element size by using the [updateViewerSize()](https://help.syncfusion.com/api/js/ejpdfviewer#updateviewersize) method. 
+
+N>PDF Viewer will be resized automatically when the browser window is resized, and if the [isResponsive](https://help.syncfusion.com/api/js/ejpdfviewer#members:isresponsive) property is set to true. 
+
+{% highlight javascript %}
+var pdfviewer=$(“#pdfviewer”).data(“ejPdfViewer”);
+pdfviewer.updateViewerSize();
+{% endhighlight %}
+
+### Encrypting and decrypting the JSON data sent from server
+
+#### setJSONData(jsonData)
+
+**In server-side**
+
+In the Web API controller, users can add and encrypt their data along with the PDF document page content obtained from ProcessPdf() and send it to the client-side for rendering in PDF Viewer. 
+
+N> Data should be returned only as the serialized string (JsonConvert.SerializeObject)
+
+{% highlight C# %}
+           string data = "Encrypted Data";
+            //Create the JSON object
+            var json = new Object();
+            //Add additional/encrypted data to the JSON data
+            json = new { pdfData = helper.ProcessPdf(jsonResult), additionalData = data, }; 
+            //Serialize the JSON data         
+            string output = JsonConvert.SerializeObject(json);      
+            //Return to the client   
+            return output;
+{% endhighlight %}
+
+**In client-side**
+
+In the client-side [ajaxRequestSuccess](https://help.syncfusion.com/api/js/ejpdfviewer#ajaxrequestsuccess) event, you can get the encrypted responseData as argument. It must be decrypted and the original JSON data should be send to the [setJSONData()](https://help.syncfusion.com/api/js/ejpdfviewer#setjsondatajsondata) for rendering the PDF document in PDF Viewer.
+
+{% highlight javascript %}
+$(function () {
+            $("#viewer").ejPdfViewer({ serviceUrl: '../api/PdfViewer', ajaxRequestSuccess: " onAjaxRequestSuccess " });
+        });
+         function onAjaxRequestSuccess(args) {
+           //Create PDF Viewer object
+            var pdfviewerObj = $("#viewer").data("ejPdfViewer");
+            //Parse JSON data to get the original data
+            var jsData = JSON.parse(args.responseData);
+            //Send the decrypted data for further rendering
+            pdfviewerObj.setJSONData(jsData["pdfData"]);
+        }
+
+{% endhighlight %}
+
+N> Users can use their own encryption and decryption algorithm. The JSON data format should be formed as mentioned [here](https://help.syncfusion.com/js/webapi/pdfviewer#response-information)
+
+
 ### Displaying PDF document using Remote service
 
 Add the following code snippet to Index.cshtml. Here, the PDF viewer uses hosted service in the remote machine to process the PDF.
