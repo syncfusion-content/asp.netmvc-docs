@@ -63,7 +63,7 @@ set checked state of radio button as follows*@
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
+![checked status](Easy-Customization_images/Easy-Customization_img1.png)
 
 
 
@@ -114,7 +114,7 @@ In the CSHTML page, add the following input elements to configure the Radio Butt
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img2.png)
+![text](Easy-Customization_images/Easy-Customization_img2.png)
 
 
 
@@ -208,7 +208,7 @@ Medium size radio buttons
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img3.png)
+![size](Easy-Customization_images/Easy-Customization_img3.png)
 
 
 
@@ -285,7 +285,7 @@ In the above mentioned code, the text property has been used. In LTR format, the
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
+![alignment](Easy-Customization_images/Easy-Customization_img4.png)
 
 ## Styles Customization
 
@@ -332,4 +332,4 @@ In the following example, the border color and border width of the active RadioB
 
 {% endhighlight %}
 
-![](Easy-Customization_images/Easy-Customization_img5.png)
+![customization](Easy-Customization_images/Easy-Customization_img5.png)
