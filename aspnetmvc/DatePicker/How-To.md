@@ -47,6 +47,52 @@ EJMVC DatePicker allows you to restrict date selection in specific range by usin
 
 {% endhighlight %}
 
+## How to add clear button with DatePicker?
+
+Clear button can be included in the DatePicker control. In the `created` event of DatePicker, clear button element should be appended in the input element and event for clearing the value should bind with the clear button element. Refer the sample from the link [Clear button](http://jsplayground.syncfusion.com/mmdn4d0q) to know how to add the clear button with the DatePicker component. Based, on theme loaded you can adjust the styles of the clear button.
+
+{% highlight cshtml %}
+
+@Html.EJ().DatePicker("date").ClientSideEvents(e => e.Create("Created")).Value(System.DateTime.Now)
+
+
+<script>
+    function Created(e) {
+        if (this.innerWrapper.find('.e-clear-date').length == 0) {
+            this.innerWrapper.append("<span class='e-clear-date e-icon'></span>"); // create and append the 'div' element to the calendar
+            this._on($('.e-clear-date', this.innerWrapper), "click", function () { this.option('value', null); if (!this.model.displayInline) this.hide(); }); // bind the 'Click' event to that 'div' element
+        }
+    }
+</script>
+
+<style>
+    /*styles for clear button*/ 
+    .e-clear-date {
+        text-align: center;
+        position: absolute;
+        right: 24px;
+        top: 0;
+        background: #ececec;
+        width: 21px !important;
+        height: 100% !important;
+        margin-top: -16px !important;
+    }
+
+    .e-clear-date:hover {
+        background: #86cbea;
+        cursor: pointer;
+    }
+
+    .e-clear-date:before {
+        content: "\e605";
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    /*end of styles*/ 
+</style>
+
+{% endhighlight %}
+
 ## How to integrate with bootstrap grid system? 
 
 EJMVC DatePicker is responsive control, you have to just set the input element width as 100%. In Bootstrap grid layout use the below code example to get responsive textbox 
