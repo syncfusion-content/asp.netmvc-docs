@@ -49,7 +49,7 @@ EJMVC DatePicker allows you to restrict date selection in specific range by usin
 
 ## How to add clear button with DatePicker?
 
-Clear button can be included in the DatePicker control. In the `created` event of DatePicker, clear button element should be appended in the input element and event for clearing the value should bind with the clear button element. Refer the sample from the link [Clear button](http://jsplayground.syncfusion.com/mmdn4d0q) to know how to add the clear button with the DatePicker component. Based, on theme loaded you can adjust the styles of the clear button.
+Clear button can be included in the DatePicker control. In the `create` event of DatePicker, clear button element should be appended in the input element and event for clearing the value should bind with the clear button element. Refer the sample from the link [Clear button](http://jsplayground.syncfusion.com/mmdn4d0q) to know how to add the clear button with the DatePicker component. Based, on theme loaded you can adjust the styles of the clear button.
 
 {% highlight cshtml %}
 
@@ -57,7 +57,7 @@ Clear button can be included in the DatePicker control. In the `created` event o
 
 
 <script>
-    function Created(e) {
+    function Created() {
         if (this.innerWrapper.find('.e-clear-date').length == 0) {
             this.innerWrapper.append("<span class='e-clear-date e-icon'></span>"); // create and append the 'div' element to the calendar
             this._on($('.e-clear-date', this.innerWrapper), "click", function () { this.option('value', null); if (!this.model.displayInline) this.hide(); }); // bind the 'Click' event to that 'div' element
