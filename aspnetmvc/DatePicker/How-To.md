@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion DatePicker How-to
+title:  Syncfusion DatePicker How-to
 description: How-to section - The frequently used options with DatePicker 
 platform: ejmvc
 control: DatePicker
