@@ -398,7 +398,7 @@ N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\pr
 N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the following location:
 N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 
-![](Getting-Started_images/Manual6.png)
+![Reference](Getting-Started_images/Manual6.png)
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
