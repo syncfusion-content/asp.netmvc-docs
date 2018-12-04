@@ -271,7 +271,7 @@ In the following example, the border color and border width of the active CheckB
 {% highlight css %}
 
 <style>
-    .success .e-chkbox-medium .e-chk-inact .e-chk-image,
+            .success .e-chkbox-medium .e-chk-inact .e-chk-image,
         .success .e-chkbox-medium .e-chk-act .e-chk-image {
             background: #17ad37;
             color: white;
