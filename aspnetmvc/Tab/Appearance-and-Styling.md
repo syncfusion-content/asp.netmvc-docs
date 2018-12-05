@@ -81,7 +81,7 @@ The following code example is used to add the header image for the root Tab head
 
 3. The following screenshot illustrates the Tab with the customized header image. 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![Header Customization](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 Header Image Customization
 {:.caption}
@@ -129,7 +129,7 @@ The following code example is used to render the Tab widget with rounded corner.
 
 2. The following screenshot illustrates the Tab with Rounded corner.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+![tab rounded corner](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 Tab with rounded corner
 {:.caption}
@@ -173,7 +173,7 @@ The following code example is used to render the Tab widget with enable/disable.
 
 2. The following screenshot illustrates the Tab with disabled format.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
+![tab diasabled](Appearance-and-Styling_images/Appearance-and-Styling_img3.png)
 
 Tab with disabled format
 {:.caption}
@@ -219,7 +219,7 @@ The following code example is used to render the Tab widget with Reload icon.
 
 2. The following screenshot illustrates the Tab with Reload icon.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
+![tab reload](Appearance-and-Styling_images/Appearance-and-Styling_img4.png)
 
 Tab with reload icon
 
@@ -269,7 +269,7 @@ The following code example is used to render the Tab widget with customized coll
 
 2. The following screenshot illustrates the Tab with customized collapsible mode.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
+![tab collapsible](Appearance-and-Styling_images/Appearance-and-Styling_img5.png)
 
 Tab with customized collapsible mode
 {:.caption}
@@ -320,7 +320,7 @@ The following code example is used to render the Tab widget with customized heig
 
 2. The following screenshot illustrates the Tab with customized height and height adjust mode.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
+![tab height](Appearance-and-Styling_images/Appearance-and-Styling_img6.png)
 
 
 Tab with customized height and height adjust mode
@@ -369,7 +369,7 @@ The following code example is used to render the Tab widget with customized widt
 
 2. The following screenshot illustrates the Tab with customized width.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' 
+![tab width](Appearance-and-Styling_images/Appearance-and-Styling_img7.png)' 
 
 Tab with customized width
 {:.caption}
@@ -453,7 +453,7 @@ The following code example is used to render the Tab widget with customized styl
 
 3. The following screenshot illustrates the Tab with customized style.
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
+![tab style](Appearance-and-Styling_images/Appearance-and-Styling_img8.png)
 
 Tab with customized style
 {:.caption}
