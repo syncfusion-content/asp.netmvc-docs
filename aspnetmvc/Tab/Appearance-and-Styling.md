@@ -230,7 +230,7 @@ Tab with reload icon
 
 ## Collapsible Tabs
 
-You can collapse the Tab content by enabling the ‘Collapsible’ property to ‘true’. When the property is set to ‘true’ then click the active Tab header, the Tab contents are hided. By default, the property value is set to ‘false’.
+You can collapse the Tab content by enabling the ‘Collapsible’ property to ‘true’. When the property is set to ‘true’ then click the active Tab header, the Tab contents are hidden. By default, the property value is set to ‘false’.
 
 The following code example is used to render the Tab widget with customized collapsible mode.
 
