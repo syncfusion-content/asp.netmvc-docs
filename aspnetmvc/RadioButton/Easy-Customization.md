@@ -63,7 +63,7 @@ set checked state of radio button as follows*@
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
+![checked status](Easy-Customization_images/Easy-Customization_img1.png)
 
 
 
@@ -114,7 +114,7 @@ In the CSHTML page, add the following input elements to configure the Radio Butt
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img2.png)
+![text](Easy-Customization_images/Easy-Customization_img2.png)
 
 
 
@@ -208,7 +208,7 @@ Medium size radio buttons
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img3.png)
+![size](Easy-Customization_images/Easy-Customization_img3.png)
 
 
 
@@ -285,4 +285,51 @@ In the above mentioned code, the text property has been used. In LTR format, the
 
 The following image is displayed as the output for the above steps.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
+![alignment](Easy-Customization_images/Easy-Customization_img4.png)
+
+## Styles Customization
+
+RadioButton allows you to customize its appearance by using user-defined CSS and custom skin options such as colors and backgrounds. To apply custom themes, use  **CssClass** property. CssClass property sets the root class for RadioButton theme.
+
+By using this CssClass, you can override the existing styles under the theme style sheet. The theme style sheet applies theme-specific styles like colors and backgrounds. From the root class, you can customize the RadioButton control theme.
+
+In the following example, the border color and border width of the active RadioButton is customized through the custom classes to create the success, and danger indication with RadioButton.
+
+{% highlight html %}
+
+<span><b>Agree terms & conditions:</b></span>
+<span style="margin-left: 15px">
+    @Html.EJ().RadioButton("Radio_checked").Text("Yes").Name("radio1").CssClass("success").Size(Syncfusion.JavaScript.RadioButtonSize.Medium)
+
+    @Html.EJ().RadioButton("Radio_unchecked").Text("No").Name("radio1").CssClass("warning").Size(Syncfusion.JavaScript.RadioButtonSize.Medium)
+</span>
+<br>
+<br>
+<span><b>Confirm:</b></span>
+<span style="margin-left: 15px">
+    @Html.EJ().RadioButton("RadioButton3").Text("Yes").Name("radio2").CssClass("success").Size(Syncfusion.JavaScript.RadioButtonSize.Medium)
+    
+    @Html.EJ().RadioButton("RadioButton4").Text("No").Name("radio2").CssClass("warning").Size(Syncfusion.JavaScript.RadioButtonSize.Medium)
+</span>
+
+{% endhighlight %}
+
+{% highlight css %}
+
+<style>
+        .success .e-spanicon.e-rad-active,
+        .success .e-spanicon.e-rad-active:hover {
+            border-color: #17ad37;
+            border-width: 2px;
+        }
+
+        .warning .e-spanicon.e-rad-active,
+        .warning .e-spanicon.e-rad-active:hover {
+            border-color: #ff6e40;
+            border-width: 2px;
+        }
+    </style>
+
+{% endhighlight %}
+
+![customization](Easy-Customization_images/Easy-Customization_img5.png)
