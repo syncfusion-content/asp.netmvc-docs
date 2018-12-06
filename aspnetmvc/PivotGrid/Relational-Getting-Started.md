@@ -67,7 +67,7 @@ Register the referred assemblies in "Web.config" files available inside Views fo
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
+    <assemblies>
         ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -82,32 +82,32 @@ Register the required namespaces in "Web.config" files available inside Views fo
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
-### Scripts and CSS References  
+### Scripts and CSS References
 
 The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
@@ -117,14 +117,14 @@ The scripts and style sheets that are mandatorily required to render PivotGrid c
 
 Scripts and style sheets are referred under the head tag in _Layout.cshtml file which is found inside Views > Shared folder.
 
-{% highlight html %}    
+{% highlight html %}
 
 <head>
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
-    
-</head>    
+
+</head>
 
 {% endhighlight %}
 
@@ -132,11 +132,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())   
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -156,7 +156,7 @@ Before initializing, empty the contents of "Index.cshtml" file under Views > Hom
 
 ### Populate PivotGrid With Data
 
-Let us now see how to populate the PivotGrid control using a sample JSON data as shown below. 
+Let us now see how to populate the PivotGrid control using a sample JSON data as shown below.
 
 {% highlight html %}
 
@@ -196,28 +196,28 @@ function onLoad(args) {
 {% endhighlight %}
 
 The JSON data is set to the **"data"** property present inside the **"DataSource"** object. **"DataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotGrid control.
-  
+
 {% highlight html %}
-  
+
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();}))
 
 {% endhighlight %}
 
 The above code will generate a simple PivotGrid with "Country" field in Row, "Product" field in Column, and "Amount" field in Value section.
 
-![](Getting-Started_images/purejs.png) 
+![Pivot Grid control in ASP NET MVC](Getting-Started_images/purejs.png)
 
 ### Apply Sorting
 
 You can sort a field either to ascending or descending order using the "sortOrder" property. Sorting is applicable only for Row and Column fields. By default, fields are arranged in ascending order.
- 
+
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Country").FieldCaption("Country").SortOrder(SortOrder.Ascending).Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();}))  
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Country").FieldCaption("Country").SortOrder(SortOrder.Ascending).Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();}))
 
 {% endhighlight %}
 
-![](Getting-Started_images/purejssorting.png) 
+![Sorting in ASP NET MVC pivot grid control](Getting-Started_images/purejssorting.png)
 
 ### Sort Row/Column by Date
 
@@ -227,7 +227,7 @@ N> To apply sorting by date, you need to specify the `Format` and `FormatString`
 
 {% highlight cshtml %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Date").FieldCaption("Date").Format("date").FormatString("dd-MM-yyyy").SortOrder(SortOrder.Descending).Add();}).Columns(columns => { columns.FieldName("Day").FieldCaption("Day").Format("date").FormatString("ddd").SortOrder(SortOrder.Ascending).Add(); }).Values(values => { values.FieldName("Amount").Add();}))  
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => {rows.FieldName("Date").FieldCaption("Date").Format("date").FormatString("dd-MM-yyyy").SortOrder(SortOrder.Descending).Add();}).Columns(columns => { columns.FieldName("Day").FieldCaption("Day").Format("date").FormatString("ddd").SortOrder(SortOrder.Ascending).Add(); }).Values(values => { values.FieldName("Amount").Add();}))
 
 <script type="text/javascript">
 function onLoad(args) {
@@ -247,11 +247,11 @@ function onLoad(args) {
 
 {% endhighlight %}
 
-![](Getting-Started_images/sortbydate.png)
+![Sorting by date in ASP NET MVC pivot grid control](Getting-Started_images/sortbydate.png)
 
 ### Apply Filtering
 
-Filtering option allows you to specify a set of values that either need to be displayed or hided. Also filtering option is applicable only for Row, Column and Filter areas.
+Filtering option allows you to specify a set of values that either need to be displayed or hidden. Also filtering option is applicable only for Row, Column and Filter areas.
 
 **"FilterItems"** object allow us to apply filtering to the fields using the following properties:
 
@@ -264,7 +264,7 @@ Filtering option allows you to specify a set of values that either need to be di
 
 {% endhighlight %}
 
-![](Getting-Started_images/purejsfiltering.png) 
+![Filtering in ASP NET MVC pivot grid control](Getting-Started_images/purejsfiltering.png)
 
 ### Apply Summary Types
 Allows us to specify the required summary type that PivotGrid should use in its summary cells. **"Sum"** is the default summary type. Following are the summary types that are supported:
@@ -281,11 +281,11 @@ Allows us to specify the required summary type that PivotGrid should use in its 
 
 {% endhighlight %}
 
-![](Getting-Started_images/purejssummarytype.png) 
+![Summary Types in ASP NET MVC pivot grid control](Getting-Started_images/purejssummarytype.png)
 
 ## Creating a simple application with PivotGrid and Relational datasource (Server Mode)
 
-This section covers the information required to create a simple PivotGrid bound to Relational datasource. 
+This section covers the information required to create a simple PivotGrid bound to Relational datasource.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
@@ -325,21 +325,21 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-{{ site.mvc3releaseversion }}</td><td>    
+{{ site.mvc3releaseversion }}</td><td>
 {{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-{{ site.mvc4releaseversion }}</td><td>    
+{{ site.mvc4releaseversion }}</td><td>
 {{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-{{ site.mvc5releaseversion }}</td><td>    
+{{ site.mvc5releaseversion }}</td><td>
 {{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
@@ -351,8 +351,8 @@ Register the referenced assemblies in "Web.config" files available inside Views 
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.5">
-    <assemblies> 
-        …… 
+    <assemblies>
+        ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -362,7 +362,7 @@ Register the referenced assemblies in "Web.config" files available inside Views 
         <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     </assemblies>
 </compilation>
 
@@ -372,11 +372,11 @@ Register the required namespaces in "Web.config" files available inside Views fo
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 
 {% endhighlight %}
@@ -384,18 +384,18 @@ Register the required namespaces in "Web.config" files available inside Views fo
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 </appSettings>
-        
+
 </configuration>
 
 {% endhighlight %}
@@ -411,7 +411,7 @@ The scripts and style sheets that are mandatorily required to render PivotGrid c
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight html %}
 
 <head>
@@ -426,11 +426,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight html %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager()) 
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 
 </body>
 
@@ -441,11 +441,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
 {% highlight html %}
-    
+
 @using Syncfusion.JavaScript;
 
-<div> 
-    @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/Relational")) 
+<div>
+    @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/Relational"))
 </div>
 
 {% endhighlight %}
@@ -473,7 +473,7 @@ namespace PivotGridDemo
 {
     public class RelationalController: ApiController
     {
-        
+
     }
 }
 
@@ -690,9 +690,9 @@ Define the service methods inside RelationalController class, found inside `Rela
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
-    public class RelationalController: ApiController 
+    public class RelationalController: ApiController
     {
         PivotGrid htmlHelper = new PivotGrid();
         JavaScriptSerializer serializer = new JavaScriptSerializer();
@@ -915,7 +915,7 @@ public static class WebApiConfig
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
-![](Getting-Started_images/relaionalwebapi.png) 
+![Pivot grid control in ASP NET MVC relational server mode](Getting-Started_images/relaionalwebapi.png)
 
 ### WCF
 
