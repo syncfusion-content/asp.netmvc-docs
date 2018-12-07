@@ -30,23 +30,23 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 1. In Visual Studio, create a New **Syncfusion** **ASP.NET** **MVC** **Application** project from **Syncfusion** **Project** **Template** that you can see in the **New** **Project** pop-up as shown in the following image. Name it as SyncfusionMvcApplication1 and click **OK**.
 
-	![](getting-started_images/getting-started_img3.png)
+	![projecttemplate](getting-started_images/getting-started_img3.png)
 
 2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC5** and keep the **other** options as default. Click **Next**.
 
-	![](getting-started_images/getting-started_img4.png)
+	![Wizard](getting-started_images/getting-started_img4.png)
 	
 3. Next window will be shown with the list of Syncfusion MVC controls. Choose the required controls and then click **Create**.
 
-	![](getting-started_images/getting-started_img5.png)
+	![Create](getting-started_images/getting-started_img5.png)
 	
 4. Now you can notice the **Syncfusion** **MVC** **5** **References**, **Scripts** and **Styles** are configured into Scripts and Content folders. Also it configures the **web.config** and **_Layout.cshtml** files.
 
-	![](getting-started_images/getting-started_img6.png)
+	![Reference](getting-started_images/getting-started_img6.png)
 
 5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
-	![](getting-started_images/getting-started_img21.png)
+	![license](getting-started_images/getting-started_img21.png)
 	
 6. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -58,9 +58,11 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 7. Compile and execute the application. You can able to see the following output in the browser.
 
-	![](getting-started_images/getting-started_img7.png)
+	![output](getting-started_images/getting-started_img7.png)
 	
 For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
+
+N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://www.syncfusion.com/kb/9197/resolving-jquery-multiple-references-error)
 
 ## Through Syncfusion Project Conversion
 
@@ -71,11 +73,11 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 1. Open an existing Microsoft MVC Project or create a new Microsoft MVC Project.
 2. Right-click on Project and select Syncfusion VS Extensions and choose the Convert to Syncfusion MVC (Web) Application. Refer to the following screenshot for more information.
 
-   ![](getting-started_images/ProjectConversion_img1.jpeg)
+   ![Project Conversion](getting-started_images/ProjectConversion_img1.jpeg)
 
 3. Project Conversion Wizard opens so that you can configure the project.
 
-   ![](getting-started_images/ProjectConversion_img2.jpeg)
+   ![Project Conversion2](getting-started_images/ProjectConversion_img2.jpeg)
 
    The following configurations are used in the Project Conversion Wizard.
    
@@ -87,42 +89,42 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 	2. Added from Installed Location: Refer the assemblies from the Syncfusion Installed locations.
     3. Add Referenced Assemblies to Solution: Copy and refer to the assemblies from project's solution file lib directory.
 
-   ![](getting-started_images/Project-Conversion_img3.jpeg)
+   ![Assembly](getting-started_images/Project-Conversion_img3.jpeg)
     
    **Choose the Theme:**
    
    The master page of project will be updated based on the selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
    
-   ![](getting-started_images/Project-Conversion_img4.jpeg)
+   ![Theme](getting-started_images/Project-Conversion_img4.jpeg)
    
    **Choose CDN Support:**
 
    The master page of the project will be updated based on the required Syncfusion CDN links.
    
-   ![](getting-started_images/Project-Conversion_img20.jpeg)
+   ![CDN](getting-started_images/Project-Conversion_img20.jpeg)
    
    **Choose Copy Global Resources:**
     
    The localization culture files will be shipped into Scripts\ej\i18n directory of the project.
    
-   ![](getting-started_images/Project-Conversion_img21.jpeg)
+   ![Global](getting-started_images/Project-Conversion_img21.jpeg)
 
 4. Choose the required controls from Components section and Click the **Convert** button to convert it into a Syncfusion Project.
 
-   ![](getting-started_images/ProjectConversion_img5.jpeg)
+   ![Convert](getting-started_images/ProjectConversion_img5.jpeg)
    
 5. The **Project Backup** dialog will be opened. If Yes is clicked, it will backup the current project before converting it to Syncfusion project. If No is clicked it will convert the project to Syncfusion project without backup.
    
-   ![](getting-started_images/Project-Conversion_img6.jpeg)
+   ![Backup](getting-started_images/Project-Conversion_img6.jpeg)
 
 
 6. The required Syncfusion Reference Assemblies, Scripts and CSS are included in the MVC Project. Refer to the following screenshots for more information.
 
-   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img7.png](getting-started_images/ProjectConversion_img7.jpeg)
+   ![Convert into Syncfusion project7](getting-started_images/ProjectConversion_img7.jpeg)
 
-   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img8.png](getting-started_images/ProjectConversion_img8.jpeg)
+   ![Convert into Syncfusion project8](getting-started_images/ProjectConversion_img8.jpeg)
 
-   ![http://help.syncfusion.com/aspnetmvc/getting-started_images/Convert-into-Syncfusion-MVC-project_img9.png](getting-started_images/ProjectConversion_img9.jpeg)
+   ![Convert into Syncfusion project9](getting-started_images/ProjectConversion_img9.jpeg)
 
 ## Through Syncfusion NuGet Packages
 
@@ -134,7 +136,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
    **PM>Install-Package Syncfusion.AspNet.Mvc5**
    
-   ![](getting-started_images/getting-started_img1.png)
+   ![Package](getting-started_images/getting-started_img1.png)
    
 3. While initial creation, by default, the **Unobtrusive** setting is enabled in your applications web.config file. You need to change its value to **false** in your application as shown in the following:
 
@@ -207,7 +209,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 8. Compile and execute the application. You can able to see the below output in the browser.
 
-	![](getting-started_images/getting-started_img2.png)
+	![Render](getting-started_images/getting-started_img2.png)
 
 For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/overview)
 
@@ -221,7 +223,7 @@ Follow the below steps to create a normal ASP.NET MVC application.
 
 1.	Start the Visual Studio. Create a new MVC application by selecting File -> New -> Project and save it with a meaningful name as shown in the following.
 
-![](getting-started_images/Manual1.png)
+![Manual](getting-started_images/Manual1.png)
 
 2. Build and run your application by pressing Ctrl+F5.
 
@@ -241,11 +243,11 @@ N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\
 
 Navigate to above mentioned location, find the files as shown in the below image. Copy entirely and paste it into your root application.
 
-![](getting-started_images/Manual2.png)
+![files](getting-started_images/Manual2.png)
 
 Before pasting it into your application, create a folder structure with names ej/web within the Content folder of your application and place all the copied files into it as shown in the following.
 
-![](Getting-Started_images/Manual3.png)
+![Folder](Getting-Started_images/Manual3.png)
 Solution Explorer - Project with CSS files copied into the Content folder
 {:.caption}
 
@@ -295,7 +297,7 @@ N> Example for "Syncfusion Installed location" is "C:\Program Files (x86)\Syncfu
 
 Now, create a folder named `ej`, under the Scripts folder of your application and place the copied files ej.web.all.min.js into it as shown in the following.
 
-![](Getting-Started_images/Manual4.png)
+![Dependencies](Getting-Started_images/Manual4.png)
 Solution Explorer - Script files copied into the Scripts folder of the project
 {:.caption}
 
@@ -382,7 +384,7 @@ The reference to the Syncfusion assemblies can be added to your application in e
 
 2.	Now the Reference Manager pop-up will appear on the screen. In that pop-up, select the required assemblies from the Extensions tab as below, by choosing the appropriate versions (13.1450.0.21). The version to be chosen for the reference assemblies is based on the Framework used in the application.
 
-![](Getting-Started_images/Manual5.png)
+![GAC](Getting-Started_images/Manual5.png)
 Reference Manager Pop-up
 {:.caption}
 
@@ -396,7 +398,7 @@ N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\pr
 N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the following location:
 N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 
-![](Getting-Started_images/Manual6.png)
+![Reference](Getting-Started_images/Manual6.png)
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
@@ -412,7 +414,7 @@ N> Syncfusion.Core dependency has been removed from 13.2.0.29 and it is not requ
 
 4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown in the following.
 
-![](Getting-Started_images/Manual7.png)
+![Installed location](Getting-Started_images/Manual7.png)
 Selected Assemblies added to the Project reference
 {:.caption}
 
@@ -449,7 +451,7 @@ N> Add the DatePicker code within the Content section, by removing the unwanted 
 
 2. Finally build and run the project by pressing F5, so that you can now see the output similar to the following screenshot in your web browser.
 
-![](Getting-Started_images/Manual8.png)
+![Datepicker](Getting-Started_images/Manual8.png)
 DatePicker control displaying on the web browser
 {:.caption}
 
