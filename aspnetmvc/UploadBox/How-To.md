@@ -179,3 +179,61 @@ Pass the file details from client side in the below format
 Now the file details can be received in the controller as shown below
 
 ![details](How-To-images/Controller.png)
+
+## Use Synchronous upload with drag and drop
+
+Drag and Drop is supported with Synchronous upload from [16.1.0.32](https://help.syncfusion.com/js/release-notes/v16.1.0.32?type=all#ejuploadbox-bug-fixes) version. Refer to the below given code for uploading a file through drag and drop with Synchronous upload.
+
+
+{% tabs %}
+
+{% highlight razor %}
+    
+       @using (Html.BeginForm("SaveSynchronous", "FileUpload", FormMethod.Post, null))
+        {
+          <div class="control">
+          <div class="element">Select a file to upload</div>
+          <div class="posupload">
+             @Html.EJ().Uploadbox("Synchronous").AllowDragAndDrop(true).AsyncUpload(false)@*Uploading files will be done only on clicking submit button after selecting the files*@
+             @Html.EJ().Button("post").Type(ButtonType.Submit).Text("Submit")
+        </div>
+        <div id="successmsg">@ViewBag.status</div>
+        </div>
+       }
+			
+{% endhighlight %}
+
+{% highlight c# %}
+	
+     public ActionResult FileUploadFeatures() 
+        { 
+            if (string.IsNullOrEmpty((string)TempData["status"])) 
+                ViewBag.status = string.Empty; 
+            else 
+                ViewBag.status = (string)TempData["status"]; 
+            return View(); 
+        }  
+         public ActionResult SaveSynchronous(IEnumerable<HttpPostedFileBase> Synchronous) 
+         { 
+            if (Synchronous != null) 
+            { 
+                foreach (var file in Synchronous) 
+                { 
+                    var fileName = Path.GetFileName(file.FileName); 
+                    var destinationPath = Path.Combine(Server.MapPath("~/App_Data"), fileName); 
+                    file.SaveAs(destinationPath); 
+                } 
+                TempData["status"] = "Successfully Uploaded"; 
+                return RedirectToAction("FileUploadFeatures"); 
+            } 
+            else 
+            { 
+                TempData["status"] = "Select a file to upload"; 
+                return RedirectToAction("FileUploadFeatures"); 
+            } 
+         
+    } 
+	
+{% endhighlight %}
+
+{% endtabs %}
