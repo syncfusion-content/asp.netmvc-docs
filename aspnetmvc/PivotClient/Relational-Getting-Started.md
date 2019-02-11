@@ -67,7 +67,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
+    <assemblies>
         ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -82,32 +82,32 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
-### Scripts and CSS References  
+### Scripts and CSS References
 
 The scripts and style sheets that are mandatorily required to render PivotClient control in a MVC Web Application are mentioned in an appropriate order below:
 
@@ -118,15 +118,15 @@ The scripts and style sheets that are mandatorily required to render PivotClient
 
 Scripts and style sheets are referred under the <head> tag in _Layout.cshtml file which is found inside Views > Shared folder.
 
-{% highlight html %}    
+{% highlight html %}
 
 <head>
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/js/assets/external/jsrender.min.js" type="text/javascript"></script>
-    
-</head>    
+
+</head>
 
 {% endhighlight %}
 
@@ -134,11 +134,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())   
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -154,7 +154,7 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
 
 ### Populate PivotClient With Data
 
-Let us now see how to populate the PivotClient control using a sample JSON data as shown below. 
+Let us now see how to populate the PivotClient control using a sample JSON data as shown below.
 
 {% highlight html %}
 
@@ -194,20 +194,20 @@ function onLoad(args) {
 {% endhighlight %}
 
 The JSON data is set to the **"data"** property present inside the **"dataSource"** object. **"dataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotClient control.
-  
+
 {% highlight html %}
-  
+
 @Html.EJ().Pivot().PivotClient("PivotClient1").Title("Relational Browser").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();}))
 
 {% endhighlight %}
 
 Now, PivotClient is rendered with PivotChart and PivotGrid with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
 
-![](Getting-Started_images/purejs.png) 
+![ASP NET MVC pivot client control rendered with relational client mode](Getting-Started_images/purejs.png)
 
 ## Creating a simple application with PivotClient and Relational datasource (Server Mode)
 
-This section covers the information required to create a simple PivotClient bound to Relational datasource. 
+This section covers the information required to create a simple PivotClient bound to Relational datasource.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
@@ -247,21 +247,21 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-{{ site.mvc3releaseversion }}</td><td>    
+{{ site.mvc3releaseversion }}</td><td>
 {{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-{{ site.mvc4releaseversion }}</td><td>    
+{{ site.mvc4releaseversion }}</td><td>
 {{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-{{ site.mvc5releaseversion }}</td><td>    
+{{ site.mvc5releaseversion }}</td><td>
 {{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
@@ -273,8 +273,8 @@ Register the referenced assemblies in "Web.config" files available inside Views 
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
-        …… 
+    <assemblies>
+        ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -282,8 +282,8 @@ Register the referenced assemblies in "Web.config" files available inside Views 
         <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Export, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
-        <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -296,11 +296,11 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 
 {% endhighlight %}
@@ -308,18 +308,18 @@ Register the required namespaces in Web.config files available inside Views fold
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
     </appSettings>
-        
+
 </configuration>
 
 {% endhighlight %}
@@ -336,7 +336,7 @@ The scripts and style sheets that are mandatorily required to render PivotClient
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight html %}
 
 <head>
@@ -352,11 +352,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight html %}
 
-<body> 
-…… 
-…… 
-@RenderBody() 
-@(Html.EJ().ScriptManager()) 
+<body>
+……
+……
+@RenderBody()
+@(Html.EJ().ScriptManager())
 
 </body>
 
@@ -367,7 +367,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
 {% highlight html %}
-    
+
 @using Syncfusion.JavaScript;
 
 @Html.EJ().Pivot().PivotClient("PivotClient1").Title("Relational Browser").Url(Url.Content("/Relational"))
@@ -397,7 +397,7 @@ namespace PivotClientDemo
 {
     public class RelationalController: ApiController
     {
-        
+
     }
 }
 
@@ -615,7 +615,7 @@ Define the service methods inside RelationalController class, found inside `Rela
 {% highlight c# %}
 
 namespace PivotClientDemo {
-    public class RelationalController: ApiController 
+    public class RelationalController: ApiController
     {
         PivotClient pivotClient = new PivotClient();
         PivotChart pivotChart = new PivotChart();
@@ -856,10 +856,10 @@ public static class WebApiConfig
 
 Now, **PivotClient** is rendered with PivotChart and PivotGird with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
 
-![](Getting-Started_images/relaionalwebapi.png) 
+![JQuery pivot client control with relational server mode](Getting-Started_images/relaionalwebapi.png)
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotClient. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotClient/relational-connectivity#wcf-1).
+This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotClient. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotClient/relational-connectivity#wcf).
 
 

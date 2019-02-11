@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to
+title: How to | PivotChart| ASP.NET MVC | Syncfusion
 description: How to
 platform: ejmvc
 control: PivotChart

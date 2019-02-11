@@ -26,7 +26,7 @@ The following code snippet shows how to sort values in descending order.
 {% endhighlight %}
 
 The below screenshot shows PivotClient before applying value sorting.
-![](Value-Sorting_images/Before.png)
+![ASP NET MVC pivot client control](Value-Sorting_images/Before.png)
 
 The below screenshot shows PivotClient after applying value sorting.
-![](Value-Sorting_images/After.png)
+![ASP NET MVC pivot client control with value sorting](Value-Sorting_images/After.png)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Paging
 
-## Pager 
+## Pager
 
-Paging helps to improve the rendering performance of the PivotGrid control by dividing large amount of data into sections and displaying one section at a time. You can enable Paging option in PivotGrid by setting the [`EnablePaging`] property to true. You can provide the page size and current page details for each axis in [`PagerOptions`] property.
+Paging helps to improve the rendering performance of the PivotGrid control by dividing large amount of data into sections and displaying one section at a time. You can enable Paging option in PivotGrid by setting the `EnablePaging` property to true. You can provide the page size and current page details for each axis in `PagerOptions` property.
 
 In-order to initialize a **Pager**, first you need to define a **div** tag with an appropriate **id** attribute which acts as a container for the widget. Then you need to initialize the widget using **ejPivotPager** method.
 
@@ -29,17 +29,17 @@ Inside the **ejPivotPager** method, the enumeration property mode needs to be se
 Following are the navigation options available in Pager.
 
 * Move First - Navigates to the first page.
-* Move Last - Navigates to the last page. 
+* Move Last - Navigates to the last page.
 * Move Previous - Navigates to the previous page from the current page.
 * Move Next - Navigates to the next page from the current page.
 * Numeric Box - Navigates to the desired page by entering an appropriate page number in numeric value.
 
-![](Paging_images/paging.png)
+![Paging in ASP NET MVC pivot grid control](Paging_images/paging.png)
 
 
 ## Virtual Scrolling
 
-Virtual Scrolling is a technique that allows user to view the PivotGrid information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotGrid by setting the [`EnableVirtualScrolling`] property to true. You can provide the page size and current page details for each axis in [`PagerOptions`] property. 
+Virtual Scrolling is a technique that allows user to view the PivotGrid information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotGrid by setting the `EnableVirtualScrolling` property to true. You can provide the page size and current page details for each axis in `PagerOptions` property.
 
 {% highlight CSHTML %}
 
@@ -47,7 +47,7 @@ Virtual Scrolling is a technique that allows user to view the PivotGrid informat
 
 {% endhighlight %}
 
-![](Paging_images/virtual-scrolling.png)
+![Virtual scrolling in ASP NET MVC pivot grid control](Paging_images/virtual-scrolling.png)
 
 ## Page Settings
 

@@ -60,7 +60,7 @@ return args;
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/rowIndex_zero.png)
+![Axes customization at zeroth row index in ASP NET MVC pivot chart control](Multiple_Axes_images/rowIndex_zero.png)
 
 ## Customizing axes at row index one
 
@@ -88,7 +88,7 @@ return args;
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/rowIndex_one.png)
+![Axes customization at first row index in ASP NET MVC pivot chart control](Multiple_Axes_images/rowIndex_one.png)
 
 ## Customizing axes at column index of zero
 
@@ -117,7 +117,7 @@ return args;
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/columnindex_zero.png)
+![Axes customization at zeroth column index in ASP NET MVC pivot chart control](Multiple_Axes_images/columnindex_zero.png)
 
 ## Customizing axes at column index of one
 
@@ -145,7 +145,7 @@ return args;
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/columnindex_one.png)
+![Axes customization at first column index in ASP NET MVC pivot chart control](Multiple_Axes_images/columnindex_one.png)
 
 ## Customizing series
 You can customize the series in multiple axes support with the help of **beforeSeriesRender** event. You can change the series type through the **onBeforeRender** event.
@@ -177,7 +177,7 @@ return args;
 
 **Note:** You have to use the same name in both name property of axes and xAxisName/yAxisName property of series in the above **beforeSeriesRender** event.
 
-![](Multiple_Axes_images/customize_series.png)
+![Series customization in ASP NET MVC pivot chart control](Multiple_Axes_images/customize_series.png)
 
 To learn more about series properties, [`click here`](https://help.syncfusion.com/api/js/ejchart#members:series).
 
@@ -218,7 +218,7 @@ You can render the pivot chart with multiple axes by series index.
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/seriesindex_zero.png)
+![Series customization at zeroth index in ASP NET MVC pivot chart control](Multiple_Axes_images/seriesindex_zero.png)
 
 ### For X-axes
 
@@ -229,7 +229,7 @@ You can render the pivot chart with multiple axes by series index.
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/seriesindex_one.png)
+![Series customization at first index in ASP NET MVC pivot chart control](Multiple_Axes_images/seriesindex_one.png)
 
 ## Customizing PrimaryYAxis and axes properties
 
@@ -243,7 +243,7 @@ You can customize the **labelFormat** for both PrimaryYAxis and custom axes.
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/label_formats.png)
+![Customization of label formats in ASP NET MVC pivot chart control](Multiple_Axes_images/label_formats.png)
 
 ### title
 You can customize the title for axes by the **title** property.
@@ -255,4 +255,4 @@ You can customize the title for axes by the **title** property.
 
 {% endhighlight %}
 
-![](Multiple_Axes_images/title.png)
+![Customization of title in ASP NET MVC pivot chart control](Multiple_Axes_images/title.png)

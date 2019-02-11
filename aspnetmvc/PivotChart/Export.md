@@ -22,7 +22,7 @@ The PivotChart control can be exported by invoking **“exportPivotChart”** me
 
 //If you want to render PivotChart in Client Mode.
   @Html.EJ().Pivot().PivotChart("PivotChart1").CommonSeriesOptions(comm => { comm.Type(SeriesType.Column).Tooltip(tool => { tool.Visible(true); }).EnableAnimation(true); }).Size(size => size.Height("460px").Width("100%")).PrimaryYAxis(primaryYAxis => primaryYAxis.Title(title => title.Text("Amount"))).Legend(legend => legend.Visible(true)).ClientSideEvents(oEve => { oEve.Load("load"); }).IsResponsive(true).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); rows.FieldName("State").FieldCaption("State").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); }))
-                  
+
 //If you want to render PivotChart in Server Mode.
   @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc"))..Size(size => size.Height("460px").Width("100%"))
 
@@ -32,17 +32,17 @@ The PivotChart control can be exported by invoking **“exportPivotChart”** me
             var chartObj = $('#PivotChart1').data("ejPivotChart");
             //If you render PivotChart in Client Mode, set the export option like below.
             chartObj.exportPivotChart("ExcelExport","fileName");
-            
+
             //If you render PivotChart in Server Mode, set the export option like below.
             chartObj.exportPivotChart(ej.PivotChart.ExportOptions.Excel);;
             }
    </script>
-    
+
 {% endhighlight %}
 
 To achieve exporting in client mode, we need to add **"Syncfusion.EJ.Export"** dependency library into the application.
 
-When PivotChart is rendered in Client Mode, a method needs to be added in MVC controller file of the application and we need to import **"Syncfusion.EJ.Export"** namespace in the controller file. 
+When PivotChart is rendered in Client Mode, a method needs to be added in MVC controller file of the application and we need to import **"Syncfusion.EJ.Export"** namespace in the controller file.
 
 {% highlight c# %}
 
@@ -54,7 +54,7 @@ public void ExcelExport()
     Dictionary<string, string> chartParams = serializer.Deserialize<Dictionary<string, string>>(args);
     pivotChartExcelExport.ExportToExcel(chartParams);
 }
-        
+
 {% endhighlight %}
 
 When PivotChart is rendered in Server Mode, a service method needs to be added in WCF/WebAPI for server side operations.
@@ -103,8 +103,8 @@ To achieve Excel export, method name **"ExcelExport"** and file name is sent as 
           chartObj.exportPivotChart("ExcelExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method need to be added in MVC controller file of the application.
 
@@ -139,7 +139,7 @@ function exportBtnClick(args)
     chartObj.exportPivotChart(ej.PivotChart.ExportOptions.Excel);
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 
 
 
@@ -159,8 +159,8 @@ To achieve Word export, method name **"WordExport"** and file name is sent as th
           chartObj.exportPivotChart("WordExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method need to be added in MVC controller file of the application.
 
@@ -215,21 +215,21 @@ To achieve Word export, method name **"PDFExport"** and file name is sent as the
           chartObj.exportPivotChart("PDFExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method need to be added in MVC controller file of the application.
 
 {% highlight c# %}
 
 public void PDFExport()
-{ 
+{
     System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer() { MaxJsonLength = Int32.MaxValue };
     PivotChartPDFExport pivotChartPDFExport = new PivotChartPDFExport();
     string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
     Dictionary<string, string> chartParams = serializer.Deserialize<Dictionary<string, string>>(args);
     pivotChartPDFExport.ExportToPDF(chartParams);
-}        
+}
 
 {% endhighlight %}
 
@@ -251,7 +251,7 @@ function exportBtnClick(args)
     chartObj.exportPivotChart(ej.PivotChart.ExportOptions.PDF);
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Image Export
 User can export contents of the PivotChart to image format for future archival, references and analysis purposes. We can export PivotChart to the following image formats.
@@ -275,8 +275,8 @@ To achieve image export, method name **"ImageExport"** ,**“ej.PivotChart.Expor
           chartObj.exportPivotChart("ImageExport","fileName",ej.PivotChart.ExportOptions.PNG);
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method need to be added in MVC controller file of the application.
 
@@ -306,7 +306,7 @@ function exportBtnClick(args)
     chartObj.exportPivotChart(ej.PivotChart.ExportOptions.PNG);
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 
 ## PivotChart format selection
 
@@ -330,12 +330,12 @@ N> By default PivotChart will be exported as image format to Excel document.
             args.exportChartAsImage = false; //you can set the chart format here
         }
 </script>
-    
+
 {% endhighlight %}
 
 The below screenshot shows the control exported to Excel document showing its own format (Pivoting Chart).
 
-![](Export_images/Export_ExcelChartClient.png)
+![Excel exporting of ASP NET MVC pivot chart control](Export_images/Export_ExcelChartClient.png)
 
 ## Exporting Customization
 
@@ -353,17 +353,17 @@ N> Title and description cannot be added to image formats.
             var chartObj = $('#PivotChart1').data("ejPivotChart");
             //If you render PivotChart in Client Mode, set the export option like below.
             chartObj.exportPivotChart("ExcelExport","fileName");
-            
+
             //If you render PivotChart in Server Mode, set the export option like below.
             chartObj.exportPivotChart(ej.PivotChart.ExportOptions.Excel);;
         }
-            
+
         function Exporting(args) {
             args.title = "PivotChart";
             args.description = "Visualizes both OLAP and Relational datasource in graphical format";
         }
    </script>
-    
+
 {% endhighlight %}
 
 
@@ -475,7 +475,7 @@ function exportBtnClick(args)
     var chartObj = $('#PivotChart1').data("ejPivotChart ");
     chartObj.exportPivotChart("http://js.syncfusion.com/ejservices/api/PivotChart/Olap/ExcelExport", "fileName");
 }
-{% endhighlight %}    
+{% endhighlight %}
 
 For Server mode, the exporting document name is provided in the WebAPI controller as found in the below code snippet.
 
@@ -506,16 +506,16 @@ public void Export(System.IO.Stream stream) {
 
 The below screenshot shows the PivotChart control exported to Excel document.
 
-![](Export_images/Export_ExcelClient.png)
+![Excel exporting of ASP NET MVC pivot chart control](Export_images/Export_ExcelClient.png)
 
 The below screenshot shows the PivotChart control exported to PDF document.
 
-![](Export_images/Export_PDFClient.png)
+![PDF exporting of ASP NET MVC pivot chart control](Export_images/Export_PDFClient.png)
 
 The below screenshot shows the PivotChart control exported to Word document.
 
-![](Export_images/Export_WordClient.png)
+![Word exporting of ASP NET MVC pivot chart control](Export_images/Export_WordClient.png)
 
 The below screenshot shows the PivotChart control exported to PNG format.
 
-![](Export_images/Export_PNGClient.png)
+![PNG exporting of ASP NET MVC pivot chart control](Export_images/Export_PNGClient.png)

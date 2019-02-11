@@ -11,21 +11,21 @@ documentation: ug
 
 ## Normal Layout
 
-A layout in which summary cells are positioned at the bottom of each parent member and their child members appear next to them. Normal layout is the default layout in PivotGrid control. The enumeration property `Layout` needs to be set to **"PivotGridLayout.Normal"** in-order to view PivotGrid in normal layout. 
+A layout in which summary cells are positioned at the bottom of each parent member and their child members appear next to them. Normal layout is the default layout in PivotGrid control. The enumeration property `Layout` needs to be set to **"PivotGridLayout.Normal"** in-order to view PivotGrid in normal layout.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("/OLAPService")) 
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.Normal).Url(Url.Content("/OLAPService"))
 
 {% endhighlight %}
 
-![](Grid-Layout_images/layout-normal.png)
+![Normal layout in ASP NET MVC pivot grid control](Grid-Layout_images/layout-normal.png)
 
 ## No Summaries Layout
 
 I> This feature is applicable only for OLAP datasource.
 
-A layout in which summary cells are completely hidden and the child members appear next to their parent member.  The enumeration property `Layout` needs to be set to **"PivotGridLayout.NoSummaries"** in-order to view PivotGrid without summaries. 
+A layout in which summary cells are completely hidden and the child members appear next to their parent member.  The enumeration property `Layout` needs to be set to **"PivotGridLayout.NoSummaries"** in-order to view PivotGrid without summaries.
 
 {% highlight CSHTML %}
 
@@ -33,7 +33,7 @@ A layout in which summary cells are completely hidden and the child members appe
 
 {% endhighlight %}
 
-![](Grid-Layout_images/layout-nosummary.png)
+![No summaries layout in ASP NET MVC pivot grid control](Grid-Layout_images/layout-nosummary.png)
 
 
 ## Excel-like Layout
@@ -44,16 +44,16 @@ A layout in which summary cells are positioned besides each parent member and th
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").Layout(PivotGridLayout.ExcelLikeLayout).Url(Url.Content("/OLAPService"))
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](Grid-Layout_images/layout-excel.png)
+![Excel like layout in ASP NET MVC pivot grid control](Grid-Layout_images/layout-excel.png)
 
 
-## Top Summary Layout 
+## Top Summary Layout
 
 I> This feature is applicable only for OLAP datasource only at Server Mode.
 
-A layout in which summary cells are positioned at the top of each parent member and their child members appear next to them. The enumeration property `Layout` needs to be set to **"PivotGridLayout.NormalTopSummary"** in-order to view PivotGrid in top summaries layout. 
+A layout in which summary cells are positioned at the top of each parent member and their child members appear next to them. The enumeration property `Layout` needs to be set to **"PivotGridLayout.NormalTopSummary"** in-order to view PivotGrid in top summaries layout.
 
 {% highlight CSHTML %}
 
@@ -61,5 +61,5 @@ A layout in which summary cells are positioned at the top of each parent member 
 
 {% endhighlight %}
 
-![](Grid-Layout_images/layout-top.png)
+![Top summary layout in ASP NET MVC pivot grid control](Grid-Layout_images/layout-top.png)
 

@@ -67,7 +67,7 @@ Register the referred assemblies in "Web.config" files available inside Views fo
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
+    <assemblies>
         ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -82,32 +82,32 @@ Register the required namespaces in "Web.config" files available inside Views fo
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
+    ……
     ……
     <appSettings>
-        …… 
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
-### Scripts and CSS References  
+### Scripts and CSS References
 
 The scripts and style sheets that are mandatorily required to render PivotGrid control in a MVC Web Application are mentioned in an appropriate order below:
 
@@ -117,14 +117,14 @@ The scripts and style sheets that are mandatorily required to render PivotGrid c
 
 Scripts and style sheets are referred under the head tag in _Layout.cshtml file which is found inside Views > Shared folder.
 
-{% highlight html %}    
+{% highlight html %}
 
 <head>
     <link href="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" rel="stylesheet" type="text/css" />
     <script src="http://cdn.syncfusion.com/js/assets/external/jquery-3.0.0.min.js" type="text/javascript"></script>
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js" type="text/javascript"></script>
-    
-</head>    
+
+</head>
 
 {% endhighlight %}
 
@@ -132,11 +132,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())   
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -166,17 +166,17 @@ Initializes the OLAP datasource for PivotGrid control as shown below.
 
 The above code will generate a simple PivotGrid with "Fiscal" field in Row, "Customer Geography" field in Column and "Internet Sales Amount" field in Value section.
 
-![](Getting-Started_images/OlapClientside.png) 
+![ASP NET MVC pivot grid control in OLAP client mode](Getting-Started_images/OlapClientside.png)
 
 ## Creating a simple application with PivotGrid and OLAP datasource (Server Mode)
- 
+
 This section covers the information required to create a simple PivotGrid bound to OLAP datasource.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ### Project Initialization
 
-Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **"PivotGridDemo"**. 
+Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **"PivotGridDemo"**.
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
@@ -211,21 +211,21 @@ System.Web.WebPages</th>
 </tr>
 <tr><td>
 MVC3</td><td>
-{{ site.mvc3releaseversion }}</td><td>    
+{{ site.mvc3releaseversion }}</td><td>
 {{ site.35esreleaseversion }}</td><td>
 3.0</td><td>
 1.0</td>
 </tr>
 <tr><td>
 MVC4</td><td>
-{{ site.mvc4releaseversion }}</td><td>    
+{{ site.mvc4releaseversion }}</td><td>
 {{ site.40esreleaseversion }}</td><td>
 4.0</td><td>
 2.0</td>
 </tr>
 <tr><td>
 MVC5</td><td>
-{{ site.mvc5releaseversion }}</td><td>    
+{{ site.mvc5releaseversion }}</td><td>
 {{ site.45esreleaseversion }}</td><td>
 5.0</td><td>
 3.0</td>
@@ -237,8 +237,8 @@ Register the referenced assemblies in "Web.config" files available inside Views 
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
-        …… 
+    <assemblies>
+        ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -246,11 +246,11 @@ Register the referenced assemblies in "Web.config" files available inside Views 
         <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Linq.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Olap.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
-        <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.Compression.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+        <add assembly="Syncfusion.PivotAnalysis.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.Pdf.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.XlsIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.DocIO.Base, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     </assemblies>
 </compilation>
 
@@ -260,11 +260,11 @@ Register the required namespaces in "Web.config" files available inside Views fo
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 
 {% endhighlight %}
@@ -272,18 +272,18 @@ Register the required namespaces in "Web.config" files available inside Views fo
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in "Web.config" file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
 </appSettings>
-        
+
 </configuration>
 
 {% endhighlight %}
@@ -300,7 +300,7 @@ The scripts and style sheets that are mandatorily required to render PivotGrid c
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight html %}
 
 <head>
@@ -315,11 +315,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight html %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager()) 
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 
 </body>
 
@@ -330,11 +330,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
 {% highlight html %}
-    
+
 @using Syncfusion.JavaScript;
 
-<div> 
-    @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/Olap")) 
+<div>
+    @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("/Olap"))
 </div>
 
 {% endhighlight %}
@@ -362,7 +362,7 @@ namespace PivotGridDemo
 {
     public class OlapController: ApiController
     {
-    
+
     }
 }
 
@@ -393,7 +393,7 @@ namespace PivotGridDemo
 {
     public class OlapController: ApiController
     {
-    
+
     }
 }
 
@@ -425,13 +425,13 @@ Define the service methods inside OlapController class, found inside `OlapContro
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
-    public class OlapController: ApiController 
+    public class OlapController: ApiController
     {
         Syncfusion.JavaScript.PivotGrid htmlHelper = new Syncfusion.JavaScript.PivotGrid();
         string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
-        static int cultureIDInfoval = 1033; 
+        static int cultureIDInfoval = 1033;
         JavaScriptSerializer serializer = new JavaScriptSerializer();
         string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports
 
@@ -671,7 +671,7 @@ public static class WebApiConfig
 
 Now, **PivotGrid** is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
 
-![](Getting-Started_images/olapwebapi.png) 
+![ASP NET MVC pivot grid control in OLAP server mode](Getting-Started_images/olapwebapi.png)
 
 ### WCF
 

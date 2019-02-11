@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Number format  | PivotGrid | ASP.NET MVC | Syncfusion
-description: number format 
+description: number format
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# Number format 
+# Number format
 
 I> This feature is applicable only for all modes.
 
@@ -31,17 +31,17 @@ Allows us to specify the required number format that PivotGrid should use in its
 {% highlight CSHTML %}
 
  @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); rows.FieldName("State").FieldCaption("State").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); values.FieldName("Quantity").Format("decimal").Add(); }))
- 
+
  {% endhighlight %}
 
-![](Number-Format_images/RelationalClient.png)
+![Number formatting in ASP NET MVC pivot grid relational client mode](Number-Format_images/RelationalClient.png)
 
 ### Server Mode
 
 You can set Number Format through the `Format` property. You should specify the format to the property as per the MS standard notation.
- 
+
 private PivotReport BindDefaultData()
-    {        
+    {
         PivotReport pivotSetting = new PivotReport();
         pivotSetting.PivotRows.Add(new PivotItem { FieldMappingName = "Product", FieldHeader = "Product", TotalHeader = "Total" });
         pivotSetting.PivotColumns.Add(new PivotItem { FieldMappingName = "Country", FieldHeader = "Country", TotalHeader = "Total" });
@@ -50,7 +50,7 @@ private PivotReport BindDefaultData()
         return pivotSetting;
     }
 
-![](Number-Format_images/RelationalServer.png)
+![Number formatting in ASP NET MVC pivot grid relational server mode](Number-Format_images/RelationalServer.png)
 
 ## OLAP
 
@@ -62,11 +62,11 @@ private PivotReport BindDefaultData()
 
 {% endhighlight %}
 
-![](Number-Format_images/OlapClient.png)
+![Number formatting in ASP NET MVC pivot grid OLAP client mode](Number-Format_images/OlapClient.png)
 
 ### Server Mode
 
- OLAP server mode supports the following Number Formats in addition to the above mentioned formats. 
+ OLAP server mode supports the following Number Formats in addition to the above mentioned formats.
 * General
 * RoundTrip
 * FixedPoint
@@ -97,4 +97,4 @@ private OlapReport CreateOlapReport()
      return olapReport;
 }
 
-![](Number-Format_images/OlapServer.png)
+![Number formatting in ASP NET MVC pivot grid OLAP server mode](Number-Format_images/OlapServer.png)

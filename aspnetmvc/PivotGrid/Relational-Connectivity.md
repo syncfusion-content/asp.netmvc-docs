@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Relational Connectivity | PivotGrid | ASP.NET MVC | Syncfusion
-description: relational connectivity 
+description: relational connectivity
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotGrid to Collection
 
@@ -48,8 +48,8 @@ namespace PivotGridDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -109,7 +109,7 @@ namespace PivotGridDemo
     public class RelationalService : IRelationalService
     {
     ……
-    …… 
+    ……
     }
 
     internal class ProductSales
@@ -223,10 +223,10 @@ First, declare the service methods inside **IRelationalService** interface, foun
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
     [ServiceContract]
-    public interface IRelationalService 
+    public interface IRelationalService
     {
         [OperationContract]
         Dictionary<string, object> InitializeGrid(string action);
@@ -261,10 +261,10 @@ Then, elaborate the service methods inside the main class, found in `RelationalS
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class RelationalService: IRelationalService 
+    public class RelationalService: IRelationalService
     {
         PivotGrid htmlHelper = new PivotGrid();
         JavaScriptSerializer serializer = new JavaScriptSerializer();
@@ -450,7 +450,7 @@ The endpointBehaviors are illustrated as follows
 {% highlight xml %}
 
 <system.serviceModel>
-    …… 
+    ……
     ……
     <services>
         <service name="PivotGridDemo.RelationalService">
@@ -473,7 +473,7 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
             </behavior>
         </endpointBehaviors>
     </behaviors>
-    …… 
+    ……
     ……
 </system.serviceModel>
 
@@ -508,5 +508,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
-![](Getting-Started_images/relaionalwebapi.png) 
+![ASP NET MVC pivot grid control with relational server mode](Getting-Started_images/relaionalwebapi.png)
 

@@ -21,7 +21,7 @@ Grouping Bar allows user to dynamically alter the report by filter and remove op
 
 {% endhighlight %}
 
-![](Grouping-Bar_images/OlapGroupingbar.png)
+![Grouping bar in ASP NET MVC pivot grid OLAP client mode](Grouping-Bar_images/OlapGroupingbar.png)
 
 ### Server Mode
 
@@ -31,41 +31,41 @@ Grouping Bar allows user to dynamically alter the report by filter and remove op
 
 {% endhighlight %}
 
-![](Grouping-Bar_images/OlapServerModeGB.png)
+![Grouping bar in ASP NET MVC pivot grid OLAP server mode](Grouping-Bar_images/OlapServerModeGB.png)
 
 ## Drag and Drop
 
 You can alter the report on fly through drag-and-drop operation.
 
-![](Grouping-Bar_images/GBar_Olap.png)
+![Drag and drop in ASP NET MVC pivot grid control](Grouping-Bar_images/GBar_Olap.png)
 
 ## Context Menu
 
 You can also alter the report by using context menu.
 
-![](Grouping-Bar_images/CMenu_Olap.png)
+![Context menu in ASP NET MVC pivot grid control](Grouping-Bar_images/CMenu_Olap.png)
 
 ## Searching Values
 
 Search option available in Grouping Bar allows you to search a specific value that needs to be filtered from the list of values inside the filter pop-up window.
 
-![](Grouping-Bar_images/OlapFilterIcon.png)
+![Filtering icon in grouping bar of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapFilterIcon.png)
 
-![](Grouping-Bar_images/olapclientsearching.png)
+![Searching in member editor dialog of ASP NET MVC pivot grid control](Grouping-Bar_images/olapclientsearching.png)
 
 ## Filtering Values
 
 Filtering option available in Grouping Bar allows you to select a specific set of values that needs to be displayed in the PivotGrid control. At least one value needed to be in checked state while filtering otherwise “Ok” button will be disabled.
 
-![](Grouping-Bar_images/OlapFiltericon.png)
+![Filtering icon in grouping bar of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapFiltericon.png)
 
-![](Grouping-Bar_images/OlapFiltering.png)
+![Filtering in member editor dialog of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapFiltering.png)
 
 ## Removing Field
 
 Remove option available in the Grouping Bar allows you to completely remove a specific field from the PivotGrid control. Remove operation can be either achieved by clicking remove icon available inside each field or by dragging and dropping field out of Grouping Bar region.
 
-![](Grouping-Bar_images/OlapRemoveicon.png)
+![Remove icon in grouping bar of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapRemoveicon.png)
 
-![](Grouping-Bar_images/OlapRemove.png) 
+![Removed items in ASP NET MVC pivot grid control](Grouping-Bar_images/OlapRemove.png)
 

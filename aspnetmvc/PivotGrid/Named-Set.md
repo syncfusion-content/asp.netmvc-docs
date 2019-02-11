@@ -21,12 +21,12 @@ You can bind the Named Sets in PivotGrid by setting it's unique name in the `Fie
 
 {% endhighlight %}
 
-![](KPI_images/namedset.png)
+![Named sets in ASP NET MVC pivot grid OLAP client mode](KPI_images/namedset.png)
 
 
 ## Server Mode
 
-You can add Named Sets in the PivotGrid by using "NamedSetElement" Class in the OlapReport. 
+You can add Named Sets in the PivotGrid by using "NamedSetElement" Class in the OlapReport.
 
 {% highlight C# %}
 
@@ -52,5 +52,5 @@ olapReport.SeriesElements.Add(dimensionElementRow);
 
 {% endhighlight %}
 
-![](KPI_images/servernamedset.png)
+![Named sets in ASP NET MVC pivot grid OLAP server mode](KPI_images/servernamedset.png)
 

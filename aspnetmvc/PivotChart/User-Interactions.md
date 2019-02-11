@@ -21,7 +21,7 @@ Tooltip for the data points can be enabled using the **"Visible"** option of the
 
 {% endhighlight %}
 
-![](User-Interactions_images/tooltip.png) 
+![Tooltip in ASP NET MVC pivot chart control](User-Interactions_images/tooltip.png)
 
 ### Tooltip Template
 HTML elements can be displayed inside the tooltip by using the `Template` option. The template option takes the value of the “id” attribute from the HTML element. You can use the **#point.x#** and **#point.y#** as place holders in the HTML element to display the X and Y values of the corresponding data points.
@@ -42,7 +42,7 @@ HTML elements can be displayed inside the tooltip by using the `Template` option
 
 {% endhighlight %}
 
-![](User-Interactions_images/tooltiptemplate.png) 
+![Tooltip template in ASP NET MVC pivot chart control](User-Interactions_images/tooltiptemplate.png)
 
 ### Tooltip Customization
 By using `Fill` and `Border` properties of tooltip, you can customize its background color, border color and border width.
@@ -52,9 +52,9 @@ By using `Fill` and `Border` properties of tooltip, you can customize its backgr
 //Change tooltip color and border
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { comm.Tooltip(tool => { tool.Visible(true). Fill("#FF9933").Border(border => border.Width(1).Color("#993300")); });}).Size(size => size.Height("460px").Width("100%"))
 
-{% endhighlight %}   
+{% endhighlight %}
 
-![](User-Interactions_images/tooltipcustomization.png) 
+![Tooltip customization in ASP NET MVC pivot chart control](User-Interactions_images/tooltipcustomization.png)
 
 ### Tooltip with Rounded Corners
 The tooltip properties, `RX` and `RY` are used to customize its corner radius.
@@ -64,9 +64,9 @@ The tooltip properties, `RX` and `RY` are used to customize its corner radius.
 //Customize the corner radius of the tooltip rectangle.
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { comm.Tooltip(tool => { tool.Visible(true).RX(50).RY(50);});}).Size(size => size.Height("460px").Width("100%"))
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/tooltiprouded.png) 
+![Tooltip with rounded corners in ASP NET MVC pivot chart control](User-Interactions_images/tooltiprouded.png)
 
 ## Zooming and Panning
 
@@ -82,13 +82,13 @@ There are two ways to zoom the Chart:
 //Enable zooming in chart
 @Html.EJ().Pivot().PivotChart("PivotChart1").Zooming(zoom=> zoom.Enable(true)).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/zooming.png) 
+![Zooming in ASP NET MVC pivot chart control](User-Interactions_images/zooming.png)
 
 After zooming the Chart, a zooming toolbar will appear with options to *zoom, pan and reset*. Selecting the **“Pan”** option will allow to view the Chart and selecting the **“Reset”** option will reset the zoomed Chart.
 
-![](User-Interactions_images/pan.png) 
+![Panning in ASP NET MVC pivot chart control](User-Interactions_images/pan.png)
 
 ### Types of Zooming
 You can zoom the particular axis like horizontal axis or vertical axis or both axis using `Type` option in zooming.
@@ -97,7 +97,7 @@ N> By default, the value for the `Type` option in zooming is “x,y” (indicati
 
 {% highlight CSHTML %}
 
-//Enable horizontal zooming 
+//Enable horizontal zooming
 @Html.EJ().Pivot().PivotChart("PivotChart1").Zooming(zoom=> zoom.Enable(true).Type("x")).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -110,9 +110,9 @@ N> By default, the value for the `Type` option in zooming is “x,y” (indicati
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Zooming(zoom => { zoom.EnableScrollbar(true); })
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/scrollbar.png)
+![Scrollbar in ASP NET MVC pivot chart control](User-Interactions_images/scrollbar.png)
 
 ## Marker and Crosshair
 
@@ -122,7 +122,7 @@ In PivotChart, you can customize the marker `shape` with following symbols.
 * Rectangle
 * Circle
 * Cross
-* Diamond 
+* Diamond
 * Pentagon
 * Hexagon
 * Star
@@ -141,31 +141,31 @@ In PivotChart, you can customize the marker `shape` with following symbols.
 
 {% endhighlight %}
 
-![](User-Interactions_images/marker.png) 
+![Marker customization in ASP NET MVC pivot chart control](User-Interactions_images/marker.png)
 
 ### Enable Crosshair and Crosshair Label
 Crosshair helps you to view the value at mouse position or touch contact point. Crosshair can be enabled by using the `Visible` option in `CrossHair` property. Crosshair label can be enabled by using the **“Visible”** option in `CrosshairLabel` property within its corresponding axis.
 
 {% highlight CSHTML %}
 
-//Initializing Crosshair and crosshair label  
+//Initializing Crosshair and crosshair label
 @Html.EJ().Pivot().PivotChart("PivotChart1").CrossHair(crossHair => crossHair.Visible(true)).PrimaryXAxis(primaryX => primaryX.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true))).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
-![](User-Interactions_images/crosshair.png) 
+![Visibility of crosshair label in ASP NET MVC pivot chart control](User-Interactions_images/crosshair.png)
 
 ### Crosshair Line and Label Customization
 By using `Line` property of crosshair, you can customize its line color and width. Also by using `Fill` and `Border` properties of crosshair label, you can customize its background color, border color and border width.
 
 {% highlight CSHTML %}
 
-//Customizing the crosshair label background color and border 
-@Html.EJ().Pivot().PivotChart("PivotChart1").CrossHair(crossHair => crossHair.Line(line => line.Color("gray").Width(2)).Visible(true)).PrimaryXAxis(primaryX => primaryX.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true).Fill("red").Border(border => border.Color("green").Width(2)))).PrimaryYAxis(primaryy => primaryy.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true))).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")) 
+//Customizing the crosshair label background color and border
+@Html.EJ().Pivot().PivotChart("PivotChart1").CrossHair(crossHair => crossHair.Line(line => line.Color("gray").Width(2)).Visible(true)).PrimaryXAxis(primaryX => primaryX.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true).Fill("red").Border(border => border.Color("green").Width(2)))).PrimaryYAxis(primaryy => primaryy.CrosshairLabel(crosshairlabel => crosshairlabel.Visible(true))).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
-![](User-Interactions_images/crosshairline.png) 
+![Customization of crosshair line and label in ASP NET MVC pivot chart control](User-Interactions_images/crosshairline.png)
 
 ## Trackball
 
@@ -179,19 +179,19 @@ Trackball can be enabled by setting both - 'Visible' option of the crosshair to 
 
 {% endhighlight %}
 
-![](User-Interactions_images/trackball.png) 
+![Trackball in ASP NET MVC pivot chart control](User-Interactions_images/trackball.png)
 
 ### Trackball Marker and Line Customization
 Shape and size of the trackball marker can be customized using the `Shape` and `Size` options of the crosshair marker. Color and width of the trackball line can be customized using the **“Line”** option in the crosshair.
 
 {% highlight CSHTML %}
 
-//Customize the trackball line color and width and Marker visible and shape 
+//Customize the trackball line color and width and Marker visible and shape
 @Html.EJ().Pivot().PivotChart("PivotChart1").CrossHair(crossHair => crossHair.Visible(true).Type(CrosshairType.Trackball).Line(line => line.Color("#800000").Width(2)).Marker(marker => marker.Shape(ChartShape.Pentagon).Size(size => size.Height(9).Width(9)).Visible(true))).Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px"))
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/trackballmarker.png) 
+![Customization of Trackball in ASP NET MVC pivot chart control](User-Interactions_images/trackballmarker.png)
 
 ## Highlight
 PivotChart provides highlighting support for the series and data points on mouse hover. To enable highlighting, set the **“enable”** property to true in the `highlightSettings` option of the series.
@@ -206,11 +206,11 @@ PivotChart provides highlighting support for the series and data points on mouse
         this.model.series[seriescount].highlightSettings.enable = true
 </script>
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ### Highlight Mode
 You can set three different modes for highlighting data points and series by using the `mode` property of the `highlightSettings`.
- 
+
 * series
 * points
 * cluster
@@ -227,9 +227,9 @@ You can set three different modes for highlighting data points and series by usi
     }
 </script>
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/highlightmode.png) 
+![Highlight mode in ASP NET MVC pivot chart control](User-Interactions_images/highlightmode.png)
 
 ### Customize the Highlight Styles
 To customize the highlighted series, use `border.color`, `border.width` and `opacity`
@@ -243,15 +243,15 @@ To customize the highlighted series, use `border.color`, `border.width` and `opa
    function onSeriesRenders(args) {
       for (var seriescount = 0; seriescount < this.model.series.length; seriescount++){
         this.model.series[seriescount].highlightSettings.enable = true;
-        this.model.series[seriescount].highlightSettings.opacity = "0.5";                                                                  
-        this.model.series[seriescount].highlightSettings.border.width = "1.5";                                
+        this.model.series[seriescount].highlightSettings.opacity = "0.5";
+        this.model.series[seriescount].highlightSettings.border.width = "1.5";
         this.model.series[seriescount].highlightSettings.border.color = "red";
     }
 </script>
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/customizehighlight.png) 
+![Highlight style in ASP NET MVC pivot chart control](User-Interactions_images/customizehighlight.png)
 
 ### Patterns to Highlight
 PivotChart provides pattern support for highlighting the data by setting an appropriate value to the `pattern` property of the `highlightSettings`. The different types of highlight patterns are as follows.
@@ -285,13 +285,13 @@ PivotChart provides pattern support for highlighting the data by setting an appr
    function onSeriesRenders(args) {
       for (var seriescount = 0; seriescount < this.model.series.length; seriescount++){
         this.model.series[seriescount].highlightSettings.enable = true;
-        this.model.series[seriescount].highlightSettings.pattern = "chessboard"; 
+        this.model.series[seriescount].highlightSettings.pattern = "chessboard";
     }
 </script>
 
-{% endhighlight %} 
+{% endhighlight %}
 
-![](User-Interactions_images/patternhighlight.png) 
+![Highlight settings in ASP NET MVC pivot chart control](User-Interactions_images/patternhighlight.png)
 
 ## Selection
 PivotChart provides selection support for the series and data points on mouse click. To enable selection, set the **“enable”** property to true in the `selectionSettings` option of the series.
@@ -330,7 +330,7 @@ You can set three different selection mode for highlighting the data points and 
 
 {% endhighlight %}
 
-![](User-Interactions_images/selectionmode.png) 
+![Selection mode in ASP NET MVC pivot chart control](User-Interactions_images/selectionmode.png)
 
 ### Customize the Selection Styles
 To customize the selection styles, use the `border.color`, `border.width` and `opacity` options in the `selectionSettings`.
@@ -343,15 +343,15 @@ To customize the selection styles, use the `border.color`, `border.width` and `o
    function onSeriesRenders(args) {
       for (var seriescount = 0; seriescount < this.model.series.length; seriescount++){
         this.model.series[seriescount].selectionSettings.enable = true;
-        this.model.series[seriescount].selectionSettings.opacity = "0.5";                                                                  
-        this.model.series[seriescount].selectionSettings.border.width = "1.5";                                
+        this.model.series[seriescount].selectionSettings.opacity = "0.5";
+        this.model.series[seriescount].selectionSettings.border.width = "1.5";
         this.model.series[seriescount].selectionSettings.border.color = "red";
     }
 </script>
 
 {% endhighlight %}
 
-![](User-Interactions_images/customizeselection.png) 
+![Selection style in ASP NET MVC pivot chart control](User-Interactions_images/customizeselection.png)
 
 ### Patterns for Selection
 PivotChart provides pattern support for the selecting the data by setting an appropriate value to the `pattern` property of the `selectionSettings` option. The different types of selection patterns are as follows.
@@ -384,10 +384,10 @@ PivotChart provides pattern support for the selecting the data by setting an app
    function onSeriesRenders(args) {
       for (var seriescount = 0; seriescount < this.model.series.length; seriescount++){
         this.model.series[seriescount].selectionSettings.enable = true;
-        this.model.series[seriescount].selectionSettings.pattern = "chessboard"; 
+        this.model.series[seriescount].selectionSettings.pattern = "chessboard";
     }
 </script>
 
 {% endhighlight %}
 
-![](User-Interactions_images/patternselecion.png) 
+![Selection settings in ASP NET MVC pivot chart control](User-Interactions_images/patternselecion.png)

@@ -1,20 +1,20 @@
 ---
 layout: post
 title: Relational Connectivity | PivotChart | ASP.NET MVC | Syncfusion
-description: relational connectivity 
+description: relational connectivity
 platform: ejmvc
 control: PivotChart
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotChart to Collection
 This section demonstrates binding of a collection to the PivotChart control as datasource. For more information on this datasource refer to the following links.
 
 When you are using WebAPI controller, refer to the “Datasource Initialization” section under the following [link](http://help.syncfusion.com/js/pivotchart/relational-getting-started#creating-a-simple-application-with-pivotgrid-and-relational-datasource-server-mode).
 
-If you are using WCF Service, refer the "Datasource Initialization" section below. 
+If you are using WCF Service, refer the "Datasource Initialization" section below.
 
 ## WCF
 **Adding a WCF Service**
@@ -32,7 +32,7 @@ Now, WCF service is added into the application successfully that comprises of th
 Remove the “DoWork” method present inside both `RelationalService.svc.cs` and `IRelationalService.cs` files. Next, add “AspNetCompatibilityRequirements” attribute on top of main class present inside `RelationalService.svc.cs` and set **“RequirementsMode”** value to **“Allowed”**.
 
 {% highlight c# %}
-    
+
 namespace PivotChartDemo
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -46,8 +46,8 @@ namespace PivotChartDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -71,7 +71,7 @@ Following are the list of namespaces to be added on top of the main class inside
 
 using System.ServiceModel.Activation;
 using Syncfusion.JavaScript;
-using Syncfusion.PivotAnalysis.Base; 
+using Syncfusion.PivotAnalysis.Base;
 
 namespace PivotChartDemo
 {
@@ -95,7 +95,7 @@ namespace PivotChartDemo
     public class RelationalService : IRelationalService
     {
         //....
-        //.... 
+        //....
     }
 
     internal class ProductSales
@@ -230,7 +230,7 @@ namespace PivotChartDemo
     public class RelationalService : IRelationalService
     {
         PivotChart pivotChart = new PivotChart();
-        
+
         public Dictionary<string, object> InitializeChart(string action, string currentReport, string customObject)
         {
             this.BindData();
@@ -265,9 +265,9 @@ You can expose services through the properties such as binding, contract and add
 1. Contract: This property indicates that the contract of the endpoint is exposing. Here you are referring to `IRelationalService` contract and hence it is `PivotChartDemo.IRelationalService`.
 2. Binding: In your application, you use `webHttpBinding` to post and receive the requests and responses between the client-end and the service.
 3. behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint.
- 
+
 The endpointBehaviors are illustrated as follows.
- 
+
 {% highlight xml %}
 
 <system.serviceModel>
@@ -281,7 +281,7 @@ The endpointBehaviors are illustrated as follows.
     </services>
 </system.serviceModel>
 {% endhighlight %}
- 
+
 The endpointBehaviors contain all the behaviors for an endpoint. You can link each endpoint to the respective behavior only by using this name property.
 
 {% highlight xml %}
@@ -321,5 +321,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotChart** will be rendered as shown in the below figure.
 
-![](Relational-Connectivity_images/ServerModeWCF.png) 
+![ASP NET MVC pivot chart control with relational wcf service](Relational-Connectivity_images/ServerModeWCF.png)
 

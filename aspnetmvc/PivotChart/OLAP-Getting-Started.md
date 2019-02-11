@@ -67,7 +67,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
+    <assemblies>
         ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -82,28 +82,28 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
+    ……
     ……
     <appSettings>
-        …… 
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
@@ -118,7 +118,7 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight cshtml %}
 
 <head>
@@ -132,11 +132,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())   
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -156,7 +156,7 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
         height:460px;
     }
 </style>
-    
+
 {% endhighlight %}
 
 ### Populate PivotChart With DataSource
@@ -170,17 +170,17 @@ Initializes the OLAP datasource for PivotChart control as shown below.
 
 The above code will generate a simple PivotChart with "Fiscal" field in Row, "Customer Geography" field in Column and "Internet Sales Amount" field in Value section.
 
-![](OLAP-Getting-Started_images/PopulatePivotChartWithDataSource.png) 
+![ASP NET MVC pivot chart control with OLAP client mode](OLAP-Getting-Started_images/PopulatePivotChartWithDataSource.png)
 
 ## Creating a simple application with PivotChart and OLAP datasource (Server Mode)
- 
+
 This section covers the information required to create a simple PivotChart bound to OLAP datasource from server-side.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
 ### Project Initialization
 
-Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **"PivotChartDemo"**. 
+Create a new **ASP.NET MVC Web Application** using Visual Studio IDE and name the project as **"PivotChartDemo"**.
 
 Select the View engine as **‘Razor’** and Project template as **‘Internet Application’** and finally click **OK** button to create an application.
 
@@ -239,13 +239,13 @@ Register the referred assemblies in Web.config files available inside Views fold
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
-        …… 
+    <assemblies>
+        ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Export, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     </assemblies>
 </compilation>
 
@@ -255,11 +255,11 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 
 {% endhighlight %}
@@ -267,17 +267,17 @@ Register the required namespaces in Web.config files available inside Views fold
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
@@ -293,7 +293,7 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight html %}
 
 <head>
@@ -307,11 +307,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight html %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())  
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -320,7 +320,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
 {% highlight html %}
-    
+
 @using Syncfusion.JavaScript;
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/Olap")).Size(size=>size.Height("460px").Width("950px"))
@@ -330,8 +330,8 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
         width:950px;
         height:460px;
     }
-</style> 
-    
+</style>
+
 {% endhighlight %}
 
 The **“Url”** property in PivotChart control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart control as endpoint are WCF and WebAPI.
@@ -346,12 +346,12 @@ N> The above "Index.cshtml" contains WebAPI URL, which is "/Olap". If WCF servic
 To add a WebAPI controller in your existing Web Application, right-click on the project in Solution Explorer and select **Add > New Item.** In the **Add New Item** window, select **WebAPI Controller Class** and name it as “OlapController.cs”, click **Add.**
 
 Now WebAPI controller is added into your application successfully which in-turn comprise of the following file. The utilization of this file will be explained in the following sections.
- 
+
 * OlapController.cs
 
 N> While adding WebAPI Controller Class, name it with the suffix “Controller” that is mandatory. For example, in demo the controller is named as “OlapController”.
 
-Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `OlapController.cs` file. 
+Next, remove all the existing methods such as “Get”, “Post”, “Put” and “Delete” present inside `OlapController.cs` file.
 
 {% highlight c# %}
 
@@ -359,7 +359,7 @@ namespace PivotChartDemo
 {
     public class OlapController : ApiController
     {
-    
+
     }
 }
 
@@ -406,7 +406,7 @@ namespace PivotChartDemo
 **Service methods in WebAPI Controller**
 
 Now you need to define the service methods inside OlapController class, found inside `OlapController.cs` file, created while adding WebAPI Controller Class to your Web Application.
- 
+
 {% highlight c# %}
 
 namespace PivotChartDemo
@@ -488,7 +488,7 @@ public static class WebApiConfig
 
 Now, **PivotChart** is rendered with customer count over a period of fiscal years across different customer geographic locations.
 
-![](OLAP-Getting-Started_images/ServerMode.png) 
+![ASP NET MVC pivot chart control with OLAP server mode](OLAP-Getting-Started_images/ServerMode.png)
 
 ### WCF
 

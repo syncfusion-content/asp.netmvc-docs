@@ -36,5 +36,5 @@ Defer Update support allows you to refresh the control only on-demand and not du
 {% endhighlight %}
 
 
-![](Defer-Update_images/Relational.png)
+![Defer update support in ASP NET MVC pivot grid control](Defer-Update_images/Relational.png)
 

@@ -27,7 +27,7 @@ I> By default JSON export mode will be applied for server and client mode.
 //For PivotGrid in Client Mode.
  @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();})
 .Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
-                  
+
 //For PivotGrid in Server Mode.
   @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("../OLAPService"))
 
@@ -38,12 +38,12 @@ I> By default JSON export mode will be applied for server and client mode.
             pGridObj.exportPivotGrid("ExcelExport","fileName");
         }
    </script>
-    
+
 {% endhighlight %}
 
 To achieve exporting, we need to add **"Syncfusion.EJ.Export"** dependency library into the application.
 
-When PivotGrid is rendered, a method needs to be added in MVC controller file of the application and we need to import **"Syncfusion.EJ.Export"** namespace in the controller file. 
+When PivotGrid is rendered, a method needs to be added in MVC controller file of the application and we need to import **"Syncfusion.EJ.Export"** namespace in the controller file.
 
 {% highlight c# %}
 
@@ -57,7 +57,7 @@ public void ExcelExport()
      string fileName = "Sample";
      pGrid.ExportToExcel(fileName, args, System.Web.HttpContext.Current.Response);
 }
-        
+
 {% endhighlight %}
 
 ### Excel Export
@@ -75,8 +75,8 @@ To achieve Excel export, the controller method name **"ExcelExport"** and file n
           pGridObj.exportPivotGrid("ExcelExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method needs to be added in MVC controller file of the application.
 
@@ -109,8 +109,8 @@ To achieve Word export, controller method name **"WordExport"** and file name is
           pGridObj.exportPivotGrid("WordExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method needs to be added in MVC controller file of the application.
 
@@ -144,8 +144,8 @@ To achieve Word export, controller method name **"PDFExport"** and file name is 
           pGridObj.exportPivotGrid("PDFExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method needs to be added in MVC controller file of the application.
 
@@ -160,7 +160,7 @@ public void PDFExport()
      string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
      string fileName = "Sample";
      pGrid.ExportToPDF(fileName, args, System.Web.HttpContext.Current.Response);
-}        
+}
 
 {% endhighlight %}
 
@@ -179,8 +179,8 @@ To achieve CSV export, controller method name **"CSVExport"** and file name is s
           pGridObj.exportPivotGrid("CSVExport","fileName");
        }
    </script>
-    
-{% endhighlight %}  
+
+{% endhighlight %}
 
 Following method needs to be added in MVC controller file of the application.
 
@@ -195,7 +195,7 @@ public void CSVExport()
      string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
      string fileName = "Sample";
      pGrid.ExportToCSV(fileName, args, System.Web.HttpContext.Current.Response);
-}        
+}
 
 {% endhighlight %}
 
@@ -213,7 +213,7 @@ function exportBtnClick(args)
 }
 
 {% endhighlight %}
- 
+
 ## PivotEngine Export
 
 I> This feature is applicable only at server mode operation.
@@ -234,7 +234,7 @@ In order to perform exporting with the use of PivotEngine available in server-si
             args.exportMode = ej.PivotGrid.ExportMode.PivotEngine;
         }
    </script>
-    
+
 {% endhighlight %}
 
 A service method needs to be added in WCF/WebAPI for server side operations.
@@ -302,7 +302,7 @@ function exportBtnClick(args)
     pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
 }
 
-{% endhighlight %}  
+{% endhighlight %}
 
 ### Word Export
 
@@ -346,7 +346,7 @@ function exportBtnClick(args)
     pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.PDF);
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 
 ### CSV Export
@@ -364,7 +364,7 @@ function exportBtnClick(args)
     pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.CSV);
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ### File format selection
 
@@ -389,7 +389,7 @@ N> By default excel document will be exported to ".xls" format using PivotEngine
             args.fileFormat = ".xlsx"; //you can set the excel sheet format here
         }
    </script>
-    
+
 {% endhighlight %}
 
 ### Customize the export document name
@@ -448,9 +448,9 @@ You can add title and description to the exporting document by using the title a
   <script type="text/javascript">
         function exportBtnClick(args) {
             var pGridObj = $('#PivotGrid1').data("ejPivotGrid");
-            //JSON Export 
+            //JSON Export
             pGridObj.exportPivotGrid("ExcelExport","fileName");
-            //PivotEngine Export 
+            //PivotEngine Export
             pGridObj.exportPivotGrid(ej.PivotGrid.ExportOptions.Excel);
         }
         function Exporting(args) {
@@ -459,7 +459,7 @@ You can add title and description to the exporting document by using the title a
 			args.exportWithStyle = true;   // by default it sets as true. It improves performance on exporting huge data when it sets as false.
         }
    </script>
-    
+
 {% endhighlight %}
 
 You can also edit the exporting document with the use of a server side event for required exporting option.
@@ -587,18 +587,18 @@ When paging is enabled, you can export the complete data by enabling the `Enable
 
 The below screenshot shows the PivotGrid control exported to Excel document.
 
-![](Exporting_images/ExportOLAPExcel.png)
+![Excel exporting in ASP NET MVC pivot grid control](Exporting_images/ExportOLAPExcel.png)
 
 The below screenshot shows the PivotGrid control exported to Word document.
 
-![](Exporting_images/ExportOLAPWord.png)
+![Word exporting in ASP NET MVC pivot grid control](Exporting_images/ExportOLAPWord.png)
 
 The below screenshot shows the PivotGrid control exported to PDF document.
 
-![](Exporting_images/ExportOLAPPDF.png)
+![PDF exporting in ASP NET MVC pivot grid control](Exporting_images/ExportOLAPPDF.png)
 
 The below screenshot shows the PivotGrid control exported to CSV document.
 
-![](Exporting_images/ExportOLAPCSV.png)
+![CSV exporting in ASP NET MVC pivot grid control](Exporting_images/ExportOLAPCSV.png)
 
 

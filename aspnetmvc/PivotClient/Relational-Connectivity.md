@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Relational Connectivity | PivotClient | ASP.NET MVC | Syncfusion
-description: relational connectivity 
+description: relational connectivity
 platform: ejmvc
 control: PivotClient
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotClient to Collection
 
@@ -48,8 +48,8 @@ namespace PivotClientDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -111,7 +111,7 @@ namespace PivotClientDemo
     public class RelationalService : IRelationalService
     {
     ……
-    …… 
+    ……
     }
 
     internal class ProductSales
@@ -227,7 +227,7 @@ First, declare the service methods inside **IRelationalService** interface, foun
 
 namespace PivotClientDemo {
     [ServiceContract]
-    public interface IRelationalService 
+    public interface IRelationalService
     {
         [OperationContract]
         Dictionary<string, object> InitializeClient(string action);
@@ -264,12 +264,12 @@ Then, elaborate the service methods inside the main class, found in `RelationalS
 
 namespace PivotClientDemo {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class RelationalService: IRelationalService 
+    public class RelationalService: IRelationalService
     {
         PivotClient pivotClient = new PivotClient();
         PivotChart pivotChart = new PivotChart();
         PivotGrid pivotGrid = new PivotGrid();
-        string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports       
+        string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports
         JavaScriptSerializer serializer = new JavaScriptSerializer();
 
         public Dictionary<string, object> InitializeClient(string action)
@@ -479,7 +479,7 @@ The endpointBehaviors are illustrated as follows
 {% highlight xml %}
 
 <system.serviceModel>
-    …… 
+    ……
     ……
     <services>
         <service name="PivotClientDemo.RelationalService">
@@ -502,7 +502,7 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
             </behavior>
         </endpointBehaviors>
     </behaviors>
-    …… 
+    ……
     ……
 </system.serviceModel>
 
@@ -537,5 +537,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotClient** is rendered with PivotChart and PivotGrid with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
 
-![](Getting-Started_images/relaionalwebapi.png) 
+![ASP NET MVC pivot client control with relational wcf](Getting-Started_images/relaionalwebapi.png)
 

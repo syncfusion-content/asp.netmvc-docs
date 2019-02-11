@@ -17,7 +17,7 @@ Allows you to freeze the header of the Grid so that it will be always visible wh
 
 {% endhighlight %}
 
-![](FrozenHeader_images/row_col_freeze.png)
+![Frozen header, aka Freeze headers support in ASP NET MVC pivot grid control](FrozenHeader_images/row_col_freeze.png)
 
 We can also freeze the row/column headers individually by setting the below properties.
 
@@ -27,7 +27,7 @@ We can also freeze the row/column headers individually by setting the below prop
 
 {% endhighlight %}
 
-![](FrozenHeader_images/row_freeze.png)
+![Frozen row headers in ASP NET MVC pivot grid control](FrozenHeader_images/row_freeze.png)
 
 {% highlight CSHTML %}
 
@@ -35,14 +35,14 @@ We can also freeze the row/column headers individually by setting the below prop
 
 {% endhighlight %}
 
-![](FrozenHeader_images/col_freeze.png)
+![Frozen column headers in ASP NET MVC pivot grid control](FrozenHeader_images/col_freeze.png)
 
 We can also set the size of the scroller (horizontal and vertical) in PivotGrid by using below property.
 
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(.....).FrozenHeaderSettings(frohead => frohead.ScrollerSize(18))
-    
+
 {% endhighlight %}
 
-![](FrozenHeader_images/scroll_size.png)
+![Scroller size in ASP NET MVC pivot grid control](FrozenHeader_images/scroll_size.png)

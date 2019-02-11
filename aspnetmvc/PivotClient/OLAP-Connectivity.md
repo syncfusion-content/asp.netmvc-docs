@@ -1,13 +1,13 @@
 ---
 layout: post
 title: OLAP Connectivity | PivotClient | ASP.NET MVC | Syncfusion
-description: olap connectivity 
+description: olap connectivity
 platform: ejmvc
 control: PivotClient
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotClient to Offline Cube
 
@@ -38,7 +38,7 @@ To connect an OLAP Cube available in SQL Server Analysis Service in online serve
 
 {% highlight c# %}
 
-static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";   
+static string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 
 {% endhighlight %}
@@ -90,7 +90,7 @@ namespace PivotClientDemo
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class OlapService: IOlapService
     {
-    
+
     }
 }
 
@@ -99,8 +99,8 @@ namespace PivotClientDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET]. And if you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -146,7 +146,7 @@ namespace PivotClientDemo
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class OlapService: IOlapService
     {
-    
+
     }
 }
 
@@ -184,7 +184,7 @@ First, define the service methods inside **IOlapService** interface, found in `I
 
 namespace PivotClientDemo {
     [ServiceContract]
-    public interface IOlapService 
+    public interface IOlapService
     {
         [OperationContract]
         Dictionary<string, object> InitializeClient(string action, string customObject, string clientParams);
@@ -246,9 +246,9 @@ Secondly, elaborate the service methods inside the main class, found in `OlapSer
 
 namespace PivotClientDemo {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class OlapService: IOlapService 
+    public class OlapService: IOlapService
     {
-        
+
         PivotClient pivotClientHelper = new PivotClient();
         PivotTreeMap treemapHelper = new PivotTreeMap();
         PivotChart chartHelper = new PivotChart();
@@ -325,7 +325,7 @@ namespace PivotClientDemo {
 
         public Dictionary<string, object> DrillGrid(string action, string cellPosition, string currentReport,string clientReports, string headerInfo, string layout)
         {
-            OlapDataManager DataManager = new OlapDataManager(connectionString);             
+            OlapDataManager DataManager = new OlapDataManager(connectionString);
             DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(currentReport));
             DataManager.Reports = pivotClientHelper.DeserializedReports(clientReports);
             return pivotClientHelper.GetJsonData(action, DataManager, cellPosition, headerInfo, layout);
@@ -572,12 +572,12 @@ You can expose services through the properties, binding, contract and address by
 * Binding: In your application, you use `webHttpBinding` to post and receive the requests and responses between the client-end and the service.
 * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint.
 
-The endpointBehaviors are illustrated as follows. 
- 
+The endpointBehaviors are illustrated as follows.
+
 {% highlight xml %}
 
 <system.serviceModel>
-    …… 
+    ……
     ……
     <services>
         <service name="PivotClientDemo.OlapService">
@@ -598,7 +598,7 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
                 <enableWebScript /> </behavior>
         </endpointBehaviors>
     </behaviors>
-    …… 
+    ……
     ……
 </system.serviceModel>
 
@@ -633,5 +633,5 @@ N> In this example, **“PivotClientDemo”** indicates the name and root namesp
 
 Now, **PivotClient** is rendered with PivotChart and PivotGrid showing Customer Count over a period of fiscal years.
 
-![](Getting-Started_images/olapwebapi.png) 
+![ASP NET MVC pivot client control with OLAP server mode](Getting-Started_images/olapwebapi.png)
 

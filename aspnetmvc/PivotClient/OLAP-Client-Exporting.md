@@ -11,7 +11,7 @@ documentation: ug
 
 PivotChart and PivotGrid in the PivotClient widget can be exported to Excel, Word and PDF documents by clicking the respective toolbar icons.
 
-![](Exporting_images/exporticon.png)
+![Exporting icons in ASP NET MVC pivot client control](Exporting_images/exporticon.png)
 
 Exporting feature provides an option that allows you to export either PivotChart or PivotGrid or both with the use of the property `ClientExportMode`.
 
@@ -36,13 +36,13 @@ In order to perform exporting with the use of a custom service method, the servi
             args.url = "ExportPivotClient";
         }
    </script>
-    
+
 {% endhighlight %}
 
 When PivotClient is exported with JSON export mode, a method needs to be added in MVC controller file of the application.
 
 {% highlight C# %}
-       
+
     public void ExportPivotClient()
     {
        JavaScriptSerializer serializer = new JavaScriptSerializer() { MaxJsonLength = Int32.MaxValue };
@@ -50,7 +50,7 @@ When PivotClient is exported with JSON export mode, a method needs to be added i
        string args = System.Web.HttpContext.Current.Request.Form.GetValues(0)[0];
        pivotClient.ExportPivotClient(string.Empty, args, System.Web.HttpContext.Current.Response);
     }
-        
+
 {% endhighlight %}
 
 ### Customize the export document name
@@ -66,7 +66,7 @@ The name of the document to be exported could be customized. Following code samp
             args.fileName=" File name is customized here ";
         }
    </script>
-    
+
 {% endhighlight %}
 
 
@@ -85,13 +85,13 @@ In order to perform exporting with the use of PivotEngine available in server-si
           args.exportMode = ej.PivotClient.ExportMode.PivotEngine;
         }
    </script>
-    
+
 {% endhighlight %}
 
 For WebAPI controller, the below method needs to be added to perform exporting with PivotEngine.
 
 {% highlight C# %}
-        
+
         [System.Web.Http.ActionName("Export")]
         [System.Web.Http.HttpPost]
         public void Export()
@@ -101,7 +101,7 @@ For WebAPI controller, the below method needs to be added to perform exporting w
             string fileName = "Sample";
             olapClientHelper.ExportPivotClient(DataManager, args, fileName, System.Web.HttpContext.Current.Response);
         }
-        
+
 {% endhighlight %}
 
 For WCF service, the below service method needs to be added to perform exporting with PivotEngine.
@@ -136,7 +136,7 @@ N> By default excel document will be exported to ".xls" format using PivotEngine
             args.fileFormat = ".xlsx"; //you can set the excel sheet format here
         }
    </script>
-    
+
 {% endhighlight %}
 
 ### Customize the export document name
@@ -187,12 +187,12 @@ N> By default PivotChart will be exported as image format to Excel document.
            args.exportChartAsImage = false; //You can set the chart format here
         }
    </script>
-    
+
 {% endhighlight %}
 
 The below screenshot shows the control exported to Excel document showing its own format (Pivoting Chart).
 
-![](Exporting_images/Export_ExcelChartClient.png)
+![Excel exporting in ASP NET MVC pivot client control](Exporting_images/Export_ExcelChartClient.png)
 
 ## Exporting Customization
 
@@ -203,17 +203,17 @@ You can add title and description to the exporting document by using the title a
     @Html.EJ().Pivot().PivotClient("PivotClient1").ClientSideEvents(oEve => { oEve.BeforeExport("Exporting"); })
    <script type="text/javascript">
         function Exporting(args) {
-            //ClientMode export    
+            //ClientMode export
             args.url = "ExportPivotClient";
             //PivotEngine Export
             args.exportMode = ej.PivotClient.ExportMode.PivotEngine;
-            
+
             args.title = "PivotClient";
             args.description = "Visualizes both OLAP and Relational datasource in tabular and graphical formats";
 			args.exportWithStyle = true;   // by default it sets as true. It improves performance on exporting huge data when it sets as false.
         }
    </script>
-    
+
 {% endhighlight %}
 
 You can also edit the exporting document with the use of a server side event for required exporting option.
@@ -259,7 +259,7 @@ void pivotClient_WordExport(object sender, Syncfusion.DocIO.DLS.WordDocument doc
 void pivotClient_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
 {
     //You can customize exporting document here.
-}  
+}
 
 //Following service method needs to be added in WebAPI controller for PivotEngine Export.
 [System.Web.Http.ActionName("ExportOlapClient")]
@@ -310,12 +310,12 @@ When paging is enabled, you can export the complete data by enabling the `Enable
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to Excel document.
 
-![](Exporting_images/excelexport.png)
+![Excel exporting in ASP NET MVC pivot client control](Exporting_images/excelexport.png)
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to Word document.
 
-![](Exporting_images/wordexport.png)
+![Word exporting in ASP NET MVC pivot client control](Exporting_images/wordexport.png)
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to PDF document.
 
-![](Exporting_images/pdfexport.png)
+![PDF exporting in ASP NET MVC pivot client control](Exporting_images/pdfexport.png)

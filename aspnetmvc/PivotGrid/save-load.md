@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save and Load Report
+title: Save and Load Report | PivotGrid | ASP.NET MVC | Syncfusion
 description: save and load report
 platform: js
 control: PivotGrid
@@ -16,7 +16,7 @@ Allows you to save the current report of PivotGrid and render the control with t
 
 ## Save Report to Database
 
-By using current report name, storage option and url, we can save the current report of PivotGrid to database. 
+By using current report name, storage option and url, we can save the current report of PivotGrid to database.
 
 {% highlight CSHTML %}
 
@@ -123,7 +123,7 @@ To save the current report of PivotGrid to local storage, we need to call the `S
         name = "report",
         storage = "local",
         pGridObj.saveReport(name, storage, url);
-    }        
+    }
     function saveToLocal(args){
         localStorage.setItem("report", JSON.stringify(args.report));
     }
@@ -133,7 +133,7 @@ To save the current report of PivotGrid to local storage, we need to call the `S
 
 ## Load Report from Database
 
-By using the stored report name, database name and url, we can load the saved report of PivotGrid from database. 
+By using the stored report name, database name and url, we can load the saved report of PivotGrid from database.
 
 {% highlight html %}
 
@@ -269,7 +269,7 @@ private DataTable GetDataTable()
 
 {% endhighlight %}
 
-### OLAP 
+### OLAP
 
 For WebAPI controller, the below methods need to be added.
 
@@ -419,7 +419,7 @@ To load the stored report of PivotGrid from local storage, we need to call the `
         name = "report",
         storage = "local",
         pGridObj.loadReport(name, storage, url);
-    }        
+    }
     function loadFromLocal(args){
         args.targetControl.model.dataSource = JSON.parse(localStorage.getItem("report"));
     }

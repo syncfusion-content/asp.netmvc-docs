@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Key-Performance-Indicator-KPI | PivotClient | ASP.NET MVC | Syncfusion
+title: KPI | PivotClient | ASP.NET MVC | Syncfusion
 description: key performance indicator (KPI)
 platform: ejmvc
 control: PivotClient
@@ -30,7 +30,7 @@ To enable KPI option set the property `EnableKPI` to `true`.
 
 {% endhighlight %}
 
-![](KPI_images/clientmode-kpi.png)
+![KPI in ASP NET MVC pivot client with OLAP client mode](KPI_images/clientmode-kpi.png)
 
 ## Server Mode
 
@@ -70,5 +70,5 @@ olapReport.SeriesElements.Add(dimensionElementRow);
 
 {% endhighlight %}
 
-![](KPI_images/KPI.png)
+![KPI in ASP NET MVC pivot client with OLAP server mode](KPI_images/KPI.png)
 

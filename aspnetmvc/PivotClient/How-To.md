@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to
+title: How to | PivotClient | ASP.NET MVC | Syncfusion
 description: How to
 platform: ejmvc
 control: PivotClient

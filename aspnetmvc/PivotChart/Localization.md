@@ -43,31 +43,31 @@ Values</th>
 </tr>
 <tr><td>
 Measure</td><td>
-“Mesure”</td>    
+“Mesure”</td>
 </tr>
 <tr><td>
 Row</td><td>
-"Rangée "</td>  
+"Rangée "</td>
 </tr>
 <tr><td>
 Column</td><td>
-"Colonne”</td>    
+"Colonne”</td>
 </tr>
 <tr><td>
 Value</td><td>
-"Valeur "</td>    
+"Valeur "</td>
 </tr>
 <tr><td>
 Expand</td><td>
-"Développer "</td>    
+"Développer "</td>
 </tr>
 <tr><td>
 Collapse</td><td>
-"Effondrement "</td>    
+"Effondrement "</td>
 </tr>
 <tr><td>
 Exit</td><td>
-“Quitter "</td>    
+“Quitter "</td>
 </tr>
 </table>
 
@@ -75,11 +75,11 @@ Exit</td><td>
 
 Content displayed within the PivotChart control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
 
-* To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**. 
+* To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**.
 * To bind the globalized content in PivotChart control, we need to set **"Locale"** property to a specific culture and want to refer specific culture file in the sample.
- 
+
 N> Culture files are present under **"[installed drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Scripts\cultures".**
- 
+
 {% highlight CSHTML %}
 
 //1036 refers to “fr-FR” culture.
@@ -93,9 +93,9 @@ N> Culture files are present under **"[installed drive]:\Users\[user name]\AppDa
 
 Content displayed within the PivotChart control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
 
-* To get the localized string based on different cultures, from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture. 
-* To bind the globalized content in PivotGrid control, we need to set **"Culture"** and **"OverrideDefaultFormatStrings"** properties in OlapDataManager class to a specific culture. 
- 
+* To get the localized string based on different cultures, from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture.
+* To bind the globalized content in PivotGrid control, we need to set **"Culture"** and **"OverrideDefaultFormatStrings"** properties in OlapDataManager class to a specific culture.
+
 {% highlight c# %}
 
 //1036 refers to “fr-FR” culture.
@@ -106,5 +106,5 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 {% endhighlight %}
 
-![](Localization-and-Translation-support_images/Localization-and-Translation-support_img1.png) 
+![Localization support in ASP NET MVC pivot chart control](Localization-and-Translation-support_images/Localization-and-Translation-support_img1.png)
 

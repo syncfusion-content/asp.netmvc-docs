@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization and Globalization
 
-## Localization in PivotGrid 
+## Localization in PivotGrid
 You can localize the PivotGrid controls text with a collection of localized strings using **"ej.PivotGrid.Locale"** for different cultures. By default, the PivotGrid control is localized in **"en-US"** culture.
 
 {% highlight CSHTML %}
@@ -51,7 +51,7 @@ You can localize the PivotGrid controls text with a collection of localized stri
   ej.PivotPager.Locale["fr-FR"] = {
       SeriesPage: "Série Page",
       CategoricalPage: "Catégorique Page"
-  }; 
+  };
 < /script>
 
 {% endhighlight %}
@@ -103,7 +103,7 @@ Afficher les éléments pour lesquels
 LabelFilters
 </td>
 <td>
-Filtres d'étiquetage  
+Filtres d'étiquetage
 </td>
 </tr>
 <tr>
@@ -191,7 +191,7 @@ Not Equals
 GreaterThan
 </td>
 <td>
-Supérieur 
+Supérieur
 </td>
 </tr>
 <tr>
@@ -199,7 +199,7 @@ Supérieur
 GreaterThanOrEqualTo
 </td>
 <td>
-supérieur ou égal à 
+supérieur ou égal à
 </td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@ supérieur ou égal à
 LessThan
 </td>
 <td>
-Less Than 
+Less Than
 </td>
 </tr>
 <tr>
@@ -1634,11 +1634,11 @@ The following table lists the default keywords in French culture for Pivot Pager
 
 Content displayed within the PivotGrid control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
 
-* To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**. 
-* To bind the globalized content in PivotGrid control, we need to set **"Locale"** property to a specific culture and want to refer specific culture file in the sample. 
- 
+* To get localized data from OLAP Cube, we need to set **"Locale Identifier"** in the connection string to a specific culture in the **"Data"** property present inside **"DataSource"**.
+* To bind the globalized content in PivotGrid control, we need to set **"Locale"** property to a specific culture and want to refer specific culture file in the sample.
+
 N> Culture files are present under **"[installed drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Scripts\cultures".**
- 
+
 {% highlight CSHTML %}
 
 //1036 refers to "fr-FR" culture.
@@ -1650,9 +1650,9 @@ N> Culture files are present under **"[installed drive]:\Users\[user name]\AppDa
 ## Localization and Globalization of Cube Info (Server Mode)
 
 Content displayed within the PivotGrid control are obtained from the OLAP Cube. So following are the steps that needs to be done to get the localized and globalized Cube content.
- 
+
 * To get the localized string based on different cultures, from OLAP Cube, you need to set **"Locale Identifier"** in the connection string to a specific culture.
-* To bind the globalized content in PivotGrid control, you need to set **"Culture"** and `OverrideDefaultFormatStrings` properties in OlapDataManager class to a specific culture. 
+* To bind the globalized content in PivotGrid control, you need to set **"Culture"** and `OverrideDefaultFormatStrings` properties in OlapDataManager class to a specific culture.
 
 {% highlight c# %}
 
@@ -1665,26 +1665,26 @@ DataManager.OverrideDefaultFormatStrings = true;
 {% endhighlight %}
 
 
-![](Localization_images/localization.png)
+![Localization support in ASP NET MVC pivot grid OLAP mode](Localization_images/localization.png)
 
 ## Localization and Globalization of Relational Info (Client Mode)
 Content displayed within the PivotGrid control are obtained from the Relational datasource. So following are the steps that needs to done to get localized as well as globalized content.
- 
-* To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.  
-* To globalize the values appear in PivotGrid , we need to set **"Format"** and **"Locale"** property to a specific culture and want to refer specific culture file in the sample. 
+
+* To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.
+* To globalize the values appear in PivotGrid , we need to set **"Format"** and **"Locale"** property to a specific culture and want to refer specific culture file in the sample.
 
 N> Culture files are present under **"[installed drive]:\Users\[user name]\AppData\Local\Syncfusion\EssentialStudio\X.X.X.X\MVC\Samples\web\Scripts\cultures".**
- 
+
 {% highlight CSHTML %}
 
  @Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Format("currency").Add(); }))
-    
+
 {% endhighlight %}
 
 ## Localization and Globalization of Relational Info (Server Mode)
 Content displayed within the PivotGrid control are obtained from the Relational datasource. So following are the steps that needs to done to get localized as well as globalized content.
- 
-* To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.  
+
+* To get the localized content, the Relational datasource must have localized headers in them which will be directly applied to PivotGrid.
 * **“Format”** settings in PivotComputationInfo class would globalize the values appear in PivotGrid.
 
 {% highlight c# %}
@@ -1698,7 +1698,7 @@ pivotSetting.PivotCalculations.Add(new PivotComputationInfo {
 
 {% endhighlight %}
 
-![](Localization_images/localizationinfo.png)
+![Localization support ASP NET MVC pivot grid relational server mode](Localization_images/localizationinfo.png)
 
 ## RTL
 
@@ -1710,5 +1710,5 @@ You can render our PivotGrid control from Right to Left by setting `EnableRTL` p
 
 {% endhighlight %}
 
-![](Localization_images/rtl.png)
+![Right to Left, aka RTL support in ASP NET MVC pivot grid control](Localization_images/rtl.png)
 
