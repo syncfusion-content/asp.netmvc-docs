@@ -457,7 +457,7 @@ DatePicker control displaying on the web browser
 
 Thus the DatePicker control is rendered successfully with its default appearance. You can then use its various properties to set its value and also make use of its available events to trigger when necessary.
 
-## Version Compatibility with respect to Framework
+## Version compatibility with respect to framework
 
 The `Syncfusion.EJ.MVC` assembly supports only till framework 4.5, so the dependent `Syncfusion.EJ` assembly will also be installed in that version even if the framework chosen is 4.6 or above. Find the supported MVC versions for the target framework in the following table.
 
