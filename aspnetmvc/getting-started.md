@@ -459,7 +459,7 @@ Thus the DatePicker control is rendered successfully with its default appearance
 
 ## Version Compatibility with respect to Framework
 
-The Syncfusion.EJ.MVC assembly supports only till framework 4.5, so the dependent Syncfusion.EJ assembly will also be installed in that version even if the framework chosen is 4.6 or above. Find the supported MVC versions for the target framework in the following table.
+The `Syncfusion.EJ.MVC` assembly supports only till framework 4.5, so the dependent `Syncfusion.EJ` assembly will also be installed in that version even if the framework chosen is 4.6 or above. Find the supported MVC versions for the target framework in the following table.
 
 <table>
 <tr>
