@@ -457,4 +457,33 @@ DatePicker control displaying on the web browser
 
 Thus the DatePicker control is rendered successfully with its default appearance. You can then use its various properties to set its value and also make use of its available events to trigger when necessary.
 
+## Version compatibility with respect to framework
 
+The `Syncfusion.EJ.MVC` assembly supports only till framework 4.5, so the dependent `Syncfusion.EJ` assembly will also be installed in that version even if the framework chosen is 4.6 or above. Find the supported MVC versions for the target framework in the following table.
+
+<table>
+<tr>
+<th>MVC Version</th>
+<th>Assembly</th>
+<th>Version</th>
+<th>Example Version</th>
+</tr>
+<tr>
+<td>MVC 3</td>
+<td>Syncfusion.EJ <br/> Syncfusion.EJ.Mvc </td>
+<td>XX.X400.X.XX  <br/> XX.X300.X.XX </td>
+<td>16.4400.0.52 <br/> 16.4300.0.52 </td>
+</tr>
+<tr><td>MVC 4</td>
+<td>Syncfusion.EJ <br/> Syncfusion.EJ.Mvc </td>
+<td>XX.X400.X.XX  <br/> XX.X400.X.XX   </td>
+<td>16.4400.0.52 <br/> 16.4400.0.52 </td>
+</tr>
+<tr><td>MVC 5</td>
+<td>Syncfusion.EJ <br/> Syncfusion.EJ.Mvc </td>
+<td>XX.X450.X.XX    <br/> XX.X500.X.XX   </td>
+<td>16.4400.0.52 <br/> 16.4500.0.52 </td>
+</tr>
+</table>
+
+N> For Framework 4.6 and above, support has been provided in ASP.NET Core. So, the assembly version “XX.X460.X.XX” cannot be used in MVC platform.
