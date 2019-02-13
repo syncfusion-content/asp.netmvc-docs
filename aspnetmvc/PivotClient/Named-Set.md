@@ -2,7 +2,7 @@
 layout: post
 title: Named Set | PivotClient | ASP.NET MVC | Syncfusion
 description: named set
-platform: aspnetmvc
+platform: ejmvc
 control: PivotClient
 documentation: ug
 ---
