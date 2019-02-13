@@ -643,7 +643,7 @@ N> Culture files are present under **"[installed drive]:\Users\[user name]\AppDa
 {% highlight CSHTML %}
 
     //1036 refers to "fr-FR" culture.
-    @Html.EJ().Pivot().PivotClient("PivotClient1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}) .Data("http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Locale("fr-FR")
+    @Html.EJ().Pivot().PivotClient("PivotClient1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}) .Data("https://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Locale("fr-FR")
 
 {% endhighlight %}
 

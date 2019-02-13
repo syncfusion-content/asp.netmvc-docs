@@ -21,7 +21,7 @@ In-order to initialize PivotTable Field List, first you need to define a â€œdivâ
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.RenderSuccess("loadSchemaDesigner")).DataSource(dataSource => dataSource.Values(values => { values.Axis(AxisName.Column).Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Add(); }).Rows(rows => { rows.FieldName("[Customer].[Customer Geography]").Add(); }).Columns(columns=>{columns.FieldName("[Date].[Fiscal]").Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Cube("Adventure Works").Catalog("Adventure Works DW 2008 SE"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").ClientSideEvents(clientSideEvents => clientSideEvents.RenderSuccess("loadSchemaDesigner")).DataSource(dataSource => dataSource.Values(values => { values.Axis(AxisName.Column).Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Add(); }).Rows(rows => { rows.FieldName("[Customer].[Customer Geography]").Add(); }).Columns(columns=>{columns.FieldName("[Date].[Fiscal]").Add();}).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Cube("Adventure Works").Catalog("Adventure Works DW 2008 SE"))
 @Html.EJ().Pivot().PivotSchemaDesigner("PivotSchemaDesigner")
 
 <script type="text/javascript">

@@ -17,7 +17,7 @@ Grouping Bar allows user to dynamically alter the report by filter and remove op
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableGroupingBar(true).DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableGroupingBar(true).DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ You can also alter the report by using context menu.
 
 Search option available in Grouping Bar allows you to search a specific value that needs to be filtered from the list of values inside the filter pop-up window.
 
-![Filtering icon in grouping bar of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapFilterIcon.png)
+![Filtering option in grouping bar of ASP NET MVC pivot grid control](Grouping-Bar_images/OlapFilterIcon.png)
 
 ![Searching in member editor dialog of ASP NET MVC pivot grid control](Grouping-Bar_images/olapclientsearching.png)
 

@@ -165,7 +165,7 @@ Initializes the OLAP datasource for PivotChart control as shown below.
 
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Size(size=>size.Height("460px").Width("950px"))
+@Html.EJ().Pivot().PivotChart("PivotChart1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).Size(size=>size.Height("460px").Width("950px"))
 {% endhighlight %}
 
 The above code will generate a simple PivotChart with "Fiscal" field in Row, "Customer Geography" field in Column and "Internet Sales Amount" field in Value section.
@@ -395,7 +395,7 @@ namespace PivotChartDemo
 {
     public class OlapController : ApiController
     {
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         PivotChart pivotChart = new PivotChart();
         //Other codes
     }
@@ -413,7 +413,7 @@ namespace PivotChartDemo
 {
     public class OlapController : ApiController
     {
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         PivotChart pivotChart = new PivotChart();
 
         [System.Web.Http.ActionName("InitializeChart")]

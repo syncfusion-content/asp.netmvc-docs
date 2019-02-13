@@ -26,7 +26,7 @@ I> By default JSON export mode will be applied for server and client mode.
 
 //For PivotGrid in Client Mode.
  @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();})
-.Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+.Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
 //For PivotGrid in Server Mode.
   @Html.EJ().Pivot().PivotGrid("PivotGrid1").Url(Url.Content("../OLAPService"))

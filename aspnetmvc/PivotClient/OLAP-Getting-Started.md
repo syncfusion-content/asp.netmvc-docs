@@ -157,7 +157,7 @@ Initializes the OLAP datasource for PivotClient control as shown below.
 
 {% highlight html %}
 
-@Html.EJ().Pivot().PivotClient("PivotClient1").Title("OLAP Browser").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+@Html.EJ().Pivot().PivotClient("PivotClient1").Title("OLAP Browser").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();}).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
 {% endhighlight %}
 
@@ -412,7 +412,7 @@ namespace PivotClientDemo
         PivotTreeMap treeMapHelper = new PivotTreeMap();
         PivotChart chartHelper = new PivotChart();
         JavaScriptSerializer serializer = new JavaScriptSerializer();
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         string conStringforDB = "";//Enter appropriate connection string to connect database for saving and loading operation of reports
         //Other codes
     }
@@ -433,7 +433,7 @@ namespace PivotClientDemo {
         PivotTreeMap treeMapHelper = new PivotTreeMap();
         PivotChart chartHelper = new PivotChart();
         JavaScriptSerializer serializer = new JavaScriptSerializer();
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         string conStringforDB = "";//Enter appropriate connection string to connect database for saving and loading operation of reports
 
         [System.Web.Http.ActionName("InitializeClient")]

@@ -199,7 +199,7 @@ N> By default PivotChart will be exported as image format to Excel document.
 
 The below screenshot shows the control exported to Excel document showing its own format (Pivoting Chart).
 
-![Excel exporting of ASP NET MVC pivot client control](Exporting_images/Export_ExcelChartClient.png)
+![Exporting format of ASP NET MVC pivot client control](Exporting_images/Export_ExcelChartClient.png)
 
 ## Exporting Customization
 
@@ -309,12 +309,12 @@ void pivotClient_ExcelExport(object sender, Syncfusion.XlsIO.IWorkbook workBook)
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to Excel document.
 
-![Excel exporting of ASP NET MVC pivot client control](Exporting_images/relational-excel-export.png)
+![Excel exporting in ASP NET MVC pivot client control](Exporting_images/relational-excel-export.png)
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to Word document.
 
-![Word exporting of ASP NET MVC pivot client control](Exporting_images/relational-word-export.png)
+![Word exporting in ASP NET MVC pivot client control](Exporting_images/relational-word-export.png)
 
 The below screenshot shows the PivotGrid and PivotChart controls exported to PDF document.
 
-![PDF exporting of ASP NET MVC pivot client control](Exporting_images/relational-pdf-export.png)
+![PDF exporting in ASP NET MVC pivot client control](Exporting_images/relational-pdf-export.png)

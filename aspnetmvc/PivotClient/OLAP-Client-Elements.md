@@ -24,7 +24,7 @@ Cube Dimension Browser is a treeview like structure that organizes the cube elem
 
 You can alter the report on fly through drag-and-drop operation.
 
-![Treenode drop in ASP NET MVC pivot client control](OLAP-Client-Elements_images/ClientTreeview_Drop.png)
+![Drag and drop in ASP NET MVC pivot client control](OLAP-Client-Elements_images/ClientTreeview_Drop.png)
 
 ### Context Menu
 

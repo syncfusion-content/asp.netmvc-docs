@@ -335,7 +335,7 @@ N> By default PivotChart will be exported as image format to Excel document.
 
 The below screenshot shows the control exported to Excel document showing its own format (Pivoting Chart).
 
-![Excel exporting of ASP NET MVC pivot chart control](Export_images/Export_ExcelChartClient.png)
+![Exporting format of ASP NET MVC pivot chart control](Export_images/Export_ExcelChartClient.png)
 
 ## Exporting Customization
 
@@ -506,16 +506,16 @@ public void Export(System.IO.Stream stream) {
 
 The below screenshot shows the PivotChart control exported to Excel document.
 
-![Excel exporting of ASP NET MVC pivot chart control](Export_images/Export_ExcelClient.png)
+![Excel exporting in ASP NET MVC pivot chart control](Export_images/Export_ExcelClient.png)
 
 The below screenshot shows the PivotChart control exported to PDF document.
 
-![PDF exporting of ASP NET MVC pivot chart control](Export_images/Export_PDFClient.png)
+![PDF exporting in ASP NET MVC pivot chart control](Export_images/Export_PDFClient.png)
 
 The below screenshot shows the PivotChart control exported to Word document.
 
-![Word exporting of ASP NET MVC pivot chart control](Export_images/Export_WordClient.png)
+![Word exporting in ASP NET MVC pivot chart control](Export_images/Export_WordClient.png)
 
 The below screenshot shows the PivotChart control exported to PNG format.
 
-![PNG exporting of ASP NET MVC pivot chart control](Export_images/Export_PNGClient.png)
+![PNG exporting in ASP NET MVC pivot chart control](Export_images/Export_PNGClient.png)

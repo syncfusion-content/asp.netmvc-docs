@@ -21,8 +21,8 @@ Defer Update support allows the user to refresh the control on-demand and not du
 
 After enabling this property, an icon for Defer Update will appear inside the toolbar.
 
-![Defer update icon in ASP NET MVC pivot client control](Defer-Update_images/deferupdatebefore.png)
+![Defer update in ASP NET MVC pivot client control](Defer-Update_images/deferupdatebefore.png)
 
 On clicking the icon, after making the necessary UI interactions, the PivotGrid and PivotChart controls will be updated according to the OlapReport available at that instant.
 
-![Defer update in ASP NET MVC pivot client control](Defer-Update_images/deferupdateafter.png)
+![Defer update view in ASP NET MVC pivot client control](Defer-Update_images/deferupdateafter.png)

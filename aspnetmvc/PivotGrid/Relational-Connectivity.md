@@ -270,7 +270,7 @@ namespace PivotGridDemo
         JavaScriptSerializer serializer = new JavaScriptSerializer();
         Dictionary<string, object> dict = new Dictionary<string, object>();
         static int cultureIDInfoval = 1033;
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports
 
         public Dictionary<string, object> InitializeGrid(string action)

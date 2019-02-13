@@ -182,7 +182,7 @@ The `ChartType` property takes Column Chart by default. The types available are 
 
 The Chart Type can also be changed dynamically through the toolbar icon.
 
-![Chart types icon in ASP NET MVC pivot client control](Layout-Customization_images/charttypes.png)
+![Chart types in ASP NET MVC pivot client control](Layout-Customization_images/charttypes.png)
 
 ![ASP NET MVC pivot client control with line chart type](Layout-Customization_images/linechart.png)
 

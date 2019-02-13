@@ -1643,7 +1643,7 @@ N> Culture files are present under **"[installed drive]:\Users\[user name]\AppDa
 
 //1036 refers to "fr-FR" culture.
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows=>{rows.FieldName("[Date].[Fiscal]").Add();}).Columns(columns=>{columns.FieldName("[Customer].[Customer Geography]").Add();}).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add();})
-.Data("http://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;"").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+.Data("https://bi.syncfusion.com/olap/msmdpump.dll;Locale Identifier=1036;"").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
 {% endhighlight %}
 

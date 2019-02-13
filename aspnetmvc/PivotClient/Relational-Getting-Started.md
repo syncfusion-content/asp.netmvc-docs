@@ -203,7 +203,7 @@ The JSON data is set to the **"data"** property present inside the **"dataSource
 
 Now, PivotClient is rendered with PivotChart and PivotGrid with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
 
-![ASP NET MVC pivot client control rendered with relational client mode](Getting-Started_images/purejs.png)
+![ASP NET MVC pivot client control with relational client mode](Getting-Started_images/purejs.png)
 
 ## Creating a simple application with PivotClient and Relational datasource (Server Mode)
 
@@ -856,7 +856,7 @@ public static class WebApiConfig
 
 Now, **PivotClient** is rendered with PivotChart and PivotGird with "Country" field in Row, "Product" field in Column and "Amount" field in Value section.
 
-![JQuery pivot client control with relational server mode](Getting-Started_images/relaionalwebapi.png)
+![ASP NET MVC pivot client control with relational server mode](Getting-Started_images/relaionalwebapi.png)
 
 ### WCF
 
