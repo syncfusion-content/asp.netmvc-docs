@@ -492,6 +492,6 @@ Now, **PivotChart** is rendered with customer count over a period of fiscal year
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotChart/olap-connectivity#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotChart. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/PivotChart/olap-connectivity#wcf).
 
 

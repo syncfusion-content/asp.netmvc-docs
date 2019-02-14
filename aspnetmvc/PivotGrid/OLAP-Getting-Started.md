@@ -675,6 +675,6 @@ Now, **PivotGrid** is rendered with Customer Count over a period of fiscal years
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotGrid. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotGrid/olap-connectivity#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotGrid. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/PivotGrid/olap-connectivity#wcf).
 
 

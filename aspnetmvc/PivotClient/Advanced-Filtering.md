@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Filtering | PivotClient | ASP.NET MVC | Syncfusion
+title: Advanced Filtering | Sorting | ASP.NET MVC | Syncfusion
 description: advanced filtering and sorting
 platform: ejmvc
 control: PivotClient

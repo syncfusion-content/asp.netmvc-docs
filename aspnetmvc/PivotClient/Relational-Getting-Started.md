@@ -860,6 +860,6 @@ Now, **PivotClient** is rendered with PivotChart and PivotGird with "Country" fi
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotClient. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotClient/relational-connectivity#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotClient. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/PivotClient/relational-connectivity#wcf).
 
 

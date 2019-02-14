@@ -108,7 +108,7 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 <td>True</td>
 </tr>
 <tr>
-<td>{{ '![Named set icon in ASP NET MVC pivot client control](OLAP-Client-Elements_images/names set element.png)' | markdownify }}</td>
+<td>{{ '![NamedSet icon in ASP NET MVC pivot client control](OLAP-Client-Elements_images/names set element.png)' | markdownify }}</td>
 <td>Named Set</td>
 <td>Named Set</td>
 <td>True</td>
@@ -187,7 +187,7 @@ Member Editor is a dialog which displays the members of the current hierarchy in
 
 ![Member editor in ASP NET MVC pivot client control](OLAP-Client-Elements_images/member editor.png)
 
-The “Check All” and “Uncheck All” option in the dialog lets the user to select and unselect entire nodes for filtering. For more details, about filtering, [click here](http://help.syncfusion.com/aspnetmvc/pivotclient/olap-data-exploration#filtering-by-member).
+The “Check All” and “Uncheck All” option in the dialog lets the user to select and unselect entire nodes for filtering. For more details, about filtering, [click here](https://help.syncfusion.com/aspnetmvc/pivotclient/olap-data-exploration#filtering-by-member).
 
 ## Toolbar
 
@@ -319,5 +319,5 @@ On selecting the required report from the report list, the selected report will 
 
 ## PivotGrid and PivotChart
 
-The [PivotGrid](http://help.syncfusion.com/aspnetmvc/pivotgrid/overview) and [PivotChart](http://help.syncfusion.com/aspnetmvc/pivotchart/overview) controls will be rendered with respect to the operations done at axis element builder.
+The [PivotGrid](https://help.syncfusion.com/aspnetmvc/pivotgrid/overview) and [PivotChart](https://help.syncfusion.com/aspnetmvc/pivotchart/overview) controls will be rendered with respect to the operations done at axis element builder.
 

@@ -13,7 +13,7 @@ documentation: ug
 
 This section demonstrates binding of a collection to the PivotClient control as datasource. For more information on this datasource refer the following links.
 
-If you are using WebAPI controller, refer the "Datasource Initialization" section under the following [link](http://help.syncfusion.com/aspnetmvc/pivotclient/relational-getting-started#creating-a-simple-application-with-pivotclient-and-relational-datasource-server-mode).
+If you are using WebAPI controller, refer the "Datasource Initialization" section under the following [link](https://help.syncfusion.com/aspnetmvc/pivotclient/relational-getting-started#creating-a-simple-application-with-pivotclient-and-relational-datasource-server-mode).
 
 If you are using WCF Service, refer the "Datasource Initialization" section below.
 
