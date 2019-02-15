@@ -13,7 +13,7 @@ I> This feature is applicable only for OLAP data source.
 
 Paging helps to improve the rendering performance of the PivotClient control by dividing large amount of data into sections and displaying one section at a time.
 
-## Using Pager 
+## Using Pager
 
 You can enable Pager in PivotClient by setting the [`EnablePaging`](/js/api/ejpivotclient#members:enablePaging) property to true. You can provide the page size and current page details for each axis through [`PagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property.
 
@@ -36,17 +36,17 @@ You can enable Pager in PivotClient by setting the [`EnablePaging`](/js/api/ejpi
 Following are the navigation option available in Pager.
 
 * Move First - Navigates to the first page.
-* Move Last - Navigates to the last page. 
+* Move Last - Navigates to the last page.
 * Move Previous - Navigates to the previous page from the current page.
 * Move Next - Navigates to the next page from the current page.
 * Numeric Box - Navigates to the desired page by entering an appropriate page number in numeric value.
 
-![](Paging_images/paging.png)
+![Paging in ASP NET MVC pivot client control](Paging_images/paging.png)
 
 
 ## Using Virtual Scrolling
 
-Virtual Scrolling is a technique that allows user to view the PivotClient information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotClient by setting the [`enableVirtualScrolling`](/js/api/ejpivotclient#members:enablevirtualscrolling) property to true. You can provide the page size and current page details for each axis through [`PagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property. 
+Virtual Scrolling is a technique that allows user to view the PivotClient information page by page with the use of vertical and horizontal scrollbar. You can enable Virtual Scrolling option in PivotClient by setting the [`enableVirtualScrolling`](/js/api/ejpivotclient#members:enablevirtualscrolling) property to true. You can provide the page size and current page details for each axis through [`PagerOptions`](/js/api/ejpivotclient#members:pagerOptions) property.
 
 ### Client Mode
 
@@ -64,7 +64,7 @@ Virtual Scrolling is a technique that allows user to view the PivotClient inform
 
 {% endhighlight %}
 
-![](Paging_images/virtual-scrolling.png)
+![Virtual scrolling in ASP NET MVC pivot client control](Paging_images/virtual-scrolling.png)
 
 ## Page Settings
 

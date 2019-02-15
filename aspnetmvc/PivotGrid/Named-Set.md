@@ -17,16 +17,16 @@ You can bind the Named Sets in PivotGrid by setting it's unique name in the `Fie
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("[Date].[Fiscal]").Add(); }).Columns(columns => { columns.FieldName("[Core Product Group]").IsNamedSets(true).Add(); }).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add(); }).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
+@Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("[Date].[Fiscal]").Add(); }).Columns(columns => { columns.FieldName("[Core Product Group]").IsNamedSets(true).Add(); }).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); }).Axis(AxisName.Column).Add(); }).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works"))
 
 {% endhighlight %}
 
-![](KPI_images/namedset.png)
+![NamedSet in ASP NET MVC pivot grid OLAP client mode](KPI_images/namedset.png)
 
 
 ## Server Mode
 
-You can add Named Sets in the PivotGrid by using "NamedSetElement" Class in the OlapReport. 
+You can add Named Sets in the PivotGrid by using "NamedSetElement" Class in the OlapReport.
 
 {% highlight C# %}
 
@@ -52,5 +52,5 @@ olapReport.SeriesElements.Add(dimensionElementRow);
 
 {% endhighlight %}
 
-![](KPI_images/servernamedset.png)
+![NamedSet in ASP NET MVC pivot grid OLAP server mode](KPI_images/servernamedset.png)
 

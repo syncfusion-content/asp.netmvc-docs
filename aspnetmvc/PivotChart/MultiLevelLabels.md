@@ -20,9 +20,9 @@ Multi-level labels allows you to drill down to access the detailed level of data
 
 ## Relational
 
-![](MultiLevelLabels_images/relational.png)
+![Multi-level labels in ASP NET MVC pivot chart with relational mode](MultiLevelLabels_images/relational.png)
 
 ## OLAP
 
-![](MultiLevelLabels_images/olap.png)
+![Multi-level labels in ASP NET MVC pivot chart OLAP mode](MultiLevelLabels_images/olap.png)
 

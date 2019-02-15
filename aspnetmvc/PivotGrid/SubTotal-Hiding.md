@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  SubTotal Hiding | PivotGrid | ASP.NET MVC | Syncfusion 
+title:  SubTotal Hiding | PivotGrid | ASP.NET MVC | Syncfusion
 description: SubTotal Hiding
 platform: ejmvc
 control: PivotGrid
@@ -37,4 +37,4 @@ private PivotReport BindDefaultData()
 
 {% endhighlight %}
 
-![](SubTotal-Hiding_images/SubTotal.png)
+![SubTotal hiding support in ASP NET MVC pivot grid control](SubTotal-Hiding_images/SubTotal.png)

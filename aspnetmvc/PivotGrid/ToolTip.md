@@ -27,5 +27,5 @@ The PivotGrid provides option to animate tooltip displayed in the grid.  The ani
 
 {% endhighlight %}
 
-![](ToolTip_images/tooltip.png)
+![Tooltip in ASP NET MVC pivot grid control](ToolTip_images/tooltip.png)
 

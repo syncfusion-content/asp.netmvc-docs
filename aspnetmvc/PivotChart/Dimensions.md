@@ -24,7 +24,7 @@ You can customize the PivotChart dimension by setting the width and height of th
             height:450px;
         }
     </style>
-    
+
 {% endhighlight %}
 
 ## Set size in pixels
@@ -42,10 +42,10 @@ You can customize the PivotChart dimension by setting the width and height of th
             height:460px;
         }
     </style>
-    
+
 {% endhighlight %}
 
-![](Dimensions_images/Dimensions.png) 
+![ASP NET MVC pivot chart control with specified size](Dimensions_images/Dimensions.png)
 
 ## Responsive
 
@@ -58,19 +58,19 @@ PivotChart control supports responsive rendering based on the target device (des
 
     <style>
         #PivotChart1 {
-            min-height: 275px; 
-            min-width: 525px; 
-            height: 460px; 
+            min-height: 275px;
+            min-width: 525px;
+            height: 460px;
             width: 100%;
         }
     </style>
-    
+
 {% endhighlight %}
 
-![](Dimensions_images/NormalView.png)
+![ASP NET MVC pivot chart with normal layout](Dimensions_images/NormalView.png)
 
 _Normal View_
 
-![](Dimensions_images/ResponsiveView.png)
+![ASP NET MVC pivot chart with responsive layout](Dimensions_images/ResponsiveView.png)
 
 _ResponsiveView_

@@ -20,7 +20,7 @@ By using the `title.Text` property, you can add the title text for PivotChart.
 
 {% endhighlight %}
 
-![](/js/PivotChart/Title_images/Title_img1.png)
+![Title text in ASP NET MVC pivot chart control](Title_images/Title_img1.png)
 
 ## Title Alignment
 By using the `title.TextAlignment` property, you can align the PivotChart controls title text to center, far or near.
@@ -33,7 +33,7 @@ By using the `title.TextAlignment` property, you can align the PivotChart contro
 
 {% endhighlight %}
 
-![](/js/PivotChart/Title_images/Title_img2.png)
+![Title alignment in ASP NET MVC pivot chart control](Title_images/Title_img2.png)
 
 ## Title Customization
 
@@ -46,5 +46,5 @@ By using the `Title` property, you can add the title text for X-axis and Y-axis.
 
 {% endhighlight %}
 
-![](/js/PivotChart/Title_images/Title_img3.png) 
+![Title customization in ASP NET MVC pivot chart control](Title_images/Title_img3.png)
 

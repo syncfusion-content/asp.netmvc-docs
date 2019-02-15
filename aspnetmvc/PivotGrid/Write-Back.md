@@ -28,8 +28,8 @@ public Dictionary < string, object > WriteBack(string action, string value, stri
     DataManager.SetCurrentReport(Syncfusion.JavaScript.Olap.Utils.DeserializeOlapReport(currentReport));
     return htmlHelper.GetJsonData(action, DataManager, value, rowUniqueName, columnUniqueName);
 }
-        
+
 {% endhighlight %}
 
-![](Write-Back_images/writeback.png)
+![Write-back support in ASP NET MVC pivot grid control](Write-Back_images/writeback.png)
 
