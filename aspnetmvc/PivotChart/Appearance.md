@@ -39,7 +39,7 @@ By using the `Theme` property, you can set the desired theme in PivotChart. By d
 
 {% endhighlight %}
 
-![](Appearance_images/themes.png)
+![ASP NET MVC pivot chart control rendered with built-in theme](Appearance_images/themes.png)
 
 ## PivotChart - Area Customization
 
@@ -53,7 +53,7 @@ To customize the PivotChart border, use `Border` property in PivotChart.
 
 {% endhighlight %}
 
-![](Appearance_images/bordercustomize.png)
+![Border customization for ASP NET MVC pivot chart control](Appearance_images/bordercustomize.png)
 
 ### Background Customization
 The PivotChart control background can be customized by using the `Background` property in the Chart area.
@@ -65,7 +65,7 @@ The PivotChart control background can be customized by using the `Background` pr
 
 {% endhighlight %}
 
-![](Appearance_images/backgroundcutomize.png)
+![Background customization for ASP NET MVC pivot chart control](Appearance_images/backgroundcutomize.png)
 
 ### Grid Bands Customization
 By using the `AlternateGridBand` property of the axis, you can provide different color for grid rows and columns formed by the grid lines in the Chart area. The properties `Odd` and `Even` are used to customize the grid bands at odd and even positions respectively.
@@ -77,7 +77,7 @@ By using the `AlternateGridBand` property of the axis, you can provide different
 
 {% endhighlight %}
 
-![](Appearance_images/gridbands.png)
+![Grid band customization for ASP NET MVC pivot chart control](Appearance_images/gridbands.png)
 
 ### Animation
 You can enable animation by using the `EnableAnimation` property under `CommonSeriesOptions` of the PivotChart control. This animates the Chart series on two occasions - when the Chart is loaded for the first time and when you change the series type by using the `Type` property.

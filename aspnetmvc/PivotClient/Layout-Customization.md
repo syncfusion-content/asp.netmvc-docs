@@ -9,11 +9,11 @@ documentation: ug
 
 # Layout Customization
 
-# Size
+## Size
 
 Allows you to render PivotClient in different sizes. You can set height and width under `size` property.
 
-## Set size in Pixels
+### Set size in Pixels
 
 {% highlight CSHTML %}
 
@@ -23,9 +23,9 @@ Allows you to render PivotClient in different sizes. You can set height and widt
 
 PivotClient with decreased size from default size.
 
-![](Layout-Customization_images/small-size.png)
+![ASP NET MVC pivot client control with reduced size](Layout-Customization_images/small-size.png)
 
-## Set size in percentage
+### Set size in percentage
 
 You can set the PivotClient size in percentage also.
 
@@ -37,7 +37,7 @@ N> Size of the parent container should be set in Pixels.
 
 {% endhighlight %}
 
-## Control Placement 
+## Control Placement
 
 ### Tab View
 
@@ -49,7 +49,7 @@ In Tab view representation, both Grid and Chart will be displayed in separate ta
 
 {% endhighlight %}
 
-![](Layout-Customization_images/tabview.png)
+![ASP NET MVC pivot client control with tab view](Layout-Customization_images/tabview.png)
 
 ### Tile View
 
@@ -61,7 +61,7 @@ In Tile View representation, both Grid and Chart will be displayed one above the
 
 {% endhighlight %}
 
-![](Layout-Customization_images/tileview.png)
+![ASP NET MVC pivot client control with tile view](Layout-Customization_images/tileview.png)
 
 ## Default View
 
@@ -75,7 +75,7 @@ To display Grid control by default, set `DefaultView` property under `DisplaySet
 
 {% endhighlight %}
 
-![](Layout-Customization_images/gridview.png)
+![ASP NET MVC pivot client control with grid view as default](Layout-Customization_images/gridview.png)
 
 ### Chart View
 
@@ -87,7 +87,7 @@ To display Chart control by default, set the `DefaultView` property to **Chart**
 
 {% endhighlight %}
 
-![](Layout-Customization_images/chartview.png)
+![ASP NET MVC pivot client control with chart view as default](Layout-Customization_images/chartview.png)
 
 ## Display Mode
 
@@ -101,7 +101,7 @@ By the `Mode` property under `DisplaySettings` option to **GridOnly**, PivotGrid
 
 {% endhighlight %}
 
-![](Layout-Customization_images/gridonlyview.png)
+![ASP NET MVC pivot client control with grid only view](Layout-Customization_images/gridonlyview.png)
 
 ### Chart Only
 
@@ -113,7 +113,7 @@ By the `Mode` property under `DisplaySettings` option to **ChartOnly**, PivotCha
 
 {% endhighlight %}
 
-![](Layout-Customization_images/chartonlyview.png)
+![ASP NET MVC pivot client control with chart only view](Layout-Customization_images/chartonlyview.png)
 
 ### Both Chart and Grid
 
@@ -125,7 +125,7 @@ By the `Mode` property under `DisplaySettings` option to **ChartAndGrid**, data 
 
 {% endhighlight %}
 
-![](Layout-Customization_images/tileview.png)
+![ASP NET MVC pivot client control with grid and chart view](Layout-Customization_images/tileview.png)
 
 ## Toggle Panel
 
@@ -137,11 +137,11 @@ Toggle panel option lets the user to toggle the visibility of Axis Element Build
 
 {% endhighlight %}
 
-![](Layout-Customization_images/toggleview.png)
+![ASP NET MVC pivot client control with toggle panel](Layout-Customization_images/toggleview.png)
 
 ## Collapse Toggle Panel By Default
 
-Allows the user to hide “Cube Browser” and “Axis Element Builder” panels while initiating the widget. You can enable this option in PivotClient by setting the `CollapseCubeBrowserByDefault` property to true.  
+Allows the user to hide “Cube Browser” and “Axis Element Builder” panels while initiating the widget. You can enable this option in PivotClient by setting the `CollapseCubeBrowserByDefault` property to true.
 
 {% highlight CSHTML %}
 
@@ -149,7 +149,7 @@ Allows the user to hide “Cube Browser” and “Axis Element Builder” panels
 
 {% endhighlight %}
 
-![](Layout-Customization_images/collapse-cube-browser-by-default.png)
+![ASP NET MVC pivot client control with toggle panel by default](Layout-Customization_images/collapse-cube-browser-by-default.png)
 
 ## Maximized/Full Screen View
 
@@ -161,11 +161,11 @@ Full screen view helps to visualize the PivotGrid and PivotChart controls inside
 
 {% endhighlight %}
 
-![](Layout-Customization_images/maximizeicon.png)
+![Full screen icon in ASP NET MVC pivot client control](Layout-Customization_images/maximizeicon.png)
 
 The following screenshot shows the maximized view of PivotGrid.
 
-![](Layout-Customization_images/maximizedview.png)
+![Full screen view of ASP NET MVC pivot client control](Layout-Customization_images/maximizedview.png)
 
 
 ## Chart Types
@@ -182,9 +182,9 @@ The `ChartType` property takes Column Chart by default. The types available are 
 
 The Chart Type can also be changed dynamically through the toolbar icon.
 
-![](Layout-Customization_images/charttypes.png)
+![Chart types in ASP NET MVC pivot client control](Layout-Customization_images/charttypes.png)
 
-![](Layout-Customization_images/linechart.png) 
+![ASP NET MVC pivot client control with line chart type](Layout-Customization_images/linechart.png)
 
 ### PivotTreeMap
 
@@ -198,9 +198,9 @@ You can include the PivotTreeMap component as one of the chart types by setting 
 
 {% endhighlight %}
 
-![](Layout-Customization_images/TreeMap1.png)
+![Treemap icon in chart types panel of ASP NET MVC pivot client control](Layout-Customization_images/TreeMap1.png)
 
-![](Layout-Customization_images/TreeMap2.png)
+![Treemap in ASP NET MVC pivot client control](Layout-Customization_images/TreeMap2.png)
 
 
 ## Report Toolbar
@@ -213,8 +213,8 @@ You can customize the display of toolbar by enabling/disabling the visibility of
 
 {% endhighlight %}
 
-![](Layout-Customization_images/toolbarIconSettings1.png)
+![Report toolbar in ASP NET MVC pivot client control](Layout-Customization_images/toolbarIconSettings1.png)
 
 The following screenshot shows after disabling the toolbar icons.
 
-![](Layout-Customization_images/toolbarIconSettings2.png)
+![Hiding report icons from toolbar of ASP NET MVC pivot client control](Layout-Customization_images/toolbarIconSettings2.png)

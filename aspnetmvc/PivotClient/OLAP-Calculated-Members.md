@@ -11,7 +11,7 @@ documentation: ug
 
 I> This feature is applicable only for Server Mode bound with OLAP data source.
 
-Calculated members are the customized dimension members or measures that are defined based on the cube data. Values for calculated members are computed at run-time. 
+Calculated members are the customized dimension members or measures that are defined based on the cube data. Values for calculated members are computed at run-time.
 
 The two types of calculated members are as follows:
 
@@ -31,16 +31,16 @@ To show the icon in toolbar panel, we need to set the property `EnableCalculated
 
 {% endhighlight %}
 
-![](Calculated-Members_images/icon.png)
+![Calculated member icon in ASP NET MVC pivot client control](Calculated-Members_images/icon.png)
 
 To insert a new calculated member, open the Calculated Member dialog by clicking the icon available in toolbar panel. We can define following options inside the dialog.
 
     Caption - To set the name for the calculated member.
     Expression - To set the formula for the calculated member where you can insert required members through Cube Dimension Browser by a simple drag and drop option with required operators to make formula.
     Member Type - To specify the hierarchy of the member set in expression.
-    Format String - To set the format for the calculated member. 
+    Format String - To set the format for the calculated member.
 
-![](Calculated-Members_images/dialog.png)
+![Calculated member dialog in ASP NET MVC pivot client control](Calculated-Members_images/dialog.png)
 
 ## Through Code Behind
 
@@ -103,9 +103,9 @@ Following code snippet will describe the creation and addition of a calculated m
     calculatedDimension.AddElement(internalDimension);
 
     olapReport.CalculatedMembers.Add(calculatedDimension);
-    
+
     olapReport.CategoricalElements.Add(calculatedDimension);
 
 {% endhighlight %}
 
-![](Calculated-Members_images/members.png)
+![Calculated members in ASP NET MVC pivot client control](Calculated-Members_images/members.png)

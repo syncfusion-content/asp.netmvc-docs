@@ -18,7 +18,7 @@ The PivotGrid control supports hyperlink option to link data for each individual
 * **EnableValueCellHyperlink** - Enables hyperlink for value cell.
 
 Also hyperlink option provides separate events for row header, column header, value and summary cells as mentioned below.
- 
+
 * **ColumnHeaderHyperlinkClick** - Returns column header information through event on hyperlink click.
 * **RowHeaderHyperlinkClick** - Returns row header information through event on hyperlink click.
 * **SummaryCellHyperlinkClick** - Returns summary cell information through event on hyperlink click.
@@ -36,7 +36,7 @@ Also hyperlink option provides separate events for row header, column header, va
 
 {% endhighlight %}
 
-![](PivotGrid-Elements_images/hyperlink.png)
+![Hyperlink in ASP NET MVC pivot grid control](PivotGrid-Elements_images/hyperlink.png)
 
 ## Selection
 You can select a particular range of value cells from PivotGrid and manipulate/display them. Cell selection is applicable only for value cells and you can enable this functionality by setting `EnableCellSelection` property to true.
@@ -58,7 +58,7 @@ The **"CellSelection"** event would be triggered as soon as the selection proces
 
 {% endhighlight %}
 
-![](PivotGrid-Elements_images/cellselection.png)
+![Cell selection in ASP NET MVC pivot grid control](PivotGrid-Elements_images/cellselection.png)
 
 ## Cell Context
 Cell context allows user to perform any custom operation on cell right-click. For example, you can create and display context menu on cell right-click.
@@ -96,13 +96,13 @@ Conditional formatting allows user to highlight particular cells with certain co
 
 {% endhighlight %}
 
-![](PivotGrid-Elements_images/FormatDialog.png)
+![Conditional formatting dialog in ASP NET MVC pivot grid control](PivotGrid-Elements_images/FormatDialog.png)
 
-![](PivotGrid-Elements_images/FormattedGrid.png)
+![ASP NET MVC pivot grid control with conditional formatting](PivotGrid-Elements_images/FormattedGrid.png)
 
 ### Export
 
-We can export the PivotGrid with highlighted particular cells along with its formatting styles. 
+We can export the PivotGrid with highlighted particular cells along with its formatting styles.
 
 LIMITATIONS FOR WORD:
 
@@ -126,4 +126,4 @@ The following border styles are alone supported
 
 Also border size is not supported.
 
-![](PivotGrid-Elements_images/conditional_export.png)
+![Excel exporting with conditional formatting in ASP NET MVC pivot grid control](PivotGrid-Elements_images/conditional_export.png)

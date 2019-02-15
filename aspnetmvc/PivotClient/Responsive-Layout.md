@@ -18,4 +18,4 @@ PivotClient widget supports responsive rendering based on the target device (des
 
 {% endhighlight %}
 
-![](Responsive-Layout_images/responsive.png)
+![Responsive layout of ASP NET MVC pivot client control](Responsive-Layout_images/responsive.png)

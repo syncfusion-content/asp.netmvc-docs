@@ -67,7 +67,7 @@ Register the referred assemblies in Web.config files available inside Views fold
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
+    <assemblies>
         ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -82,28 +82,28 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
-    
+
 {% highlight xml %}
 
-<configuration> 
-    …… 
+<configuration>
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 {% endhighlight %}
 
@@ -113,12 +113,12 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 
 1. ej.web.all.min.css
 2. jQuery-3.0.0.min.js
-3. ej.web.all.min.js 
+3. ej.web.all.min.js
 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight cshtml %}
 
 <head>
@@ -132,11 +132,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
-    …… 
-    …… 
-    @RenderBody() 
-    @(Html.EJ().ScriptManager())   
+<body>
+    ……
+    ……
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -160,7 +160,7 @@ Before initializing, empty the contents of Index.cshtml file under Views > Home 
 
 ### Populate PivotChart With Data
 
-Let us now see how to populate the PivotChart control using a sample JSON data as shown below. 
+Let us now see how to populate the PivotChart control using a sample JSON data as shown below.
 
 {% highlight cshtml %}
 
@@ -187,23 +187,23 @@ Let us now see how to populate the PivotChart control using a sample JSON data a
 {% endhighlight %}
 
 The JSON data is set to the **"data"** property present inside the **"dataSource"** object. **"dataSource"** object allows us to set both datasource as well as the fields that needs to be displayed in the row, column, value and filter section of the PivotChart control.
-  
+
 {% highlight cshtml %}
-  
+
 @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add();}).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add();})).Size(size=>size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 The above code will generate a simple PivotChart with sales amount over products in different regions.
 
-![](Relational-Getting-Started_images/PopulatePivotChartWithData.png) 
+![ASP NET MVC pivot chart control with relational client mode](Relational-Getting-Started_images/PopulatePivotChartWithData.png)
 
 ### Apply Sorting
 
 You can sort a field either to ascending or descending order using the "sortOrder" property. Sorting is applicable only for Row and Column fields.
 
 N> By default, fields are arranged in ascending order.
- 
+
 {% highlight cshtml %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource
@@ -213,7 +213,7 @@ N> By default, fields are arranged in ascending order.
 
 {% endhighlight %}
 
-![](Relational-Getting-Started_images/ApplySorting.png) 
+![Sorting support in ASP NET MVC pivot chart control](Relational-Getting-Started_images/ApplySorting.png)
 
 ### Apply Filtering
 
@@ -227,14 +227,14 @@ Filtering option allows you to specify a set of values that either need to be di
 {% highlight cshtml %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").ClientSideEvents(clientSideEvents => clientSideEvents.Load("onLoad")).DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").FilterItems(filter => { filter.FilterType(PivotFilterType.Exclude).Values(value => { value.Add("United Kingdom"); }); }).Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); })).Size(size=>size.Height("460px").Width("950px"))
-  
+
 {% endhighlight %}
 
-![](Relational-Getting-Started_images/ApplyFiltering.png) 
+![Filtering support in ASP NET MVC pivot chart control](Relational-Getting-Started_images/ApplyFiltering.png)
 
 ## Creating a simple application with PivotChart and Relational datasource (Server Mode)
 
-This section covers the information required to create a simple PivotChart bound to Relational datasource. 
+This section covers the information required to create a simple PivotChart bound to Relational datasource.
 
 N> ASP.NET MVC Web Application will contain a service that transfers data to server-side, processes and returns back to client-side for control rendering and re-rendering. The service utilized for communication could be either WCF or WebAPI based on user requirement.
 
@@ -298,13 +298,13 @@ Register the referenced assemblies in Web.config files available inside Views fo
 {% highlight xml %}
 
 <compilation debug="true" targetFramework="4.0">
-    <assemblies> 
-        …… 
+    <assemblies>
+        ……
         ……
         <add assembly="Syncfusion.EJ, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Pivot, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
         <add assembly="Syncfusion.EJ.Export, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" /> 
+        <add assembly="Syncfusion.EJ.Mvc, Version= {{ site.40esreleaseversion }}, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     </assemblies>
 </compilation>
 
@@ -314,28 +314,28 @@ Register the required namespaces in Web.config files available inside Views fold
 
 {% highlight xml %}
 
-<namespaces> 
+<namespaces>
     ……
     ……
     <add namespace="Syncfusion.MVC.EJ" />
-    <add namespace="Syncfusion.JavaScript" /> 
+    <add namespace="Syncfusion.JavaScript" />
 </namespaces>
 {% endhighlight %}
 
 N> Registering assemblies and namespaces earlier helps to include the control in view page with the help of intellisense.
 
 Set the **UnobtrusiveJavaScriptEnabled** property to false under **appSettings** tag in Web.config file at the root folder.
-    
+
 {% highlight xml %}
 
 <configuration>
-    …… 
     ……
-    <appSettings> 
-        …… 
+    ……
+    <appSettings>
         ……
-        <add key="UnobtrusiveJavaScriptEnabled" value="false" /> 
-    </appSettings>        
+        ……
+        <add key="UnobtrusiveJavaScriptEnabled" value="false" />
+    </appSettings>
 </configuration>
 
 {% endhighlight %}
@@ -351,7 +351,7 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 [Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
-    
+
 {% highlight cshtml %}
 
 <head>
@@ -365,11 +365,11 @@ The script manager is initialized immediately after the `RenderBody()` function 
 
 {% highlight cshtml %}
 
-<body> 
+<body>
     //....
     //....
-    @RenderBody() 
-    @(Html.EJ().ScriptManager()) 
+    @RenderBody()
+    @(Html.EJ().ScriptManager())
 </body>
 {% endhighlight %}
 
@@ -378,7 +378,7 @@ The script manager is initialized immediately after the `RenderBody()` function 
 Before initializing, empty the contents of **Index.cshtml** file under **Views > Home** folder and add the following codes. Register the namespaces at the top of the page and then add the control.
 
 {% highlight cshtml %}
-    
+
 @using Syncfusion.JavaScript;
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/Relational")).Size(size=>size.Width("950px").Height("460px"))
@@ -389,7 +389,7 @@ Before initializing, empty the contents of **Index.cshtml** file under **Views >
         height:460px;
     }
 </style>
-    
+
 {% endhighlight %}
 
 The **“Url”** property in PivotChart control points the service endpoint, where data are processed and fetched in the form of JSON. The services used in PivotChart control as endpoint are WCF and WebAPI.
@@ -415,7 +415,7 @@ namespace PivotChartDemo
 {
     public class RelationalController: ApiController
     {
-    
+
     }
 }
 
@@ -428,7 +428,7 @@ The following are the list of namespaces to be added on top of the main class in
 {% highlight c# %}
 
 using Syncfusion.JavaScript;
-using Syncfusion.PivotAnalysis.Base; 
+using Syncfusion.PivotAnalysis.Base;
 
 namespace PivotChartDemo
 {
@@ -582,7 +582,7 @@ Define the service methods inside RelationalController class, found inside `Rela
 namespace PivotChartDemo {
     public class RelationalController: ApiController {
         PivotChart pivotChart = new PivotChart();
-        
+
         [System.Web.Http.ActionName("InitializeChart")]
         [System.Web.Http.HttpPost]
         public Dictionary<string, object> InitializeChart(Dictionary<string, object> jsonResult)
@@ -635,10 +635,10 @@ public static class WebApiConfig
 
 Now, **PivotChart** will be rendered with amount over a set of products across different customer geographic locations.
 
-![](Relational-Getting-Started_images/ServerMode.png) 
+![ASP NET MVC pivot chart control in relational server mode](Relational-Getting-Started_images/ServerMode.png)
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotChart. For more details on this topic, [click here](http://help.syncfusion.com/aspnetmvc/PivotChart/relational-connectivity#wcf-1).
+This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotChart. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/PivotChart/relational-connectivity#wcf).
 
 

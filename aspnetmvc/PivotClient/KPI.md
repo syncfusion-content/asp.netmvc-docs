@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Key-Performance-Indicator-KPI | PivotClient | ASP.NET MVC | Syncfusion
+title: KPI | PivotClient | ASP.NET MVC | Syncfusion
 description: key performance indicator (KPI)
 platform: ejmvc
 control: PivotClient
@@ -26,11 +26,11 @@ To enable KPI option set the property `EnableKPI` to `true`.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotClient("PivotClient1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("[Date].[Fiscal]").Add(); }).Columns(columns => { columns.FieldName("[Product].[Product Categories]").Add(); }).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); measures.FieldName("[Measures].[Growth in Customer Base Trend]").Add(); measures.FieldName("[Measures].[Growth in Customer Base Status]").Add(); }).Axis(AxisName.Column).Add(); }).Data("http://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).EnableKPI(true)
+@Html.EJ().Pivot().PivotClient("PivotClient1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("[Date].[Fiscal]").Add(); }).Columns(columns => { columns.FieldName("[Product].[Product Categories]").Add(); }).Values(values => { values.Measures(measures => { measures.FieldName("[Measures].[Internet Sales Amount]").Add(); measures.FieldName("[Measures].[Growth in Customer Base Trend]").Add(); measures.FieldName("[Measures].[Growth in Customer Base Status]").Add(); }).Axis(AxisName.Column).Add(); }).Data("https://bi.syncfusion.com/olap/msmdpump.dll").Catalog("Adventure Works DW 2008 SE").Cube("Adventure Works")).EnableKPI(true)
 
 {% endhighlight %}
 
-![](KPI_images/clientmode-kpi.png)
+![KPI in ASP NET MVC pivot client with OLAP client mode](KPI_images/clientmode-kpi.png)
 
 ## Server Mode
 
@@ -70,5 +70,5 @@ olapReport.SeriesElements.Add(dimensionElementRow);
 
 {% endhighlight %}
 
-![](KPI_images/KPI.png)
+![KPI in ASP NET MVC pivot client with OLAP server mode](KPI_images/KPI.png)
 

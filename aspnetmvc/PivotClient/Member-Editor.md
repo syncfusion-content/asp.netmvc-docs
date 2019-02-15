@@ -11,7 +11,7 @@ documentation: ug
 
 Member editor is a dialog that displays the members of the current field in a tree view structure, which can be opened by clicking the pivot button available in the axis elements. It helps to search, filter, and sort the field members available in the pivot client control.
 
-![Member editor in pivot client control](Member_Editor_images/member_editor.png)
+![Member editor in ASP NET MVC pivot client control](Member_Editor_images/member_editor.png)
 
 ## Member editor - Paging
 
@@ -34,7 +34,7 @@ Following are the navigation option available in Member Editor Pager.
 * Numeric Box - Navigates to the desired page by entering an appropriate page number in numeric value.
 
 
-![Paging in member editor](Member_Editor_images/member_editor_paging.png)
+![Member editor paging in ASP NET MVC pivot client control](Member_Editor_images/member_editor_paging.png)
 
 ## Member editor - Sorting
 
@@ -48,6 +48,6 @@ You can enable the member editor sorting in the pivot grid control by setting th
 
 {% endhighlight %}
 
-![Field members sorted in ascending order](Member_Editor_images/member_editor_sorting_ascending.png)
+![Member editor sorting with ascending order in ASP NET MVC pivot client control](Member_Editor_images/member_editor_sorting_ascending.png)
 
-![Field members sorted in descending order](Member_Editor_images/member_editor_sorting_descending.png)
+![Member editor sorting with descending order in ASP NET MVC pivot client control](Member_Editor_images/member_editor_sorting_descending.png)

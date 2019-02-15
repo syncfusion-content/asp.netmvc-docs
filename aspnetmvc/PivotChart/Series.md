@@ -11,7 +11,7 @@ documentation: ug
 
 ## Series Point customization
 By using the `fill` and `border` properties of Chart series, you can customize the PivotChart series color, border color and border width.
- 
+
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
@@ -28,4 +28,4 @@ By using the `fill` and `border` properties of Chart series, you can customize t
 
 {% endhighlight %}
 
-![](Series_images/Series_img1.png)
+![Series customization in ASP NET MVC pivot chart control](Series_images/Series_img1.png)
