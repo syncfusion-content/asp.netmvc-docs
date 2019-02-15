@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  Axes | PivotChart | ASP.NET MVC | Syncfusion
-description: axes 
+description: axes
 platform: ejmvc
 control: PivotChart
 documentation: ug
 ---
 
-# Axes 
+# Axes
 
 ## Label Format
 
@@ -21,7 +21,7 @@ By using the `LabelFormat` property, you can format the numeric labels. Numeric 
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img1.png)
+![Label formatting in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img1.png)
 
 Following table describes the result on applying some commonly used label formats on numeric values.
 
@@ -35,56 +35,56 @@ Description</th>
 </tr>
 <tr><td>
 1000</td><td>
-n1</td><td>    
+n1</td><td>
 1000.0</td><td>
 The Number is rounded to 1 decimal place</td>
 </tr>
 <tr><td>
 1000</td><td>
-n2</td><td>    
+n2</td><td>
 1000.00</td><td>
 The Number is rounded to 2 decimal place</td>
 </tr>
 <tr><td>
 1000</td><td>
-n3</td><td>    
+n3</td><td>
 1000.000</td><td>
 The Number is rounded to 3 decimal place</td>
 </tr>
 <tr><td>
 0.01</td><td>
-p1</td><td>    
+p1</td><td>
 1.0%</td><td>
 The Number is converted to percentage with 1 decimal place</td>
 </tr>
 <tr><td>
 0.01</td><td>
-p2</td><td>    
+p2</td><td>
 1.00%</td><td>
 The Number is converted to percentage with 2 decimal place</td>
 </tr>
 <tr><td>
 0.01</td><td>
-p3</td><td>    
+p3</td><td>
 1.000%</td><td>
 The Number is converted to percentage with 3 decimal place</td>
 </tr>
 <tr><td>
 1000</td><td>
-c1</td><td>    
+c1</td><td>
 $1,000.0</td><td>
 The Currency symbol is appended to number and number is rounded to 1 decimal place</td>
 </tr>
 <tr><td>
 1000</td><td>
-c2</td><td>    
+c2</td><td>
 $1,000.00</td><td>
 The Currency symbol is appended to number and number is rounded to 2 decimal place</td>
 </tr>
 </table>
 
-### Label Format Customization 
-By using the `LabelFormat` property of `PrimaryYAxis`, you can add the category labels with prefix and/or suffix. 
+### Label Format Customization
+By using the `LabelFormat` property of `PrimaryYAxis`, you can add the category labels with prefix and/or suffix.
 
 {% highlight CSHTML %}
 
@@ -93,7 +93,7 @@ By using the `LabelFormat` property of `PrimaryYAxis`, you can add the category 
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img2.png)
+![Label format customization in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img2.png)
 
 ## Common Axis Features
 
@@ -109,7 +109,7 @@ N> By default, the value of `Visible` property is true in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img3.png)
+![Axis visibility in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img3.png)
 
 ### Label Customization
 By using the `Font` property of the axis, we can customize the labels – font family, color, opacity, size and font-weight.
@@ -121,7 +121,7 @@ By using the `Font` property of the axis, we can customize the labels – font f
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img4.png)
+![Label customization in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img4.png)
 
 ### Label and Tick Positioning
 Axis labels and ticks can be positioned inside or outside the Chart area by using the `AxisLabelPosition` and `TickLinesPosition` properties. The labels and ticks are positioned outside the Chart area, by default.
@@ -133,7 +133,7 @@ Axis labels and ticks can be positioned inside or outside the Chart area by usin
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img5.png)
+![Label and tick positioning in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img5.png)
 
 ### Grid Lines Customization
 By using the `MajorGridLines` and `MinorGridLines` properties of the axis, you can customize the width, color, visibility and opacity of the grid lines.
@@ -147,7 +147,7 @@ N> By default, the minor grid lines are not visible in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img6.png)
+![Grid lines customization in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img6.png)
 
 ### Tick Line Customization
 By using the `MajorTickLines` and `MinorTickLines` properties of the axis, you can customize the width, color, visibility, size and opacity of the tick lines.
@@ -161,7 +161,7 @@ N> By default, the minor tick lines are not visible in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img7.png)
+![Tick lines customization in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img7.png)
 
 ### Inversing Axis
 Axis can be inversed by using the `IsInversed` property of the axis.
@@ -175,7 +175,7 @@ N> By default, the `IsInversed` property is false in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img8.png)
+![Inversing axes in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img8.png)
 
 ### Placing Axes at Opposite Side
 The `OpposedPosition` property of Chart axis can be used to place the axis at the opposite direction from its default position.
@@ -189,7 +189,7 @@ N> By default, the `OpposedPosition` property is false in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img9.png)
+![Position of axes in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img9.png)
 
 ## Smart Axis Labels
 
@@ -202,7 +202,7 @@ N> By default, the `LabelIntersection` property is none in PivotChart.
 * Trim
 * MultipleRows
 * Wrap
-* Hide. 
+* Hide.
 
 {% highlight CSHTML %}
 
@@ -211,4 +211,4 @@ N> By default, the `LabelIntersection` property is none in PivotChart.
 
 {% endhighlight %}
 
-![](Chart-Axes_images/Chart-Axes_img10.png)
+![Smart axis labels in ASP NET MVC pivot chart control](Chart-Axes_images/Chart-Axes_img10.png)

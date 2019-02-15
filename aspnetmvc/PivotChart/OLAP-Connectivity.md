@@ -1,13 +1,13 @@
 ---
 layout: post
 title: OLAP Connectivity | PivotChart | ASP.NET MVC | Syncfusion
-description: olap connectivity 
+description: olap connectivity
 platform: ejmvc
 control: PivotChart
 documentation: ug
 ---
 
-# DataBinding 
+# DataBinding
 
 ## Binding PivotChart to Offline Cube
 To connect an OLAP Cube available in local machine, set the physical path of the Cube in the connection string. The following code example illustrates the same.
@@ -23,7 +23,7 @@ To connect an OLAP Cube available in SQL Server Analysis Service in local machin
 
 {% highlight c# %}
 
-string connectionString = "Data source=localhost; Initial Catalog=Adventure Works DW;"; 
+string connectionString = "Data source=localhost; Initial Catalog=Adventure Works DW;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 {% endhighlight %}
 
@@ -32,7 +32,7 @@ To connect an OLAP Cube available in SQL Server Analysis Service in online serve
 
 {% highlight c# %}
 
-string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;"; 
+string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 {% endhighlight %}
 
@@ -41,7 +41,7 @@ To connect an OLAP Cube available in Mondrian Server through **XML/A**, set the 
 
 {% highlight c# %}
 
-string connectionString = @"Data Source = http://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;";
+string connectionString = @"Data Source = https://localhost:8080/mondrian/xmla; Initial Catalog =FoodMart;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 DataManager.DataProvider.ProviderName = Syncfusion.Olap.DataProvider.Providers.Mondrian;
 {% endhighlight %}
@@ -51,7 +51,7 @@ To connect an OLAP Cube available in ActivePivot Server through **XML/A**, set t
 
 {% highlight c# %}
 
-string connectionString = @"Data Source = http://localhost:8080/cva_s/xmla; Initial Catalog = CVAS;";
+string connectionString = @"Data Source = https://localhost:8080/cva_s/xmla; Initial Catalog = CVAS;";
 OlapDataManager DataManager = new OlapDataManager(connectionString);
 DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.ActivePivot;
 {% endhighlight %}
@@ -61,8 +61,8 @@ DataManager.DataProvider.ProviderName=Syncfusion.Olap.DataProvider.Providers.Act
 **Adding a WCF Service**
 
 To add a WCF service in an existing web application, right-click on the project in Solution Explorer and select **Add > New Item**. In the **Add New Item** window, select WCF Service and name it as **“OlapService.svc”**, click **Add**.
- 
-Now WCF service is added into your application successfully which in-turn comprise of the following files. The utilization of these files will be explained in the immediate sections. 
+
+Now WCF service is added into your application successfully which in-turn comprise of the following files. The utilization of these files will be explained in the immediate sections.
 
 * OlapService.svc
 * OlapService.svc.cs
@@ -87,8 +87,8 @@ namespace PivotChartDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of SQL Server Analysis Service (SSAS) or Microsoft ADOMD.NET utility, then the location of Microsoft.AnalysisServices.AdomdClient library is [system drive:\Program Files (x86)\Microsoft.NET\ADOMD.NET]. And if you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -139,7 +139,7 @@ namespace PivotChartDemo
     public class OlapService : IOlapService
     {
         PivotChart pivotChart = new PivotChart();
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         //Other codes
 
     }
@@ -165,7 +165,7 @@ namespace PivotChartDemo
 }
 {% endhighlight %}
 
-Secondly, you need to elaborate the service methods inside the main class, found in `OlapService.svc.cs` file 
+Secondly, you need to elaborate the service methods inside the main class, found in `OlapService.svc.cs` file
 
 {% highlight c# %}
 
@@ -175,7 +175,7 @@ namespace PivotChartDemo
     public class OlapService : IOlapService
     {
         PivotChart pivotChart = new PivotChart();
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
 
         public Dictionary<string, object> InitializeChart(string action, string customObject)
         {
@@ -231,8 +231,8 @@ You can expose services through the properties such as binding, contract and add
 * Binding: In your application, you use **webHttpBinding** to post and receive the requests and responses between the client-end and the service.
 * behaviorConfiguration: This property contains the name of the behavior to be used in the endpoint.
 
-The endpointBehaviors are illustrated as follows. 
- 
+The endpointBehaviors are illustrated as follows.
+
 {% highlight xml %}
 
 <system.serviceModel>
@@ -284,5 +284,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 N> In this example, “PivotChartDemo” indicates the name and root namespace of the Web Application created in Visual Studio IDE and “OlapService” indicates the name of the WCF service created.
 Now, PivotChart is rendered with Customer Count over a period of fiscal years across different customer geographic locations.
 
-![](OLAP-Connectivity_images/ServerModeWCF.png)
+![ASP NET MVC pivot chart control with OLAP wcf service](OLAP-Connectivity_images/ServerModeWCF.png)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Column Resizing | PivotGrid | ASP.NET MVC | Syncfusion 
+title:  Column Resizing | PivotGrid | ASP.NET MVC | Syncfusion
 description: column resizing
 platform: ejmvc
 control: PivotGrid
@@ -19,7 +19,7 @@ The property `EnableColumnResizing` adjusts the width of each column based on si
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").EnableColumnResizing(true).DataSource(.....)
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Column Width Based on Text
 
@@ -29,6 +29,6 @@ The `ResizeColumnsToFit` property automatically adjusts the width of each column
 
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").ResizeColumnsToFit(true).DataSource(.....)
 
-![](Column-Resizing_images/columnresizing.png)
+![Column resizing in ASP NET MVC pivot grid control](Column-Resizing_images/columnresizing.png)
 
-{% endhighlight %} 
+{% endhighlight %}

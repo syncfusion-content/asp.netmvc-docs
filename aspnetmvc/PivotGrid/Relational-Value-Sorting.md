@@ -17,14 +17,14 @@ The headers of the column to be sorted is given in the 'HeaderText' property und
 Also you can sort column by clicking the column header. On clicking the same header once again will reverse the sorting direction.
 
 {% highlight js %}
-  
+
 @Html.EJ().Pivot().PivotGrid("PivotGrid1").DataSource(dataSource => dataSource.Rows(rows => { rows.FieldName("Country").FieldCaption("Country").Add(); }).Columns(columns => { columns.FieldName("Product").FieldCaption("Product").Add(); }).Values(values => { values.FieldName("Amount").Add(); values.FieldName("Quantity").Add(); })).ValueSortSettings(valuesortsettings=>valuesortsettings.HeaderText("Bike##Quantity").HeaderDelimiters("##").SortOrder(SortOrder.Descending))
 
 {% endhighlight %}
 
-![](Value-Sorting_images/Before.png) 
+![ASP NET MVC pivot grid control before applying value sorting](Value-Sorting_images/Before.png)
 
-![](Value-Sorting_images/After.png) 
+![ASP NET MVC pivt grid control after applying value sorting](Value-Sorting_images/After.png)
 
 
 

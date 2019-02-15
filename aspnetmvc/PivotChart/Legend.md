@@ -22,7 +22,7 @@ N> By default, the legend is visible in PivotChart.
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img1.png) 
+![Legend visibility in ASP NET MVC pivot chart control](Legend_images/Legend_img1.png)
 
 ## Legend Shape
 You can customize the legend `Shape` in PivotChart control. Default value of legend shape is “Rectangle”. Following legend shapes that are supported:
@@ -44,10 +44,10 @@ You can customize the legend `Shape` in PivotChart control. Default value of leg
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img2.png) 
+![Legend shape in ASP NET MVC pivot chart control](Legend_images/Legend_img2.png)
 
 ## Legend Position
-By using the `Position` property, you can place the legend at top, bottom, left or right of the PivotChart. 
+By using the `Position` property, you can place the legend at top, bottom, left or right of the PivotChart.
 
 N> Default value of legend position is "bottom" in PivotChart.
 
@@ -58,7 +58,7 @@ N> Default value of legend position is "bottom" in PivotChart.
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img3.png) 
+![Legend position in ASP NET MVC pivot chart control](Legend_images/Legend_img3.png)
 
 ## Legend Title
 To add the legend title, you have to specify the title text in `title.Text` property.
@@ -70,11 +70,11 @@ To add the legend title, you have to specify the title text in `title.Text` prop
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img4.png) 
+![Legend title in ASP NET MVC pivot chart control](Legend_images/Legend_img4.png)
 
 ## Legend Alignment
 You can align the legend to center, far and near based on its position in the Chart area using the `Alignment` option.
- 
+
 {% highlight CSHTML %}
 
 //Aligning the legend near to the Chart
@@ -82,7 +82,7 @@ You can align the legend to center, far and near based on its position in the Ch
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img5.png)
+![Legend alignment in ASP NET MVC pivot chart control](Legend_images/Legend_img5.png)
 
 ## Legend Items - Size and Border
 By using the legend `ItemStyle.width`, `ItemStyle.height` and `ItemStyle.border` properties, you can change the legend items - size and border.
@@ -94,8 +94,8 @@ By using the legend `ItemStyle.width`, `ItemStyle.height` and `ItemStyle.border`
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img6.png)
- 
+![Size and border of legend in ASP NET MVC pivot chart control](Legend_images/Legend_img6.png)
+
 ## Legend Border
 By using the `Border` option in legend, you can customize border color and width.
 
@@ -106,16 +106,16 @@ By using the `Border` option in legend, you can customize border color and width
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img7.png)
+![Legend border in ASP NET MVC pivot chart control](Legend_images/Legend_img7.png)
 
 ## Legend Text
-By using the `Font` option, you can customize the font family, font style, font weight and size of the legend text. 
+By using the `Font` option, you can customize the font family, font style, font weight and size of the legend text.
 
 {% highlight CSHTML %}
 
-///Customizing the legend text 
+///Customizing the legend text
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).Size(size => size.Height("460px").Width("950px")).Legend(legend => legend.Visible(true).Font(font => font.FontFamily("Segoe UI").FontWeight(ChartFontWeight.Bold).FontStyle(ChartFontStyle.Italic).Size("13px")))
 
 {% endhighlight %}
 
-![](Legend_images/Legend_img8.png)
+![Legend text in ASP NET MVC pivot chart control](Legend_images/Legend_img8.png)

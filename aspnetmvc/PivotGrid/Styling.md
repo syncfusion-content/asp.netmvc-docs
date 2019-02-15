@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styling
+title: Styling | PivotGrid | ASP.NET MVC | Syncfusion
 description: styling
 platform: ejmvc
 control: PivotGrid
@@ -31,7 +31,7 @@ By default, PivotGrid supports **17** different themes.
 You can also customize the appearance of the following component manually.
 
 * PivotGrid
-* Grouping Bar 
+* Grouping Bar
 * PivotTable Field List
 
 To change the appearance of PivotGrid, apply the below customized CSS.
@@ -67,7 +67,7 @@ To change the appearance of PivotGrid, apply the below customized CSS.
 
 {% endhighlight %}
 
-![](Styling_images/customtheme-pivotgrid.png)
+![Customization of ASP NET MVC pivot grid cells](Styling_images/customtheme-pivotgrid.png)
 
 To change the appearance of Grouping Bar, apply the below customized CSS.
 
@@ -81,7 +81,7 @@ To change the appearance of Grouping Bar, apply the below customized CSS.
    background: green;
 }
 .e-pivotgrid .e-pivotButton .e-btn.e-select, .e-pivotgrid .e-rows .pivotButton, .e-pivotgrid .values .e-pivotButton, .e-pivotgrid .columns .e-pivotButton, .e-pivotgrid .e-drag .e-pivotButton {
-   background: blanchedalmond;    
+   background: blanchedalmond;
 }
 .e-pivotgrid .colheader, .e-pivotgrid .rowheader {
    color: #5c5c5c;
@@ -96,7 +96,7 @@ To change the appearance of Grouping Bar, apply the below customized CSS.
 
 {% endhighlight %}
 
-![](Styling_images/customtheme-groupingbar.png)
+![Customization of ASP NET MVC pivot grid grouping bar](Styling_images/customtheme-groupingbar.png)
 
 To change the appearance of PivotTable Field List, apply the below customized CSS.
 
@@ -104,7 +104,7 @@ To change the appearance of PivotTable Field List, apply the below customized CS
 
 .e-pivotschemadesigner, .e-pivotschemadesigner .e-fieldTable {
      background-color: white;
-     color: black;   
+     color: black;
 }
 .e-pivotschemadesigner .e-treeview .e-active {
      background: white;
@@ -122,8 +122,7 @@ To change the appearance of PivotTable Field List, apply the below customized CS
 
 {% endhighlight %}
 
-![](Styling_images/customtheme-fieldist.png)
+![Customization of ASP NET MVC pivot grid field list](Styling_images/customtheme-fieldist.png)
 
 You can also customize the appearance of the Pivot component using our Theme Studio utility. To know more about Theme Studio [click here](/aspnetmvc/pivotgrid/styling).
 
- 

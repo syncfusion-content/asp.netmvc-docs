@@ -11,7 +11,7 @@ documentation: ug
 
 I> This feature is applicable for Relational datasource alone (in Client Mode).
 
-Allows the user to categorize the date type field and showcase them based on year, quarter, month and day formats. 
+Allows the user to categorize the date type field and showcase them based on year, quarter, month and day formats.
 
 {% highlight CSHTML %}
 
@@ -21,9 +21,9 @@ Allows the user to categorize the date type field and showcase them based on yea
 
 The properties associated with group by date option is,
 
-* Format - To set the data type format. 
+* Format - To set the data type format.
 * FormatString - Specifies the structure of the date format.
 * Delimiter - Specifies the separator of the date values.
 * GroupByDate.Interval - Specifies the pattern in which date type to be displayed.
 
-![](GroupByDate_images/group_by_date.png)
+![Group by date support in ASP NET MVC pivot grid control](GroupByDate_images/group_by_date.png)

@@ -11,7 +11,7 @@ documentation: ug
 
 I> This feature is applicable for OLAP datasource only at Server Mode.
 
-Defer Update support allows you to refresh the control only on-demand and not during every UI interaction. 
+Defer Update support allows you to refresh the control only on-demand and not during every UI interaction.
 
 {% highlight CSHTML %}
 
@@ -36,5 +36,5 @@ Defer Update support allows you to refresh the control only on-demand and not du
 {% endhighlight %}
 
 
-![](Defer-Update_images/Defer-Update_images1.png)
+![Defer update in ASP NET MVC pivot grid OLAP server mode](Defer-Update_images/Defer-Update_images1.png)
 

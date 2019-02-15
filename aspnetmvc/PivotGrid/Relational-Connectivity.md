@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Relational Connectivity | PivotGrid | ASP.NET MVC | Syncfusion
-description: relational connectivity 
+description: relational connectivity
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# Data Binding 
+# Data Binding
 
 ## Binding PivotGrid to Collection
 
 This section demonstrates binding of a collection to the PivotGrid control as datasource. For more information on this datasource refer the following links.
 
-If you are using WebAPI controller, refer the "Datasource Initialization" section under the following [link](http://help.syncfusion.com/aspnetmvc/pivotgrid/relational-getting-started#creating-a-simple-application-with-pivotgrid-and-relational-datasource-server-mode).
+If you are using WebAPI controller, refer the "Datasource Initialization" section under the following [link](https://help.syncfusion.com/aspnetmvc/pivotgrid/relational-getting-started#creating-a-simple-application-with-pivotgrid-and-relational-datasource-server-mode).
 
 If you are using WCF Service, refer the "Datasource Initialization" section below.
 
@@ -48,8 +48,8 @@ namespace PivotGridDemo
 **List of Dependency Libraries**
 
 Next you need to add the below mentioned dependency libraries into your Web Application. These libraries could be found in GAC (Global Assembly Cache) as well.
- 
-To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found. 
+
+To add them to your Web Application, right-click on **References** in Solution Explorer and select **Add Reference**. Now in the **Reference Manager** dialog, under **Assemblies > Extension**, the following Syncfusion libraries are found.
 
 N> If you have installed any version of Essential Studio, then the location of Syncfusion libraries is [system drive:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\Assemblies].
 
@@ -109,7 +109,7 @@ namespace PivotGridDemo
     public class RelationalService : IRelationalService
     {
     ……
-    …… 
+    ……
     }
 
     internal class ProductSales
@@ -223,10 +223,10 @@ First, declare the service methods inside **IRelationalService** interface, foun
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
     [ServiceContract]
-    public interface IRelationalService 
+    public interface IRelationalService
     {
         [OperationContract]
         Dictionary<string, object> InitializeGrid(string action);
@@ -261,16 +261,16 @@ Then, elaborate the service methods inside the main class, found in `RelationalS
 
 {% highlight c# %}
 
-namespace PivotGridDemo 
+namespace PivotGridDemo
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class RelationalService: IRelationalService 
+    public class RelationalService: IRelationalService
     {
         PivotGrid htmlHelper = new PivotGrid();
         JavaScriptSerializer serializer = new JavaScriptSerializer();
         Dictionary<string, object> dict = new Dictionary<string, object>();
         static int cultureIDInfoval = 1033;
-        string connectionString = "Data Source=http://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
+        string connectionString = "Data Source=https://bi.syncfusion.com/olap/msmdpump.dll; Initial Catalog=Adventure Works DW 2008 SE;";
         string conStringforDB = ""; //Enter appropriate connection string to connect database for saving and loading operation of reports
 
         public Dictionary<string, object> InitializeGrid(string action)
@@ -450,7 +450,7 @@ The endpointBehaviors are illustrated as follows
 {% highlight xml %}
 
 <system.serviceModel>
-    …… 
+    ……
     ……
     <services>
         <service name="PivotGridDemo.RelationalService">
@@ -473,7 +473,7 @@ The endpointBehaviors contain all the behaviors for an endpoint. You can link ea
             </behavior>
         </endpointBehaviors>
     </behaviors>
-    …… 
+    ……
     ……
 </system.serviceModel>
 
@@ -508,5 +508,5 @@ public static void RegisterRoutes(RouteCollection routes) {
 
 Now, **PivotGrid** will be rendered with Sales Amount over a set of products across different customer geographic locations.
 
-![](Getting-Started_images/relaionalwebapi.png) 
+![ASP NET MVC pivot grid control with relational server mode](Getting-Started_images/relaionalwebapi.png)
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Chart Types
 
-Essential **PivotChart MVC** supports 17 different types of chart as follows:
+Essential **PivotChart MVC** supports 18 different types of chart as follows:
 
 
 * Column
@@ -29,6 +29,7 @@ Essential **PivotChart MVC** supports 17 different types of chart as follows:
 * Doughnut
 * Scatter
 * Bubble
+* WaterFall
 
 
 ## Column Chart
@@ -39,7 +40,7 @@ Essential **PivotChart MVC** supports 17 different types of chart as follows:
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -48,7 +49,7 @@ The following screenshot displays a **Column Chart**.
 
 
 
-![](Chart-Types_images/Chart-Types_img1.png)
+![ASP NET MVC column chart control](Chart-Types_images/Chart-Types_img1.png)
 
 
 
@@ -58,7 +59,7 @@ The following screenshot displays a **Column Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -67,7 +68,7 @@ comm.Type(SeriesType.StackingColumn); }).Size(size => size.Height("460px").Width
 
 The following screenshot displays the **stacking Column Chart**.
 
-![](Chart-Types_images/Chart-Types_img2.png)
+![ASP NET MVC stacking column chart control](Chart-Types_images/Chart-Types_img2.png)
 
 
 ## Bar Chart
@@ -76,7 +77,7 @@ The **Bar Chart** displays horizontal bars for each point in the series and poin
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -86,7 +87,7 @@ comm.Type(SeriesType.Bar); }).Size(size => size.Height("460px").Width("950px"))
 The following screenshot displays a **Bar Chart**.
 
 
-![](Chart-Types_images/Chart-Types_img3.png)
+![ASP NET MVC bar chart control](Chart-Types_images/Chart-Types_img3.png)
 
 
 
@@ -96,7 +97,7 @@ The following screenshot displays a **Bar Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -106,7 +107,7 @@ comm.Type(SeriesType.StackingBar); }).Size(size => size.Height("460px").Width("9
 
 The following screenshot displays the **Stacking Bar Chart**.
 
-![](Chart-Types_images/Chart-Types_img4.png)
+![ASP NET MVC stacking bar chart control](Chart-Types_images/Chart-Types_img4.png)
 
 
 
@@ -116,7 +117,7 @@ A **Pie chart** is used to summarize a set of categorical data or displaying dif
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Pie); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -126,7 +127,7 @@ The following screenshot displays a **Pie Chart**.
 
 
 
-![](Chart-Types_images/Chart-Types_img5.png)
+![ASP NET MVC pie chart control](Chart-Types_images/Chart-Types_img5.png)
 
 
 
@@ -136,7 +137,7 @@ The **Pyramid Chart** type displays the data in the form of a triangle. It helps
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -146,7 +147,7 @@ comm.Type(SeriesType.Pyramid); }).Size(size => size.Height("460px").Width("950px
 The following screen shot displays the **Pyramid Chart**.
 
 
-![](Chart-Types_images/Chart-Types_img6.png)
+![ASP NET MVC pyramid chart control](Chart-Types_images/Chart-Types_img6.png)
 
 
 ## Funnel Chart
@@ -155,7 +156,7 @@ The **Funnel Chart**  type displays the data in the form of an inverted triangle
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -165,7 +166,7 @@ comm.Type(SeriesType.Funnel); }).Size(size => size.Height("460px").Width("950px"
 The following screen shot displays the **Funnel Chart**.
 
 
-![](Chart-Types_images/Chart-Types_img14.png)
+![ASP NET MVC funnel chart control](Chart-Types_images/Chart-Types_img14.png)
 
 
 
@@ -175,7 +176,7 @@ The **Line Chart** joins the data points on a plot using straight lines that sho
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -183,18 +184,18 @@ comm.Type(SeriesType.Line); }).Size(size => size.Height("460px").Width("950px"))
 
 The following screenshot displays the **Line Chart**.
 
-![](Chart-Types_images/Chart-Types_img7.png)
+![ASP NET MVC line chart control](Chart-Types_images/Chart-Types_img7.png)
 
 
 
 ## Step Line Chart
 
-**Step Line Chart** uses horizontal and vertical lines to connect the data points resulting in a step like progression. 
+**Step Line Chart** uses horizontal and vertical lines to connect the data points resulting in a step like progression.
 
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -203,7 +204,7 @@ comm.Type(SeriesType.StepLine); }).Size(size => size.Height("460px").Width("950p
 
 The following screenshot displays the **Step Line Chart**.
 
-![](Chart-Types_images/Chart-Types_img8.png)
+![ASP NET MVC step line chart control](Chart-Types_images/Chart-Types_img8.png)
 
 
 
@@ -214,7 +215,7 @@ The **Spline Chart** is similar to line charts except it connects different data
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
@@ -222,7 +223,7 @@ comm.Type(SeriesType.Spline); }).Size(size => size.Height("460px").Width("950px"
 
 The following screenshot displays the **Spline Chart**.
 
-![](Chart-Types_images/Chart-Types_img9.png)
+![ASP NET MVC spline chart control](Chart-Types_images/Chart-Types_img9.png)
 
 
 
@@ -232,14 +233,14 @@ The following screenshot displays the **Spline Chart**.
 
 {% highlight CSHTML %}
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Area); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 The following screenshot displays the **Area Chart**.
 
-![](Chart-Types_images/Chart-Types_img10.png)
+![ASP NET MVC area chart control](Chart-Types_images/Chart-Types_img10.png)
 
 
 
@@ -250,7 +251,7 @@ The following screenshot displays the **Area Chart**.
 {% highlight CSHTML %}
 
 
-@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => { 
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950px"))
 
 
@@ -259,7 +260,7 @@ comm.Type(SeriesType.StepArea); }).Size(size => size.Height("460px").Width("950p
 
 The following screenshot displays a **Step Area Chart**.
 
-![](Chart-Types_images/Chart-Types_img11.png)
+![ASP NET MVC step area chart control](Chart-Types_images/Chart-Types_img11.png)
 
 
 
@@ -277,7 +278,7 @@ comm.Type(SeriesType. SplineArea); }).Size(size => size.Height("460px").Width("9
 
 The following Screenshot displays a **Spline Area Chart**.
 
-![](Chart-Types_images/Chart-Types_img12.png)
+![ASP NET MVC spline area chart control](Chart-Types_images/Chart-Types_img12.png)
 
 
 
@@ -289,14 +290,14 @@ The following Screenshot displays a **Spline Area Chart**.
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
- comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px")) 
+ comm.Type(SeriesType.StackingArea); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 
 The following screenshot displays a **Stacking Area Chart**.
 
-![](Chart-Types_images/Chart-Types_img13.png)
+![ASP NET MVC stacking area chart control](Chart-Types_images/Chart-Types_img13.png)
 
 ## Doughnut Chart
 
@@ -305,13 +306,13 @@ A **Doughnut chart** is also used to summarize a set of categorical data which p
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
- comm.Type(SeriesType.Doughnut); }).Size(size => size.Height("460px").Width("950px")) 
+ comm.Type(SeriesType.Doughnut); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 The following screenshot displays a **Doughnut Chart**.
 
-![](Chart-Types_images/DoughnutChart.png)
+![ASP NET MVC doughnut chart control](Chart-Types_images/DoughnutChart.png)
 
 ## Scatter Chart
 
@@ -320,13 +321,13 @@ The **Scatter Chart**  type displays the data as a collection of points correspo
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
- comm.Type(SeriesType.Scatter); }).Size(size => size.Height("460px").Width("950px")) 
+ comm.Type(SeriesType.Scatter); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 The following screen shot displays the **Scatter Chart.**
 
-![](Chart-Types_images/ScatterChart.png) 
+![ASP NET MVC scatter chart control](Chart-Types_images/ScatterChart.png)
 
 ## Bubble Chart
 
@@ -335,15 +336,30 @@ The **Bubble Chart**  type displays the data as a collection of bubbles.
 {% highlight CSHTML %}
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
- comm.Type(SeriesType.Bubble); }).Size(size => size.Height("460px").Width("950px")) 
+ comm.Type(SeriesType.Bubble); }).Size(size => size.Height("460px").Width("950px"))
 
 {% endhighlight %}
 
 The following screen shot displays the **Bubble Chart.**
 
-![](Chart-Types_images/BubbleChart.png)
+![ASP NET MVC bubble chart control](Chart-Types_images/BubbleChart.png)
 
-## Combination Chart 
+## WaterFall chart
+
+The **waterfall chart** type is used to show how an initial value is increased and decreased by a series of intermediate values, leading to a final value.
+
+{% highlight CSHTML %}
+
+@Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
+ comm.Type(SeriesType.WaterFall); }).Size(size => size.Height("460px").Width("950px"))
+
+{% endhighlight %}
+
+The following screenshot displays the **waterfall chart:**
+
+![ASP NET MVC waterfall chart control](Chart-Types_images/WaterFall.png)
+
+## Combination Chart
 
 A **combination Chart** combines two or more series types in a single Chart. But there are some limitations in the combination Chart. They are:
 
@@ -355,8 +371,8 @@ A **combination Chart** combines two or more series types in a single Chart. But
 
 @Html.EJ().Pivot().PivotChart("PivotChart1").Url(Url.Content("/RelationalChartService.svc")).CommonSeriesOptions(comm => {
 comm.Type(SeriesType.Column); }).Size(size => size.Height("460px").Width("950px")).ClientSideEvents(
-oEve => { oEve.SeriesRendering("onSeriesRenders"); }) 
-    
+oEve => { oEve.SeriesRendering("onSeriesRenders"); })
+
 <script>
 function onSeriesRenders(args) {
     this.model.series[5].type = ej.PivotChart.ChartTypes.Line;
@@ -368,6 +384,6 @@ function onSeriesRenders(args) {
 
 The following screenshot displays a **combination Chart**.
 
-![](Chart-Types_images/combinationalchart.png)
+![ASP NET MVC combination of charts](Chart-Types_images/combinationalchart.png)
 
 

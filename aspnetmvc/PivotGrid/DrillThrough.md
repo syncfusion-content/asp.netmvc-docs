@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Drill Through | PivotGrid | ASP.NET MVC | Syncfusion 
+title:  Drill Through | PivotGrid | ASP.NET MVC | Syncfusion
 description:  drill through
 platform: ejmvc
 control: PivotGrid
@@ -9,21 +9,21 @@ documentation: ug
 
 # Drill Through
 
-Drill-through retrieves the raw items that are used to create a specific cell. To enable drill-through support, set [`EnableDrillThrough`] property to true. Raw items are obtained through the [`DrillThrough`] event, using which user can bind them to an external widget for precise view. 
+Drill-through retrieves the raw items that are used to create a specific cell. To enable drill-through support, set `EnableDrillThrough` property to true. Raw items are obtained through the [`DrillThrough`] event, using which user can bind them to an external widget for precise view.
 
 ## OLAP
 
-N> Drill-through is supported in PivotGrid only when we configure and enable drill-through action at the Cube. 
+N> Drill-through is supported in PivotGrid only when we configure and enable drill-through action at the Cube.
 
-![](DrillThrough_images/pivotgrid.png)
+![Drill through support in ASP NET MVC pivot grid control](DrillThrough_images/pivotgrid.png)
 
-On clicking any value cell, the "Drill Through Information" dialog will be opened.  It consists of a Grid with data which are associated with the measure values of clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the values of the dimensions which are associated with this measure are alone displayed in the Grid. 
+On clicking any value cell, the "Drill Through Information" dialog will be opened.  It consists of a Grid with data which are associated with the measure values of clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the values of the dimensions which are associated with this measure are alone displayed in the Grid.
 
-![](DrillThrough_images/DrillThroughData.png)
+![Drill through data in ASP NET MVC pivot grid control](DrillThrough_images/DrillThroughData.png)
 
-On clicking the "Hierarchy Selector" button which is displayed below the Grid, the Hierarchy Selector dialog will be opened. It consists of the dimensions which are associated with the measure of the clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the dimensions associated with this measure are alone displayed in the dialog.  
+On clicking the "Hierarchy Selector" button which is displayed below the Grid, the Hierarchy Selector dialog will be opened. It consists of the dimensions which are associated with the measure of the clicked value cell. In this example, the measure behind the respective cell is “Sales Amount” and the dimensions associated with this measure are alone displayed in the dialog.
 
-![](DrillThrough_images/hierarchy_selector.png)
+![Hierarchy selector in ASP NET MVC pivot grid control](DrillThrough_images/hierarchy_selector.png)
 
 By dragging and dropping the respective hierarchies and finally clicking “OK”, drill through MDX query will be framed and executed internally and provides back the raw items through "DrillThrough" event. In this example, we have bound the raw items obtained to our ejGrid widget. Please refer the code sample and screen-shot below.
 
@@ -105,7 +105,7 @@ For WebAPI controller, the below methods need to be added.
 [System.Web.Http.HttpPost]
 public string DrillThroughHierarchies(Dictionary<string, object> jsonResult)
 {
-    OlapDataManager DataManager = new OlapDataManager(connectionString);              
+    OlapDataManager DataManager = new OlapDataManager(connectionString);
     DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(jsonResult["currentReport"].ToString()));
     return htmlHelper.DrillthroughHierarchies(DataManager, jsonResult["layout"].ToString(), jsonResult["cellPos"].ToString());
 }
@@ -117,11 +117,11 @@ public Dictionary<string, object> DrillThroughDataTable(Dictionary<string, objec
     OlapDataManager DataManager = new OlapDataManager(connectionString);
     DataManager.SetCurrentReport(OLAPUTILS.Utils.DeserializeOlapReport(jsonResult["currentReport"].ToString()));
     return htmlHelper.DrillthroughDataTable(DataManager, jsonResult["layout"].ToString(), jsonResult["cellPos"].ToString(), jsonResult["selector"].ToString());
-}  
+}
 
 {% endhighlight %}
 
-For WCF service, the below methods need to be added. 
+For WCF service, the below methods need to be added.
 
 {% highlight c# %}
 
@@ -142,11 +142,11 @@ public Dictionary<string, object> DrillThroughDataTable(string currentReport, st
 {% endhighlight %}
 
 
-![](DrillThrough_images/drill_data.png)
+![Drill through data in ASP NET MVC pivot grid OLAP server mode](DrillThrough_images/drill_data.png)
 
 ## Relational
 
-To enable drill-through support, set [`EnableDrillThrough`] property to true. Raw items are obtained through the [`DrillThrough`] event. 
+To enable drill-through support, set `EnableDrillThrough` property to true. Raw items are obtained through the `DrillThrough` event.
 
 {% highlight cshtml %}
 
@@ -168,4 +168,4 @@ To enable drill-through support, set [`EnableDrillThrough`] property to true. Ra
 
 {% endhighlight %}
 
-![](DrillThrough_images/DrillThroughRelational.png)
+![Drill through data in ASP NET MVC pivot grid relational mode](DrillThrough_images/DrillThroughRelational.png)
