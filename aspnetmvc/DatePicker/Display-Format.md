@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display Format
+title: Syncfusion Essential JS DatePicker Display Format
 description: Configuring display format of DatePicker
 platform: ejmvc
 control: DatePicker
