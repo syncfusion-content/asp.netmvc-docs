@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display Format
+title: Syncfusion Essential JS DatePicker Display Format
 description: Configuring display format of DatePicker
 platform: ejmvc
 control: DatePicker
@@ -90,27 +90,39 @@ The standard formats are listed as follows
 <tr>
 <th>
 Format Name <br/><br/></th><th>
-Formats <br/><br/></th></tr>
+Formats <br/><br/></th><th>
+Input Date <br/><br/></th><th>
+Formatted Date<br/><br/></th></tr>
 <tr>
 <td>
 Default<br/><br/></td><td>
-"M/d/yyyy"<br/><br/></td></tr>
+M/d/yyyy<br/><br/></td><td>
+"12/01/2020"<br/><br/></td><td>
+"12/1/2020"<br/><br/></td></tr>
 <tr>
 <td>
 Short<br/><br/></td><td>
-d M, y<br/><br/></td></tr>
+"d M, y"<br/><br/></td><td>
+"12/14/2020"<br/><br/></td><td>
+"14 12,20"<br/><br/></td></tr>
 <tr>
 <td>
 Medium <br/><br/></td><td>
-d MM, y<br/><br/></td></tr>
+"d MM, y"<br/><br/></td><td>
+"12/14/2020"<br/><br/></td><td>
+"14 12, 20"<br/><br/></td></tr>
 <tr>
 <td>
 Full <br/><br/></td><td>
-dddd, d MMMM, yy<br/><br/></td></tr>
+dddd, d MMMM, yy<br/><br/></td><td>
+"12/14/2020"<br/><br/></td><td>
+"Monday, 14 December, 20"<br/><br/></td></tr>
 <tr>
 <td>
 UTC<br/><br/></td><td>
-yyyy-MM-dd<br/><br/></td></tr>
+yyyy-MM-dd<br/><br/></td><td>
+"12/14/2020"<br/><br/></td><td>
+"2020-12-14"<br/><br/></td></tr>
 </table>
 By default **en-US** culture Date format is "M/d/yyyy".
 
@@ -122,6 +134,8 @@ By default **en-US** culture Date format is "M/d/yyyy".
         @Html.EJ().DatePicker("datePicker").Value(System.DateTime.Now).Locale("en-US").DateFormat("yyyy/dd/MM")
 
 {% endhighlight %}
+
+![date-format](display-format-images/image1.png)
 
 To get the culture and date format of DatePicker, refer the below code example
 
@@ -141,8 +155,7 @@ To get the culture and date format of DatePicker, refer the below code example
 {% endhighlight %}
 
 
-N> by default date format is based on culture specific. You have to refer the required culture specific files in layout page of your web application in order to localize DatePicker and customize different format for that culture. 
-
+N> By default date format is based on culture specific. You have to refer the required culture specific files in layout page of your web application in order to localize DatePicker and customize different format for that culture. Refer this [link](https://help.syncfusion.com/aspnetmvc/datepicker/globalization) to know more about this functionality support in DatePicker.
 
 ## Header Format
 
@@ -152,10 +165,12 @@ EJMVC DatePicker calendar consists of header, day header, days and footer sectio
 
         @*sets the selected header format to display in header*@
 
-        @Html.EJ().DatePicker("datePicker").HeaderFormat("yyyy MMMM")
+        @Html.EJ().DatePicker("datePicker").HeaderFormat("yyyy MMMM").Value("12/14/2020")
 
 
 {% endhighlight %}
+
+![header-format](display-format-images/image2.png)
 
 ## Day Header
 
@@ -170,16 +185,20 @@ Day header determines the days name to be displayed in terms of short, medium an
 
 {% endhighlight %}
 
+![day-header](display-format-images/image4.png)
+
 ## Tooltip with Formatting
 
 The EJMVC DatePicker calendar shows tooltip on hovering the date by specifying the formatted date of hovered date. Its helps you to get clear view about the date going to select. You can show or hide this tooltip option by using [ShowTooltip](http://help.syncfusion.com/js/api/ejdatepicker#members:showtooltip ) property.
 
-You can also change the format of tooltip by using [TooltipFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:tooltipformat) property. Below codes example allows to show tooltip and format its value. 
+You can also change the format of tooltip by using [TooltipFormat](http://help.syncfusion.com/js/api/ejdatepicker#members:tooltipformat) property. Below codes example allows to show tooltip and format its value. 
 
 {% highlight cshtml %}
    
     @*sets and shows tooltip on hovering date on calendar*@
 
-    @Html.EJ().DatePicker("datePicker").ShowTooltip(true).TooltipFormat("dd/MM/yy")
+    @Html.EJ().DatePicker("datePicker").ShowTooltip(true).TooltipFormat("dd/MM/yy").Value("12/14/2020")
        
 {% endhighlight %}
+
+![tooltip](display-format-images/image3.png)
