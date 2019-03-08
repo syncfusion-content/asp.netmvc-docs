@@ -43,7 +43,7 @@ DropDownList displays checkboxes to the left of each item when you set <b>ShowCh
     
 {% endtabs %}
 
-![](Checkbox_images/Checkbox_img1.jpeg)
+![Checkbox](Checkbox_images/Checkbox_img1.jpeg)
 
 > if you want to showcase the DropDownList with default checked items on data binding, specify Selected field with Boolean values.
 
@@ -78,7 +78,7 @@ DropDownList displays checkboxes to the left of each item when you set <b>ShowCh
     
 {% endtabs %}
 
-![](Checkbox_images/Checkbox_img2.jpeg)
+![Checkbox](Checkbox_images/Checkbox_img2.jpeg)
 
 ## Selection Modes
 
@@ -123,7 +123,7 @@ Each checked item’s text is appended to the textbox with delimiter “,” by 
     
 {% endtabs %}
 
-![](Checkbox_images/Checkbox_img3.jpeg)
+![Delimiter](Checkbox_images/Checkbox_img3.jpeg)
 
 ### Visual Mode
 
@@ -159,7 +159,7 @@ When you enable this option in DropDownList control, each checked item’s text 
     
 {% endtabs %}
 
-![](Checkbox_images/Checkbox_img4.jpeg)
+![Visual](Checkbox_images/Checkbox_img4.jpeg)
 
 ## Select multiple values from controller
 
