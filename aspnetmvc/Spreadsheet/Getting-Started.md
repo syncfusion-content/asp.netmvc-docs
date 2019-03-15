@@ -1,5 +1,5 @@
 ---
-title: Getting Started for Essential ASP.NET MVC Spreadsheet
+title: Getting Started for Syncfusion Essential ASP.NET MVC Spreadsheet
 description: How to create a Spreadsheet with data source, apply format and export it as excel file.
 platform: ejmvc
 control: Spreadsheet
@@ -87,7 +87,7 @@ public class ItemDetail
 
 ~~~
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img2.png)
 
 ## Apply Conditional formatting
 
@@ -110,7 +110,7 @@ To apply conditional formats for a range use `CFormatRule` property.The followin
 
 ~~~
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img3.png)
 
 ## Export Spreadsheet as Excel File
 

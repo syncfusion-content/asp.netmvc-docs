@@ -1,5 +1,5 @@
 ---
-title: Formula support with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+title: Formula support in Spreadsheet for Syncfusion Essential ASP.NET MVC
 description: How to use formulas in Spreadsheet with cell references, named ranges etc.
 platform: ejmvc
 control: Spreadsheet
@@ -55,7 +55,7 @@ You can set formula for a cell by specifying `Value` property in cell data bindi
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img6.png)
+![Formula](Formulas_images/Formula_img6.png)
 
 Cell Reference from Same sheet
 {:.caption}
@@ -98,7 +98,7 @@ You can set formula for a cell using [`updateCellValue`](https://help.syncfusion
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img1.png)
+![Formula](Formulas_images/Formula_img1.png)
 
 ### User Interface
 
@@ -127,10 +127,10 @@ The following code example and screenshot describes the above behavior,
 
 {% endhighlight %}
 
-![](Formulas_images/Formula_img2.png)
+![Formula](Formulas_images/Formula_img2.png)
 
 The following output is displayed while saving edited cell with above code example.
-![](Formulas_images/Formula_img1.png)
+![Formula](Formulas_images/Formula_img1.png)
 
 N> 1. The list of supported formulas can be find in following [`link`](https://help.syncfusion.com/js/calculate/supported-formulas/supported-formulas "link")
 N> 2. Constant values, cell references, formulas and named ranges can be passed as argument to formulas
@@ -187,7 +187,7 @@ function customTotal(args) {
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img5.png)
+![Custom Formula](Formulas_images/Formula_img5.png)
 
 ### Method
 
@@ -232,7 +232,7 @@ You can add your own function to Spreadsheet using [`addCustomFormula`](https://
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img5.png)
+![Custom Formula](Formulas_images/Formula_img5.png)
 
 To remove user defined function from Spreadsheet use [`removeCustomFormula`](https://help.syncfusion.com/js/api/ejspreadsheet#methods:removecustomformula "removeCustomFormula") method.
 
@@ -279,7 +279,7 @@ The following code example describes the above behavior,
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img3.png)
+![Named Ranges](Formulas_images/Formula_img3.png)
 
 ### Method
 
@@ -317,12 +317,12 @@ The following code example describes the above behavior,
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img3.png)
+![Named Ranges](Formulas_images/Formula_img3.png)
 
 ### User Interface
 
 You can define name for range of cells through user interface using `Define Name` option in `OTHERS` tab. The following screenshot describes the above behavior,
-![](Formulas_images/Formula_img4.png)
+![Named Ranges](Formulas_images/Formula_img4.png)
 
 N> 1. Defining name for cell reference or table will be accessible across all sheets.
 N> 2. Named Ranges will be displayed in Name Manger dialog box.
