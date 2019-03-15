@@ -25,7 +25,7 @@ The following steps explains how to create spreadsheet,
 
 Now, the Spreadsheet is rendered with default row and column count.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img1.png)
 
 ## Populate Spreadsheet with Data
 
