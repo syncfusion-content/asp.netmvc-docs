@@ -1,5 +1,5 @@
 ---
-title: Getting Started for Essential ASP.NET MVC Spreadsheet
+title: Getting Started for Syncfusion Essential ASP.NET MVC Spreadsheet
 description: How to create a Spreadsheet with data source, apply format and export it as excel file.
 platform: ejmvc
 control: Spreadsheet
@@ -25,7 +25,7 @@ The following steps explains how to create spreadsheet,
 
 Now, the Spreadsheet is rendered with default row and column count.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img1.png)
 
 ## Populate Spreadsheet with Data
 
@@ -87,7 +87,7 @@ public class ItemDetail
 
 ~~~
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img2.png)
 
 ## Apply Conditional formatting
 
@@ -110,7 +110,7 @@ To apply conditional formats for a range use `CFormatRule` property.The followin
 
 ~~~
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Getting-Started](Getting-Started_images/Getting-Started_img3.png)
 
 ## Export Spreadsheet as Excel File
 
@@ -145,3 +145,7 @@ public void ExportToExcel(string sheetModel, string sheetData, string password)
 ~~~
 
 Use shortcut `Ctrl + S` to save Spreadsheet as excel file.
+
+N> 1. For more details about `Export` refer following [`link`](https://help.syncfusion.com/aspnetmvc/spreadsheet/open-and-save#save "link")
+N> 2. For more details about `Client dependencies` refer the following [`link`](https://help.syncfusion.com/js/spreadsheet/dependencies "link")
+N> 3. For more details about `Server dependencies` refer the following [`link`](https://help.syncfusion.com/aspnetmvc/spreadsheet/open-and-save#server-dependencies "link")
