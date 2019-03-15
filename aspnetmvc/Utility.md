@@ -40,7 +40,7 @@ The following steps help you to use the Syncfusion Project Conversion in the exi
 
 3. Project Conversion Wizard opens so that you can configure the project.
 
-   ![](Utility_images/ProjectConversion_img2.jpg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion wizard](Utility_images/ProjectConversion_img2.jpg)
 
    The following configurations are used in the Project Conversion Wizard.
    
@@ -52,42 +52,42 @@ The following steps help you to use the Syncfusion Project Conversion in the exi
 	2. Added from Installed Location: Refer to the assemblies from the Syncfusion Installed locations.
     3. Add Referenced Assemblies to Solution: Copy and refer to the assemblies from project's solution file lib directory.
 
-   ![](Utility_images/Project-Conversion_img3.jpeg)
+   ![Choose the assembly location from where assemblies to be referred to the ASP.NET MVC project](Utility_images/Project-Conversion_img3.jpeg)
     
    **Choose the Theme:**
    
    The master page of project will be updated based on the selected theme. The Theme Preview section shows the controls preview before converting to a Syncfusion project.
    
-   ![](Utility_images/Project-Conversion_img4.jpeg)
+   ![Choose the theme to apply on the master page of the ASP.NET MVC project](Utility_images/Project-Conversion_img4.jpeg)
    
    **Choose CDN Support:**
 
    The master page of the project will be updated based on the required Syncfusion CDN links.
    
-   ![](Utility_images/Project-Conversion_img20.jpeg)
+   ![Choose CDN Support to refer the Syncfusion assets from CDN for ASP.NET MVC project](Utility_images/Project-Conversion_img20.jpeg)
    
    **Choose Copy Global Resources:**
     
    The localization culture files will be shipped into Scripts\ej\i18n directory of the project.
    
-   ![](Utility_images/Project-Conversion_img21.jpeg)
+   ![Choose Copy Global Resources to ship the localization culture files for ASP.NET MVC project](Utility_images/Project-Conversion_img21.jpeg)
 
 4. Choose the required controls from Components section and Click the **Convert** button to convert it into a Syncfusion Project.
 
-   ![](Utility_images/ProjectConversion_img5.jpg)
+   ![Select the required components from the Components section in the Syncfusion ASP.NET MVC Project Conversion Wizard](Utility_images/ProjectConversion_img5.jpg)
    
 5. The **Project Backup** dialog will be opened. Click yes, to backup the current project before converting it to Syncfusion project. Click No to convert the project to Syncfusion project without backup.
    
-   ![](Utility_images/Project-Conversion_img6.jpg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion backup dialog](Utility_images/Project-Conversion_img6.jpg)
 
 
 6. The required Syncfusion Reference Assemblies, Scripts and CSS are included in the MVC Project. For more information, refer to the following screenshots.
 
-   ![](Utility_images/ProjectConversion_img7.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC scripts and themes](Utility_images/ProjectConversion_img7.jpeg)
 
-   ![](Utility_images/ProjectConversion_img8.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC required reference assemblies](Utility_images/ProjectConversion_img8.jpeg)
 
-   ![](Utility_images/ProjectConversion_img9.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC Web.config entries](Utility_images/ProjectConversion_img9.jpeg)
 
 ### Rendering Control after Syncfusion ASP.NET MVC (Web) Conversion:
 
@@ -96,15 +96,15 @@ Once you convert your ASP.NET MVC project to Syncfusion ASP.NET MVC Project, 
 
 2. Add the required Script and CSS files references in the master page (_Layout.cshtml/Layout.vbhtml file). For more information, please refer to the following screenshot.
 
-   ![](Utility_images\ProjectConversion_img17.jpeg)
+   ![Required Script and CSS files references in the master page _Layout.cshtml or Layout.vbhtml file](Utility_images\ProjectConversion_img17.jpeg)
 
 3. Now, include the Syncfusion controls to your project. For more information, refer to the following screenshot.
 
-   ![](Utility_images\ProjectConversion_img18.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC datepicker control snippet](Utility_images\ProjectConversion_img18.jpeg)
 
 4. Run the project and the following output will be displayed.
 
-   ![](Utility_images\ProjectConversion_img19.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC datepicker control output](Utility_images\ProjectConversion_img19.jpeg)
 
 ## Project Migration
 
@@ -128,7 +128,7 @@ The following steps help you to migrate from one version to another version of y
 
 2. The Project Migration window appears. You can choose the required Syncfusion version that is installed in the machine, that can be either Syncfusion ASP.NET MVC.
 
-   ![](Utility_images/ProjectMigration_img2.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration wizard](Utility_images/ProjectMigration_img2.jpeg)
 
 3. The Project Migration window allows you to configure the following options:
 
@@ -142,7 +142,7 @@ The following steps help you to migrate from one version to another version of y
 
 4. Click the Migrate Button and the **Project Backup** dialog will be opened. Click Yes to backup the current project before migrating the Syncfusion project. Click No to migrate the project to required Syncfusion version without backup.
 
-     ![](Utility_images/ProjectMigration_img3.jpeg)
+     ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration backup dialog](Utility_images/ProjectMigration_img3.jpeg)
       
 5. The Syncfusion Reference Assemblies, Scripts and CSS are updated to the corresponding version in the project.
 
@@ -171,19 +171,19 @@ Sample Creator can be download from the Syncfusion Dashboard. After installing t
 
 2. Syncfusion Sample Creator Wizard displays the **Controls and its Feature Selection** section.
 
-   ![](Utility_images/Sample-Creator_img2.jpeg)
+   ![Syncfusion Essential JS 1 ASP.NET MVC Sample Creator Wizard](Utility_images/Sample-Creator_img2.jpeg)
 
 #### Controls Selection
 
  The Syncfusion ASP.NET MVC controls are listed here and you can choose the required controls. The controls are grouped product wise.
 
- ![](Utility_images/Sample-Creator_img3.png)
+ ![Syncfusion Essential JS 1 ASP.NET MVC Sample Creator Controls Selection](Utility_images/Sample-Creator_img3.png)
 
 #### Feature Selection
 
 Based on the controls, the Feature is enabled to choose the features of the corresponding controls.
 
-![](Utility_images/Sample-Creator_img4.png)
+![Syncfusion Essential JS 1 ASP.NET MVC Sample Creator Feature Selection](Utility_images/Sample-Creator_img4.png)
 
 #### Project Configuration
 
@@ -200,26 +200,26 @@ You can configure the following project details in the Sample Creator.
 * Location: Choose the target location of your project.
 * Theme Selection: Choose the required theme. The Theme Preview section shows the controls preview before creating the Syncfusion project.
 
-![](Utility_images/Sample-Creator_img6.jpeg)
+![Syncfusion Essential JS 1 ASP.NET MVC Sample Creator Project Configuration section](Utility_images/Sample-Creator_img6.jpeg)
 
 When you click the Create button, the new Syncfusion ASP.NET MVC project is created. The following is added in the project:
 
 * Added the required Controller and View files in the project.
   
-  ![](Utility_images/Sample-Creator_img7.png)
+  ![Required Controller and View files added in the project for selected controls](Utility_images/Sample-Creator_img7.png)
 
 * Included the required Syncfusion ASP.NET MVC scripts and themes files.
   
-  ![](Utility_images/Sample-Creator_img8.png)
+  ![Required Syncfusion ASP.NET MVC scripts and themes files added in the project](Utility_images/Sample-Creator_img8.png)
 
 * The required Syncfusion assemblies are added for selected controls under Project Reference.
  
-  ![](Utility_images/Sample-Creator_img9.png)
+  ![Required Syncfusion assemblies added in the project for the selected controls](Utility_images/Sample-Creator_img9.png)
 
 * Configure the Web.Config file by adding the Syncfusion reference assemblies.
 
-  ![](Utility_images/Sample-Creator_img10.jpeg)
+  ![Required Syncfusion assemblies configured in Web.config file for the selected controls](Utility_images/Sample-Creator_img10.jpeg)
 
 * Once the project is created you can open the project by clicking the Yes button. Refer to the following screenshot for more information.
 
-  ![](Utility_images/Sample-Creator_img11.jpeg)
+  ![The project successfully created using Syncfusion Essential JS 1 ASP.NET MVC Sample Creator](Utility_images/Sample-Creator_img11.jpeg)
