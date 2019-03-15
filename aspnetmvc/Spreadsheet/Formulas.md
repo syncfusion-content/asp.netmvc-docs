@@ -42,13 +42,28 @@ You can set formula for a cell by specifying `Value` property in cell data bindi
                 cells.Value("=SUM(A1,A2)").Add();
             }).Add();
         }).Add();
+        sheet.Rows(rows =>
+        {
+            rows.Cells(cells =>
+            {
+                cells.Value("=Sheet1!A1:A2").Add();
+            }).Add();
+        }).Add();
     })
 )
 
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formulas_images/Formula_img1.png)
+![](Formulas_images/Formula_img6.png)
+
+Cell Reference from Same sheet
+{:.caption}
+
+![Formula](Formulas_images/Formula_img7.png)
+
+Cell Reference from different sheets
+{:.caption}
 
 ### Method
 
