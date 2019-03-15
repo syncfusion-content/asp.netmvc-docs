@@ -24,9 +24,19 @@ The Project Conversion is a Visual Studio add-in that converts an existing ASP.N
 The following steps help you to use the Syncfusion Project Conversion in the existing ASP.NET MVC (Web) Project.
 
 1. Open an existing Microsoft MVC Project or create a new Microsoft MVC Project.
-2. Right-click the Project and select Syncfusion VS Extensions. Then, choose the Convert to Syncfusion ASP.NET MVC (Web) Application. For more information, refer to the following screenshot.
+2. To open Project Conversion Wizard, follow either one of the options below: 
 
-   ![](Utility_images/ProjectConversion_img1.jpeg)
+   **Option 1:**  
+   Click **Syncfusion Menu** and choose **Essential Studio for ASP.NET MVC (EJ1) > Convert to Syncfusion ASP.NET MVC Application…** in **Visual Studio**.
+
+   ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion via Synfusion menu](Utility_images/Syncfusion_Menu_Project_Conversion.png)
+
+   N> In Visual Studio 2019, Syncfusion menu available under Extension in Visual Studio menu.
+
+   **Option 2:**  
+   Right-click the Project from Solution Explorer, select **Syncfusion Essential JS 1**, and choose **Convert to Syncfusion MVC (Essential JS 1) Application...** Refer to the following screenshot for more information.
+
+   ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion add-in](Utility_images/ProjectConversion_img1.png)
 
 3. Project Conversion Wizard opens so that you can configure the project.
 
@@ -102,9 +112,19 @@ The Project Migration is a Visual Studio add-in that helps to migrate the existi
 
 The following steps help you to migrate from one version to another version of your existing Syncfusion ASP.NET MVC(web) application.
 
-1. Right-click the Syncfusion ASP.NET MVC Project and select Syncfusion VS Extensions. Choose Migrate the project to another version.
+1.To open Migration Wizard, follow either one of the options below: 
 
-   ![](Utility_images/ProjectMigration_img1.jpeg)
+   **Option 1:**  
+   Click **Syncfusion Menu** and choose **Essential Studio for ASP.NET MVC (EJ1) > Migrate Project…** in **Visual Studio**.
+
+   ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration via Syncfusion menu](Utility_images/SyncfusionMenu_ProjectMigration_img.png)
+
+   N> In Visual Studio 2019, Syncfusion menu available under Extension in Visual Studio menu.
+
+   **Option 2:**  
+   Right-click the **Syncfusion ASP.NET MVC Application** from Solution Explorer and select **Syncfusion Essential JS 1**. Choose **Migrate the Essential JS 1 Project to Another Version...**
+
+   ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration add-in](Utility_images/ProjectMigration_img1.png)
 
 2. The Project Migration window appears. You can choose the required Syncfusion version that is installed in the machine, that can be either Syncfusion ASP.NET MVC.
 
@@ -135,9 +155,19 @@ Sample Creator is the utility that allows you to create Syncfusion ASP.NET MVC P
 
 Sample Creator can be download from the Syncfusion Dashboard. After installing the complete Essential Studio suite or ASP.NET MVC setup, follow the given steps:
 
-1. Launch the Syncfusion Essential Studio Dashboard and select the ASP.NET MVC platform. Select the **Sample Creator** button to launch the Sample Creator Wizard. For more information, refer to the following screenshot.
+1. To launch ASP.NET MVC (Essential JS 1) Sample Creator application, follow either one of the options below: 
 
-   ![](Utility_images/Sample-Creator_img1.jpeg)
+   **Option 1:**  
+   Click **Syncfusion Menu** and choose **Essential Studio for ASP.NET MVC (EJ1) > Launch Sample Creator…** in **Visual Studio**.
+
+   ![launch the Essential JS 1 ASP.NET MVC Sample Creator via Syncfusion menu](Utility_images/Syncfusion_Menu_SampleCreator.png)
+
+   N> In Visual Studio 2019, Syncfusion menu available under Extension in Visual Studio menu.
+
+   **Option 2:**  
+   Launch the Syncfusion Essential Studio Dashboard and select the ASP.NET MVC (Essential JS 1)/ASP.NET MVC (Classic) platform. Select the Sample Creator button to launch the ASP.NET MVC (Essential JS 1) Sample Creator application. Refer to the following screenshot for more information.
+ 
+   ![Syncfusion Essential Studio control panel to launch the Essential JS 1 ASP.NET MVC Sample Creator](Utility_images/Sample-Creator_img1.png)
 
 2. Syncfusion Sample Creator Wizard displays the **Controls and its Feature Selection** section.
 
