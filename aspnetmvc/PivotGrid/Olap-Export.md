@@ -601,4 +601,5 @@ The below screenshot shows the PivotGrid control exported to CSV document.
 
 ![CSV exporting in ASP NET MVC pivot grid control](Exporting_images/ExportOLAPCSV.png)
 
+N> Grand total can be hidden while exporting the document.
 
