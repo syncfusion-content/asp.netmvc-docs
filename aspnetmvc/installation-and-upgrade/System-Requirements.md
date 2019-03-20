@@ -1,6 +1,6 @@
 ---
 layout: post
-title: System requirements needed to use Syncfusion Essential ASP.NET MVC components
+title: System requirements to use Syncfusion Essential ASP.NET MVC components
 description: Learn what are the system requirements needed to use Syncfusion Essential ASP.NET MVC components
 platform: ejmvc
 control: System Requirement
@@ -38,9 +38,9 @@ Syncfusion components are also mostly compatible with all the major browsers tha
 
 ### Development Environment
 
-* Microsoft Visual Studio 2010/ 2012/2013/2015/2017
+* Microsoft Visual Studio 2010/2012/2013/2015/2017/2019
 * .NET Framework 3.5/4.0/4.5/4.5.1/4.6
-* MVC Version: MVC3/MVC4/MVC5/ASP.NET Core 1.0 (RC2)
+* MVC Version: MVC3/MVC4/MVC5
 * Microsoft SQL Server 2005 or higher
 * Web browsers with JavaScript enabled
 
