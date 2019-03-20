@@ -1,6 +1,6 @@
 ---
 layout: post
-title: System requirements needed to use Syncfusion Essential ASP.NET MVC components
+title: System requirements to use Syncfusion Essential ASP.NET MVC components
 description: Learn what are the system requirements needed to use Syncfusion Essential ASP.NET MVC components
 platform: ejmvc
 control: System Requirement
