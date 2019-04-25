@@ -10,6 +10,12 @@ documentation: ug
 # Getting Started
 
 > Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
+ 
+## What is Html.EJ() ?
+
+EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery/javascript-ui-controls) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://www.syncfusion.com/kb/5153/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej ).
+
+## Getting started with Syncfusion MVC
 
 This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications. There are four ways for embedding our controls into ASP.NET application:
 
