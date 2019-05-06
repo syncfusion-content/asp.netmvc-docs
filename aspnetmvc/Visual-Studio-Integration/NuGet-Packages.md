@@ -29,7 +29,7 @@ The NuGet Package Manager can be used to search and install NuGet packages in th
 
     Alternatively, click **Tools** menu, `NuGet Package Manager | Manage NuGet Packages for Solution...`
 
-2.	Select the NuGet.org from the Package source drop-down. 
+2.	Select the NuGet.org from the **Package source** drop-down. 
 
     ![NuGet package manager dialog window](NuGet_Packages_Images/img7.png)             
 
@@ -71,7 +71,7 @@ Add packages can be used to search and install NuGet packages to the Visual Stud
 
     ![NuGet package manager add-in for macOS](NuGet_Packages_Images/img8.png)  
               
-2.	2.	Select the NuGet.org from the **Package source** drop-down.
+2.	Select the NuGet.org from the **Package source** drop-down.
 
     ![Add packages dialog](NuGet_Packages_Images/img9.jpg)  
 
