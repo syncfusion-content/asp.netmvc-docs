@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ASP.NET MVC NuGet Packages | Syncfusion
+title: ASP.NET MVC NuGet Packages | ASP.NET MVC | Syncfusion
 description: NuGet Packages
 platform: ejmvc
 control: NuGet Packages
@@ -9,7 +9,11 @@ documentation: ug
 
 # NuGet Packages
 
-[NuGet](https://www.nuget.org/) can be used to automatically add files and references to your Visual Studio projects. You can use the Syncfusion ASP.NET MVC NuGet packages without installing the Essential Studio or ASP.NET MVC platform installation to development with the Syncfusion ASP.NET MVC controls. From v16.2.0.46 (2018 Volume 2 Service Pack 1) onwards, all the Syncfusion components are available as NuGet packages at [nuget.org](https://www.nuget.org/profiles/SyncfusionInc). 
+[NuGet](https://www.nuget.org/) can be used to automatically add files and references to your Visual Studio projects. You can use the Syncfusion ASP.NET MVC NuGet packages without installing the Essential Studio or ASP.NET MVC platform installation to development with the Syncfusion ASP.NET MVC controls. 
+
+From v16.2.0.46 (2018 Volume 2 Service Pack 1) onwards, all the Syncfusion components are available as NuGet packages at [nuget.org](https://www.nuget.org/profiles/SyncfusionInc). 
+
+Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet package, you must include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to learn about registering Syncfusion license key in your ASP.NET MVC application to use Syncfusion controls.
 
 N> Starting from v17.1.0.32 (2018 Volume 1), Syncfusion will no longer publish NuGet packages at [nuget.syncfusion.com](https://nuget.syncfusion.com/).
 
@@ -25,21 +29,21 @@ The NuGet Package Manager can be used to search and install NuGet packages in th
 
     Alternatively, click **Tools** menu, `NuGet Package Manager | Manage NuGet Packages for Solution...`
 
-2.	By default, the NuGet.org package is selected in the **Package source** drop-down. If NuGet.org is not configured in your Visual Studio, refer to the [Microsoft docs](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui#package-sources) to configure NuGet.org feed URL in your Visual Studio. 
+2.	Select the NuGet.org from the **Package source** drop-down. 
 
-     ![NuGet package manager dialog window](NuGet_Packages_Images/img7.png)             
+    ![NuGet package manager dialog window](NuGet_Packages_Images/img7.png)             
 
-3.	The Syncfusion ASP.NET MVC NuGet Packages are listed and available in the package source feed URL. Search and install the required packages in your application, by clicking **Install** button.
+3.	All the Syncfusion ASP.NET MVC NuGet Packages are listed and available. Search and install the required packages in your application, by clicking the **Install** button.
 
-N> The Syncfusion NuGet packages are published in public [NuGet.org](https://www.nuget.org/) from v16.2.0.46. So, If you need to Install earlier version of 16.2.0.46 Syncfusion NuGet packages, [configure Syncfusion private feed URL](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages#syncfusion-nuget-feed-url-configuration).
+N> The Syncfusion NuGet packages are published in public [NuGet.org](https://www.nuget.org/) from v16.2.0.46. So, To Install earlier version of 16.2.0.46 Syncfusion NuGet packages, [configure Syncfusion private feed URL](https://help.syncfusion.com/aspnetmvc/Visual-Studio-Integration/nuget-packages#syncfusion-nuget-feed-url-configuration).
 
 ### Using Package Manager Console
 
-To reference the Syncfusion ASP.NET MVC component using the Package Manager Console as NuGet packages, follow the below steps.
+To reference the Syncfusion ASP.NET MVC component using the Package Manager Console as NuGet packages, follow the below steps:
 
 1.	On the **Tools** menu, select **NuGet Package Manager** and then **Package Manager Console**. 
 
-2.	Run the following NuGet installation commands.
+2.	Run the following NuGet installation commands:
 
     ~~~
     #install specified package in default project
@@ -67,11 +71,11 @@ Add packages can be used to search and install NuGet packages to the Visual Stud
 
     ![NuGet package manager add-in for macOS](NuGet_Packages_Images/img8.png)  
               
-2.	By default, the NuGet.org package is selected in the **Package source** drop-down.
+2.	Select the NuGet.org from the **Package source** drop-down.
 
     ![Add packages dialog](NuGet_Packages_Images/img9.jpg)  
 
-3.	The Syncfusion ASP.NET MVC NuGet Packages available in the package source location will be listed. Search and install the required packages in your application, by clicking **Add Package** button.
+3.	The Syncfusion ASP.NET MVC NuGet packages are listed and available. Search and install the required packages in your application, by clicking **Add Package** button.
 
 ## Managing NuGet package using NuGet CLI
 
@@ -113,7 +117,7 @@ The NuGet Command Line Interface (CLI), nuget.exe, provides the full extent of N
     mono nuget.exe install “C:\Users\SyncfusionApplication\package.config”
     ~~~
 
-N> If you need to Install earlier version of 16.2.0.46 Syncfusion NuGet packages, [configure Syncfusion private feed URL](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages#syncfusion-nuget-feed-url-configuration).
+N> To Install earlier version of 16.2.0.46 Syncfusion NuGet packages, [configure Syncfusion private feed URL](https://help.syncfusion.com/aspnetmvc/Visual-Studio-Integration/nuget-packages#syncfusion-nuget-feed-url-configuration).
 
 ## Upgrading NuGet packages
 
@@ -173,13 +177,13 @@ Using the NuGet CLI, all the NuGet packages in the project can be updated to the
 
 1.	Download the latest NuGet CLI from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).
 
-    N> To update the existing nuget.exe to latest version use the following command. 
+    N> To update the existing nuget.exe to latest version use the following command: 
 
     ~~~
     nuget update -self
     ~~~
 
-2.	Open the downloaded executable location in the command window. Run the following “update commands” to update the Syncfusion ASP.NET MVC NuGet packages.
+2.	Open the downloaded executable location in the command window. Run the following “update commands” to update the Syncfusion ASP.NET MVC NuGet packages:
 
     ~~~ 
     #update all NuGet packages from config file
@@ -263,13 +267,13 @@ You should get the private Syncfusion ASP.NET MVC NuGet feed URL to install or u
 
 1.	Download the latest NuGet CLI from [here](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe).
 
-    N> To update the existing nuget.exe to latest version use the following command.
+    N> To update the existing nuget.exe to latest version use the following command:
 
     ~~~
     nuget update -self
     ~~~
 
-2.	Open the downloaded executable location in the command window, and run the following commands to configure the Syncfusion ASP.NET MVC NuGet packages. 
+2.	Open the downloaded executable location in the command window, and run the following commands to configure the Syncfusion ASP.NET MVC NuGet packages: 
 
     ~~~
     #Add specified package source in NuGet.config file for Windows platform
