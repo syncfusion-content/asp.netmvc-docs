@@ -167,7 +167,7 @@ The Syncfusion Troubleshooter deals with the following Script file related issue
   
    ![Syncfusion script file duplicate issue by CDN with local script](SyncfusionTroubleshooter_images/SyncfusionTroubleshooter-img18.png)
 
-   **For Instance:** If project have “ej.localetexts.de-DE.min.js” script file available in multiple project location ("\Scripts\ej\I10n\reportdesigner" and "\Scripts\ej\I10n\"), the Syncfusion Troubleshooter will show Duplicate Syncfusion script files presented in "\Scripts\ej\I10n\reportdesigner".
+   **For Instance:** If project have “ej.web.all.min.js” script file available in multiple project location ("\Scripts\ej\" and "\Scripts\"), the Syncfusion Troubleshooter will show Duplicate Syncfusion script files presented in \Scripts.
   
    ![Syncfusion script file duplicate issue by mulitple location ](SyncfusionTroubleshooter_images/SyncfusionTroubleshooter-img19.png)
 
