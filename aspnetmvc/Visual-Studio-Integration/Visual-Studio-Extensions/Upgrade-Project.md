@@ -43,4 +43,4 @@ Use the following steps to migrate your existing Syncfusion ASP.NET MVC Web Appl
 
      ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration backup dialog](Migrate-Syncfusion-Project_images/ProjectMigration_img4.png)
       
-5. The Syncfusion Reference Assemblies, Scripts, CSS, and Web.Config entries are updated to the corresponding version in the project.
+5. The Syncfusion reference assemblies, Scripts, CSS, and Web.Config entries are updated to the corresponding version in the project.
