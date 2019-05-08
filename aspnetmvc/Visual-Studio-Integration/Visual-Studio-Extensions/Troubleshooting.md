@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Troubleshooter | ASP.NET MVC | Syncfusion
+title: Troubleshooting | ASP.NET MVC | Syncfusion
 description: Syncfusion Troubleshooter is Visual Studio extension to troubleshoot the configuration issues in Syncfusion assembly reference, webconfig entries in projects.
 platform: ejmvc
 control: Syncfusion Extensions
