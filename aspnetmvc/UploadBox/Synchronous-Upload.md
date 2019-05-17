@@ -84,7 +84,7 @@ The following screenshot displays the output.
 
 
 
-![](Synchronous-Upload_images/Synchronous-Upload_img2.png)
+![Synchronous](Synchronous-Upload_images/Synchronous-Upload_img2.png)
 
 
 
