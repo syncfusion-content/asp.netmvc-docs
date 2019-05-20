@@ -36,13 +36,55 @@ The following steps guide you in uploading the file synchronously.
 
 {% endhighlight %}
 
-Once the form is submitted by using Submit button, it triggers the SaveActionResult.  In ActionResult, save the files as usual.
+
+Once the form is submitted by using Submit button, it triggers the post method and the files can be saved by using the below code.
+
+{% highlight C# %}
+
+     public ActionResult Index()
+        {
+            if (string.IsNullOrEmpty((string)TempData["status"]))
+                ViewBag.status = string.Empty;
+            else
+                ViewBag.status = (string)TempData["status"];
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(IEnumerable<HttpPostedFileBase> uploadbox)
+        {
+            if (uploadbox != null)
+            {
+                if (uploadbox != null)
+                {
+                    foreach (var file in uploadbox)
+                    {
+                        var fileName = Path.GetFileName(file.FileName);
+                        var destinationPath = Path.Combine(Server.MapPath("~/App_Data"), fileName);
+                        file.SaveAs(destinationPath);
+                    }
+                    TempData["status"] = "Successfully Uploaded";
+                    return RedirectToAction("FileUploadFeatures");
+                }
+                else
+                {
+                    TempData["status"] = "Select a file to upload";
+                    return RedirectToAction("FileUploadFeatures");
+                }
+
+            }
+            return View();
+        }
+
+
+{% endhighlight %}
+
+Refer [here](https://mvc.syncfusion.com/demos/web/upload/synchronousupload) for online demo
 
 The following screenshot displays the output.
 
 
 
-![](Synchronous-Upload_images/Synchronous-Upload_img2.png)
+![Synchronous](Synchronous-Upload_images/Synchronous-Upload_img2.png)
 
 
 
