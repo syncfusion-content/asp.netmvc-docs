@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ticks | PivotGauge | ASP.NET MVC | Syncfusion
-description: ticks
+description: This document illustrates that how to enable ticks and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

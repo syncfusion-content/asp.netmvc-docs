@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip | PivotGauge | ASP.NET MVC | Syncfusion
-description: tooltip
+description: This document illustrates that how to enable tooltip and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

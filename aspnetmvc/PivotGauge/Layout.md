@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layout | PivotGauge | ASP.NET MVC | Syncfusion
-description: layout 
+description: This document illustrates that how to define layouts and its functionalities in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

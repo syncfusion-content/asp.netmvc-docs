@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export | PivotChart | ASP.NET MVC | Syncfusion
-description: export
+description: This document illustrates that how to define exporting and its customization in ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
 documentation: ug

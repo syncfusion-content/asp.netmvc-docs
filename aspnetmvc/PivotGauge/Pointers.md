@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pointers | PivotGauge | ASP.NET MVC | Syncfusion
-description: pointers
+description: This document illustrates that how to enable pointers and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

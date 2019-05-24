@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scales | PivotGauge | ASP.NET MVC | Syncfusion
-description: scales
+description: This document illustrates that how to enable scales and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

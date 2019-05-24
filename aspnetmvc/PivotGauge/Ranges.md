@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges | PivotGauge | ASP.NET MVC | Syncfusion
-description: ranges
+description: This document illustrates that how to enable ranges and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

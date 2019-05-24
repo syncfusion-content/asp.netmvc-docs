@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization | PivotTreeMap | ASP.NET MVC | Syncfusion
-description: localization 
+description: This document illustrates that how to define localization with respective to the modes in ASP.NET MVC PivotTreeMap control 
 platform: ejmvc
 control: PivotTreeMap
 documentation: ug

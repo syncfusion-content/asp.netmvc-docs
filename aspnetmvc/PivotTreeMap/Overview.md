@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PivotTreeMap | PivotTreeMap | ASP.NET MVC | Syncfusion
-description: overview
+description: This document illustrates overview of PivotTreeMap control in ASP.NET MVC platform. PivotTreeMap is a business component to visualize relational and OLAP data sources in the form of nested nodes in hierarchical order
 platform: ejmvc
 control: PivotTreeMap
 documentation: ug

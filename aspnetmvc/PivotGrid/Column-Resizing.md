@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Column Resizing | PivotGrid | ASP.NET MVC | Syncfusion
-description: column resizing
+description: This document illustrates that how to enable column resizing feature and its customization through API in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Editing | PivotGrid | ASP.NET MVC | Syncfusion
-description: cell editing
+description: This document illustrates that how to enable cell editing feature through API in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

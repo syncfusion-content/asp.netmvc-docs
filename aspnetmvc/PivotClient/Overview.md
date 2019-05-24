@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PivotClient | PivotClient | ASP.NET MVC | Syncfusion
-description: overview
+description: This document illustrates overview of PivotClient control in ASP.NET MVC platform. PivotClient is a business component to visualize relational and OLAP data sources in a graphical and tabular formats
 platform: ejmvc
 control: PivotClient
 documentation: ug

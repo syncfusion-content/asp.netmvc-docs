@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PivotChart | PivotChart | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview | PivotChart | ASP.NET MVC | Syncfusion
+description: This document illustrates overview of PivotChart control in ASP.NET MVC platform. PivotChartt is a lightweight component to visualize relational and OLAP data sources in a graphical format
 platform: ejmvc
 control: PivotChart
 documentation: ug
