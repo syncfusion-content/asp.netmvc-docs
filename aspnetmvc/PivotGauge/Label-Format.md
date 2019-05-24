@@ -34,4 +34,4 @@ Number format for the label values can be set to any of the following type:
 
 {% endhighlight %}
 
-![](Label-Format_images/labelformat.png) 
+![Label format in ASP NET MVC pivot gauge control](Label-Format_images/labelformat.png) 

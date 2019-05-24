@@ -41,4 +41,4 @@ The appearance of the tick can be customized through the following properties.
 
 {% endhighlight  %}
 
-![](Ticks_images/TickCustomization.png) 
+![Ticks in ASP NET MVC pivot gauge control](Ticks_images/TickCustomization.png) 

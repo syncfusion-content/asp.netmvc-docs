@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization | PivotGauge | ASP.NET MVC | Syncfusion
-description: localization
+description: This document illustrates that how to define localization and globalization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug

@@ -36,5 +36,5 @@ Tooltip appearance can be customized by overriding its CSS class.
 
 {% endhighlight  %}
 
-![](Tooltip_images/Tooltip.png) 
+![Tooltip in ASP NET MVC pivot gauge control](Tooltip_images/Tooltip.png) 
 

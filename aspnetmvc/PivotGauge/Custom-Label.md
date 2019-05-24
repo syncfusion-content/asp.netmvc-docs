@@ -41,7 +41,7 @@ The appearance of the custom labels can be customized through the following prop
 
 {% endhighlight  %}
 
-![](Custom-Label_images/AppearanceCustomization.png) 
+![Custom label customization in ASP NET MVC pivot gauge control](Custom-Label_images/AppearanceCustomization.png) 
 
 ## Multiple Custom Labels
 
@@ -60,4 +60,4 @@ Multiple ranges can be added in `CustomLabels` to the scales option within the P
 
 {% endhighlight  %}
 
-![](Custom-Label_images/MultipleCustomLabels.png) 
+![Multiple custom labels in ASP NET MVC pivot gauge control](Custom-Label_images/MultipleCustomLabels.png) 

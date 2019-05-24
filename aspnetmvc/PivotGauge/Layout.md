@@ -19,7 +19,7 @@ Gauges can be arranged in specified number of rows by using the `RowsCount` prop
 
 {% endhighlight %}
 
-![](Layout_images/Row-wiseLayout.png) 
+![Row wise layout in ASP NET MVC pivot gauge control](Layout_images/Row-wiseLayout.png) 
 
 ## Column-wise Layout
 
@@ -31,4 +31,4 @@ Gauges can be arranged in specified number of columns by using the `ColumnsCount
 
 {% endhighlight  %}
 
-![](Layout_images/Column-wiseLayout.png)
+![Row wise layout in ASP NET MVC pivot gauge control](Layout_images/Column-wiseLayout.png)
