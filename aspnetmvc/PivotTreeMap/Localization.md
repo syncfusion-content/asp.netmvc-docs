@@ -48,5 +48,5 @@ DataManager.OverrideDefaultFormatStrings = true;
 
 {% endhighlight %}
 
-![](Localization_images/localization.png) 
+![Localization in ASP NET MVC pivot tree map control](Localization_images/localization.png) 
 

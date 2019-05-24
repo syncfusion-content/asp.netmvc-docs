@@ -69,4 +69,4 @@ For Server Mode, we need to set **"Culture"** and **"OverrideDefaultFormatString
 
 {% endhighlight %}
 
-![](Localization-and-Translation-Support_images/Localization.png) 
+![Localization in ASP NET MVC pivot gauge control](Localization-and-Translation-Support_images/Localization.png) 
