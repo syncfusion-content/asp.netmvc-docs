@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workflows | Kanban | ASP.NET MVC | Syncfusion
-description: Workflows
+description: This section explains the flow of cards between the Kanban columns in the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

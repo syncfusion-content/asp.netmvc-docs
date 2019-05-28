@@ -1,6 +1,6 @@
 ---
 title: Column | Kanban | ASP.NET MVC | Syncfusion
-description: Column
+description: This section explains how to define the columns and their features of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

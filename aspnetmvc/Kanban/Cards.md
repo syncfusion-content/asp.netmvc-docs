@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cards | Kanban | ASP.NET MVC | Syncfusion
-description: Cards
+description: This section explains how to define the basic structure of cards and their features of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

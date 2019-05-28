@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive | Kanban | ASP.NET MVC | Syncfusion
-description: Responsive
+description: This section explains the responsive behavior of the Syncfusion ASP.NET MVC Kanban component based on the client browser width and height.
 documentation: ug
 control: Kanban
 platform: ejmvc

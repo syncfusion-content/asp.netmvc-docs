@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing | Kanban | ASP.NET MVC | Syncfusion
-description: Editing
+description: This section explains how to enable different editing mode on the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

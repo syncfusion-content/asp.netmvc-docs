@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Headers | Kanban | ASP.NET MVC | Syncfusion
-description: Stacked Headers
+description: This section explains how to define the stacked headers in the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

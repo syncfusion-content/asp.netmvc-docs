@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization | Kanban | ASP.NET MVC | Syncfusion
-description: Localization
+description: This section explains how to enable localization and its functionalities using the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

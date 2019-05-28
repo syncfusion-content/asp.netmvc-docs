@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print | Kanban | ASP.NET MVC | Syncfusion
-description: Print
+description: This section explains how to perform printing feature using the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

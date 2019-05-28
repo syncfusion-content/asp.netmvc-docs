@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering | Kanban | ASP.NET MVC | Syncfusion
-description: Filtering
+description: This section explains how to enable filtering and its functionalities using the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

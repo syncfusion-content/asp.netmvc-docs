@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  Prioritization of cards | Kanban | ASP.NET MVC | Syncfusion
-description: The priority property is used to reorder the cards position in any desired place by dropping the card in Kanban board.
+description: The priority property is used to reorder the cards position in any desired place by dropping the card in Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc
 keywords: card priority
 ---
 
-## Prioritization of cards
+# Prioritization of cards
 
 Prioritizing cards is easy with drag-and-drop re-ordering that helps you to categorize most important work at the top. Cards can be categorized with priority by mapping specific database field into `Priority` property.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swimlanes | Kanban | ASP.NET MVC | Syncfusion
-description: Swimlanes
+description: This section explains the horizontal categorization of issues in the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

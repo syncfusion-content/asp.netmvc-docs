@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu  | Kanban | ASP.NET MVC | Syncfusion
-description: Context Menu 
+description: This section explains how to enable context menu and its functionalities using the Syncfusion ASP.NET MVC Kanban component. 
 documentation: ug
 control: Kanban
 platform: ejmvc

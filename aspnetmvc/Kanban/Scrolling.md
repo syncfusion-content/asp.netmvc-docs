@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling | Kanban | ASP.NET MVC | Syncfusion
-description: Scrolling
+description: This section explains how to achieve the scrolling behavior of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc
