@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive | PivotGrid | ASP.NET MVC | Syncfusion
-description: responsive
+description: This document illustrates that how to enable responsive layout rendering in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

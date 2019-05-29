@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save and Load Report | PivotGrid | ASP.NET MVC | Syncfusion
-description: save and load report
+description: This document illustrates that how to save and load report to database in ASP.NET MVC PivotGrid control 
 platform: js
 control: PivotGrid
 documentation: ug

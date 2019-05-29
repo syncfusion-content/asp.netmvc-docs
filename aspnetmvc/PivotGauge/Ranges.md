@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges | PivotGauge | ASP.NET MVC | Syncfusion
-description: ranges
+description: This document illustrates that how to enable ranges and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -49,7 +49,7 @@ N> By default, placement takes the value “Near”, whereas other enumeration v
 
 {% endhighlight %}
 
-![](Ranges_images/AppearanceCustomization.png) 
+![Range customization in ASP NET MVC pivot gauge control](Ranges_images/AppearanceCustomization.png) 
 
 N> On setting both the position properties - "DistanceFromScale" and "Placement" for a range, the value set in "DistanceFromScale" is given preference. 
 
@@ -69,4 +69,4 @@ Multiple ranges can be added in `Ranges` to the scales option within the PivotGa
 
 {% endhighlight  %}
 
-![](Ranges_images/MultipleRanges.png) 
+![Multiple ranges in ASP NET MVC pivot gauge control](Ranges_images/MultipleRanges.png) 

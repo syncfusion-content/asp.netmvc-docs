@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip | PivotGauge | ASP.NET MVC | Syncfusion
-description: tooltip
+description: This document illustrates that how to enable tooltip and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -36,5 +36,5 @@ Tooltip appearance can be customized by overriding its CSS class.
 
 {% endhighlight  %}
 
-![](Tooltip_images/Tooltip.png) 
+![Tooltip in ASP NET MVC pivot gauge control](Tooltip_images/Tooltip.png) 
 

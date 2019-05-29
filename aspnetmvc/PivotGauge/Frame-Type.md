@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Frame Type | PivotGauge | ASP.NET MVC | Syncfusion
-description: frame type 
+description: This document illustrates that how to define frames and its types with respective to the angles and scales in ASP.NET MVC PivotGauge control 
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -19,7 +19,7 @@ Full Circle frame lets the PivotGauge display in circular shape. Frame type can 
 
 {% endhighlight %}
 
-![](Frame-Type_images/FullCircle.png)
+![Full circle frame in ASP NET MVC pivot gauge control](Frame-Type_images/FullCircle.png)
 
 ## Half Circle
 Half Circle frame lets the PivotGauge to display in semi-circular shape. For this, frame type needs to be set as "HalfCircle" within the `FrameType` property and need to set `StartAngle` and `SweepAngle` for the PivotGauge in the `Scales` property.
@@ -31,4 +31,4 @@ Half Circle frame lets the PivotGauge to display in semi-circular shape. For thi
 
 {% endhighlight %}
 
-![](Frame-Type_images/HalfCircle.png)
+![Half circle frame in ASP NET MVC pivot gauge control](Frame-Type_images/HalfCircle.png)

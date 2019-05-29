@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization | PivotGauge | ASP.NET MVC | Syncfusion
-description: localization
+description: This document illustrates that how to define localization and globalization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -69,4 +69,4 @@ For Server Mode, we need to set **"Culture"** and **"OverrideDefaultFormatString
 
 {% endhighlight %}
 
-![](Localization-and-Translation-Support_images/Localization.png) 
+![Localization in ASP NET MVC pivot gauge control](Localization-and-Translation-Support_images/Localization.png) 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Axes | PivotChart | ASP.NET MVC | Syncfusion
-description: axes
+description: This document illustrates that how to define chart axes and its customization in ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
 documentation: ug

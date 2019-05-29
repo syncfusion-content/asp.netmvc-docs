@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pointers | PivotGauge | ASP.NET MVC | Syncfusion
-description: pointers
+description: This document illustrates that how to enable pointers and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -30,7 +30,7 @@ Needle type pointers are the default pointers which is always located at the cen
 
 {% endhighlight  %}
 
-![](Pointers_images/NeedlePointer.png) 
+![Needle pointer in ASP NET MVC pivot gauge control](Pointers_images/NeedlePointer.png) 
 
 For marker pointer, the available shapes are Rectangle, Triangle, Ellipse, Diamond, Pentagon, Circle, Slider, Pointer, Wedge, Trapezoid, RoundedRectangle and Image.
 
@@ -40,7 +40,7 @@ For marker pointer, the available shapes are Rectangle, Triangle, Ellipse, Diamo
 
 {% endhighlight  %}
 
-![](Pointers_images/MarkerPointer.png) 
+![Marker pointer in ASP NET MVC pivot gauge control](Pointers_images/MarkerPointer.png) 
 
 ## Adding Pointer Collection
 
@@ -52,7 +52,7 @@ Pointer collection can be directly added to the scales option within the PivotGa
 
 {% endhighlight %}
 
-![](Pointers_images/PointerCollection.png) 
+![Collection of pointers in ASP NET MVC pivot gauge control](Pointers_images/PointerCollection.png) 
 
 ## Appearance Customization
 
@@ -78,7 +78,7 @@ The appearance of the pointer can be customized through the following properties
 
 {% endhighlight %}
 
-![](Pointers_images/AppearanceCustomization.png) 
+![Pointer customization in ASP NET MVC pivot gauge control](Pointers_images/AppearanceCustomization.png) 
 
 ## Pointer Position
 
@@ -97,7 +97,7 @@ N> Both the properties can be applied only if the pointer type is set to “Mark
 
 {% endhighlight  %}
 
-![](Pointers_images/PointerPosition.png) 
+![Pointer position in ASP NET MVC pivot gauge control](Pointers_images/PointerPosition.png) 
 
 ## Pointer Image
 
@@ -116,7 +116,7 @@ It is possible to replace the pointers with image. To view the pointers as image
 
 {% endhighlight  %}
 
-![](Pointers_images/MarkerPointerWithImage.png)
+![Pointer image in ASP NET MVC pivot gauge control](Pointers_images/MarkerPointerWithImage.png)
 
 ## Pointer Value Text
 
@@ -142,4 +142,4 @@ To display the current value of the pointers in PivotGauge control, **"PointerVa
 
 {% endhighlight  %}
 
-![](Pointers_images/PointerValueText.png) 
+![Pointer value texxt in ASP NET MVC pivot gauge control](Pointers_images/PointerValueText.png) 
