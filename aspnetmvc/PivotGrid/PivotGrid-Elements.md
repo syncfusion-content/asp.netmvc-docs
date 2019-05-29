@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PivotGrid Elements | PivotGrid | ASP.NET MVC | Syncfusion
-description: pivotGrid elements
+description: This document illustrates that how to customize cells with an interactive way in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

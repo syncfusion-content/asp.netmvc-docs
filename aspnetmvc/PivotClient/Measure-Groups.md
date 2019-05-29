@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Measure Groups | PivotClient | ASP.NET MVC | Syncfusion
-description: measure groups
+description: This document illustrates that how to define measure groups and functionalities in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug

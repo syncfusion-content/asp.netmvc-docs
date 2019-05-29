@@ -1,7 +1,7 @@
 ---
 layout: post
 title: KPI | PivotClient | ASP.NET MVC | Syncfusion
-description: key performance indicator (KPI)
+description: This document illustrates that how to enable key performance indicator (KPI) in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug

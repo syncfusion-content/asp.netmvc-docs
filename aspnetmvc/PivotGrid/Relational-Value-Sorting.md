@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Value-Soritng | PivotGrid | ASP.NET MVC | Syncfusion
-description: value sorting
+description: This document illustrates that how to define value sorting and its customization in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

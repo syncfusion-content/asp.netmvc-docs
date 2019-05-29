@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Defer Update | PivotGrid | ASP.NET MVC | Syncfusion
-description: defer update
+description: This document illustrates that how to enable defer-update in server mode of ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

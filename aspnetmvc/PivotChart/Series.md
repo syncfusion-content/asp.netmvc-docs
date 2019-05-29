@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series | PivotChart | ASP.NET MVC | Syncfusion
-description: series
+description: This document illustrates that how to enable series and its customization in ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
 documentation: ug

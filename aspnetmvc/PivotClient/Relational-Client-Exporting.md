@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting | PivotClient | ASP.NET MVC | Syncfusion
-description: exporting
+description: This document illustrates that how to define exporting and its customization in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug

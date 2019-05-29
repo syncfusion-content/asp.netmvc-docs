@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Drill Through | PivotGrid | ASP.NET MVC | Syncfusion
-description:  drill through
+description:  This document explains that how to define drill through feature with respective to the modes in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug

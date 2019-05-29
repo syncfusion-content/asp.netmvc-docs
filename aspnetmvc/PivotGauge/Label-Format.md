@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label Format | PivotGauge | ASP.NET MVC | Syncfusion
-description: label format
+description: This document illustrates that how to define label format feature and its functionalities in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -34,4 +34,4 @@ Number format for the label values can be set to any of the following type:
 
 {% endhighlight %}
 
-![](Label-Format_images/labelformat.png) 
+![Label format in ASP NET MVC pivot gauge control](Label-Format_images/labelformat.png) 

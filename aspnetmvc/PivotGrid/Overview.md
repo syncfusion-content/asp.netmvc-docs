@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PivotGrid | PivotGrid | ASP.NET MVC | Syncfusion
-description: overview 
+description: It is an overview of PivotGrid control in ASP.NET MVC platform. PivotGrid component visualizes relational and OLAP data sources in tabular format
 platform: ejmvc
 control: PivotGrid
 documentation: ug
