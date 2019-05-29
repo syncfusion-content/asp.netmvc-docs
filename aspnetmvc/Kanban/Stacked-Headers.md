@@ -72,4 +72,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Stacked_Headers_images/stacked_header_img1.png)
+![Stacked headers in ASP NET MVC kanban control](Stacked_Headers_images/stacked_header_img1.png)

@@ -252,7 +252,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Localization_images/localization_img1.png)
+![Localization in ASP NET MVC kanban control](Localization_images/localization_img1.png)
 
 ## Right to Left (RTL)
 
@@ -329,4 +329,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Localization_images/localization_img2.png)
+![Right to Left in ASP NET MVC kanban control](Localization_images/localization_img2.png)

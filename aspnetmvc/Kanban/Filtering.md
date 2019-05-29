@@ -69,4 +69,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Filtering_images/filter_img1.png)
+![Filtering in ASP NET MVC kanban control](Filtering_images/filter_img1.png)

@@ -88,7 +88,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img1.png)
+![Configuring edit items in ASP NET MVC kanban control](Editing_images/editing_img1.png)
 
 ## Edit modes
 
@@ -161,7 +161,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img2.png)
+![Dialog in ASP NET MVC kanban control](Editing_images/editing_img2.png)
 
 ### Dialog Template Form
 
@@ -298,7 +298,7 @@ While using template, you can change the elements that are defined in the `templ
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img3.png)
+![Dialog template form in ASP NET MVC kanban control](Editing_images/editing_img3.png)
 
 ### External Form
 
@@ -361,7 +361,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img11.png)
+![External form in ASP NET MVC kanban control](Editing_images/editing_img11.png)
 
 Form Position:
 
@@ -431,7 +431,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img12.png)
+![Customize external form in ASP NET MVC kanban control](Editing_images/editing_img12.png)
 
 ### External Template Form
 
@@ -558,7 +558,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img13.png)
+![External template form in ASP NET MVC kanban control](Editing_images/editing_img13.png)
 
 
 ### Cell edit type and its params
@@ -708,7 +708,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img4.png)
+![Cell edit type and its params in ASP NET MVC kanban control](Editing_images/editing_img4.png)
 
 ## Column Validation
 
@@ -864,7 +864,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/editing_img5.png)
+![Column validation in ASP NET MVC kanban control](Editing_images/editing_img5.png)
 
 ## Persisting data in server
 
@@ -972,7 +972,7 @@ The following code example describes the above behavior.
 
 Please refer to the below screenshot.
 
-![](Editing_images/editing_img6.png)
+![URL adaptor in ASP NET MVC kanban control](Editing_images/editing_img6.png)
 
 Using `DataOperations` helper class you can perform Kanban action at server side. The in-built methods that we have provided in the `DataOperations` class are listed below.
 
@@ -1034,7 +1034,7 @@ The following code example describes the above behavior.
 
 The newly added card details are bound to the `added` parameter. Please refer the below image.
 
-![](Editing_images/editing_img7.png)
+![Insert card in ASP NET MVC kanban control](Editing_images/editing_img7.png)
 
 ### Update Card
 
@@ -1068,7 +1068,7 @@ The following code example describes the above behavior.
 
 The updated card details are bound to the `changed` parameter. Please refer the below image.
 
-![](Editing_images/editing_img8.png)
+![Update card in ASP NET MVC kanban control](Editing_images/editing_img8.png)
 
 ### Delete Card
 
@@ -1098,7 +1098,7 @@ The following code example describes the above behavior.
 
 The deleted card details are bound to the `deleted` parameter. Please refer the below image.
 
-![](Editing_images/editing_img9.png)
+![Delete card in ASP NET MVC kanban control](Editing_images/editing_img9.png)
 
 
 
