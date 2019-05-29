@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title | PivotChart | ASP.NET MVC | Syncfusion
-description: title
+description: This document illustrates that how to enable title and its customization in ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
 documentation: ug

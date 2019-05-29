@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scales | PivotGauge | ASP.NET MVC | Syncfusion
-description: scales
+description: This document illustrates that how to enable scales and its customization in ASP.NET MVC PivotGauge control
 platform: ejmvc
 control: PivotGauge
 documentation: ug
@@ -19,7 +19,7 @@ Scale can be added within the PivotGauge control.
 
 {% endhighlight  %}
 
-![](Scales_images/AddingScale.png) 
+![Scales in ASP NET MVC pivot gauge control](Scales_images/AddingScale.png) 
 
 ## Scale Customization
 
@@ -39,7 +39,7 @@ Pointer Cap is a circular shape element which is located at the center of the Pi
 
 {% endhighlight  %}
 
-![](Scales_images/PointerCap.png) 
+![Pointer cap in ASP NET MVC pivot gauge control](Scales_images/PointerCap.png) 
 
 ### Appearance
 The appearance of the scale can be customized through the following properties.
@@ -64,4 +64,4 @@ The `ShowIndicators`, `ShowTicks`, `ShowRanges`, `ShowPointers`, and `ShowScaleB
 
 {% endhighlight  %}
 
-![](Scales_images/Appearance.png) 
+![Scale appearance in ASP NET MVC pivot gauge control](Scales_images/Appearance.png) 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PivotChart | PivotChart | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview | PivotGauge | ASP.NET MVC | Syncfusion
+description: It is an overview of PivotGauge control in ASP.NET MVC platform. PivotGauge visualizes relational and OLAP data sources in the form of circular gauge
 platform: ejmvc
 control: PivotChart
 documentation: ug

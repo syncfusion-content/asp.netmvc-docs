@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging | PivotClient | ASP.NET MVC | Syncfusion
-description: paging
+description: This document illustrates that how to define paging with respective to the modes in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug

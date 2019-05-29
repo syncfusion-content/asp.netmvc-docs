@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Frozen Header | PivotGrid | ASP.NET MVC | Syncfusion
-description:  frozen header
+description:  This document illustrates that how to enable frozen header feature and its options in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug
