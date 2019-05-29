@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive | Kanban | ASP.NET MVC | Syncfusion
-description: Responsive
+description: This section explains the responsive behavior of the Syncfusion ASP.NET MVC Kanban component based on the client browser width and height.
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -16,7 +16,7 @@ The Kanban control has support for responsive behavior based on client browserâ€
 
 You can check the image representation of touch actions from the below image.
 
-![](Responsive_images/KanbanOverlayImage.png)
+![Responsive layout in ASP NET MVC kanban control](Responsive_images/KanbanOverlayImage.png)
 
 ## Mobile Layout
 
@@ -91,26 +91,26 @@ If client width is less than 480px, the Kanban will render in mobile mode. In wh
 
 {% endtabs %}  
 
-![](Responsive_images/Responsive_img2.png)
+![Mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img2.png)
 
 
 W> IE8 and IE9 does not support responsive kanban. `ej.responsive.css` should be referred to display Responsive Kanban.
 
-![](Responsive_images/Responsive_img3.png)
+![CRUD mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img3.png)
 {:caption}
 CRUD in mobile layout
 
-![](Responsive_images/Responsive_img4.png)
+![Filtering mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img4.png)
 {:caption}
 Filtering in mobile layout
 
-![](Responsive_images/Responsive_img5.png)
+![Searching mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img5.png)
 {:caption}
 Searching in mobile layout
 
-![](Responsive_images/Responsive_img6.png)
+![Swim-lane mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img6.png)
 
-![](Responsive_images/Responsive_img7.png)
+![Swim-lane options mobile layout in ASP NET MVC kanban control](Responsive_images/Responsive_img7.png)
 {:caption}
 Kanban with Swim-lane
 
@@ -224,4 +224,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Responsive_images/responsive_img1.png)
+![Minimum width mobile layout in ASP NET MVC kanban control](Responsive_images/responsive_img1.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cards | Kanban | ASP.NET MVC | Syncfusion
-description: Cards
+description: This section explains how to define the basic structure of cards and their features of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -120,7 +120,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Cards_images/cards_img1.png)
+![Card customization in ASP NET MVC kanban control](Cards_images/cards_img1.png)
 
 ## Template
 
@@ -255,7 +255,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Cards_images/cards_img2.png)
+![Card template in ASP NET MVC kanban control](Cards_images/cards_img2.png)
 
 ## Tooltip
 
@@ -312,7 +312,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Cards_images/cards_img3.png)
+![Card tooltip in ASP NET MVC kanban control](Cards_images/cards_img3.png)
 
 ### Template
 
@@ -440,7 +440,7 @@ The following code example describes the tooltip template.
 
 The following output is displayed as a result of the above code example.
 
-![](Cards_images/cards_img4.png)
+![Card tooltip template in ASP NET MVC kanban control](Cards_images/cards_img4.png)
 
 ## Collapsible Cards
 
@@ -518,4 +518,4 @@ The following code example describes the collapsible cards.
 
 The following output is displayed as a result of the above code example.
 
-![](Cards_images/cards_img5.png)
+![Collapsible cards in ASP NET MVC kanban control](Cards_images/cards_img5.png)
