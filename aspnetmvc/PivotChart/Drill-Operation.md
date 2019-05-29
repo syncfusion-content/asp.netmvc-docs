@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DrillOperation | PivotChart | ASP.NET MVC | Syncfusion
+title: Drill operation | PivotChart | ASP.NET MVC | Syncfusion
 description: This document illustrates drill operation with respective to the modes of ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
