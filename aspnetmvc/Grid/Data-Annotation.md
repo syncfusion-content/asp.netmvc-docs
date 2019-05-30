@@ -1,12 +1,12 @@
 ---
 layout: post
-title: data-Annotation with Grid widget for Syncfusion Essential MVC
-description: How to enable data-Annotation and its functionalities
+title: Date Annotation | Grid | ASP.NET MVC | Syncfusion
+description: This section describes how to enable data-Annotation and its functionalities and how data annotation works in Grid Control. 
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-#  DataAnnotation
+#  Data Annotation
 
 Data Annotations help us to define the rules to the model classes or properties for data validation and displaying suitable messages to end users.
 
@@ -164,4 +164,4 @@ The following code example shows how data annotation works in Grid Control.
           
 The following output is displayed as a result of the above code example.
 
- ![](Data-Annotation_images/Data-Annotation_img1.png)
+ ![Date annotation in asp.net mvc grid control](Data-Annotation_images/Data-Annotation_img1.png)
