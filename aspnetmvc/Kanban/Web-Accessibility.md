@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Accessibility | Kanban | ASP.NET MVC | Syncfusion
-description: Web Accessibility
+description: This section explains how to enable web accessibility support on the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

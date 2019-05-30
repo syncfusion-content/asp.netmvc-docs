@@ -1,6 +1,6 @@
 ---
 title: Column | Kanban | ASP.NET MVC | Syncfusion
-description: Column
+description: This section explains how to define the columns and their features of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -88,7 +88,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img.png)
+![Key mapping in ASP NET MVC kanban control](Columns_images/column_img.png)
 
 ## Multiple Key Mapping
 
@@ -141,7 +141,7 @@ The following code example and screenshot which describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img9.png)
+![Multiple key mapping in ASP NET MVC kanban control](Columns_images/column_img9.png)
 
 ## Headers
 
@@ -227,7 +227,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img1.png)
+![Header template in ASP NET MVC kanban control](Columns_images/column_img1.png)
 
 ## Width
 
@@ -280,7 +280,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img2.png)
+![Column width in ASP NET MVC kanban control](Columns_images/column_img2.png)
 
 ## Visibility 
 
@@ -332,7 +332,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img3.png)
+![Column visibility in ASP NET MVC kanban control](Columns_images/column_img3.png)
 
 ## Toggle 
 
@@ -391,7 +391,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img4.png)
+![Toggle column in ASP NET MVC kanban control](Columns_images/column_img4.png)
 
 ## Allow Dragging
 
@@ -447,7 +447,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img5.png)
+![Allow dragging in ASP NET MVC kanban control](Columns_images/column_img5.png)
 
 ## Allow Dropping
 
@@ -503,7 +503,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img6.png)
+![Allow dropping in ASP NET MVC kanban control](Columns_images/column_img6.png)
 
 ## Items Count
 
@@ -559,7 +559,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img7.png)
+![Items count in ASP NET MVC kanban control](Columns_images/column_img7.png)
 
 ## Customize Items Count Text
 
@@ -617,7 +617,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img8.png)
+![Customize items count text in ASP NET MVC kanban control](Columns_images/column_img8.png)
 
 ## Display Empty Column
 
@@ -685,4 +685,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Columns_images/column_img10.png)
+![Display empty column in ASP NET MVC kanban control](Columns_images/column_img10.png)

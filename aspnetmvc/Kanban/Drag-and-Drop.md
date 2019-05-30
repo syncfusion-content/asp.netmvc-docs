@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop | Kanban | ASP.NET MVC | Syncfusion
-description: Drag and Drop
+description: This section explains how to drag and drop Kanban cards and their features of the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc

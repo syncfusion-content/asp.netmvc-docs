@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stacked Headers | Kanban | ASP.NET MVC | Syncfusion
-description: Stacked Headers
+description: This section explains how to define the stacked headers in the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -72,4 +72,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Stacked_Headers_images/stacked_header_img1.png)
+![Stacked headers in ASP NET MVC kanban control](Stacked_Headers_images/stacked_header_img1.png)

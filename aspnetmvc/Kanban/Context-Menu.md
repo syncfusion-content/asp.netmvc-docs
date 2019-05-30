@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu  | Kanban | ASP.NET MVC | Syncfusion
-description: Context Menu 
+description: This section explains how to enable context menu and its functionalities using the Syncfusion ASP.NET MVC Kanban component. 
 documentation: ug
 control: Kanban
 platform: ejmvc
@@ -192,9 +192,9 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Context_images/context_img1.png)
+![Default sub context menu items in ASP NET MVC kanban control](Context_images/context_img1.png)
 
-![](Context_images/context_img2.png)
+![Default context menu items in ASP NET MVC kanban control](Context_images/context_img2.png)
 
 ## Custom Context Menu
 
@@ -250,7 +250,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Context_images/context_img3.png)
+![Custom context menu in ASP NET MVC kanban control](Context_images/context_img3.png)
 
 ## Sub Context Menu
 
@@ -334,4 +334,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Context_images/context_img4.png)
+![Sub context menu in ASP NET MVC kanban control](Context_images/context_img4.png)
