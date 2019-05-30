@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kanban | Kanban | ASP.NET MVC | Syncfusion
-description: Kanban Introduction
+description: This section explains the short description of basic features on the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 platform: ejmvc
 keywords: overview
