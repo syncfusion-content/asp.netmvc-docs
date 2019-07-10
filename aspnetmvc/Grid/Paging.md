@@ -47,7 +47,7 @@ The code sample to enable paging is as follows.
  
  The following output is displayed as a result of the previous code example.
  
- ![](Paging_images/Paging_img1.png)
+ ![Paging](Paging_images/Paging_img1.png)
 
 ## Pager with query string
 
@@ -93,7 +93,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
- ![](Paging_images/Paging_img2.png)
+ ![Pager with query string](Paging_images/Paging_img2.png)
 
 
 ## Pager template
@@ -171,7 +171,7 @@ The following code example describes the previous behavior.
  
  The following output is displayed as a result of the previous code example.
 
-![](Paging_images/Paging_img3.png)
+![Pager template](Paging_images/Paging_img3.png)
 
 ## Pager with pageSize drop down
 
@@ -219,29 +219,51 @@ The following code sample describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
- ![](Paging_images/Paging_img6.png)
+ ![Pager with pageSize drop down](Paging_images/Paging_img6.png)
  
- ## Pager with pageSettings
+## Pager with pageSettings
 
 We can customize the default page settings, such as the [`pageCount`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagecount "pageCount"), [`pageSize`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings-pagesize "pageSize")  of the grid's pager by using the [`pageSettings`](https://help.syncfusion.com/api/js/ejgrid#members:pagesettings "pageSettings") property of grid control. 
 
 The following code example describes the previous behavior.
 
-{% highlight html %}
-<div id="Grid"></div>
-{% endhighlight %}
+{% tabs %}
+{% highlight razor %}
 
-{% highlight javascript %}
-$(function () {
-	$("#Grid").ejGrid({
-		//The datasource "window.gridData" is referred from 'http://js.syncfusion.com/demos/web/scripts/jsondata.min.js'
-        dataSource: window.gridData,
-        allowPaging: true,
-        pageSettings: { pageSize: 8, pageCount:3}
-    });
-});
-{% endhighlight %}
+    @(Html.EJ().Grid<object>("Paging")
+                .Datasource((IEnumerable<object>)ViewBag.datasource)
+                .AllowPaging()
+                .PageSettings(page => page.PageSize(8).PageCount(3)) 
+                .Columns(col =>
+                {
+                    col.Field("OrderID").Add();
+                    col.Field("CustomerID").Add();
+                    col.Field("EmployeeID").Add();
+                    col.Field("Freight").Format("{0:C}").Add();
+                    col.Field("ShipCity").Add();
+                    col.Field("ShipCountry").Add();
+                })
+    )
+
+ {% endhighlight  %} 
+ {% highlight c# %} 
+        
+          namespace MVCSampleBrowser.Controllers
+           {
+            public class GridController : Controller
+              { 
+               public ActionResult Paging()
+                 {
+                   var DataSource = new NorthwindDataContext().OrdersViews.ToList();
+                   ViewBag.datasource = DataSource;
+                   return View();
+                 }
+              }   
+            } 
+
+ {% endhighlight  %}
+ {% endtabs %} 
 
 The following output is displayed as a result of the previous code example.
 
-![](paging_images/paging_img7.png)
+![Pager with pageSettings](paging_images/paging_img7.png)
