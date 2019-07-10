@@ -47,7 +47,7 @@ The code sample to enable paging is as follows.
  
  The following output is displayed as a result of the previous code example.
  
- ![](Paging_images/Paging_img1.png)
+ ![Paging](Paging_images/Paging_img1.png)
 
 ## Pager with query string
 
@@ -93,7 +93,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
- ![](Paging_images/Paging_img2.png)
+ ![Pager with query string](Paging_images/Paging_img2.png)
 
 
 ## Pager template
@@ -171,7 +171,7 @@ The following code example describes the previous behavior.
  
  The following output is displayed as a result of the previous code example.
 
-![](Paging_images/Paging_img3.png)
+![Pager template](Paging_images/Paging_img3.png)
 
 ## Pager with pageSize drop down
 
@@ -219,7 +219,7 @@ The following code sample describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
- ![](Paging_images/Paging_img6.png)
+ ![Pager with pageSize drop down](Paging_images/Paging_img6.png)
  
 ## Pager with pageSettings
 
@@ -266,4 +266,4 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](paging_images/paging_img7.png)
+![Pager with pageSettings](paging_images/paging_img7.png)
