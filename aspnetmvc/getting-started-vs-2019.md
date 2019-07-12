@@ -16,7 +16,7 @@ documentation: ug
 
 This section describes how to configure the Syncfusion ASP.NET MVC components into the ASP.NET MVC applications using Visual Studio 2019.
 
-To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer to the following steps.
+To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **NuGet** **Packages**, refer to the following steps.
 
 * Open Visual Studio 2019 and Create a new ASP.NET Web Application project and click on the **Next** button.
 
@@ -36,9 +36,9 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 *  After project creation, install the Syncfusion Packages in your application.
 
-* Select the **Tools->Nuget Package Manager->Package Manager settings** the dialog window will open.
+* Select the **Tools->NuGet Package Manager->Package Manager settings** the dialog window will open.
 
-* Navigate to the **Nuget Package Manager->Package Sources** from the options dialog.
+* Navigate to the **NuGet Package Manager->Package Sources** from the options dialog.
 
 * Click the Add button to create the new package sources.
 
@@ -46,15 +46,15 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
   **Name**: Name of the package that listed in Available package sources 
 
-  **Source**: Syncfusion ASP.NET Core NuGet Package feed URL
+  **Source**: Syncfusion ASP.NET MVC NuGet Package feed URL
 
-    * The Syncfusion ASP.NET Core NuGet Package can be installed from [https://www.nuget.org/packages/Syncfusion.EJ.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ.AspNet.Core)
+    * The Syncfusion ASP.NET MVC NuGet Package can be installed from [https://www.nuget.org/packages/Syncfusion.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.AspNet.Mvc5)
 
 * Select the Update and then click the OK button. The package’s source get added to the list of available package sources.
     
 * Right click your project references and then select “**Manage NuGet Package**” option. In this window choose the “**Syncfusion Packages registered name**” from the package source dropdown. And check the “**include prerelease**” option.
 
-* Now, our Syncfusion Packages will list in this window. Select and install the “**Syncfusion.EJ.AspNet.Core**” package from this list.
+* Now, our Syncfusion Packages will list in this window. Select and install the “**Syncfusion.EJ.AspNet.Mvc5**” package from this list.
 
 ![install nuget](getting-started-vs-2019-images/image6.png)
 
