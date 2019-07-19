@@ -869,5 +869,5 @@ Sample
 
 The following screenshot shows the PDF viewer with tooltip in German language.
 
-![](Localization_images/Localization_img1.png)
+![Localization](Localization_images/Localization_img1.png)
 
