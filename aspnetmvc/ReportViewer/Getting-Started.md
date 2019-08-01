@@ -17,14 +17,14 @@ This section explains how to configure a ReportViewer component in web applicati
 
 Open Visual Studio and create a new project by clicking New Project. Select the Web category, select the ASP.NET MVC4 Web Application template, and then click OK. The following screenshot displays the Project Creation Wizard.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![samplechoosen](Getting-Started_images/Getting-Started_img2.png)
 
 Project Creation Wizard
 {:.caption}
 
 The following screenshot displays how to select Internet application template with razor view engine.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![selectsample](Getting-Started_images/Getting-Started_img3.png)
 
 
 ### Add References, Scripts, Styles and Control in CSHTML Page
@@ -33,7 +33,7 @@ The following screenshot displays how to select Internet application template wi
 
 1. In the Solution Explorer, right-click the References folder and then click Add Reference
 
-   ![](Getting-Started_images/Getting-Started_img4.png)
+   ![AddReference](Getting-Started_images/Getting-Started_img4.png)
 	
    Adding Reference
    {:.caption}
@@ -108,7 +108,7 @@ N> Add your report files to your application’s App_Data folder. You can obtain
 
 The MVC ReportViewer uses WebApi services to process the report file and process the request from control.
 
-![](Getting-Started_images/Getting-Started_img8.png)
+![Addcontroller](Getting-Started_images/Getting-Started_img8.png)
 
 Adding WebApi Controller
 {:.caption}
@@ -195,7 +195,7 @@ namespace ReportViewerDemo
 
 Run the sample application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-![](Getting-Started_images/Getting-Started_img9.png)
+![output](Getting-Started_images/Getting-Started_img9.png)
 
 ReportViewer with Sales Dashboard Report
 {:.caption}
@@ -238,7 +238,7 @@ ReportViewer supports to load RDL/RDLC files from SSRS Server. The following ste
   
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-   ![](Getting-Started_images/Getting-Started_img10.png)
+   ![output2](Getting-Started_images/Getting-Started_img10.png)
 	
    Report from SSRS
    {:.caption}
@@ -298,7 +298,7 @@ The ReportViewer has data binding support to visualize the RDLC reports. The fol
   
 3. Run the application and you can see the ReportViewer on the page as displayed in the following screenshot.
 
-   ![](Getting-Started_images/Getting-Started_img11.png)
+   ![output3](Getting-Started_images/Getting-Started_img11.png)
 	
    Product List RDLC Report
    {:.caption}
