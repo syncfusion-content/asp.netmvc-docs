@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context Menu with Spreadsheet widget for Syncfusion Essential ASP .NET MVC
+title: Context Menu with Spreadsheet widget | Essential ASP .NET MVC
 description: How to use the Spreadsheet Context Menu
 platform: ejMVC
 control: Spreadsheet
