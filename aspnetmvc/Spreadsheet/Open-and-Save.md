@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and Save with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+title: Open and Save with Spreadsheet widget | Syncfusion
 description: How to perform Open and Save and configure its functionalities like server mapper, import URL etc.
 platform: ejmvc
 control: Spreadsheet
@@ -146,7 +146,7 @@ namespace MVCSampleBrowser.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![](Open-and-Save_images/Open-and-Save_img1.png)
+![Loading excel documents](Open-and-Save_images/Open-and-Save_img1.png)
 
 ### Methods
 To open an excel document, [`import`](http://help.syncfusion.com/api/js/ejspreadsheet#methods:import "import") method should be called with import options as a parameter. The Spreadsheet can open excel document as a stream or file URL.

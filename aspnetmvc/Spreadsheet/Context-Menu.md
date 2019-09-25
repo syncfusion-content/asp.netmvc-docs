@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context Menu with Spreadsheet widget for Syncfusion Essential ASP .NET MVC
+title: Context Menu with Spreadsheet widget | Syncfusion
 description: How to use the Spreadsheet Context Menu
 platform: ejMVC
 control: Spreadsheet
@@ -55,22 +55,22 @@ The following code example describes the above behavior.
 )
 {% endhighlight %}
 
-![](Context-Menu_images/context-menu_img1.png)
+![Context menu at cell](Context-Menu_images/context-menu_img1.png)
 
 Context menu at Cell 
 {:.caption}
 
-![](Context-Menu_images/context-menu_img2.png)
+![Context menu at column header](Context-Menu_images/context-menu_img2.png)
 
 Context menu at Column Header 
 {:.caption}
 
-![](Context-Menu_images/context-menu_img3.png)
+![Context menu at row header](Context-Menu_images/context-menu_img3.png)
 
 Context menu at Row Header 
 {:.caption}
 
-![](Context-Menu_images/context-menu_img4.png)
+![Context menu at pager](Context-Menu_images/context-menu_img4.png)
 
 Context menu at Pager 
 {:.caption}
