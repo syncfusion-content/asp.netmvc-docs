@@ -101,7 +101,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img1.png)
+![Deleting cell type in selected range](Data-Presentation_images/Data-Presentation_img1.png)
 
 ## Chart
 
@@ -192,7 +192,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img2.png)
+![Chart customization](Data-Presentation_images/Data-Presentation_img2.png)
 
 ## Conditional Formatting
 
@@ -263,7 +263,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img3.png)
+![Condition definition](Data-Presentation_images/Data-Presentation_img3.png)
 
 ### Clear Rules
 
@@ -327,7 +327,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img4.png)
+![Clear rules](Data-Presentation_images/Data-Presentation_img4.png)
 
 ## Filtering
 
@@ -405,7 +405,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img5.png)
+![Filtering](Data-Presentation_images/Data-Presentation_img5.png)
 
 ### Filter by Color
 
@@ -479,7 +479,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img6.png)
+![Clear Filter](Data-Presentation_images/Data-Presentation_img6.png)
 
 ## Picture
 
@@ -609,7 +609,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img7.png)
+![Creating Pivot table](Data-Presentation_images/Data-Presentation_img7.png)
 
 ## Sorting
 
@@ -685,7 +685,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img8.png)
+![Ascending/Descending sorting](Data-Presentation_images/Data-Presentation_img8.png)
 
 ### Sort by Color
 
@@ -778,4 +778,4 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Presentation_images/Data-Presentation_img9.png)
+![Table Customization](Data-Presentation_images/Data-Presentation_img9.png)
