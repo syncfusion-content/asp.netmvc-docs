@@ -1,5 +1,5 @@
 ---
-title: Data binding with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+title: Data binding with Spreadsheet widget | Syncfusion
 description: How to perform Data Binding and configure its properties like dataSource, query etc.
 platform: ejmvc
 control: Spreadsheet
@@ -52,7 +52,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code snippets.
-![](Data-Binding_images/Data-Binding_img1.png)
+![Local data binding](Data-Binding_images/Data-Binding_img1.png)
 
 ## Remote Data
 
@@ -72,7 +72,7 @@ To bind remote data to the Spreadsheet, you can assign a service data as an inst
 {% endhighlight %}
 
 The following output is displayed as a result of the above code snippets.
-![](Data-Binding_images/Data-Binding_img2.png)
+![Remote data binding](Data-Binding_images/Data-Binding_img2.png)
 
 ### Offline Mode
 
@@ -96,7 +96,7 @@ The following code illustrates Offline data binding for Spreadsheet,
 {% endhighlight %}
 
 The following output is displayed as a result of the above code snippets.
-![](Data-Binding_images/Data-Binding_img2.png)
+![Offline mode](Data-Binding_images/Data-Binding_img2.png)
 
 N> For further reference about `Offline` property in `DataManager` refer following [`link`](https://help.syncfusion.com/aspnetmvc/datamanager/data-binding#offline-mode "link")
 
@@ -174,7 +174,7 @@ An HTML Table element can also be used as the data source of Spreadsheet. To use
 {% endhighlight %}
 
 The following output is displayed as a result of the above code snippets.
-![](Data-Binding_images/Data-Binding_img3.png)
+![Html table data source](Data-Binding_images/Data-Binding_img3.png)
 
 ## Ways to bind data in Spreadsheet
 
@@ -419,7 +419,7 @@ You can specify particular row with `Index` property and its height with `Height
 {% endhighlight %}
 
 The following output is displayed as a result of the above code snippets.
-![](Data-Binding_images/Data-Binding_img4.png)
+![Cell Binding](Data-Binding_images/Data-Binding_img4.png)
 
 ### Range Binding
 
@@ -533,7 +533,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 The following output is displayed as a result of the above code snippets.
 
-![](Data-Binding_images/Data-Binding_img5.png)
+![Range binding](Data-Binding_images/Data-Binding_img5.png)
 
 ### Sheet Binding
 
@@ -622,5 +622,5 @@ The following code illustrates sheet binding in Spreadsheet
 {% endhighlight %}
 
 The following output is displayed as a result of the above code snippets. 
-![](Data-Binding_images/Data-Binding_img6.png)
+![Sheet Binding](Data-Binding_images/Data-Binding_img6.png)
 
