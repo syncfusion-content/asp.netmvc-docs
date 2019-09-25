@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data presentation with Spreadsheet widget for Syncfusion Essential ASP.NET MVC.
+title: Data presentation with Spreadsheet widget | Essential ASP.NET MVC.
 description: How to perform Spreadsheet Data presentation.
 platform: ejmvc
 control: Spreadsheet
