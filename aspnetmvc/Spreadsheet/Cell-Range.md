@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cell Range with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+title: Cell Range with Spreadsheet widget | Syncfusion
 description: How to use the Spreadsheet Cell Range
 platform: ejmvc
 control: Spreadsheet
