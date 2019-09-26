@@ -1,5 +1,5 @@
 ---
-title: Formatting in Spreadsheet widget | Essential ASP.NET MVC
+title: Formatting in ASP.NET MVC Spreadsheet widget | Syncfusion
 description: How to use different types of formatting in Spreadsheet and configure its properties.
 platform: ejmvc
 control: Spreadsheet
@@ -70,7 +70,7 @@ You can set number format for a cell by specifying `Format` property in cell dat
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formatting_images/Formatting_img1.png)
+![Cell Formatting using property ](Formatting_images/Formatting_img1.png)
 
 ### Method
 
@@ -101,7 +101,7 @@ You can set number format for a cell using [`format`](https://help.syncfusion.co
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formatting_images/Formatting_img2.png)
+![Number Formatting using method](Formatting_images/Formatting_img2.png)
 
 ### User Interface
 
@@ -110,7 +110,7 @@ You can set number format for a cell through number formatting options in ribbon
 ### Custom Number Format
 
 Spreadsheet supports many number format to display your data as currency, date, percentage and so on. If these pre-defined number formats do not meet your needs you can create and apply your own number formats using format cell dialog. The following screenshot illustrate this,
-![](Formatting_images/Formatting_img3.png)
+![Custom number formatting](Formatting_images/Formatting_img3.png)
 
 N> Spreadsheet supports basic number format customization and it doesn't have all functionality similar to excel   
 
@@ -165,7 +165,7 @@ You can apply text format for a cell by specifying `Style` property in cell data
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formatting_images/Formatting_img4.png)
+![Text formatting using property](Formatting_images/Formatting_img4.png)
 
 #### Method
 
@@ -196,7 +196,7 @@ You can apply text format for a cell or range of cells using [`format`](https://
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formatting_images/Formatting_img5.png)
+![Text formatting using method](Formatting_images/Formatting_img5.png)
 
 #### User Interface
 
@@ -240,7 +240,7 @@ You can wrap, text in a cell using [`wrapText`](https://help.syncfusion.com/api/
 {% endhighlight %}
 
 The following output is displayed as a result of the above code example.
-![](Formatting_images/Formatting_img6.png)
+![Wrapping and unwrapping text in cell](Formatting_images/Formatting_img6.png)
 
 #### User Interface
 
@@ -295,7 +295,7 @@ To highlight cell or range of cells from whole workbook you can apply background
 
 Cell styles is a collection of pre-defined styles with multiple formatting characteristics to apply several formats in one step. You can apply cell style for a cell using `Cell Styles` option in ribbon `HOME` tab. The following screenshot illustrate this,
 
-![](Formatting_images/Formatting_img7.png)
+![Styling cells](Formatting_images/Formatting_img7.png)
 
 ### Format painter
 

@@ -93,7 +93,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img1.png)
+![Removing a comment in spreadsheet](Cell-Ranges_images/Cell-Ranges_img1.png)
 
 ## Cell Navigation
 
@@ -304,7 +304,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img2.png)
+![Formatting invalid data](Cell-Ranges_images/Cell-Ranges_img2.png)
 
 ## Drag and Drop
 
@@ -362,7 +362,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img3.png)
+![Drag and drop in spreadsheet](Cell-Ranges_images/Cell-Ranges_img3.png)
 
 ## Auto Fill
 
@@ -503,7 +503,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img5.png)
+![Autofill](Cell-Ranges_images/Cell-Ranges_img5.png)
 
 ## Hyperlink
 
@@ -579,7 +579,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img6.png)
+![Removing hyperlink](Cell-Ranges_images/Cell-Ranges_img6.png)
 
 ## Merge Cell
 
@@ -669,7 +669,7 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img7.png)
+![Merging cells](Cell-Ranges_images/Cell-Ranges_img7.png)
 
 ### Unmerge Cells
 
@@ -728,4 +728,4 @@ namespace MVCSampleBrowser.Controllers
 {% endtabs %}
 
 The following output is displayed as a result of the above code example.
-![](Cell-Ranges_images/Cell-Ranges_img8.png)
+![Unmerging cells](Cell-Ranges_images/Cell-Ranges_img8.png)
