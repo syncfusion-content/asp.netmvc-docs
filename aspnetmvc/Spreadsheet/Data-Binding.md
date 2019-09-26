@@ -1,5 +1,5 @@
 ---
-title: Data binding with Spreadsheet widget | Essential ASP.NET MVC
+title: Data binding in Spreadsheet widget | Essential ASP.NET MVC
 description: How to perform Data Binding and configure its properties like dataSource, query etc.
 platform: ejmvc
 control: Spreadsheet
