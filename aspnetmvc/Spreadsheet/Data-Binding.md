@@ -1,5 +1,5 @@
 ---
-title: Data binding with Spreadsheet widget | Syncfusion
+title: Data binding in ASP.NET MVC Spreadsheet widget | Syncfusion
 description: How to perform Data Binding and configure its properties like dataSource, query etc.
 platform: ejmvc
 control: Spreadsheet

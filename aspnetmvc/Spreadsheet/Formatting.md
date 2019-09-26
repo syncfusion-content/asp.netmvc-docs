@@ -1,5 +1,5 @@
 ---
-title: Formatting with Spreadsheet widget | Syncfusion
+title: Formatting in ASP.NET MVC Spreadsheet widget | Syncfusion
 description: How to use different types of formatting in Spreadsheet and configure its properties.
 platform: ejmvc
 control: Spreadsheet

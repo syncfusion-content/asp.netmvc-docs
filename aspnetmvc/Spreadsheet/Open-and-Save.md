@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and Save with Spreadsheet widget | Syncfusion
+title: Open and Save in ASP.NET MVC Spreadsheet widget | Syncfusion
 description: How to perform Open and Save and configure its functionalities like server mapper, import URL etc.
 platform: ejmvc
 control: Spreadsheet
