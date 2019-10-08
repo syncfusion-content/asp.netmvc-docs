@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installation process for Syncfusion Essential Studio ASP.NET MVC products
+title: Installation process for Syncfusion ASP.NET MVC products
 description: Learn how to install the Syncfusion ASP.NET MVC component
 platform: ejmvc
 control: Installation and Deployment
