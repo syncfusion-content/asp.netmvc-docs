@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation process for Syncfusion ASP.NET MVC products
-description: Learn how to install the Syncfusion ASP.NET MVC component
+description: This section provides information regarding the Syncfusion ASP.NET MVC Online installer and steps for installing it
 platform: ejmvc
 control: Installation and Deployment
 documentation: ug
