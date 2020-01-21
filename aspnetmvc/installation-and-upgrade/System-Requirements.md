@@ -1,7 +1,7 @@
 ---
 layout: post
-title: System requirements to use Syncfusion Essential ASP.NET MVC components
-description: Learn what are the system requirements needed to use Syncfusion Essential ASP.NET MVC components
+title: System Requirements | ASP.NET MVC | Syncfusion
+description: this section provides the information about the system requirements for ASP.NET MVC platform with supported browsers
 platform: ejmvc
 control: System Requirement
 documentation: ug

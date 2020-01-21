@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrade from major version to service pack version| common | Syncfusion
-description: upgrade from major version to service pack version
+title: Major Version to Service Pack Version| ASP.NET MVC | Syncfusion
+description: this section provides the information about upgrading ASP.NET MVC from major version to service pack version
 platform: ejmvc
 control: Essential Studio
 documentation: ug

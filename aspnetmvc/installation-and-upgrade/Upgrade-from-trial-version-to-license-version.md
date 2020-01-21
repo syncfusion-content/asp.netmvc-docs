@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Install and Deployment process of Syncfusion ASP.NET MVC products
-description: Learn how to install and deploy the Syncfusion ASP.NET MVC component
+title: Trial Version to license Version| ASP.NET MVC | Syncfusion
+description: this section provides the information about upgrading ASP.NET MVC from trial version to license version
 platform: ejmvc
 control: Installation and Deployment
 documentation: ug
