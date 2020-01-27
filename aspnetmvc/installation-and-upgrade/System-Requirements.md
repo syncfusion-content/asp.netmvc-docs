@@ -1,7 +1,7 @@
 ---
 layout: post
-title: System requirements to use Syncfusion Essential ASP.NET MVC components
-description: Learn what are the system requirements needed to use Syncfusion Essential ASP.NET MVC components
+title: System Requirements | ASP.NET MVC | Syncfusion
+description: this section provides the information about the system requirements for ASP.NET MVC platform with supported browsers
 platform: ejmvc
 control: System Requirement
 documentation: ug
@@ -23,7 +23,7 @@ he following topic describes the system requirements for ASP.NET MVC platform.
 
 * Processor: x86 or x64
 * RAM : 512 MB (minimum), 1 GB (recommended)
-* Hard disk: up to 5 GB of available space may be required. However, 500 MB free space is required in boot drive even if you are installing the setup in other drive.
+* Hard disk: up to 5 GB of available space may be required. However, 500 MB free space is required in boot drive even if you are installing in other drive.
 
 ### Web browsers
 
