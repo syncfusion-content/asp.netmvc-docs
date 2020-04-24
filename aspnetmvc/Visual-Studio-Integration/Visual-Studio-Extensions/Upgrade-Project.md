@@ -7,7 +7,7 @@ control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Upgrade Project
+# ASP.NET MVC Upgrade Project
 
 Syncfusion Project Migration is a Visual Studio add-in that allows you to migrate the existing Syncfusion ASP.NET MVC Web Application from one Essential Studio version to another version.
 
@@ -44,3 +44,5 @@ Use the following steps to migrate your existing Syncfusion ASP.NET MVC Web Appl
      ![Syncfusion Essential JS 1 ASP.NET MVC Project Migration backup dialog](Migrate-Syncfusion-Project_images/ProjectMigration_img4.png)
       
 5. The Syncfusion reference assemblies, Scripts, CSS, and Web.Config entries are updated to the corresponding version in the project.
+
+6. If you installed the trial setup or NuGet packages from nuget.org you have to register the Syncfusion license key to your project since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
