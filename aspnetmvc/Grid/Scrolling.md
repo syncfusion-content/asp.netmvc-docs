@@ -1,12 +1,12 @@
 ---
 layout: post
 title: scrolling with Grid widget for Syncfusion Essential MVC
-description: How to enable scrolling and its functionalities
+description: This section explains about the scrolling and its functionalities like Frozen Rows and Columns, Touch Scroll, Virtual Scroll and the types of Virtual Scroll.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Scrolling
+# Enable Scrolling in Grid
 
 Scrolling can be enabled by setting the `AllowScrolling` as `true`. The height and width can be set to grid by using the properties  `Height` and `Width` property of the `ScrollSettings`. 
 
@@ -55,7 +55,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](Scrolling_images/Scrolling_img1.png)
+![Scrolling](Scrolling_images/Scrolling_img1.png)
 
 ## Set width and height in pixel 
 
@@ -102,7 +102,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img2.png)
+![In pixel](scrolling_images/scrolling_img2.png)
 
 ## Set width and height in percentage
 
@@ -149,7 +149,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img3.png)
+![In percentage](scrolling_images/scrolling_img3.png)
 
 ## Set width as auto
 
@@ -196,7 +196,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img4.png)
+![Auto Width](scrolling_images/scrolling_img4.png)
 
 ## Frozen columns
 
@@ -245,7 +245,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img5.png)
+![Frozen Columns](scrolling_images/scrolling_img5.png)
 
 
 ### Freeze particular columns:
@@ -294,7 +294,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img6.png)
+![Frozen Column](scrolling_images/scrolling_img6.png)
 
 
 ### Frozen columns alert messages:
@@ -358,7 +358,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img7.png)
+![Frozen Rows](scrolling_images/scrolling_img7.png)
 
 
 ## Touch scroll
@@ -417,7 +417,7 @@ We also have an enhanced virtual scrolling feature with an improvised virtual sc
 It supports two mode of virtualization. They are:
 
 1. Normal Mode
-2. Continuous Mode
+2. Infinite or Continuous Mode
 
 N> Enhanced Virtual Scrolling supports only normal mode
 N> The following features are not supported by virtual scrolling 
@@ -473,7 +473,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img8.png)
+![Normal Mode](scrolling_images/scrolling_img8.png)
 
 #### Enhanced virtual scrolling:
 
@@ -520,11 +520,11 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](scrolling_images/scrolling_img10.png)
+![Virtual Scroll](scrolling_images/scrolling_img10.png)
 
-### Continuous mode:
+### Infinite or Continuous mode:
 
-In continuous mode, the data is loaded in grid when the scrollbar reaches the end.  You can enable the continuous mode by setting the `VirtualScrollMode`  property as `Continuous`.
+In Infinite or Continuous mode, the data is loaded in grid when the scrollbar reaches the end.  You can enable the continuous mode by setting the `VirtualScrollMode`  property as `Continuous`.
 
 The following code example describes the previous behavior.
 
@@ -567,4 +567,4 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
- ![](scrolling_images/scrolling_img9.png)
+ ![Infinite Mode](scrolling_images/scrolling_img9.png)
