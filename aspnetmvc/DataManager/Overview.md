@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview | DataManager  | ASP.NET MVC | Syncfusion
-description: overview 
+title: Overview | DataManager | ASP.NET MVC | Syncfusion
+description: You can learn here about the overview of Syncfusion ASP.NET MVC DataManager control and more details.
 platform: ejmvc
 control: DataManager
 documentation: ug
 ---
 
-# DataManager
+# ASP.NET MVC DataManager Overview
 
 DataManager helps in managing relational data in the ASP.NET MVC. Its rich features make querying data sources easier. The ODataClient supports OData queries that are enabled in the Web API & WCF data services.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Segment Settings | DigitalGauge | ASP.NET MVC | Syncfusion
-description: segment settings
+description: You can learn here about Segment Settings support in Syncfusion ASP.NET MVC DigitalGauge control and more details.
 platform: ejmvc
 control: DigitalGauge
 documentation: ug
 ---
 
-# Segment Settings
+# Segment Settings in ASP.NET MVC DigitalGauge
 
 ## Appearance
 
@@ -46,7 +46,7 @@ ss.Opacity(0.1)
 
 Execute the above code examples to render the **DigitalGauge** as follows.
 
-![](Segment-Settings_images/Segment-Settings_img1.png)
+![Appearance using DigitalGauge in ASP.NET MVC](Segment-Settings_images/Segment-Settings_img1.png)
 
 Digital Gauge control with segment settings
 {:.caption}
@@ -87,7 +87,7 @@ ss.Length(3)
 Execute the above code examples to render the **DigitalGauge** as follows.
 
 
-![](Segment-Settings_images/Segment-Settings_img2.png)
+![Dimension Modification using DigitalGauge in ASP.NET MVC](Segment-Settings_images/Segment-Settings_img2.png)
 
 Digital Gauge control with segment dimension
 {:.caption}
