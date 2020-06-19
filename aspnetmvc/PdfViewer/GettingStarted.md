@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting Started | PDF viewer | ASP .NET MVC | Syncfusion
-description: getting started
+description: You can learn here about getting started with Syncfusion ASP.NET MVC PdfViewer control and more details.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
 
 
-# Getting Started
+# Getting Started with ASP.NET MVC PDF Viewer
 
 This section explains how to add and use a PDF viewer control in your web application with ASP.NET MVC.
 

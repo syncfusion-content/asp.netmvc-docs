@@ -1,12 +1,12 @@
 ---
 title: Formatting in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: How to use different types of formatting in Spreadsheet and configure its properties.
+description: You can learn here about Formatting support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: UG
 ---
 
-# Formatting
+# Formatting with ASP.NET MVC Spreadsheet
 
 Spreadsheet supports many formatting options to make your data easier to view and understand. Use `AllowCellFormatting` property to enable / disable formatting option in Spreadsheet. The different types of formatting supported in Spreadsheet are,
     

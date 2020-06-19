@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BulletGraph | BulletGraph  | ASP.NET MVC | Syncfusion
-description: BulletGraph
+title: Overview | BulletGraph  | ASP.NET MVC | Syncfusion
+description: You can learn here about the overview of Syncfusion ASP.NET MVC BulletGraph control and more details.
 platform: ejmvc
 control: BulletGraph	
 documentation: ug
 ---
 
-# BulletGraph
+# Overview with ASP.NET MVC BulletGraph
 
 BulletGraphs are easy to interpret and also it conveys much more information to the user by visualizing the data in a small amount of space. It is generally used to compare a primary measure to one or more other measures in the context of qualitative ranges of performance. Occasionally, the BulletGraphs are also used to compare the same measure across multiple categories.
 

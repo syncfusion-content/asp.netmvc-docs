@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Cell Range in ASP.NET MVC Spreadsheet widget | Syncfusion 
-description: How to use the Spreadsheet Cell Range
+description: You can learn here about Cell Range support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 --- 
 
-# Cell Range
+# Cell Range with ASP.NET MVC Spreadsheet
 
 A Cell Range is a collection of cells in a sheet. It represents single cell or selection of cells. When cells have been selected, they are surrounded by border. 
 

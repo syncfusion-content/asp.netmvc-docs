@@ -1,37 +1,37 @@
 ---
 layout: post
-title: DigitalGauge | DigitalGauge | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview | DigitalGauge | ASP.NET MVC | Syncfusion
+description: You can learn here about the overview of Syncfusion ASP.NET MVC DigitalGauge control and more details.
 platform: ejmvc
 control: DigitalGauge
 documentation: ug
 ---
 
-# DigitalGauge
+# Overview with ASP.NET MVC DigitalGauge
 
 Digital Gauge for Essential Studio encompasses the visualization of the segmented display of both the 7-segment numeric values and the 14-segment alphanumeric characters. It can display the following five kinds of character types:
 
 * Seven Segment
 
-![](/aspnetmvc/DigitalGauge/Overview_images/Overview_img2.png)
+![Seven Segment display using DigitalGauge in ASP.NET MVC](/aspnetmvc/DigitalGauge/Overview_images/Overview_img2.png)
 
 * Fourteen Segment
 
-![](/aspnetmvc/DigitalGauge/Overview_images/Overview_img3.png)
+![Fourteen Segment display using DigitalGauge in ASP.NET MVC](/aspnetmvc/DigitalGauge/Overview_images/Overview_img3.png)
 
 * Sixteen Segment
 
-![](/aspnetmvc/DigitalGauge/Overview_images/Overview_img4.png)
+![Sixteen Segment display using DigitalGauge in ASP.NET MVC](/aspnetmvc/DigitalGauge/Overview_images/Overview_img4.png)
 
 * EightCrossEightDotMatrix
 
-![](/aspnetmvc/DigitalGauge/Overview_images/Overview_img5.png)
+![EightCrossEightDotMatrix display using DigitalGauge in ASP.NET MVC](/aspnetmvc/DigitalGauge/Overview_images/Overview_img5.png)
 
 * EightCrossEightSquareMatrix
 
-![](/aspnetmvc/DigitalGauge/Overview_images/Overview_img6.png)
+![EightCrossEightSquareMatrix display using DigitalGauge in ASP.NET MVC](/aspnetmvc/DigitalGauge/Overview_images/Overview_img6.png)
 
-![](Overview_images/Overview_img1.png)
+![Visual representation of DigitalGuage in ASP.NET MVC](Overview_images/Overview_img1.png)
 
 Digital Gauge
 {:.caption}

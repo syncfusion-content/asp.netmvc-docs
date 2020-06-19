@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Context Menu in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: How to use the Spreadsheet Context Menu
+description: You can learn here about Context Menu support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejMVC
 control: Spreadsheet
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu with ASP.NET MVC Spreadsheet
 
 Context Menu is used to improve user interaction with Spreadsheet using popup menu. This will open when right clicking on Cell/Column Header/Row Header/Pager in Spreadsheet. You can use `EnableContextMenu` property to enable/disable context menu. 
 
