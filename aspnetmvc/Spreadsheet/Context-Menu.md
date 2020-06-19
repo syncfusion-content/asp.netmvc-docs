@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Context Menu with ASP.NET MVC Spreadsheet
+# Context Menu in ASP.NET MVC Spreadsheet
 
 Context Menu is used to improve user interaction with Spreadsheet using popup menu. This will open when right clicking on Cell/Column Header/Row Header/Pager in Spreadsheet. You can use `EnableContextMenu` property to enable/disable context menu. 
 

@@ -7,7 +7,7 @@ control: DigitalGauge
 documentation: ug
 ---
 
-# Character Settings with ASP.NET MVC DigitalGauge
+# Character Settings in ASP.NET MVC DigitalGauge
 
 ## Appearance
 

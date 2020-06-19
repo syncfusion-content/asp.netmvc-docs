@@ -7,7 +7,7 @@ control: DigitalGauge
 documentation: ug
 ---
 
-# Overview with ASP.NET MVC DigitalGauge
+# ASP.NET MVC DigitalGauge Overview
 
 Digital Gauge for Essential Studio encompasses the visualization of the segmented display of both the 7-segment numeric values and the 14-segment alphanumeric characters. It can display the following five kinds of character types:
 

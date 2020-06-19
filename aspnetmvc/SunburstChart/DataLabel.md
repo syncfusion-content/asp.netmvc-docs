@@ -7,7 +7,7 @@ control: SunburstChart
 documentation: ug
 ---
 
-# Data Labels with ASP.NET MVC SunburstChart
+# Data Label in ASP.NET MVC SunburstChart
 
 Sunburst data labels are used to display the data related to the segment. It helps to provide the information about the data points to the users.
 You can enable or disable the data labels by setting the visible property of the **DataLabelSettings** to true as shown in the below code

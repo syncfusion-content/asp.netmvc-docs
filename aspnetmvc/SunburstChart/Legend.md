@@ -7,7 +7,7 @@ control: SunburstChart
 documentation: ug
 ---
 
-## Legend with ASP.NET MVC SunburstChart
+## Legend in ASP.NET MVC SunburstChart
 The legend is used to represent the first level of items in the Sunburst Chart.The **Legend** can be initialized using the below code snippet
 
 {% highlight js %}

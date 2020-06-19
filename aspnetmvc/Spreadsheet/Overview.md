@@ -6,7 +6,7 @@ control: Spreadsheet
 documentation: ug
 keywords: 
 ---
-# Overview with ASP.NET MVC Spreadsheet
+# ASP.NET MVC Spreadsheet Overview 
 
 The Spreadsheet control is a Microsoft Excel-like Spreadsheet component for web. It provides editing experience that is very similar to that of excel and it is able to import and export Excel workbook files. The Spreadsheet control includes all the important features of Microsoft Excel like editing, sorting, filtering, formulas, data validation, formatting, table, charts, import and export.
 

@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 --- 
 
-# Undo and Redo with ASP.NET MVC Spreadsheet
+# Undo and Redo in ASP.NET MVC Spreadsheet
 
 Spreadsheet provides the support to perform undo and redo operations. You can set `AllowUndoRedo` property as `true` to enable undo redo feature. You can also use `UndoredoStep` property to limit the undo redo action.
 

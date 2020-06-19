@@ -5,7 +5,7 @@ platform: ejmvc
 control: Spreadsheet
 documentation: ug
 ---
-# Data Binding with ASP.NET MVC Spreadsheet
+# Data Binding in ASP.NET MVC Spreadsheet
 
 Spreadsheet can be populated with external datasource using `DataSource` property. The `DataSource` property can be assigned either with the instance of `DataManager` or JSON data array collection. Spreadsheet supports three different kinds of Data binding.
 

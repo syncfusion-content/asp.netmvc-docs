@@ -7,7 +7,7 @@ control: PivotTreeMap
 documentation: ug
 ---
 
-# Overview with ASP.NET MVC PivotTreeMap
+# ASP.NET MVC PivotTreeMap Overview
 
 The PivotTreeMap control lets the user to visualize OLAP data in the form of nested nodes in hierarchical order with the ability to drill up and down.
 

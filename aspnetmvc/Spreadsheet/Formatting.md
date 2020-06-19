@@ -6,7 +6,7 @@ control: Spreadsheet
 documentation: UG
 ---
 
-# Formatting with ASP.NET MVC Spreadsheet
+# Formatting in ASP.NET MVC Spreadsheet
 
 Spreadsheet supports many formatting options to make your data easier to view and understand. Use `AllowCellFormatting` property to enable / disable formatting option in Spreadsheet. The different types of formatting supported in Spreadsheet are,
     

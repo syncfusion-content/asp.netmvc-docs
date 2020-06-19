@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Clipboard with ASP.NET MVC Spreadsheet
+# Clipboard in ASP.NET MVC Spreadsheet
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting `AllowClipboard` property in Spreadsheet.
 By default `AllowClipboard` property is `true`.
