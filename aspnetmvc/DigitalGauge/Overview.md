@@ -13,23 +13,23 @@ Digital Gauge for Essential Studio encompasses the visualization of the segmente
 
 * Seven Segment
 
-![Seven Segment display using DigitalGauge in ASP.NET MVC](/Overview_images/Overview_img2.png)
+![Seven Segment display using DigitalGauge in ASP.NET MVC](Overview_images/Overview_img2.png)
 
 * Fourteen Segment
 
-![Fourteen Segment display using DigitalGauge in ASP.NET MVC](/Overview_images/Overview_img3.png)
+![Fourteen Segment display using DigitalGauge in ASP.NET MVC](Overview_images/Overview_img3.png)
 
 * Sixteen Segment
 
-![Sixteen Segment display using DigitalGauge in ASP.NET MVC](/Overview_images/Overview_img4.png)
+![Sixteen Segment display using DigitalGauge in ASP.NET MVC](Overview_images/Overview_img4.png)
 
 * EightCrossEightDotMatrix
 
-![EightCrossEightDotMatrix display using DigitalGauge in ASP.NET MVC](/Overview_images/Overview_img5.png)
+![EightCrossEightDotMatrix display using DigitalGauge in ASP.NET MVC](Overview_images/Overview_img5.png)
 
 * EightCrossEightSquareMatrix
 
-![EightCrossEightSquareMatrix display using DigitalGauge in ASP.NET MVC](/Overview_images/Overview_img6.png)
+![EightCrossEightSquareMatrix display using DigitalGauge in ASP.NET MVC](Overview_images/Overview_img6.png)
 
 ![Visual representation of DigitalGuage in ASP.NET MVC](Overview_images/Overview_img1.png)
 
