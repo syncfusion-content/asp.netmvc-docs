@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Getting Started in ASP.NET MVC PDF Viewer
+# Getting Started with ASP.NET MVC PDF Viewer
 
 This section explains how to add and use a PDF viewer control in your web application with ASP.NET MVC.
 
