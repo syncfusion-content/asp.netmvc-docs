@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Character Settings | DigitalGauge | ASP.NET MVC | Syncfusion
-description: character settings
+description: You can learn here about Character Settings support in Syncfusion ASP.NET MVC DigitalGauge control and more details.
 platform: ejmvc
 control: DigitalGauge
 documentation: ug
 ---
 
-# Character Settings
+# Character Settings in ASP.NET MVC DigitalGauge
 
 ## Appearance
 
@@ -45,7 +45,7 @@ The opacity of the character is adjustable with the help of `opacity` property. 
 Execute the above code examples to render the **DigitalGauge** as follows.
 
 
-![](Character-Settings_images/Character-Settings_img1.png)
+![Appearance using DigitalGauge in ASP.NET MVC](Character-Settings_images/Character-Settings_img1.png)
 
 Digital Gauge control with character setting
 {:.caption}
@@ -105,7 +105,7 @@ Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img2.png)
+![Count and Type using DigitalGauge in ASP.NET MVC](Character-Settings_images/Character-Settings_img2.png)
 
 Digital Gauge control with character type as seven segment
 {:.caption}
@@ -154,7 +154,7 @@ Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img3.png)
+![Text Positioning using DigitalGauge in ASP.NET MVC](Character-Settings_images/Character-Settings_img3.png)
 
 Digital Gauge control with position text based on the background image
 {:.caption}
@@ -214,7 +214,7 @@ Execute the above code examples to render the **DigitalGauge** as follows.
 
 
 
-![](Character-Settings_images/Character-Settings_img4.png)
+![Shadow Effects using DigitalGauge in ASP.NET MVC](Character-Settings_images/Character-Settings_img4.png)
 
 Digital Gauge control with shadow option
 {:.caption}

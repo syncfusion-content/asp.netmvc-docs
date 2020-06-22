@@ -1,11 +1,11 @@
 ---
 title: Data binding in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: How to perform Data Binding and configure its properties like dataSource, query etc.
+description: You can learn here about Data Binding support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 ---
-# Data Binding
+# Data Binding in ASP.NET MVC Spreadsheet
 
 Spreadsheet can be populated with external datasource using `DataSource` property. The `DataSource` property can be assigned either with the instance of `DataManager` or JSON data array collection. Spreadsheet supports three different kinds of Data binding.
 

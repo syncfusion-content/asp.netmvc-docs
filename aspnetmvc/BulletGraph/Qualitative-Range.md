@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Qualitative Range | BulletGraph	 | ASP.NET MVC | Syncfusion
-description: qualitative range
+description: You can learn here about Qualitative Range support in Syncfusion ASP.NET MVC Bullet Graph control and more details.
 platform: ejmvc
 control: BulletGraph	
 documentation: ug
 ---
 
-# Qualitative Range
+# Qualitative Range in ASP.NET MVC BulletGraph
 
 `Qualitative Range` represents the quality of a specific range in quantitative scale like good, bad and satisfactory. Color for each qualitative range is customized using `RangeStroke` property. The `RangeEnd` property specifies the ending point of the qualitative range. Minimum value of quantitative scale is considered as the starting point of first qualitative range and previous end points are considered as starting point for other qualitative ranges. 
 
@@ -62,7 +62,7 @@ documentation: ug
 
 The following screenshot displays **Bullet Graph** with different qualitative ranges in different colors. In this image, range 0 to 35 represents bad performance, 35 to 50 represents average performance, 50 to 75 represents that the performance is above average, 75 to 90 represents good performance and above 90 represents excellent performance.
 
-![](Qualitative-Range_images/Qualitative-Range_img1.png)
+![Visual representation of BulletGaph in ASP.NET MVC](Qualitative-Range_images/Qualitative-Range_img1.png)
 
 Bullet Graph with customized qualitative ranges
 {:.caption}
