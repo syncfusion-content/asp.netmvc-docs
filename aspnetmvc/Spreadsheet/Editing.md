@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn  here about editing support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about editing support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
