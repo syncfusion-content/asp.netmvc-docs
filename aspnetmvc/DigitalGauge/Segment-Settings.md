@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segment Settings | DigitalGauge | ASP.NET MVC | Syncfusion
-description: You can learn here about Segment Settings support in Syncfusion ASP.NET MVC DigitalGauge control and more details.
+description: You can learn here about segment settings support in Syncfusion ASP.NET MVC DigitalGauge control and more details.
 platform: ejmvc
 control: DigitalGauge
 documentation: ug

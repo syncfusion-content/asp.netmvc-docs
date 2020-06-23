@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization | PDF viewer | ASP .NET MVC | Syncfusion
-description: You can learn here about Localization support in Syncfusion ASP.NET MVC PDF Viewer control and more details.
+description: You can learn here about localization support in Syncfusion ASP.NET MVC PDF Viewer control and more details.
 platform: ejmvc
 control: PDF viewer
 documentation: ug

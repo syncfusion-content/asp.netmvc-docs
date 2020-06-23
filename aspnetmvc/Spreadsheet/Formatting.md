@@ -1,6 +1,6 @@
 ---
 title: Formatting in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn here about Formatting support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about formatting support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: UG

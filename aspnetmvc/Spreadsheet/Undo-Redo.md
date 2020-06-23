@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn here about Undo Redo support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about undo redo support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug

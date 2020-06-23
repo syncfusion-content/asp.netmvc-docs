@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn here about Context Menu support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about context menu support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejMVC
 control: Spreadsheet
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in ASP.NET MVC SunburstChart widget | Syncfusion
-description: You can learn here about Legend support in Syncfusion ASP.NET MVC SunburstChart control and more details.
+description: You can learn here about legend support in Syncfusion ASP.NET MVC SunburstChart control and more details.
 platform: ejmvc
 control: SunburstChart
 documentation: ug
