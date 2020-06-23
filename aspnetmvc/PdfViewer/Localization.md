@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization | PDF viewer | ASP .NET MVC | Syncfusion
-description: Localization
+description: You can learn here about localization support in Syncfusion ASP.NET MVC PDF Viewer control and more details.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
 
-## Localization
+## Localization in ASP.NET MVC PDF Viewer
 
 The text labels provided in the PDF viewer control can be localized using the collection of localized strings using ej.PdfViewer.Locale for different cultures. By default, the PDF viewer control is localized in “**en-US**” culture.
 

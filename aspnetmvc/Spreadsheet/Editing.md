@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
-description: How to Edit the Spreadsheet 
+title: Editing in ASP.NET MVC Spreadsheet widget | Syncfusion
+description: You can learn here about editing support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 ---
 
-# Editing 
+# Editing in ASP.NET MVC Spreadsheet 
 
 You can edit the contents of a cell directly in the cell. You can also do this by typing in the formula bar. When you edit the cell, Spreadsheet is operating in edit mode. In this mode some of the options are unavailable. You can use `AllowEditing` property to enable/disable editing feature.
 
@@ -82,7 +82,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img1.png)
+![Save cell content using Spreadsheet in ASP.NET MVC](Editing_images/Editing_img1.png)
 
 ## Read-Only Cells
 
@@ -141,7 +141,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img2.png)
+![Read-Only Cells using Spreadsheet in ASP.NET MVC](Editing_images/Editing_img2.png)
 
 ## Events
 
