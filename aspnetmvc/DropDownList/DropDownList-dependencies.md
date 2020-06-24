@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Dependencies of the DropDownList control for Syncfusion ASP.NET MVC
-description: Dependencies of the DropDownList control for Syncfusion ASP.NET MVC 
+description: Learn here about dependencies of Syncfusion jQuery based ASP.NET MVC DropDownList control and more details.
 platform: ejmvc
 control: DropDownList
 documentation: ug
 ---
 
-##DropDownList Dependencies
+# DropDownList Dependencies
 
 The external script dependencies of the DropDownList control are,
 
