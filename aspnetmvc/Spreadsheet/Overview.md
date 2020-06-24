@@ -1,12 +1,12 @@
 ---
-title: Overview
-description: overview
+title: Overview | Spreadsheet | ASP.NET MVC | Syncfusion
+description: You can learn here about the overview of Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 keywords: 
 ---
-# Overview
+# ASP.NET MVC Spreadsheet Overview 
 
 The Spreadsheet control is a Microsoft Excel-like Spreadsheet component for web. It provides editing experience that is very similar to that of excel and it is able to import and export Excel workbook files. The Spreadsheet control includes all the important features of Microsoft Excel like editing, sorting, filtering, formulas, data validation, formatting, table, charts, import and export.
 

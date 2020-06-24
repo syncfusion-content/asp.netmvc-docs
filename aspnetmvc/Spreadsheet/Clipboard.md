@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
-description: How to use the Spreadsheet Clipboard
+title: Clipboard in ASP.NET MVC Spreadsheet widget | Syncfusion
+description: You can learn here about clipboard support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 ---
 
-# Clipboard
+# Clipboard in ASP.NET MVC Spreadsheet
 
 The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting `AllowClipboard` property in Spreadsheet.
 By default `AllowClipboard` property is `true`.
@@ -106,6 +106,6 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the above code example.
 
-![](Clipboard_images/Clipboard_img1.png)
+![clipboard operations using Spreadsheet in ASP.NET MVC](Clipboard_images/Clipboard_img1.png)
 
 N> Similarly you can perform clipboard operations for shapes (Chart and Image).
