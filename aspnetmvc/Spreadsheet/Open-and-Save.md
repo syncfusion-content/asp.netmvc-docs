@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open and Save in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn here about Open and Save support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about open and save support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug

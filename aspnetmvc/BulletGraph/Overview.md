@@ -3,7 +3,7 @@ layout: post
 title: Overview | BulletGraph | ASP.NET MVC | Syncfusion
 description: You can learn here about the overview of Syncfusion ASP.NET MVC BulletGraph control and more details.
 platform: ejmvc
-control: BulletGraph	
+control: BulletGraph
 documentation: ug
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Data binding in ASP.NET MVC Spreadsheet widget | Syncfusion
-description: You can learn here about Data Binding support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about data binding support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug

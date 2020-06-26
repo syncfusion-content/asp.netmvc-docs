@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Range in ASP.NET MVC Spreadsheet widget | Syncfusion 
-description: You can learn here about Cell Range support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+description: You can learn here about cell range support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
