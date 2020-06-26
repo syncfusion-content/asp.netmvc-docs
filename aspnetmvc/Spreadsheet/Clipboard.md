@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Clipboard in ASP.NET MVC Spreadsheet widget | Syncfusion 
-description: You can learn here about Clipboard support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
+title: Clipboard in ASP.NET MVC Spreadsheet widget | Syncfusion
+description: You can learn here about clipboard support in Syncfusion ASP.NET MVC Spreadsheet control and more details.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | DataManager | ASP.NET MVC | Syncfusion
-description: You can learn here about the overview of Syncfusion ASP.NET MVC DataManager control and more details.
+description: You can learn here about the overview of Syncfusion ASP.NET MVC DataManager control and more details. 
 platform: ejmvc
 control: DataManager
 documentation: ug

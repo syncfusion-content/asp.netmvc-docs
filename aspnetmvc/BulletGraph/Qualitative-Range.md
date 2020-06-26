@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Qualitative Range | BulletGraph | ASP.NET MVC | Syncfusion
-description: You can learn here about Qualitative Range support in Syncfusion ASP.NET MVC Bullet Graph control and more details.
+description: You can learn here about qualitative range support in Syncfusion ASP.NET MVC Bullet Graph control and more details.
 platform: ejmvc
-control: BulletGraph	
+control: BulletGraph
 documentation: ug
 ---
 
