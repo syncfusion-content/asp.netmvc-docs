@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DataLabel in ASP.NET MVC SunburstChart widget | Syncfusion
-description: You can learn here about data Label support in Syncfusion ASP.NET MVC SunburstChart control and more details.
+description: You can learn here about data label support in Syncfusion ASP.NET MVC SunburstChart control and more details.
 platform: ejmvc
 control: SunburstChart
 documentation: ug
