@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting started with Syncfusion Essential HeatMap for ASP.NET MVC
-description: Getting started walk through to create your first HeatMap.
+description: Getting started walk through to create your first HeatMap and explains briefly about how to create a HeatMap in your application with ASP.NET MVC.
 platform: ejmvc
 control: HeatMap
 documentation: ug
 ---
 
-# Getting Started
+# Getting started with Essential HeatMap for ASP.NET MVC
 
 This section explains briefly about how to create a HeatMap in your application with ASP.NET MVC.
 
@@ -116,7 +116,7 @@ public Collection GetCellSource()
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Map data into HeatMap image](Getting-Started_images/Getting-Started_img1.png)
  
 ## Color Mapping
   
@@ -141,7 +141,7 @@ public ActionResult Default()
  
 * This will show the grid data with color based on the range given.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Color Mapping Image](Getting-Started_images/Getting-Started_img2.png)
  
 ## Legend
 
@@ -232,4 +232,4 @@ public Collection GetCellSource()
 {% endhighlight %}
 {% endtabs %}
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Legend Image](Getting-Started_images/Getting-Started_img3.png)
