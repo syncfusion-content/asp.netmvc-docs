@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Context Menu | TreeGrid | ASP.NET MVC | Syncfusion
-description: context menu
+description: Context menu in TreeGrid control is used to manipulate (add, edit and delete) the TreeGrid rows. It can be customized by adding a new custom menu item to it.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in ASP.NET MVC TreeGrid
 
 The **Context menu** in TreeGrid control is used to manipulate (add, edit and delete) the TreeGrid rows. In TreeGrid, context menu can be enabled with `ContextMenuSettings` property. The `ContextMenuSettings` property contains two inner properties `ShowContextMenu` and `ContextMenuItems`.
 
@@ -37,7 +37,7 @@ The `ContextMenuItems` property is used to add the menu items to context menu, t
 
 The following screenshot displays the Context menu in TreeGrid control.
 
-![](Context-Menu_images/Context-Menu_img1.png)
+![Context Menu Image](Context-Menu_images/Context-Menu_img1.png)
 
 
 ## ContextMenu Customization
@@ -78,9 +78,9 @@ function customMenuClick(args) {
 
 The following screenshot displays the customization of Context menu in TreeGrid control.
 
-![](Context-Menu_images/Context-Menu_img2.png)
+![ContextMenu Customization Image](Context-Menu_images/Context-Menu_img2.png)
 
-# Header Context Menu
+## Header Context Menu
 Header context menu can be enabled by setting `ShowContextMenu` as `true`. The default value of the `ShowContextMenu` property is `false`.
 
 Following options are shown in header context menu. 
@@ -110,5 +110,5 @@ The below code snippet explains how to enable header context menu in TreeGrid
 
 The following screenshot displays the Header context menu in TreeGrid control.
 
-![](Context-Menu_images/Context-Menu_img3.png)
+![Header Context Menu Image](Context-Menu_images/Context-Menu_img3.png)
 

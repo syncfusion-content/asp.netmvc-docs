@@ -143,7 +143,7 @@ public ActionResult Default()
 
 ![](Getting-Started_images/Getting-Started_img2.png)
  
-# Legend
+## Legend
 
 A legend control is used to represent range value in a gradient, create a legend with the same color mapping as shown below.
   
