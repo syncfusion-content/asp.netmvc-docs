@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-## Localization in ASP.NET MVC PDF Viewer
+# Localization in ASP.NET MVC PDF Viewer
 
 The text labels provided in the PDF viewer control can be localized using the collection of localized strings using ej.PdfViewer.Locale for different cultures. By default, the PDF viewer control is localized in “**en-US**” culture.
 
