@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Altering appearance of Syncfusion Essential ASP.NET MVC PDF viewer.
-description: Altering appearance of Syncfusion Essential ASP.NET MVC PDF viewer.
+description: Learn how to apply themes to the Syncfusion Essential ASP.NET MVC (jquery) PDF viewer to match the theme of your application.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
 
-# Appearance
+# Appearance in PDF Viewer
 
 You can apply themes to the PDF viewer to match the themes of your application.
 
