@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu | TreeGrid | ASP.NET MVC | Syncfusion
-description: Context menu control is used to manipulate (add, edit and delete) the TreeGrid rows.It has various set of default and custom context menu items can be added.
+description: Context menu control is used to manipulate (add, edit and delete) the TreeGrid rows. It has various set of default and custom context menu items can be added.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
