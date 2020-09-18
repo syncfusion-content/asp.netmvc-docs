@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting started with Syncfusion Essential HeatMap for ASP.NET MVC
-description: Getting started walk through to create your first HeatMap and explains briefly about how to create a HeatMap in your application with ASP.NET MVC.
+description: Getting started walk through to create your first Syncfusion HeatMap in your ASP.NET MVC application.
 platform: ejmvc
 control: HeatMap
 documentation: ug
 ---
 
-# Getting started with Essential HeatMap for ASP.NET MVC
+# Getting Started with HeatMap for ASP.NET MVC
 
 This section explains briefly about how to create a HeatMap in your application with ASP.NET MVC.
 
