@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sparkline with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
+title: Sparkline | Essential ASP.NET MVC Spreadsheet | Syncfusion
 description: How to perform the sparkline chart customization in Syncfusion Essential ASP.NET MVC Spreadsheet widget.
 platform: ejmvc
 control: Spreadsheet
