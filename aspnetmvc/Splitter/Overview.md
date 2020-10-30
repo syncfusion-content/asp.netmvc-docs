@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Splitter | Splitter | ASP.NET MVC | Syncfusion
-description: overview
+description: This documentation section provides an overview and explains key features of the Splitter control for ASP.NET MVC platform.
 platform: ejmvc
 control: Splitter
 documentation: ug
 ---
 
-# Splitter
+# Overview of ASP.NET MVC Splitter Control
 
 The Essential ASP.NET MVC Splitter is a layout control that enables you to divide a Web page into distinct areas by inserting resizable panes. You can create any number of Splitter panes and place them inside the Splitter control; the split bars are inserted automatically in between the adjacent panes. 
 
