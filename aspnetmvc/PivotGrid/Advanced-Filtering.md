@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Filtering | Sorting | ASP.NET MVC | PivotGrid | Syncfusion
+title: Advanced Filtering | Sorting | ASP.NET MVC PivotGrid | Syncfusion
 description: This document illustrates that how to define advance filtering and sorting with respective to the modes in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
