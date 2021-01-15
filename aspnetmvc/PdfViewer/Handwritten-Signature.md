@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hand written signature| PDF viewer | ASP .NET MVC | Syncfusion
-description: Hand written signature
+title: Hand written signature in PDF viewer | ASP .NET MVC | Syncfusion
+description: Learn about Hand written signature in Syncfusion PDF viewer control and more details. The handwritten signature reduces the paper work of reviewing the content.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
 
-## Handwritten Signature
+# Handwritten Signature in PDF viewer
 
 The PDF viewer supports adding handwritten signatures into the PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
 
