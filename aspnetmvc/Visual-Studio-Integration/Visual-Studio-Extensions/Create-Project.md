@@ -7,11 +7,13 @@ control: Syncfusion Extensions
 documentation: ug
 ---
 
-# Create Project
+# Create ASP.NET MVC application
 
 Syncfusion provides the **Visual Studio Project Templates** for the Syncfusion ASP.NET MVC platform to create the Syncfusion ASP.NET MVC Web Application with the Essential JS 1 components.
 
 Use the following steps to create the **Syncfusion ASP.NET MVC (Essential JS 1) Web Application** through the Visual Studio Project Template:
+
+> Before use the Syncfusion ASP.NET MVC (Essential JS 1) Project Template, check whether the **Syncfusion Essential JS1 AspNet MVC VSExtensions** installed or not in Visual Studio Extension Manager by clicking on the Tools -> Extensions and Updates -> Installed for Visual Studio 2017 or lower and for Visual Studio 2019 by clicking on the Extensions -> Manage Extensions -> Installed.
 
 1. To create the Syncfusion ASP.NET MVC (Essential JS 1) project, follow either one of the options below:
 
