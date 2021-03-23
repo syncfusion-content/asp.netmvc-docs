@@ -1,6 +1,6 @@
 ---
 layout: post
-title: InteractionMode | PDF viewer | ASP .NET MVC | Syncfusion
+title: Interaction Mode in EJ 1 ASP.NET MVC PdfViewer | Syncfusion
 description: InteractionMode
 platform: ejmvc
 control: PDF viewer

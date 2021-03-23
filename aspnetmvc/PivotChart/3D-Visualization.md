@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3D-Visualization | PivotChart | ASP.NET MVC | Syncfusion
+title: 3D Visualization in ASP.NET MVC PivotChart | Syncfusion
 description: This document illustrates that how to define 3d visualization and its types in ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart

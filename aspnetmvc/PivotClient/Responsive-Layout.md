@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Responsive Layout | PivotClient | ASP.NET MVC | Syncfusion
+title: Responsive Layout in ASP.NET MVC PivotClient | Syncfusion
 description: This document illustrates that how to enable responsive layout rendering in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
