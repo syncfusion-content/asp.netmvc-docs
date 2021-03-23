@@ -7,7 +7,7 @@ control: PivotClient
 documentation: ug
 ---
 
-# Measure Groups
+# Measure Groups in EJ 1 ASP.NET MVC PivotClient Control
 
 I> This feature is applicable only for OLAP data source bound from server-side.
 

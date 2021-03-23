@@ -7,7 +7,7 @@ control: PivotChart
 documentation: ug
 ---
 
-# 3D Visualization
+# 3D Visualization in ASP.NET MVC PivotChart Control
 
 The PivotChart control allows you to view the data in a 3D view. Following are the chart types that are supported:
 

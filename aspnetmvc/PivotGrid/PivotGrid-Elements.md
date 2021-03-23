@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-# PivotGrid: Elements
+# PivotGrid: ASP.NET MVC PivotGrid Elements Control for UG Documentation
 
 ## Hyperlink
 The PivotGrid control supports hyperlink option to link data for each individual cell. Hyperlink can be enabled separately for row header, column header, value and summary cells. Following are the respective properties:

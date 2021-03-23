@@ -7,7 +7,7 @@ control: PivotClient
 documentation: ug
 ---
 
-# Responsive Layout
+# Responsive Layout in ASP.NET MVC PivotClient Control
 
 PivotClient widget supports responsive rendering based on the target device (desktop and tablet) resolution. It supports resolution up to 1024x600. You can enable responsiveness in PivotClient by setting `IsResponsive` property to true.
 

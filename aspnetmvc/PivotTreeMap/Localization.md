@@ -7,7 +7,7 @@ control: PivotTreeMap
 documentation: ug
 ---
 
-# Localization
+# Localization in EJ 1 ASP.NET MVC PivotTreeMap Control
 
 ## Localization and Globalization of Cube Info (Client Mode)
 

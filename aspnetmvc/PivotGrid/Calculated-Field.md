@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Calculated Field
+# Calculated Field in EJ 1 ASP.NET MVC PivotGrid Control
 
 N> This feature is applicable only for Relational data source.
 

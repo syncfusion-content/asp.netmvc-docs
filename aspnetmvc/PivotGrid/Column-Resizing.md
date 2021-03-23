@@ -7,7 +7,7 @@ control: PivotGrid
 documentation: ug
 ---
 
-# Resizing Column
+# Resizing Column in EJ 1 ASP.NET MVC PivotGrid Control
 
 Allows the user to change the column width by holding and dragging the column border using the mouse pointer.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in ASP.NET MVC PdfViewer | Syncfusion
-description: Toolbar customization
+description: Toolbar customization in ASP.NET MVC PdfViewer Control and toolbar configuration for ejmvc PdfViewer Control.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
