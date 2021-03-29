@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PivotGrid Elements | PivotGrid | ASP.NET MVC | Syncfusion
+title: ASP.NET MVC PivotGrid Elements Control| Syncfusion
 description: This document illustrates that how to customize cells with an interactive way in ASP.NET MVC PivotGrid control
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# PivotGrid: Elements
+# PivotGrid: ASP.NET MVC PivotGrid Elements Control for UG Documentation
 
 ## Hyperlink
 The PivotGrid control supports hyperlink option to link data for each individual cell. Hyperlink can be enabled separately for row header, column header, value and summary cells. Following are the respective properties:
