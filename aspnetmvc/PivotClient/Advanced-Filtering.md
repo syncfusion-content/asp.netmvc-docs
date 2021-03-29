@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering & Sorting | ASP.NET MVC PivotClient | Syncfusion
+title: Advanced Filtering in ASP.NET MVC PivotClient | Syncfusion
 description: This document illustrates that how to define advance filtering and sorting with respective to the modes in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
