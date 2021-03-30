@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Character Settings | DigitalGauge | ASP.NET MVC | Syncfusion
+title: Character Settings in ASP.NET MVC DigitalGauge | Syncfusion
 description: You can learn here about character settings support in Syncfusion ASP.NET MVC DigitalGauge control and more details.
 platform: ejmvc
 control: DigitalGauge

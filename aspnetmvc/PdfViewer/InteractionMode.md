@@ -1,7 +1,7 @@
 ---
 layout: post
-title: InteractionMode | PDF viewer | ASP .NET MVC | Syncfusion
-description: InteractionMode
+title: Interaction Mode in EJ 1 ASP.NET MVC PdfViewer | Syncfusion
+description: InteractionMode for easy interaction with the ejmvc platform PDF documents in the control. Selection mode and Panning mode are the two interaction modes.
 platform: ejmvc
 control: PDF viewer
 documentation: ug

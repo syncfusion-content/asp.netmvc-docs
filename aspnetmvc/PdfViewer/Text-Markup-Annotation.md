@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text markup annotation | PDF viewer | ASP .NET MVC | Syncfusion
+title: Text Markup Annotation in ASP.NET MVC PdfViewer | Syncfusion
 description: You can learn here about text markup annotation support in Syncfusion ASP.NET MVC PDF Viewer control and more details.
 platform: ejmvc
 control: PDF viewer

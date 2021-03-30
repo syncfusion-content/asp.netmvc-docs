@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calculated Field | PivotGrid | ASP.NET MVC | Syncfusion
+title: Calculated Field in EJ 1 ASP.NET MVC PivotGrid | Syncfusion
 description: This document illustrates that how to define calculated field through code-behind/UI in ASP.NET MVC PivotGrid control 
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-# Calculated Field
+# Calculated Field in EJ 1 ASP.NET MVC PivotGrid Control
 
 N> This feature is applicable only for Relational data source.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization | PivotTreeMap | ASP.NET MVC | Syncfusion
+title: Localization in EJ 1 ASP.NET MVC PivotTreeMap | Syncfusion
 description: This document illustrates that how to define localization with respective to the modes in ASP.NET MVC PivotTreeMap control 
 platform: ejmvc
 control: PivotTreeMap
 documentation: ug
 ---
 
-# Localization
+# Localization in EJ 1 ASP.NET MVC PivotTreeMap Control
 
 ## Localization and Globalization of Cube Info (Client Mode)
 
