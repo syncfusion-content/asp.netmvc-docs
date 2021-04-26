@@ -7,7 +7,7 @@ control: System Requirement
 documentation: ug
 ---
 
-# System Requirement
+# System Requirements for ASP.NET MVC
 
 he following topic describes the system requirements for ASP.NET MVC platform.
 
