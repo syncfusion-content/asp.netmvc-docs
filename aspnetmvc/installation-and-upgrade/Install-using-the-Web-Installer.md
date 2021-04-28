@@ -78,7 +78,8 @@ The steps below show how to install Essential Studio ASP.NET MVC Web Installer.
 	**Additional settings**
 	
     * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install Syncfusion samples
-	* Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
+	* Select the **Register Syncfusion Assemblies in GAC** check box to install the latest Syncfusion assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC
+    * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio
     * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion Control Panel
     * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion Control Panel
 
@@ -140,13 +141,13 @@ N> If the **Syncfusion Essential Studio for ASP.NET MVC {version}** entry is sel
 
 1.  The Platform Selection Wizard will appear. From the **Installed** tab, select the products to be uninstalled. To select all products, check the **Uninstall All** checkbox. Click the Next button.
     
-	**Installed**
+	<em>**Installed**</em>
 	
 	![Platform Selection wizard Installed](WebInstaller/Step-by-Step-Installation_img4.png)
 	
 	You can also select the products to be installed from the **Available** tab.Click the Next button.
 	
-	**Available**
+	<em>**Available**</em>
 	
 	![Platform Selection wizard Available](WebInstaller/Step-by-Step-Installation_img25.png)
 	

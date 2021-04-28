@@ -9,7 +9,7 @@ documentation: ug
 
 # System Requirements for ASP.NET MVC
 
-he following topic describes the system requirements for ASP.NET MVC platform.
+The system requirements for using our Syncfusion ASP.NET MVC platform are as follows
 
 ### Operating Systems
 
