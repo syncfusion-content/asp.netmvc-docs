@@ -158,7 +158,7 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer to the following steps.
 
-1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](http://help.syncfusion.com/aspnetmvc/installation-and-deployment#configuring-syncfusion-nuget-packages-in-visual-studio)
+1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](https://help.syncfusion.com/aspnetmvc/installation-and-upgrade/install-using-the-web-installer#configuring-syncfusion-nuget-packages-in-visual-studio)
 
 2. Once Configured the Packages source, search and install the **Syncfusion.AspNet.Mvc5** from **Package** **Manager** **console** by using following commands.
 
