@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | ASP.NET MVC | Syncfusion
-description: Getting Started
+title: Getting Started with ASP.NET MVC Common Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Studio ASP.NET MVC Common control, its elements, and more.
 platform: ejmvc
 control: Common 
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Common
 
 > Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
  
