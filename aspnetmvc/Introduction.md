@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction | ASP.NET MVC | Syncfusion
-description: Introduction
+description: Learn here all about introduction of Syncfusion Essential Studio ASP.NET MVC, its features, and more.
 platform: ejmvc
 control: Common 
 documentation: ug
