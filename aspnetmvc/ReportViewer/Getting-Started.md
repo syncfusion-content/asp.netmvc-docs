@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | ReportViewer | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC ReportViewer Control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC ReportViewer Control, its elements, and more.
 platform: ejmvc
 control: ReportViewer
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC ReportViewer
 
 This section explains briefly about how to create a ReportViewer in your web application with MVC.
 
