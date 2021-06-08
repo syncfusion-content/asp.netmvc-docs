@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | Ribbon | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC Ribbon Control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC Ribbon Control, its elements, and more.
 platform: ejmvc
 control: Ribbon
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Ribbon
 
 This section explains briefly how to create a Ribbon in your application with ASP.NET MVC. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 

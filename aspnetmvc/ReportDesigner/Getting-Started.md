@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | ReportDesigner | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC ReportDesigner Control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC ReportDesigner Control, its elements, and more.
 platform: ejmvc
 control: ReportDesigner
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC ReportDesigner
 
 This section explains briefly about how to create a **ReportDesigner** in your ASP.NET MVC application.
 
