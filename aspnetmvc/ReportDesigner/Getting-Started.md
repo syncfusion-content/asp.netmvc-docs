@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | ReportDesigner | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC ReportDesigner Control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC ReportDesigner Control, its elements, and more.
 platform: ejmvc
 control: ReportDesigner
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC ReportDesigner
 
 This section explains briefly about how to create a **ReportDesigner** in your ASP.NET MVC application.
 
@@ -17,14 +17,14 @@ The following screenshots displays the Project Creation Wizard in Visual Studio 
 
 Create a new ASP.NET MVC4 Web Application project by selecting the **WEB** category from the listed project template in Microsoft Visual Studio IDE.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image1](Getting-Started_images/Getting-Started_img1.png)
 
 Project Creation Wizard
 {:.caption}
 
 The following screenshot displays how to select the project template with razor view engine:
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image3](Getting-Started_images/Getting-Started_img3.png)
 
 Select an empty template and click OK.
 
@@ -32,7 +32,7 @@ Select an empty template and click OK.
 
 1. In the Solution Explorer, right-click the `References` folder and then click `Add Reference`.
 
-    ![](Getting-Started_images/Getting-Started_img2.png) 
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image2](Getting-Started_images/Getting-Started_img2.png) 
 
 2. Add the following Syncfusion assemblies to the project that are necessary for using the report designer control.
 
@@ -54,7 +54,7 @@ Select an empty template and click OK.
 
     > Refer the other assemblies from the installed location, [Installed Location]:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Assemblies
 
-3.  Add the following WebAPI assemblies from [NuGet package](https://www.nuget.org/packages/Microsoft.AspNet.WebApi/ "Web NuGet Package Details").
+3.  Add the following WebAPI assemblies from [NuGet package]("https://www.nuget.org/packages/Microsoft.AspNet.WebApi/" "Web NuGet Package Details").
 
     * System.Web.Http
     * System.Web.Http.WebHost
@@ -67,21 +67,21 @@ Select an empty template and click OK.
 
 1. Right-Click on the **Controllers** folder in the project and select `Add` then select `Controller`.
 
-    ![](Getting-Started_images/Getting-Started_img8.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image8](Getting-Started_images/Getting-Started_img8.png)
 
 2. Name the controller as **ReportDesignerController**.
 
-    ![](Getting-Started_images/Getting-Started_img9.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image9](Getting-Started_images/Getting-Started_img9.png)
 
 3. Click Add.
 
-    ![](Getting-Started_images/Getting-Started_img10.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image10](Getting-Started_images/Getting-Started_img10.png)
 
 ### Modify RouteConfig.cs
 
 1.Open the RouteConfig.cs file from `App_Start` folder of your application.
 
-![](Getting-Started_images/Getting-Started_img15.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image15](Getting-Started_images/Getting-Started_img15.png)
 
 2.Modify the controller name to map to the **ReportDesigner** controller as follows.
 
@@ -116,24 +116,24 @@ namespace ReportDesignerSample
 
 1. Create a new folder **ReportDesigner** in `Views` folder.
 
-    ![](Getting-Started_images/Getting-Started_img11.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image11](Getting-Started_images/Getting-Started_img11.png)
 
 2. Right-Click on the **ReportDesigner** folder in the `Views` folder and select `Add` then select `View`.
 
-    ![](Getting-Started_images/Getting-Started_img12.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image12](Getting-Started_images/Getting-Started_img12.png)
 
 3. Name the view page as **Index**.
 
-    ![](Getting-Started_images/Getting-Started_img13.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image13](Getting-Started_images/Getting-Started_img13.png)
 
 4. Click `Add`.
 
-    ![](Getting-Started_images/Getting-Started_img14.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image14](Getting-Started_images/Getting-Started_img14.png)
 
 
 ## Add Scripts and Styles
 
-For complete dependencies list of report designer control [Click here](/aspnetmvc/ReportDesigner/Dependencies).
+For complete dependencies list of report designer control [Refer here](/aspnetmvc/ReportDesigner/Dependencies).
 
 Add the below code snippet in the Index.cshtml page.
 
@@ -219,15 +219,15 @@ Add the script files and theme file references in the &lt;head&gt; tag of the In
 
 2.Set **UnobtrusiveJavaScriptEnabled** to true in Web.config file of your application.
 
-![](Getting-Started_images/Getting-Started_img18.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image18](Getting-Started_images/Getting-Started_img18.png)
 
-![](Getting-Started_images/Getting-Started_img16.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image16](Getting-Started_images/Getting-Started_img16.png)
 
 #### Disable unobtrusive mode
 
 Set **UnobtrusiveJavaScriptEnabled** to false in Web.config file of your application.
 
-![](Getting-Started_images/Getting-Started_img17.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image17](Getting-Started_images/Getting-Started_img17.png)
 
 >  Refer to the [unobtrusive section](https://help.syncfusion.com/aspnetmvc/unobtrusive) for more details.
 
@@ -269,15 +269,15 @@ The MVC ReportDesigner uses WebApi services to process the report file and proce
 
 1. Right-Click on the project and select `Add` then click `New Item`. 
 
-    ![](Getting-Started_images/Getting-Started_img4.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image4](Getting-Started_images/Getting-Started_img4.png)
 
 2. Select `Web API Controller Class` from the listed templates and name the controller as **DesignerAPIController.cs**. 
 
-    ![](Getting-Started_images/Getting-Started_img19.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image19](Getting-Started_images/Getting-Started_img19.png)
 
 3. Click Add.
 
-    ![](Getting-Started_images/Getting-Started_img20.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image20](Getting-Started_images/Getting-Started_img20.png)
 
 #### Inherit IReportDesignerController
  
@@ -397,7 +397,7 @@ namespace ReportDesignerSample
 
 1. Open the WebApiConfig.cs file from `App_Start` folder of your application.
 
-    ![](Getting-Started_images/Getting-Started_img22.png)
+    ![ASP.NET-MVC-ReportDesigner_Getting-Started_image22](Getting-Started_images/Getting-Started_img22.png)
 
 2. Modify the **routeTemplate** to map to the API controller of **ReportDesignerSample** project as follows.
 
@@ -427,4 +427,4 @@ namespace ReportDesignerSample
 
 On running the application, Report Designer will be rendered like below.
 
-![](Getting-Started_images/Getting-Started_img7.png)
+![ASP.NET-MVC-ReportDesigner_Getting-Started_image7](Getting-Started_images/Getting-Started_img7.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | Ribbon | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC Ribbon Control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC Ribbon Control, its elements, and more.
 platform: ejmvc
 control: Ribbon
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Ribbon
 
 This section explains briefly how to create a Ribbon in your application with ASP.NET MVC. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 
@@ -41,7 +41,7 @@ Define the Application Tab with `Type` as `Menu` to render simple Ribbon control
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET-MVC-Ribbon_Getting-Started_image1](Getting-Started_images/Getting-Started_img1.png)
 
 N> Set the required `Width` to Ribbon, else default parent container or window Width will be considered.
 
@@ -77,7 +77,7 @@ RibbonTab is a set of related groups which are combined into single item. For cr
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![ASP.NET-MVC-Ribbon_Getting-Started_image2](Getting-Started_images/Getting-Started_img2.png)
 
 ## Configuring Groups
 
@@ -127,7 +127,7 @@ Create TabGroup item with `Text` specified and add ContentGroup to ContentGroup 
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![ASP.NET-MVC-Ribbon_Getting-Started_image3](Getting-Started_images/Getting-Started_img3.png)
 
 ## Adding Controls to Group
 
@@ -221,12 +221,12 @@ Syncfusion ASP.NET MVC Controls can be added to TabGroup’s content with corres
 
 {% endtabs %}
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET-MVC-Ribbon_Getting-Started_image4](Getting-Started_images/Getting-Started_img4.png)
 
 ## User Interface
 
 Ribbon component able to integrate any custom components and customized their functionality in application end. Our Ribbon component is similar to Microsoft products(Word). The Ribbon UI consists of several sections like Application Tab, Quick Access Toolbar, Tab, Contextual Tab, Gallery and etc.The following screenshot shows the diagrammatic detail of Ribbon UI:
 
-![](Getting-Started_images/Ribbon.png)
+![ASP.NET-MVC-Ribbon_Getting-Started_image5](Getting-Started_images/Ribbon.png)
 
 From above screenshot, you can see Ribbon has several subcomponents for different functionalities. The upcoming sections explains the brief details of each functionalities and their customizations.
