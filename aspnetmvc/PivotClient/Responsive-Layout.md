@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Layout | PivotClient | ASP.NET MVC | Syncfusion
+title: Responsive Layout in ASP.NET MVC PivotClient | Syncfusion
 description: This document illustrates that how to enable responsive layout rendering in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug
 ---
 
-# Responsive Layout
+# Responsive Layout in ASP.NET MVC PivotClient Control
 
 PivotClient widget supports responsive rendering based on the target device (desktop and tablet) resolution. It supports resolution up to 1024x600. You can enable responsiveness in PivotClient by setting `IsResponsive` property to true.
 

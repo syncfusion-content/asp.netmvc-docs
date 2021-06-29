@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Measure Groups | PivotClient | ASP.NET MVC | Syncfusion
+title: Measure Groups in EJ 1 ASP.NET MVC PivotClient | Syncfusion
 description: This document illustrates that how to define measure groups and functionalities in ASP.NET MVC PivotClient control
 platform: ejmvc
 control: PivotClient
 documentation: ug
 ---
 
-# Measure Groups
+# Measure Groups in EJ 1 ASP.NET MVC PivotClient Control
 
 I> This feature is applicable only for OLAP data source bound from server-side.
 

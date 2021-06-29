@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drill operation | PivotChart | ASP.NET MVC | Syncfusion
+title: Drill Operation in EJ 1 ASP.NET MVC PivotChart | Syncfusion
 description: This document illustrates drill operation with respective to the modes of ASP.NET MVC PivotChart control
 platform: ejmvc
 control: PivotChart
 documentation: ug
 ---
 
-# Drill Operation
+# Drill Operation in EJ 1 ASP.NET MVC PivotChart Control
 
 This is a basic feature of PivotChart through which the amount of information can be limited, for a better view. It allows you to drill down to access the detailed level of data or drill up to see the summarized data by using the Context Menu present in the PivotChart.
 

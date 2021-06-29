@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grid | Grid | ASP.NET MVC | Syncfusion
-description: overview
+title: About ASP.NET MVC Grid Control | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential Studio ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Grid
+# ASP.NET MVC Grid Overview
 
 The grid control for ASP.NET MVC is an efficient display engine for tabular data. It will pull from a datasource, such as List of collections, OData web services, or DataManager, binding data fields to columns and displaying a column header to identify the field. It is a feature-rich control that provides extensive appearance customization options with support for grouped records. This grid is very useful for generating complex grid-based reports with rich formatting. The most important features available in the grid control for ASP.NET MVC are paging, sorting, filtering, searching, grouping, and editing. 
 

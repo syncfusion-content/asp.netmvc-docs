@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | ASP.NET MVC | Syncfusion
-description: Getting Started
+title: Getting Started with ASP.NET MVC Common Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Studio ASP.NET MVC Common control, its elements, and more.
 platform: ejmvc
 control: Common 
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Common
 
 > Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
  
@@ -158,7 +158,7 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer to the following steps.
 
-1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](http://help.syncfusion.com/aspnetmvc/installation-and-deployment#configuring-syncfusion-nuget-packages-in-visual-studio)
+1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](https://help.syncfusion.com/aspnetmvc/installation-and-upgrade/install-using-the-web-installer#configuring-syncfusion-nuget-packages-in-visual-studio)
 
 2. Once Configured the Packages source, search and install the **Syncfusion.AspNet.Mvc5** from **Package** **Manager** **console** by using following commands.
 

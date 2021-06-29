@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selection and Hovering | Kanban | ASP.NET MVC | Syncfusion
+title: Selection and Hovering in ASP.NET MVC Kanban | Syncfusion
 description: This section explains how to select and hover the card on the Syncfusion ASP.NET MVC Kanban component.
 documentation: ug
 control: Kanban
