@@ -29,7 +29,7 @@ The system requirements for using our Syncfusion ASP.NET MVC platform are as fol
 
 ### Development Environment
 
-* Microsoft Visual Studio 2010/2012/2013/2015/2017/2019
+* Microsoft Visual Studio 2010/2012/2013/2015/2017/2019/2022
 * .NET Framework 3.5/4.0/4.5/4.5.1/4.6
 * MVC Version: MVC3/MVC4/MVC5
 * Microsoft SQL Server 2005 or higher
