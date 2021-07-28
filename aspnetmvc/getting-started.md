@@ -77,7 +77,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![output](getting-started_images/getting-started_img7.png)
 	
-For more information about Project Configuration Templates and their options details, please visit [here](http://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
+For more information about Project Configuration Templates and their options details, please visit [here](https://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
 N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://www.syncfusion.com/kb/9197/resolving-jquery-multiple-references-error)
 
@@ -239,7 +239,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 	![Render](getting-started_images/getting-started_img2.png)
 
-For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/overview)
+For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages)
 
 ## Manual Integration
 
