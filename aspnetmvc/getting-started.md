@@ -239,7 +239,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 	![Render](getting-started_images/getting-started_img2.png)
 
-For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/overview)
+For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages)
 
 ## Manual Integration
 
