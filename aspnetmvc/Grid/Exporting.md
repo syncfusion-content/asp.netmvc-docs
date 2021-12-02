@@ -1477,7 +1477,7 @@ Also, it has `none` option which will export the grid without any theme.  The de
 {% endtabs %}  
 When the theme is set as none and the autoFormat is not set to the grid, then no theme is applied to the exported grid. The grid is exported without any theme as in the following screenshots:
 
-![ASP.NET MVC Grid Customizing Themes img1](Exporting_images/Customizing-Themes_img1.png)
+![ASP.NET MVC Grid Customizing Themes](Exporting_images/Customizing-Themes_img1.png)
 
 
 ## AutoFormat class
@@ -1692,7 +1692,7 @@ The background color of the alternative row of the grid content.</td></tr>
 
 
 {% endtabs %} 
-![ASP.NET MVC Grid Customizing Themes img2](Exporting_images/Customizing-Themes_img2.png)
+![ASP.NET MVC Grid Customizing Themes Autoformat class](Exporting_images/Customizing-Themes_img2.png)
 
 ## Exporting server events
 

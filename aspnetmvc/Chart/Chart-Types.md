@@ -31,7 +31,7 @@ To render a Line Chart, set the series **Type** as **Line** in the chart series.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img1](Chart-Types_images/Chart-Types_img1.png)
+![ASP.NET MVC Chart Types Line Chart](Chart-Types_images/Chart-Types_img1.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/default) here to view the Line Chart online demo sample.
@@ -59,7 +59,7 @@ To change the width of the line segment, you can use the **Width** property in t
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img2](Chart-Types_images/Chart-Types_img2.png)
+![ASP.NET MVC Chart Types Change the line width](Chart-Types_images/Chart-Types_img2.png)
 
 
 ### Dashed lines
@@ -83,7 +83,7 @@ To render the line series with dotted lines, you can use the **DashArray** optio
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img3](Chart-Types_images/Chart-Types_img3.png)
+![ASP.NET MVC Chart Types Dashed lines](Chart-Types_images/Chart-Types_img3.png)
 
 
 ### Changing the line cap
@@ -109,7 +109,7 @@ For customizing the start and end caps of the line segment, you can use the **Li
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img4](Chart-Types_images/Chart-Types_img4.png)
+![ASP.NET MVC Chart Types Changing the line cap](Chart-Types_images/Chart-Types_img4.png)
 
 
 ### Changing the line join
@@ -136,7 +136,7 @@ You can use the **LineJoin** property to specify how two intersecting line segme
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img5](Chart-Types_images/Chart-Types_img5.png)
+![ASP.NET MVC Chart Types changing the line join](Chart-Types_images/Chart-Types_img5.png)
 
 
 ### MultiColor Line
@@ -160,7 +160,7 @@ You can change the color of the line segments by using the *Fill* property of th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img81](Chart-Types_images/Chart-Types_img81.png)
+![ASP.NET MVC Chart Types Multicolor line](Chart-Types_images/Chart-Types_img81.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/multicolor) here to view the MultiColor Line Chart online demo sample.
 
@@ -187,7 +187,7 @@ To render a Step Line Chart, set the series Type as **StepLine"** in the chart s
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img6](Chart-Types_images/Chart-Types_img6.png)
+![ASP.NET MVC Chart Types Step line chart](Chart-Types_images/Chart-Types_img6.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stepline) here to view the Step Line Chart online demo sample.
 
@@ -213,7 +213,7 @@ To change the line width, you can use the **Width** property.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img7](Chart-Types_images/Chart-Types_img7.png)
+![ASP.NET MVC Chart Types Change the line width](Chart-Types_images/Chart-Types_img7.png)
 
 
 ### Dashed lines
@@ -237,7 +237,7 @@ To render the step line series with dotted lines, you can use the DashArray opti
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img8](Chart-Types_images/Chart-Types_img8.png)
+![ASP.NET MVC Chart Types Dashed lines](Chart-Types_images/Chart-Types_img8.png)
 
 
 ### Changing the line cap
@@ -263,7 +263,7 @@ For customizing the start and end caps of the line segment, you can use the Line
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img9](Chart-Types_images/Chart-Types_img9.png)
+![ASP.NET MVC Chart Types Changing the line cap](Chart-Types_images/Chart-Types_img9.png)
 
 
 ### Changing the line join
@@ -290,7 +290,7 @@ You can use the LineJoin property to specify how two intersecting line segments 
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img10](Chart-Types_images/Chart-Types_img10.png)
+![ASP.NET MVC Chart Types Changing the line join](Chart-Types_images/Chart-Types_img10.png)
 
 
 ## Area Chart
@@ -316,7 +316,7 @@ To render an Area chart, you can specify the series Type as **Area** in the char
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img11](Chart-Types_images/Chart-Types_img11.png)
+![ASP.NET MVC Chart Types Area Chart](Chart-Types_images/Chart-Types_img11.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/area) here to view the Area Chart online demo.
@@ -356,7 +356,7 @@ Since the RangeArea series requires two y values for a point, you have to add th
 
 {% endhighlight %}
 
-![Asp.NET MVC Chart Types img12](Chart-Types_images/Chart-Types_img12.png)
+![Asp.NET MVC Chart Types Range Area Chart](Chart-Types_images/Chart-Types_img12.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/rangearea) here to view Range Area Chart online demo.
 
@@ -386,7 +386,7 @@ To render a Step Area Chart, set the Type as **StepArea** in the chart series. T
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img13](Chart-Types_images/Chart-Types_img13.png)
+![ASP.NET MVC Chart Types Step Area Chart](Chart-Types_images/Chart-Types_img13.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/steparea) here to view Step Area Chart online demo.
@@ -417,7 +417,7 @@ To render a Spline Area Chart, set the Type as **SplineArea** in the chart serie
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img14](Chart-Types_images/Chart-Types_img14.png)
+![ASP.NET MVC Chart Types Spline Area Chart](Chart-Types_images/Chart-Types_img14.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/splinearea) here to view Spline Area Chart online demo.
 
@@ -447,7 +447,7 @@ To render a Stacked Area Chart, set the Type as **StackingArea** in the chart se
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img15](Chart-Types_images/Chart-Types_img15.png)
+![ASP.NET MVC Chart Types Stacked Area Chart](Chart-Types_images/Chart-Types_img15.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea) here to view Stacked Area Chart online demo.
@@ -478,7 +478,7 @@ To render a 100% Stacked Area Chart, set the Type as **StackingArea100** in the 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img16](Chart-Types_images/Chart-Types_img16.png)
+![ASP.NET MVC Chart Types 100% Stacked Area Chart](Chart-Types_images/Chart-Types_img16.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea100) here to view 100% Stacked Area Chart online demo.
@@ -509,7 +509,7 @@ To render a Column Chart, set the Type as **Column** in the chart series. To cha
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img17](Chart-Types_images/Chart-Types_img17.png)
+![ASP.NET MVC Chart Types Column Chart](Chart-Types_images/Chart-Types_img17.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/column) here to view Column Chart demo.
@@ -539,7 +539,7 @@ You can change the color of a column by using the Fill property of the point.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img18](Chart-Types_images/Chart-Types_img18.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img18.png)
 
 ### Column width customization
 
@@ -562,7 +562,7 @@ N> Width of a column also depends upon the *ColumnSpacing* property, because *Co
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img88](Chart-Types_images/Chart-Types_img88.png)
+![ASP.NET MVC Chart Types Column width customization](Chart-Types_images/Chart-Types_img88.png)
 
 ### Column with rounded corners
 Corners of the column chart can be customized by setting value to the **CornerRadius** property.
@@ -575,7 +575,7 @@ Corners of the column chart can be customized by setting value to the **CornerRa
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img90](Chart-Types_images/Chart-Types_img90.png)   
+![ASP.NET MVC Chart Types Column with rounded corners](Chart-Types_images/Chart-Types_img90.png)   
 
 ### Spacing between column series
 
@@ -598,7 +598,7 @@ N> Space between columns will also affect the width of the column. For example, 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img89](Chart-Types_images/Chart-Types_img89.png)
+![ASP.NET MVC Chart Types Spacing between column series](Chart-Types_images/Chart-Types_img89.png)
 
 
 ### Cylindrical Chart
@@ -627,7 +627,7 @@ The following chart types can be rendered as cylinder in both 2D and in 3D view.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img91](Chart-Types_images/Chart-Types_img91.png)
+![ASP.NET MVC Chart Types Cylindrical Chart](Chart-Types_images/Chart-Types_img91.png)
 
 ## RangeColumn Chart
 
@@ -662,7 +662,7 @@ Since, the RangeColumn series requires two y values for a point, add the High an
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img19](Chart-Types_images/Chart-Types_img19.png)
+![ASP.NET MVC Chart Types RangeColumn Chart](Chart-Types_images/Chart-Types_img19.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/rangecolumn) here to view Range Column Chart online demo.
 
@@ -691,7 +691,7 @@ To change the color of a range column, you can use the Fill property of point.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img20](Chart-Types_images/Chart-Types_img20.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img20.png)
 
 
 ## Stacked Column Chart
@@ -719,7 +719,7 @@ To render a Stacked Column Chart, set the Type as **StackingColumn** in the char
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img21](Chart-Types_images/Chart-Types_img21.png)
+![ASP.NET MVC Chart Types Stacked Column Chart](Chart-Types_images/Chart-Types_img21.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn) here to view Stacked Column Chart online demo.
 
@@ -753,7 +753,7 @@ You can use the **StackingGroup** property to group the stacked columns. Columns
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img22](Chart-Types_images/Chart-Types_img22.png)
+![ASP.NET MVC Chart Types Cluster/Group Stacked Column](Chart-Types_images/Chart-Types_img22.png)
 
 
 ### Change a point color
@@ -780,7 +780,7 @@ To change the color of a stacking column, you can use the Fill property of the p
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img23](Chart-Types_images/Chart-Types_img23.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img23.png)
 
 
 ## 100% Stacked Column Chart    
@@ -806,7 +806,7 @@ To render a 100% Stacked Column Chart, set the Type as **StackingColumn100** in 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img24](Chart-Types_images/Chart-Types_img24.png)
+![ASP.NET MVC Chart Types 100% Stacked Column Chart](Chart-Types_images/Chart-Types_img24.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn100) here to view 100% Stacked Column Chart online demo.
@@ -841,7 +841,7 @@ By using the **StackingGroup** property, you can group the 100% stacking columns
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img25](Chart-Types_images/Chart-Types_img25.png)
+![ASP.NET MVC Chart Types Cluster/Group 100% Stacked Columns](Chart-Types_images/Chart-Types_img25.png)
 
 
 ### Change a point color
@@ -867,7 +867,7 @@ To change the color of a 100% stacking column, you can use the Fill property of 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img26](Chart-Types_images/Chart-Types_img26.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img26.png)
 
 
 ## Bar Chart
@@ -895,7 +895,7 @@ To render a bar Chart, set the Type as **Bar** in the chart series. To change th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img27](Chart-Types_images/Chart-Types_img27.png)
+![ASP.NET MVC Chart Types Bar Chart](Chart-Types_images/Chart-Types_img27.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/bar) here to view Bar Chart demo.
@@ -925,7 +925,7 @@ By using the Fill property of the point, you can change the specific point of th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img28](Chart-Types_images/Chart-Types_img28.png)
+![ASP.NET MVC Chart Types Change the color of bar](Chart-Types_images/Chart-Types_img28.png)
 
 
 ## Stacked Bar Chart
@@ -953,7 +953,7 @@ To render a Stacked Bar Chart, set the Type as **StackingBar** in the chart seri
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img29](Chart-Types_images/Chart-Types_img29.png)
+![ASP.NET MVC Chart Types Stacked Bar Chart](Chart-Types_images/Chart-Types_img29.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar) here to view Stacked Bar Chart online demo.
@@ -988,7 +988,7 @@ You can use the **StackingGroup** property to group the stacking bars with the s
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img30](Chart-Types_images/Chart-Types_img30.png)
+![ASP.NET MVC Chart Types Cluster/Group Stacked Bars](Chart-Types_images/Chart-Types_img30.png)
 
 
 ### Change a point color
@@ -1015,7 +1015,7 @@ You can change the color of a stacking bar by using the Fill property of the poi
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img31](Chart-Types_images/Chart-Types_img31.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img31.png)
 
 
 ## 100% Stacked Bar Chart
@@ -1043,7 +1043,7 @@ To render a 100% Stacked Bar Chart, set the Type as **StackingBar100** in the ch
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img32](Chart-Types_images/Chart-Types_img32.png)
+![ASP.NET MVC Chart Types 100% Stacked Bar Chart](Chart-Types_images/Chart-Types_img32.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar100) here to view 100% Stacked Bar Chart online demo.
 
@@ -1073,7 +1073,7 @@ By using the StackingGroup property, you can group the 100% stacking bars with t
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img33](Chart-Types_images/Chart-Types_img33.png)
+![ASP.NET MVC Chart Types StackingGroup property](Chart-Types_images/Chart-Types_img33.png)
 
 
 ### Change a point color
@@ -1100,7 +1100,7 @@ To change the color of a 100% stacking bar, you can use the Fill property of the
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img34](Chart-Types_images/Chart-Types_img34.png)
+![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img34.png)
 
 ## Spline Chart
 
@@ -1127,7 +1127,7 @@ To render a Spline Chart, set the Type as **Spline** in the chart series. To cha
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img35](Chart-Types_images/Chart-Types_img35.png)
+![ASP.NET MVC Chart Types Spline Chart](Chart-Types_images/Chart-Types_img35.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/spline) here to view the Spline Chart online demo sample.
@@ -1158,7 +1158,7 @@ To change the spline segment width, you can use the Width property of the series
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img36](Chart-Types_images/Chart-Types_img36.png)
+![ASP.NET MVC Chart Types Change the Spline width](Chart-Types_images/Chart-Types_img36.png)
 
 
 ### Dashed lines
@@ -1186,7 +1186,7 @@ To render the spline series with dotted lines, you can use the DashArray option 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img37](Chart-Types_images/Chart-Types_img37.png)
+![ASP.NET MVC Chart Types Dashed lines](Chart-Types_images/Chart-Types_img37.png)
 
 
 ## Pie Chart
@@ -1215,7 +1215,7 @@ You can create a pie chart by setting the series Type as **Pie** in the chart se
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img38](Chart-Types_images/Chart-Types_img38.png)
+![ASP.NET MVC Chart Types Pie Chart](Chart-Types_images/Chart-Types_img38.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/pie) here to view the Pie chart online demo sample.
@@ -1246,7 +1246,7 @@ You can use the **PieCoefficient** property to change the diameter of the Pie ch
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img39](Chart-Types_images/Chart-Types_img39.png)
+![ASP.NET MVC Chart Types Change Pie Size](Chart-Types_images/Chart-Types_img39.png)
 
 
 ### Explode a pie segment
@@ -1274,7 +1274,7 @@ You can explode a pie segment on the chart load by using the **ExplodeIndex** of
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img40](Chart-Types_images/Chart-Types_img40.png)
+![ASP.NET MVC Chart Types Explode a Pie segment](Chart-Types_images/Chart-Types_img40.png)
 
 
 ### Explode all the segments
@@ -1302,7 +1302,7 @@ To explode all the segments of the Pie chart, you can enable the **ExplodeAll** 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img41](Chart-Types_images/Chart-Types_img41.png)
+![ASP.NET MVC Chart Types Explode all segments](Chart-Types_images/Chart-Types_img41.png)
 
 
 ### Explode a pie segment on mouse over
@@ -1330,7 +1330,7 @@ To explode a pie segment on a mouse over, you can enable the **Explode** propert
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img42](Chart-Types_images/Chart-Types_img42.png)
+![ASP.NET MVC Chart Types Explode a pie segment on mouse over](Chart-Types_images/Chart-Types_img42.png)
 
 
 ### Sector of Pie
@@ -1358,7 +1358,7 @@ EjChart allows you to render all the data points/segments in the semi-pie, quart
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img43](Chart-Types_images/Chart-Types_img43.png)
+![ASP.NET MVC Chart Types Sector of Pie](Chart-Types_images/Chart-Types_img43.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/semipie) here to view the Semi Pie Chart online demo sample.
@@ -1390,7 +1390,7 @@ To create a Doughnut chart, you can specify the series Type as **Doughnut** in t
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img44](Chart-Types_images/Chart-Types_img44.png)
+![ASP.NET MVC Chart Types Doughnut Chart](Chart-Types_images/Chart-Types_img44.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/doughnut) here to view the Doughnut Chart online demo sample.
 
@@ -1420,7 +1420,7 @@ You can change the doughnut chart inner radius by using the **DoughnutCoefficien
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img45](Chart-Types_images/Chart-Types_img45.png)
+![ASP.NET MVC Chart Types Change Doughnut inner radius](Chart-Types_images/Chart-Types_img45.png)
 
 
 ### Change the doughnut size
@@ -1448,7 +1448,7 @@ You can use the **DoughnutSize** property to change the diameter of the Doughnut
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img46](Chart-Types_images/Chart-Types_img46.png)
+![ASP.NET MVC Chart Types Change the Doughnut size](Chart-Types_images/Chart-Types_img46.png)
 
 
 ### Explode a doughnut segment
@@ -1476,7 +1476,7 @@ To explode a specific doughnut segment, set the index to be exploded by using th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img47](Chart-Types_images/Chart-Types_img47.png)
+![ASP.NET MVC Chart Types Explode a doughnut segment](Chart-Types_images/Chart-Types_img47.png)
 
 
 ### Explode all the segments
@@ -1504,7 +1504,7 @@ To explode all the segments, you can enable the **ExplodeAll** property of the s
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img48](Chart-Types_images/Chart-Types_img48.png)
+![ASP.NET MVC Chart Types Explode all the segments](Chart-Types_images/Chart-Types_img48.png)
 
 
 ### Explode a doughnut segment on mouse over
@@ -1532,7 +1532,7 @@ To explode a doughnut segment on a mouse over, you can enable the **Explode** pr
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img49](Chart-Types_images/Chart-Types_img49.png)
+![ASP.NET MVC Chart Types Explode a doughnut segment on mouse over](Chart-Types_images/Chart-Types_img49.png)
 
 
 ### Sector of Doughnut
@@ -1561,7 +1561,7 @@ EjChart allows you to render all the data points/segments in the semi-doughnut, 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img50](Chart-Types_images/Chart-Types_img50.png)
+![ASP.NET MVC Chart Types Sector of Doughnut](Chart-Types_images/Chart-Types_img50.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/semipie) here to view the Semi Doughnut Chart online demo sample.
@@ -1594,7 +1594,7 @@ EjChart provides support to render more than one series in pie and in doughnut c
 
 **Multiple Pie** 
 
-![ASP.NET MVC Chart Types img82](Chart-Types_images/Chart-Types_img82.png)
+![ASP.NET MVC Chart Types Multiple Pie Chart](Chart-Types_images/Chart-Types_img82.png)
 
 
 **Multiple Doughnut** 
@@ -1610,12 +1610,12 @@ In the Multiple Pie chart, the start and end angle property is also supported.
 
 **Sector of Multiple Pie**
 
-![](Chart-Types_images/Chart-Types_img84.png)
+![ASP.NET MVC Chart Types Sector of Mutiple Pie](Chart-Types_images/Chart-Types_img84.png)
 
 
 **Sector of Multiple Doughnut**
 
-![ASP.NET MVC Chart Types img85](Chart-Types_images/Chart-Types_img85.png)
+![ASP.NET MVC Chart Types Sector of Multiple Doughnut](Chart-Types_images/Chart-Types_img85.png)
 
 
 ## Pyramid Chart
@@ -1643,7 +1643,7 @@ To create a Pyramid chart, you can specify the series Type as **Pyramid** in the
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img51](Chart-Types_images/Chart-Types_img51.png)
+![ASP.NET MVC Chart Types Pyramid Chart](Chart-Types_images/Chart-Types_img51.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/pyramid) here to view the Pyramid Chart online demo sample.
 
@@ -1673,7 +1673,7 @@ Pyramid mode has two types, *Linear* and *Surface* respectively. The default **P
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img52](Chart-Types_images/Chart-Types_img52.png)
+![ASP.NET MVC Chart Types Pyramid Mode](Chart-Types_images/Chart-Types_img52.png)
 
 ### Gap between the segments
 
@@ -1700,7 +1700,7 @@ You can control the gap between the segments by using the **GapRatio** option of
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img53](Chart-Types_images/Chart-Types_img53.png)
+![ASP.NET MVC Chart Types Gap between the segments](Chart-Types_images/Chart-Types_img53.png)
 
 
 ### Explode a pyramid segment
@@ -1728,7 +1728,7 @@ You can explode a pyramid segment on the chart load by using the **ExplodeIndex*
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img54](Chart-Types_images/Chart-Types_img54.png)
+![ASP.NET MVC Chart Types Explode a pyramid segment](Chart-Types_images/Chart-Types_img54.png)
 
 
 ## Funnel Chart
@@ -1756,7 +1756,7 @@ You can create a funnel chart by setting the series Type as **Funnel** in the ch
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img55](Chart-Types_images/Chart-Types_img55.png)
+![ASP.NET MVC Chart Types Funnel Chart](Chart-Types_images/Chart-Types_img55.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/funnel) here to view the Funnel Chart online demo sample.
 
@@ -1787,7 +1787,7 @@ Funnel segments height and width is calculated from the chart size, by default. 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img56](Chart-Types_images/Chart-Types_img56.png)
+![ASP.NET MVC Chart Types Change the funnel width and height](Chart-Types_images/Chart-Types_img56.png)
 
 
 ### Explode a funnel segment
@@ -1815,7 +1815,7 @@ You can explode a funnel segment on the chart load by using the **ExplodeIndex**
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img57](Chart-Types_images/Chart-Types_img57.png)
+![ASP.NET MVC Chart Types Explode a funnel segment](Chart-Types_images/Chart-Types_img57.png)
 
 
 ## Bubble Chart
@@ -1861,7 +1861,7 @@ To create a Bubble chart, you can set the series Type as **Bubble** in the chart
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img58](Chart-Types_images/Chart-Types_img58.png)
+![ASP.NET MVC Chart Types Bubble Chart](Chart-Types_images/Chart-Types_img58.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/bubble) here to view the Bubble Chart online demo sample.
@@ -1891,7 +1891,7 @@ To create a Scatter chart, you can set the series Type as **Scatter** in the cha
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img59](Chart-Types_images/Chart-Types_img59.png)
+![ASP.NET MVC Chart Types Scatter](Chart-Types_images/Chart-Types_img59.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/scatter) here to view the Scatter Chart online demo sample.
@@ -1922,7 +1922,7 @@ You can change the scatter size by using the **Size** property of the series mar
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img60](Chart-Types_images/Chart-Types_img60.png)
+![ASP.NET MVC Chart Types Customize the scatter chart](Chart-Types_images/Chart-Types_img60.png)
 
 
 ## HiLoOpenClose Chart 
@@ -1970,7 +1970,7 @@ To create a HiLoOpenClose chart, you can set the series Type as **HiloOpenClose*
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img61](Chart-Types_images/Chart-Types_img61.png)
+![ASP.NET MVC Chart Types HiLoOpenClose Chart](Chart-Types_images/Chart-Types_img61.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/hiloopenclose) here to view the HiLoOpenClose Chart online demo sample.
@@ -2001,7 +2001,7 @@ You can change the HiLoOpenClose chart **DrawMode** to *Open, Close* or *Both*. 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img62](Chart-Types_images/Chart-Types_img62.png)
+![ASP.NET MVC Chart Types DrawMode](Chart-Types_images/Chart-Types_img62.png)
 
 
 ### Bull and Bear Color	
@@ -2030,7 +2030,7 @@ HiLoOpenClose chart **BullFillColor** is used to specify a fill color for the se
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img63](Chart-Types_images/Chart-Types_img63.png)
+![ASP.NET MVC Chart Types Bull and Bear Color](Chart-Types_images/Chart-Types_img63.png)
 
 
 ## Candle
@@ -2079,7 +2079,7 @@ You can create a Candle chart by specifying the series Type as **Candle** in the
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img64](Chart-Types_images/Chart-Types_img64.png)
+![ASP.NET MVC Chart Types Candle](Chart-Types_images/Chart-Types_img64.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/candle) here to view the Candle Chart online demo sample.
 
@@ -2109,7 +2109,7 @@ Candle chart **BullFillColor** is used to specify a fill color for the segments 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img65](Chart-Types_images/Chart-Types_img65.png)
+![ASP.NET MVC Chart Types Bull and Bear Color](Chart-Types_images/Chart-Types_img65.png)
 
 
 ## HiLo
@@ -2155,7 +2155,7 @@ HiLo chart is created by setting the series Type as **Hilo** in the chart series
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img66](Chart-Types_images/Chart-Types_img66.png)
+![ASP.NET MVC Chart Types HiLo](Chart-Types_images/Chart-Types_img66.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/hilo) here to view the HiLo Chart online demo sample.
@@ -2186,7 +2186,7 @@ Polar chart is created by setting the series Type as **Polar** in the chart seri
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img67](Chart-Types_images/Chart-Types_img67.png)
+![ASP.NET MVC Chart Types Polar](Chart-Types_images/Chart-Types_img67.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/polar) here to view the Polar Chart online demo sample.
@@ -2217,7 +2217,7 @@ Polar **DrawType** property is used to change the series plotting type to *Line*
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img68](Chart-Types_images/Chart-Types_img68.png)
+![ASP.NET MVC Chart Types DrawType](Chart-Types_images/Chart-Types_img68.png)
 
 
 ### Stack columns in Polar chart
@@ -2245,7 +2245,7 @@ By using the **IsStacking** property, you can specify whether the column has to 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img69](Chart-Types_images/Chart-Types_img69.png)
+![ASP.NET MVC Chart Types Polar Chart](Chart-Types_images/Chart-Types_img69.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/windrose) here to view the Polar Wind Rose Chart online demo sample.
@@ -2276,7 +2276,7 @@ To create a Radar chart, you can specify the series Type as **Radar** in the cha
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img70](Chart-Types_images/Chart-Types_img70.png)
+![ASP.NET MVC Chart Types Radar Chart](Chart-Types_images/Chart-Types_img70.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/radar) here to view the Radar Chart online demo sample.
 
@@ -2307,7 +2307,7 @@ Radar **DrawType** property is used to change the series plotting type to *Line*
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img71](Chart-Types_images/Chart-Types_img71.png)
+![ASP.NET MVC Chart Types DrawType](Chart-Types_images/Chart-Types_img71.png)
 
 
 ### Stack columns in Radar chart
@@ -2336,7 +2336,7 @@ By using the **IsStacking** property, you can specify whether the column has to 
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img72](Chart-Types_images/Chart-Types_img72.png)
+![ASP.NET MVC Chart Types Stack Columns in Radar Chart](Chart-Types_images/Chart-Types_img72.png)
 
 
 ## Waterfall Chart 
@@ -2362,7 +2362,7 @@ N> The inline property of the **Series.PositiveFill** has the first priority and
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img73](Chart-Types_images/Chart-Types_img73.png)
+![ASP.NET MVC Chart Types Waterfall Chart](Chart-Types_images/Chart-Types_img73.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/waterfall) here to view the Waterfall Chart online demo sample.
@@ -2446,7 +2446,7 @@ To customize the connector line color, width, opacity and dashArray of the water
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types img74](Chart-Types_images/Chart-Types_img74.png)
+![ASP.NET MVC Chart Types ConnectorLine](Chart-Types_images/Chart-Types_img74.png)
 
 
 
@@ -2473,7 +2473,7 @@ EjChart can generate Error bar for Cartesian type series *(Line, Column, Bar, Sc
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img75](Chart-Types_images/Chart-Types_img75.png)
+![ASP.NET MVC Chart Types ErrorBar Chart](Chart-Types_images/Chart-Types_img75.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/errorbar) here to view the ErrorBar Chart online demo sample.
@@ -2501,7 +2501,7 @@ You can change the error bar rendering type using **Type** *(like FixedValue, Pe
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img76](Chart-Types_images/Chart-Types_img76.png)
+![ASP.NET MVC Chart Types Changing Error Bar Type](Chart-Types_images/Chart-Types_img76.png)
 
 
 #### Customizing error bar type              
@@ -2530,7 +2530,7 @@ To customize the error bar type, set error bar Type as **Custom** and then chang
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img77](Chart-Types_images/Chart-Types_img77.png)
+![ASP.NET MVC Chart Types Customizing error bar type](Chart-Types_images/Chart-Types_img77.png)
 
 
 ### Changing Error Bar Mode
@@ -2555,7 +2555,7 @@ Error bar mode is used to define whether the error bar line has to be drawn *Hor
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img78](Chart-Types_images/Chart-Types_img78.png)
+![ASP.NET MVC Chart Types Changing Error Bar Mode](Chart-Types_images/Chart-Types_img78.png)
 
 
 ### Changing Error Bar Direction
@@ -2579,7 +2579,7 @@ You can change the error bar direction to plus, minus or both side using ErrorBa
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img79](Chart-Types_images/Chart-Types_img79.png)
+![ASP.NET MVC Chart Types Changing Error Bar Direction](Chart-Types_images/Chart-Types_img79.png)
 
 
 ### Customizing Error bar cap
@@ -2607,7 +2607,7 @@ To customize the errorBar cap visibility, length, width and fill color, you can 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img80](Chart-Types_images/Chart-Types_img80.png)
+![ASP.NET MVC Chart Types Customizing Error bar cap](Chart-Types_images/Chart-Types_img80.png)
 
 
 ## Box and Whisker Chart 
@@ -2638,7 +2638,7 @@ To render a Box and Whisker Chart, set the series *type* as **BoxAndWhisker** .B
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img90](Chart-Types_images/Chart-Types_img90.png)
+![ASP.NET MVC Chart Types Box and Whisker Chart](Chart-Types_images/Chart-Types_img90.png)
 
 ### BoxPlotMode
  
@@ -2678,7 +2678,7 @@ Box and Whisker *showMedian* property is used to show the box and whisker averag
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img91](Chart-Types_images/Chart-Types_img91.png)
+![ASP.NET MVC Chart Types showMedian](Chart-Types_images/Chart-Types_img91.png)
 
 ###  Customize the Outlier
 
@@ -2699,7 +2699,7 @@ Outlier symbol, width and height can be customized using outlierSettings through
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img92](Chart-Types_images/Chart-Types_img92.png)
+![ASP.NET MVC Chart Types Customize the Outlier](Chart-Types_images/Chart-Types_img92.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/boxandwhisker) here to view the Box and Whisker Chart online demo sample.
 
@@ -2729,7 +2729,7 @@ sr.Points(pt =>
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img93](Chart-Types_images/Chart-Types_img93.png)
+![ASP.NET MVC Chart Types Pie of Pie Chart](Chart-Types_images/Chart-Types_img93.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/pieofpie) here to view the Pie Of Pie Chart online demo sample.
 
@@ -2757,7 +2757,7 @@ The points to be displayed in the second pie is decided based on the `splitMode`
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types img94](Chart-Types_images/Chart-Types_img94.png)
+![ASP.NET MVC Chart Types Split Mode and Split Value](Chart-Types_images/Chart-Types_img94.png)
 
 ### Changing Pie Of Pie Size
 The size of the second Pie can be customized by using the `PieOfPieCoefficient` property. The default value of pieOfPieCoefficient is **0.6**.Its value ranges from 0 to 1.
@@ -2778,7 +2778,7 @@ The size of the second Pie can be customized by using the `PieOfPieCoefficient` 
 
 The following screenshot represents the pie of pie series with pieOfPieCoefficient as 1
 
-![ASP.NET MVC Chart Types img95](Chart-Types_images/Chart-Types_img95.png)
+![ASP.NET MVC Chart Types Changing Pie of Pie Size](Chart-Types_images/Chart-Types_img95.png)
 
 #### Customizing the Gap
 
@@ -2799,7 +2799,7 @@ The distance between the two pies in the pie of pie chart can be controlled by u
 
 {% endhighlight %}
 
-![](Chart-Types_images/Chart-Types_img96.png)
+![ASP.NET MVC Chart Types Customizing the Gap](Chart-Types_images/Chart-Types_img96.png)
 
 
 
