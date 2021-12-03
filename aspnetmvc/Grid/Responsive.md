@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive with Grid widget for Syncfusion EJMVC
-description: Learn here all about Grid support in Syncfusion ASP.NET MVC Grid control, its elements and more
+description: Learn here all about Responsive support in Syncfusion ASP.NET MVC Grid control, its elements and more
 platform: ejmvc
 control: Grid
 documentation: ug
