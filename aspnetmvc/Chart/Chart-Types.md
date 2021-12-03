@@ -59,7 +59,7 @@ To change the width of the line segment, you can use the **Width** property in t
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the line width](Chart-Types_images/Chart-Types_img2.png)
+![ASP.NET MVC Chart Types Changing the line width](Chart-Types_images/Chart-Types_img2.png)
 
 
 ### Dashed lines
@@ -136,7 +136,7 @@ You can use the **LineJoin** property to specify how two intersecting line segme
 {% endhighlight %}
 
 
-![ASP.NET MVC Chart Types changing the line join](Chart-Types_images/Chart-Types_img5.png)
+![ASP.NET MVC Chart Types Changing the line join](Chart-Types_images/Chart-Types_img5.png)
 
 
 ### MultiColor Line
@@ -213,7 +213,7 @@ To change the line width, you can use the **Width** property.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the line width](Chart-Types_images/Chart-Types_img7.png)
+![ASP.NET MVC Chart Types Changing the line width](Chart-Types_images/Chart-Types_img7.png)
 
 
 ### Dashed lines
@@ -539,7 +539,7 @@ You can change the color of a column by using the Fill property of the point.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img18.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img18.png)
 
 ### Column width customization
 
@@ -691,7 +691,7 @@ To change the color of a range column, you can use the Fill property of point.
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img20.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img20.png)
 
 
 ## Stacked Column Chart
@@ -780,7 +780,7 @@ To change the color of a stacking column, you can use the Fill property of the p
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img23.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img23.png)
 
 
 ## 100% Stacked Column Chart    
@@ -867,7 +867,7 @@ To change the color of a 100% stacking column, you can use the Fill property of 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img26.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img26.png)
 
 
 ## Bar Chart
@@ -925,7 +925,7 @@ By using the Fill property of the point, you can change the specific point of th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the color of bar](Chart-Types_images/Chart-Types_img28.png)
+![ASP.NET MVC Chart Types Changing the color of bar](Chart-Types_images/Chart-Types_img28.png)
 
 
 ## Stacked Bar Chart
@@ -1015,7 +1015,7 @@ You can change the color of a stacking bar by using the Fill property of the poi
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img31.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img31.png)
 
 
 ## 100% Stacked Bar Chart
@@ -1100,7 +1100,7 @@ To change the color of a 100% stacking bar, you can use the Fill property of the
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change a point color](Chart-Types_images/Chart-Types_img34.png)
+![ASP.NET MVC Chart Types Changing point color](Chart-Types_images/Chart-Types_img34.png)
 
 ## Spline Chart
 
@@ -1158,7 +1158,7 @@ To change the spline segment width, you can use the Width property of the series
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the Spline width](Chart-Types_images/Chart-Types_img36.png)
+![ASP.NET MVC Chart Types Changing the Spline width](Chart-Types_images/Chart-Types_img36.png)
 
 
 ### Dashed lines
@@ -1246,7 +1246,7 @@ You can use the **PieCoefficient** property to change the diameter of the Pie ch
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change Pie Size](Chart-Types_images/Chart-Types_img39.png)
+![ASP.NET MVC Chart Types Changing Pie Size](Chart-Types_images/Chart-Types_img39.png)
 
 
 ### Explode a pie segment
@@ -1274,7 +1274,7 @@ You can explode a pie segment on the chart load by using the **ExplodeIndex** of
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a Pie segment](Chart-Types_images/Chart-Types_img40.png)
+![ASP.NET MVC Chart Types Exploding a Pie segment](Chart-Types_images/Chart-Types_img40.png)
 
 
 ### Explode all the segments
@@ -1302,7 +1302,7 @@ To explode all the segments of the Pie chart, you can enable the **ExplodeAll** 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode all segments](Chart-Types_images/Chart-Types_img41.png)
+![ASP.NET MVC Chart Types Exploding all segments](Chart-Types_images/Chart-Types_img41.png)
 
 
 ### Explode a pie segment on mouse over
@@ -1330,7 +1330,7 @@ To explode a pie segment on a mouse over, you can enable the **Explode** propert
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a pie segment on mouse over](Chart-Types_images/Chart-Types_img42.png)
+![ASP.NET MVC Chart Types Exploding a pie segment on mouse over](Chart-Types_images/Chart-Types_img42.png)
 
 
 ### Sector of Pie
@@ -1420,7 +1420,7 @@ You can change the doughnut chart inner radius by using the **DoughnutCoefficien
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change Doughnut inner radius](Chart-Types_images/Chart-Types_img45.png)
+![ASP.NET MVC Chart Types Changing Doughnut inner radius](Chart-Types_images/Chart-Types_img45.png)
 
 
 ### Change the doughnut size
@@ -1448,7 +1448,7 @@ You can use the **DoughnutSize** property to change the diameter of the Doughnut
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the Doughnut size](Chart-Types_images/Chart-Types_img46.png)
+![ASP.NET MVC Chart Types Changing the Doughnut size](Chart-Types_images/Chart-Types_img46.png)
 
 
 ### Explode a doughnut segment
@@ -1476,7 +1476,7 @@ To explode a specific doughnut segment, set the index to be exploded by using th
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a doughnut segment](Chart-Types_images/Chart-Types_img47.png)
+![ASP.NET MVC Chart Types Exploding a doughnut segment](Chart-Types_images/Chart-Types_img47.png)
 
 
 ### Explode all the segments
@@ -1504,7 +1504,7 @@ To explode all the segments, you can enable the **ExplodeAll** property of the s
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode all the segments](Chart-Types_images/Chart-Types_img48.png)
+![ASP.NET MVC Chart Types Exploding all the segments](Chart-Types_images/Chart-Types_img48.png)
 
 
 ### Explode a doughnut segment on mouse over
@@ -1532,7 +1532,7 @@ To explode a doughnut segment on a mouse over, you can enable the **Explode** pr
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a doughnut segment on mouse over](Chart-Types_images/Chart-Types_img49.png)
+![ASP.NET MVC Chart Types Exploding a doughnut segment on mouse over](Chart-Types_images/Chart-Types_img49.png)
 
 
 ### Sector of Doughnut
@@ -1599,7 +1599,7 @@ EjChart provides support to render more than one series in pie and in doughnut c
 
 **Multiple Doughnut** 
 
-![ASP.NET MVC Chart Types img83](Chart-Types_images/Chart-Types_img83.png)
+![ASP.NET MVC Chart Types Multiple Doughnut](Chart-Types_images/Chart-Types_img83.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/multiplepie) here to view the Multiple Pie chart online demo sample.
@@ -1728,7 +1728,7 @@ You can explode a pyramid segment on the chart load by using the **ExplodeIndex*
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a pyramid segment](Chart-Types_images/Chart-Types_img54.png)
+![ASP.NET MVC Chart Types Exploding a pyramid segment](Chart-Types_images/Chart-Types_img54.png)
 
 
 ## Funnel Chart
@@ -1787,7 +1787,7 @@ Funnel segments height and width is calculated from the chart size, by default. 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Change the funnel width and height](Chart-Types_images/Chart-Types_img56.png)
+![ASP.NET MVC Chart Types Changing the funnel width and height](Chart-Types_images/Chart-Types_img56.png)
 
 
 ### Explode a funnel segment
@@ -1815,7 +1815,7 @@ You can explode a funnel segment on the chart load by using the **ExplodeIndex**
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Explode a funnel segment](Chart-Types_images/Chart-Types_img57.png)
+![ASP.NET MVC Chart Types Exploding a funnel segment](Chart-Types_images/Chart-Types_img57.png)
 
 
 ## Bubble Chart
