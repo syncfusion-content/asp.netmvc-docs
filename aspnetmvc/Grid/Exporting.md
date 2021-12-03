@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Exporting | Grid | ASP.NET MVC | Syncfusion
-description: exporting
+description: Learn here all about Exporting support in Syncfusion ASP.NET MVC Grid control, its elements and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Exporting
+# Exporting in ASP.NET MVC Grid
 
 The `Exporting` feature provides support to export Grid data into excel, word and PDF files. To export the grid, the `export` JavaScript method should be called with export action as parameter. To make it work from grid tool bar the `ExcelExport`, `WordExport` and `PdfExport` toolbar items needs to be added in grid tool bar using the `ToolbarItems` property of `ToolbarSettings` which are used to perform exporting. When you click the toolbar exporting icon, it internally invokes the `export` public method of grid object to export. The code sample for this is as follows.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sequencing Tasks | Gantt | ASP.NET MVC | Syncfusion
-description: sequencing tasks
+description: Learn here all about Sequencing Tasks support in Syncfusion ASP.NET MVC Gantt control, its elements and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
 ---
 
-# Sequencing Tasks
+# Sequencing Tasks in ASP.NET MVC Gantt
 
 ## How to enable serial number column in Gantt?
 

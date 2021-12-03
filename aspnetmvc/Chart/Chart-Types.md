@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Chart types |Chart  | ASP.NET MVC | Syncfusion
-description: What are the different types of Charts available in Essential JavaScript Chart.
+description: Learn here all about Chart types support in Syncfusion ASP.NET MVC Chart control, its elements and more.
 platform: ejmvc
 control: Chart
 documentation: ug
 ---
 
-# ChartTypes
+# Chart Types in ASP.NET MVC Chart
 
 ## Line Chart
 
@@ -478,7 +478,7 @@ To render a 100% Stacked Area Chart, set the Type as **StackingArea100** in the 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types 100% Stacked Area Chart](Chart-Types_images/Chart-Types_img16.png)
+![ASP.NET MVC Chart Types 100 Stacked Area Chart](Chart-Types_images/Chart-Types_img16.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingarea100) here to view 100% Stacked Area Chart online demo.
@@ -806,7 +806,7 @@ To render a 100% Stacked Column Chart, set the Type as **StackingColumn100** in 
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types 100% Stacked Column Chart](Chart-Types_images/Chart-Types_img24.png)
+![ASP.NET MVC Chart Types 100 Stacked Column Chart](Chart-Types_images/Chart-Types_img24.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingcolumn100) here to view 100% Stacked Column Chart online demo.
@@ -841,7 +841,7 @@ By using the **StackingGroup** property, you can group the 100% stacking columns
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types Cluster/Group 100% Stacked Columns](Chart-Types_images/Chart-Types_img25.png)
+![ASP.NET MVC Chart Types Cluster/Group 100 Stacked Columns](Chart-Types_images/Chart-Types_img25.png)
 
 
 ### Change a point color
@@ -1043,7 +1043,7 @@ To render a 100% Stacked Bar Chart, set the Type as **StackingBar100** in the ch
 
 {% endhighlight %}
 
-![ASP.NET MVC Chart Types 100% Stacked Bar Chart](Chart-Types_images/Chart-Types_img32.png)
+![ASP.NET MVC Chart Types 100 Stacked Bar Chart](Chart-Types_images/Chart-Types_img32.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/stackingbar100) here to view 100% Stacked Bar Chart online demo.
 
