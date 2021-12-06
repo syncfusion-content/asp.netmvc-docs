@@ -69,7 +69,7 @@ Enabling responsive row makes the grid to render the record values in vertical o
 {% endtabs %} 
 
 
-![ASP.NET MVC Grid Responsive row](Responsive_images/Responsive_img1.png)
+![Responsive row in ASP.NET MVC Grid](Responsive_images/Responsive_img1.png)
 
 
 W> IE8 and IE9 does not support responsive row. The `ejgrid.responsive.css` should be referred to display responsive row.
@@ -78,31 +78,31 @@ W> IE8 and IE9 does not support responsive row. The `ejgrid.responsive.css` shou
 
 The customized layout for filtering, sorting, searching and CRUD operations in mobile device can be seen in the following screen shots.
 
-![ASP.NET MVC Grid Responsive Customized features](Responsive_images/Responsive_img2.png)
+![Responsive Customized features in ASP.NET MVC Grid](Responsive_images/Responsive_img2.png)
 {:caption}
 Responsive row with filtering , sorting and searching
 
-![ASP.NET MVC Grid Responsive row with filtering, sorting and searching](Responsive_images/Responsive_img3.png)
+![Responsive row with filtering, sorting and searching in ASP.NET MVC Grid](Responsive_images/Responsive_img3.png)
 
 {:caption}
 CRUD in mobile layout
 
-![ASP.NET MVC Grid Responsive CRUD in mobile layout](Responsive_images/Responsive_img4.png)
+![Responsive CRUD in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img4.png)
 
 {:caption}
 Filtering in mobile layout
 
-![ASP.NET MVC Grid Responsive Filtering in mobile layout](Responsive_images/Responsive_img5.png)
+![Responsive Filtering in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img5.png)
 {:caption}
 
 Filtering in mobile layout
 
-![ASP.NET MVC Grid Responsive Filtering in mobile layout](Responsive_images/Responsive_img6.png)
+![Responsive Filtering in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img6.png)
 
 {:caption}
 Sorting in mobile layout
 
-![ASP.NET MVC Grid Responsive Sorting in mobile layout](Responsive_images/Responsive_img7.png)
+![Responsive Sorting in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img7.png)
 {:caption}
 
 Searching in mobile layout
@@ -211,12 +211,12 @@ If the client width is between 321px and 800px, then the grid will render in tab
 {% endhighlight  %}
 {% endtabs %} 
 
-![ASP.NET MVC Grid Responsive Default tab layout](Responsive_images/Responsive_img8.png)
+![Responsive Default tab layout in ASP.NET MVC Grid](Responsive_images/Responsive_img8.png)
 {:caption}
 
 Default tab layout
 
-![ASP.NET MVC Grid Responsive Filtering design in tab layout](Responsive_images/Responsive_img9.png)
+![Responsive Filtering design in tab layout in ASP.NET MVC Grid](Responsive_images/Responsive_img9.png)
 
 {:caption}
 Filtering design in tab layout.
