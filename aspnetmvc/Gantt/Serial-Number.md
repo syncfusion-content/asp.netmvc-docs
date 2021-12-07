@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sequencing Tasks | Gantt | ASP.NET MVC | Syncfusion
-description: sequencing tasks
+description: Learn here all about Sequencing Tasks support in Syncfusion ASP.NET MVC Gantt control, its elements and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
 ---
 
-# Sequencing Tasks
+# Sequencing Tasks in ASP.NET MVC Gantt
 
 ## How to enable serial number column in Gantt?
 
@@ -27,6 +27,6 @@ Code snippets for enabling the serial number is as follows.
 
 The following screenshot displays the Serial number column in Gantt control.
 
-![](Serial-Number_images/Serial_img1.png)
+![ASP.NET MVC Gantt displaying the Serial Number Column](Serial-Number_images/Serial_img1.png)
 
 The serial number column will be resequenced automatically on performing any actions which will change the row indexes of the tasks such as row drag and drop, deleting, adding.
