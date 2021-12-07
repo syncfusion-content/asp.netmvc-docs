@@ -87,22 +87,22 @@ Responsive row with filtering , sorting and searching
 {:caption}
 CRUD in mobile layout
 
-![Responsive CRUD in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img4.png)
+![Responsive CRUD mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img4.png)
 
 {:caption}
 Filtering in mobile layout
 
-![Responsive Filtering in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img5.png)
+![Responsive Filtering mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img5.png)
 {:caption}
 
 Filtering in mobile layout
 
-![Responsive Filtering in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img6.png)
+![Responsive Filtering mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img6.png)
 
 {:caption}
 Sorting in mobile layout
 
-![Responsive Sorting in mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img7.png)
+![Responsive Sorting mobile layout in ASP.NET MVC Grid](Responsive_images/Responsive_img7.png)
 {:caption}
 
 Searching in mobile layout
@@ -216,7 +216,7 @@ If the client width is between 321px and 800px, then the grid will render in tab
 
 Default tab layout
 
-![Responsive Filtering design in tab layout in ASP.NET MVC Grid](Responsive_images/Responsive_img9.png)
+![Responsive Filtering design tab layout in ASP.NET MVC Grid](Responsive_images/Responsive_img9.png)
 
 {:caption}
 Filtering design in tab layout.
