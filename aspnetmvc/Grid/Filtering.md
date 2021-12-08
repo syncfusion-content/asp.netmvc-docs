@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Filtering with Grid widget for Syncfusion Essential MVC
-description: How to enable filtering and its functionalities
+description: Learn here all about Filtering support in Syncfusion ASP.NET MVC Grid control, its elements and more
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Filtering
+# Filtering in ASP.NET MVC Grid
 
 Filtering helps to view the particular or related records from dataSource which meets a given filtering criteria. To enable filter, set the `AllowFiltering` property as`true`.   
 
@@ -65,7 +65,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img1.png)
+![Filtering in ASP.NET MVC Grid](filtering_images/filtering_img1.png)
 
 
 ## Menu filter
@@ -116,19 +116,19 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img2.png)
+![Filtering Numeric Filter in ASP.NET MVC Grid](filtering_images/filtering_img2.png)
 
 Numeric Filter
 
-![](filtering_images/filtering_img3.png)
+![Filtering String Filter in ASP.NET MVC Grid](filtering_images/filtering_img3.png)
 
 String Filter
 
-![](filtering_images/filtering_img4.png)
+![Filtering Date Filter in ASP.NET MVC Grid](filtering_images/filtering_img4.png)
 
 Date Filter
 
-![](filtering_images/filtering_img5.png)
+![Filtering Boolean Filter in ASP.NET MVC Grid](filtering_images/filtering_img5.png)
 
 Boolean Filter
 
@@ -175,7 +175,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img6.png)
+![Filtering Excel like Filter in ASP.NET MVC Grid](filtering_images/filtering_img6.png)
 
 ### Filtering between values
 
@@ -232,7 +232,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img7.png)
+![Filtering Checkbox list generation in ASP.NET MVC Grid](filtering_images/filtering_img7.png)
 
 
 ### Add current selection to filter checkbox:
@@ -241,7 +241,7 @@ When filtering is done multiple times on the same column then the previously fil
 
 The following image describes the previous mentioned behavior.
 
-![](filtering_images/filtering_img12.png)
+![Filtering Add current selection to filter checkbox in ASP.NET MVC Grid](filtering_images/filtering_img12.png)
 
 
 ### Case sensitivity
@@ -286,7 +286,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img8.png)
+![Filtering Case Sensitivity in ASP.NET MVC Grid](filtering_images/filtering_img8.png)
 
 
 ## Filter bar
@@ -469,7 +469,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img9.png)
+![Filtering Filter bar modes in ASP.NET MVC Grid](filtering_images/filtering_img9.png)
 
 
 Filter bar modes:
@@ -523,7 +523,7 @@ The following code example describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img10.png)
+![Filtering Filter bar message in ASP.NET MVC Grid](filtering_images/filtering_img10.png)
 
 
 ## Filter Operators
@@ -761,7 +761,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the previous code example.
 
-![](filtering_images/filtering_img11.png)
+![Filtering FilterBar template in ASP.NET MVC Grid](filtering_images/filtering_img11.png)
 {:caption}
 After Filtering
 
