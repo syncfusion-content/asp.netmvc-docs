@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hierarchical binding in ASP.NET MVC Grid | Syncfusion
-description: Learn here all how hierarchical binding support in Syncfusion ASP.NET MVC Grid control,its element and more.
+title: Hierarchical Binding in ASP.NET MVC Grid | Syncfusion
+description: Learn here all how hierarchical binding support in Syncfusion ASP.NET MVC Grid(SfGrid) control,its element and more.
 platform: ejmvc
 control: Grid
 documentation: ug
