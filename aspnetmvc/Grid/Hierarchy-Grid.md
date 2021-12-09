@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-# Hierarchical Bindings in ASP.NET MVC Grid
+# Hierarchical Bindings in ASP.NET MVC Grid(SfGrid)
 
 Hierarchical binding can be used to create the Grid with parent and child relation, this facilitate you to view the child records for a particular row by clicking on the Expander button present in first column of each grid row. This can be enabled by defining `ChildGrid` and `QueryString`.
 
