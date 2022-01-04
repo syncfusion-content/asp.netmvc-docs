@@ -1,13 +1,13 @@
 ---
 layout: post
 title: How to - DropDownList control for Syncfusion ASP.NET MVC
-description: How To Section in DropDownList control for Syncfusion ASP.NET MVC
+description: Learn here all about How To support in Syncfusion ASP.NET MVC DropDownList control, its element and more
 platform: ejmvc
 control: DropDownList
 documentation: ug
 ---
 
-# How To
+# How To in ASP.NET MVC DropDownList
 
 ## Add check all option in popup list?
 
@@ -81,7 +81,7 @@ You can use HeaderTemplate property to add any HTML element. Code snippet to add
 
 The following screenshot exhibits the output of the above code,
 
-![](HowTo_images/HowTo_img2.jpeg)
+![Add check all option in popup list in ASP.NET MVC DropDownList](HowTo_images/HowTo_img2.jpeg)
 
 ## Render the DropDownList in Partial View using normal mode
 
