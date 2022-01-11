@@ -6,7 +6,7 @@ platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Editing
+# Editing Support in ASP.NET MVC Grid
 
 The grid control has support for dynamic insertion, updating and deletion of records. You can start the edit action either by double clicking the particular row or by selecting the required row and clicking on Edit icon in toolbar. Similarly, you can add new record to grid either by clicking on insert icon in toolbar or on an external button which is bound to call `addRecord` method of grid.  `Save` and `Cancel` while on edit mode is possible using respective toolbar icon in grid.
 
@@ -71,7 +71,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img1.png)
+![ASPNETMVC_Grid_Editingimages](Editing_images/Editing_img1.png)
 
 ## Cell edit type and its edit options
 
@@ -168,7 +168,7 @@ The following code example describes the above behavior
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img2.png)
+![ASPNETMVC_Grid_EditTypeimages](Editing_images/Editing_img2.png)
 
 ## Cell Edit Template
 
@@ -251,7 +251,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img3.png)
+![ASPNETMVC_Grid_Edit_Templateimages](Editing_images/Editing_img3.png)
 
 
 ## Edit Modes
@@ -313,7 +313,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img4.png)
+![ASPNETMVC_Grid_Edit_Modeimages](Editing_images/Editing_img4.png)
 
 
 ### Inline Form
@@ -369,7 +369,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img5.png)
+![ASPNETMVC_Grid_Inline_Formimages](Editing_images/Editing_img5.png)
 
 
 ### Inline Template Form
@@ -479,11 +479,11 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img6.png)
+![ASPNETMVC_Grid_Inline_Templateimages](Editing_images/Editing_img6.png)
 
 Before the template elements are converted to JS controls
 
-![](Editing_images/Editing_img7.png)
+![ASPNETMVC_Grid_Editingimages](Editing_images/Editing_img7.png)
 
 After the template elements are converted to JS controls using actionComplete event.
 
@@ -543,7 +543,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img8.png)
+![ASPNETMVC_Grid_Dialogimages](Editing_images/Editing_img8.png)
 
 
 ### Dialog Template Form
@@ -650,11 +650,11 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img9.png)
+![ASPNETMVC_Grid_Dialog_Modeimages](Editing_images/Editing_img9.png)
 
 Before the template elements are converted to JS controls
 
-![](Editing_images/Editing_img10.png)
+![ASPNETMVC_Grid_Dialogimages](Editing_images/Editing_img10.png)
 
 After the template elements are converted to JS controls using actionComplete event.
 
@@ -715,7 +715,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img11.png)
+![ASPNETMVC_Grid_External_Formimages](Editing_images/Editing_img11.png)
 
 
 Form Position:
@@ -778,7 +778,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img12.png)
+![ASPNETMVC_Grid_Form_Positionimages](Editing_images/Editing_img12.png)
 
 
 ### External Template Form
@@ -884,11 +884,11 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img13.png)
+![ASPNETMVC_Grid_Editing_Templateimages](Editing_images/Editing_img13.png)
 
 Before the template elements are converted to JS controls
 
-![](Editing_images/Editing_img14.png)
+![ASPNETMVC_Grid_Editing_template_formimages](Editing_images/Editing_img14.png)
 
 After the template elements are converted to JS controls using actionComplete event.
 
@@ -952,7 +952,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img15.png)
+![ASPNETMVC_Grid_Excel_likeimages](Editing_images/Editing_img15.png)
 
 
 ## Confirmation messages
@@ -1013,7 +1013,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img16.png)
+![ASPNETMVC_Grid_Confirmationimages](Editing_images/Editing_img16.png)
 
 
 To show delete confirm dialog while deleting a record, set `ShowDeleteConfirmDialog` as true.
@@ -1073,7 +1073,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img17.png)
+![ASPNETMVC_Grid_Confirm_Dialogimages](Editing_images/Editing_img17.png)
 
 
 ## Column Validation
@@ -1215,7 +1215,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img18.png)
+![ASPNETMVC_Grid_Editingimages](Editing_images/Editing_img18.png)
 
 N> 1. Refer this [Knowledge Base link](https://www.syncfusion.com/kb/6817/how-to-perform-server-side-validation-in-grid) to perform server side validation in Grid.
 
@@ -1295,7 +1295,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img19.png)
+![ASPNETMVC_Grid_Custom_Validationimages](Editing_images/Editing_img19.png)
 
 
 ## Persisting data in Server
@@ -1383,7 +1383,7 @@ The grid actions (sorting, filtering, paging, searching, and aggregates) details
 
 Please refer the below screen shot.
 
-![](Editing_images/Editing_img20.png)
+![ASPNETMVC_Grid_Sortingimages](Editing_images/Editing_img20.png)
 
 
 Also, using 'DataOperations' helper class you can perform grid action at server side. The in-built methods that we have provided in the DataOperations class are listed below.
@@ -1562,7 +1562,7 @@ The following code example describes the above behavior.
 
 The newly added record details are bound to the 'value' parameter. Please refer the below image.
 
-![](Editing_images/Editing_img21.png)
+![ASPNETMVC_Grid_Insertimages](Editing_images/Editing_img21.png)
 
 
 ### Update Record:
@@ -1583,7 +1583,7 @@ public ActionResult Update(EditableOrder value)
 
 The updated record details are bound to the 'value' parameter. Please refer the below image.
 
-![](Editing_images/Editing_img22.png)
+![ASPNETMVC_Grid_Update_Recordimages](Editing_images/Editing_img22.png)
 
 
 ### Delete Record:
@@ -1604,7 +1604,7 @@ public ActionResult Remove(int key)
 
 The deleted record primary key value is bound to the 'key' parameter. Please refer the below image.
 
-![](Editing_images/Editing_img23.png)
+![ASPNETMVC_Grid_Delete_Recordimages](Editing_images/Editing_img23.png)
 
 
 ### CRUD URL:
@@ -1662,7 +1662,7 @@ The following code example describes the above behavior.
 
 Please refer the below image to know about the action parameter
 
-![](Editing_images/Editing_img24.png)
+![ASPNETMVC_Grid_CRUDimages](Editing_images/Editing_img24.png)
 
 
 N> If you specify `InsertURL` along with `CrudURL` then while adding `InsertURL` only called.
@@ -1724,7 +1724,7 @@ The following code example describes the above behavior.
 
 Please refer the below image for more information about batch parameters
 
-![](Editing_images/Editing_img25.png)
+![ASPNETMVC_Grid_Batchimages](Editing_images/Editing_img25.png)
 
 
 ### Performing CRUD Operation on ODataV4 Adaptor 
@@ -1810,7 +1810,7 @@ The following code example describes the above behavior.
 
 Please refer the below image.
 
-![](Editing_images/Editing_img31.png)
+![ASPNETMVC_Grid_Insert_RecordImage](Editing_images/Editing_img31.png)
 
 Here the newly added record details are bound to the ‘order’ parameter.
 
@@ -1835,7 +1835,7 @@ The following code example describes the above behavior.
 
 Please refer the below image.
 
-![](Editing_images/Editing_img32.png)
+![ASPNETMVC_Grid_Recordimages](Editing_images/Editing_img32.png)
 
 Here the modified row data will be obtained in the order parameter.
 
@@ -1865,13 +1865,13 @@ The following code example describes the above behavior.
 
 Please refer the below image.
 
-![](Editing_images/Editing_img33.png)
+![ASPNETMVC_Grid_Delete_Recordimages](Editing_images/Editing_img33.png)
 
 The deleted record primary key value is bound to the ‘key’ parameter. 
 
 Please refer the below image.
 
-![](Editing_images/Editing_img34.png)
+![ASPNETMVC_Grid_Deleteimages](Editing_images/Editing_img34.png)
 
 
 ## Adding New Row Position
@@ -1929,7 +1929,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img26.png)
+![ASPNETMVC_Grid_Positionimages](Editing_images/Editing_img26.png)
 
 
 ## Render with blank row for easy add new
@@ -1989,7 +1989,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img27.png)
+![ASPNETMVC_Grid_Blank_Rowimages](Editing_images/Editing_img27.png)
 
 N> 1. If it is remote, then the newly added record is placed based on the index from current view data. 
 N> 2. If it is local, then the newly added record is added at the top of the page even if the added new `RowPosition` is mentioned as "Bottom".
@@ -2050,7 +2050,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/Editing_img28.png)
+![ASPNETMVC_Grid_Column_Valuesimages](Editing_images/Editing_img28.png)
 
 
 

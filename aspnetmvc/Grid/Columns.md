@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Columns | Grid | ASP.NET MVC | Syncfusion
-description: columns
+description: Learn here all about Columns support in Syncfusion Essential Studio ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Columns
+# Columns Support in ASP.NET MVC Grid
 
 Column definitions are used as the DataSource schema in the grid and it plays vital role in rendering the column values in required format and sorting, filtering, editing based on its type. The `Field` property of the columns is necessary to map the datasource values in grid columns.
 
@@ -48,7 +48,7 @@ The columns are automatically generated when `Columns` declaration is empty or u
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img1.png)
+![ASPNETMVC_Grid_columnsimages](columns_images/columns_img1.png)
 
 ### How to set the `IsPrimaryKey` for auto generated columns when editing is enabled:
 
@@ -192,7 +192,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img2.png)
+![ASPNETMVC_Grid_HeaderTextimages](columns_images/columns_img2.png)
 
 ### Header Text alignment
 
@@ -241,7 +241,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img3.png)
+![ASPNETMVC_Grid_HeaderText_Alignmentimages](columns_images/columns_img3.png)
 
 ### Header Template
 
@@ -294,7 +294,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img4.png)
+![ASPNETMVC_Grid_Header_templateimages](columns_images/columns_img4.png)
 
 ## Text alignment
 
@@ -345,7 +345,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img5.png)
+![ASPNETMVC_Grid_TextAlignmentimages](columns_images/columns_img5.png)
 
 ## Format
 
@@ -389,7 +389,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img6.png)
+![ASPNETMVC_Grid_Formatimages](columns_images/columns_img6.png)
 
 ## Width
 
@@ -431,7 +431,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img7.png)
+![ASPNETMVC_Grid_Widthimages](columns_images/columns_img7.png)
 
 
 ## Resizing
@@ -547,7 +547,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img8.png)
+![ASPNETMVC_Grid_Resizingimages](columns_images/columns_img8.png)
 
 
 ## Reorder
@@ -591,7 +591,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img10.png)
+![ASPNETMVC_Grid_Reorderimages](columns_images/columns_img10.png)
 
 ## Visibility
 
@@ -633,7 +633,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img11.png)
+![ASPNETMVC_Grid_visibilityimages](columns_images/columns_img11.png)
 
 
 ## Unbound Column
@@ -689,7 +689,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img13.png)
+![ASPNETMVC_Grid_Unbound_columnsimages](columns_images/columns_img13.png)
 
 ## Column Template
 
@@ -738,7 +738,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img14.png)
+![ASPNETMVC_Grid_columns_templateimages](columns_images/columns_img14.png)
 
 ## Controlling Grid actions
 
@@ -825,7 +825,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img15.png)
+![ASPNETMVC_Grid_gridimages](columns_images/columns_img15.png)
 
 ## Expression Column
 
@@ -872,7 +872,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img16.png)
+![ASPNETMVC_Grid_Expression_columnsimages](columns_images/columns_img16.png)
 
 
 ## Command Column
@@ -947,7 +947,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img17.png)
+![ASPNETMVC_Grid_Buttonimages](columns_images/columns_img17.png)
 
 ### Custom buttons
 
@@ -1012,7 +1012,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img18.png)
+![ASPNETMVC_Grid_custom_buttonimages](columns_images/columns_img18.png)
 
 ## Column Chooser
 
@@ -1055,7 +1055,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img19.png)
+![ASPNETMVC_Grid_columns_chooserimages](columns_images/columns_img19.png)
 
 ## Foreign Key Column
 
@@ -1110,7 +1110,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img20.png)
+![ASPNETMVC_Grid_key_columnsimages](columns_images/columns_img20.png)
 
 ## Customize column
 
@@ -1168,7 +1168,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img23.png)
+![ASPNETMVC_Grid_columnsimages](columns_images/columns_img23.png)
 
 ## Type
 
@@ -1257,7 +1257,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img24.png)
+![ASPNETMVC_Grid_Typeimages](columns_images/columns_img24.png)
 
 ## Column Layout
 
@@ -1302,4 +1302,4 @@ You can set the Grid's columns layout based on either Grid width or its columns 
 
 The following output is displayed as a result of the above code example.
 
-![](columns_images/columns_img25.png)
+![ASPNETMVC_Grid_columns_layoutimages](columns_images/columns_img25.png)

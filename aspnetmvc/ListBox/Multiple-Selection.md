@@ -1,15 +1,13 @@
 ---
 layout: post
 title: Multiple Selection | ListBox | ASP.NET MVC | Syncfusion
-description: multiple selection
+description: Learn here all about Multiple Selection support in Syncfusion Essential Studio ASP.NET MVC ListBox Control, its elements, and more.
 platform: ejmvc
 control: ListBox
 documentation: ug
 ---
 
-# Multiple Selection
-
-## Allow multiple selection
+# Multiple Selection in ASP.NET MVC ListBox
 
 ListBox widget allows you to select multiple values from the list Items using AllowMultiSelection property. You can select multiple list items along with Control key and Shift key press. To select multiple values we need to set AllowMultiSelection value to true.
 
@@ -57,7 +55,7 @@ The following steps explain you the configuration of the AllowMultiSelection for
 2. Output for ListBox control that provides multiple selection is as follows.
 
 
-   ![](Multiple-Selection_images/Multiple-Selection_img1.png)
+   ![ASPNETMVC_ListBox_AllowMultiple-Selectionimages](Multiple-Selection_images/Multiple-Selection_img1.png)
 
 
 
@@ -124,7 +122,7 @@ The following steps explains you the configuration of SelectedItemList property 
 2. Output of the above steps.
 
 
-![](Multiple-Selection_images/Multiple-Selection_img2.png)
+![ASPNETMVC_ListBox_Multiple-Selectionimages](Multiple-Selection_images/Multiple-Selection_img2.png)
 
 
 
@@ -220,7 +218,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![](Multiple-Selection_images/Multiple-Selection_img3.png)
+![ASPNETMVC_ListBox_Checkboximages](Multiple-Selection_images/Multiple-Selection_img3.png)
 
 
 
@@ -284,7 +282,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![](Multiple-Selection_images/Multiple-Selection_img4.png)
+![ASPNETMVC_ListBox_Check_Allimages](Multiple-Selection_images/Multiple-Selection_img4.png)
 
 
 
