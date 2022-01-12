@@ -55,7 +55,7 @@ The following steps explain you the configuration of the AllowMultiSelection for
 2. Output for ListBox control that provides multiple selection is as follows.
 
 
-   ![ASPNETMVC_ListBox_AllowMultiple-Selectionimages](Multiple-Selection_images/Multiple-Selection_img1.png)
+   ![ASPNETMVC ListBox AllowMultiple Selection](Multiple-Selection_images/Multiple-Selection_img1.png)
 
 
 
@@ -122,7 +122,7 @@ The following steps explains you the configuration of SelectedItemList property 
 2. Output of the above steps.
 
 
-![ASPNETMVC_ListBox_Multiple-Selectionimages](Multiple-Selection_images/Multiple-Selection_img2.png)
+![ASPNETMVC ListBox Multiple Selection](Multiple-Selection_images/Multiple-Selection_img2.png)
 
 
 
@@ -218,7 +218,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![ASPNETMVC_ListBox_Checkboximages](Multiple-Selection_images/Multiple-Selection_img3.png)
+![ASPNETMVC ListBox Checkbox](Multiple-Selection_images/Multiple-Selection_img3.png)
 
 
 
@@ -282,7 +282,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![ASPNETMVC_ListBox_Check_Allimages](Multiple-Selection_images/Multiple-Selection_img4.png)
+![ASPNETMVC ListBox Check All](Multiple-Selection_images/Multiple-Selection_img4.png)
 
 
 

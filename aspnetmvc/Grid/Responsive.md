@@ -69,7 +69,7 @@ Enabling responsive row makes the grid to render the record values in vertical o
 {% endtabs %} 
 
 
-![ASPNETMVC_Grid_Responsiveimages](Responsive_images/Responsive_img1.png)
+![ASPNETMVC Grid Responsive](Responsive_images/Responsive_img1.png)
 
 
 W> IE8 and IE9 does not support responsive row. The `ejgrid.responsive.css` should be referred to display responsive row.
@@ -82,27 +82,27 @@ The customized layout for filtering, sorting, searching and CRUD operations in m
 {:caption}
 Responsive row with filtering , sorting and searching
 
-![ASPNETMVC_Grid_Row_Filteringimages](Responsive_images/Responsive_img3.png)
+![ASPNETMVC Grid Row Filtering](Responsive_images/Responsive_img3.png)
 
 {:caption}
 CRUD in mobile layout
 
-![ASPNETMVC_Grid_CRUDimages](Responsive_images/Responsive_img4.png)
+![ASPNETMVC Grid CRUD](Responsive_images/Responsive_img4.png)
 
 {:caption}
 Filtering in mobile layout
 
-![ASPNETMVC_Grid_Filtering_in_mobile_layoutimages](Responsive_images/Responsive_img5.png)
+![ASPNETMVC Grid Filtering in mobile layout](Responsive_images/Responsive_img5.png)
 {:caption}
 
 Filtering in mobile layout
 
-![ASPNETMVC_Grid_Filtering_in_mobile_layoutimages](Responsive_images/Responsive_img6.png)
+![ASPNETMVC Grid Filtering in mobile layout](Responsive_images/Responsive_img6.png)
 
 {:caption}
 Sorting in mobile layout
 
-![ASPNETMVC_Grid_Sorting_in_mobile_layoutimages](Responsive_images/Responsive_img7.png)
+![ASPNETMVC Grid Sorting in mobile layout](Responsive_images/Responsive_img7.png)
 {:caption}
 
 Searching in mobile layout
@@ -211,12 +211,12 @@ If the client width is between 321px and 800px, then the grid will render in tab
 {% endhighlight  %}
 {% endtabs %} 
 
-![ASPNETMVC_Grid_Tablet_layoutimages](Responsive_images/Responsive_img8.png)
+![ASPNETMVC Grid Tablet layout](Responsive_images/Responsive_img8.png)
 {:caption}
 
 Default tab layout
 
-![ASPNETMVC_Grid_Default_tab_layoutimages](Responsive_images/Responsive_img9.png)
+![ASPNETMVC Grid Default tab layout](Responsive_images/Responsive_img9.png)
 
 {:caption}
 Filtering design in tab layout.

@@ -45,7 +45,7 @@ Also in the button sample, you can use the icon class names as follows,
 
 Execute the above code to render the following output.
 
-![ASPNETMVC_Button_IconsImage](Icons_images/Icons_img1.png)
+![ASPNETMVC Button Icons](Icons_images/Icons_img1.png)
 
  
 ## List of Icons
@@ -58,550 +58,550 @@ _List of icons_
 <tr>
 <td>
 e-unpin</td><td>
-{{'![ASPNETMVC_Button_unpinIconsImage](Icons_images/Icons_img2.png)'| markdownify }}
+{{'![ASPNETMVC Button unpinIcons](Icons_images/Icons_img2.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-pin</td><td>
-{{'![ASPNETMVC_Button_pin_IconsImage](Icons_images/Icons_img3.png)'| markdownify }}
+{{'![ASPNETMVC Button pin Icons](Icons_images/Icons_img3.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-upload</td><td>
-{{'![ASPNETMVC_Button_upload_IconsImage](Icons_images/Icons_img4.png)'| markdownify }}
+{{'![ASPNETMVC Button upload Icons](Icons_images/Icons_img4.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-reload</td><td>
-{{'![ASPNETMVC_Button_reload_IconsImage](Icons_images/Icons_img5.png)'| markdownify }}
+{{'![ASPNETMVC Button reload Icons](Icons_images/Icons_img5.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-collapse</td><td>
-{{'![ASPNETMVC_Button_collapse_IconsImage](Icons_images/Icons_img6.png)'| markdownify }}
+{{'![ASPNETMVC Button collapse Icons](Icons_images/Icons_img6.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-cancel</td><td>
-{{'![ASPNETMVC_Button_cancel_IconsImage](Icons_images/Icons_img7.png)'| markdownify }}
+{{'![ASPNETMVC Button cancel Icons](Icons_images/Icons_img7.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-expand</td><td>
-{{'![ASPNETMVC_Button_expand_IconsImage](Icons_images/Icons_img8.png)'| markdownify }}
+{{'![ASPNETMVC Button expand Icons](Icons_images/Icons_img8.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-minimize</td><td>
-{{'![ASPNETMVC_Button_minimize_IconsImage](Icons_images/Icons_img9.png)'| markdownify }}
+{{'![ASPNETMVC Button minimize Icons](Icons_images/Icons_img9.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-login</td><td>
-{{'![ASPNETMVC_Button_login_IconsImage](Icons_images/Icons_img10.png)'| markdownify }}
+{{'![ASPNETMVC Button login Icons](Icons_images/Icons_img10.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-orientationlanscape</td><td>
-{{'![ASPNETMVC_Button_orientationlanscape_IconsImage](Icons_images/Icons_img11.png)'| markdownify }}
+{{'![ASPNETMVC Button orientationlanscape Icons](Icons_images/Icons_img11.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-alignleft</td><td>
-{{'![ASPNETMVC_Button_alignleft_IconsImage](Icons_images/Icons_img12.png)'| markdownify }}
+{{'![ASPNETMVC Button alignleft Icons](Icons_images/Icons_img12.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-aligncenter</td><td>
-{{'![ASPNETMVC_Button_aligncenter_IconsImage](Icons_images/Icons_img13.png)'| markdownify }}
+{{'![ASPNETMVC Button aligncenter Icons](Icons_images/Icons_img13.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-alignright</td><td>
-{{'![ASPNETMVC_Button_alignright_IconsImage](Icons_images/Icons_img14.png)'| markdownify }}
+{{'![ASPNETMVC Button alignright Icons](Icons_images/Icons_img14.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-alignjustify</td><td>
-{{'![ASPNETMVC_Button_alignjustify_IconsImage](Icons_images/Icons_img15.png)'| markdownify }}
+{{'![ASPNETMVC Button alignjustify Icons](Icons_images/Icons_img15.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-alignnone</td><td>
-{{'![ASPNETMVC_Button_alignnone_IconsImage](Icons_images/Icons_img16.png)'| markdownify }}
+{{'![ASPNETMVC Button alignnone Icons](Icons_images/Icons_img16.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-filterset</td><td>
-{{'![ASPNETMVC_Button_filterset_IconsImage](Icons_images/Icons_img17.png)'| markdownify }}
+{{'![ASPNETMVC Button filterset Icons](Icons_images/Icons_img17.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-filternone</td><td>
-{{'![ASPNETMVC_Button_filternone_IconsImage](Icons_images/Icons_img18.png)'| markdownify }}
+{{'![ASPNETMVC Button filternone Icons](Icons_images/Icons_img18.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-arrowheadup-2x</td><td>
-{{'![ASPNETMVC_Button_arrowheadup_IconsImage](Icons_images/Icons_img19.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheadup Icons](Icons_images/Icons_img19.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-arrowheaddown-2x</td><td>
-{{'![ASPNETMVC_Button_arrowheaddown_IconsImage](Icons_images/Icons_img20.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheaddown Icons](Icons_images/Icons_img20.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-arrowheadleft-2x</td><td>
-{{'![ASPNETMVC_Button_arrowheadleft_IconsImage](Icons_images/Icons_img21.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheadleft Icons](Icons_images/Icons_img21.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-arrowheadright-2x</td><td>
-{{'![ASPNETMVC_Button_arrowheadright_IconsImage](Icons_images/Icons_img22.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheadright Icons](Icons_images/Icons_img22.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-numbering</td><td>
-{{'![ASPNETMVC_Button_numbering_IconsImage](Icons_images/Icons_img23.png)'| markdownify }}
+{{'![ASPNETMVC Button numbering Icons](Icons_images/Icons_img23.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-bullets</td><td>
-{{'![ASPNETMVC_Button_bullets_IconsImage](Icons_images/Icons_img24.png)'| markdownify }}
+{{'![ASPNETMVC Button bullets Icons](Icons_images/Icons_img24.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-maximize</td><td>
-{{'![ASPNETMVC_Button_maximize_IconsImage](Icons_images/Icons_img25.png)'| markdownify }}
+{{'![ASPNETMVC Button maximize Icons](Icons_images/Icons_img25.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-delete</td><td>
-{{'![ASPNETMVC_Button_delete_IconsImage](Icons_images/Icons_img26.png)'| markdownify }}
+{{'![ASPNETMVC Button delete Icons](Icons_images/Icons_img26.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-scroll</td><td>
-{{'![ASPNETMVC_Button_scroll_IconsImage](Icons_images/Icons_img27.png)'| markdownify }}
+{{'![ASPNETMVC Button scroll Icons](Icons_images/Icons_img27.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-right-scroll</td><td>
-{{'![ASPNETMVC_Button_right_IconsImage](Icons_images/Icons_img28.png)'| markdownify }}
+{{'![ASPNETMVC Button right Icons](Icons_images/Icons_img28.png)'| markdownify }}
 </td></tr>
 <tr>
 <td>
 e-search</td><td>
-{{'![ASPNETMVC_Button_search_IconsImage](Icons_images/Icons_img29.png)'| markdownify }}
+{{'![ASPNETMVC Button search Icons](Icons_images/Icons_img29.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaback</td><td>
-{{'![ASPNETMVC_Button_mediaback_IconsImage](Icons_images/Icons_img30.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaback Icons](Icons_images/Icons_img30.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaforward</td><td>
-{{'![ASPNETMVC_Button_mediaforward_IconsImage](Icons_images/Icons_img31.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaforward Icons](Icons_images/Icons_img31.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-medianext</td><td>
-{{'![ASPNETMVC_Button_medianext_IconsImage](Icons_images/Icons_img32.png)'| markdownify }}
+{{'![ASPNETMVC Button medianext Icons](Icons_images/Icons_img32.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaprev</td><td>
-{{'![ASPNETMVC_Button_mediaprev_IconsImage](Icons_images/Icons_img33.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaprev Icons](Icons_images/Icons_img33.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaeject</td><td>
-{{'![ASPNETMVC_Button_mediaeject_IconsImage](Icons_images/Icons_img34.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaeject Icons](Icons_images/Icons_img34.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaclose</td><td>
-{{'![ASPNETMVC_Button_mediaclose_IconsImage](Icons_images/Icons_img35.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaclose Icons](Icons_images/Icons_img35.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediapause</td><td>
-{{'![ASPNETMVC_Button_mediapause_IconsImage](Icons_images/Icons_img36.png)'| markdownify }}
+{{'![ASPNETMVC Button mediapause Icons](Icons_images/Icons_img36.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-mediaplay</td><td>
-{{'![ASPNETMVC_Button_mediaplay_IconsImage](Icons_images/Icons_img37.png)'| markdownify }}
+{{'![ASPNETMVC Button mediaplay Icons](Icons_images/Icons_img37.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-righttick</td><td>
-{{'![ASPNETMVC_Button_righttick_IconsImage](Icons_images/Icons_img38.png)'| markdownify }}
+{{'![ASPNETMVC Button righttick Icons](Icons_images/Icons_img38.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-smile</td><td>
-{{'![ASPNETMVC_Button_smile_IconsImage](Icons_images/Icons_img39.png)'| markdownify }}
+{{'![ASPNETMVC Button smile Icons](Icons_images/Icons_img39.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-information</td><td>
-{{'![ASPNETMVC_Button_information_IconsImage](Icons_images/Icons_img40.png)'| markdownify }}
+{{'![ASPNETMVC Button information Icons](Icons_images/Icons_img40.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-left-arrow</td><td>
-{{'![ASPNETMVC_Button_left_IconsImage](Icons_images/Icons_img41.png)'| markdownify }}
+{{'![ASPNETMVC Button left Icons](Icons_images/Icons_img41.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-right-arrow</td><td>
-{{'![ASPNETMVC_Button_right_IconsImage](Icons_images/Icons_img42.png)'| markdownify }}
+{{'![ASPNETMVC Button right Icons](Icons_images/Icons_img42.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-file-delete</td><td>
-{{'![ASPNETMVC_Button_delete_IconsImage](Icons_images/Icons_img43.png)'| markdownify }}
+{{'![ASPNETMVC Button delete Icons](Icons_images/Icons_img43.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-file-percentage-success</td><td>
-{{'![ASPNETMVC_Button_percentage_IconsImage](Icons_images/Icons_img44.png)'| markdownify }}
+{{'![ASPNETMVC Button percentage Icons](Icons_images/Icons_img44.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-file-cancel</td><td>
-{{'![ASPNETMVC_Button_file_IconsImage](Icons_images/Icons_img45.png)'| markdownify }}
+{{'![ASPNETMVC Button file cancel Icons](Icons_images/Icons_img45.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-file-percentage-failed</td><td>
-{{'![ASPNETMVC_Button_file_IconsImage](Icons_images/Icons_img46.png)'| markdownify }}
+{{'![ASPNETMVC Button file percentage Icons](Icons_images/Icons_img46.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-file-retry</td><td>
-{{'![ASPNETMVC_Button_file_IconsImage](Icons_images/Icons_img47.png)'| markdownify }}
+{{'![ASPNETMVC Button file retry Icons](Icons_images/Icons_img47.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-resize-handle</td><td>
-{{'![ASPNETMVC_Button_resize_IconsImage](Icons_images/Icons_img48.png)'| markdownify }}
+{{'![ASPNETMVC Button resize Icons](Icons_images/Icons_img48.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-down-arrow</td><td>
-{{'![ASPNETMVC_Button_down-arrow_IconsImage](Icons_images/Icons_img49.png)'| markdownify }}
+{{'![ASPNETMVC Button down arrow Icons](Icons_images/Icons_img49.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-time</td><td>
-{{'![ASPNETMVC_Button_time_IconsImage](Icons_images/Icons_img50.png)'| markdownify }}
+{{'![ASPNETMVC Button time Icons](Icons_images/Icons_img50.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-up-arrow</td><td>
-{{'![ASPNETMVC_Button_up-arrow_IconsImage](Icons_images/Icons_img51.png)'| markdownify }}
+{{'![ASPNETMVC Button up arrow Icons](Icons_images/Icons_img51.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-date</td><td>
-{{'![ASPNETMVC_Button_date_IconsImage](Icons_images/Icons_img52.png)'| markdownify }}
+{{'![ASPNETMVC Button date Icons](Icons_images/Icons_img52.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-datetime</td><td>
-{{'![ASPNETMVC_Button_datetime_IconsImage](Icons_images/Icons_img53.png)'| markdownify }}
+{{'![ASPNETMVC Button datetime Icons](Icons_images/Icons_img53.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-collapse-arrow</td><td>
-{{'![ASPNETMVC_Button_collapse_IconsImage](Icons_images/Icons_img54.png)'| markdownify }}
+{{'![ASPNETMVC Button collapse Icons](Icons_images/Icons_img54.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-expand-arrow</td><td>
-{{'![ASPNETMVC_Button_expand_IconsImage](Icons_images/Icons_img55.png)'| markdownify }}
+{{'![ASPNETMVC Button expand Icons](Icons_images/Icons_img55.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-restore</td><td>
-{{'![ASPNETMVC_Button_restore_IconsImage](Icons_images/Icons_img56.png)'| markdownify }}
+{{'![ASPNETMVC Button restore Icons](Icons_images/Icons_img56.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-plus</td><td>
-{{'![ASPNETMVC_Button_plus_IconsImage](Icons_images/Icons_img57.png)'| markdownify }}
+{{'![ASPNETMVC Button plus Icons](Icons_images/Icons_img57.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-minus</td><td>
-{{'![ASPNETMVC_Button_minus_IconsImage](Icons_images/Icons_img58.png)'| markdownify }}
+{{'![ASPNETMVC Button minus Icons](Icons_images/Icons_img58.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-handup</td><td>
-{{'![ASPNETMVC_Button_handup_IconsImage](Icons_images/Icons_img59.png)'| markdownify }}
+{{'![ASPNETMVC Button handup Icons](Icons_images/Icons_img59.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-clock</td><td>
-{{'![ASPNETMVC_Button_clock_IconsImage](Icons_images/Icons_img60.png)'| markdownify }}
+{{'![ASPNETMVC Button clock Icons](Icons_images/Icons_img60.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-cursor</td><td>
-{{'![ASPNETMVC_Button_cursor_IconsImage](Icons_images/Icons_img61.png)'| markdownify }}
+{{'![ASPNETMVC Button cursor Icons](Icons_images/Icons_img61.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-hyperlink</td><td>
-{{'![ASPNETMVC_Button_hyperlink_IconsImage](Icons_images/Icons_img62.png)'| markdownify }}
+{{'![ASPNETMVC Button hyperlink Icons](Icons_images/Icons_img62.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-hyperlinkbreak</td><td>
-{{'![ASPNETMVC_Button_hyperlinkbreak_IconsImage](Icons_images/Icons_img63.png)'| markdownify }}
+{{'![ASPNETMVC Button hyperlinkbreak Icons](Icons_images/Icons_img63.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-settings</td><td>
-{{'![ASPNETMVC_Button_settings_IconsImage](Icons_images/Icons_img64.png)'| markdownify }}
+{{'![ASPNETMVC Button settings Icons](Icons_images/Icons_img64.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-shoppingcart</td><td>
-{{'![ASPNETMVC_Button_shoppingcart_IconsImage](Icons_images/Icons_img65.png)'| markdownify }}
+{{'![ASPNETMVC Button shoppingcart Icons](Icons_images/Icons_img65.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-palette</td><td>
-{{'![ASPNETMVC_Button_palette_IconsImage](Icons_images/Icons_img66.png)'| markdownify }}
+{{'![ASPNETMVC Button palette Icons](Icons_images/Icons_img66.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-warningmessage</td><td>
-{{'![ASPNETMVC_Button_warningmessage_IconsImage](Icons_images/Icons_img67.png)'| markdownify }}
+{{'![ASPNETMVC Button warningmessage Icons](Icons_images/Icons_img67.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-cut</td><td>
-{{'![ASPNETMVC_Button_cut_IconsImage](Icons_images/Icons_img68.png)'| markdownify }}
+{{'![ASPNETMVC Button cut Icons](Icons_images/Icons_img68.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-copy</td><td>
-{{'![ASPNETMVC_Button_copy_IconsImage](Icons_images/Icons_img69.png)'| markdownify }}
+{{'![ASPNETMVC Button copy Icons](Icons_images/Icons_img69.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-paste</td><td>
-{{'![ASPNETMVC_Button_paste_IconsImage](Icons_images/Icons_img70.png)'| markdownify }}
+{{'![ASPNETMVC Button paste Icons](Icons_images/Icons_img70.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-edit</td><td>
-{{'![ASPNETMVC_Button_edit_IconsImage](Icons_images/Icons_img71.png)'| markdownify }}
+{{'![ASPNETMVC Button edit Icons](Icons_images/Icons_img71.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-swapleft</td><td>
-{{'![ASPNETMVC_Button_swapleft_IconsImage](Icons_images/Icons_img72.png)'| markdownify }}
+{{'![ASPNETMVC Button swapleft Icons](Icons_images/Icons_img72.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-swapright</td><td>
-{{'![ASPNETMVC_Button_swapright_IconsImage](Icons_images/Icons_img73.png)'| markdownify }}
+{{'![ASPNETMVC Button swapright Icons](Icons_images/Icons_img73.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-swapup</td><td>
-{{'![ASPNETMVC_Button_swapup_IconsImage](Icons_images/Icons_img74.png)'| markdownify }}
+{{'![ASPNETMVC Button swapup Icons](Icons_images/Icons_img74.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-swapdown</td><td>
-{{'![ASPNETMVC_Button_swapdown_IconsImage](Icons_images/Icons_img75.png)'| markdownify }}
+{{'![ASPNETMVC Button swapdown Icons](Icons_images/Icons_img75.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-zoomin</td><td>
-{{'![ASPNETMVC_Button_zoomin_IconsImage](Icons_images/Icons_img76.png)'| markdownify }}
+{{'![ASPNETMVC Button zoomin Icons](Icons_images/Icons_img76.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-zoomout</td><td>
-{{'![ASPNETMVC_Button_zoomout_IconsImage](Icons_images/Icons_img77.png)'| markdownify }}
+{{'![ASPNETMVC Button zoomout Icons](Icons_images/Icons_img77.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-star</td><td>
-{{'![ASPNETMVC_Button_star_IconsImage](Icons_images/Icons_img78.png)'| markdownify }}
+{{'![ASPNETMVC Button star Icons](Icons_images/Icons_img78.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-home</td><td>
-{{'![ASPNETMVC_Button_home_IconsImage](Icons_images/Icons_img79.png)'| markdownify }}
+{{'![ASPNETMVC Button home Icons](Icons_images/Icons_img79.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-clipboard</td><td>
-{{'![ASPNETMVC_Button_clipboard_IconsImage](Icons_images/Icons_img80.png)'| markdownify }}
+{{'![ASPNETMVC Button clipboard Icons](Icons_images/Icons_img80.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-userlogin</td><td>
-{{'![ASPNETMVC_Button_userlogin_IconsImage](Icons_images/Icons_img81.png)'| markdownify }}
+{{'![ASPNETMVC Button userlogin Icons](Icons_images/Icons_img81.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-dataexport</td><td>
-{{'![ASPNETMVC_Button_dataexport_IconsImage](Icons_images/Icons_img82.png)'| markdownify }}
+{{'![ASPNETMVC Button dataexport Icons](Icons_images/Icons_img82.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-arrowheadright</td><td>
-{{'![ASPNETMVC_Button_arrowheadright_IconsImage](Icons_images/Icons_img83.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheadright Icons](Icons_images/Icons_img83.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-arrowheaddown</td><td>
-{{'![ASPNETMVC_Button_arrowheaddown_IconsImage](Icons_images/Icons_img84.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowheaddown Icons](Icons_images/Icons_img84.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-undo</td><td>
-{{'![ASPNETMVC_Button_undo_IconsImage](Icons_images/Icons_img85.png)'| markdownify }}
+{{'![ASPNETMVC Button undo Icons](Icons_images/Icons_img85.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-redo</td><td>
-{{'![ASPNETMVC_Button_redo_IconsImage](Icons_images/Icons_img86.png)'| markdownify }}
+{{'![ASPNETMVC Button redo Icons](Icons_images/Icons_img86.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-bold</td><td>
-{{'![ASPNETMVC_Button_bold_IconsImage](Icons_images/Icons_img87.png)'| markdownify }}
+{{'![ASPNETMVC Button bold Icons](Icons_images/Icons_img87.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-italic</td><td>
-{{'![ASPNETMVC_Button_italic_IconsImage](Icons_images/Icons_img88.png)'| markdownify }}
+{{'![ASPNETMVC Button italic Icons](Icons_images/Icons_img88.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-underline</td><td>
-{{'![ASPNETMVC_Button_underline_IconsImage](Icons_images/Icons_img89.png)'| markdownify }}
+{{'![ASPNETMVC Button underline Icons](Icons_images/Icons_img89.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-strikethrough</td><td>
-{{'![ASPNETMVC_Button_strikethrough_IconsImage](Icons_images/Icons_img90.png)'| markdownify }}
+{{'![ASPNETMVC Button strikethrough Icons](Icons_images/Icons_img90.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-font</td><td>
-{{'![ASPNETMVC_Button_font_IconsImage](Icons_images/Icons_img91.png)'| markdownify }}
+{{'![ASPNETMVC Button font Icons](Icons_images/Icons_img91.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-rarrowdown</td><td>
-{{'![ASPNETMVC_Button_arrowdown_IconsImage](Icons_images/Icons_img92.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowdown Icons](Icons_images/Icons_img92.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-rarrowleft</td><td>
-{{'![ASPNETMVC_Button_arrowleft_IconsImage](Icons_images/Icons_img93.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowleft Icons](Icons_images/Icons_img93.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-rarrowup</td><td>
-{{'![ASPNETMVC_Button_arrowup_IconsImage](Icons_images/Icons_img94.png)'| markdownify }}
+{{'![ASPNETMVC Button arrowup Icons](Icons_images/Icons_img94.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-rarrowright</td><td>
-{{'![ASPNETMVC_Button_erarrowright_IconsImage](Icons_images/Icons_img95.png)'| markdownify }}
+{{'![ASPNETMVC Button erarrowright Icons](Icons_images/Icons_img95.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-calender</td><td>
-{{'![ASPNETMVC_Button_calender_IconsImage](Icons_images/Icons_img96.png)'| markdownify }}
+{{'![ASPNETMVC Button calender Icons](Icons_images/Icons_img96.png)'| markdownify }}
 
 </td></tr>
 <tr>
 <td>
 e-save</td><td>
-{{'![ASPNETMVC_Button_save_IconsImage](Icons_images/Icons_img97.png)'| markdownify }}
+{{'![ASPNETMVC Button save Icons](Icons_images/Icons_img97.png)'| markdownify }}
 
 </td></tr>
 </table>

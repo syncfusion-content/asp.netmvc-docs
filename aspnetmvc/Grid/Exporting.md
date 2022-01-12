@@ -1692,7 +1692,7 @@ The background color of the alternative row of the grid content.</td></tr>
 
 
 {% endtabs %} 
-![ASPNETMVC_Grid_Exportingimages](Exporting_images/Customizing-Themes_img2.png)
+![ASPNETMVC Grid Exporting](Exporting_images/Customizing-Themes_img2.png)
 
 ## Exporting server events
 
@@ -1860,7 +1860,7 @@ You can customize the particular cell or particular  row of exporting files usin
 
 {% endtabs %}
 
-![ASPNETMVC_Grid_Exporting_server_eventsImage](Exporting_images/Exporting_Serverside_Event.png)
+![ASPNETMVC Grid Exporting server events](Exporting_images/Exporting_Serverside_Event.png)
 
 
 

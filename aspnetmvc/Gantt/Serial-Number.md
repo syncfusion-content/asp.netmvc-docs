@@ -25,6 +25,6 @@ Code snippets for enabling the serial number is as follows.
 
 The following screenshot displays the Serial number column in Gantt control.
 
-![ASPNETMVC_Gantt_Serial-Numberimages](Serial-Number_images/Serial_img1.png)
+![ASPNETMVC Gantt Serial Number](Serial-Number_images/Serial_img1.png)
 
 The serial number column will be resequenced automatically on performing any actions which will change the row indexes of the tasks such as row drag and drop, deleting, adding.
