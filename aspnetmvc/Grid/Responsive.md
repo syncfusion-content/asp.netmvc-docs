@@ -78,7 +78,7 @@ W> IE8 and IE9 does not support responsive row. The `ejgrid.responsive.css` shou
 
 The customized layout for filtering, sorting, searching and CRUD operations in mobile device can be seen in the following screen shots.
 
-![ASPNETMVC_Grid_Featuresimages](Responsive_images/Responsive_img2.png)
+![ASPNETMVC Grid Features](Responsive_images/Responsive_img2.png)
 {:caption}
 Responsive row with filtering , sorting and searching
 
