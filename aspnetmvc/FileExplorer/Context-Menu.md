@@ -1,12 +1,12 @@
 ---
 title: Context Menu | FileExplorer | ASP.NET MVC | Syncfusion
-description: Context Menu support in FileExplorer 
+description: Learn here about Context Menu support in Syncfusion Essential ASP.NET MVC FileExplorer Control, its elements, and more.
 platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Context Menu
 ---
-# Context Menu
+# Context Menu in ASP.NET MVC FileExplorer
 
 The context-menu has [list of items](#context-menu-items) which helps to perform FileExplorer operations, and it appears based on the target such as file or folder.
 
@@ -265,7 +265,7 @@ Icons of context menu items can be customized by overriding the default context 
 
 The following screenshot displays the customization of context menu in FileExplorer control.
 
-![](Context-Menu_images/Context-Menu_img1.png)
+![ASP.NET MVC FileExplorer Customization](Context-Menu_images/Context-Menu_img1.png)
 
 ## Context Menu Events
 
