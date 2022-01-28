@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Look and feel | Menu | ASP.NET MVC | Syncfusion
-description: look and feel
+description: Learn here about look and feel support in Syncfusion Essential ASP.NET MVC Menu Control, its elements, and more.
 platform: ejmvc
 control: Menu
 documentation: ug
 ---
 
-# Look and feel
+# Look and feel in ASP.NET MVC Menu
 
 Essential JavaScript controls feature 12 built-in themes, six flat and gradient effects, and also supports custom skin options for user-defined themes.
 
@@ -145,7 +145,7 @@ Using this CssClass you can override the existing styles under the theme style s
 
 Following screenshot displays the output of the above code.
 
-![](Look-and-feel_images/Look-and-feel_img1.png)
+![ASP.NET MVC Menu look and feel](Look-and-feel_images/Look-and-feel_img1.png)
 
 Look and feel of a Menu
 {:.caption}
