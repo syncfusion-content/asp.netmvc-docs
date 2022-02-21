@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Row with Grid widget for Syncfusion Essential MVC
-description: How to use and customize the grid row
+description: How to use and customize the row in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Row
+# Row support in ASP.NET MVC Grid
 It represents the record details that are fetched from the datasource.
 
 ## Row hover
@@ -47,7 +47,7 @@ The following code example describes the previous behavior.
 {% endtabs %} 
 The following output is displayed as a result of the previous code example.
 
-![](Row_images/Row_img1.png)
+![ASP.NET MVC Grid Row](Row_images/Row_img1.png)
 
 ## Details template
 
@@ -127,7 +127,7 @@ The following code example describes the previous behavior.
 {% endtabs %}
 The following output is displayed as a result of the previous code example.
 
-![](Row_images/Row_img2.png)
+![ASP.NET MVC Grid template](Row_images/Row_img2.png)
 
 ## Row Template
 
@@ -219,7 +219,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the previous code example.
 
-![](Row_images/Row_img3.png)
+![ASP.NET MVC Grid Row Template](Row_images/Row_img3.png)
 
 ## Alternate row styling
 
@@ -262,7 +262,7 @@ By default its value is `true`, so the following code example describes the how 
 {% endtabs %} 
 The following output is displayed as a result of the previous code example.
 
-![](Row_images/Row_img4.png)
+![ASP.NET MVC Grid Alternate row styling](Row_images/Row_img4.png)
 
 
 ## Drag-and-Drop
@@ -330,12 +330,12 @@ The following code example describes the previous behavior.
 
 The following output is displayed before reordering rows. 
 
-![](Row_images/Row_img5.png)
+![ASP.NET MVC Grid Reorder](Row_images/Row_img5.png)
 {:Before Drop}
 
 The following output is displayed after reordering rows.
 
-![](Row_images/Row_img6.png)
+![ASP.NET MVC Grid after drop](Row_images/Row_img6.png)
 {:After Drop}
 
 ### Grid-to-grid
@@ -448,12 +448,12 @@ The following code example describes the previous behavior.
 
 The following output is displayed before dropping grid rows.
 
-![](Row_images/Row_img7.png)
+![ASP.NET MVC Grid Before Drop](Row_images/Row_img7.png)
 {:Before Drop}
 
 The following output is displayed after dropping grid rows.
 
-![](Row_images/Row_img8.png)
+![ASP.NET MVC Grid After Drop](Row_images/Row_img8.png)
 {:After Drop}
 
 ### Grid-to-custom control
@@ -543,12 +543,12 @@ function rowDropHandler(args) {
 
 The following output is displayed before dropping the rows on form.
 
-![](Row_images/Row_img9.png)
+![ASP.NET MVC Grid before dropping the rows on form](Row_images/Row_img9.png)
 {:Before Drop}
 
 The following output is displayed after dropping the rows on form.
 
-![](Row_images/Row_img10.png)
+![ASP.NET MVC Grid after dropping the rows on form](Row_images/Row_img10.png)
 {:After Drop}
 
 N>   The default behavior of drag and drop between grid or any other controls is as cut and paste. For copy and paste behavior specify the drag behavior in the `DragBehavior` property of `RowDropSettings` as "DragBehavior.Copy".
