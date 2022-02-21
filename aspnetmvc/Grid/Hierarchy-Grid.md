@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Hierarchical binding | Grid | ASP.NET MVC | Syncfusion
-description: How to bind the hierarchical data
+description: How to bind the hierarchical data in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Hierarchical Bindings
+# Hierarchical Bindings in ASP.NET MVC Grid
 
 Hierarchical binding can be used to create the Grid with parent and child relation, this facilitate you to view the child records for a particular row by clicking on the Expander button present in first column of each grid row. This can be enabled by defining `ChildGrid` and `QueryString`.
 
@@ -78,7 +78,7 @@ public partial class GridController : Controller
 
 {% endtabs %} 
 
-![](Hierarchy-Grid_images/HierarchyGrid_img1.png)
+![ASP.NET MVC Grid Hierarchy](Hierarchy-Grid_images/HierarchyGrid_img1.png)
 
 
 ## Expand or collapse all child's
