@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Scrolling with Spreadsheet widget for Syncfusion Essential ASP.NET MVC
-description: How to enable Scrolling and its functionalities
+description: How to enable Scrolling and its functionalities in Syncfusion ASP.NET MVC Spreadsheet Control, its elements, and more.
 platform: ejmvc
 control: Spreadsheet
 documentation: ug
 --- 
 
-# Scrolling
+# Scrolling in ASP.NET MVC Spreadsheet
 
 Scrolling helps you to move quickly to different areas of worksheet. Scrolling can be enabled by setting `AllowScrolling` as `true` in `ScrollSettings`. 
   
@@ -37,7 +37,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Scrolling_images/Scrolling_img1.png)
+![ASP.NET MVC Spreadsheet Set height and width for Scrolling](Scrolling_images/Scrolling_img1.png)
 
 ## Responsive
 
@@ -53,12 +53,12 @@ N> Default value of `IsResponsive` property is `true`.
 
 If client width is less than 420px, the spreadsheet will render in mobile mode. In which, you can see that spreadsheet user interface is customized and redesigned for best view in small screens. The customized feature includes filter dialog, format dialog, chart type dialog and ribbon.
 
-![](Scrolling_images/Scrolling_img2.png)
+![ASP.NET MVC Spreadsheet Mobile Mode](Scrolling_images/Scrolling_img2.png)
 
 Ribbon in mobile layout
 {:.caption}
 
-![](Scrolling_images/Scrolling_img3.png)
+![ASP.NET MVC Spreadsheet Ribbon in mobile layout](Scrolling_images/Scrolling_img3.png)
 
 Format cell dialog in mobile layout.
 {:.caption}
@@ -67,7 +67,7 @@ Format cell dialog in mobile layout.
 
 If the client width is between 420px and 617px, then the spreadsheet will render in tablet mode. Also it has customized the dialogs to match tablet screen size.
 
-![](Scrolling_images/Scrolling_img4.png)
+![ASP.NET MVC Spreadsheet Tablet Layout](Scrolling_images/Scrolling_img4.png)
 
 Ribbon in tablet layout.
 {:.caption}
