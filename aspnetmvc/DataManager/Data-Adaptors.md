@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Adaptors | DataManager | ASP.NET MVC | Syncfusion
-description: data adaptors
+description: Learn here about data adaptors in Syncfusion Essential ASP.NET MVC DataManager Control, its elements, and more.
 platform: ejmvc
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ keywords: JSON Adaptor, URL Adaptor, OData Adaptor, Odata4 Adaptor, WebApi Adapt
 
 ---
 
-# Data Adaptors
+# Data Adaptors in ASP.NET MVC DataManager
 
 DataManger uses adaptors to process data. There are three types of adaptors in the DataManger. They are
 
@@ -121,7 +121,7 @@ JSONAdaptor is used to process JSON data. It contains methods to process the giv
 
 The result of above code example is illustrated as follows.
 
-![](Data-Adaptors_images/Data-Adaptors_img1.png)
+![ASP.NET MVC DataManager JSON Adaptor](Data-Adaptors_images/Data-Adaptors_img1.png)
 
 JSON adaptor  
 {:.caption}   
@@ -256,7 +256,7 @@ URL Adaptor of the DataManager can be used when you are required to use remote s
 
 The result of the above code example is illustrated as follows.
 
-![](Data-Adaptors_images/Data-Adaptors_img2.png)
+![ASP.NET MVC DataManager URL Adaptor](Data-Adaptors_images/Data-Adaptors_img2.png)
 
 URL Adaptor
 {:.caption}
@@ -345,7 +345,7 @@ OData Adaptor that is extended from URL Adaptor is used for consuming data throu
 
 The result of the above code example is illustrated as follows.
 
-![](Data-Adaptors_images/Data-Adaptors_img3.png)
+![ASP.NET MVC DataManager OData Adaptor](Data-Adaptors_images/Data-Adaptors_img3.png)
 
 OData adaptor 
 {:.caption} 
@@ -448,7 +448,7 @@ WebAPIAdaptor extended from the UrlAdaptor of the DataManager is used for retrie
 
 Result of the above code example is illustrated as follows.
 
-![](Editing_images/RemoteInsert.png) 
+![ASP.NET MVC DataManager WebAPI Adaptor](Editing_images/RemoteInsert.png) 
 
 Web API Adaptor
 {:.caption}
@@ -573,7 +573,7 @@ RemoteSaveAdaptor extended from the JsonAdaptor of theDataManager is used for bi
 
 Result of the above code example is illustrated as follows.
 
-![](Data-Adaptors_images/Data-Adaptors_img5.png)
+![ASP.NET MVC DataManager RemoteSave Adaptor](Data-Adaptors_images/Data-Adaptors_img5.png)
 
 RemoteSave Adaptor
 {:.caption}
@@ -631,7 +631,7 @@ Custom Adaptor is a key technique to customize adaptors in the DataManager. It i
 
 Result of above code example is as follows.
 
-![](Data-Adaptors_images/Data-Adaptors_img6.png)
+![ASP.NET MVC DataManager Custom Adaptor](Data-Adaptors_images/Data-Adaptors_img6.png)
 
 Custom adaptor   
 {:.caption}
@@ -801,7 +801,7 @@ Cache Adaptor is used to cache the data of the visited pages. It prevents new re
 
 {% endhighlight %}
 
-![](Data-Adaptors_images/Data-Adaptors_img7.png)
+![ASP.NET MVC DataManager Cache Adaptor](Data-Adaptors_images/Data-Adaptors_img7.png)
 Cache Adaptor
 {:.caption}
 
