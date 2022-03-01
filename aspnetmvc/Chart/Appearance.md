@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Appearance
+# Appearance in ASP.NET MVC Chart
 
 ## Custom Color Palette
 
@@ -26,7 +26,7 @@ The Chart displays different series in different colors by default. You can cust
 {% endhighlight %}
 
 
-![](Appearance_images/Appearance_img1.png)
+![ASP.NET MVC Chart Appearance](Appearance_images/Appearance_img1.png)
 
 
 N> The Color palette is applied to the points in accumulation type series
@@ -60,7 +60,7 @@ You can set your desired theme by using the **Theme** property. FlatLight is the
 
 {% endhighlight %}
 
-![](Appearance_images/Appearance_img2.png)
+![ASP.NET MVC Chart Built in Themes](Appearance_images/Appearance_img2.png)
 
 
 ## Point level customization
@@ -87,7 +87,7 @@ Marker, DataLabel and Fill color of each point in a series can be customized ind
 
 {% endhighlight %}
 
-![](Appearance_images/Appearance_img3.png)
+![ASP.NET MVC Chart Point level customization](Appearance_images/Appearance_img3.png)
 
 
 ## Series border customization
@@ -108,7 +108,7 @@ To customize the series border color, width and dashArray, you can use **Series.
 
 {% endhighlight %}
 
-![](Appearance_images/Appearance_img4.png)
+![ASP.NET MVC Chart Series border customization](Appearance_images/Appearance_img4.png)
 
 
 ## Chart area customization
@@ -131,7 +131,7 @@ The Chart background can be customized by using the **Background** property of t
 
 {% endhighlight %} 
 
-![](Appearance_images/Appearance_img5.png)
+![ASP.NET MVC Chart Customize chart background](Appearance_images/Appearance_img5.png)
 
 
 **Chart Margin**
@@ -151,7 +151,7 @@ The Chart **Margin** property is used to add the margin to the chart area at the
 
 {% endhighlight %} 
 
-![](Appearance_images/Appearance_img6.png)
+![ASP.NET MVC Chart Margin](Appearance_images/Appearance_img6.png)
 
 
 **Setting background image**
@@ -173,7 +173,7 @@ Background image can be added to the chart by using the **BackGroundImageUrl** p
 
 {% endhighlight %} 
 
-![](Appearance_images/Appearance_img7.png)
+![ASP.NET MVC Chart Setting background image](Appearance_images/Appearance_img7.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/tooltiptemplate) here to view our online demo sample for setting Chart background image.
@@ -200,7 +200,7 @@ The Chart area background can be customized by using the **Background** property
 
 {% endhighlight %} 
 
-![](Appearance_images/Appearance_img8.png)
+![ASP.NET MVC Chart area background](Appearance_images/Appearance_img8.png)
 
 
 ### Customize chart area grid bands
@@ -224,7 +224,7 @@ You can provide different color for alternate grid rows and columns formed by th
 
 {% endhighlight %} 
 
-![](Appearance_images/Appearance_img9.png)
+![ASP.NET MVC Chart Customize chart area grid bands](Appearance_images/Appearance_img9.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/alternategridband) here to view the AlternateGridBand online demo sample.
 
