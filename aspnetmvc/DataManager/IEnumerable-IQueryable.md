@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IEnumerable-IQueryable | DataManager | ASP.NET MVC | Syncfusion
-description: IEnumerable-IQueryable
+description: Learn here about IEnumerable IQueryable in Syncfusion ASP.NET MVC DataManager Control, its elements, and more.
 platform: ejmvc
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ keywords : IEnumerable-IQueryable, IQueryable, IEnumerable
 
 ---
 
-# IEnumerable
+# IEnumerable in ASP.NET MVC DataManager
 
 IEnumerable will execute **select** query on server side, load data in-memory on client side and then filter data.IEnumerable can be used for querying data from in-memory collections like List, Array etc.
 
@@ -55,7 +55,7 @@ Refer the below given code to bind data from IEnumerable list through datamanage
 
 The result of above code example is illustrated as follows.
 
-![](IEnumerable-IQueryable_images/Databinding.png)
+![ASP.NET MVC DataManager Databinding](IEnumerable-IQueryable_images/Databinding.png)
 
 ## Filtering Sorting and Searching with IEnumerable
 
@@ -85,7 +85,7 @@ Refer the below given code to perform these actions
 
 The result of above code example is illustrated as follows.
 
-![](IEnumerable-IQueryable_images/Query.png)
+![ASP.NET MVC DataManager Query](IEnumerable-IQueryable_images/Query.png)
 
 ## IQueryable
 
@@ -151,4 +151,4 @@ Refer the below code for performing these actions using IQueryable in Grid
 
 The result of above code example is illustrated as follows.
 
-![](IEnumerable-IQueryable_images/IQueryable.png)
+![ASP.NET MVC DataManager IQueryable](IEnumerable-IQueryable_images/IQueryable.png)
