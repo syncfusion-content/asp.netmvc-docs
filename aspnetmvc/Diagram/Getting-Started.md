@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting started with Syncfusion Essential Diagram for ASP.NET MVC
-description: Getting started walk through to create your first Flow Diagram and Organizational Chart Diagram
+title: Getting started with ASP.NET MVC Diagram Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC Diagram Control, its elements, and more.
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Diagram
 
 Getting started with your MVC Diagram is easy. You can start by creating a simple flow chart.
 
@@ -28,7 +28,7 @@ Getting started with your MVC Diagram is easy. You can start by creating a simpl
 
 3\. This creates an empty diagram
 
-![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET MVC Diagram Initialization](Diagram/Getting-Started_images/Getting-Started_img1.png)
 
 ### Create and add Node
 
@@ -72,7 +72,7 @@ N> `Labels` property is an array, which indicates that more than one label can b
 
 Added node will be displayed in diagram as shown below.
 
-![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img2.png)
+![ASP.NET MVC Diagram Create and add Node](Diagram/Getting-Started_images/Getting-Started_img2.png)
 
 ### Connect nodes
 
@@ -126,7 +126,7 @@ Connect these two nodes by adding a `connector` into `Connectors` collection wit
 
 * `Connector` connects the two nodes as shown below.
 
-![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img3.png)
+![ASP.NET MVC Diagram Connect nodes](Diagram/Getting-Started_images/Getting-Started_img3.png)
 
 * Default values for all nodes and connectors can be set using default settings. For example if all nodes have same `Width` and `Height`, we can move such properties into `DefaultSettings`. Above code can be rewritten as shown below.
 
@@ -236,7 +236,7 @@ Similarly we can add required nodes and connectors to form a complete flow diagr
 
 Final flow chart will looks as shown below.
 
-![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET MVC Diagram Complete flow diagram](Diagram/Getting-Started_images/Getting-Started_img4.png)
 
 ## Automatic organization chart
 
@@ -357,4 +357,4 @@ Following code examples indicate how to define the default appearance of node an
 
 * The Employee details are displayed in the Diagram as follows.
 
-![](/aspnetmvc/Diagram/Getting-Started_images/Getting-Started_img5.png)
+![ASP.NET MVC Diagram Apply org chart layout](Diagram/Getting-Started_images/Getting-Started_img5.png)
