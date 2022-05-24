@@ -7,7 +7,7 @@ control: TimePicker
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC TimePicker
 
 This section explains briefly about how to create a TimePicker in your application with ASP.NET MVC.
 
@@ -15,7 +15,7 @@ This section explains briefly about how to create a TimePicker in your applicati
 
 Essential MVCTimePicker provides support to display the time in your web page and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET MVC TimePicker Getting Started](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -165,7 +165,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 5. The following screenshot displays the output for the above code.
 
-   ![](Getting-Started_images/Getting-Started_img2.png)
+   ![ASP.NET MVC TimePicker initialization](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -175,7 +175,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-   ![](Getting-Started_images/Getting-Started_img3.png)
+   ![ASP.NET MVC TimePicker Submit Button](Getting-Started_images/Getting-Started_img3.png)
 
 
 
@@ -343,7 +343,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 4. The following screenshot displays the output for the above code. 
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET MVC TimePicker Set Min and Max Date](Getting-Started_images/Getting-Started_img4.png)
 
 
 
@@ -353,10 +353,10 @@ You can select the Start time in the first TimePicker and select the End time wi
 
 
 
-![](Getting-Started_images/Getting-Started_img5.png)
+![ASP.NET MVC TimePicker Start time](Getting-Started_images/Getting-Started_img5.png)
 
 
-![](Getting-Started_images/Getting-Started_img6.png)
+![ASP.NET MVC TimePicker End time](Getting-Started_images/Getting-Started_img6.png)
 
 
 
