@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Toolbar | Grid | ASP.NET MVC | Syncfusion
-description: toolbar 
+description: Learn about Easy Customization support in Syncfusion ASP.NET MVC Grid Toolbar, its elements and more
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Toolbar
+# Toolbar Grid ASP.NET MVC
 
 Toolbar can be shown by defining the `ShowToolbar` property in `ToolbarSettings`. Toolbar has option to add default items in the `ToolbarItems` and customized items in the `CustomToolbarItems`.
 
@@ -106,7 +106,7 @@ namespace SyncfusionMvcApplication1.Controllers
 {% endhighlight %}
 {% endtabs %}  
 
-![](Toolbar_images/Toolbar_img1.png)
+![ASP.NET MVC Grid Toolbar](Toolbar_images/Toolbar_img1.png)
 
 
 I> The `AllowAdding`, `AllowEditing` and `AllowDeleting` need to be enabled for add, delete, edit and save & cancel in the `ToolbarItems`. The `AllowSearching` to be enabled while adding Search in toolbar to perform search action.
@@ -193,4 +193,4 @@ namespace SyncfusionMvcApplication1.Controllers
 {% endhighlight %}
 {% endtabs %}  
 
-![](Toolbar_images/Toolbar_img2.png)
+![ASP.NET MVC Grid Toolbar](Toolbar_images/Toolbar_img2.png)
