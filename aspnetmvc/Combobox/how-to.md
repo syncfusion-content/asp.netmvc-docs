@@ -1,14 +1,14 @@
 ---
 layout: post
 title: How to ComboBox control for Syncfusion ASP.NET MVC
-description: How to
+description: Learn here How to in Syncfusion ASP.NET MVC ComboBox control, its element, and more.
 platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: dataBind, ComboBox, cascading, autofill, icons
 ---
 
-# How To
+# How To in ASP.NET MVC ComboBox
 
 ## Configure the Cascading ComboBox
 
@@ -87,7 +87,7 @@ to the ComboBox.
 Output for ComboBox control is as follows.
 
 
-![](Combobox_howto_images/howto_cascading.png)
+![ASP.NET MVC ComboBox How to Cascading](Combobox_howto_images/howto_cascading.png)
 
 
 ## Show the list items with icons
@@ -191,7 +191,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
 Output for ComboBox control is as follows.
 
 
-![](Combobox_howto_images/howto_icon.png)
+![ASP.NET MVC ComboBox How to icon](Combobox_howto_images/howto_icon.png)
 
 ## AutoFill supported with ComboBox
 
@@ -247,7 +247,7 @@ In the following sample, showcase that how to work autofill with ComboBox.
 Output for grouping ComboBox control is as follows.
 
 
-![](Combobox_howto_images/autofill.png)
+![ASP.NET MVC ComboBox How to autofill](Combobox_howto_images/autofill.png)
 
 
 ## Validation of ComboBox using jQuery Validator
