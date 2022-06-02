@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Essential Studio ASP.NET MVC Licensing | Syncfusion
-description: Learn here about Syncfusion Essential Studio ASP.NET MVC license key, how to generate the license key, how to register the license key, and more details.
+title: Overview of Syncfusion license generation - Syncfusion
+description: Learn here about how to generate Syncfusion ASP.NET MVC license key for syncfusion blazor application for license validation.
 platform: ejmvc
 control: Essential Studio
 documentation: ug
 ---
 
-# License Key Generation
+# Generate Syncfusion ASP.NET MVC License key
 
 License keys for ASP.NET MVC can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
 
