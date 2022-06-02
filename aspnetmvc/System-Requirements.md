@@ -7,7 +7,7 @@ control: System Requirement
 documentation: ug
 ---
 
-# System requirements for ASP.NET MVC Components
+# System Requirements for ASP.NET MVC Components
 
 The system requirements for using our Syncfusion ASP.NET MVC platform are as follows
 
