@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Format String | PivotGrid | ASP.NET MVC | Syncfusion
-description: format string
+title: Format Strings | ASP.NET MVC | PivotGrid control | Syncfusion
+description: Learn more about format string support in Syncfusion ASP.NET MVC PivotGrid control, its elements, and more.
 platform: ejmvc
 control: PivotGrid
 documentation: ug
 ---
 
-### Format Strings
+# Format Strings in ASP.NET MVC PivotGrid
 
 I> This feature is applicable only for Relational data source at Client Mode.
 
