@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation for Syncfusion Essential Studio ASP.NET MVC products
-description: Learn how to install Syncfusion ASP.NET MVC installer and deploy the Syncfusion ASP.NET MVC component
+title: Installation Errors in ASP.NET MVC - Syncfusion
+description: Learn here about the common installation errors and solution to those errors in Syncfusion ASP.NET MVC Components installation.
 platform: ejmvc
 control: Installation and Deployment
 documentation: ug
