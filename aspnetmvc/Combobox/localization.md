@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in ComboBox control for Syncfusion ASP.NET MVC
-description: Localization support to ComboBox control for Syncfusion ASP.NET MVC
+title: Localization in ASP.NET MVC ComboBox Control | Syncfusion
+description: Learn here about Localization support in Syncfusion Essential ASP.NET MVC ComboBox control, its elements, and more.
 platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: locale, ComboBox
 ---
 
-# Localization
+# Localization in ASP.NET MVC ComboBox
 
 The Localization library allows you to localize the static text content of the **noRecordsTemplate** and **actionFailureTemplate** &nbsp;properties according to the culture currently assigned to the ComboBox.
 
@@ -61,4 +61,4 @@ public ActionResult Databindingremote()
 
 {% endhighlight %}
 
-![](Combobox_localization_images/localization.png)
+![ASP.NET MVC ComboBox localization](Combobox_localization_images/localization.png)

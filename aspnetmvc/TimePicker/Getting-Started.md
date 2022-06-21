@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | TimePicker | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC TimePicker Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC TimePicker Control, its elements, and more.
 platform: ejmvc
 control: TimePicker
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC TimePicker
 
 This section explains briefly about how to create a TimePicker in your application with ASP.NET MVC.
 
@@ -15,7 +15,7 @@ This section explains briefly about how to create a TimePicker in your applicati
 
 Essential MVCTimePicker provides support to display the time in your web page and allows you to pick a time from the list. In this section you can learn how to customize TimePickers in a real-time application. The following example shows you how to use the TimePicker control to book a hotel dining table booking application, within a limited time, in any day.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET MVC TimePicker Getting Started](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -165,7 +165,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 5. The following screenshot displays the output for the above code.
 
-   ![](Getting-Started_images/Getting-Started_img2.png)
+   ![ASP.NET MVC TimePicker Click the submit button](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -175,7 +175,7 @@ Essential MVC TimePicker widget has built-in features such as keyboard navigatio
 
 
 
-   ![](Getting-Started_images/Getting-Started_img3.png)
+   ![ASP.NET MVC TimePicker Set Min and Max Date](Getting-Started_images/Getting-Started_img3.png)
 
 
 
@@ -343,7 +343,7 @@ In a real-time scenario, the booking is open only for a limited time. You can se
 
 4. The following screenshot displays the output for the above code. 
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET MVC TimePicker initialization](Getting-Started_images/Getting-Started_img4.png)
 
 
 
@@ -353,10 +353,10 @@ You can select the Start time in the first TimePicker and select the End time wi
 
 
 
-![](Getting-Started_images/Getting-Started_img5.png)
+![ASP.NET MVC TimePicker selected value](Getting-Started_images/Getting-Started_img5.png)
 
 
-![](Getting-Started_images/Getting-Started_img6.png)
+![ASP.NET MVC TimePicker getting started](Getting-Started_images/Getting-Started_img6.png)
 
 
 
@@ -403,7 +403,7 @@ You can specify the alert message in the script as follows.
 {% endhighlight %}
 
 
-![](Getting-Started_images/Getting-Started_img7.png)
+![ASP.NET MVC TimePicker Display Reserved Time](Getting-Started_images/Getting-Started_img7.png)
 
 
 
