@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Headers with Grid widget for Asp.net MVC
-description: How to stack column Header and customize it
+title: Stacked Headers in ASP.NET MVC Grid Control | Syncfusion
+description: Learn here about Stacked Headers in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Stacked Headers
+# Stacked Headers in ASP.NET MVC Grid
 
 The stacked headers helps you to group the logical columns in the Grid. It can be shown by setting the `ShowStackedHeader` as `true` and by defining the `StackedHeaderRows`.
 
@@ -74,4 +74,4 @@ namespace SyncfusionMvcApplication3.Controllers
 {% endtabs %} 
 
 
-![](Stackedheader_images/Stackedheader_img1.png)
+![ASP.NET MVC Grid stacked header](Stackedheader_images/Stackedheader_img1.png)
