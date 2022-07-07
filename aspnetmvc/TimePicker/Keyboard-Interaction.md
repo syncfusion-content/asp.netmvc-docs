@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Keyboard Interaction | TimePicker | ASP.NET MVC | Syncfusion
-description: keyboard interaction
+description: Learn here about keyboard interaction in Syncfusion Essential ASP.NET MVC TimePicker Control, its elements, and more.
 platform: ejmvc
 control: TimePicker
 documentation: ug
 ---
 
-# Keyboard Interaction
+# Keyboard Interaction in ASP.NET MVC TimePicker
 
 You can use Keyboard shortcut keys as an alternative to the mouse on using TimePicker widget. TimePicker widget allows you to perform all kinds of actions using keyboard shortcuts. For enabling the keyboard navigation, we need to set the access key to TimePicker control by using HtmlAttributes property. The HtmlAttributes receives the IDictionary object. The IDictionary represents a generic collection of key/value pairs.
 
@@ -97,7 +97,7 @@ The following steps explains you on how to enable keyboard interaction for the T
 
 
 
-![](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
+![ASP.NET MVC TimePicker keyboard interaction](Keyboard-Interaction_images/Keyboard-Interaction_img1.png)
 
 TimePicker focused with keyboard shortcut
 {:.caption}

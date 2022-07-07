@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Grouping with Grid widget for Syncfusion Essential MVC
-description: How to enable grouping and its functionalities
+title: Grouping in ASP.NET MVC Grid Control | Syncfusion
+description: Learn here about Grouping support in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Grouping
+# Grouping in ASP.NET MVC Grid
 
 The Grid control has options to group the records based on the required column. When grouping is applied, grouped records are organized into a hierarchical structure to facilitate easier expand and collapse of records. To enable grouping, set `AllowGrouping` property as `true`.
 
@@ -52,7 +52,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img1.png)
+![ASP.NET MVC Grid Initial Grouping](Grouping_images/Grouping_img1.png)
 
 
 ## Initial Grouping
@@ -101,7 +101,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img2.png)
+![ASP.NET MVC Grid Multi-Column Grouping](Grouping_images/Grouping_img2.png)
 
 
 ## Multi-Column Grouping
@@ -150,7 +150,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img3.png)
+![ASP.NET MVC Grid Group Buttons](Grouping_images/Grouping_img3.png)
 
 
 ## Group Buttons
@@ -199,7 +199,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img4.png)
+![ASP.NET MVC Grid Hide Ungroup Button](Grouping_images/Grouping_img4.png)
 
 
 ## Hide Ungroup Button
@@ -248,7 +248,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img5.png)
+![ASP.NET MVC Grid Hide Grouped Column](Grouping_images/Grouping_img5.png)
 
 
 ## Hide Grouped Column
@@ -297,7 +297,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img6.png)
+![ASP.NET MVC Grid AutoSize Drop Area](Grouping_images/Grouping_img6.png)
 
 
 ## AutoSize Drop Area
@@ -346,7 +346,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img7.png)
+![ASP.NET MVC Grid Hide Drop Area](Grouping_images/Grouping_img7.png)
 
 
 ## Hide Drop Area 
@@ -395,7 +395,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img8.png)
+![ASP.NET MVC Grid Group Caption Format](Grouping_images/Grouping_img8.png)
 
 
 ## Group Caption Format/Group Caption Template
@@ -471,10 +471,10 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img9.png)
+![ASP.NET MVC Grid grouped records count in server-side](Grouping_images/Grouping_img9.png)
 
 
-![](Grouping_images/Grouping_img10.png)
+![ASP.NET MVC Grid server-side](Grouping_images/Grouping_img10.png)
 
 ## Handling grouped records count in server-side    
 
@@ -541,7 +541,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Grouping_images/Grouping_img11.png)
+![ASP.NET MVC Grid Handling grouped records](Grouping_images/Grouping_img11.png)
 
 
 
