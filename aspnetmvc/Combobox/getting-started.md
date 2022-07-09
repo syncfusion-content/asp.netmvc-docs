@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started in ComboBox control for Syncfusion ASP.NET MVC
-description: Getting started
+title: Getting started with ASP.NET MVC ComboBox control | Syncfusion
+description: Learn here about Getting started with Syncfusion Essential ASP.NET MVC ComboBox control, its elements, and more.
 platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: allowCustom, ComboBox, dataSource, popupHeight, popupWidth
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC ComboBox
 
 This section explains how to create a simple **ComboBox** component and configure its available functionalities.
 
@@ -68,7 +68,7 @@ public class CarsList
 Output for ComboBox control is as follows.
 
 
-![](Combobox_getting_started_images/Getting-Started.png)
+![ASP.NET MVC ComboBox Binding data source](Combobox_getting_started_images/Getting-Started.png)
 
 
 ## Binding data source
@@ -97,7 +97,7 @@ After initializing, populate the ComboBox with data using the **DataSource** pro
 Output for ComboBox control is as follows.
 
 
-![](Combobox_getting_started_images/Getting-Started1.png)
+![ASP.NET MVC ComboBox Custom values](Combobox_getting_started_images/Getting-Started1.png)
 
 
 ## Custom values
@@ -153,7 +153,7 @@ public class CarsList
 Output for allowCustom ComboBox control is as follows.
 
 
-![](Combobox_getting_started_images/Combobox_data_binding_img1.png) 
+![ASP.NET MVC ComboBox Configure the popup list](Combobox_getting_started_images/Combobox_data_binding_img1.png) 
 
 
 ## Configure the popup list
@@ -212,5 +212,5 @@ public class CarsList
 Output for ComboBox control is as follows.
 
 
-![](Combobox_getting_started_images/popup.png)
+![ASP.NET MVC ComboBox getting started](Combobox_getting_started_images/popup.png)
 
