@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Rows | TreeGrid | ASP.NET MVC | Syncfusion
-description: rows
+description: Learn here about rows support in Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Rows
+# Rows in ASP.NET MVC TreeGrid
 
 The TreeGrid rows displays the information of each row from the bounded data source.
 
@@ -176,7 +176,7 @@ Row template is used to customize the TreeGrid rows based on requirements. In Tr
 
 The output of TreeGrid with Row Template is as follows.
 
-![](Rows_images/Rows_img1.png)
+![ASP.NET MVC TreeGrid Row Height](Rows_images/Rows_img1.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridrowtemplate) here to view online sample for TreeGrid Row Template
 
@@ -197,7 +197,7 @@ The following code example explains how to change the row height in TreeGrid
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img5.png)
+![ASP.NET MVC TreeGrid Alternate row styling](Rows_images/Rows_img5.png)
 
 The above screenshot shows TreeGrid render with row height of 50.
 {:.caption}
@@ -218,7 +218,7 @@ The following code explains about enabling the alternate row style in TreeGrid
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img4.png)
+![ASP.NET MVC TreeGrid Row Drag and Drop](Rows_images/Rows_img4.png)
 
 The above screenshot shows TreeGrid with alternate row style.
 {:.caption}
@@ -249,7 +249,7 @@ The following code explains about enabling the row drag and drop with the defaul
 
 The following screenshot depicts a row drag and drop in the TreeGrid.
 
-![](Rows_images/Rows_img2.png)
+![ASP.NET MVC TreeGrid Customizing Drag tooltip](Rows_images/Rows_img2.png)
 
 ## Customizing Drag tooltip
 
@@ -281,7 +281,7 @@ The following code shows how to render row drag tooltip with JsRender template.
   @(Html.EJ().ScriptManager())
 {% endhighlight %}
 
-![](Rows_images/Rows_img3.png)
+![ASP.NET MVC TreeGrid Multiple row drag and drop](Rows_images/Rows_img3.png)
 
 ## Multiple row drag and drop
 		
@@ -304,7 +304,7 @@ We can also customize row drag and drop actions by using below properties
 
 * canDrop – It is used to enable/disable the row drop action for draggedRecords collection in `RowDropActionBegin` client side event. 
 
-![](Rows_images/Rows_img13.png)
+![ASP.NET MVC TreeGrid Details row](Rows_images/Rows_img13.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridrowdraganddrop) here to view the demo sample for multiple drag and drop action.
 
@@ -336,7 +336,7 @@ The following code example shows how to enable details tow in TreeGrid.
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img8.png)
+![ASP.NET MVC TreeGrid Disable details row info column](Rows_images/Rows_img8.png)
 
 The above screenshot shows details row in TreeGrid.
 {:.caption}
@@ -363,7 +363,7 @@ The following code example shows how to hide detail info column in TreeGrid.
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img9.png)
+![ASP.NET MVC TreeGrid Defining row height for detail template](Rows_images/Rows_img9.png)
 
 The above screenshot shows details row rendered next to the respective row.
 {:.caption}
@@ -384,7 +384,7 @@ The following code example shows how to set details row height in TreeGrid.
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img10.png)
+![ASP.NET MVC TreeGrid Customize detail row](Rows_images/Rows_img10.png)
 
 The above screenshot shows details row rendered with height of `150px`.
 {:.caption}
@@ -416,7 +416,7 @@ function detailsDataBound(args) {
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img12.png)
+![ASP.NET MVC TreeGrid rows](Rows_images/Rows_img12.png)
 
 The above screenshot shows details row customization for specific row. 
 {:.caption}
@@ -466,7 +466,7 @@ The following code example shows how to use this property.
 
 {% endhighlight %}
 
-![](Rows_images/Rows_img6.png)
+![ASP.NET MVC TreeGrid Define expand collapse state of every record](Rows_images/Rows_img6.png)
 
 The above screenshot shows TreeGrid render with collapsed state.
 {:.caption}
@@ -533,7 +533,7 @@ public class TreeGridController : Controller
 
 The below screenshot shows the output of above code example..
 
-![](Rows_images/Rows_img7.png)
+![ASP.NET MVC TreeGrid Expand and Collapse](Rows_images/Rows_img7.png)
 
 ### Expand/Collapse all the rows dynamically
 

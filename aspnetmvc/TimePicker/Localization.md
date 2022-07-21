@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization | TimePicker | ASP.NET MVC | Syncfusion
-description: localization
+description: Learn here about localization support in Syncfusion Essential ASP.NET MVC TimePicker Control, its elements, and more.
 platform: ejmvc
 control: TimePicker
 documentation: ug
 ---
 
-# Localization
+# Localization in ASP.NET MVC TimePicker
 
 You can globalize the TimePicker, so that users of different cultures can make use of it and post their content. For your convenience, you can format the TimePicker control to your culture. When your blog is in your culture, the viewers of your culture can understand about your company and its products. You can achieve localization using the “Locale” property. 
 
@@ -48,7 +48,7 @@ The following steps explains you on how to enable Locale property for TimePicker
 
 Execute the above code to render the following output.
 
-![](Localization_images/Localization_img1.png)
+![ASP.NET MVC TimePicker Localization](Localization_images/Localization_img1.png)
 
 TimePicker with es-ES Localization
 {:.caption}
