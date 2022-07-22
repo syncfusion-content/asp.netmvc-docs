@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Data Binding | TreeGrid | ASP.NET MVC | Syncfusion
-description: data binding
+description: Learn here about data binding support in Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in ASP.NET MVC TreeGrid
 
 Data Binding is the process that establishes a connection between the application and different kinds of datasources such as business objects.
 
@@ -181,7 +181,7 @@ public class TreeGridController : Controller
 
 The output of the above steps is as follows:
 
-![](Data-Binding_images/Data-Binding_img1.png)
+![ASP.NET MVC TreeGrid Self Referential Data Binding](Data-Binding_images/Data-Binding_img1.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridlocalbinding) here to view the online demo sample for hierarchical databinding.
 
@@ -370,7 +370,7 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 
 The following screenshot shows the output of the above steps,
 
-![](Data-Binding_images/Data-Binding_img2.png)
+![ASP.NET MVC TreeGrid Remote data binding](Data-Binding_images/Data-Binding_img2.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridselfreference) here to view the online demo sample for self-referential databinding.
 
@@ -422,12 +422,12 @@ The following code explains how to use Load on Demand in TreeGrid Control,
 
 The output for load on demand support in TreeGrid:
 
-![](Data-Binding_images/Data-Binding_img3.png)
-![](Data-Binding_images/Data-Binding_img4.png)
+![ASP.NET MVC TreeGrid Data Binding](Data-Binding_images/Data-Binding_img3.png)
+![ASP.NET MVC TreeGrid load on demand](Data-Binding_images/Data-Binding_img4.png)
 
 The following output shows how load on demand works for expanding action
 
-![](Data-Binding_images/Data-Binding_img5.png)
+![ASP.NET MVC TreeGrid Load at once](Data-Binding_images/Data-Binding_img5.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridloadondemand) here to view the online demo sample for Load on demand.
 
