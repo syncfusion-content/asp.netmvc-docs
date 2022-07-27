@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started | TreeGrid | ASP.NET MVC | Syncfusion
-description: getting started
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC TreeGrid
 
 ## Create your first TreeGrid in MVC 
 
@@ -160,7 +160,7 @@ public class TreeGridController : Controller
 {% endhighlight  %}
 {% endtabs %}  
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![ASP.NET MVC TreeGrid enable toolbar](Getting-Started_images/Getting-Started_img1.png)
 
 Simple TreeGrid
 {:.caption}
@@ -192,7 +192,7 @@ TreeGrid control contains the toolbar options to Add, Edit, Delete, Cancel, Upda
 {% endhighlight %}
 
 The following screen shot displays a Toolbar in TreeGrid.
-![](Getting-Started_images/Getting-Started_img6.png)
+![ASP.NET MVC TreeGrid multicolumn](Getting-Started_images/Getting-Started_img6.png)
 
 Toolbar in TreeGrid
 {:.caption}
@@ -218,7 +218,7 @@ You can enable the multicolumn sorting in TreeGrid by setting `AllowMultiSorting
 @(Html.EJ().ScriptManager())  
 {% endhighlight %}
 
-![](Getting-Started_images/Getting_ startedSorting.png)
+![ASP.NET MVC TreeGrid sorting](Getting-Started_images/Getting_ startedSorting.png)
 
 [Click](sorting) here to refer more details for TreeGrid Sorting.
 
@@ -240,7 +240,7 @@ You can enable editing in TreeGrid by using `EditSettings` property and it is il
 @(Html.EJ().ScriptManager())
 {% endhighlight %}
 
-![](Getting-Started_images/cellEditing.png)
+![ASP.NET MVC TreeGrid cell editing](Getting-Started_images/cellEditing.png)
 
 [Click](editing) here to refer more details for TreeGrid Editing.
 
@@ -266,7 +266,7 @@ In TreeGrid, context menu can be enabled by `ContextMenuSettings` property. The 
 
 The following screenshot displays the context menu in TreeGrid control.
 
-![](Getting-Started_images/Context-Menu.png)
+![ASP.NET MVC TreeGrid context menu](Getting-Started_images/Context-Menu.png)
 
 TreeGrid with context menu
 {:.caption}
@@ -290,7 +290,7 @@ You can enable the column menu in TreeGrid, by setting the `ShowColumnChooser` a
 
 The following screenshot displays the column chooser in TreeGrid control.
 
-![](Getting-Started_images/columnMenu.png)
+![ASP.NET MVC TreeGrid column menu](Getting-Started_images/columnMenu.png)
 
 TreeGrid with column chooser
 {:.caption}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with TreeView | TreeView | ASP.NET MVC | Syncfusion
-description:  To get start with TreeView by adding references
+title: Getting Started with ASP.NET MVC TreeView Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC TreeView Control, its elements, and more.
 platform: ejmvc
 control: TreeView
 documentation: ug
 ---
 
-# Getting started	
+# Getting started with ASP.NET MVC TreeView
 
 This section explains briefly about how to create a TreeView in ASP.NET MVC platform.
 
