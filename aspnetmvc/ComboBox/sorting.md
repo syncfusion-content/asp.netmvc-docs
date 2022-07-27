@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Sorting in ComboBox control for Syncfusion ASP.NET MVC
-description: Sorting support to ComboBox control for Syncfusion ASP.NET MVC
+description: Learn here about Sorting support in Syncfusion ASP.NET MVC ComboBox Control, its elements, and more.
 platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: sortorder
 ---
 
-# Sorting
+# Sorting in ASP.NET MVC ComboBox
 
 The ComboBox has built-in support to sort data items when `SortOrder` is specified. The available sort orders are ascending, descending and none.
 
@@ -63,4 +63,4 @@ The following sample illustrates how to sort the data.
 Output for Sorting  is as follows.
 
 
-![](Combobox_sorting_images/sorting.png)
+![ASP.NET MVC ComboBox sorting](Combobox_sorting_images/sorting.png)
