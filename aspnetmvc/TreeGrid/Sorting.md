@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Sorting | TreeGrid | ASP.NET MVC | Syncfusion
-description: sorting
+description: Learn here about sorting in Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Sorting
+# Sorting in ASP.NET MVC TreeGrid
 
 The TreeGrid control for JavaScript has built-in support for Sorting one or more columns.
 
@@ -42,7 +42,7 @@ Gantt allows you to sort multiple columns by clicking the desired column headers
 
 The following screenshot shows the output of Multicolumn sorting in TreeGrid control.
 
-![](Sorting_images/Sorting_img1.png)
+![ASP.NET MVC TreeGrid Multicolumn sorting](Sorting_images/Sorting_img1.png)
 
 ## Disable sorting for specific column
 
@@ -88,7 +88,7 @@ The following code shows how to add sorted column in TreeGrid.
    
 {% endhighlight %}
 
-![](Sorting_images/Sorting_img2.png)
+![ASP.NET MVC TreeGrid sorting](Sorting_images/Sorting_img2.png)
 
 The above screenshot shows TreeGrid rendered with descending order of **Task Name** column.
 {:.caption}
