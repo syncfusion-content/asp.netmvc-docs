@@ -364,7 +364,7 @@ namespace EJGrid.Controllers
 
 The following screenshot illustrates the output.
 
-![ASP.NET MVC Grid set dynamic datasourse](How-to_images/Set-Dynamic-DataSource-to-Grid_img1.png)
+![ASP.NET MVC Grid set dynamic datasource](How-to_images/Set-Dynamic-DataSource-to-Grid_img1.png)
 
 
 ## Custom binding for grid CRUD operation
