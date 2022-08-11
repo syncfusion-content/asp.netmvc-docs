@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grid in ASP.NET MVC | Syncfusion
-description: Learn here all more about Grid support in Syncfusion ASP.NET MVC control, its elements, and more.
+title: How to in ASP.NET MVC Grid control Control | Syncfusion
+description: Learn here all more about how to support in Syncfusion Essential ASP.NET MVC Gridcontrol, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
