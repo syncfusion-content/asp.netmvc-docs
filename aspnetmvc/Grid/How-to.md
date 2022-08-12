@@ -1,12 +1,12 @@
 ---
 layout: post
-title: How to in ASP.NET MVC Grid control Control | Syncfusion
-description: Learn here all more about how to support in Syncfusion Essential ASP.NET MVC Gridcontrol, its elements, and more.
+title: How to Section in ASP.NET MVC Grid Control | Syncfusion
+description: Learn here all about how to section in Syncfusion Essential ASP.NET MVC Gridcontrol, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# How to with ASP.NET MVC Grid
+# How to Section with ASP.NET MVC Grid
 
 ##  Apply formatting for columns dynamically
 
