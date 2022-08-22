@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Accessibility in ComboBox control for Syncfusion ASP.NET MVC
-description:  Accessibility support to ComboBox control for Syncfusion ASP.NET MVC
+description: Learn here about Accessibility support in Syncfusion Essential ASP.NET MVC ComboBox Control, its elements, and more.
 platform: ejmvc
 control: ComboBox
 documentation: ug
 keywords: keyboard support, ComboBox, aria attributes, keyboard interaction
 ---
 
-# Accessibility
+# Accessibility in ASP.NET MVC ComboBox
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who uses assistive technologies (AT) or those who completely rely on keyboard navigation.
 
@@ -107,4 +107,4 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 Output for accessibility ComboBox control is as follows.
 
 
-![](Combobox_accessibility_images/accessibility.png)
+![ASP.NET MVC ComboBox accessibility](Combobox_accessibility_images/accessibility.png)
