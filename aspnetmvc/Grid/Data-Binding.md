@@ -1,12 +1,12 @@
 ---
 layout: post
-title: DataBinding with Grid widget for Syncfusion Essential JS
-description: How to bind in-memory JSON and remote web services in Grid
+title: DataBinding in ASP.NET MVC Grid control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC Grid control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 --- 
-# Data Binding
+# Data Binding in ASP.NET MVC Grid
 
 Grid `DataSource` property allows to bind datasource as the instance of one of the following types.
    
@@ -67,7 +67,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img1.png)
+![IEnumerable in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img1.png)
 
 ##  DataTable
 
@@ -133,7 +133,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img2.png)
+![Data table in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img2.png)
 
 ##  Entity Framework
 
@@ -174,7 +174,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img3.png)
+![Entity framework in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img3.png)
 
 See Also
 
@@ -219,7 +219,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img4.png)
+![LINQ to SQL in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img4.png)
 
 See Also
 
@@ -317,7 +317,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img5.png)
+![ITypedlist interface in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img5.png)
 
 See Also
 
@@ -368,7 +368,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img6.png)
+![Complex binding in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img6.png)
 
 W> A navigation property that represents the "many" end of a relationship cannot be specified using lambda expression. Instead `Field` name can be provide as string in such as case.
   
@@ -402,7 +402,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img7.png)
+![WCF data service in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img7.png)
 
 See Also
 
@@ -436,7 +436,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img8.png)
+![ODataV4 service in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img8.png)
 
 ##  Web API Service
 
@@ -491,7 +491,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img9.png)
+![Web API services in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img9.png)
 
 ##  HTML Table binding
 
@@ -580,7 +580,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img10.png)
+![HTML table binding in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img10.png)
 
 ##  Miscellaneous
 
@@ -610,7 +610,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img11.png)
+![Load on demand in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img11.png)
 
 ###  Load at once
 
@@ -640,7 +640,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img12.png)
+![Load at once in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img12.png)
 
 ###  Data caching
 
@@ -675,7 +675,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img13.png)
+![Data caching in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img13.png)
 
 ###  Custom request parameters and HTTP Header
 
@@ -708,7 +708,7 @@ E> Attempting to add custom parameters with key name same as any default AJAX pa
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img14.png)
+![Adding request parameters in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img14.png)
 
 ####  Adding custom HTTP headers
 
@@ -739,7 +739,7 @@ N>  To add custom headers to the DataManager through JavaScript, refer to this [
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img15.png)
+![Adding custom HTTP headers in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img15.png)
 
 ###  Handling HTTP Errors
 
@@ -791,4 +791,4 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Data-Binding_images/Data-Binding_img16.png)
+![Handling HTTP errors in ASP.NET MVC Grid](Data-Binding_images/Data-Binding_img16.png)
