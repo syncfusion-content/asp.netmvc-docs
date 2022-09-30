@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Image and File browser in RichTextEditor widget for Syncfusion Essential ASP.NET MVC
-description: Configuring and working with Image and File browser in RichTextEditor  
+title: Image and File browser in ASP.NET MVC RichTextEditor control | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC RichTextEditor control, its elements, and more.  
 platform: ejmvc
 control: RTE
 documentation: ug
@@ -9,7 +9,7 @@ keywords: RichTextEditor, File browser, Image, Image Browser
 
 ---
 
-# Image and File browser
+# Image and File browser in ASP.NET MVC RichTextEditor
 
 The editor allows you to manage the images and files using **FileExplorer**. The FileExplorer enables you to insert images from online source as well as local computer where you want to insert the image in your content. The Image and file browser is the ability to upload pictures and link file to the editor. 
 
@@ -35,7 +35,7 @@ If you want to insert an image from online source like Google, ping, etc., you n
       
 {% endhighlight %}
 
-![](ImageandFilebrowser_images/ImageandFilebrowser_img1.png)
+![Insert an image from online source in ASP.NET MVC RichTextEditor](ImageandFilebrowser_images/ImageandFilebrowser_img1.png)
 
 
 ## Insert an Image from Your Computer
@@ -97,7 +97,7 @@ public ActionResult FileActionMethods(Syncfusion.JavaScript.FileExplorerParams a
 
 {% endhighlight %} 
 
-![](ImageandFilebrowser_images/ImageandFilebrowser_img2.png)
+![Insert an image from your computer in ASP.NET MVC RichTextEditor](ImageandFilebrowser_images/ImageandFilebrowser_img2.png)
 
 
 N> FileExplorer component has been implemented and integrated with the editor in Volume 1, 2015 release. For more information about FileExplorer component, see [here](http://help.syncfusion.com/aspnetmvc/fileexplorer/overview).
@@ -106,7 +106,7 @@ N> FileExplorer component has been implemented and integrated with the editor in
 
 You can set or modify the properties of an image by using the image dialog. It allows you to add links, apply border and set additional styles to the images. The editor provides an option to specify the alternate text for an image, if the image cannot be displayed.
 
-![](ImageandFilebrowser_images/ImageandFilebrowser_img3.png)
+![Image properties in ASP.NET MVC RichTextEditor](ImageandFilebrowser_images/ImageandFilebrowser_img3.png)
 
 
 ## Resize an Image
@@ -117,7 +117,7 @@ You can resize an image either manually or by setting width and height in the im
 
 You can resize an image manually by selecting an image. And drag the handle until the image is resized to the desired size.  
 
-![](ImageandFilebrowser_images/ImageandFilebrowser_img4.png)
+![Resize an image manually in ASP.NET MVC RichTextEditor](ImageandFilebrowser_images/ImageandFilebrowser_img4.png)
 
 N> Set the default height and width of the Images which was inserted into the RTE text area in “change” event of RTE - {{'[Link](http://jsplayground.syncfusion.com/Sync_rghpsadi)'| markdownify }}
 
@@ -147,7 +147,7 @@ The editor provides you to set the Width and Height properties to change the siz
 
 {% endhighlight %}
 
-![](ImageandFilebrowser_images/ImageandFilebrowser_img5.png)
+![Set width and height in ASP.NET MVC RichTextEditor](ImageandFilebrowser_images/ImageandFilebrowser_img5.png)
 
 ## Suppression of the Image Browser
 
