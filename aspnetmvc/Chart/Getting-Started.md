@@ -88,7 +88,7 @@ Now, the Chart is rendered with some auto-generated random values and with defau
 ![Chart](Getting-Started_images/Getting-Started_img3.png)
 
 
-Initialize the chart by using the ejChart method. The chart is rendered to the size of its container, by default. You can also customize the chart dimension either by setting the width and height of the container element as in the above code example or by using the **Size** option of the Chart. Refer to the [`Chart Dimensions`](chart-dimensions.html) to know more about setting the size of the chart.
+Initialize the chart by using the ejChart method. The chart is rendered to the size of its container, by default. You can also customize the chart dimension either by setting the width and height of the container element as in the above code example or by using the **Size** option of the Chart. Refer to the [`Chart Dimensions`](chart-dimensions) to know more about setting the size of the chart.
 
 
 ## Populate chart with data
