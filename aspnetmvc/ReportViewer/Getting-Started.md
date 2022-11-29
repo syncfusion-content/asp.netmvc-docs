@@ -58,7 +58,7 @@ The following screenshot displays how to select Internet application template wi
    * Syncfusion.Gauge.Wpf
    * Syncfusion.SfMaps.Wpf 
    
-   N> Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\{{ site.releaseversion }}\Assemblies
+   N> Refer the above assemblies from the installed location, C:\Program Files (x86)\Syncfusion\Essential Studio\ASP.NET MVC\19.1.0.63\Assemblies
    N>
    N> Refer System.Web.Http, System.Web.WebHost, System.Net.Http.WebRequest and System.Net.Http.Formatting assemblies from ASP.NET WebApi NuGet package.
 
@@ -72,11 +72,11 @@ N> Use the following code example while adding scripts and styles.
 
 {% highlight CSHTML %}
 
-<link rel="stylesheet" href="https://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css" />
+<link rel="stylesheet" href="https://cdn.syncfusion.com/19.1.0.63/js/web/flat-azure/ej.web.all.min.css" />
 <script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"> </script>
-<script src="https://cdn.syncfusion.com/{{ site.releaseversion }}/js/common/ej.unobtrusive.min.js"></script>
+<script src="https://cdn.syncfusion.com/19.1.0.63/js/web/ej.web.all.min.js"> </script>
+<script src="https://cdn.syncfusion.com/19.1.0.63/js/common/ej.unobtrusive.min.js"></script>
 
 {% endhighlight %}
 
