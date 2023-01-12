@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started | Slider | ASP.NET MVC | Syncfusion
-description: getting started 
+description: Learn here all about Getting Started in Syncfusion Essential ASP.NET MVC Slider control, its elements, and more.
 platform: ejmvc
 control: Slider
 documentation: ug
 ---
 
-# Getting Started 
+# Getting Started with ASP.NET MVC Slider
 
 This section explains briefly about how to create a Slider in your application with ASP.NET MVC.
 
@@ -17,7 +17,7 @@ ASP.NET MVC Slider provides support to display a Slider within the web page. The
 
 The following screenshot illustrates the functionality of Slider control. You can select a mobile model in the dropdown to purchase it at any rate specified in the Mobile RateSlider and you can also specify the number of mobiles you need by selecting the Mobile CountSlider. Simultaneously, you can observe the change in mobile rate and count using Sliders.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Create Slider in ASP.NET MVC](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -196,7 +196,7 @@ ASP.NET MVC Slider control allows you to switch between different ranges of inpu
 
 5. The following screenshot displays the final output in Slider creation.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Add Script in ASP.NET MVC Slider](Getting-Started_images/Getting-Started_img2.png)
 
 
 
@@ -395,7 +395,7 @@ The following screenshot displays the calculated EMI amount using Slider.
 
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Calculate EMI in ASP.NET MVC Slider](Getting-Started_images/Getting-Started_img3.png)
 
 
 
