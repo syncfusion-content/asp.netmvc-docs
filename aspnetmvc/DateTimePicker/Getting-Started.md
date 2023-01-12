@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started | DateTimePicker  | ASP.NET MVC | Syncfusion
-description: getting started
+description: Learn here all about Getting Started in Syncfusion Essential ASP.NET MVC DateTimePicker control, its elements, and more.
 platform: ejmvc
 control: DateTimePicker
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC DateTimePicker
 
 This section explains briefly about how to create a DateTimePicker in your application with ASP.NET MVC.
 
@@ -16,7 +16,7 @@ This section explains briefly about how to create a DateTimePicker in your appli
 The ASP.NET MVC DateTimePicker provides support to display the calendar within your web page and allows you to pick date and time from the calendar. Refer the following guidelines to customize date and time pickers for a real time appointment booking scenario that helps you to book an appointment, within a limited number of days. The following screenshot illustrates the functionality of DatePicker with date range.
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Create DateTimePicker in ASP.NET MVC](Getting-Started_images/Getting-Started_img1.png)
     
 DateTimePicker
 {:.caption}
@@ -44,7 +44,7 @@ ASP.NET MVC DateTimePicker widget basically renders built-in features like Month
 
     Execute the above code to render the following output.
 
-	![](Getting-Started_images/Getting-Started_img2.png)
+	![Execute Code in ASP.NET MVC DateTimePicker](Getting-Started_images/Getting-Started_img2.png)
 
     DateTimePicker
 	{:.caption}
@@ -63,7 +63,7 @@ In a real-time appointment booking scenario, the booking is open only for a limi
 {% endhighlight %}
    
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Set Min and Max DateTimePicker in ASP.NET MVC](Getting-Started_images/Getting-Started_img3.png)
 
 DateTimePicker with Min/Max Date and Time Interval
 {:.caption}
