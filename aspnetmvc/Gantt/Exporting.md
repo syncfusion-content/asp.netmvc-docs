@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Exporting| Gantt | ASP.NET MVC | Syncfusion
-description: exporting
+description: Learn here all about Exporting support in Syncfusion Essential ASP.NET MVC Gantt control, its elements, and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
 ---
-# Export
+# Export in Essential ASP.NET MVC Gantt
 
 Gantt provides support to export the contents in PDF and excel. 
 To export the contents, the `ExcelExport` and `PdfExport` toolbar items must be included in the `ToolbarSettings.ToolbarItems` property. 
@@ -86,7 +86,7 @@ public class GanttController : Controller
 The PDF and Excel exporting services for Gantt are explained in detail [here](https://help.syncfusion.com/js/gantt/services-reference).
 
 The below screen shot shows Gantt with excel and PDF exporting enabled.
-![](Export_images/Export_img1.png)
+![Exporting Excel and PDF in ASP.NET MVC Gantt](Export_images/Export_img1.png)
 
 ## Server dependencies
 Export Helper functions are available in the Assembly `Syncfusion.EJ.Export`, which is available in the Essential Studio & Essential ASP.NET MVC builds. The list of assemblies needed for Gantt Export as follows
