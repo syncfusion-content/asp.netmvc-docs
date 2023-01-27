@@ -1,13 +1,13 @@
 ---
 layout: post
 title: WaitingPopup | WaitingPopup | ASP.NET MVC | Syncfusion
-description: overview
+description: Learn here more about Overview in Syncfusion Essential ASP.NET MVC WaitingPopup Control, its element and more
 platform: ejmvc
 control: WaitingPopup
 documentation: ug
 ---
 
-# WaitingPopup
+# WaitingPopup in ASP.NET MVC WaitingPopup
 
 The WaitingPopup control for MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
@@ -29,7 +29,7 @@ ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your 
 
 
 
-![](Overview_images/Overview_img1.png)
+![Create your first Waiting Popup in ASP.NET MVC](Overview_images/Overview_img1.png)
 
 
 In the above screenshot, you can give the Username and Password. When you click the Login button, the Waiting Popup appears.  After loading, the alert box appears with a message “Signed in successfully”.
@@ -175,7 +175,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-   ![](Overview_images/Overview_img2.png)
+   ![ASP.NET MVC WaitingPopup User login](Overview_images/Overview_img2.png)
 
 
 
@@ -184,14 +184,14 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-   ![](Overview_images/Overview_img3.png)
+   ![ASP.NET MVC Waiting Popup](Overview_images/Overview_img3.png)
 
 
 
 
 The following screenshot displays an alert box displayed with the message “Signed in successfully” after loading.
 
-![](Overview_images/Overview_img4.png)
+![ASP.NET MVC WaitingPopup Signed in successfully](Overview_images/Overview_img4.png)
 
 
 

@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Getting Started | Captcha  | ASP.NET MVC | Syncfusion
-description: getting started
+description: Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC Captcha Control, its element and more
 platform: ejmvc
 control: Captcha
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Captcha
 
 ## Create your first Captcha in ASP.NET MVC
 
 This section enables you to configure the Captcha control in your ASP.NET MVC application and also in learning how to use captcha with auto validation in Web Forms.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Create your first Captcha in ASP.NET MVC ](Getting-Started_images/Getting-Started_img1.png)
 
 Captcha control with AutoValidation
 {:.caption}
@@ -80,7 +80,7 @@ N> Version=XX.XXXX.X.X - It will vary depend up on .NET Framework version and Es
 
 The following screen shot displays the output of the above codes.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Web.config file for Captcha image in ASP.NET MVC](Getting-Started_images/Getting-Started_img2.png)
 
 Captcha control with initial render
 {:.caption}
@@ -120,7 +120,7 @@ The Captcha control supports captcha in the form of audio and when you click the
 
 The following screenshot displays the output of the above codes.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Captcha with Audio and Refresh in ASP.NET MVC](Getting-Started_images/Getting-Started_img3.png)
 
 Captcha control with refresh and audio support
 {:.caption}
@@ -409,12 +409,12 @@ The Captcha supports automatic validation by enabling the property EnableAutoVa
    
 The following screenshot is the output for the above code example.
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![Captcha with failed AutoValidation in ASP.NET MVC](Getting-Started_images/Getting-Started_img4.png)
 
 Captcha control with failed Auto Validation
 {:.caption}
 
-![](Getting-Started_images/Getting-Started_img5.png)
+![Captcha with successful AutoValidation in ASP.NET MVC](Getting-Started_images/Getting-Started_img5.png)
 
 Captcha control with successful AutoValidation
 {:.caption}
