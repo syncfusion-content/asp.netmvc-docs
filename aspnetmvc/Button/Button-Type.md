@@ -62,7 +62,7 @@ The following steps explains you the details about rendering the Button with abo
 
 Execute the above code to render the following output.
 
-![](Button-Type_images/Button-Type_img1.png)
+![Button Type in ASP.NET MVC Button](Button-Type_images/Button-Type_img1.png)
 
 Different button types
 {:.caption}

@@ -167,7 +167,7 @@ Defines the style for the tooltip layout and table as follows.
     
 {% endhighlight %}
 
-![](HowTo_images/ajax.png)
+![Use AJAX to generate the Tooltip’s content in ASP.NET MVC Tooltip](HowTo_images/ajax.png)
 
 ## Integration with the Slider control
 
@@ -240,7 +240,7 @@ function onStop(args){
         
 {% endhighlight %}
 
-![](HowTo_images/slider.png)
+![Integration with the Slider control in ASP.NET MVC Tooltip](HowTo_images/slider.png)
 
 ## Tip(arrow) customization
 
@@ -290,7 +290,7 @@ Defines the style for the tip as follow as
     
 {% endhighlight %}
 
-![](HowTo_images/tip.png)
+![Tip(arrow) customization in ASP.NET MVC Tooltip](HowTo_images/tip.png)
 
 ## Initialize Tooltip for the target element
 
@@ -334,7 +334,7 @@ The example below demonstrates how to create a Tooltip for multiple targets elem
 
 {% endhighlight %}
 
-![](Target_images/target.png)
+![Initialize Tooltip for the target element in ASP.NET MVC Tooltip](Target_images/target.png)
 
 Apply the following styles to the form element.
 
