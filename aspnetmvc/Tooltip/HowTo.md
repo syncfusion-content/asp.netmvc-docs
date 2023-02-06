@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How To | Tooltip | ASP.NET MVC | Syncfusion
-description: How To section of Tooltip widget
+title: How to Section Tooltip in ASP.NET MVC | Syncfusion
+description: Learn here how to section tooltip for Syncfusion Essential ASP.NET MVC, its elements, and more.
 platform: ejmvc
 control: Tooltip
 documentation: ug
 keywords : MVC Tooltip, mvc Tooltip, ASP.NET MVC Tooltip,MVC Tooltip widget,MVC Tooltip AJAX content, MVC Tooltip Integration with slider
 ---
 
-# How To
+# How to Section Tooltip in ASP.NET MVC
 
 ## Use AJAX to generate the Tooltip’s content
 
