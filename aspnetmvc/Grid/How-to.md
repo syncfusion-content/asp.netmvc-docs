@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to | Grid | ASP.NET MVC | Syncfusion
-description: Learn here more about How To Section in Syncfusion Essential ASP.NET MVC Grid Control, its element and more
+title: How to Section in ASP.NET MVC Grid control | Syncfusion
+description: Learn here more about How To Section in Syncfusion Essential ASP.NET MVC Grid Control, its element and more.
 platform: ejmvc
 control: Grid
 documentation: ug

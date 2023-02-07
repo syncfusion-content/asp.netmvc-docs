@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Button Type | Button | ASP.NET MVC | Syncfusion
-description: Learn here more about Button Type in Syncfusion Essential ASP.NET MVC Button Control, its elements, and more
+title: Button Type in ASP.NET MVC Button control | Syncfusion
+description: Learn here more about Button Type in Syncfusion Essential ASP.NET MVC Button Control, its elements, and more.
 platform: ejmvc
 control: Button
 documentation: ug

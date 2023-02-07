@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Captcha  | ASP.NET MVC | Syncfusion
-description: Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC Captcha Control, its element and more
+title: Getting Started with ASP.NET MVC Captcha control | Syncfusion
+description: Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC Captcha Control, its element and more.
 platform: ejmvc
 control: Captcha
 documentation: ug

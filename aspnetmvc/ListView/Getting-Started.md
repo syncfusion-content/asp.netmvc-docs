@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | ListView | ASP.NET MVC | Syncfusion
-description:  Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC ListView Control, its elements, and more
+title: Getting Started with ASP.NET MVC ListView control | Syncfusion
+description:  Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC ListView Control, its elements, and more.
 platform: ejmvc
 control: ListView
 documentation: ug
