@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Template Support | Radial Menu | ASP.NET MVC | Syncfusion
-description: Learn here about Template Support in Syncfusion ASP.NET MVC Radial Menu Control, its elements, and more.
+title: Template Support | RadialMenu | ASP.NET MVC | Syncfusion
+description: Learn here about Template Support in Syncfusion ASP.NET MVC RadialMenu Control, its elements, and more.
 platform: ejmvc
-control: Radial Menu
+control: RadialMenu
 documentation: ug
 ---
 
-# Template Support in Radial Menu
+# Template Support in RadialMenu
 
- Template support for Radial Menu items will allow you to use any type of [\<svg\>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element#SVG_elements) Permitted tags inside our template. Here for example, using this template support you can use the SVG icons in Radial Menu instead of image tags. To use SVG icons in Radial Menu, you need to use [PrependTo](https://help.syncfusion.com/api/js/ejradialmenu#members:items-prependTo) property.
+ Template support for RadialMenu items will allow you to use any type of [\<svg\>](https://developer.mozilla.org/en-US/docs/Web/SVG/Element#SVG_elements) Permitted tags inside our template. Here for example, using this template support you can use the SVG icons in RadialMenu instead of image tags. To use SVG icons in RadialMenu, you need to use [PrependTo](https://help.syncfusion.com/api/js/ejradialmenu#members:items-prependTo) property.
 
  ## Add SVG to item Icon
 
 Using SVG icon will optimize the icons quality and to reduce space occupation by normal images and SVG images are Scalable and Zoomable. Define the text element for SVG with x and y position and code for rendering the font icons. Assign the SVG element ID to PrependTo property.
 
-Please refer the following code to render the SVG icon in Radial Menu,
+Please refer the following code to render the SVG icon in RadialMenu,
 
     {% highlight razor %}
      <div id="contentDiv">
@@ -169,6 +169,6 @@ Add the following code in your style section,
 
 The following screenshot illustrates the output,
 
-![ASP.NET MVC Radial Menu in add SVG to item Icon](template-support\img1.png)
+![ASP.NET MVC RadialMenu in add SVG to item Icon](template-support\img1.png)
 
-     N> This is the example sample for SVG icon support for Radial Menu.Like wise you can add any SVG element to it, but you need to customize and position the element individually.  
+     N> This is the example sample for SVG icon support for RadialMenu.Like wise you can add any SVG element to it, but you need to customize and position the element individually.  
