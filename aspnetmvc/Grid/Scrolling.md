@@ -6,7 +6,7 @@ platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# Enable Scrolling in Grid
+# Enable Scrolling in ASP.NET MVC Grid
 
 Scrolling can be enabled by setting the `AllowScrolling` as `true`. The height and width can be set to grid by using the properties  `Height` and `Width` property of the `ScrollSettings`. 
 
