@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Grid widget | ASP.NET MVC | Syncfusion
-description: Learn here how to get started with Grid widget for Syncfusion Essential ASP.NET MVC, its elements, and more. 
+description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
