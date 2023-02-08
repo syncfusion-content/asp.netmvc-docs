@@ -1,13 +1,13 @@
 ---
 layout: post
-title: WaitingPopup in ASP.NET MVC WaitingPopup control | Syncfusion
+title: Overview in ASP.NET MVC WaitingPopup control | Syncfusion
 description: Learn here more about Overview in Syncfusion Essential ASP.NET MVC WaitingPopup Control, its element and more.
 platform: ejmvc
 control: WaitingPopup
 documentation: ug
 ---
 
-# WaitingPopup in ASP.NET MVC WaitingPopup
+# Overview in ASP.NET MVC WaitingPopup
 
 The WaitingPopup control for MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
