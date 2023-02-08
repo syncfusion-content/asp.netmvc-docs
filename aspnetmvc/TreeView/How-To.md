@@ -1,13 +1,13 @@
 ---
-title: How To| TreeView | ASP.NET MVC | Syncfusion
-description: How To section
+title: How To Section| TreeView | ASP.NET MVC | Syncfusion
+description: Learn here about service reference in Syncfusion ASP.NET MVC Treeview Control, its elements, and more.
 platform: ejmvc
 control: TreeView
 documentation: UG
 keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, How To
 ---
 
-# How To
+# How To Section Treeview in ASP.NET MVC
 
 ## Update the modified data from tree to database.
 

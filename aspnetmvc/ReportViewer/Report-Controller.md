@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Report Controller | ReportViewer | ASP.NET MVC | Syncfusion
-description: report controller
+description: Learn here about report controller in Syncfusion ASP.NET MVC ReportViewer Control, its elements, and more.
 platform: ejmvc
 control: ReportViewer
 documentation: ug
 ---
 
-# Report Controller
+# Report Controller in ASP.NET MVC ReportViewer
 
 The ReportViewer uses Web API services to process the report file, process the request from control, and to return the processed data to control. The Syncfusion.EJ.ReportViewer assembly has helper APIs to define the service actions and process the service requests. 
 
