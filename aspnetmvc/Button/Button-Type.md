@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Button Type | Button | ASP.NET MVC | Syncfusion
-description: Learn here about service reference in Syncfusion ASP.NET MVC Button Control, its elements, and more.
+description: Learn here about Button Type in Syncfusion ASP.NET MVC Button Control, its elements, and more.
 platform: ejmvc
 control: Button
 documentation: ug
 ---
 
-# Button Type in ASP.NET MVC
+# Button Type in ASP.NET MVC Button
 
 Button is used as normal click able button, submitting form data, resetting the form data to its initial value. According to the usage of button, you can render the button in three types. Using the Type property, you can easily render the button in following types.
 
