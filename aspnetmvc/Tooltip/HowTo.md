@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Section Tooltip in ASP.NET MVC | Syncfusion
-description: Learn here how to section tooltip for Syncfusion Essential ASP.NET MVC, its elements, and more.
+description: Learn here about how to section in Syncfusion Essential ASP.NET MVC Tooltip Control, its elements, and more.
 platform: ejmvc
 control: Tooltip
 documentation: ug
