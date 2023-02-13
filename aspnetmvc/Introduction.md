@@ -9,6 +9,8 @@ documentation: ug
 
 # Welcome to Syncfusion Essential ASP.NET MVC
 
+> Syncfusion jQuery based widgets are no longer in active development. Switch to our pure JavaScript based next generation Essential JS 2 library.
+
 The **Syncfusion Essential Studio for ASP.NET MVC** is a set of server-side wrappers that is empowered by Essential JavaScript. The user can add the Syncfusion MVC components into their application with the help of the server-side wrapper helper classes. The MVC helper’s values are passed from the server-side wrapper classes to browser via ScriptManager, the control creation and manipulations takes place in the client-side.
 
 ## How to best read this User Guide
