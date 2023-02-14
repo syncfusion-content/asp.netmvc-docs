@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Button Type | Button | ASP.NET MVC | Syncfusion
-description: Learn here about Button Type in Syncfusion ASP.NET MVC Button Control, its elements, and more.
+title: Button Type in ASP.NET MVC Button control | Syncfusion
+description: Learn here more about Button Type in Syncfusion Essential ASP.NET MVC Button Control, its elements, and more.
 platform: ejmvc
 control: Button
 documentation: ug
@@ -62,7 +62,7 @@ The following steps explains you the details about rendering the Button with abo
 
 Execute the above code to render the following output.
 
-![ASP.NET MVC Button in Button Type](Button-Type_images/Button-Type_img1.png)
+![Button Type in ASP.NET MVC Button](Button-Type_images/Button-Type_img1.png)
 
 Different button types
 {:.caption}
