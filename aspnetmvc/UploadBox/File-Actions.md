@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File Actions | UploadBox | ASP.NET MVC | Syncfusion
-description: Learn here about getting started with Syncfusion ASP.NET MVC UploadBox control, its elements, and more.
+description: Learn here about file action with Syncfusion ASP.NET MVC UploadBox control, its elements, and more.
 platform: ejmvc
 control: UploadBox
 documentation: ug
