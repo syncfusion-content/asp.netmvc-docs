@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started | ListView | ASP.NET MVC | Syncfusion
-description: getting started
+description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC ListView Control, its elements, and more.
 platform: ejmvc
 control: ListView
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC ListView
 
 This section explains briefly on how to create a ListView control in your application.
 
@@ -16,7 +16,7 @@ This section explains briefly on how to create a ListView control in your applic
 The Essential StudioListView widget builds an interactive list view interface. This control allows you to select an item from a list-like interface and provides the infrastructure to display a set of data items in different layouts or views. Lists display data, data navigation, result lists, and data entry.    
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Create your first ListView in ASP.NET MVC](Getting-Started_images/Getting-Started_img1.png)
 
 List view Control
 {:.caption}
@@ -79,7 +79,7 @@ In the View page, add ListView helper and map the Local data list to correspondi
 
 Run the above code to render the following output.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Create a simple ListView in ASP.NET MVC](Getting-Started_images/Getting-Started_img2.png)
 
 
 ## Add header
@@ -100,4 +100,4 @@ You can add a header for ListView using ShowHeader property. Refer to the follow
 
 Run the above code to render the following output.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Add header in ASP.NET MVC ListView](Getting-Started_images/Getting-Started_img3.png)

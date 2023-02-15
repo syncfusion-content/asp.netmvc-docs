@@ -1,15 +1,15 @@
 ---
 layout: post
-title: WaitingPopup | WaitingPopup | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview | Waiting Popup | ASP.NET MVC | Syncfusion
+description: Learn here about overview in Syncfusion Essential ASP.NET MVC Waiting Popup Control, its elements, and more.
 platform: ejmvc
-control: WaitingPopup
+control: Waiting Popup
 documentation: ug
 ---
 
-# WaitingPopup
+#  Overview in ASP.NET MVC Waiting Popup
 
-The WaitingPopup control for MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
+The Waiting Popup control for MVC is a visual element that provides support for displaying a pop-up indicator over a target area and preventing the end user's interaction with the target area while loading. 
 
 ### Key Features
 
@@ -21,7 +21,7 @@ The WaitingPopup control for MVC is a visual element that provides support for d
 ## Getting Started
 
 
-This section explains briefly about how to create a WaitingPopup in your application with ASP.NET MVC.
+This section explains briefly about how to create a Waiting Popup in your application with ASP.NET MVC.
 
 ## Create your first Waiting Popup in MVC
 
@@ -29,7 +29,7 @@ ASP.NET MVC Waiting Popup provides support to display Waiting Popup within your 
 
 
 
-![](Overview_images/Overview_img1.png)
+![Create your first Waiting Popup in ASP.NET MVC](Overview_images/Overview_img1.png)
 
 
 In the above screenshot, you can give the Username and Password. When you click the Login button, the Waiting Popup appears.  After loading, the alert box appears with a message “Signed in successfully”.
@@ -175,7 +175,7 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-   ![](Overview_images/Overview_img2.png)
+   ![User login in ASP.NET MVC Waiting Popup](Overview_images/Overview_img2.png)
 
 
 
@@ -184,14 +184,14 @@ In a real-time Login page scenario, when you click on the Login button, the Wait
 
 
 
-   ![](Overview_images/Overview_img3.png)
+   ![Waiting Popup in ASP.NET MVC](Overview_images/Overview_img3.png)
 
 
 
 
 The following screenshot displays an alert box displayed with the message “Signed in successfully” after loading.
 
-![](Overview_images/Overview_img4.png)
+![Alert box in ASP.NET MVC Waiting Popup](Overview_images/Overview_img4.png)
 
 
 
