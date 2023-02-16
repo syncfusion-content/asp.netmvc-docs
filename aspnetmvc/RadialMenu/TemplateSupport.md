@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Support in ASP.NET MVC Radial Menu control | Syncfusion
-description: Learn here more about toolbar customization in Syncfusion Essential ASP.NET MVC Radial Menu Control, its element and more.
+description: Learn here more about Toolbar Customization in Syncfusion Essential ASP.NET MVC Radial Menu Control, its element and more.
 platform: ejmvc
 control: Radial Menu
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Customization in ASP.NET MVC Pdf Viewer | Syncfusion
-description: Learn here about tollbar customization in Syncfusion ASP.NET MVC Pdf Viewer Control, its elements, and more.
+description: Learn here about Tollbar Customization in Syncfusion ASP.NET MVC Pdf Viewer Control, its elements, and more.
 platform: ejmvc
 control: PDF viewer
 documentation: ug
