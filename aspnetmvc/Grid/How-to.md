@@ -6,7 +6,7 @@ platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# How to Section in ASP.NET MVC
+# How to Section in ASP.NET MVC Grid
 
 ##  Apply formatting for columns dynamically
 
