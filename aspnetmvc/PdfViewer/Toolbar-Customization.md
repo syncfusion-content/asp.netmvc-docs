@@ -6,7 +6,6 @@ platform: ejmvc
 control: PDF viewer
 documentation: ug
 ---
-
 # Toolbar Customization in ASP.NET MVC Pdf Viewer
 
 **Customizing default toolbar**
