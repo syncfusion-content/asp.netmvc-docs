@@ -7,7 +7,7 @@ control: Chart
 documentation: ug
 ---
 
-# Axis in Essential ASP.NET MVC Chart
+# Axis in ASP.NET MVC Chart
 
 **Charts** typically have two axes that are used to measure and categorize data: a vertical (y) axis, and a horizontal (x) axis.
 
