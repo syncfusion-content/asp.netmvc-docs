@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Axis |Chart  | ASP.NET MVC | Syncfusion
-description: How to customize the grid lines, tick lines, labels and title of chart axis
+title: Chart Axis in ASP.NET MVC Chart Control | Syncfusion
+description: Learn here more about axis support in Syncfusion Essential ASP.NET MVC Chart Control, its elements, and more.
 platform: ejmvc
 control: Chart
 documentation: ug
 ---
 
-# Axis
+# Axis in ASP.NET MVC Chart
 
 **Charts** typically have two axes that are used to measure and categorize data: a vertical (y) axis, and a horizontal (x) axis.
 
@@ -40,10 +40,10 @@ Category axis displays the text labels instead of numbers. To use the categorica
 {% endhighlight %}
 
 
-![](Axis_images/axis_img1.png)
+![Category axis in ASP NET MVC Chart](Axis_images/axis_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/column) here to view our online demo sample that uses Category axis.
+[Click](https://ej2.syncfusion.com/aspnetmvc/Chart/CategoryAxis#/bootstrap5) here to view our online demo sample that uses Category axis.
 
 
 ### Place labels on ticks
@@ -66,7 +66,7 @@ Labels in the category axis can be placed on the ticks by setting the **LabelPla
 
 {% endhighlight %}
 
-![](Axis_images/axis_img2.png)
+![Place labels on ticks in ASP NET MVC Chart](Axis_images/axis_img2.png)
 
 
 ### Display labels after a fixed interval
@@ -89,7 +89,7 @@ To display the labels after a fixed interval n, you can set the **Interval** pro
 
 {% endhighlight %}
 
-![](Axis_images/axis_img3.png)
+![Display labels after a fixed interval in ASP NET MVC Chart](Axis_images/axis_img3.png)
 
 
 ### Indexed Category Axis
@@ -119,11 +119,11 @@ Category axis can also plot points based on index value of data points. Index ba
 {% endhighlight %}
 
 
-![](Axis_images/axis_img50.png)
+![Indexed Category Axis in ASP NET MVC Chart](Axis_images/axis_img50.png)
 
 **While Category axis IsIndexed value false**
 
-![](Axis_images/axis_img51.png)
+![Category axis is indexed value false in ASP NET MVC Chart](Axis_images/axis_img51.png)
 
 
 ## Numeric Axis 
@@ -146,7 +146,7 @@ Numeric axis uses numerical scale and displays numbers as labels. To use numeric
 
 {% endhighlight %}
 
-![](Axis_images/axis_img4.png)
+![Numeric axis in ASP NET MVC Chart](Axis_images/axis_img4.png)
 
 
 ### Customize numeric range
@@ -170,7 +170,7 @@ To customize the range of an axis, you can use the **Range** property of the axi
 
 {% endhighlight %}
 
-![](Axis_images/axis_img5.png)
+![Customize numeric range in ASP NET MVC Chart](Axis_images/axis_img5.png)
 
 
 #### Customizing numeric interval
@@ -193,7 +193,7 @@ Axis interval can be customized by using the **Interval** property of the axis r
 
 {% endhighlight %}
 
-![](Axis_images/axis_img6.png)
+![Customizing numeric interval in ASP NET MVC Chart](Axis_images/axis_img6.png)
 
 
 ### Apply padding to the range
@@ -225,7 +225,7 @@ When the value of the RangePadding property is **None**, padding can not be appl
 
 {% endhighlight %}
 
-![](Axis_images/axis_img7.png)
+![Apply padding to the range in ASP NET MVC Chart](Axis_images/axis_img7.png)
 
 
 #### Round
@@ -250,12 +250,12 @@ When the value of RangePadding property is **Round**, the axis range is rounded 
 
 **Chart before rounding axis range**
 
-![](Axis_images/axis_img8.png)
+![Chart before rounding axis range in ASP.NET MVC Chart](Axis_images/axis_img8.png)
 
 
 **Chart after rounding axis range**
 
-![](Axis_images/axis_img9.png)
+![Chart after rounding axis range in ASP.NET MVC Chart](Axis_images/axis_img9.png)
 
 
 **Additional**
@@ -278,7 +278,7 @@ When the value of the RangePadding property is **Additional**, the axis range is
 
 {% endhighlight %}
 
-![](Axis_images/axis_img10.png)
+![Additional in ASP.NET MVC Chart](Axis_images/axis_img10.png)
 
 
 **Normal**
@@ -301,7 +301,7 @@ When the value of the RangePadding property is **Normal**, the padding is applie
 
 {% endhighlight %}
 
-![](Axis_images/axis_img11.png)
+![Normal in ASP.NET MVC Chart](Axis_images/axis_img11.png)
 
 
 ####Customizing the starting range of the axis
@@ -316,7 +316,7 @@ By default the Y axis will be always calculated from the value 0 for column, bar
 
 {% endhighlight %}
 
-![](Axis_images/axis_img66.png)
+![Start from zero in ASP.NET MVC Chart](Axis_images/axis_img66.png)
 
 
 ## DateTime Axis
@@ -339,7 +339,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 
 {% endhighlight %}
 
-![](Axis_images/axis_img12.png)
+![DateTime axis in ASP.NET MVC Chart](Axis_images/axis_img12.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/datetimeaxis) here to view our online demo sample for date time axis.
@@ -365,7 +365,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 
 {% endhighlight %}
 
-![](Axis_images/axis_img13.png)
+![Customizing date time range in ASP.NET MVC Chart](Axis_images/axis_img13.png)
 
 
 ### Date time intervals
@@ -398,7 +398,7 @@ Essential Chart supports the following types of interval for date time axis.
 {% endhighlight %}
 
 
-![](Axis_images/axis_img14.png)
+![Date Time intervals in ASP.NET MVC Chart](Axis_images/axis_img14.png)
 
 
 
@@ -429,7 +429,7 @@ When the value of the RangePadding property is **None**, padding is applied to t
 
 {% endhighlight %} 
 
-![](Axis_images/axis_img15.png)
+![Range padding property in ASP.NET MVC Chart](Axis_images/axis_img15.png)
 
 
 **Round**
@@ -453,12 +453,12 @@ When the value of the RangePadding property is **Round**, the axis range is roun
 
 **Chart before rounding axis range**
 
-![](Axis_images/axis_img16.png)
+![Before round in ASP.NET MVC Chart](Axis_images/axis_img16.png)
 
 
 **Chart after rounding axis range**
 
-![](Axis_images/axis_img17.png)
+![After round in ASP.NET MVC Chart](Axis_images/axis_img17.png)
 
 
 **Additional** 
@@ -480,7 +480,7 @@ When the value of the RangePadding property is **Additional**, the range is roun
 
 {% endhighlight %} 
 
-![](Axis_images/axis_img18.png)
+![Minimum range in ASP.NET MVC Chart](Axis_images/axis_img18.png)
 
 
 ## DateTime Category Axis
@@ -495,7 +495,7 @@ DateTime category axis takes date time value as input but behaves like category 
 
 {% endhighlight %}
 
-![](Axis_images/axis_img63.png)
+![DateTime Category Axis in ASP.NET MVC Chart](Axis_images/axis_img63.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/datetimecategoryaxis) here to view our online demo sample for date time axis.
 
@@ -513,7 +513,7 @@ Axis range can be customized by using the *range* property to set the **Minimum*
 
 {% endhighlight %}
 
-![](Axis_images/axis_img64.png)
+![Customizing DateTime Category range in ASP.NET MVC Chart](Axis_images/axis_img64.png)
 
 ### DateTime Category intervals
 
@@ -537,7 +537,7 @@ Essential Chart supports the following types of interval for date time category 
 
 {% endhighlight %}
 
-![](Axis_images/axis_img65.png)
+![DateTime Category intervals in ASP.NET MVC Chart](Axis_images/axis_img65.png)
 
 
 ## Logarithmic Axis
@@ -561,7 +561,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing whe
 {% endhighlight %}
 
 
-![](Axis_images/axis_img19.png)
+![Logarithmic Axis in ASP.NET MVC Chart](Axis_images/axis_img19.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/logaxis) here to view our online demo sample link for logarithmic axis.
@@ -585,7 +585,7 @@ Logarithmic range can be customized by using the Range property of the axis to c
 
 {% endhighlight %}
 
-![](Axis_images/axis_img20.png)
+![Customize Logarithmic range in ASP.NET MVC Chart](Axis_images/axis_img20.png)
 
 
 ### Logarithmic base
@@ -607,7 +607,7 @@ Logarithmic base can be customized by using the **LogBase** property of the axis
 
 {% endhighlight %}
 
-![](Axis_images/axis_img21.png)
+![Logarithmic base in ASP.NET MVC Chart](Axis_images/axis_img21.png)
 
 
 ### Logarithmic interval
@@ -630,7 +630,7 @@ Logarithmic axis interval can be customized by using the Interval property of th
 
 {% endhighlight %}
 
-![](Axis_images/axis_img22.png)
+![Logarithmic interval in ASP.NET MVC Chart](Axis_images/axis_img22.png)
       
 
 ## Label Format
@@ -655,7 +655,7 @@ Numeric labels can be formatted by using the **LabelFormat** property. Numeric v
 
 {% endhighlight %}
 
-![](Axis_images/axis_img23.png)
+![Label format in ASP.NET MVC Chart](Axis_images/axis_img23.png)
 
 
 The following table describes the result of applying some commonly used label formats on numeric values. 
@@ -738,7 +738,7 @@ Date time labels can be formatted by using the **LabelFormat** property of the a
 
 {% endhighlight %}
 
-![](Axis_images/axis_img24.png)
+![Format date time values in ASP.NET MVC Chart](Axis_images/axis_img24.png)
 
 
 The following table describes the result of applying some common date time formats to the labelFormat property
@@ -808,7 +808,7 @@ Prefix and suffix can be added to the category labels by using the LabelFormat p
 
 {% endhighlight %}
 
-![](Axis_images/axis_img25.png)
+![Custom label format in ASP.NET MVC Chart](Axis_images/axis_img25.png)
 
 
 ## Common axis features
@@ -835,7 +835,7 @@ Axis can be positioned anywhere in chart area using the **CrossesAt** property o
 
 {% endhighlight %}
 
-![](Axis_images/axis_img52.png)
+![Axis Crossing in ASP.NET MVC Chart](Axis_images/axis_img52.png)
 
 
 #### Crossing a specific Axis
@@ -859,7 +859,7 @@ The **CrossesInAxis** property takes axis name as input and determines the axis 
 
 {% endhighlight %}
 
-![](Axis_images/axis_img53.png)
+![Crossing a specific Axis in ASP.NET MVC Chart](Axis_images/axis_img53.png)
 
 Axis will be placed in the opposite side if value of *CrossesAt* property is greater than the maximum value of crossing axis (axis name provided through *CrossesInAxis* property or primary Y axis for horizontal axis).
 
@@ -879,7 +879,7 @@ Axis will be placed in the opposite side if value of *CrossesAt* property is gre
 
 {% endhighlight %}
 
-![](Axis_images/axis_img54.png)
+![Crrosses in axisin in ASP.NET MVC Chart](Axis_images/axis_img54.png)
 
 #### Positioning the axis elements while crossing
 
@@ -903,7 +903,7 @@ The `ShowNextToAxisLine` property is used for controlling the axis elements move
 
 The axis is placed at the crossing value without the axis elements 
 
-![](Axis_images/axis_img67.png)
+![Positioning the axis elements while crossing in ASP.NET MVC Chart](Axis_images/axis_img67.png)
 
 
 ### Axis Visibility
@@ -926,7 +926,7 @@ Axis visibility can be controlled by using the **Visible** property of the axis.
 
 {% endhighlight %}
 
-![](Axis_images/axis_img26.png)
+![Axis visibility property in ASP.NET MVC Chart](Axis_images/axis_img26.png)
 
 
 ### Axis title
@@ -955,7 +955,7 @@ The **Title** property in the axis provides options to customize the text and fo
 
 {% endhighlight %}
 
-![](Axis_images/axis_img27.png)
+![Axis title in ASP.NET MVC Chart](Axis_images/axis_img27.png)
 
 You can modify the position of the axis title either inside or outside the chart area using the property **Position**. By default, it will be placed outside the chart area. In addition, you can also change the alignment of the title to near, far and center by **Alignment** property, using **Offset** property you can change the position with respect to pixels.
 
@@ -968,7 +968,7 @@ You can modify the position of the axis title either inside or outside the chart
 
 {% endhighlight %}
 
-![](Axis_images/axis_img62.png)
+![Position in ASP.NET MVC Chart](Axis_images/axis_img62.png)
 
 ### Label customization
 
@@ -993,7 +993,7 @@ The **Font** property of the axis provides options to customize the FontFamily, 
 
 {% endhighlight %}
 
-![](Axis_images/axis_img28.png)
+![Label customization in ASP.NET MVC Chart](Axis_images/axis_img28.png)
 
 #### Axis Labels Line Break
 
@@ -1025,7 +1025,7 @@ For category value type, **<br>** can be specified in x value of data points.
 
 {% endhighlight %}
 
-![](Axis_images/axis_img68.png)
+![Axis Labels Line Break in ASP.NET MVC Chart](Axis_images/axis_img68.png)
 
 For numeric, datetime and datetimeCategory value type, **<br>** can be specified in labelFormat.
 
@@ -1043,7 +1043,7 @@ For numeric, datetime and datetimeCategory value type, **<br>** can be specified
 
 {% endhighlight %}
 
-![](Axis_images/axis_img69.png)
+![Vallues in ASP.NET MVC Chart](Axis_images/axis_img69.png)
 
 ### Label and tick positioning
  
@@ -1065,7 +1065,7 @@ Axis labels and ticks can be positioned inside or outside the chart area by usin
 
 {% endhighlight %}
 
-![](Axis_images/axis_img29.png)
+![Label and tick positioning in ASP.NET MVC Chart](Axis_images/axis_img29.png)
 
 
 ### Edge labels placement
@@ -1090,12 +1090,12 @@ Labels with long text at the edges of an axis may appear partially outside the c
 
 **Chart before setting edge label placement to X-axis**
 
-![](Axis_images/axis_img30.png)
+![Chart before setting edge label placement to X-axis in ASP.NET MVC Chart](Axis_images/axis_img30.png)
 
 
 **Chart after setting edge label placement to X-axis**
 
-![](Axis_images/axis_img31.png)
+![Chart before setting edge label placement to X-axis in ASP.NET MVC Chart](Axis_images/axis_img31.png)
 
 
 ### Grid lines customization
@@ -1120,7 +1120,7 @@ The **MajorGridLines** and **MinorGridLines** properties in the axis are used to
 
 {% endhighlight %}
 
-![](Axis_images/axis_img32.png)
+![Grid lines customization in ASP.NET MVC Chart](Axis_images/axis_img32.png)
 
 
 ### Tick lines customization
@@ -1145,7 +1145,7 @@ The **MajorTickLines** and **MinorTickLines** properties in the axis are used to
 
 {% endhighlight %}
 
-![](Axis_images/axis_img33.png)
+![Tick lines customization in ASP.NET MVC Chart](Axis_images/axis_img33.png)
 
   
 ### Inversing axis
@@ -1170,12 +1170,12 @@ Axis can be inversed by using the **IsInversed** property of the axis. The defau
 
 **Chart before inversing the axes**
 
-![](Axis_images/axis_img34.png)
+![Chart before inversing the axes in ASP.NET MVC Chart](Axis_images/axis_img34.png)
 
 
 **Chart after inversing the axes**
 
-![](Axis_images/axis_img35.png)
+![Chart after inversing the axes in ASP.NET MVC Chart](Axis_images/axis_img35.png)
    
 
 ### Place axes at the opposite side
@@ -1200,12 +1200,12 @@ The **OpposedPosition** property of axis can be used to place the axis at the op
 
 **Chart with X and Y axes at normal position**
 
-![](Axis_images/axis_img36.png)
+![Chart with X and Y axes at normal position in ASP.NET MVC Chart](Axis_images/axis_img36.png)
 
 
 **Chart with Y-axis at opposed position**
 
-![](Axis_images/axis_img37.png)
+![Chart with Y-axis at opposed position in ASP.NET MVC Chart](Axis_images/axis_img37.png)
 
 
 ### Maximum number of labels per 100 pixels
@@ -1230,12 +1230,12 @@ A maximum of 3 labels are displayed for each 100 pixels in the axis, by default.
 
 **Chart before setting maximum labels per 100 pixels**
 
-![](Axis_images/axis_img38.png)
+![Chart before setting maximum labels per 100 pixels in ASP.NET MVC Chart](Axis_images/axis_img38.png)
 
 
 **Chart after setting maximum labels one per 100 pixels**
 
-![](Axis_images/axis_img39.png)
+![Chart after setting maximum labels one per 100 pixels in ASP.NET MVC Chart](Axis_images/axis_img39.png)
 
 
 
@@ -1243,7 +1243,7 @@ A maximum of 3 labels are displayed for each 100 pixels in the axis, by default.
 
 Multiple axes can be used in the Chart and chart area can be split into multiple panes to draw multiple series with multiple axes.
 
-![](Axis_images/axis_img40.png)
+![Multiple Axis in ASP.NET MVC Chart](Axis_images/axis_img40.png)
 
 
 An additional horizontal or vertical axis can be added to the chart by adding an axis instance to the **Axes** collection and then you can associate it to a series by specifying the name of the axis to the **XAxisName** or **YAxisName** property of the series.
@@ -1271,7 +1271,7 @@ An additional horizontal or vertical axis can be added to the chart by adding an
 
 
 
-![](Axis_images/axis_img41.png)
+![Adding axis in ASP.NET MVC Chart](Axis_images/axis_img41.png)
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the multiple axis online demo sample.
 
@@ -1297,7 +1297,7 @@ When the Axis labels overlap with each other based on the chart dimensions and l
 
 
 
-![](Axis_images/axis_img42.png)
+![Smart Axis Labels in ASP.NET MVC Chart](Axis_images/axis_img42.png)
 
 
 [Click](http://mvc.syncfusion.com/demos/web/chart/smartaxislabels) here to view our online demo sample for smart axis labels.
@@ -1306,37 +1306,37 @@ When the Axis labels overlap with each other based on the chart dimensions and l
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **Rotate45**.
 
-![](Axis_images/axis_img43.png)
+![Rotate 45 in ASP.NET MVC Chart](Axis_images/axis_img43.png)
 
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **Rotate90**.
 
-![](Axis_images/axis_img44.png)
+![Rotate 90 in ASP.NET MVC Chart](Axis_images/axis_img44.png)
 
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **Wrap**.
 
-![](Axis_images/axis_img45.png)
+![Wrap in ASP.NET MVC Chart](Axis_images/axis_img45.png)
 
 
 The following screenshot displays the result, when of setting the **trim** as value to the LabelIntersectAction property.
 
-![](Axis_images/axis_img46.png)
+![Trim in ASP.NET MVC Chart](Axis_images/axis_img46.png)
 
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **Hide**.
 
-![](Axis_images/axis_img47.png)
+![Hide in ASP.NET MVC Chart](Axis_images/axis_img47.png)
 
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **MultipleRows **.
 
-![](Axis_images/axis_img48.png)
+![Multiple Rows in ASP.NET MVC Chart](Axis_images/axis_img48.png)
 
 
 The following screenshot displays the result, when the LabelIntersectAction property is set as **WrapByWord**.
 
-![](/js/Chart/Axis_images/axis_img49.png)
+![Wrap By Word in ASP.NET MVC Chart](/js/Chart/Axis_images/axis_img49.png)
 
 ## Multi-level Labels
 Axis can be customized with multiple levels of labels using the **MultiLevelLabels** property. These labels are placed based on the start and end range values and we can add any number of labels to an axis.
@@ -1351,7 +1351,7 @@ Axis can be customized with multiple levels of labels using the **MultiLevelLabe
 
 {% endhighlight %}
 
-![](Axis_images/axis_img57.png)
+![Multi-level Labels in ASP.NET MVC Chart](Axis_images/axis_img57.png)
 
 ### Customizing the multi-Level labels
 The color, width and type of the border can be customized. The default border type is **Rectangle**. And the other supported border types are namely brace, curly brace, without top/bottom border and none. 
@@ -1366,7 +1366,7 @@ The color, width and type of the border can be customized. The default border ty
 
 {% endhighlight %}
 
-![](Axis_images/axis_img58.png)
+![Customizing the multi-Level labels in ASP.NET MVC Chart](Axis_images/axis_img58.png)
 
 The text of the labels can be customized using the **Text** and **Font** properties 
 
@@ -1380,7 +1380,7 @@ The text of the labels can be customized using the **Text** and **Font** propert
      
 {% endhighlight %}
 
-![](Axis_images/axis_img59.png)
+![Text in ASP.NET MVC Chart](Axis_images/axis_img59.png)
 
 You can change the alignment of the text to far, near and center position using the **TextAlignment** property. By default, the text will be center aligned. 
 
@@ -1394,7 +1394,7 @@ You can change the alignment of the text to far, near and center position using 
        
 {% endhighlight %}
 
-![](Axis_images/axis_img60.png)
+![Text alignment in ASP.NET MVC Chart](Axis_images/axis_img60.png)
 
 You can trim, wrap or wrapAndTrim the text if it exceeds the maximum text width value using the property **TextOverflow**
 
@@ -1410,7 +1410,7 @@ You can trim, wrap or wrapAndTrim the text if it exceeds the maximum text width 
 
 The below screenshot shows the trimmed multi-level labels
 
-![](Axis_images/axis_img61.png)
+![Text overflow in ASP.NET MVC Chart](Axis_images/axis_img61.png)
 
 And these labels can be placed in various rows using the **Level** property.
-[Click](http://mvc.syncfusion.com/demos/web/chart/multilevellabels) here to view the multi-level labels online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/Chart/MultiLevelLabels#/bootstrap5) here to view the multi-level labels online demo sample.
