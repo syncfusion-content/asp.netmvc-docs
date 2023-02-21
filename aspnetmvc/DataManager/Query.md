@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Query | DataManager | ASP.NET MVC | Syncfusion
-description: query
+description: Learn here more about query support in Syncfusion Essential ASP.NET MVC DataManager Control, its elements, and more.
 platform: ejmvc
 control: DataManager
 documentation:  ug
 keywords: select, From, Clone, Expand
 ---
 
-# Query
+# Query in ASP.NET MVC DataManager
 
 DataManager provides support for multiple queries in order to perform various operations like filtering, sorting, cloning, expanding, searching, grouping etc., in the data source. Here, you can learn the query options in detail.
 
@@ -40,7 +40,7 @@ The select query of the DataManager is used to select only some particular field
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img1.png)
+![Select in ASP.NET MVC DataManger](Query_images/Query_img1.png)
 
 Result of using “select”
 {:.caption}
@@ -71,7 +71,7 @@ The from query of the DataManager is used to select the table from where the dat
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img2.png)
+![From in ASP.NET MVC DataManger](Query_images/Query_img2.png)
 
 Result of using “from”
 {:.caption}
@@ -119,7 +119,7 @@ The clone query of the DataManager is used to duplicate the query. The following
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img3.png)
+![Clone in ASP.NET MVC DataManger](Query_images/Query_img3.png)
 
 Result of using “clone”
 {:.caption}
@@ -150,7 +150,7 @@ The expand query of the DataManager is used to perform complex data binding.
 
 Result of the above code example is illustrated as follows.
 
-![](Query_images/Query_img4.png)
+![Expand in ASP.NET MVC DataManger](Query_images/Query_img4.png)
 
 Result of using “expand”
 {:.caption}
