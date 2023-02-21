@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with DropDownList control for Syncfusion ASP.NET MVC
-description: To get start with DropDownList by adding references.
+title: Getting Started with ASP.NET MVC DropDownList control | Syncfusion
+description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC DropdownList Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
 documentation: ug
 keywords: DropDownList, dropdown, Populating data
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC DropdownList
 
 ## Creating your first DropDownList in MVC application
 
-1. Create an MVC Project and add necessary assemblies, scripts and CSS files given in [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started#manual-integration-of-syncfusion-mvc-components-into-newexisting-mvc-applications) Documentation.
+1. Create an MVC Project and add necessary assemblies, scripts and CSS files given in [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started#manual-integration-of-syncfusion-mvc-components-into-newexisting-mvc-applications) Documentation.
 
 2. Add DropDownList control using the helper from EJ namespace. 
 
@@ -28,7 +28,7 @@ keywords: DropDownList, dropdown, Populating data
 
 ## Populating data
 
-The DropDownList can be bounded to any local list data and remote data services. You can use [DataManager](http://help.syncfusion.com/js/datamanager/overview) component to serve data from the data services based on the query provided.You can bind data locally from controller also. To render the DropDownList items, map the DropDownListFields with corresponding Fields <br/>
+The DropDownList can be bounded to any local list data and remote data services. You can use [DataManager](https://help.syncfusion.com/js/datamanager/overview) component to serve data from the data services based on the query provided.You can bind data locally from controller also. To render the DropDownList items, map the DropDownListFields with corresponding Fields <br/>
  
 	
 {% highlight html %}
