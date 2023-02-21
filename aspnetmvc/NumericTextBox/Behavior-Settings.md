@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Behavior Settings | NumericTextBox | ASP.NET MVC | Syncfusion
-description: behavior settings
+description: Learn here more about behavior settings support in Syncfusion ASP.NET MVC NumericTextBox control, its element and more.
 platform: ejmvc
 control: NumericTextBox
 documentation: ug
 ---
 
-# Behavior Settings
+# Behavior Settings in ASP.NET MVC NumericTextBox
 
 ## Decimal Places
 
@@ -27,7 +27,7 @@ The output is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img1.png)
+![Configure Decimal Places in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img1.png)
 
 
 
@@ -50,11 +50,11 @@ Output of NumericTextBox with EnablePersistence is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img2.png)
+![Configure Persistence Support in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img2.png)
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img3.png)
+![ASP.NET MVC NumericTextBox with EnablePersistence](Behavior-Settings_images/Behavior-Settings_img3.png)
 
 
 
@@ -74,7 +74,7 @@ In the View page add NumericTextBox helper, and configure the EnableStrictMode p
 
 Output when EnableStrictMode is “true” is as follows.
 
-![](Behavior-Settings_images/Behavior-Settings_img4.png)
+![Configure Strict Mode Support in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img4.png)
 
 
 
@@ -101,11 +101,11 @@ Output when Enabled is “true” and when Enabled is “false”.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img5.png)
+![Configure Enabled in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img5.png)
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img6.png)
+![Configure Disabled in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img6.png)
 
 
 
@@ -129,7 +129,7 @@ In the View page add NumericTextBox helper, and configure the Height and Width p
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img7.png)
+![Adjusting Textbox Size in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img7.png)
 
 
 
@@ -153,13 +153,13 @@ Output of Numeric textbox with IncrementStep is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img8.png)
+![Increment Step in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img8.png)
 
 
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img9.png)
+![Configure Increment Step Propety in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img9.png)
 
 
 
@@ -197,7 +197,7 @@ In the View page add NumericTextBox helper, and configure the Value property.
 
 Output of NumericTextBox with the value property is as follows.
 
-![](Behavior-Settings_images/Behavior-Settings_img10.png)
+![Configure Value in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img10.png)
 
 
 
@@ -226,13 +226,13 @@ Output of NumericTextBox with MaxValue and MinValue is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img11.png)
+![MaxValue in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img11.png)
 
 
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img12.png)
+![MinValue in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img12.png)
 
 
 
@@ -252,7 +252,7 @@ In the View page add NumericTextBox helper, and configure the ReadOnly property.
 
 Output of NumericTextBox when ReadOnly is “true” is as follows. NumericTextBox values cannot be edited or changed.
 
-![](Behavior-Settings_images/Behavior-Settings_img13.png)
+![Configure Read Only in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img13.png)
 
 
 
@@ -330,7 +330,7 @@ In the View page add NumericTextBox helper, and configure the CssClass property.
 
 Output of NumericTextBox after applying CssClass is as follows.
 
-![](Behavior-Settings_images/Behavior-Settings_img14.png)
+![CSS Class in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img14.png)
 
 
 
@@ -352,7 +352,7 @@ In the View page add NumericTextBox helper, and configure the ShowRoundedCorner 
 
 Output of NumericTextBox when ShowRoundedCorner is “true”.
 
-![](Behavior-Settings_images/Behavior-Settings_img15.png)
+![ShowRoundedCorner in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img15.png)
 
 
 
@@ -374,7 +374,7 @@ In the View page add NumericTextBox helper, and configure the ShowSpinButton pro
 
 Output of NumericTextBox when ShowSpinButton is “false”.
 
-![](Behavior-Settings_images/Behavior-Settings_img16.png)
+![ShowSpinButton in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img16.png)
 
 
 
@@ -400,7 +400,7 @@ Output of NumericTextBox after applying WaterMarkText is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img17.png)
+![WaterMarkText in ASP.NET MVC NumericTextBox](Behavior-Settings_images/Behavior-Settings_img17.png)
 
 
 

@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with ASP.NET MVC Common
 
-> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
+> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
  
 ## What is Html.EJ() ?
 
-EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery/javascript-ui-controls) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://www.syncfusion.com/kb/5153/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej ).
+EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://www.syncfusion.com/kb/5153/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej ).
 
 ## Getting started with Syncfusion MVC
 
@@ -61,7 +61,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![Reference](getting-started_images/getting-started_img6.png)
 
-5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx) post for understanding the licensing changes introduced in Essential Studio.
+5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
 	![license](getting-started_images/getting-started_img21.png)
 	
@@ -158,7 +158,7 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 
 To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by making use of the **Syncfusion** **Nuget** **Packages**, refer to the following steps.
 
-1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](https://help.syncfusion.com/aspnetmvc/installation-and-upgrade/install-using-the-web-installer#configuring-syncfusion-nuget-packages-in-visual-studio)
+1. The steps to download and configure the required **Syncfusion** **NuGet** **Packages** in Visual Studio is mentioned [here](https://help.syncfusion.com/aspnetmvc/installation/web-installer/how-to-install#configuring-syncfusion-nuget-packages-in-visual-studio)
 
 2. Once Configured the Packages source, search and install the **Syncfusion.AspNet.Mvc5** from **Package** **Manager** **console** by using following commands.
 
