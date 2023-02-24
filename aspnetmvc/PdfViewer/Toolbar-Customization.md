@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-## Toolbar Customization
+# Toolbar Customization in ASP.NET MVC PdfViewer
 
 **Customizing default toolbar**
 
