@@ -1,12 +1,12 @@
 ---
 layout: post
-title: ASP.NET MVC Grid Control | Syncfusion 
-description: Learn here about how to section in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
+title: How to Section in ASP.NET MVC Grid control | Syncfusion
+description: Learn here more about How To Section in Syncfusion Essential ASP.NET MVC Grid Control, its element and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# ASP.NET MVC Grid Control
+# How to Section in ASP.NET MVC Grid
 
 ##  Apply formatting for columns dynamically
 
@@ -176,7 +176,7 @@ namespace MVCSampleBrowser.Controllers
 
 The following output is displayed as a result of the previous code example.
 
-![Drag and drop in in ASP.NET MVC Grid](How-to_images/Customize-Drag-and-Drop-element-while-grouping_img1.png)
+![Customize drag and drop element while grouping in ASP.NET MVC Grid](How-to_images/Customize-Drag-and-Drop-element-while-grouping_img1.png)
 
 ## Display tooltip
 
@@ -364,7 +364,7 @@ namespace EJGrid.Controllers
 
 The following screenshot illustrates the output.
 
-![Set dynamic dataSource in ASP.NET MVC Grid](How-to_images/Set-Dynamic-DataSource-to-Grid_img1.png)
+![Set dynamic dataSource to grid in ASP.NET MVC](How-to_images/Set-Dynamic-DataSource-to-Grid_img1.png)
 
 
 ## Custom binding for grid CRUD operation
@@ -565,7 +565,7 @@ namespace EJGrid.Controllers
 {% endhighlight %}
 {% endtabs %}    
 
- ![Custom binding in ASP.NET MVC](How-to_images/Custom-CRUD_img1.png)
+ ![Custom binding for grid CRUD operation in ASP.NET MVC](How-to_images/Custom-CRUD_img1.png)
  
   
 ## Binding SignalR endpoint
@@ -1424,7 +1424,7 @@ The following code example shows you how to set grid properties such as `AllowPa
 
 The following output is displayed as a result of the previous code example.
 
-![ASP.NET](How-to_images/Configure Grid through Grid Model properties_img1.png)
+![Configure grid through the grid model properties in ASP.NET MVC](How-to_images/Configure Grid through Grid Model properties_img1.png)
 
 ##  Work with partial views
 
@@ -1493,7 +1493,7 @@ In unobtrusive mode, to load grid from partial view via AJAX, in the success cal
 
 The following output is displayed as a result of the previous code example.
 
-![Code](How-to_images/Work with partial views_img1.png)
+![Work with partial views in ASP.NET MVC Grid](How-to_images/Work with partial views_img1.png)
 
 
 In non-unobtrusive mode, to load grid from partial view via AJAX, the `ScriptManager` HTML helper should be placed at the bottom of the partial view.
@@ -1557,7 +1557,7 @@ The following code sample describes the previous behavior.
 
 The following output is displayed as a result of the previous code example.
 
-![ASP.NETMVCGrid](How-to_images/Work with partial views_img2.png)
+![Load grid from partial view via AJAX in ASP.NET MVC Grid](How-to_images/Work with partial views_img2.png)
 
 ## Rendering the grid using grid properties in server-side
 
@@ -1604,7 +1604,7 @@ The following code example which will explain to render the grid control in serv
 
 The following output is displayed as a result of the previous code example.
 
-![Rendering Grid in ASP.NET MVC](Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET MVC Grid rendered in server side](Getting-Started_images/Getting-Started_img4.png)
 
 
 ## Export grid to target location without download prompt(Excel, Word or PDF)
@@ -1830,7 +1830,7 @@ We can display the other Syncfusion controls using the `Template` property of gr
 
 The following output is displayed as a result of the previous code example.
 
-![Display other Syncfusion controls in ASP.NET Grid](How-to_images/Display_Other_controls_img1.png)
+![Display other controls in grid columns in ASP.NET MVC](How-to_images/Display_Other_controls_img1.png)
 
 ## Perform grid actions on external button click
 
@@ -2102,7 +2102,7 @@ The following code example explains the previous behavior.
 
 {% endtabs %}
 The following output is displayed as a result of the previous code example.
-![Sorting in ASP.NET MVC Grid](How-to_images/Actionswithexternalbutton_img1.png)
+![Action with External Button in ASP.NET MVC](How-to_images/Actionswithexternalbutton_img1.png)
 
 ## Getting Datasource of Grid in Sorted Order
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview | ASP.NET MVC | Captcha | Syncfusion
-description: Learn here about overview in Syncfusion Essential ASP.NET MVC Captcha Control, its elements, and more.
+title: Captcha | Captcha  | ASP.NET MVC | Syncfusion
+description: Learn here about overview of Syncfusion Essential ASP.NET MVC Captcha Control, its elements, and more.
 platform: ejmvc
 control: Captcha
 documentation: ug
 ---
 
-# Overview in ASP.NET MVC Captcha
+# Captcha in ASP.NET MVC Captcha
 
 Captcha is a popular technique that is used to prevent computer programs from sending automated requests and is used for meta-searching search engines, performing dictionary attacks in login pages, or sending spam using mail servers. Captcha is validated at the time of form submission.
 

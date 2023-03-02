@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview | Waiting Popup | ASP.NET MVC | Syncfusion
-description: Learn here about overview in Syncfusion Essential ASP.NET MVC Waiting Popup Control, its elements, and more.
+title: Overview in ASP.NET MVC Waiting Popup control | Syncfusion
+description: Learn here more about Overview in Syncfusion Essential ASP.NET MVC Waiting Popup Control, its element and more.
 platform: ejmvc
 control: Waiting Popup
 documentation: ug

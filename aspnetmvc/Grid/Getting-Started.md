@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting started with Grid widget for Syncfusion Essential ASP.NET MVC
-description: How to create the Grid, data bind, enable paging, grouping, filtering and add summaries
+title: Getting started with ASP.NET MVC Grid Control | Syncfusion
+description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC Grid
 
 This section explains briefly about how to create a Grid in your application with ASP.NET MVC, and also explains about how to enable basic grid operations like paging, filtering, grouping and summary. The following screenshot illustrates the grid control.
 
-![](Getting-Started_images/Getting-Started_img.png)
+![Getting Started with ASP.NET MVC Grid](Getting-Started_images/Getting-Started_img.png)
 
 ## Create your first grid in MVC
 
@@ -44,7 +44,7 @@ The following steps explain creating first grid with an empty datasource:
    
 You can execute the above code sample to render an empty grid is rendered with specified column headers.
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Create your first grid in ASP.NET MVC](Getting-Started_images/Getting-Started_img2.png)
 
 ## Data binding
 
@@ -94,7 +94,7 @@ You can bind the data to grid control using the `DataSource` property.
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![ASP.NET MVC Grid in Data binding](Getting-Started_images/Getting-Started_img3.png)
 
 
 ## Enable paging
@@ -145,7 +145,7 @@ and `PageSettings` property.
 
     N> _Pager settings can be customized by using the 'PageSize' and 'PageCount' properties. When it is not given the default values for `PageSize` and `PageCount` are 12 and 8 respectively._
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![ASP.NET MVC Grid in Enable paging](Getting-Started_images/Getting-Started_img4.png)
 
 ## Enable filtering
 
@@ -202,7 +202,7 @@ The [`Filtering`](http://help.syncfusion.com/aspnetmvc/grid/filtering) feature i
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img7.png)
+![ASP.NET MVC Grid in Enable filtering ](Getting-Started_images/Getting-Started_img7.png)
 
 
 ## Enable grouping
@@ -261,7 +261,7 @@ The ['Grouping'](http://help.syncfusion.com/aspnetmvc/grid/grouping) feature in 
 {% endhighlight  %}
 
 
-![](Getting-Started_images/Getting-Started_img8.png)
+![ASP.NET MVC Grid in Enable grouping](Getting-Started_images/Getting-Started_img8.png)
 
 
 ## Add summaries
@@ -352,5 +352,5 @@ The following code example shows the option to enable group summary.
 
 {% endhighlight  %}
 
-![](Getting-Started_images/Getting-Started_img9.png)
+![Add summaries in ASP.NET MVC Grid](Getting-Started_images/Getting-Started_img9.png)
 
