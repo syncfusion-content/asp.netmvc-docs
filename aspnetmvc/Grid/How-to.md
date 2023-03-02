@@ -6,7 +6,7 @@ platform: ejmvc
 control: Grid
 documentation: ug
 ---
-# ASP.NET MVC Grid
+# ASP.NET MVC Grid Control
 
 ##  Apply formatting for columns dynamically
 
