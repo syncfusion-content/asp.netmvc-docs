@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-> The Syncfusion ASP.NET MVC controls in the Essential JavaScript 1 library, which are based on jQuery widgets, are no longer under active development. The 2022 Volume 4 is the final release for these controls. We recommend that users migrate to the Syncfusion ASP.NET MVC controls available in the Essential JS 2 library, which have been designed to be lightweight and modular. To learn more, please refer to the [documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/introduction) and [demo](https://ej2.syncfusion.com/aspnetmvc/Grid/GridOverview) for the Syncfusion ASP.NET MVC controls in Essential JS 2 library.
+> The Syncfusion ASP.NET MVC controls in the Essential JavaScript 1 library, which are based on jQuery widgets, are no longer under active development. The 2022 Volume 4 is the final release for these controls. We recommend that users migrate to the Syncfusion ASP.NET MVC controls available in the Essential JS 2 library, which has been designed to be lightweight and modular. To learn more, please refer to the [documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/introduction) and [demo](https://ej2.syncfusion.com/aspnetmvc/Grid/GridOverview) for the Syncfusion ASP.NET MVC controls in the Essential JS 2 library.
 
 # Welcome to Syncfusion Essential ASP.NET MVC
 
