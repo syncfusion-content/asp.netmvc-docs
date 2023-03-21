@@ -27,5 +27,5 @@ The **Syncfusion Essential Studio for ASP.NET MVC** is a set of server-side wrap
 
 ## Create a Support Incident
 
-If you are still not able to find the information that you are looking for in the self-help resources mentioned above, please [contact us](https://www.syncfusion.com/support) by creating a support ticket.
+If you are still not able to find the information that you are looking for in the self-help resources mentioned above, please [contact us](https://internalsupport.bolddesk.com/agent/tickets/create) by creating a support ticket.
 
