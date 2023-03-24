@@ -1,13 +1,13 @@
 ---
 layout: post
 title: File Actions | UploadBox | ASP.NET MVC | Syncfusion
-description: file actions
+description: Learn here about file action with Syncfusion ASP.NET MVC UploadBox control, its elements, and more.
 platform: ejmvc
 control: UploadBox
 documentation: ug
 ---
 
-# File Actions
+# File Actions in ASP.NET MVC UploadBox
 
 ## Save File Action 
 
