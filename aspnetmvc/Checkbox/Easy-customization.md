@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Easy customization | Checkbox | ASP.NET MVC | Syncfusion
-description: easy customization
+description: Learn here about easy customization support in Syncfusion Essential ASP.NET MVC Checkbox Control, its elements, and more.
 platform: ejmvc
 control: Checkbox
 documentation: ug
 ---
 
-# Easy customization
+# Easy customization in ASP.NET MVC Checkbox
 
 ## Checked state
 
