@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How To Section with ASP.NET MVC TreeView Control | Syncfusion
+title: How To Section with ASP.NET MVC Autocomplete Control | Syncfusion
 description: Learn here about how to section with Syncfusion Essential ASP.NET MVC Autocomplete Control, its elements, and more.
 platform: ejmvc
 control: Autocomplete
