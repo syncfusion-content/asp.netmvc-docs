@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns | Gantt | ASP.NET MVC | Syncfusion
-description: columns
+title: Columns support in ASP.NET MVC Gantt Control | Syncfusion
+description: Learn here about columns support in Syncfusion Essential ASP.NET MVC Gantt Control, its elements, and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
 ---
 
-# Gantt Columns
+# Columns in ASP.NET MVC Gantt
 
  Gantt column displays the information from a bounded data source and it will be editable to update the task details through TreeGrid.
 
@@ -169,7 +169,7 @@ public class GanttController : Controller
 
 The following screenshot displays the customized column in Gantt control.
 
-![](Columns_images/Columns_img7.png)
+![Column Template in ASP.NET MVC Gantt](Columns_images/Columns_img7.png)
 
 ## Column Menu
 
@@ -177,7 +177,7 @@ The following screenshot displays the customized column in Gantt control.
 
 Gantt supports enabling and disabling the visibility of the columns dynamically with the `ShowColumnChooser` property. The visibility of the custom columns can also be toggled with this property. Column chooser option is rendered as a sub menu item within the column menu in the Gantt columns. 
 
-![](Columns_images/Columns_img2.png)
+![Column Menu in ASP.NET MVC Gantt](Columns_images/Columns_img2.png)
 
 The column menu is enabled with the `ShowColumnChooser` property, where the default value for this property is `false`.
 
@@ -203,13 +203,13 @@ Sort Ascending and Sort Descending options can be enabled or disabled with the `
 
 The following screenshot displays the column chooser in the Gantt control.
 
-![](Columns_images/Columns_img3.png)
+![Column chooser in ASP.NET MVC Gantt](Columns_images/Columns_img3.png)
 
 ### Show Column Options
 
 You can customize the column with some more options with the `ShowColumnOptions` property. Use this property to insert a new column, delete a column and to update the header text of the column.
 
-![](Columns_images/Columns_img4.png)
+![Show Column Options in ASP.NET MVC Gantt](Columns_images/Columns_img4.png)
 
 The column options can be enabled or disabled with the `ShowColumnOptions` property, where the default value for this property is `false`.
 
@@ -222,7 +222,7 @@ The column options provide the following options:
 
 Inserting column provides the dialog to enter the details for the column.
 
-![](Columns_images/Columns_img5.png)
+![Column Dialog Fields in ASP.NET MVC Gantt](Columns_images/Columns_img5.png)
 
 These fields can be customized with the `ColumnDialogFields` property. The following code sample shows you how to customize these fields.
 
@@ -242,7 +242,7 @@ These fields can be customized with the `ColumnDialogFields` property. The follo
  
 {% endhighlight %}
 
-![](Columns_images/Columns_img6.png)
+![Change visibility of the columns dynamically in ASP.NET MVC Gantt](Columns_images/Columns_img6.png)
 
 ## Change visibility of the columns dynamically
 
@@ -286,4 +286,4 @@ Tree/Expander column is a column in Gantt which has icons to expand/collapse the
 
 The below screenshot shows the output of above code example.
 
-![](Columns_images/Columns_img8.png)
+![Change Tree/Expander Column in ASP.NET MVC Gantt](Columns_images/Columns_img8.png)

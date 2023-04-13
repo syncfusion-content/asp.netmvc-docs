@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | DateRangePicker  | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC DateRangePicker Control | Syncfusion
+description: Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC DateRangePicker Control, its element and more.
 platform: ejmvc
 control: DateRangePicker
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC DateRangePicker
 
 This section explains briefly about how to render a DateRangePicker in your application with ASP.NET MVC.
 
@@ -16,7 +16,7 @@ This section explains briefly about how to render a DateRangePicker in your appl
 The Essential ASP.NET MVC DateRangePicker supports to display two calendars in the webpage and allows you pick date range from the calendars. Refer the following guidelines to customize the DateRangePicker. The following screenshot illustrates the functionality of DateRangePicker.
 
 
-![](Getting-Started_images/getting-started.png)
+![Create your first DateRangePicker in ASP.NET MVC](Getting-Started_images/getting-started.png)
     
 DateRangePicker
 {:.caption}
@@ -45,7 +45,7 @@ ASP.NET MVC DateRangePicker widget basically renders with built-in features like
 
 Execute the above code to render the following output.
 
-![](Getting-Started_images/getting-started1.png)
+![Create a DateRangePicker in ASP.NET MVC](Getting-Started_images/getting-started1.png)
 
 DateRangePicker
 {:.caption}
@@ -93,7 +93,7 @@ Below code will explain to use the **EndDate** API to set the end Date in popup.
 
 Execute the above code to render the following output.
 
-![](Getting-Started_images/getting-started2.png)
+![Start Date and End Date in ASP.NET MVC DateRangePicker](Getting-Started_images/getting-started2.png)
 
 DateRangePicker with StartDate and EndDate 
 {:.caption}
