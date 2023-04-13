@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Report Parameters | ReportViewer | ASP.NET MVC | Syncfusion
-description: report parameters
+title: Report Parameters in ASP.NET MVC ReportViewer Control | Syncfusion
+description: Learn here more about report parameters support in Syncfusion Essential ASP.NET MVC ReportViewer Control, its elements, and more.
 platform: ejmvc
 control: ReportViewer
 documentation: ug
 ---
 
-# Report Parameters
+# Report Parameters in ASP.NET MVC ReportViewer
 
 The ReportViewer has support to add report parameters to ReportViewer at runtime. The ReportViewer has Parameters property that is the list of ReportParameter type to add collection of report parameters to it. You can add report parameters either through ReportViewer model when creating ReportViewer control or through Web API.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels | lineargauge | ASP.NET MVC | Syncfusion
-description: labels
+title: Labels in ASP.NET MVC Linear Gauge Control | Syncfusion
+description: Learn here about labels support in Syncfusion Essential ASP.NET MVC Linear Gauge Control, its elements, and more.
 platform: ejmvc
 control: lineargauge
 documentation: ug
 ---
 
-# Labels
+# Labels in ASP.NET MVC Linear Gauge
 
 Labels are units that are used to display the values in the scales. You can customize Labels with the properties like `angle`, `color`, `font`, `opacity`, etc.
 
@@ -79,7 +79,7 @@ Label collection can be directly added to the scale object. Refer the following 
 
 Execute the above code to render the following output.
 
-![](Labels_images/Labels_img1.png)
+![Adding label collection in ASP.NET MVC Linear Gauge](Labels_images/Labels_img1.png)
 
 
 
@@ -163,7 +163,7 @@ tic.Type(TickType.MinorInterval).Width(1).Color("#8C8C8C")
 Execute the above code to render the following output.
 
 
-![](Labels_images/Labels_img2.png)
+![Appearance in ASP.NET MVC Linear Gauge](Labels_images/Labels_img2.png)
 
 
 
@@ -255,7 +255,7 @@ Execute the above code to render the following output.
 Execute the above code to render the following output.
 
 
-![](Labels_images/Labels_img3.png)
+![Unit text and Positioning in ASP.NET MVC Linear Gauge](Labels_images/Labels_img3.png)
 
 
 

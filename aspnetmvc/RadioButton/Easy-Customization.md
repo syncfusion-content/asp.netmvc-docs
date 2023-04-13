@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Easy Customization | RadioButton | ASP.NET MVC | Syncfusion
-description: easy customization
+title: Easy Customization in ASP.NET MVC RadioButton Control | Syncfusion
+description: Learn here more about easy customization support in Syncfusion Essential ASP.NET MVC Radio Button Control, its element and more.
 platform: ejmvc
 control: RadioButton
 documentation: ug
 ---
 
-# Easy Customization
+# Easy Customization in ASP.NET MVC Radio Button
 
 ## Checked status
 

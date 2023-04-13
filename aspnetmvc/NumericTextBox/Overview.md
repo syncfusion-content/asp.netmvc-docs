@@ -1,13 +1,13 @@
 ---
 layout: post
-title: NumericTextBox | NumericTextBox | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview of ASP.NET MVC NumericTextBox Control | Syncfusion
+description: Learn here more about Overview of Syncfusion Essential ASP.NET MVC NumericTextBox Control, its elements, and more.
 platform: ejmvc
 control: NumericTextBox
 documentation: ug
 ---
 
-# NumericTextBox
+# Overview of ASP.NET MVC NumericTextBox
 
 Essential ASP.NET MVC NumericTextBox is used to display only numeric values. It has Spin buttons to increase or decrease the values in the Text Box. 
 
