@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels | lineargauge | ASP.NET MVC | Syncfusion
+title: Labels in ASP.NET MVC Linear Gauge Control | Syncfusion
 description: Learn here about labels support in Syncfusion Essential ASP.NET MVC Linear Gauge Control, its elements, and more.
 platform: ejmvc
 control: lineargauge

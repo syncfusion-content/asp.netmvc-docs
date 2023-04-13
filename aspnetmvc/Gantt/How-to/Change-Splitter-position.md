@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change Splitter position | Gantt | ASP.NET MVC | Syncfusion
+title: Change Splitter position in ASP.NET MVC Gantt Control | Syncfusion
 description: Learn here more about change splitter position support in Syncfusion Essential ASP.NET MVC Gantt Control, its elements, and more.
 platform: ejmvc
 control: Gantt

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Report Parameters | ReportViewer | ASP.NET MVC | Syncfusion
+title: Report Parameters in ASP.NET MVC ReportViewer Control | Syncfusion
 description: Learn here more about report parameters support in Syncfusion Essential ASP.NET MVC ReportViewer Control, its elements, and more.
 platform: ejmvc
 control: ReportViewer

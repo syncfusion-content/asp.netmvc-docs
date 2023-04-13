@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | DateRangePicker  | ASP.NET MVC | Syncfusion
+title: Getting Started with ASP.NET MVC DateRangePicker Control | Syncfusion
 description: Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC DateRangePicker Control, its element and more.
 platform: ejmvc
 control: DateRangePicker
