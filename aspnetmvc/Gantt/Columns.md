@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns | Gantt | ASP.NET MVC | Syncfusion
+title: Columns support in ASP.NET MVC Gantt Control | Syncfusion
 description: Learn here about columns support in Syncfusion Essential ASP.NET MVC Gantt Control, its elements, and more.
 platform: ejmvc
 control: Gantt

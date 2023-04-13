@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview in ASP.NET MVC Button Control | Syncfusion
-description: Learn here more about Overview in Syncfusion Essential ASP.NET MVC Button Control, its elements, and more.
+title: Overview of ASP.NET MVC Button Control | Syncfusion
+description: Learn here more about Overview of Syncfusion Essential ASP.NET MVC Button Control, its elements, and more.
 platform: ejmvc
 control: Button
 documentation: ug
 ---
 
-# Overview in ASP.NET MVC Button 
+# Overview of ASP.NET MVC Button 
 
 The Essential ASP.NET MVCButton control allows you to perform an action by clicking on it. The Button control has the feature of displaying both text and images. When the Button is clicked, it looks as if it is being pushed in and released. The Text property is used to display the Text content in Button. The Button control displays images using the sprite CSS and Image Position properties. The Buttons control has theme support. While using input type submit, reset and button to be render as button, has text only support.
 
