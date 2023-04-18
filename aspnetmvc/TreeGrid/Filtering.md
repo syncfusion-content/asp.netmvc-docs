@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Filtering | TreeGrid | ASP.NET MVC | Syncfusion
-description: filtering
+description: Learn here about filtering in Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Filtering
+# Filtering in ASP.NET MVC TreeGrid
 
 Filtering helps to view specific or related records from data source which meets a given filtering criteria. To enable filtering in TreeGrid, set the `AllowFiltering` as `true`.
 The `FilterSettings` property is used to customize the filtering in TreeGrid.
@@ -39,7 +39,7 @@ The below code explains how to enable filtering in TreeGrid.
 
 The output of the TreeGrid with filtering enabled is as follows.
 
-![](Filtering_images/Filtering_img1.png)
+![ASP.NET MVC TreeGrid filter mode](Filtering_images/Filtering_img1.png)
 
 The TreeGrid allows the user to filter the columns with custom actions by using the method [`filterColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:filtercolumn "filterColumn"). And it is possible to clear the filter for a specific column by using the method [`clearFilter`](https://help.syncfusion.com/api/js/ejtreegrid#methods:clearfilter "clearFilter").
 
@@ -73,7 +73,7 @@ The below code snippet explains the above behavior.
 
 The output of the filtering with filter bar enabled is as follows.
 
-![](Filtering_images/Filtering_img2.png)
+![ASP.NET MVC TreeGrid filter bar](Filtering_images/Filtering_img2.png)
 
 ### Menu filtering
 
@@ -94,7 +94,7 @@ Menu filtering can be enabled by setting the `FilterSettings.FilterType` propert
 
 The output of the filtering with filter menu enabled is as follows.
 
-![](Filtering_images/Filtering_img3.png)
+![ASP.NET MVC TreeGrid menu filtering](Filtering_images/Filtering_img3.png)
 
 ### Excel Filtering
 
@@ -116,7 +116,7 @@ The below code snippet explains how to enable excel filtering in TreeGrid.
 
 The output of the filtering with excel filter enabled is as follows.
 
-![](Filtering_images/Filtering_img5.png)
+![ASP.NET MVC TreeGrid excl filter](Filtering_images/Filtering_img5.png)
 
 #### Checkbox list generation
 
@@ -138,7 +138,7 @@ The below code snippet explains how to change the max filter choices value.
 
 {% endhighlight %}
 
-![](Filtering_images/Filtering_img6.png)
+![ASP.NET MVC TreeGrid checkbox list](Filtering_images/Filtering_img6.png)
 
 The above screen shot shows TreeGrid with `MaxFilterChoices` as 5.
 
@@ -161,7 +161,7 @@ The below code snippet explains how to enable the case sensitivity in excel filt
 
 {% endhighlight %}
 
-![](Filtering_images/Filtering_img7.png)
+![ASP.NET MVC TreeGrid case sensitive](Filtering_images/Filtering_img7.png)
 
 The above screen shot shows TreeGrid with `EnableCaseSensitivity` set as false in search action.
 
@@ -188,7 +188,7 @@ The following code example show, how to change filter mode for specific column.
 
 {% endhighlight %}
 
-![](Filtering_images/Filtering_img10.png)
+![ASP.NET MVC TreeGrid change filter](Filtering_images/Filtering_img10.png)
 
 The above screen shot shows TreeGrid with excel filter mode for `Task Name` column only.  
 
@@ -231,7 +231,7 @@ In TreeGrid, it is possible to filter the null or empty string value in drop dow
 
 {% endhighlight %}
 
-![](Filtering_images/Filtering_img9.png)
+![ASP.NET MVC TreeGrid filtering blank value](Filtering_images/Filtering_img9.png)
 
 The above screenshot shows TreeGrid with filtering blank content.
 {:.caption}
@@ -259,7 +259,7 @@ The following code example shows how to set filter mode in TreeGrid.
 
 {% endhighlight %}
 
-![](Filtering_images/filterHierarchyMode.png)
+![ASP.NET MVC TreeGrid filter hierarchy mode](Filtering_images/filterHierarchyMode.png)
 
 The above screenshot shows TreeGrid filter with `Child` filter mode.
 
@@ -301,7 +301,7 @@ The below code snippet explains the above behavior.
 
 The output of the filtering enabled for only one column is as follows.
 
-![](Filtering_images/Filtering_img4.png)
+![ASP.NET MVC TreeGrid disable filter](Filtering_images/Filtering_img4.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnfiltering) to find the demo sample for filtering in TreeGrid
 
@@ -327,7 +327,7 @@ The following code example explains how to integrate search text box in toolbar.
 
 {% endhighlight %}
 
-![](Filtering_images/Filtering_img8.png)
+![ASP.NET MVC TreeGrid toolbox](Filtering_images/Filtering_img8.png)
 
 The above screen shot shows TreeGrid search with **Plan** key word.
 
