@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Knockout Binding | ColorPicker | ASP.NET MVC | Syncfusion
-description: knockout binding
+description: Learn here about knockout binding in Syncfusion Essential ASP.NET MVC ColorPicker Control, its elements, and more.
 platform: ejmvc
 control: ColorPicker
 documentation: ug
 ---
 
-# KnockoutJS Binding
+# KnockoutJS Binding in ASP.NET MVC ColorPicker
 
 KnockoutJS support allows you to bind the HTML elements against any of the available data models.
 
@@ -127,7 +127,7 @@ The following screenshot displays the output of the above code example.
 
 
 
-![](Knockout-Binding_images/Knockout-Binding_img1.png)
+![ASP.NET MVC ColorPicker KnockoutJS Support](Knockout-Binding_images/Knockout-Binding_img1.png)
 
 ColorPicker with KnockoutJS Support
 {:.caption}
