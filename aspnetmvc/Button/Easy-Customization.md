@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Easy Customization | Button | ASP.NET MVC | Syncfusion
-description: easy customization
+title: Easy Customization in ASP.NET MVC Button Control | Syncfusion
+description: Learn here more about easy customization in Syncfusion Essential ASP.NET MVC Button Control, its elements, and more.
 platform: ejmvc
 control: Button
 documentation: ug
 ---
 
-# Easy Customization
+# Easy Customization in ASP.NET MVC Button Control
 
 Button is used in all applications. Button size, content and content location is varied according to each application. Here you can see some customizable option for button that can perform easily. 
 
@@ -83,7 +83,7 @@ The following steps explains you the details about rendering the button with dif
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
+![Button size in ASP.NET MVC Button](Easy-Customization_images/Easy-Customization_img1.png)
 
 Button with different sizes
 {:.caption}
@@ -210,7 +210,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	 Execute the above code to render the following output.
 
-	 ![](Easy-Customization_images/Easy-Customization_img2.png)
+	 ![ASP.NET MVC Button Content type](Easy-Customization_images/Easy-Customization_img2.png)
      
 	 Button with different content types
 	 {:.caption}
@@ -319,7 +319,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	Execute the above code to render the following output.
 
-	![](Easy-Customization_images/Easy-Customization_img3.png)
+	![ASP.NET MVC Button Image position](Easy-Customization_images/Easy-Customization_img3.png)
 
     Button with different image positions
 	{:.caption}
@@ -460,7 +460,7 @@ The following steps explains you the details about rendering the Button with abo
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
+![ASP.NET MVC Button with Custom CSS](Easy-Customization_images/Easy-Customization_img4.png)
 
 Button with Custom CSS
 {:.caption}

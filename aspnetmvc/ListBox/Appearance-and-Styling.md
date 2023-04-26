@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance and Styling | ListBox | ASP.NET MVC | Syncfusion
-description: appearance and styling
+title: Appearance and Styling in ASP.NET MVC ListBox Control | Syncfusion
+description: Learn here more about appearance and styling in Syncfusion Essential ASP.NET MVC ListBox Control, its elements, and more.
 platform: ejmvc
 control: ListBox
 documentation: ug
 ---
 
-# Appearance and Styling
+# Appearance and Styling in ASP.NET MVC ListBox Control
 
 ## Adjusting ListBox size
 
@@ -75,7 +75,7 @@ The following steps explains you the configuration of Height & Width properties 
 2. Output of the above steps
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![ASP.NET MVC ListBox with Appearance and styling](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
 
 
 
@@ -139,7 +139,7 @@ The following steps explains you the configuration of Rounded corner of the List
 2. Output of the above steps.
 
 
-![](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+![ASP.NET MVC ListBox Rounded corner](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
 
 
 
