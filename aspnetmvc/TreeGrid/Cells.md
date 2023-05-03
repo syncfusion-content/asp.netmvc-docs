@@ -7,7 +7,7 @@ control: TreeGrid
 documentation: ug
 ---
 
-# Cell in ASP.NET MVC TreeGrid Control
+# Cell in ASP.NET MVC TreeGrid
 
 ## Tooltip
 

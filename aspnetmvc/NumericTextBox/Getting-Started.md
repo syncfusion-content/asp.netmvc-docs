@@ -7,7 +7,7 @@ control: NumericTextBox
 documentation: ug
 ---
 
-# Getting Started ASP.NET MVC NumericTextBox Control
+# Getting Started ASP.NET MVC NumericTextBox
 
 This section explains briefly about how to create a EJMVC NumericTextBox in ASP.NET MVC platform.
 

@@ -7,7 +7,7 @@ control: PivotChart
 documentation: ug
 ---
 
-# Multi-level Labels in ASP.NET MVC PivotChart Control
+# Multi-level Labels in ASP.NET MVC PivotChart
 
 Multi-level labels allows you to drill down to access the detailed level of data or drill up to see the summarized data by using the expander present in the OlapChart.
 

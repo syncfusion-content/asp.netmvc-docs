@@ -7,7 +7,7 @@ control: ListBox
 documentation: ug
 ---
 
-# Appearance and Styling in ASP.NET MVC ListBox Control
+# Appearance and Styling in ASP.NET MVC ListBox
 
 ## Adjusting ListBox size
 

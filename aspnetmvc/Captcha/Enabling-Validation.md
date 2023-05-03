@@ -7,7 +7,7 @@ control: Captcha
 documentation: ug
 ---
 
-# Enabling Validation in ASP.NET MVC Captcha Control
+# Enabling Validation in ASP.NET MVC Captcha
 
 ## Auto Validation
 

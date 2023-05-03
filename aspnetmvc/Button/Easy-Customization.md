@@ -7,7 +7,7 @@ control: Button
 documentation: ug
 ---
 
-# Easy Customization in ASP.NET MVC Button Control
+# Easy Customization in ASP.NET MVC Button
 
 Button is used in all applications. Button size, content and content location is varied according to each application. Here you can see some customizable option for button that can perform easily. 
 
