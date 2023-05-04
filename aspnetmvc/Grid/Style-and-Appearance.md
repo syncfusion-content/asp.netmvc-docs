@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance | Grid | ASP.NET MVC | Syncfusion
-description: style and appearance
+title: Style and Appearance in ASP.NET MVC Grid Control | Syncfusion
+description: Learn here more about style and appearance in Syncfusion Essential ASP.NET MVC Grid Control, its elements, and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Styling
+# Style and Appearance in ASP.NET MVC Grid
 
 ## List of classes and its purposes
 
@@ -228,5 +228,5 @@ To modify the Grid appearance, you need to override default CSS of the grid. Ple
 
 To customize toolbar, you need to use the toolbar default CSS class to override icon in toolbar. 
 
-{% seealso %} [customize toolbar ](http://www.syncfusion.com/kb/5076/how-to-change-custom-icons-for-default-edit-toolbar-items "customize toolbar") {% endseealso %}
+{% seealso %} [customize toolbar ](https://support.syncfusion.com/kb/article/4868/how-to-change-custom-icons-for-default-edit-toolbar-items "customize toolbar") {% endseealso %}
 

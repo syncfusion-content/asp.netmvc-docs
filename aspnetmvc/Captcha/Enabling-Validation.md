@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enabling Validation | Captcha | ASP.NET MVC | Syncfusion
-description: enabling validation
+title: Enabling Validation in ASP.NET MVC Captcha Control | Syncfusion
+description: Learn here more about enabling validation in Syncfusion Essential ASP.NET MVC Captcha Control, its elements, and more.
 platform: ejmvc
 control: Captcha
 documentation: ug
 ---
 
-# Enabling Validation
+# Enabling Validation in ASP.NET MVC Captcha
 
 ## Auto Validation
 
@@ -47,7 +47,7 @@ The following code example is used to render the Captcha with Auto-Validation su
 
 2. The following screenshot illustrates the Captcha with Auto-Validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img2.png)
+![ASP.NET MVC Captcha Auto validation](Enabling-Validation_images/Enabling-Validation_img2.png)
 
 Captcha with auto validation support
 {:.caption}
@@ -88,7 +88,7 @@ The following code example is used to render the Captcha with manual validation.
 
 2. The following screenshot illustrates the Captcha with manual validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img3.png)
+![ASP.NET MVC Captcha Validation by method](Enabling-Validation_images/Enabling-Validation_img3.png)
 
 Captcha validation by method
 {:.caption}
@@ -122,7 +122,7 @@ The following code example is used to render the Captcha with Case sensitive val
 
 2. The following screenshot illustrates the Captcha with Case sensitive validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img4.png)
+![ASP.NET MVC Captcha Case sensitive validation ](Enabling-Validation_images/Enabling-Validation_img4.png)
 
 Captcha with Case sensitive validation support
 {:.caption}

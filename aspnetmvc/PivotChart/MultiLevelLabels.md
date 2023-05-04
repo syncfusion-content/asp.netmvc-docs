@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multi-level Labels | PivotChart | ASP.NET MVC | Syncfusion
-description: multilevellabels
+title: Multi-level Labels in ASP.NET MVC PivotChart Control | Syncfusion
+description: Learn here more about multilevellabels in Syncfusion Essential ASP.NET MVC PivotChart Control, its elements, and more.
 platform: ejmvc
 control: PivotChart
 documentation: ug
 ---
 
-# Multi-level Labels
+# Multi-level Labels in ASP.NET MVC PivotChart
 
 Multi-level labels allows you to drill down to access the detailed level of data or drill up to see the summarized data by using the expander present in the OlapChart.
 
