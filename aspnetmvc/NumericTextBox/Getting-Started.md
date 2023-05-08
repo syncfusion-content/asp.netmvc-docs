@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | NumericTextBox | ASP.NET MVC | Syncfusion
-description: getting started
+title: Getting Started with ASP.NET MVC NumericTextBox Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC NumericTextBox Control, its elements, and more.
 platform: ejmvc
 control: NumericTextBox
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with ASP.NET MVC NumericTextBox
 
 This section explains briefly about how to create a EJMVC NumericTextBox in ASP.NET MVC platform.
 
@@ -15,7 +15,7 @@ This section explains briefly about how to create a EJMVC NumericTextBox in ASP.
 
 From the following steps you can learn how to create and use NumericTextBox in your application. Here we have showcased, a small Electric bill calculator application using EJMVC Editors widgets.The Essential ASP.NET MVC Editors control includes Numeric, Percentage, Currency and MaskEdit textbox controls. This will guide you to use the wide range of Editors functionalities to complete this application. 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Getting Started with ASP.NET MVC NumericTextBox](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -186,7 +186,7 @@ ASP.NET MVC Editors renders built-in features like keyboard navigation, min and 
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Create Editors in ASP.NET MVC NumericTextBox](Getting-Started_images/Getting-Started_img2.png)
 
 NumericTextBox with watermark text
 {:.caption}
@@ -281,7 +281,7 @@ You can set the “MinValue”,“MaxValue” and “Value” in Numeric, Percen
 
 The following screenshot illustrates the output of the above code examples. 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Set MinValue, MaxValue and value in ASP.NET MVC NumericTextBox](Getting-Started_images/Getting-Started_img3.png)
 
 
 
@@ -439,7 +439,7 @@ To customize the button, you can set the ContentType as TextAndImage to include 
 
 Run the above code sample, fill the required Textbox fields and click the Calculate button. The values are displayed and an alert message is shown. The following screen shot illustrates the final output of the Electricity bill calculator. 
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![Set Calculation process with ASP.NET MVC NumericTextBox](Getting-Started_images/Getting-Started_img4.png)
 
 
 
