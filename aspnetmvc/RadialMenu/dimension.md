@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-## Dimension in ASP.NET MVC Radial Menu
+# Dimension in ASP.NET MVC Radial Menu
 
 You can customize **Radial Menu** dimension by using **Radius** and **Position** properties.
 
