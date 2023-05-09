@@ -12,15 +12,15 @@ documentation: ug
 
 To get start with Essential ASP.NET MVC DatePicker, create a new  MVC application and add the required assemblies in references and then refer the below specified dependent CSS file as well as scripts
 
-To create a MVC project and add necessary assemblies you can use the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
+To create a MVC project and add necessary assemblies you can use the help of the given [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) Documentation.
 
 CSS file
 
-* [ej.web.all.min.css](http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css)  includes all widgets styles (To know more about theme refer [Theming in Essential JavaScript Component](http://help.syncfusion.com/js/theming-in-essential-javascript-components#))
+* [ej.web.all.min.css](http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/flat-azure/ej.web.all.min.css)  includes all widgets styles (To know more about theme refer [Theming in Essential JavaScript Component](https://help.syncfusion.com/js/theming-in-essential-javascript-components#))
 
 External script files
 
-* [jQuery](http://jquery.com/#) (from the version 1.7.1 to 3.1.0)
+* [jQuery](https://jquery.com/#) (from the version 1.7.1 to 3.1.0)
 
 jQuery.easing external dependency has been removed from version 14.3.0.49 onwards. Kindly include this jQuery.easing dependency for versions lesser than 14.3.0.49 in order to support animation effects.
 Internal script files
@@ -84,7 +84,7 @@ The Essential ASP.NET MVC DatePicker can be created using HTML helper like below
             
 {% endhighlight %}
 
-N>  DatePicker is a form control, so on form submitting its value can be received by its name, and normally id has been treated as name. If you want to set the name manually you can use our HtmlAttributes property. You can get this property related information from [here](http://help.syncfusion.com/js/api/ejdatepicker#members:htmlattributes)
+N>  DatePicker is a form control, so on form submitting its value can be received by its name, and normally id has been treated as name. If you want to set the name manually you can use our HtmlAttributes property. You can get this property related information from [here](https://help.syncfusion.com/api/js/ejdatepicker#members:htmlattributes)
 
 ## Get / Set value
 
