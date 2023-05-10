@@ -210,7 +210,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	 Execute the above code to render the following output.
 
-	 ![Content type in ASP.NET MVC Button](Easy-Customization_images/Easy-Customization_img2.png)
+	 ![Button with different content types in ASP.NET MVC](Easy-Customization_images/Easy-Customization_img2.png)
      
 	 Button with different content types
 	 {:.caption}
