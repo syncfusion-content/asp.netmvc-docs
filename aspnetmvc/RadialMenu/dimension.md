@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimension | Radial Menu |ASP.NET MVC | Syncfusion
-description: dimension
+title: Dimension in ASP.NET MVC Radial Menu Control | Syncfusion
+description: Learn here about dimension in Syncfusion Essential ASP.NET MVC Radial Menu Control, its elements, and more.
 platform: ejmvc
 control: Radial Menu
 documentation: ug
 ---
 
 
-## Dimension
+# Dimension in ASP.NET MVC Radial Menu
 
 You can customize **Radial Menu** dimension by using **Radius** and **Position** properties.
 
@@ -47,7 +47,7 @@ Add the following script in your code.
 
 The following screenshot illustrates the **Radial Menu** while clicking on the settings icon.
 
-![](dimension-images\dimension_img2.png)
+![Radius in ASP.NET MVC Radial Menu](dimension-images\dimension_img2.png)
 
 ### Position 
 
@@ -89,5 +89,5 @@ Add the following script in your code.
 
 The following screenshot illustrates the output while selecting the text in the page.
 
-![](dimension-images\dimension_img4.png)
+![Position in ASP.NET MVC Radial Menu](dimension-images\dimension_img4.png)
 
