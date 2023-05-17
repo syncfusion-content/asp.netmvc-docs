@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dimension | Radial Menu |ASP.NET MVC | Syncfusion
-description: dimension
+title: Dimension in ASP.NET MVC Radial Menu Control | Syncfusion
+description: Learn here all about dimension support in ASP.NET MVC Radial Menu Control, its elements, and more.
 platform: ejmvc
 control: Radial Menu
 documentation: ug
 ---
 
 
-## Dimension
+# Dimension in ASP.NET MVC Radial Menu
 
 You can customize **Radial Menu** dimension by using **Radius** and **Position** properties.
 
