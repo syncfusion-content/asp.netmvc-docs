@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-# Styling in ASP.NET MVC Grid
+# Style and Appearance in ASP.NET MVC Grid
 
 ## List of classes and its purposes
 
