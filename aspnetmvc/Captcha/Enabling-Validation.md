@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Enabling Validation | Captcha | ASP.NET MVC | Syncfusion
-description: enabling validation
+title: Enabling Validation in ASP.NET MVC Captcha Control | Syncfusion
+description: Learn here about enabling validation support in Syncfusion Essential ASP.NET MVC Captcha control, its elements, and more.
 platform: ejmvc
 control: Captcha
 documentation: ug
 ---
 
-# Enabling Validation
+# Enabling Validation in ASP.NET MVC Captcha
 
 ## Auto Validation
 
