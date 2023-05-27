@@ -9,7 +9,7 @@ documentation: ug
 
 # Unobtrusive
 
-Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the JavaScript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, the [Unobtrusive JavaScript](http://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
+Many uncertainties and difficulties are involved in a usual **JavaScript programming** environment, like some of the browsers may ignore the JavaScript codes under the scripts section completely or partially due to its complexity, and so on. To overcome all such inconveniences, the [Unobtrusive JavaScript](https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript) support has been introduced to make it easier for the users to create all our Syncfusion components with basic level HTML tag-like structure.
 
 One of the main goal of the unobtrusive support is to achieve the clear separation of both the HTML content and behavior, so as to enhance the page loading time and to make the code updation easier. The **Essential JavaScript** have separate integration library to achieve the **Unobtrusive JS** support. To make use of Unobtrusive support with our Essential JavaScript components, it is necessary to refer to the **ej.unobtrusive.min.js** file in your application.
 
@@ -88,7 +88,7 @@ Render the DropDownList control as follows in your view page and enable the unob
 
 When the above code is executed on the browser, the DropDownList control will be rendered with the following equivalent HTML DOM attributes created for it.
 
-![Unobtrusive1](Core_images/unobtrusive1.png)
+![Unobtrusive in ASP.NET MVC](Core-images/asp.net-mvc-unobtrusive-code.png)
 
 ## Enabling Client Side Validation
 
@@ -125,7 +125,7 @@ Four sets of files are needed to implement the Unobtrusive.
 •	The Unobtrusive extensions to Validate
 •	Ej unobtrusive library 
 
-![Unobtrusive2](Core_images/unobtrusive2.png)
+![Unobtrusive in ASP.NET MVC](Core-images/asp.net-mvc-unobtrusivefiles.png)
 
 Refer the above mentioned necessary scripts files in your layout.cshtml page.
 
@@ -198,7 +198,7 @@ The view is created as in the following code snippet:
 
 When the above code is executed on the browser, the DropDownList control will be rendered with the following equivalent HTML DOM attributes created for it.
 
-![Unobtrusive3](Core_images/unobtrusive3.png)
+![Unobtrusive in ASP.NET MVC](Core-images/asp.net-mvc-unobtrusive-attributes.png)
 
 Now, some interesting new attributes are there to look at:
 •	data-val specifies that the DropDownList needs validation.
