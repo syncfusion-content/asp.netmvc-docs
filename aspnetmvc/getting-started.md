@@ -79,7 +79,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 	
 For more information about Project Configuration Templates and their options details, please visit [here](https://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
-N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://www.syncfusion.com/kb/9197/resolving-jquery-multiple-references-error)
+N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://support.syncfusion.com/kb/article/8050/resolving-jquery-multiple-references-error)
 
 ## Through Syncfusion Project Conversion
 
