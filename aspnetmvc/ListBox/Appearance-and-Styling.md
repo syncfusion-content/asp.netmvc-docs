@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Appearance and Styling in ASP.NET MVC ListBox control | Syncfusion
-description: Learn here about appearance and styling support in Syncfusion Essential ASP.NET MVC ListBox control, its elements and more.
+title: Appearance and Styling in ASP.NET MVC ListBox Control | Syncfusion
+description: Learn here about appearance and styling support in Syncfusion Essential ASP.NET MVC ListBox Control, its elements and more.
 platform: ejmvc
 control: ListBox
 documentation: ug

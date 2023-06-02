@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Easy Customization in ASP.NET MVC Button control | Syncfusion
-description: Learn here about easy customization support in Syncfusion Essential ASP.NET MVC Button control, its elements and more.
+title: Easy Customization in ASP.NET MVC Button Control | Syncfusion
+description: Learn here about easy customization support in Syncfusion Essential ASP.NET MVC Button Control, its elements and more.
 platform: ejmvc
 control: Button
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in ASP.NET MVC ListView control | Syncfusion
-description: Learn here about data binding support in Syncfusion Essential ASP.NET MVC ListView control, its elements and more.
+title: Data Binding in ASP.NET MVC ListView Control | Syncfusion
+description: Learn here about data binding support in Syncfusion Essential ASP.NET MVC ListView Control, its elements and more.
 platform: ejmvc
 control: ListView
 documentation: ug

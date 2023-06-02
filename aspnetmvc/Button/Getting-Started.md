@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC Button control | Syncfusion
-description: Learn here about getting started with Syncfusion Essential ASP.NET MVC Button control, its elements and more.
+title: Getting Started with ASP.NET MVC Button Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC Button Control, its elements and more.
 platform: ejmvc
 control: Button
 documentation: ug

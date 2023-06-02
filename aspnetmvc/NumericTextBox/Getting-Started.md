@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC NumericTextBox control | Syncfusion
-description: Learn here about getting started with Syncfusion Essential ASP.NET MVC NumericTextBox control, its elements and more.
+title: Getting Started with ASP.NET MVC NumericTextBox Control | Syncfusion
+description: Learn here about getting started with Syncfusion Essential ASP.NET MVC NumericTextBox Control, its elements and more.
 platform: ejmvc
 control: NumericTextBox
 documentation: ug
