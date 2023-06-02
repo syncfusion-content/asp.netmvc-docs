@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Easy Customization | Button | ASP.NET MVC | Syncfusion
-description: easy customization
+title: Easy Customization in ASP.NET MVC Button control | Syncfusion
+description: Learn here about easy customization support in Syncfusion Essential ASP.NET MVC Button control, its elements and more.
 platform: ejmvc
 control: Button
 documentation: ug
 ---
 
-# Easy Customization
+# Easy Customization in ASP.NET MVC Button
 
 Button is used in all applications. Button size, content and content location is varied according to each application. Here you can see some customizable option for button that can perform easily. 
 
