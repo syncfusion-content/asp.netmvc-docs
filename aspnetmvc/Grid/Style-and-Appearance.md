@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style and Appearance | Grid | ASP.NET MVC | Syncfusion
-description: style and appearance
+title: Style and Appearance in ASP.NET MVC Grid Control | Syncfusion
+description: Learn here about style and appearance support in Syncfusion Essential ASP.NET MVC Grid Control, its elements and more.
 platform: ejmvc
 control: Grid
 documentation: ug
 ---
 
-# Styling
+# Styling and Appearance in ASP.NET MVC Grid
 
 ## List of classes and its purposes
 
