@@ -4,7 +4,7 @@ title: Overview of Syncfusion license generation - Syncfusion
 description: Learn here about how to generate Syncfusion ASP.NET MVC license key for syncfusion blazor application for license validation.
 platform: ejmvc
 control: Essential Studio
-
+documentation: ug
 ---
 
 # Generate Syncfusion ASP.NET MVC License key
