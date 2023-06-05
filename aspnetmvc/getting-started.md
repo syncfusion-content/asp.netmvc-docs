@@ -13,7 +13,7 @@ documentation: ug
  
 ## What is Html.EJ() ?
 
-EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://www.syncfusion.com/kb/5153/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej ).
+EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://support.syncfusion.com/kb/article/4895/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej).
 
 ## Getting started with Syncfusion MVC
 
@@ -39,14 +39,14 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
    **Option 1:**  
     Click **Syncfusion Menu** and choose **Essential Studio for ASP.NET MVC (EJ1) > Create New Syncfusion Project…** in **Visual Studio**.
 
-    ![Choose Syncfusion ASP.NET MVC Web Application from Visual Studio new project dialog via Syncfusion menu for getting started](getting-started-images/Syncfusion-Menu-project-template-asp.net-mvc-getting-started.png)
+    ![Choose Syncfusion ASP.NET MVC Web Application from Visual Studio new project dialog via Syncfusion menu for getting started](getting-started_images/syncfusion-menu-project-template-asp.net-mvc-getting-started.png)
 
     N> In Visual Studio 2019, Syncfusion menu available under Extension in Visual Studio menu.
 
    **Option 2:**  
    Choose **File > New > Project** and navigate to **Syncfusion > Web > Syncfusion ASP.NET MVC (Essential JS 1) Application** in **Visual Studio**.
    
-   ![Choose Syncfusion ASP.NET MVC Web Application from Visual Studio new project dialog in getting started](getting-started-images/new-project-dialog-asp.net-mvc-getting-started-image.png)
+   ![Choose Syncfusion ASP.NET MVC Web Application from Visual Studio new project dialog in getting started](getting-started_images/new-project-dialog-asp.net-mvc-getting-started-image.png)
 
 
 2. Then it opens **Project** **Configuration** **Wizard** as shown below. In this Wizard, select **Target** **MVC** **Version** as **MVC5** and keep the **other** options as default. Click **Next**.
@@ -63,7 +63,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
-	![license in ASP.NET MVC with getting started](getting-started-images/asp.net-mvc-getting-started-with-license-image.png)
+	![license in ASP.NET MVC with getting started](getting-started_images/asp.net-mvc-getting-started-with-license-image.png)
 	
 6. Now you can add the control **DatePicker** in the **Index.cshtml** file present within **~/Views/Home** folder.
 
@@ -75,7 +75,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 7. Compile and execute the application. You can able to see the following output in the browser.
 
-	![Application output in ASP.NET MVC with getting started](getting-started-images/asp.net-mvc-getting-started-with-output-image.png)
+	![Application output in ASP.NET MVC with getting started](getting-started_images/asp.net-mvc-getting-started-with-output-image.png)
 	
 For more information about Project Configuration Templates and their options details, please visit [here](https://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
@@ -94,18 +94,18 @@ The following steps help you use the Syncfusion Project Conversion in the existi
     **Option 1:**  
     Click **Syncfusion Menu** and choose **Essential Studio for ASP.NET MVC (EJ1) > Convert to Syncfusion ASP.NET MVC Application…** in **Visual Studio**.
 
-    ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion via Synfusion menu with getting started](getting-started-images/asp.net-mvc-getting-started-with-syncfusion-menu-project-conversion-image.png)
+    ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion via Synfusion menu with getting started](getting-started_images/asp.net-mvc-getting-started-with-syncfusion-menu-project-conversion-image.png)
 
     N> In Visual Studio 2019, Syncfusion menu available under Extension in Visual Studio menu.
 
     **Option 2:**  
     Right-click the Project from Solution Explorer, select **Syncfusion Essential JS 1**, and choose **Convert to Syncfusion MVC (Essential JS 1) Application...** Refer to the following screenshot for more information.
 
-    ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion add-in with getting started](getting-started-images/project-conversion-asp.net-mvc-getting-started-image.png)
+    ![Syncfusion Essential JS 1 ASP.NET MVC Web Project Conversion add-in with getting started](getting-started_images/project-conversion-asp.net-mvc-getting-started-image.png)
 
 3. Project Conversion Wizard opens so that you can configure the project.
 
-   ![Project Conversion in ASP.NET MVC getting started](getting-started-images/Project-conversion-in-asp.net-mvc-gettin-started-image.jpeg)
+   ![Project Conversion in ASP.NET MVC getting started](getting-started_images/Project-conversion-in-asp.net-mvc-gettin-started-image.jpeg)
 
    The following configurations are used in the Project Conversion Wizard.
    
@@ -117,40 +117,40 @@ The following steps help you use the Syncfusion Project Conversion in the existi
 	2. Added from Installed Location: Refer the assemblies from the Syncfusion Installed locations.
     3. Add Referenced Assemblies to Solution: Copy and refer to the assemblies from project's solution file lib directory.
 
-   ![Assembly location in ASP.NET mvc getting started](getting-started-images/asp.net-mvc-in-assembly-location-getting-started-image.jpeg)
+   ![Assembly location in ASP.NET mvc getting started](getting-started_images/asp.net-mvc-in-assembly-location-getting-started-image.jpeg)
     
    **Choose the Theme:**
    
    The master page of project will be updated based on the selected theme. The Theme Preview section shows the controls preview before convert into a Syncfusion project.
    
-   ![Theme in ASP.NET MVC getting started](getting-started-images/theme-in-asp.net-mvc-getting-started-image.jpeg)
+   ![Theme in ASP.NET MVC getting started](getting-started_images/theme-in-asp.net-mvc-getting-started-image.jpeg)
    
    **Choose CDN Support:**
 
    The master page of the project will be updated based on the required Syncfusion CDN links.
    
-   ![CDN support in ASP.NET MVC getting started](getting-started-images/Project-conversion-asp.net-mvc-getting-started-image.jpeg)
+   ![CDN support in ASP.NET MVC getting started](getting-started_images/Project-conversion-asp.net-mvc-getting-started-image.jpeg)
    
    **Choose Copy Global Resources:**
     
    The localization culture files will be shipped into Scripts\ej\i18n directory of the project.
    
-   ![Global ASP.NET MVC with getting started](getting-started-images/project-conversion-with-global-asp.net-mvc-getting-started-image.jpeg)
+   ![Global ASP.NET MVC with getting started](getting-started_images/project-conversion-with-global-asp.net-mvc-getting-started-image.jpeg)
 
 4. Choose the required controls from Components section and Click the **Convert** button to convert it into a Syncfusion Project.
 
-   ![Convert with ASP.NET MVC getting started](getting-started-images/convert-with-asp.net-mvc-getting-started-image.jpeg)
+   ![Convert with ASP.NET MVC getting started](getting-started_images/convert-with-asp.net-mvc-getting-started-image.jpeg)
    
 5. The **Project Backup** dialog will be opened. If Yes is clicked, it will backup the current project before converting it to Syncfusion project. If No is clicked it will convert the project to Syncfusion project without backup.
    
-   ![Project Backup in ASP.NET MVC getting started](getting-started-images/project-backup-asp.net-mvc-getting-started-image.jpeg)
+   ![Project Backup in ASP.NET MVC getting started](getting-started_images/project-backup-asp.net-mvc-getting-started-image.jpeg)
 
 
 6. The required Syncfusion Reference Assemblies, Scripts and CSS are included in the MVC Project. Refer to the following screenshots for more information.
 
-   ![Convert into Syncfusion project with ASP.NET MVC getting started](getting-started-images/project-conversion-in-asp.net-mvc-getting-started-image.jpeg)
+   ![Convert into Syncfusion project with ASP.NET MVC getting started](getting-started_images/project-conversion-in-asp.net-mvc-getting-started-image.jpeg)
 
-   ![Convert into Syncfusion project with ASP.NET MVC getting started](getting-started-images/project-conversion-with-asp.net-mvc-getting-started-image.jpeg)
+   ![Convert into Syncfusion project with ASP.NET MVC getting started](getting-started_images/project-conversion-with-asp.net-mvc-getting-started-image.jpeg)
 
    ![Convert into Syncfusion project with ASP.NET MVC getting started](getting-started_images/project-conversion-asp.net-mvc-getting-started-image.jpeg)
 
@@ -237,7 +237,7 @@ To add our Syncfusion MVC controls into the new ASP.NET MVC5 application by maki
 
 8. Compile and execute the application. You can able to see the below output in the browser.
 
-	![Render application in ASP.NET MVC getting started](getting-started-images/render-application-asp.net-mvc-getting-started-image.png)
+	![Render application in ASP.NET MVC getting started](getting-started_images/render-application-asp.net-mvc-getting-started-image.png)
 
 For more details - [View](https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages)
 
@@ -325,7 +325,7 @@ N> Example for "Syncfusion Installed location" is "C:\Program Files (x86)\Syncfu
 
 Now, create a folder named `ej`, under the Scripts folder of your application and place the copied files ej.web.all.min.js into it as shown in the following.
 
-![Dependencies on ASP.NET MVC getting started](getting-started-images/asp.net-mvc-getting-started-image.png)
+![Dependencies on ASP.NET MVC getting started](getting-started_images/asp.net-mvc-getting-started-image.png)
 Solution Explorer - Script files copied into the Scripts folder of the project
 {:.caption}
 
@@ -412,7 +412,7 @@ The reference to the Syncfusion assemblies can be added to your application in e
 
 2.	Now the Reference Manager pop-up will appear on the screen. In that pop-up, select the required assemblies from the Extensions tab as below, by choosing the appropriate versions (13.1450.0.21). The version to be chosen for the reference assemblies is based on the Framework used in the application.
 
-![GAC in ASP.NT mvc with getting started](getting-started-images/asp.net-mvc-with-gac-getting-started-image.png)
+![GAC in ASP.NT mvc with getting started](getting-started_images/asp.net-mvc-with-gac-getting-started-image.png)
 Reference Manager Pop-up
 {:.caption}
 
@@ -426,7 +426,7 @@ N> <installed location>\Syncfusion\Essential Studio\{{ site.releaseversion }}\pr
 N> For example, If you have installed the Essential Studio package within C:\Program Files (x86), then navigate to the following location:
 N> C:\Program Files (x86)\Syncfusion\Essential Studio\{{ site.releaseversion }}\precompiledassemblies\14.4.0.15
 
-![Reference for ASP.NET MVC with getting started](getting-started-images/getting-started-with-asp.net-mvc-image.png)
+![Reference for ASP.NET MVC with getting started](getting-started_images/getting-started-with-asp.net-mvc-image.png)
 Reference Manager Pop-up with Browse button clicked
 {:.caption}
 
@@ -442,7 +442,7 @@ N> Syncfusion.Core dependency has been removed from 13.2.0.29 and it is not requ
 
 4.	Once the assembly selection is done, click OK to add the selected references to your project. You can view the assembly references added to your application, in the solution explorer as shown in the following.
 
-![Installed location in ASP.NET MVC getting started ](getting-started-images/asp.net-mvc-getting-started-installed-location-image.png)
+![Installed location in ASP.NET MVC getting started ](getting-started_images/asp.net-mvc-getting-started-installed-location-image.png)
 Selected Assemblies added to the Project reference
 {:.caption}
 
@@ -479,7 +479,7 @@ N> Add the DatePicker code within the Content section, by removing the unwanted 
 
 2. Finally build and run the project by pressing F5, so that you can now see the output similar to the following screenshot in your web browser.
 
-![Datepicker code in ASP.NET MVC with getting started](getting-Started-images/datepicker-code-in-asp.net-mvc-getting-started-image.png)
+![Datepicker code in ASP.NET MVC with getting started](getting-Started_images/datepicker-code-in-asp.net-mvc-getting-started-image.png)
 DatePicker control displaying on the web browser
 {:.caption}
 
