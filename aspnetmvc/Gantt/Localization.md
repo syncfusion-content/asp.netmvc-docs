@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Localization | Gantt | ASP.NET MVC | Syncfusion
-description: localization
+title: Localization in ASP.NET MVC Gantt Control | Syncfusion
+description: Learn here all about localization support in Syncfusion Essential ASP.NET MVC Gantt control, its elements, and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
 ---
-# Localization
+# Localization in ASP.NET MVC Gantt
 
 Localization is the process of customizing the User Interface (UI) based on a culture, specific to a particular country or region, in order to display regional data. The culture is represented by a unique string like `en``-``US` for US English and `fr``-``FR` for French.
 
