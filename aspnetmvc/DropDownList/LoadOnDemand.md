@@ -2,7 +2,7 @@
 
 layout: post
 title: Load on demand in ASP.NET MVC DropDownList Control |  Syncfusion 
-description: Learn here all about Load on Demand in Syncfusion Essential ASP.NET MVC DropDownList control, its elements, and more.
+description: Learn here all about load on demand in Syncfusion Essential ASP.NET MVC DropDownList control, its elements, and more.
 platform: ejmvc
 control: DropDownList
 documentation: ug
@@ -10,7 +10,7 @@ keywords: loadOnDemand, DropDownList, dropdown
 
 ---
 
-# Load On Demand in ASP.NET MVC DropDownList
+# Load on demand in ASP.NET MVC DropDownList
 
 Load on demand feature allows the DropDownList items load on request from the service/database, during only on click the DropDown icon or DropDownList. This functionality helps to improve performance on control initial rendering time. Because data items load on request. 
 

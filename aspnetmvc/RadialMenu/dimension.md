@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimension in ASP.NET MVC Radial Menu Control | Syncfusion
-description: Learn here all about dimension in Syncfusion Essential ASP.NET MVC Radial Menu control, its elements, and more.
+description: Learn here all about dimension support in Syncfusion Essential ASP.NET MVC Radial Menu control, its elements, and more.
 platform: ejmvc
 control: Radial Menu
 documentation: ug
