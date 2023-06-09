@@ -9,7 +9,7 @@ documentation: ug
 
 # Generate Syncfusion ASP.NET MVC License key
 
-License keys for ASP.NET MVC can be generated from the [License & Downloads](https://www.syncfusion.com/account/login) or [Trial & Downloads](https://www.syncfusion.com/account/login) section from your Syncfusion account. 
+License keys for ASP.NET MVC can be generated from the [License & Downloads](https://www.syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
 
 ![Get License Key](licensing-images/generate-license.png)
 
