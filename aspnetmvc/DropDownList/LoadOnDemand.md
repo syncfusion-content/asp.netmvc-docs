@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Load on demand in ASP.NET MVC DropDownList control |  Syncfusion 
+title: Load on demand in ASP.NET MVC DropDownList Control |  Syncfusion 
 description: Learn here all about Load on Demand in Syncfusion Essential ASP.NET MVC DropDownList control, its elements, and more.
 platform: ejmvc
 control: DropDownList
