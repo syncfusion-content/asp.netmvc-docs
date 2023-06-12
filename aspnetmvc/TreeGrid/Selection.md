@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection | TreeGrid | ASP.NET MVC | Syncfusion
-description: selection
+title: Selection in ASP.NET MVC TreeGrid Control | Syncfusion
+description: Learn here all about selection support in Syncfusion Essential ASP.NET MVC TreeGrid control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
 ---
 
-# Selection
+# Selection in ASP.NET MVC TreeGrid
 
 The TreeGrid control provides support for row and cell selections using `SelectionSettings` property. 
 
