@@ -17,7 +17,7 @@ Essential ASP.NET MVC Button provides support to display a Button control within
 
 The following screenshot illustrates the functionality of Button in Multimedia player control.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Getting started with ASP.NET MVC Button](getting-started_images/aspnetmvc-button-getting-started.png)
 Multimedia Player
 {:.caption}
 
@@ -319,13 +319,13 @@ In this section, you can learn how to create a Microsoft Office Ribbon used to c
 
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![ASP.NET MVC Button office](getting-started_images/aspnetmvc-button-office.png)
 
 Office Ribbon before  applying the styles
 {:.caption}
 
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Create office in ASP.NET MVC Button](getting-started_images/aspnetmvc-button-create-ofice.png)
 
 Office Ribbon after applying the styles
 {:.caption}
