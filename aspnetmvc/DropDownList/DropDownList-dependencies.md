@@ -11,8 +11,8 @@ documentation: ug
 
 The external script dependencies of the DropDownList control are,
 
-* [jQuery 1.7.1](http://jquery.com/) and later versions.
-* [jQuery.easing](http://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js) - to support the animation effects.
+* [jQuery 1.7.1](https://jquery.com/) and later versions.
+* [jQuery.easing](https://cdn.syncfusion.com/js/assets/external/jquery.easing.1.3.min.js) - to support the animation effects.
 
 The internal script dependency ej.web.all.js is a bundle of all Syncfusion ASP.NET MVC controls. If you use ej.web.all.js in your application, you can leave this section or else you can try to render DropDownList in your application using ej.dropdownlist.min.js file. You can refer the following frameworks and controls in your project.
 

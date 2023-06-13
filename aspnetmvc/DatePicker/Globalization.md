@@ -11,7 +11,7 @@ documentation: ug
 Essential ASP.NET MVC DatePicker has been provided with built-in localization support, so that it will be able adapt based on culture specific locale defined for it. 
 
 More than 350 culture specific files are available to localize the date. To know more about EJ globalize support, please refer the below link      
- [http://help.syncfusion.com/js/localization](http://help.syncfusion.com/js/localization) 
+ [http://help.syncfusion.com/js/localization](https://help.syncfusion.com/js/localization) 
 
 N> Seven culture-specific script files are available in the below specified location. For all other culture files, please download from the [GitHub](https://github.com/syncfusion/ej-global/tree/master/i18n) location.
 
@@ -50,7 +50,7 @@ Set German culture to DatePicker at initialization.
 
 ## Watermark and Today Button Text
 
-By default the EJMVC DatePicker input has “select date” as watermark text, you can change this value by using [WatermarkText](http://help.syncfusion.com/js/api/ejdatepicker#members:watermarktext) property. Also there’s a today button in DatePicker calendar which allows you to quick select the current date, you can change this value by using **ButtonText** property.
+By default the EJMVC DatePicker input has “select date” as watermark text, you can change this value by using [WatermarkText](https://help.syncfusion.com/js/api/ejdatepicker#members:watermarktext) property. Also there’s a today button in DatePicker calendar which allows you to quick select the current date, you can change this value by using **ButtonText** property.
 
 {% highlight cshtml %}
 
