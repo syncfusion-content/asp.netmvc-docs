@@ -33,7 +33,7 @@ You can add annotations to the chart by using the **Annotations** option. By usi
 ![](Annotations_images/Annotations_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/annotations) here to view the Annotations online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/annotations) here to view the Annotations online demo sample.
 
 
 N> Annotations are not supported in 3D chart types.

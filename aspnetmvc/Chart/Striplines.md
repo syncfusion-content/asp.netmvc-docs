@@ -37,7 +37,7 @@ You can create horizontal stripline by adding the **Stripline** in the *vertical
 ![](Striplines_images/Striplines_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/stripline) here to view the Striplines online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/stripline) here to view the Striplines online demo sample.
 
 
 ## Vertical Stripline

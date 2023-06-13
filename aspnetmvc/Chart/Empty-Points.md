@@ -37,7 +37,7 @@ The Data points that uses the **null** or **undefined** as value are considered 
 ![](Empty-Points_images/Empty-Points_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/emptypoints) here to view the online demo sample for empty points.
+[Click](https://mvc.syncfusion.com/demos/web/chart/emptypoints) here to view the online demo sample for empty points.
 
 
 ## EmptyPointSettings

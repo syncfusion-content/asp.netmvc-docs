@@ -176,7 +176,7 @@ Background image can be added to the chart by using the **BackGroundImageUrl** p
 ![ASP.NET MVC Chart Setting background image](Appearance_images/Appearance_img7.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/tooltiptemplate) here to view our online demo sample for setting Chart background image.
+[Click](https://mvc.syncfusion.com/demos/web/chart/tooltiptemplate) here to view our online demo sample for setting Chart background image.
 
 
 **Chart area background**
@@ -226,7 +226,7 @@ You can provide different color for alternate grid rows and columns formed by th
 
 ![ASP.NET MVC Chart Customize chart area grid bands](Appearance_images/Appearance_img9.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/alternategridband) here to view the AlternateGridBand online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/alternategridband) here to view the AlternateGridBand online demo sample.
 
 
 ### Animation
