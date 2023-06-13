@@ -100,7 +100,7 @@ You can also use * **#series.<optionname>#** * as place holder to display the va
 
 ![](User-Interactions_images/User-Interactions_img3.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/default) here to view the Tooltip template online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/default) here to view the Tooltip template online demo sample.
 
 
 #### Tooltip template animation
@@ -218,7 +218,7 @@ After zooming the chart, a zooming toolbar will appear with options to *zoom*, *
 
 ![](User-Interactions_images/User-Interactions_img7.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/zoomingandpanning) here to view the Zooming and Panning online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/zoomingandpanning) here to view the Zooming and Panning online demo sample.
 
 
 ### Types of zooming
@@ -319,7 +319,7 @@ Crosshair can be enabled by using the **Visible** option in the Crosshair. Cross
 ![](User-Interactions_images/User-Interactions_img10.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/crosshair) here to view the Crosshair online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/crosshair) here to view the Crosshair online demo sample.
 
 
 ### Customize the Crosshair line and Crosshair label
@@ -380,7 +380,7 @@ Trackball can be enabled by setting the *Visible* option of the crosshair to *tr
 
 ![](User-Interactions_images/User-Interactions_img12.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/trackball) here to view the Trackball online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/trackball) here to view the Trackball online demo sample.
 
 
 #### Customize trackball marker and trackball line
@@ -486,7 +486,7 @@ N> When hovering mouse on the data points, the corresponding series legend also 
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/selection) here to view the highlight and selections online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/selection) here to view the highlight and selections online demo sample.
 
 
 ### Highlight Mode
@@ -708,7 +708,7 @@ N> When mouse is clicked on the data points, the corresponding series legend als
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/selection) here to view the highlight and selections online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/selection) here to view the highlight and selections online demo sample.
 
 
 ### Selection Mode
@@ -845,7 +845,7 @@ To fetch the selected area data points value, you can set the selectionSettings 
 
 ![](User-Interactions_images/User-Interactions_img23.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/multipleselection) here to view the Multiple data selection online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/multipleselection) here to view the Multiple data selection online demo sample.
 
 ### Selection Type
 
@@ -1097,7 +1097,7 @@ EjChart provides support to change the location of the rendered points. This can
 
 ![](User-Interactions_images/User-Interactions_img31.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/dragdrop) here to view the data editing online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/dragdrop) here to view the data editing online demo sample.
 
 ### Customize Dragging direction
 

@@ -34,7 +34,7 @@ EjChart can generate Trendlines for Cartesian type series *(Line, Column, Scatte
 
 ![](Trendlines_images/Trendlines_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/trendlines) here to view the Trendlines online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/trendlines) here to view the Trendlines online demo sample.
 
 
 ## Customize the trendline styles

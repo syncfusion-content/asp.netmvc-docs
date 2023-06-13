@@ -573,4 +573,4 @@ The following code example shows how to enable smart labels,
 ![](Data-Markers_images/Data-Markers_img12.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/pie) here to view the SmartLabel online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/pie) here to view the SmartLabel online demo sample.

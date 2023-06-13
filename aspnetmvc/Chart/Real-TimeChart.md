@@ -58,6 +58,6 @@ N> You can get the chart **instance** using instance method.
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/live) here to view the online demo sample for real-time Chart.
+[Click](https://mvc.syncfusion.com/demos/web/chart/live) here to view the online demo sample for real-time Chart.
 
 

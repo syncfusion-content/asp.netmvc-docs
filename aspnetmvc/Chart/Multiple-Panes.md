@@ -57,7 +57,7 @@ To split the chart area vertically into a number of rows, use RowDefinitions of 
 
 ![](Multiple-Panes_images/Multiple-Panes_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the online demo sample for multiple panes.
+[Click](https://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the online demo sample for multiple panes.
 
 
 **Row Span**
