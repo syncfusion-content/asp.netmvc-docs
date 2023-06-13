@@ -19,11 +19,11 @@ You can configure an Essential ASP.NET MVC Map with simple steps. In this exampl
 
 ### Create a simple MVC Application 
 
-To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/maps/getting-started) Documentation.
+To begin, create a new ASP.NET MVC project Razor application. For creating a MVC Project and adding necessary Dll’s and Scripts, refer [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/maps/getting-started) Documentation.
 
 #### Preparing Shape Data
 
-The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](http://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
+The Shape Data collection describing geographical shape information can be obtained from [GEOJSON format shapes](https://www.syncfusion.com/uploads/user/uploads/Maps_GeoJSON.zip). 
 
 In this example, USA shape is used as shape data by utilizing the `United States of America.json` file in the following folder structure obtained from downloaded Maps_GeoJSON folder.
 
@@ -739,4 +739,4 @@ The following screenshot illustrates a map displaying an interactive legend.
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-The complete code sample can be found [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/Map_GettingStarted-1349939768)
+The complete code sample can be found [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Map_GettingStarted-1349939768)
