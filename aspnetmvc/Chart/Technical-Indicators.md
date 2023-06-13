@@ -139,7 +139,7 @@ You can create an ATR indicator by setting the Indicators.Type as **ATR** in the
 ![](Technical-Indicators_images/Technical-Indicators_img2.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/atr) here to view the ATR indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/atr) here to view the ATR indicator online demo sample.
 
 
 ### Bollinger Band 
@@ -170,7 +170,7 @@ Bollinger Band indicator is created by setting the Indicators.Type as **Bollinge
 
 ![](Technical-Indicators_images/Technical-Indicators_img3.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/bollingerband) here to view the Bollinger Band indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/bollingerband) here to view the Bollinger Band indicator online demo sample.
 
 
 ### Exponential Moving Average (EMA)
@@ -201,7 +201,7 @@ To render an EMA indicator, you have to set the Indicators.Type as **EMA**.
 
 ![](Technical-Indicators_images/Technical-Indicators_img4.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/ema) here to view the EMA indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/ema) here to view the EMA indicator online demo sample.
 
 
 ### Momentum 
@@ -233,7 +233,7 @@ Momentum Technical indicator is created by setting the Indicators.Type as **Mome
 ![](Technical-Indicators_images/Technical-Indicators_img5.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/momentum) here to view the Momentum indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/momentum) here to view the Momentum indicator online demo sample.
 
 
 ### Moving Average Convergence Divergence (MACD)
@@ -264,7 +264,7 @@ To render an MACD indicator, you have to set the Indicators.Type as **MACD**.  M
 
 ![](Technical-Indicators_images/Technical-Indicators_img6.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/macd) here to view the MACD indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/macd) here to view the MACD indicator online demo sample.
 
 
 #### MacdType
@@ -327,7 +327,7 @@ To render the RSI indicator, set the Indicators.Type as **RSI**. It contains thr
 
 ![](Technical-Indicators_images/Technical-Indicators_img8.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/rsi) here to view the RSI indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/rsi) here to view the RSI indicator online demo sample.
 
 
 ### Simple Moving Average (SMA)
@@ -359,7 +359,7 @@ To render the SMA indicator, you should specify the Indicators.Type as **SMA**.
 
 ![](Technical-Indicators_images/Technical-Indicators_img9.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/sma) here to view the SMA indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/sma) here to view the SMA indicator online demo sample.
 
 
 ### Stochastic 
@@ -391,7 +391,7 @@ For the Stochastic indicator, you need to set the Indicators.Type as **Stochasti
 
 ![](Technical-Indicators_images/Technical-Indicators_img10.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/stochastic) here to view the stochastic indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/stochastic) here to view the stochastic indicator online demo sample.
 
 
 ### Triangular Moving Average (TMA)
@@ -423,7 +423,7 @@ To render the TMA indicator, you should specify the Indicators.Type as **TMA**.
 
 ![](Technical-Indicators_images/Technical-Indicators_img11.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/tma) here to view the TMA indicator online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/tma) here to view the TMA indicator online demo sample.
 
 
 ## Enable Tooltip 

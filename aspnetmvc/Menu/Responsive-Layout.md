@@ -11,7 +11,7 @@ documentation: ug
 
 Responsive Layout is aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from mobile phones to desktop computer monitors). In order to get responsive layout, you can add ej.responsive.css file in this sample. CDN link for the responsive CSS file is as follows.
 
-[http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](http://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
+[https://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css](https://cdn.syncfusion.com/13.1.0.21/js/web/responsive-css/ej.responsive.css)
 
 N> Refer to the ej.responsive.css file after the ej.widgets.all.min.css file
 

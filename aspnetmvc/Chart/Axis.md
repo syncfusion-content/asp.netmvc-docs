@@ -342,7 +342,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 ![DateTime axis in ASP.NET MVC Chart](Axis_images/axis_img12.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/datetimeaxis) here to view our online demo sample for date time axis.
+[Click](https://mvc.syncfusion.com/demos/web/chart/datetimeaxis) here to view our online demo sample for date time axis.
 
  
 ### Customizing date time range
@@ -497,7 +497,7 @@ DateTime category axis takes date time value as input but behaves like category 
 
 ![DateTime Category Axis in ASP.NET MVC Chart](Axis_images/axis_img63.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/datetimecategoryaxis) here to view our online demo sample for date time axis.
+[Click](https://mvc.syncfusion.com/demos/web/chart/datetimecategoryaxis) here to view our online demo sample for date time axis.
 
 ### Customizing DateTime Category range
 
@@ -564,7 +564,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing whe
 ![Logarithmic Axis in ASP.NET MVC Chart](Axis_images/axis_img19.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/logaxis) here to view our online demo sample link for logarithmic axis.
+[Click](https://mvc.syncfusion.com/demos/web/chart/logaxis) here to view our online demo sample link for logarithmic axis.
 
 ### Customize Logarithmic range
 
@@ -1273,7 +1273,7 @@ An additional horizontal or vertical axis can be added to the chart by adding an
 
 ![Adding axis in ASP.NET MVC Chart](Axis_images/axis_img41.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the multiple axis online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/multipleaxes) here to view the multiple axis online demo sample.
 
 
 ## Smart Axis Labels
@@ -1300,7 +1300,7 @@ When the Axis labels overlap with each other based on the chart dimensions and l
 ![Smart Axis Labels in ASP.NET MVC Chart](Axis_images/axis_img42.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/smartaxislabels) here to view our online demo sample for smart axis labels.
+[Click](https://mvc.syncfusion.com/demos/web/chart/smartaxislabels) here to view our online demo sample for smart axis labels.
 
 
 

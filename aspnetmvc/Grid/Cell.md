@@ -236,7 +236,7 @@ You can add custom attribute for the particular column's `td` element by using `
 
 Based on custom attribute you can customize the style and appearance of the `td` element or handling jQuery functionalities. 
 
-You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "the link").
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](https://www.jsviews.com/#jsrapi "the link").
 
 The following code example describes the above behavior.
 
@@ -327,7 +327,7 @@ When you move the cursor over the particular cell it provides an information abo
 
 **Template**
 
-HTML templates can be specified in the `Tooltip` property of the particular column cell as a string (HTML element) or ID of the template's HTML element.You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "this link"). 
+HTML templates can be specified in the `Tooltip` property of the particular column cell as a string (HTML element) or ID of the template's HTML element.You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](https://www.jsviews.com/#jsrapi "this link"). 
 
 N> It's a standard way to enclose the template within the `script` tag with `type` as "text/x-jsrender". 
 N> The `Tooltip` template must contain `value` property to bind the corresponding cell text in tooltip

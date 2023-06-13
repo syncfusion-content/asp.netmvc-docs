@@ -75,4 +75,4 @@ The Access-Control-Request-Headers header is used when issuing a preflight reque
 
 {% endhighlight %}
 
-[For more details, please refer to this link:](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#Access-Control-Allow-Headers)
+[For more details, please refer to this link:](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#access-control-allow-headers)

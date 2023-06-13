@@ -34,7 +34,7 @@ You can enable/disable the critical path in Gantt by using toolbar button, and t
 
 ![](criticalfeature_images/criticalfeature_img1.jpeg)
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/criticalpath) here to view the online demo sample for critical path in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for critical path in Gantt.
 
 
 ## Using Method

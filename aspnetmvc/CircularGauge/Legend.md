@@ -30,7 +30,7 @@ By default, the legend will not be displayed in the circular gauge. You can enab
 ![](Legend_images/Legend_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/circulargauge/legend) here to view the online demo sample for  legend in the circular Gauge.
+[Click](https://mvc.syncfusion.com/demos/web/circulargauge/legend) here to view the online demo sample for  legend in the circular Gauge.
 
 ### Legend Text
 

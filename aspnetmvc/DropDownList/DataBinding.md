@@ -428,7 +428,7 @@ Step 3: Assign the data to the DropDownList’s DataSource property. Specify the
 Bind data to the DropDownList through Entity Framework. Please follow the below steps.
 
 1.	Create an entity data model
-Please refer the [link](http://www.entityframeworktutorial.net/EntityFramework5/create-dbcontext-in-entity-framework5.aspx) for more information
+Please refer the [link](https://www.entityframeworktutorial.net/entityframework6/create-entity-data-model.aspx) for more information
 
 2.	Refer the entity data model to your project and bind the data to the DropDownList
 
@@ -545,7 +545,7 @@ To bind remote data to the DropDownList, you can assign a service data as an ins
 
 ### OData
 
-OData is a standardized protocol for creating and consuming data. You can provide the [OData service](http://www.odata.org/) URL directly to the Datasource URL property.
+OData is a standardized protocol for creating and consuming data. You can provide the [OData service](https://www.odata.org/) URL directly to the Datasource URL property.
 
 {% highlight html %}
                
@@ -559,7 +559,7 @@ OData is a standardized protocol for creating and consuming data. You can provi
 For OData Version 4 support ODataV4Adaptor should be used. By using URL property of Datasource, you can bind OData Version 4 Service link and specify  Adaptor value as enum AdaptorType.ODataV4Adaptor.
 
  
-For further details about OData service please refer [the link](http://www.odata.org/).
+For further details about OData service please refer [the link](https://www.odata.org/).
 
 {% highlight html %}
 
@@ -570,7 +570,7 @@ For further details about OData service please refer [the link](http://www.odata
            
 ![](DataBinding_images/DataBinding_img2.jpeg)
 
-N> Events associated with remote data bind is listed [here](http://help.syncfusion.com/js/api/ejdropdownlist#events). 
+N> Events associated with remote data bind is listed [here](https://help.syncfusion.com/js/api/ejdropdownlist#events). 
 
 ## WebAPI
 

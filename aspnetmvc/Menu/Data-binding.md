@@ -160,7 +160,7 @@ DataManager is used to manage relational data in JavaScript. DataManager uses
 
 <http://help.syncfusion.com/aspnetmvc/menu/data-binding>
 
-In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](http://mvc.syncfusion.com/Services/Northwnd.svc/) is used as the URL. This acts as web service that is located in the Syncfusion server. The web service with the name Northwnd.svc is used here.
+In the following example, [http://mvc.syncfusion.com/Services/Northwnd.svc/](https://mvc.syncfusion.com/Services/Northwnd.svc/) is used as the URL. This acts as web service that is located in the Syncfusion server. The web service with the name Northwnd.svc is used here.
 
 1. Add the following code in your View page to render the menu with remote data
 

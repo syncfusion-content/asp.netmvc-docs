@@ -134,6 +134,6 @@ function create(args) {
 
 ![](Toolbar_images/Toolbar_img2.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/gantt/gantttoolbartemplate) here to view the demo sample for custom toolbar item
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the demo sample for custom toolbar item
 
 

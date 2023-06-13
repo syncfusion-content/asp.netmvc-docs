@@ -121,7 +121,7 @@ Add the following references that are necessary for the PDF viewer control and s
 * Syncfusion.EJ.PdfViewer
 * Syncfusion.EJ.MVC
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key "Syncfusion Licensing Overview") to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview "Syncfusion Licensing Overview") to know about registering Syncfusion license key in your ASP.NET MVC application to use our components.
 
 #### Add Scripts and Styles
 
@@ -133,7 +133,7 @@ CDN Link: [Click here](https://help.syncfusion.com/js/cdn# "CDN scripts and styl
 
 NuGet Package: [Click here](https://help.syncfusion.com/js/installation-and-deployment#configuring-syncfusion-nuget-packages "Configuring Syncfusion NuGet Packages") to know more about script and style sheets available in NuGet package.
 
-N> For getting started, you can use the ej.web.all.min.js file, which encapsulates all the ej widgets and frameworks in a single file. In production, it is highly recommended to use [custom script generator](http://csg.syncfusion.com/) to create custom script file with required widgets and its dependencies to reduce the size of the script file.
+N> For getting started, you can use the ej.web.all.min.js file, which encapsulates all the ej widgets and frameworks in a single file. In production, it is highly recommended to use [custom script generator](https://csg.syncfusion.com/) to create custom script file with required widgets and its dependencies to reduce the size of the script file.
 
 Add the script files and CSS files in the &#60;title&#62; tag of View page.
 

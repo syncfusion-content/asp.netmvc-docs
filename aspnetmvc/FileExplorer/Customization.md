@@ -10,7 +10,7 @@ keywords: FileExplorer,  Syncfusion, EJ MVC FileExplorer, UG document, Customiza
 
 ## Dimension Customization
 
-The dimension of the FileExplorer can be customized through “[Height](http://help.syncfusion.com/js/api/ejfileexplorer#members:height)” and “[Width](http://help.syncfusion.com/js/api/ejfileexplorer#members:width)” property. The dimension can be set in percentage (ex; width: “100 %”), so that the control inherits the width from the parent element.
+The dimension of the FileExplorer can be customized through “[Height](https://help.syncfusion.com/api/js/ejfileexplorer#members:height)” and “[Width](https://help.syncfusion.com/api/js/ejfileexplorer#members:width)” property. The dimension can be set in percentage (ex; width: “100 %”), so that the control inherits the width from the parent element.
 
 In the view page, add FileExplorer helper with custom height and width
     
@@ -29,7 +29,7 @@ In the view page, add FileExplorer helper with custom height and width
 
 The navigation pane contains the tree view element which displays all the folders from the filesystem in a hierarchical manner. This is useful to a quick navigation of any folder in the filesystem.
 
-The visibility of the navigation pane can be controlled by the “[ShowNavigationPane](http://help.syncfusion.com/js/api/ejfileexplorer#members:shownavigationpane)” property. By disabling this property, you can hide the navigation pane from FileExplorer.
+The visibility of the navigation pane can be controlled by the “[ShowNavigationPane](https://help.syncfusion.com/api/js/ejfileexplorer#members:shownavigationpane)” property. By disabling this property, you can hide the navigation pane from FileExplorer.
 
 In the view page, add FileExplorer helper and specify the navigation pane as false
     
@@ -66,7 +66,7 @@ You can change the layout using toolbar option. While clicking this tool, popup 
 
 ![](Customization_images/Customization_img2.jpeg)
 
-Also the layout views can be changed through the “[Layout](http://help.syncfusion.com/js/api/ejfileexplorer#members:layout)” property. The [layoutChange](https://help.syncfusion.com/api/js/ejfileexplorer#events:layoutchange) event will be triggered whenever the layout view type is changed.
+Also the layout views can be changed through the “[Layout](https://help.syncfusion.com/api/js/ejfileexplorer#members:layout)” property. The [layoutChange](https://help.syncfusion.com/api/js/ejfileexplorer#events:layoutchange) event will be triggered whenever the layout view type is changed.
 
 In the view page, add FileExplorer helper and specify the layout type as shown below
     
@@ -83,9 +83,9 @@ In the view page, add FileExplorer helper and specify the layout type as shown b
     
 ### Customizing the Grid view
 
-By default sorting is enabled in grid view of FileExplorer, it helps you to sort each columns in ascending or descending order by pressing the corresponding column header. The sorting functionality can be disabled by setting “[AllowSorting](http://help.syncfusion.com/js/api/ejfileexplorer#members:gridsettings-allowsorting)” property to false.
+By default sorting is enabled in grid view of FileExplorer, it helps you to sort each columns in ascending or descending order by pressing the corresponding column header. The sorting functionality can be disabled by setting “[AllowSorting](https://help.syncfusion.com/api/js/ejfileexplorer#members:gridsettings-allowsorting)” property to false.
 
-The behavior of the columns can be customized through the “[Columns](http://help.syncfusion.com/js/api/ejfileexplorer#members:gridsettings-columns)” property.
+The behavior of the columns can be customized through the “[Columns](https://help.syncfusion.com/api/js/ejfileexplorer#members:gridsettings-columns)” property.
 
 In the view page, add FileExplorer helper with custom grid settings
     
@@ -124,7 +124,7 @@ In the view page, add FileExplorer helper with custom grid settings
     
 ## Footer Customization
 
-The footer displays the details of the current selected files and folders, and the footer contains the switcher to change the layout view. The visibility of the footer can be customized by the “[ShowFooter](http://help.syncfusion.com/js/api/ejfileexplorer#members:showfooter)” property.
+The footer displays the details of the current selected files and folders, and the footer contains the switcher to change the layout view. The visibility of the footer can be customized by the “[ShowFooter](https://help.syncfusion.com/api/js/ejfileexplorer#members:showfooter)” property.
 
 In the view page, add FileExplorer helper and hides the footer as shown below.
 

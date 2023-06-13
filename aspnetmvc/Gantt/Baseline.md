@@ -28,7 +28,7 @@ The following code example shows how to enable baseline in Gantt control.
 
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/baseline) here to view the online demo sample for baselines in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for baselines in Gantt.
 
 The following screenshot shows the baseline in Gantt control.
 

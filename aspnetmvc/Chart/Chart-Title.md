@@ -35,7 +35,7 @@ By using the **Title** option, you can add the *Text* as well as customize its *
 ![](Chart-Title_images/Chart-Title_img1.png)
 
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/subtitle) here to view the Chart Title online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/subtitle) here to view the Chart Title online demo sample.
 
 
 We can trim, wrap and wrapAndTrim to the chart title using textOverflow property. The original text will be displayed as tooltip on mouse hover.

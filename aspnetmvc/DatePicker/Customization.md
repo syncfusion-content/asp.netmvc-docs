@@ -56,7 +56,7 @@ N>  Footer contains the today button to quickly navigate to the current date. By
 
 ## Show Popup Button
 
-EJMVC DatePicker input textbox  contains a button to open the DatePicker calendar. You can hide this DatePicker calendar button using [ShowPopupButton](http://help.syncfusion.com/js/api/ejdatepicker#members:showpopupbutton) value as false.
+EJMVC DatePicker input textbox  contains a button to open the DatePicker calendar. You can hide this DatePicker calendar button using [ShowPopupButton](https://help.syncfusion.com/js/api/ejdatepicker#members:showpopupbutton) value as false.
 
 By hiding this button, you can open the DatePicker by focusing the input textbox element itself.
 
@@ -71,7 +71,7 @@ By hiding this button, you can open the DatePicker by focusing the input textbox
 
 ## Show Other Months
 
-You can show or hide the other month days from EJMVC DatePicker calendar by using [ShowOtherMonths](http://help.syncfusion.com/js/api/ejdatepicker#members:showothermonths) property.
+You can show or hide the other month days from EJMVC DatePicker calendar by using [ShowOtherMonths](https://help.syncfusion.com/js/api/ejdatepicker#members:showothermonths) property.
 
 {% highlight cshtml %}
 
@@ -84,7 +84,7 @@ You can show or hide the other month days from EJMVC DatePicker calendar by usin
 
 ## Highlight Special Date
 
-The Essential ASP.NET MVC DatePicker allows you to highlight the special dates in EJMVC DatePicker calendar by using [SpecialDates](http://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) property. It receives the list of "dataSpecial" date fields such as, in which the data should contain the date value, icon CSS class and tooltip as field values with any names.
+The Essential ASP.NET MVC DatePicker allows you to highlight the special dates in EJMVC DatePicker calendar by using [SpecialDates](https://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) property. It receives the list of "dataSpecial" date fields such as, in which the data should contain the date value, icon CSS class and tooltip as field values with any names.
 
 Special Date property has following properties,
 

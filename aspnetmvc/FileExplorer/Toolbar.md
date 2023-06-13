@@ -216,7 +216,7 @@ In the view page, add FileExplorer helper and specify “ShowToolbar” as false
 
 ## Toolbar Configuration
 
-As you can see the available toolbar items from [here](#_Toolbar_items). From the list of available items, you can configure and group your required toolbar items only through the “[Tools](http://help.syncfusion.com/js/api/ejfileexplorer#members:tools)” property. And also you can arrange the toolbar items by the “[ToolsList](http://help.syncfusion.com/js/api/ejfileexplorer#members:toolslist)” property.
+As you can see the available toolbar items from [here](#_Toolbar_items). From the list of available items, you can configure and group your required toolbar items only through the “[Tools](http://help.syncfusion.com/js/api/ejfileexplorer#members:tools)” property. And also you can arrange the toolbar items by the “[ToolsList](https://help.syncfusion.com/api/js/ejfileexplorer#members:toolslist)” property.
 
 In the view page, create the tools list and add FileExplorer helper as shown below
     
@@ -268,7 +268,7 @@ In the view page, create the tools list and add FileExplorer helper as shown bel
     
 ## Search bar
 
-The Search bar can be customize through the “[FilterSettings](http://help.syncfusion.com/js/api/ejfileexplorer#members:filtersettings)” property. By default the search doesn’t consider the case sensitivity, and the search works based on “[FilterType](http://help.syncfusion.com/js/api/ejfileexplorer#members:filtersettings-filtertype)”.
+The Search bar can be customize through the “[FilterSettings](https://help.syncfusion.com/api/js/ejfileexplorer#members:filtersettings)” property. By default the search doesn’t consider the case sensitivity, and the search works based on “[FilterType](https://help.syncfusion.com/api/js/ejfileexplorer#members:filtersettings-filtertype)”.
 
 The FileExplorer allows the following filter types in the search functionality.
 
@@ -300,7 +300,7 @@ In the view page, you can configure the filter type with enabling case sensitivi
 ## Custom Tool in Toolbar
 
 From the [toolbar items ](#_Toolbar_items)you can see the list of built-in tools to perform the operations. Along with this built-in tools, you can add your custom tool with the custom functionality.
-You can find an online demo sample of FileExplorer with custom tool from [here](http://mvc.syncfusion.com/demos/web/fileexplorer/customtool#). 
+You can find an online demo sample of FileExplorer with custom tool from [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform). 
 
 In the view page, add FileExplorer helper and specify custom tool as shown below
     
@@ -358,9 +358,9 @@ In the view page, add FileExplorer helper and specify custom tool as shown below
 
 Each toolbar item can be enabled or disabled through the below client-side public methods.
 
-* [enableToolbarItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:enabletoolbaritem)
+* [enableToolbarItem](https://help.syncfusion.com/api/js/ejfileexplorer#methods:enabletoolbaritem)
 
-* [disableToolbarItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:disabletoolbaritem)
+* [disableToolbarItem](https://help.syncfusion.com/api/js/ejfileexplorer#methods:disabletoolbaritem)
 
 These methods accepts the tool name as the parameter. It also allows the parameter as tool item index or the jQuery object of the tool item.
     
@@ -399,7 +399,7 @@ If you want to enable / disable the custom added tool in toolbar, you need to pa
 
 ## Customizing the Upload Functionality
 
-FileExplorer helps you to upload the file using “[Upload](http://help.syncfusion.com/js/uploadbox/overview#)” component. File upload can be done through the toolbar item or context menu item. The “[UploadSettings](http://help.syncfusion.com/js/api/ejfileexplorer#members:uploadsettings)” property is used to configure the upload functionalities.
+FileExplorer helps you to upload the file using “[Upload](https://help.syncfusion.com/js/uploadbox/overview)” component. File upload can be done through the toolbar item or context menu item. The “[UploadSettings](https://help.syncfusion.com/js/api/ejfileexplorer)” property is used to configure the upload functionalities.
 
 This property has the below sub properties with the default values:
     
@@ -449,7 +449,7 @@ To know more details, please check the below reference link and sample.
 
 [Reference Link](https://stackoverflow.com/questions/16287706/how-to-upload-large-files-using-mvc-4?answertab=active#tab-top)
 
-[Sample](http://www.syncfusion.com/downloads/support/directtrac/210600/ze/UploadFileSizeProblem-1398338221.zip)
+[Sample](https://www.syncfusion.com/downloads/support/directtrac/210600/ze/UploadFileSizeProblem-1398338221.zip)
 
 **AutoUpload**: when you enable this property, the upload action performed automatically after select the files. When you disable this property, it shows a confirmation dialog with the selected file details and perform the upload action on press the “upload” button.
 

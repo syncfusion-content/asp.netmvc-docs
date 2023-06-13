@@ -13,7 +13,7 @@ documentation: ug
  
 ## What is Html.EJ() ?
 
-EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://www.syncfusion.com/kb/5153/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej ).
+EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://support.syncfusion.com/kb/article/4895/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej).
 
 ## Getting started with Syncfusion MVC
 
@@ -79,7 +79,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 	
 For more information about Project Configuration Templates and their options details, please visit [here](https://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
-N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://www.syncfusion.com/kb/9197/resolving-jquery-multiple-references-error)
+N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://support.syncfusion.com/kb/article/8050/resolving-jquery-multiple-references-error)
 
 ## Through Syncfusion Project Conversion
 

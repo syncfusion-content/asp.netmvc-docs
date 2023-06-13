@@ -147,7 +147,7 @@ Local Data Binding
 
 ### OData
 
-OData is a standardized protocol for creating and consuming data. You can provide the [OData service](http://www.odata.org/) URL directly to the Datasource URL property.
+OData is a standardized protocol for creating and consuming data. You can provide the [OData service](https://www.odata.org/) URL directly to the Datasource URL property.
 
 {% highlight html %}
 
@@ -164,7 +164,7 @@ Run the code to get the following output
 
 For OData Version 4 support ODataV4Adaptor should be used. By using URL property of Datasource, you can bind OData Version 4 Service link and specify Adaptor value as enum AdaptorType.ODataV4Adaptor.
 
-For further details about OData service please refer [the link](http://www.odata.org/).
+For further details about OData service please refer [the link](https://www.odata.org/).
 
 {% highlight html %}
 
@@ -243,7 +243,7 @@ Run the code to get the following output
 
 ### WebAPI
 
-**WebApi** Adaptor, extended from **ODataAdaptor**, of **DataManager** is used for retrieving data from WebApi service.[ASP.NET Web API](https://msdn.microsoft.com/en-us/library/hh833994%28v=vs.108%29.aspx) is a Framework for building HTTP services. You can retrieve data from ASP.NET Web API by using [DataManager](https://help.syncfusion.com/js/datamanager/getting-started). Using WebApiAdaptor, you can bind WebApi service’s data to ListView. The data from WebApi service must be returned as an object that has its value as data source and property “caption” with its value as dataSource’s total records count.
+**WebApi** Adaptor, extended from **ODataAdaptor**, of **DataManager** is used for retrieving data from WebApi service.[ASP.NET Web API](https://learn.microsoft.com/en-us/previous-versions/aspnet/hh833994(v=vs.108)?redirectedfrom=MSDN) is a Framework for building HTTP services. You can retrieve data from ASP.NET Web API by using [DataManager](https://help.syncfusion.com/js/datamanager/getting-started). Using WebApiAdaptor, you can bind WebApi service’s data to ListView. The data from WebApi service must be returned as an object that has its value as data source and property “caption” with its value as dataSource’s total records count.
 
 {% highlight html %}
 
@@ -258,7 +258,7 @@ Run the code to get the following output.
 
 ## FieldSettings
 
-The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](http://help.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
+The FieldSettings property is used to map the DataSource field with the list item fields. In addition to the list [item specific properties](https://help.syncfusion.com/aspnetmvc/listview/data-binding), the following fields are available while mapping.
 
 _FieldSettings_
 
