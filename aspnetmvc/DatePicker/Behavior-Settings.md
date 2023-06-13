@@ -40,7 +40,7 @@ N> You can change the **MinDate** and **MaxDate** value dynamically like **Value
 
 Start and depth represents the view of Essential ASP.NET MVC DatePicker calendar. DatePicker calendar has four different level of views, which are month, year, decade and century. It allows you to quick pick date from different months and years by navigating through different views.
 
-By default DatePicker starts with month view and can be drill down into year, decade and century. You can also change the start and depth level view by using [StartLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:startlevel) and [DepthLevel](http://help.syncfusion.com/js/api/ejdatepicker#members:depthlevel) property. So that you can initiate DatePicker calendar to view at any level and control the navigation.
+By default DatePicker starts with month view and can be drill down into year, decade and century. You can also change the start and depth level view by using [StartLevel](https://help.syncfusion.com/js/api/ejdatepicker#members:startlevel) and [DepthLevel](https://help.syncfusion.com/js/api/ejdatepicker#members:depthlevel) property. So that you can initiate DatePicker calendar to view at any level and control the navigation.
 
 * "Month"   - shows the days in month to pick.
 * "Year"    - shows the months in year to pick.
@@ -69,7 +69,7 @@ Refer below code example to represent DatePicker as calendar.
 
 ## Strict Mode
 
-Strict mode in Essential ASP.NET MVC DatePicker allows you to enter valid or invalid date in input textbox, but an error class will get added to exhibit if it is an invalid date. When you set [EnableStrictMode](http://help.syncfusion.com/js/api/ejdatepicker#members:enablestrictmode) to false, DatePicker allows you to enter only the valid date or else it will resets with previous value. 
+Strict mode in Essential ASP.NET MVC DatePicker allows you to enter valid or invalid date in input textbox, but an error class will get added to exhibit if it is an invalid date. When you set [EnableStrictMode](https://help.syncfusion.com/js/api/ejdatepicker#members:enablestrictmode) to false, DatePicker allows you to enter only the valid date or else it will resets with previous value. 
 
 Also the valid date should be defined in specified range or else it resets to min or maximum date when the entered date is out of range
 

@@ -14,7 +14,7 @@ This section helps to understand the getting started of the Dialog widget with t
 
 ## Create a Dialog
 
-Create a MVC Project and add the necessary DLL and scripts with the help of the given [MVC Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation.
+Create a MVC Project and add the necessary DLL and scripts with the help of the given [MVC Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) documentation.
 
 Add the following code snippet to the corresponding view page to render the Dialog.
 
@@ -85,7 +85,7 @@ In most cases, the Dialog widgets are needed only in dynamic actions like showin
 The Dialog widget can be hidden on initialize using `ShowOnInit` property which should be set to false.
 
 {%seealso%}
-[Button](http://help.syncfusion.com/aspnetmvc/button/overview).
+[Button](https://help.syncfusion.com/aspnetmvc/button/overview).
 {%endseealso%}
 
 Refer the below example. The dialog will be opened on clicking the Button widget.
