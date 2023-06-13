@@ -15,7 +15,7 @@ The following section is briefly explain the things to get started with FileExpl
 
 To get start with Essential ASP.NET MVC FileExplorer, create a new MVC Application and add the required assemblies in references and then refer the below specified dependent CSS file as well as scripts
 
-To create a MVC Project and add necessary assemblies you can use the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started#) Documentation.
+To create a MVC Project and add necessary assemblies you can use the help of the given [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started#) Documentation.
 
 ## Adding the references
 
@@ -27,15 +27,15 @@ To include the control in the application the following references need to be ad
 
 CSS file
 
-* [ej.web.all.min.css](http://cdn.syncfusion.com/13.4.0.58/js/web/flat-azure/ej.web.all.min.css#) includes all widgets styles (To know more about theme refer [Theming in Essential JavaScript Component](http://help.syncfusion.com/js/theming-in-essential-javascript-components#)
+* [ej.web.all.min.css](https://cdn.syncfusion.com/13.4.0.58/js/web/flat-azure/ej.web.all.min.css) includes all widgets styles (To know more about theme refer [Theming in Essential JavaScript Component](https://help.syncfusion.com/js/theming-in-essential-javascript-components)
 
-N> Essential JS widgets having the support for 13 built-in themes, to know more please check [here](http://docs.syncfusion.com/js/theming-in-essential-javascript-components#)
+N> Essential JS widgets having the support for 13 built-in themes, to know more please check [here](https://docs.syncfusion.com/js/theming-in-essential-javascript-components)
 
 ### Script references
 
 The external script dependencies of the FileExplorer widget are,
 
-* [jQuery 1.7.1](http://jquery.com/#) or later versions.
+* [jQuery 1.7.1](https://jquery.com/) or later versions.
 
 * [jsrender](https://www.jsviews.com/#jsrender) – for grid view template.
 
@@ -173,7 +173,7 @@ Used to working with different localization culture formats
 
 You can use the “**ej.web.all.min.js**” file, which encapsulates all the EJ MVC controls and frameworks in one single file
 
-N> To add required assembly references, scripts and CSS files automatically into your application, please refer following link [http://help.syncfusion.com/aspnetmvc/getting-started#through-syncfusion-nuget-packages-2](http://help.syncfusion.com/aspnetmvc/getting-started#through-syncfusion-nuget-packages-2). Also, it configures the “web.config” file automatically.
+N> To add required assembly references, scripts and CSS files automatically into your application, please refer following link [http://help.syncfusion.com/aspnetmvc/getting-started#through-syncfusion-nuget-packages-2](https://help.syncfusion.com/aspnetmvc/getting-started#through-syncfusion-nuget-packages-2). Also, it configures the “web.config” file automatically.
 
 ## FileExplorer using helper
 
@@ -189,7 +189,7 @@ In the view page, add FileExplorer helper as shown below.
         
    {% endhighlight %}
  
-In above code block, “Path” denotes the URL of filesystem that are to be explored in "FileExplorer" and “AjaxAction” specifies the URL of server side AJAX handling method that handles the file operations of FileExplorer control. So “[Path](http://help.syncfusion.com/js/api/ejfileexplorer#members:path)” and “[AjaxAction](http://help.syncfusion.com/js/api/ejfileexplorer#members:ajaxaction)” are the mandatory configuration at here.
+In above code block, “Path” denotes the URL of filesystem that are to be explored in "FileExplorer" and “AjaxAction” specifies the URL of server side AJAX handling method that handles the file operations of FileExplorer control. So “[Path](https://help.syncfusion.com/api/js/ejfileexplorer#members:path)” and “[AjaxAction](https://help.syncfusion.com/api/js/ejfileexplorer#members:ajaxaction)” are the mandatory configuration at here.
 
 Add the following code example to the corresponding controller page. 
 

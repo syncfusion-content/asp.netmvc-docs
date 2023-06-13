@@ -37,4 +37,4 @@ The following screenshot shows the output of Holidays in Gantt control.
 
 ![](Holidays_images/Holidays_img1.png)
 
-We can also load holidays from SQL database into Gantt. [Click](https://www.syncfusion.com/kb/8566/how-to-load-holidays-from-database-into-gantt) here to view our knowledge base for this.
+We can also load holidays from SQL database into Gantt. [Click](https://support.syncfusion.com/kb/article/7574/how-to-load-holidays-from-database-into-gantt) here to view our knowledge base for this.

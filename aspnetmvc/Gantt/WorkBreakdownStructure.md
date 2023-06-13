@@ -26,4 +26,4 @@ The below screenshot depicts the output of above code example.
 
 ![](WorkBreakdownStructure_images/wbs_img1.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttwbs) here to view the online demo sample for WBS in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for WBS in Gantt.

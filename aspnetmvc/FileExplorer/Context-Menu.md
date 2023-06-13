@@ -130,7 +130,7 @@ It helps to open a file location from the filtered list.
 
 ## Context menu Visibility
 
-The presence of the context menu can be controlled by the “[ShowContextMenu](http://help.syncfusion.com/js/api/ejfileexplorer#members:showcontextmenu)” property. This was enabled by default, and by disabling this property you can prevent our built-in context menu.
+The presence of the context menu can be controlled by the “[ShowContextMenu](https://help.syncfusion.com/api/js/ejfileexplorer#members:showcontextmenu)” property. This was enabled by default, and by disabling this property you can prevent our built-in context menu.
 
 In the view page, add FileExplorer helper and specify the context menu visibility as false.
     
@@ -150,9 +150,9 @@ The context menu items can be enabled or disabled through the client side public
 
 For example, if you disable the “Upload” item, it disables in all places wherever it appears such as open the context menu on “TreeView”, open on file/folder, and open on layout.
 
-* [enableMenuItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:enablemenuitem)
+* [enableMenuItem](https://help.syncfusion.com/api/js/ejfileexplorer#methods:enablemenuitem)
 
-* [disableMenuItem](http://help.syncfusion.com/js/api/ejfileexplorer#methods:disablemenuitem)
+* [disableMenuItem](https://help.syncfusion.com/api/js/ejfileexplorer#methods:disablemenuitem)
 
 These methods only accepts the context menu item name as the parameter.
     

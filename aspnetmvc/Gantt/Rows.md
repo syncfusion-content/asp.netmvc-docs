@@ -122,7 +122,7 @@ The following screenshot depicts a row drag and drop in the Gantt widget.
 
 ![](Rows_images/Rows_img4.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/gantt/ganttdraganddrop) here to view the online demo sample for row drag and drop in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for row drag and drop in Gantt.
 
 ### Customizing drag tooltip
 

@@ -249,7 +249,7 @@ The following screenshot shows the output of the above steps.
 
 ![](Data-Binding_images/Data-Binding_img2.png)
 
-You can find the online demo sample for binding self-referential data [here](https://mvc.syncfusion.com/demos/web/gantt/ganttselfreference)
+You can find the online demo sample for binding self-referential data [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 ## Remote data
 
@@ -343,4 +343,4 @@ The below code example shows how to use this property.
 
 {% endhighlight %}
 
-You can find the online demo sample of Gantt with virtualization mode [here](https://mvc.syncfusion.com/demos/web/gantt/virtualization).
+You can find the online demo sample of Gantt with virtualization mode [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform).

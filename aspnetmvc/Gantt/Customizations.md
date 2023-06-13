@@ -60,7 +60,7 @@ The following code example shows how to define template for taskbars in Gantt.
 
 The DOM structure and class names mentioned in the above code snippet is mandatory for providing the editing support in custom templates.
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/gantttaskbartemplate) here to view the online demo sample for Taskbar templates in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for Taskbar templates in Gantt.
 
 The following screenshot shows the template for taskbars in Gantt.
 
@@ -122,7 +122,7 @@ It is possible to customize the task labels with templates, by using `RightTaskL
 
 {% endhighlight %}
 
-You can find the online demo sample for task label templates in Gantt [here](https://mvc.syncfusion.com/demos/web/gantt/gantttasklabeltemplate)
+You can find the online demo sample for task label templates in Gantt [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 The following screenshot shows Gantt with task label templates.
 
@@ -267,7 +267,7 @@ TreeGrid part tooltip can also be customized using `CellTooltipTemplate` propert
 
 ![ASP.NET MVC Gantt cell tooltip](Customization_images/Customization_img5.png)
 
-You can find the online demo sample for tooltip templates for taskbars [here](https://mvc.syncfusion.com/demos/web/gantt/gantttooltiptemplate)
+You can find the online demo sample for tooltip templates for taskbars [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 ### Taskbar Editing Tooltip
 
