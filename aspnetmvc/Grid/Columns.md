@@ -247,7 +247,7 @@ The following output is displayed as a result of the above code example.
 
 The template design that applies on for the column header. To render template, use the `HeaderTemplateID` property of `Columns`.
 
-You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "the link").
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](https://www.jsviews.com/#jsrapi "the link").
 
 N> It's a standard way to enclose the `template` within the `script` tag with `type` as `text/x-jsrender`.
 
@@ -351,7 +351,7 @@ The following output is displayed as a result of the above code example.
 
 `Format` is the process of customizing the particular column data with specified jQuery recognized globalize formats, such as currency, numeric, decimal, percentage or dates. To specify the globalize format, by using Format property of `Columns`.
 
-The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/jquery/globalize/tree/v0.1.1#format "data format") strings available for the `Date` and `Number` types.
+The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/globalizejs/globalize/tree/v0.1.1#format "data format") strings available for the `Date` and `Number` types.
 
 The following code example describes the above behavior.
 
@@ -695,7 +695,7 @@ The following output is displayed as a result of the above code example.
 
 HTML templates can be specified in the `Template` property of the particular column as a string (html element) or ID of the template's HTML element.
 
-You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "this link"). 
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](https://www.jsviews.com/#jsrapi "this link"). 
 
 For template manipulation using JavaScript, either you can use JsRender [helper](https://www.jsviews.com/#helpers) function or `TemplateRefresh` grid event. For more information on `TemplateRefresh` event, refer [this link](https://help.syncfusion.com/aspnetmvc/grid/how-to#display-other-syncfusion-controls-in-grid-columns "this link").
 
@@ -831,7 +831,7 @@ The following output is displayed as a result of the above code example.
 
 Expression column is possible only for `Template` column. You can use JsRender syntax in the template.
 
-You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](http://www.jsviews.com/#jsrapi "the link"). 
+You can use JsRender syntax in the template. For more information about JsRender syntax, please refer [this link](https://www.jsviews.com/#jsrapi "the link"). 
 
 N> This expression column is supported at read only mode.
 

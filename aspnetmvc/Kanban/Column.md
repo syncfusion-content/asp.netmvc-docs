@@ -8,7 +8,7 @@ platform: ejmvc
 
 # Columns
 
-Column fields are present in the [`dataSource`](https://help.syncfusion.com/js/api/ejgrid#members:datasource) schema and it is rendering cards based its mapping column values.
+Column fields are present in the [`dataSource`](https://help.syncfusion.com/api/js/ejgrid#members:datasource) schema and it is rendering cards based its mapping column values.
 
 ## Key Mapping
 

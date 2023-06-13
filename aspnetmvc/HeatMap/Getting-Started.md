@@ -13,7 +13,7 @@ This section explains briefly about how to create a HeatMap in your application 
 
 ## Initialize the HeatMap
 
-1. Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
+1. Create Syncfusion ASP.NET MVC application. You can refer [MVC Getting Started documentation](https://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 2. Add a HeatMap control in View file as like as follows.
 
 

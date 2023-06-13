@@ -21,13 +21,13 @@ We can also bind the above type of datasource by using lambda Expressions of Gri
 
 N> 1. To update the dataSource after Grid rendered, use `dataSource` method of Grid. Refer to this [link](https://help.syncfusion.com/aspnetmvc/grid/how-to#set-dynamic-datasource-to-grid) for more information.
 
-N> 2. DateTime values, retrieved from server-end or database, will be converted based on the local time zone. To avoid the local time zone conversion, refer this knowledge base [link](https://www.syncfusion.com/kb/8613/how-to-convert-dates-to-utc-format).
+N> 2. DateTime values, retrieved from server-end or database, will be converted based on the local time zone. To avoid the local time zone conversion, refer this knowledge base [link](https://support.syncfusion.com/kb/article/7605/how-to-convert-dates-to-utc-format).
   
 In the following section, let us see on how to bind various datasources to Grid using `DataSource` API.
   
 ## IEnumerable
  
-The Grid can be bound with either non-generic collection or generic collection that implements [IEnumerable](https://msdn.microsoft.com/en-us/library/system.collections.ienumerable.aspx) interface. It can be assigned to Grid’s `DataSource` property.
+The Grid can be bound with either non-generic collection or generic collection that implements [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?redirectedfrom=MSDN) interface. It can be assigned to Grid’s `DataSource` property.
     
 N> When using `DataSource` builder, the IEnumerable datasource can be passed as parameter either directly to the `DataSource` builder or to the `Json` property of the `DataSource` builder.  
   
@@ -321,7 +321,7 @@ The following output is displayed as a result of the above code example.
 
 See Also
 
-For more information on ITypedList interface please refer to this [link](https://msdn.microsoft.com/en-us/library/System.ComponentModel.ITypedList.aspx).
+For more information on ITypedList interface please refer to this [link](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.itypedlist?redirectedfrom=MSDN).
 
 ##  Complex Binding
 
@@ -406,7 +406,7 @@ The following output is displayed as a result of the above code example.
 
 See Also
 
-To create WCF Data Service in your web application refer [here](https://msdn.microsoft.com/en-us/library/cc668184.aspx).
+To create WCF Data Service in your web application refer [here](https://learn.microsoft.com/visualstudio/data-tools/walkthrough-creating-a-wcf-data-service-with-wpf-and-entity-framework?view=vs-2015&redirectedfrom=MSDN).
 
 ##  ODataV4 Service
 
