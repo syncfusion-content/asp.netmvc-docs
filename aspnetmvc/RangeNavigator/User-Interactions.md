@@ -31,7 +31,7 @@ EjRangeNavigator provides highlighting supports to the intervals on mouse hover.
 ![](User-Interactions_images/User-Interactions_img1.png) 
 
 
-[Click](http://mvc.syncfusion.com/demos/web/rangenavigator/rangehighlight) here to view the highlight and selections online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the highlight and selections online demo sample.
 
 ### Customize the highlight style
 
@@ -82,7 +82,7 @@ EjRangeNavigator provides selection supports to the intervals by, clicking and d
 ![](User-Interactions_images/User-Interactions_img3.png) 
 
 
-[Click](http://mvc.syncfusion.com/demos/web/rangenavigator/rangehighlight) here to view the highlight and selections online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the highlight and selections online demo sample.
 
 ### Customize the selection style
 
@@ -149,4 +149,4 @@ To customize the selected intervals, use `Color`, `Border` and `Opacity` options
 
 ![](User-Interactions_images/User-Interactions_img5.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/rangenavigator/rangescrollbar) here to view scrollbar online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view scrollbar online demo sample.
