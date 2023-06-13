@@ -118,7 +118,7 @@ Duration units for the tasks can also be defined along with the duration values,
 
 The below sample explains the task's duration unit in Gantt.
 
-[Duration Unit](https://mvc.syncfusion.com/demos/web/gantt/ganttdurationunits)
+[Duration Unit](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 The below screen shot shows different duration unit support in Gantt control.
 
@@ -154,4 +154,4 @@ ej.Gantt.Locale["en-US"] = {
 N> **durationUnitTexts** property is used to display the unit of duration in columns and taskbar tooltips.
 N> **durationUnitEditText** property is used to save the edited duration unit value on editing action.
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttdurationunits) here to view the online demo sample for mapping the duration units.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for mapping the duration units.

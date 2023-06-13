@@ -33,7 +33,7 @@ N> 2. `DayWorkingTime` property is used to define the working time for the whole
 
 The below demo explains the working time range in Gantt.
 
-[Working Time Range](https://mvc.syncfusion.com/demos/web/gantt/ganttworkingtimerange)
+[Working Time Range](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 The following screen shot shows working time range in Gantt control. 
 

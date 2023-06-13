@@ -47,9 +47,9 @@ It is possible to format a column using `Load` event. The following code example
 </script>
 {% endhighlight %}
 
-N> For more numeric format strings, please refer to this [link](https://msdn.microsoft.com/library/dwhawy9k(v=vs.100).aspx).
+N> For more numeric format strings, please refer to this [link](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/dwhawy9k(v=vs.100)?redirectedfrom=MSDN).
 
-N> For more date format strings, please refer to this [link](https://msdn.microsoft.com/library/az4se3k1(v=vs.100).aspx).
+N> For more date format strings, please refer to this [link](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/az4se3k1(v=vs.100)?redirectedfrom=MSDN).
 
 ## Column Resizing
 

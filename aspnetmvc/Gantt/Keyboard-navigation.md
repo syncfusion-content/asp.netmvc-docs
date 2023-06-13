@@ -30,4 +30,4 @@ Gantt control supports the following keyboard shortcuts for performing various a
 
 **Right** **Arrow** **:** To expand the selected parent task.
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttkeynavigation) here to view the sample for keyboard navigation.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the sample for keyboard navigation.
