@@ -147,4 +147,4 @@ N> Images for this sample are available in (installed location)\Syncfusion\Essen
 	
 ![](RenderingMode_images/RenderingMode_img1.jpeg)
 
-N> Any EJ control can be embedded in the target element but the default action of that control should be prevented in order to create custom actions. To show a sample, integration with TreeView control is demonstrated [here](http://mvc.syncfusion.com/demos/web/dropdownlist/integrationwithwidgets)
+N> Any EJ control can be embedded in the target element but the default action of that control should be prevented in order to create custom actions. To show a sample, integration with TreeView control is demonstrated [here](https://mvc.syncfusion.com/demos/web/dropdownlist/integrationwithwidgets)

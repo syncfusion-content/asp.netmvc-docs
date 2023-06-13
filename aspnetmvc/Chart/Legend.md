@@ -32,7 +32,7 @@ By default, the legend is enabled in the chart. You can enable or disable it by 
 
 ![](Legend_images/Legend_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/legendposition) here to view the online demo sample for legend customization.
+[Click](https://mvc.syncfusion.com/demos/web/chart/legendposition) here to view the online demo sample for legend customization.
 
 
 ## Legend title

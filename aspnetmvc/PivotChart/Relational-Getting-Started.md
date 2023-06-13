@@ -10,7 +10,7 @@ documentation: ug
 # Getting Started
 
 >**Important**
-Starting with v16.2.0.x, if you refer to Syncfusion assemblies from trial setup or from the NuGet feed, include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to learn about registering Syncfusion license key in your ASP.NET Core application to use our components.
+Starting with v16.2.0.x, if you refer to Syncfusion assemblies from trial setup or from the NuGet feed, include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion license key in your ASP.NET Core application to use our components.
 
 ## Creating a simple application with PivotChart and Relational datasource (Client Mode)
 
@@ -115,7 +115,7 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 2. jQuery-3.0.0.min.js
 3. ej.web.all.min.js
 
-[Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
+[Click here](https://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
 
@@ -348,7 +348,7 @@ The scripts and style sheets that are mandatorily required to render PivotChart 
 2. jQuery-3.0.0.min.js
 3. ej.web.all.min.js
 
-[Click here](http://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
+[Click here](https://help.syncfusion.com/js/cdn) here to know more about scripts and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the <head> tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.**
 
@@ -639,6 +639,6 @@ Now, **PivotChart** will be rendered with amount over a set of products across d
 
 ### WCF
 
-This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotChart. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/PivotChart/relational-connectivity#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding Relational datasource to a simple PivotChart. For more details on this topic, [click here](https://help.syncfusion.com/aspnetmvc/pivotchart/relational-connectivity#wcf).
 
 

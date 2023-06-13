@@ -12,7 +12,7 @@ documentation: ug
 ## Binding PivotGauge to Collection
 This section demonstrates binding of a collection to the PivotGauge control as datasource. For more information on this datasource refer to the following links.
 
-When you are using WebAPI controller, refer to the “Datasource Initialization” section under the following [link](http://help.syncfusion.com/js/pivotgauge/relational-getting-started#creating-a-simple-application-with-pivotgauge-and-relational-datasource-server-mode).
+When you are using WebAPI controller, refer to the “Datasource Initialization” section under the following [link](https://help.syncfusion.com/js/pivotgauge/relational-getting-started#creating-a-simple-application-with-pivotgauge-and-relational-datasource-server-mode).
 
 If you are using WCF Service, refer the "Datasource Initialization" section below.
 

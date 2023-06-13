@@ -18,11 +18,11 @@ The WAI-ARIA specification suite defines a set of roles, states, and properties 
 
 This section describes about the approaches followed to make the widgets accessible using the Roles, States, and Properties defined by WAI-ARIA specifications. The WAI-ARIA specifications recommends several attributes to be used along with the DOM element structure to make it accessible.
 
-The common widgets that can be made accessible by using the WAI-ARIA are listed [here](https://www.w3.org/TR/wai-aria-practices-1.1/). The various ARIA attributes that are used to make the widgets accessible are listed [here](https://msdn.microsoft.com/en-us/library/hh801958%28v=vs.85%29.aspx).
+The common widgets that can be made accessible by using the WAI-ARIA are listed [here](https://www.w3.org/WAI/ARIA/apg/). The various ARIA attributes that are used to make the widgets accessible are listed [here](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA).
 
 The basic steps for converting a common widget into accessible are as follows:
 
-1.	Choose the appropriate [role](https://www.w3.org/WAI/PF/aria/roles.html) for your widget that defines the general component type. For example, if you need to create a button, set the role to the button.
+1.	Choose the appropriate [role](https://www.w3.org/TR/wai-aria/) for your widget that defines the general component type. For example, if you need to create a button, set the role to the button.
 
 {% highlight html %}
 
@@ -30,7 +30,7 @@ The basic steps for converting a common widget into accessible are as follows:
 
 {% endhighlight %}
 
-2.	Once the role is selected, now you can set its state/properties avails for it from the link given [here](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-describedby).
+2.	Once the role is selected, now you can set its state/properties avails for it from the link given [here](https://www.w3.org/TR/wai-aria/#aria-describedby).
 
 {% highlight html %}
 
@@ -42,7 +42,7 @@ i.	The above code will make the button widget accessible, as it was defined with
 ii.	The property aria-describedby has been assigned with some related button text that denotes the button description to be notified to the user.
 
 N> Note: If your button is a togglebutton, it can be defined with an additional aria-pressed state, that returns the value true if the button undergoes toggling, else the state remains as false.<BR>
-An example with button control that has been made accessible can be referred from this [link](https://www.w3.org/TR/wai-aria-practices-1.1/examples/button/button.html).
+An example with button control that has been made accessible can be referred from this [link](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
 ## Usage of Accessibility in Syncfusion Widgets
 

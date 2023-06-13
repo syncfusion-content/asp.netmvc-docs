@@ -139,7 +139,7 @@ The following screenshot shows the resource histogram with project view Gantt.
 ![](HistogramView_images/HistogramView_1.png)
 
 Please find our online demo sample for further reference
-[ResourceHistogram](https://mvc.syncfusion.com/demos/web/gantt/histogramview)
+[ResourceHistogram](https://ej2.syncfusion.com/home/aspnetmvc.html#platform)
 
 ### Synchronize with resource view
 The following code snippet shows how to synchronize the resource histogram view Gantt with resource view Gantt.

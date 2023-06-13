@@ -54,7 +54,7 @@ var chartData = [
 
 ![](Working-with-Data_images/Working-with-Data_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/localdata) here to view the local data binding online demo sample.
+[Click](https://mvc.syncfusion.com/demos/web/chart/localdata) here to view the local data binding online demo sample.
 
 
 2.You can also plot data to chart using **Points** option in the series. Using this property you can customize each and every point in the data.
@@ -111,7 +111,7 @@ You can bind the remote data to the chart by using the **DataSource** and you ca
 
 ![](Working-with-Data_images/Working-with-Data_img3.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/remotedata) here to view the remote data binding online demo sample.	
+[Click](https://mvc.syncfusion.com/demos/web/chart/remotedata) here to view the remote data binding online demo sample.	
 
 
 ## AngularJS Data Binding

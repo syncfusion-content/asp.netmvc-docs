@@ -2457,4 +2457,4 @@ The complete list of EJ icons are listed in the following table. You have to use
 
 ## CDN
 
-In case, if the users need to make use of the CDN links instead of the normal above specified scripts and stylesheet references in their application, then have a look at the link [here](http://help.syncfusion.com/js/cdn).
+In case, if the users need to make use of the CDN links instead of the normal above specified scripts and stylesheet references in their application, then have a look at the link [here](https://help.syncfusion.com/js/cdn).

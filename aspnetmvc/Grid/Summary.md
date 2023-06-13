@@ -439,7 +439,7 @@ The following output is displayed as a result of the previous code example.
 
 ## Format
 
-To format summary values, the `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer to the [**globalize.js**](https://github.com/jquery/globalize/tree/v0.1.1#)
+To format summary values, the `Format` property needs to be assigned in `SummaryColumns` collection object.  To know more about formatting options. Please refer to the [**globalize.js**](https://github.com/globalizejs/globalize/tree/v0.1.1)
 
 {% tabs %}
 

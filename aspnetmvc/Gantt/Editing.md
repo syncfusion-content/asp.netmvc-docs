@@ -363,7 +363,7 @@ Task dependency can be deleted by using edit dialog and [`deleteDependency`](/ap
 
 ![](Editing_images/Predecessor_Editing_Dialog.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttediting) here to view the online demo sample for editing in Gantt.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for editing in Gantt.
 
 ## Update Gantt record value dynamically
 

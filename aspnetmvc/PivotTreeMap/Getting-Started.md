@@ -10,7 +10,7 @@ documentation: ug
 # Getting Started
 
 >**Important**
-Starting with v16.2.0.x, if you refer to Syncfusion assemblies from trial setup or from the NuGet feed, include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to learn about registering Syncfusion license key in your ASP.NET Core application to use our components.
+Starting with v16.2.0.x, if you refer to Syncfusion assemblies from trial setup or from the NuGet feed, include a license key in your projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn about registering Syncfusion license key in your ASP.NET Core application to use our components.
 
 ## Creating a simple application with PivotTreeMap and OLAP datasource (Client Mode)
 
@@ -295,7 +295,7 @@ The scripts and style sheets that are mandatorily required to render a PivotTree
 3. ej.web.all.min.js
 4. jsrender.min.js
 
-[Click here](http://helpjs.syncfusion.com/js/cdn) to know more about script and style sheets available online (CDN Link).
+[Click here](https://helpjs.syncfusion.com/js/cdn) to know more about script and style sheets available online (CDN Link).
 
 Scripts and style sheets are referred under the **head** tag in **_Layout.cshtml** file which is found inside **Views > Shared folder.** 
 
@@ -512,7 +512,7 @@ Now, PivotTreeMap is rendered with customer count over different customer geogra
 ![](Getting-Started_images/olapwebapi.png) 
 
 ### WCF
-This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotTreeMap. For more details on this topic, [click here](http://help.syncfusion.com/js/pivottreemap/olap-connectivity#wcf).
+This section demonstrates the utilization of WCF service as endpoint binding OLAP datasource to a simple PivotTreeMap. For more details on this topic, [click here](https://help.syncfusion.com/js/pivottreemap/olap-connectivity#wcf).
 
 
 

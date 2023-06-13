@@ -118,7 +118,7 @@ When the `TaskSchedulingMode` property is set as `Custom`, the scheduling mode f
 
 {% endtabs %}
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/gantttaskschedulingmode) here to view the online demo sample for task scheduling modes.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for task scheduling modes.
 
 The following screen shot depicts a project with custom scheduling mode, where both automatic and manual scheduling modes are mapped to the tasks.
 

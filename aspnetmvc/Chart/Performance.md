@@ -23,7 +23,7 @@ documentation: ug
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/chart/performance) here to view the online demo sample that shows Chart performance with 100,000 data points.
+[Click](https://mvc.syncfusion.com/demos/web/chart/performance) here to view the online demo sample that shows Chart performance with 100,000 data points.
 
 
 * Instead of enabling data markers and labels when there are large number of data points, you can use **Trackball** and **Tooltip** to view point information.

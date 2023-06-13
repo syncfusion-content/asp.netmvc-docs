@@ -233,7 +233,7 @@ public partial class GanttController : Controller
 {% endhighlight %}
 {% endtabs %} 
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttmultipleexporting) here to view the online demo sample for multiple exporting.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for multiple exporting.
 
 ## Export Theme
 The Gantt export supports the below themes, 
@@ -355,7 +355,7 @@ The following code snippets shows how to bind `ServerExcelQueryCellInfo` event i
 
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttconditionalexporting) here to view the online demo sample with above code example.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample with above code example.
 
 N> Refer this [link](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.XlsIO.IExtendedFormat.html) to know more about what are the properties are available in Excel cell and it's type values.
 
@@ -448,9 +448,9 @@ The following code snippets shows how to bind `ServerPdfQueryCellInfo` event in 
     }      
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttconditionalexporting) here to view the online demo sample with above code example.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample with above code example.
 
-N> Refer this [link](http://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ.Export.PdfTreeGridCellStyle.html) to know more about what are the properties are available in PDF cell and it's type values.
+N> Refer this [link](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.EJ.Export.PdfTreeGridCellStyle.html) to know more about what are the properties are available in PDF cell and it's type values.
 
 ### Customize PDF taskbar
 
@@ -534,4 +534,4 @@ The following code snippets shows how to bind `ServerPdfQueryTaskbarInfo` event 
     }      
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/gantt/ganttconditionalexporting) here to view the online demo sample with above code example.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample with above code example.

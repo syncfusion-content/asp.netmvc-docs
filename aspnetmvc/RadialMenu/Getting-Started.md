@@ -11,7 +11,7 @@ documentation: ug
 
 ## Creating your first RadialMenu in MVC application
 
-1. Create an MVC Project and add necessary assemblies, scripts and CSS files given in [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started#manual-integration-of-syncfusion-mvc-components-into-newexisting-mvc-applications) Documentation.
+1. Create an MVC Project and add necessary assemblies, scripts and CSS files given in [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started#manual-integration-of-syncfusion-mvc-components-into-newexisting-mvc-applications) Documentation.
 
 2. Add RadialMenu control using the helper from EJ namespace. 
 
@@ -35,7 +35,7 @@ documentation: ug
 
 The following steps guide you to add a **Radial Menu** control.
 
-Create a MVC Project and add the necessary DLL and scripts with the help of the given [MVC Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation.
+Create a MVC Project and add the necessary DLL and scripts with the help of the given [MVC Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) documentation.
 
 Add the following code snippet in corresponding View page to render the RadialMenu.
 
