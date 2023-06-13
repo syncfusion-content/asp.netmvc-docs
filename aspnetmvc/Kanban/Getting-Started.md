@@ -15,7 +15,7 @@ This section explains briefly how to create a Kanban in your application with AS
 
 The following steps explain creating first Kanban with an empty columns.
 
-1.	Create Syncfusion ASP.NET MVC application. You can refer  [MVC Getting Started documentation](http://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
+1.	Create Syncfusion ASP.NET MVC application. You can refer  [MVC Getting Started documentation](https://help.syncfusion.com/aspnetmvc/getting-started) to create new project and add necessary dll’s and script files.
 2.	Add a Kanban control in View file with an empty columns as like as follows. In Columns definition, the `HeaderText` property allows you to set text to column headers.
 
 {% highlight html %}
@@ -112,7 +112,7 @@ You can bind the data to Kanban control by either locally or remotely. Assign th
 
 ![](Getting_Started_images/Getting_Started_img2.png)
 
-N>  ODataAdaptor is the default adaptor used within DataManager. While binding to other web services, proper [`data adaptor`](http://help.syncfusion.com/aspnetmvc/datamanager/data-adaptors) needs to be set for `adaptor` option of DataManager.
+N>  ODataAdaptor is the default adaptor used within DataManager. While binding to other web services, proper [`data adaptor`](https://help.syncfusion.com/aspnetmvc/datamanager/data-adaptors) needs to be set for `adaptor` option of DataManager.
 
 ## Mapping Values
 

@@ -87,7 +87,7 @@ Some of the print options are not configurable through JavaScript code. You need
 * [Chrome](https://support.google.com/chrome/answer/1379552?hl=en)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [IE](http://www.helpteaching.com/help/print/index.htm) 
+* [IE](https://www.helpteaching.com/help/print/index.htm) 
 
 ## Print on external button click
 
