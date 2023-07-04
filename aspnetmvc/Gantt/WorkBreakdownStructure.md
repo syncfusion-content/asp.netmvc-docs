@@ -24,6 +24,6 @@ Work Breakdown Structure(WBS) in Gantt represents the entire project activities 
 
 The below screenshot depicts the output of above code example.
 
-![Work Breakdown Structure in ASP.NET MVC Gantt](WorkBreakdownStructure_images/wbs_img1.png)
+![Work Breakdown Structure in ASP.NET MVC Gantt](workbreakdownstructure_images/aspnetmvc-gantt-work-breakdown-structure.png)
 
 [Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for WBS in Gantt.

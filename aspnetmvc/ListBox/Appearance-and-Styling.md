@@ -75,7 +75,7 @@ The following steps explains you the configuration of Height & Width properties 
 2. Output of the above steps
 
 
-![Output height in ASP.NET MVC ListBox](Appearance-and-Styling_images/Appearance-and-Styling_img1.png)
+![Adjusting ListBox size in ASP.NET MVC ListBox](appearance-and-styling_images/aspnetmvc-listbox-adjusting-size.png)
 
 
 
@@ -139,7 +139,7 @@ The following steps explains you the configuration of Rounded corner of the List
 2. Output of the above steps.
 
 
-![Enabling Rounded Corner in ASP.NET MVC ListBox](Appearance-and-Styling_images/Appearance-and-Styling_img2.png)
+![Enabling Rounded Corner in ASP.NET MVC ListBox](Appearance-and-Styling_images/aspnetmvc-listbox-enabling-rounded-corner.png)
 
 
 

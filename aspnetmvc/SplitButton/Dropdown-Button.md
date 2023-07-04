@@ -41,7 +41,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 2. Execute the above code to render the following output.
 
-![Dropdown Button in ASP.NET MVC SplitButton](Dropdown-Button_images/Dropdown-Button_img1.png)
+![Dropdown Button in ASP.NET MVC SplitButton](dropdown-button_images/aspnetmvc-splitbutton-dropdown.png)
 
 
 
