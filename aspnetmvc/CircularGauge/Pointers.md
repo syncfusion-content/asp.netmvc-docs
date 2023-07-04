@@ -41,7 +41,7 @@ PO.Value(30).Add();
 {% endhighlight %}
 Execute the above code to render the following output.
 
-![Adding Pointer Collection in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img1.png)
+![Adding Pointer Collection in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-adding-pointer-collection.png)
 
 Circular Gauge with  pointer collection
 {:.caption}
@@ -109,7 +109,7 @@ Execute the above code to render the following output.
 
 
 
-![Adding Pointer Value in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img2.png)
+![Adding Pointer Value in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-adding-pointer-value.png)
 
 Circular Gauge with customized pointer value
 {:.caption}
@@ -176,7 +176,7 @@ Execute the above code to render the following output.
 
 
 
-![Colors and Border in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img3.png)
+![Colors and Border in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-color-and-border.png)
 
 Circular Gauge with  pointer collection
 {:.caption}
@@ -243,7 +243,7 @@ Execute the above code to render the following output.
 
 
 
-![Appearance in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img4.png)
+![Appearance in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-appearance.png)
 
 Circular Gauge with customized pointer styles
 {:.caption}
@@ -317,7 +317,7 @@ Execute the above code to render the following output.
 
 
 
-![Possition the Pointer in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img5.png)
+![Possition the Pointer in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-positioning-pointer.png)
 
 Circular Gauge with customized pointer type as marker
 {:.caption}
@@ -420,7 +420,7 @@ public partial class CircularGaugeController : Controller
 {% endhighlight  %}
 {% endtabs %}
 
-![Needle Pointer Image in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img6.png)
+![Needle Pointer Image in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-needle-pointer.png)
 
 Semi-circular Gauge with needle pointer as image
 {:.caption}
@@ -484,7 +484,7 @@ public partial class CircularGaugeController : Controller
 }
 {% endhighlight  %}
 {% endtabs %}  
-![Marker Image in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img7.png)
+![Marker Image in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-marker-image.png)
 
 Semi-circular Gauge with marker pointer as image
 {:.caption}
@@ -554,7 +554,7 @@ public partial class CircularGaugeController : Controller
 {% endhighlight %}
 {% endtabs %} 
 
-![Marker Pointer With Image in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img8.png)
+![Marker Pointer With Image in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-marker-pointer-with-image.png)
 
 Semi-circular Gauge with marker pointer with image
 {:.caption}
@@ -630,7 +630,7 @@ PO.Placement(PointerPlacement.Near)
 
 Execute the above code to render the following output.
 
-![Multiple Pointers in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img9.png)
+![Multiple Pointers in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-multiple-pointers.png)
 
 Circular Gauge with multiple pointers
 {:.caption}
@@ -696,7 +696,7 @@ Run the above code to render the output as follows.
 
 
 
-![Pointer Value in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img10.png)
+![Pointer Value in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-pointer-value.png)
 
 Circular Gauge with pointer value text.
 {:.caption}
@@ -773,7 +773,7 @@ Run the above code to render the output as follows.
 
 
 
-![Appearance in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img11.png)
+![Circular Gauge with customized pointer value text in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-customized-pointer.png)
 
 Circular Gauge with customized pointer value text.
 {:.caption}
@@ -835,7 +835,7 @@ Run the above code to render the output as follows.
 
 
 
-![Font Options in ASP.NET MVC Circular Gauge](Pointers_images/Pointers_img12.png)
+![Font Options in ASP.NET MVC Circular Gauge](pointers_images/aspnetmvc-circular-gauge-font-options.png)
 
 Circular Gauge with customized font option in pointer value text.
 {:.caption}
