@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 3D Chart | Chart | ASP.NET MVC | Syncfusion
-description: Learn here about 3d chart in Syncfusion Essential ASP.NET MVC Chart Control, its elements, and more.
+description: Learn here about Essential 3d Chart in Syncfusion Essential ASP.NET MVC Chart Control, its elements, and more.
 platform: ejmvc
 control: Chart
 documentation: ug
