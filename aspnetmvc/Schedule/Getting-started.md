@@ -8,7 +8,7 @@ keywords: ejschedule, schedule, schedule widget, js schedule
 ---
 # Getting Started
 
-Follow the steps pointed out in the [Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) page of the Introduction part to create an MVC application with required assembly references, scripts and stylesheets.
+Follow the steps pointed out in the [Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) page of the Introduction part to create an MVC application with required assembly references, scripts and stylesheets.
 
 Create a new Class in controller page to define the data to be passed to the Scheduler as mentioned below,
 
