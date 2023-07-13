@@ -139,7 +139,7 @@ The following steps explains you the configuration of Rounded corner of the List
 2. Output of the above steps.
 
 
-![Enabling Rounded Corner in ASP.NET MVC ListBox](Appearance-and-Styling_images/aspnetmvc-listbox-enabling-rounded-corner.png)
+![Enabling Rounded Corner in ASP.NET MVC ListBox](appearance-and-styling_images/aspnetmvc-listbox-enabling-rounded-corner.png)
 
 
 
