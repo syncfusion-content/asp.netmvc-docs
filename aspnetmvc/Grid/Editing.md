@@ -1160,7 +1160,7 @@ equalTo</td><td>
 Requires the element to be the same as another.</td></tr>
 </table>
 
-Grid supports all the standard validation methods of jQuery, please refer the jQuery validation documentation [link](https://jqueryvalidation.org/documentation/# "link") for more information.
+Grid supports all the standard validation methods of jQuery, please refer the jQuery validation documentation [link](https://jqueryvalidation.org/documentation/ "link") for more information.
 
 To return custom validation message from server end, please refer this KB [link](https://support.syncfusion.com/kb/article/6608/how-to-return-custom-message-from-controller-when-crud-action-fails).
 
