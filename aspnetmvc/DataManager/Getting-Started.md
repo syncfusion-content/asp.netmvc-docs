@@ -78,7 +78,7 @@ In this application, as you have web service for Northwnd database, you can assi
 
 {% highlight CSHTML %}
 
-@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
+@Html.EJ().DataManager("FlatData").URL("https://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 {% endhighlight  %}
 You can use the ej.Query to generate the report from web service.
@@ -89,7 +89,7 @@ You can bind the DataManager with Grid by defining the ID of DataManager in the 
 
 {% highlight CSHTML %}
 
-@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
+@Html.EJ().DataManager("FlatData").URL("https://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -136,7 +136,7 @@ The select property of ejQuery is used to retrieve the specified columns from th
 
 {% highlight CSHTML %}
 
-@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
+@Html.EJ().DataManager("FlatData").URL("https://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 @(Html.EJ().Grid<MVCdoc.OrdersView>("FlatGrid")
 
@@ -182,7 +182,7 @@ The sortBy property of ejQuery is used to sort the records based on the field an
 
 {% highlight CSHTML %}
 
-@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
+@Html.EJ().DataManager("FlatData").URL("https://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 
 
@@ -231,7 +231,7 @@ The Page property of ejQuery is used to retrieve the records based on the given 
 {% highlight CSHTML %}
 
 
-@Html.EJ().DataManager("FlatData").URL("http://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
+@Html.EJ().DataManager("FlatData").URL("https://mvc.syncfusion.com/Services/Northwnd.svc/Orders/").CrossDomain(true)
 
 
 

@@ -1083,7 +1083,7 @@ The following code example describes the above behavior.
                     col.Field("OrderID").IsPrimaryKey(true).Add();
                     col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource((IEnumerable<object>)ViewBag.DataSource2).Add();
                           //(or)
-                    col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource("http://mvc.syncfusion.com/Services/Northwnd.svc/Employees/").Add();
+                    col.Field("EmployeeID").HeaderText("First Name").ForeignKeyField("EmployeeID").ForeignKeyValue("FirstName").DataSource("https://mvc.syncfusion.com/Services/Northwnd.svc/Employees/").Add();
                     col.Field("CustomerID").Add();
                     col.Field("Freight").Add();
                     col.Field("ShipCity").Add();
