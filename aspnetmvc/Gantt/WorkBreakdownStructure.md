@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Work Breakdown Structure | Gantt | ASP.NET MVC | Syncfusion
-description: Work Breakdown Structure
+description: Learn here about Work Breakdown Structure in Syncfusion Essential ASP.NET MVC Gantt Control, its elements, and more.
 platform: ejmvc
 control: Gantt
 documentation: ug
@@ -24,6 +24,6 @@ Work Breakdown Structure(WBS) in Gantt represents the entire project activities 
 
 The below screenshot depicts the output of above code example.
 
-![](WorkBreakdownStructure_images/wbs_img1.png)
+![Work Breakdown Structure in ASP.NET MVC Gantt](workbreakdownstructure_images/aspnetmvc-gantt-work-breakdown-structure.png)
 
 [Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for WBS in Gantt.

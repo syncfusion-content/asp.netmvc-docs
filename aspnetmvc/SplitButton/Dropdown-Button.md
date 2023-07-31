@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dropdown Button | SplitButton | ASP.NET MVC | Syncfusion
-description: dropdown button
+description: Learn here about Dropdown Button in Syncfusion Essential ASP.NET MVC SplitButton Control, its elements, and more.
 platform: ejmvc
 control: SplitButton
 documentation: ug
@@ -41,7 +41,7 @@ The following steps explain how to change the Split Button as Dropdown Button.
 
 2. Execute the above code to render the following output.
 
-![](Dropdown-Button_images/Dropdown-Button_img1.png)
+![Dropdown Button in ASP.NET MVC SplitButton](dropdown-button_images/aspnetmvc-splitbutton-dropdown.png)
 
 
 

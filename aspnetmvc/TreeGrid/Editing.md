@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
-description: editing
+description: Learn here about editing in Syncfusion Essential ASP.NET MVC TreeGrid Control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug
@@ -29,12 +29,12 @@ The below code example shows how to enable add option in TreeGrid.
 
 {% endhighlight %}
 
-![](Editing_images/addnewRowBefore.png)
+![Before Add new record in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-add-new-record-before.png)
 
 The above screenshot shows before add a new record in TreeGrid.
 {:.caption}
 
-![](Editing_images/addnewRowAfter.png)
+![After Add new record in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-add-new-record-after.png)
 
 The above screenshot shows after add a new record in TreeGrid.
 {:.caption}
@@ -64,7 +64,7 @@ The below code example shows how to set row position for new record add in TreeG
 
 {% endhighlight %}
 
-![](Editing_images/addnewRowChild.png)
+![Add row possition in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-add-new-row-child.png)
 
 The above screenshot shows new record added in row position of `Child`.
 {:.caption}
@@ -133,7 +133,7 @@ The following code example shows you how to enable the `CellEditing` in TreeG
 
 The output of TreeGrid with `CellEditing` is as follows.
 
-![](Editing_images/cellEditing.png)
+![Cell Editing in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-cell-editing.png)
 
 ### Prevent cell editing
 
@@ -191,7 +191,7 @@ The following code example shows you how to enable `RowEditing` in TreeGrid cont
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/rowEditing.png)
+![Row Editting in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-row-editing.png)
 
 ### Dialog Editing
 
@@ -214,7 +214,7 @@ The following code example shows you how to enable the `DialogEditing` in Tre
 
 The output of the TreeGrid with `DialogEditing` is as follows.
 
-![](Editing_images/dialogEditing.png)
+![Dialog Editing in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-dialog-editing.png)
 
 The add and edit dialogs can be opened on custom actions instead of toolbar icons using the methods [`showAddDialog`](https://help.syncfusion.com/api/js/ejtreegrid#methods:showadddialog "showAddDialog") and [`showEditDialog`](https://help.syncfusion.com/api/js/ejtreegrid#methods:showeditdialog "showEditDialog").
 
@@ -273,7 +273,7 @@ The batch editing support in the tree grid is used to save all added, edited, an
 
 The output of a tree grid with `BatchEditing` is as follows.
 
-![](Editing_images/BatchEdit_img1.png)
+![Batch Editing in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-batch-editing-output.png)
 
 
 In batch editing, the edit mode can be changed to **Cell** or **Row** or **Dialog** with the `BatchEditSettings.EditMode` property. The following code snippet shows how to set the editMode to row in the `BatchEditSettings` property.
@@ -291,7 +291,7 @@ In batch editing, the edit mode can be changed to **Cell** or **Row** or **Dialo
 
 The output of a tree grid with `BatchEditSettings` and `EditMode` set as `Row` is as follows.
 
-![](Editing_images/BatchEdit_img2.png)
+![Batch Editing Settings in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-batch-editing-settings.png)
 
 
 N> After modifying all changes in the tree grid, click the save button in the toolbar. The `ActionComplete` event will be triggered with updated records in the `batchChanges` argument with `requestType` argument as `batchSave`. Using this event, you can update all the modified records to the database.
@@ -328,7 +328,7 @@ The following code example describes the above behavior.
 
 {% endhighlight %}
 
-![](Editing_images/editType.png)
+![Edit types in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-batch-edit-type.png)
 
 The above screenshot shows TreeGrid with different Edit type.
 {:.caption}
@@ -387,7 +387,7 @@ public class TreeGridController : Controller
 {% endhighlight %}
 {% endtabs %}
 
-![](Editing_images/dropdownEdit.png)
+![Dropdown Edit in in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-dropdown-edit.png)
 
 The above screenshot shows drop down edit type in TreeGrid.
 {:.caption}
@@ -456,7 +456,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![](Editing_images/dialogTemplate.png)
+![Dialog template in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-dialog-template.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/dialogediting) here to view the online demo sample for Dialog Template.
 
@@ -553,7 +553,7 @@ function read(args)
 
 The output of the TreeGrid width EditTemplate as follows
 
-![](Editing_images/editTemplate.png)
+![Cell Edit Template in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-edit-template.png)
 
 The updated record values are maintained in collection in TreeGrid, and the user can retrieve the updated record collection at any time by using the [`getUpdatedRecords`](https://help.syncfusion.com/api/js/ejtreegrid#methods:getupdatedrecords "getUpdatedRecords") method.
 
@@ -577,12 +577,12 @@ The below code example shows how to enable delete option in TreeGrid.
 
 {% endhighlight %}
 
-![](Editing_images/beforeDelete.png)
+![Delete Record in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-before-delete-record.png)
 
 The above screenshot shows before delete a record in TreeGrid.
 {:.caption}
 
-![](Editing_images/afterDelete.png)
+![Before Delete Record in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-after-delete-record.png)
 
 The above screenshot shows after delete a record in TreeGrid.
 {:.caption}
@@ -606,6 +606,6 @@ The following code snippet explains how to enable delete confirmation message in
 
 {% endhighlight %}
 
-![](Editing_images/deleteConfirmation.png)
+![Delete Confirmation Message in ASP.NET MVC TreGrid](editing_images/aspnetmvc-treegrid-delete-confirmation.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/treegrid/treegridediting) here to view the online demo sample for Editing.
