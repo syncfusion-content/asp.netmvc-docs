@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 3D Chart | Chart | ASP.NET MVC | Syncfusion
-description: 3d chart
+description: Learn here about Essential 3d Chart in Syncfusion Essential ASP.NET MVC Chart Control, its elements, and more.
 platform: ejmvc
 control: Chart
 documentation: ug
@@ -30,7 +30,7 @@ For rendering a 3D Column Chart, specify the series **Type** as **Column** in th
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img1.png)
+![3D Column Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-column-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/column3d) here to view the Column 3DChart online demo sample.
@@ -54,7 +54,7 @@ You can create a 3D Bar Chart by setting the series **Type** as **Bar** in the c
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img2.png)
+![3D Bart Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-bart-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/bar3d) here to view the Bar 3DChart online demo sample.
@@ -81,7 +81,7 @@ You can create a 3D Stacked Column Chart by setting the series **Type** as **Sta
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img3.png)
+![3D Stacked Column Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-stacked-column-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/stackingcolumn3d) here to view the Stacked Column 3DChart online demo sample.
@@ -108,7 +108,7 @@ You can create a 3D Stacked Column Chart by setting the series **Type** as **Sta
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img4.png)
+![3D 100% Stacked Column Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-100%-stacked-column-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/stackingcolumn1003d) here to view the 100% Stacked Column 3DChart online demo sample.
@@ -135,7 +135,7 @@ To create Stacking Bar 3DChart, set the series **Type** as **StackingBar** in th
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img5.png)
+![3D Stacked Bar Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-bar-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/stackingbar3d) here to view the Stacked Bar 3DChart online demo sample.
@@ -162,7 +162,7 @@ You can create 100% Stacking Bar 3DChart by setting the series **Type** as **Sta
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img6.png)
+![3D 100% Stacked Bar Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-stacked-bar-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/stackingbar1003d) here to view the 100% Stacked Bar 3DChart online demo sample.
@@ -187,7 +187,7 @@ To render the Pie Chart in 3D view, enable the **Enbel3D** option in the chart a
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img7.png)
+![3D Pie Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-pie-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/pie3d) here to view the Pie 3DChart online demo sample.
@@ -212,7 +212,7 @@ To render the Doughnut Chart in 3D view, enable the **Enbel3D** option in the ch
 
 {% endhighlight %}
 
-![](3D-Chart_images/3D-Chart_img8.png)
+![3D Doughnut Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-3d-doughnut-chart.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/doughnut3d) here to view the Doughnut 3DChart online demo sample.
@@ -237,7 +237,7 @@ To render the EjChart in 3D view, set the **Enable3D** option as **true** in the
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img9.png)
+![3D View in ASP.NET MVC Chart](3d-chart_images/aspnetmvc-chart-3d-view.png)
 
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/column3d) here to view the 3DChart online demo sample.
@@ -261,7 +261,7 @@ To render the EjChart in 3D view, set the **Enable3D** option as **true** in the
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img10.png)
+![Placing Bar in ASP.NET MVC Chart](3d-chart_images/aspnetmvc-chart-3d-placing-bar.png)
 
 
 ### Setting Axis Wall Size
@@ -282,7 +282,7 @@ In 3DChart, Cartesian axes lines are represented as walls and it defines the wid
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img11.png)
+![Setting Axis Wall Size in ASP.NET MVC Chart](3d-chart_images/aspnetmvc-chart-3d-setting-axis-wall-size.png)
 
 
 ### 3D Depth
@@ -303,7 +303,7 @@ By using the **Depth** property, you can view the 3D Chart from the front view o
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img12.png)
+![3D Depth in ASP.NET MVC Chart](3d-chart_images/aspnetmvc-chart-3d-depth.png)
 
 
 ### Rotating and Tilting 3D Chart
@@ -328,7 +328,7 @@ To spin the 3D Chart on mouse dragging, enable **EnableRotation** option in the 
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img13.png)
+![Rotating and Tilting 3D Chart in ASP.NET MVC](3d-chart_images/aspnetmvc-chart-3d-rotating-and-tilting.png)
 
 
 ### PerspectiveAngle	
@@ -349,4 +349,4 @@ The **PerspectiveAngle** specifies the appearance of the height, width, depth an
 {% endhighlight %}
 
 
-![](3D-Chart_images/3D-Chart_img14.png)
+![Perspective Angle in ASP.NET MVC Chart](3d-chart_images/aspnetmvc-chart-3d-perspective-angle.png)
