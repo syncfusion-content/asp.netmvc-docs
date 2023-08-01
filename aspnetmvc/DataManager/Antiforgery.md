@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Antiforgery | DataManager  | ASP.NET MVC | Syncfusion
-description: Antiforgery
+title: Antiforgery in ASP.NET MVC DataManager | Syncfusion
+description: Learn here about antiforgery in Syncfusion ASP.NET MVC DataManager control, its elements, and more.
 platform:  ejmvc
 control: DataManager
 documentation: ug

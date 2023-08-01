@@ -1,7 +1,7 @@
 ---
 layout: post
-title: State Persistence | Accordion  | ASP.NET MVC | Syncfusion
-description: state persistence
+title: State Persistence in ASP.NET MVC Accordion | Syncfusion
+description: Learn here about state persistence in Syncfusion ASP.NET MVC Accordion control, its elements, and more.
 platform: ejmvc
 control: Accordion 
 documentation: ug

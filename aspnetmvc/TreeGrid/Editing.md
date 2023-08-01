@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing | TreeGrid | ASP.NET MVC | Syncfusion
-description: editing
+title: Editing in ASP.NET MVC TreeGrid | Syncfusion
+description: editingLearn here about editing in Syncfusion ASP.NET MVC TreeGrid control, its elements, and more.
 platform: ejmvc
 control: TreeGrid
 documentation: ug

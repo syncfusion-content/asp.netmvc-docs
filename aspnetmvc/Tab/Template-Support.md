@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Template Support | Tab  | ASP.NET MVC | Syncfusion
-description: template support
+title: Template Support in ASP.NET MVC Tab | Syncfusion
+description: Learn here about template support with Syncfusion ASP.NET MVC Tab control, its elements, and more.
 platform: ejmvc
 control: Tab 
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | Tab  | ASP.NET MVC | Syncfusion
-description: getting started 
+title: Getting Started in ASP.NET MVC Tab | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC Tab control, its elements, and more. 
 platform: ejmvc
 control: Tab 
 documentation: ug

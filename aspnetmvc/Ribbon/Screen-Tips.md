@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Screen Tips | Ribbon | ASP.NET MVC | Syncfusion
-description: Screen Tips
+title: Screen Tips in ASP.NET MVC Ribbon | Syncfusion
+description: Learn here about screen tips with Syncfusion ASP.NET MVC Ribbon control, its elements, and more.
 platform: ejmvc
 control: Ribbon
 documentation: ug

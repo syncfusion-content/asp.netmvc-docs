@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multi-level Labels | PivotChart | ASP.NET MVC | Syncfusion
-description: multilevellabels
+title: Multi-level Labels in ASP.NET MVC PivotChart | Syncfusion
+description: Learn here about multilevellabels with Syncfusion ASP.NET MVC PivotChart control, its elements, and more.
 platform: ejmvc
 control: PivotChart
 documentation: ug
