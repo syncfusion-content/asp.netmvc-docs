@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Getting started in ASP.NET MVC SpellCheck | Syncfusion
-description: Learn here about getting started with Syncfusion ASP.NET MVC SpellCkeck control, its elements, and more.
+title: Getting started in ASP.NET MVC SpellCheck | Syncfusion
+description: Learn here about getting started with Syncfusion ASP.NET MVC SpellCheck control, its elements, and more.
 platform: ejmvc
 control: SpellCheck 
 documentation: ug

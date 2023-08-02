@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IntelliSense in ASP.NET MVC | Syncfusion
-description: Learn here about IntelliSense  with Syncfusion ASP.NET MVC General control, its elements, and more.
+description: Learn here about intellisense with Syncfusion Essential ASP.NET MVC General control, its elements, and more.
 platform: ejmvc
 control: Common 
 documentation: ug

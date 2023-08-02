@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance and Styling in ASP.NET MVC AutoComplete | Syncfusion
-description: Learn here about appearance and styling in Syncfusion ASP.NET MVC AutoComplete, its elements and more
+description: Learn here about appearance and styling in Syncfusion ASP.NET MVC AutoComplete, its elements and more.
 platform: ejmvc
 control: AutoComplete
 documentation: ug
