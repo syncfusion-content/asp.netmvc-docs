@@ -223,7 +223,7 @@ The following output is displayed as a result of the above code example.
 
 See Also
 
-For more information on using LINQ to SQL please refer to this [link]( http://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
+For more information on using LINQ to SQL please refer to this [link](https://weblogs.asp.net/scottgu/using-linq-to-sql-part-1)
 
 
 ##  ITypedList Binding 
