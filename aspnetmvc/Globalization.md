@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization | ASP.NET MVC | Syncfusion
-description: Globalization
+description: Learn here about globalization in Syncfusion Essential ASP.NET MVC platform, its elements, and more.
 platform: ejmvc
 control: Common 
 documentation: ug
