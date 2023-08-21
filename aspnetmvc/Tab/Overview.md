@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview | Tab  | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview of ASP.NET MVC Tab | Syncfusion
+description: Learn here about overview with Syncfusion Essential ASP.NET MVC Tab control, its elements, and more.
 platform: ejmvc
 control: Tab 
 documentation: ug
