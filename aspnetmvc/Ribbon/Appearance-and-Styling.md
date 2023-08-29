@@ -85,9 +85,9 @@ Execute the above code example to render the following output.
 
 ## Themes
 
-Ribbon control’s style and appearance are controlled based on CSS classes and it has support of 12 default themes. You can check List of themes available for JavaScript’s control which is mentioned in [`this`](http://help.syncfusion.com/js/theming-in-essential-javascript-components) page.
+Ribbon control’s style and appearance are controlled based on CSS classes and it has support of 12 default themes. You can check List of themes available for JavaScript’s control which is mentioned in [`this`](https://help.syncfusion.com/js/theming-in-essential-javascript-components) page.
 
-To modify Ribbon appearance, you need to override default CSS of Ribbon. Please find the list of CSS classes and its corresponding section in Ribbon. Also you have an option to create your own custom theme for all ASP.NET MVC controls using our [Theme Studio](http://js.syncfusion.com/themestudio/# "Theme Studio").
+To modify Ribbon appearance, you need to override default CSS of Ribbon. Please find the list of CSS classes and its corresponding section in Ribbon. Also you have an option to create your own custom theme for all ASP.NET MVC controls using our [Theme Studio](https://js.syncfusion.com/themestudio/ "Theme Studio").
 
 To apply styles refer to two files namely
 
