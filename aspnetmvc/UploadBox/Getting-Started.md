@@ -25,7 +25,7 @@ In the above screenshot, you can upload a resume. It allows .png and .docx file 
 
 ASP.NET MVC UploadBox basically renders built-in features like upload multiple files, and deletes the files from Uploadbox. You can know the status of the file whether it is complete or fail and also can retry the upload if it failed. You can easily create the UploadBox widget by using the following steps.
 
-You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/uploadbox/getting-started) Documentation.
+You can create an MVC project and add necessary assemblies, styles, and scripts with the help of the given [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/uploadbox/getting-started) Documentation.
 
 ![](Getting-Started_images/Getting-Started_img4.png)
 
@@ -293,7 +293,7 @@ The following screenshot displays an UploadBox control with file details of the 
 
 ![](Getting-Started_images/Getting-Started_img6.png)
 
-[Sample link](http://www.syncfusion.com/downloads/support/directtrac/general/7z/UploadboxWithUploadDetails-502932105) 
+[Sample link](https://www.syncfusion.com/downloads/support/directtrac/general/7z/UploadboxWithUploadDetails-502932105) 
 
 
 
