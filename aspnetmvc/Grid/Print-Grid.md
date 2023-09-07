@@ -84,7 +84,7 @@ namespace SyncfusionMvcApplication1.Controllers
 
 Some of the print options are not configurable through JavaScript code. You need to customize layout, paper size and margins options through browser's page setup dialog. Please find the following guidelines link to browser page setup.
 
-* [Chrome](https://support.google.com/chrome/answer/1379552?hl=en)
+* [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=638296772561182637-646529110&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
 * [Safari](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
 * [IE](https://www.helpteaching.com/help/print/index.htm) 
