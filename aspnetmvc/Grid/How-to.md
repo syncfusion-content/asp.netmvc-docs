@@ -1687,7 +1687,7 @@ The following code example shows how to save the exported files in a target loca
 
 See Also
 
-For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
+For more information on enable unobtrusive please refer this [link](https://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
 
 ## Hierarchy grid with different foreignKeyField in parent and child table
 

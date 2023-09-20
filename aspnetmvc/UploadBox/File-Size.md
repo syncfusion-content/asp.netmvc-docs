@@ -40,7 +40,7 @@ In the UploadBox control, you can browse files with the size going up to gigabyt
 
 To know about file action, we need to refer link:
 
-    <http://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
+    <https://help.syncfusion.com/aspnetmvc/uploadbox/file-size>
 
 The following screenshot displays UploadBox control with customized file size.
 
