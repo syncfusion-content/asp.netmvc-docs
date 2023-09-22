@@ -81,8 +81,8 @@ For this purpose, the input element with hidden value field and name attribute i
       }
 {% endhighlight %}
 
-![](Antiforgery_images/Antiforgery.png)
+![Antiforgery Token in ASP.NET MVC](Antiforgery_images/Antiforgery.png)
 
 In the header, You can find the anti-forgery token value
 
-![](Antiforgery_images/Antiforgery_header.png)
+![Antiforgery Token Value in ASP.NET MVC](Antiforgery_images/Antiforgery_header.png)
