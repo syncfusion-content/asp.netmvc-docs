@@ -10,7 +10,7 @@ documentation: ug
 
 ## Customizing template with range selection between two DatePicker. 
 
-You can customize the date field to emphasize the particular dates in EJMVC DatePicker calendar with help of [SpecialDates](https://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) and set the date range using [MinDate](http://help.syncfusion.com/js/api/ejdatepicker#members:mindate) and [MaxDate](http://help.syncfusion.com/js/api/ejdatepicker#members:maxdate) property. 
+You can customize the date field to emphasize the particular dates in EJMVC DatePicker calendar with help of [SpecialDates](https://help.syncfusion.com/js/api/ejdatepicker#members:specialdates) and set the date range using [MinDate](https://help.syncfusion.com/api/js/ejdatepicker#members:mindate) and [MaxDate](https://help.syncfusion.com/api/js/ejdatepicker#members:maxdate) property. 
 
 ## Validating the date value in server side
 	
