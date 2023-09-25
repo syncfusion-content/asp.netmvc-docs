@@ -47,7 +47,7 @@ The following code example is used to render the Captcha with Auto-Validation su
 
 2. The following screenshot illustrates the Captcha with Auto-Validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img2.png)
+![Auto Validation in ASP.NET MVC Captcha](Enabling-Validation_images/Enabling-Validation_img2.png)
 
 Captcha with auto validation support
 {:.caption}
@@ -88,7 +88,7 @@ The following code example is used to render the Captcha with manual validation.
 
 2. The following screenshot illustrates the Captcha with manual validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img3.png)
+![Validation by Method in ASP.NET MVC Captcha](Enabling-Validation_images/Enabling-Validation_img3.png)
 
 Captcha validation by method
 {:.caption}
@@ -122,7 +122,7 @@ The following code example is used to render the Captcha with Case sensitive val
 
 2. The following screenshot illustrates the Captcha with Case sensitive validation support. 
 
-![](Enabling-Validation_images/Enabling-Validation_img4.png)
+![Case Sensitive Validation in ASP.NET MVC Captcha](Enabling-Validation_images/Enabling-Validation_img4.png)
 
 Captcha with Case sensitive validation support
 {:.caption}

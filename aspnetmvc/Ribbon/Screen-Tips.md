@@ -8,7 +8,7 @@ documentation: ug
 keywords: screen tips,ribbon screen tips
 ---
 
-# Screen Tips 
+# Screen Tips in ASP.NET MVC Ribbon
 
 ScreenTip/Tooltip is used to reduce the controls related Help that are needed to the end user to do control related actions.
 
@@ -55,7 +55,7 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
 
 {% endhighlight %}
 
-![](Screen-Tips_images/Screen-Tips_img1.png)
+![HTML Tooltip in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img1.png)
 
 ## Custom Tooltip
 
@@ -127,7 +127,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
 
 {% endhighlight %}
 
-![](Screen-Tips_images/Screen-Tips_img2.png)
+![Custom Tooltips for Groups in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img2.png)
 
 ### For Gallery
 
@@ -264,4 +264,4 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
 
 {% endhighlight %}
 
-![](Screen-Tips_images/Screen-Tips_img3.png)
+![Custom Tooltips for Gallery in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img3.png)

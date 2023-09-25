@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in DropDownList control for Syncfusion ASP.NET MVC
-description: Describes about the data binding in DropDownList control for Syncfusion ASP.NET MVC
+description: Learn here about data binding in Syncfusion Essential ASP.NET MVC DropDown List Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
 documentation: ug
@@ -9,7 +9,7 @@ keywords: DropDownList, dropdown, data binding, Local data, Remote data
 
 ---
 
-# Data Binding
+# Data Binding in ASP.NET MVC DropDownList
 
 To populate data in the DropDownList control, define DataSource property with associated fields. You can bind any list data and other remote services in the DropDownList.
 
@@ -239,7 +239,7 @@ N> The columns are bounded automatically when the fields are specified with the 
 {% endtabs %}
 
 
-![](DataBinding_images/DataBinding_img1.jpeg)
+![Local Data in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img1.jpeg)
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/> 
 
@@ -521,7 +521,7 @@ To create LINQ to SQL classes
 •	In Server Explorer, drag the database table into the Object Relational Designer window.
 •	The table and its columns are represented as an entity in the designer window.
 
-![](DataBinding_images/LinqtoSql.jpg)
+![LINQ to SQL Data Binding in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql.jpg)
 
 In code behind, fetch the data from classes and stored it to the ViewBag as follows
 
@@ -537,7 +537,7 @@ In code behind, fetch the data from classes and stored it to the ViewBag as foll
     
 {% endhighlight %}
     
-![](DataBinding_images/LinqtoSql2.jpg)
+![ViewBag in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql2.jpg)
 
 ## Remote data 
 
@@ -568,7 +568,7 @@ For further details about OData service please refer [the link](https://www.odat
 {% endhighlight %}
            
            
-![](DataBinding_images/DataBinding_img2.jpeg)
+![OData Version 4 in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img2.jpeg)
 
 N> Events associated with remote data bind is listed [here](https://help.syncfusion.com/js/api/ejdropdownlist#events). 
 
@@ -599,7 +599,7 @@ Using WebApiAdaptor, you can bind WebApi service’s data to DropDownList. The d
 
 {% endhighlight %}
 
-![](DataBinding_images/DataBinding_img3.jpeg)
+![WebAPI in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img3.jpeg)
 
 ## Virtual Scrolling 
 
