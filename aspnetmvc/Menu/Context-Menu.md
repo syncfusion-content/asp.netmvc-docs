@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Context Menu | Menu | ASP.NET MVC | Syncfusion
-description: Learn here about context menu in Syncfusion Essential ASP.NET MVC Menu Control, its elements, and more.
+title: Context Menu in ASP.NET MVC Menu | Syncfusion
+description: Learn here about context menu support in Syncfusion Essential ASP.NET MVC Menu Control, its elements, and more.
 platform: ejmvc
 control: Menu
 documentation: ug

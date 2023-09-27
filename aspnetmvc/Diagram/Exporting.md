@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Export Diagram content | ASP.NET MVC Diagram | Syncfusion
+title: Export Diagram content in ASP.NET MVC Diagram | Syncfusion
 description: Learn here about how to export the Diagram as image/svg in Syncfusion Essential ASP.NET MVC Diagram Control, its elements, and more.
 platform: ejmvc
 control: Diagram
