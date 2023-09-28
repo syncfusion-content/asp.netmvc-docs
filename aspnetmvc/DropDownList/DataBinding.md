@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data binding in DropDownList control for Syncfusion ASP.NET MVC
+title: Data binding in  ASP.NET MVC DropDownList Control | Syncfusion
 description: Learn here about data binding in Syncfusion Essential ASP.NET MVC DropDown List Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
@@ -239,7 +239,7 @@ N> The columns are bounded automatically when the fields are specified with the 
 {% endtabs %}
 
 
-![Local Data in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img1.jpeg)
+![Local data in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img1.jpeg)
 
 N> Images for this sample are available in (installed location)\Syncfusion\Essential Studio\{{ site.releaseversion }}\JavaScript\samples\web\themes\images<br/> 
 
@@ -521,7 +521,7 @@ To create LINQ to SQL classes
 •	In Server Explorer, drag the database table into the Object Relational Designer window.
 •	The table and its columns are represented as an entity in the designer window.
 
-![LINQ to SQL Data Binding in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql.jpg)
+![LINQ to SQL data binding in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql.jpg)
 
 In code behind, fetch the data from classes and stored it to the ViewBag as follows
 
@@ -568,7 +568,7 @@ For further details about OData service please refer [the link](https://www.odat
 {% endhighlight %}
            
            
-![OData Version 4 in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img2.jpeg)
+![OData version 4 in ASP.NET MVC DropDownList](DataBinding_images/DataBinding_img2.jpeg)
 
 N> Events associated with remote data bind is listed [here](https://help.syncfusion.com/js/api/ejdropdownlist#events). 
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers and data labels in Essential ASP.NET MVC Chart | Syncfusion
+title: Markers and data labels in ASP.NET MVC Chart Control | Syncfusion
 description: Learn how to add markers and data point labels to a Chart series in Syncfusion Essential ASP.NET MVC Chart Control, its elements, and more.
 platform: ejmvc
 control: Chart
 documentation: ug
 ---
 
-# Data Markers in Essential ASP.NET MVC Chart
+# Data Markers in ASP.NET MVC Chart
 
 Data markers are used to provide information about the data point to the user. You can add a shape and label to adorn each data point.
 
@@ -46,7 +46,7 @@ The following code example explains on how to enable series marker and add shape
 
 {% endhighlight %}
 
-![Add Shapes in ASP.NET MVC Charts](Data-Markers_images/Data-Markers_img1.png)
+![Add shapes in ASP.NET MVC Charts](Data-Markers_images/Data-Markers_img1.png)
 
 
 ## Add image as marker
@@ -169,7 +169,7 @@ The following code example shows how to add background shapes and set template t
 
 {% endhighlight %}
 
-![Background Shapes in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img4.png)
+![Background shapes in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img4.png)
 
 
 The appearance of the labels can be customized by using the *Font* and *Offset* options. The Offset option is used to move the labels vertically. Also, labels can be rotated by using the *Rotate* option.
@@ -277,7 +277,7 @@ The following code example shows how to set the LabelPosition,
 
 {% endhighlight %} 
 
-![Set LabelPosition in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img7.png)
+![Set labelPosition in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img7.png)
 
 
 The following screenshot displays the labels when the LabelPosition is set as *Inside* position.
@@ -501,7 +501,7 @@ When the data is bound to the series by using the DataSource option, you can cus
 
 {% endhighlight %}
 
-![Customizing the points in the SeriesRendering in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img10.png)
+![Customizing the points in the seriesRendering in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img10.png)
 
 
 ## Connect Line
@@ -536,7 +536,7 @@ This feature is used to connect label and data point by using a line. It can be 
 
 {% endhighlight %}
 
-![Connect Line in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img11.png)
+![Connect line in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img11.png)
 
 
 ## Smart labels

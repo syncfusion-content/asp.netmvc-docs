@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pick the type of node in ASP.NET MVC Diagram | Syncfusion
+title: Pick the type of node in ASP.NET MVC Diagram Control | Syncfusion
 description: Learn here about how to choose the type of node with respect to the requirement in Syncfusion Essential ASP.NET MVC Diagram Control, its elements, and more.
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Pick the type of node in ASP.NET MVC Diagram
+# Shapes in ASP.NET MVC Diagram
 
 Diagram provides support to add different kind of nodes. They are as follows.
 
@@ -171,7 +171,7 @@ The following code example illustrates how to create a basic shape.
 
 {% endhighlight %}
 
-![Basic Shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img1.png)
+![Basic shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img1.png)
 
 
 N> When the `Shape` is not set for a basic shape, it is considered a "rectangle".
@@ -206,7 +206,7 @@ Path node is a commonly used basic shape that allows visually to represent the g
 
 The list of basic shapes are as follows.
 
-![List of Basic Shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img2.png)
+![List of basic shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img2.png)
 
 ## Flow Shapes
 
@@ -228,11 +228,11 @@ The flow shapes are used to represent the process flow. It is used for analyzing
 
 {% endhighlight %}
 
-![Flow Shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img3.png)
+![Flow shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img3.png)
 
 The list of flow shapes are as follows.
 
-![List of Flow Shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img4.png)
+![List of flow shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img4.png)
 
 ## BPMN Shapes
 
@@ -258,7 +258,7 @@ BPMN shapes are used to represent the internal business procedure in a graphical
 
 {% endhighlight %}
 
-![BPMN Shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img5.png)
+![BPMN shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img5.png)
 
 N> The default value for the property `Shape` is "Event".
 
@@ -502,7 +502,7 @@ Loop is a task that is internally being looped. The `Loop` property of task allo
 
 {% endhighlight %}
 
-![Loop in in ASP.NET MVC Diagram](Shapes_images/Shapes_img43.png)
+![Loop in ASP.NET MVC Diagram](Shapes_images/Shapes_img43.png)
 
 The following table contains various types of BPMN loops.
 
@@ -658,7 +658,7 @@ A data object represents information flowing through the process, such as data p
 
 {% endhighlight %}
 
-![Data in in ASP.NET MVC Diagram](Shapes_images/Shapes_img56.png)
+![Data in ASP.NET MVC Diagram](Shapes_images/Shapes_img56.png)
 
 ### Datasource
 

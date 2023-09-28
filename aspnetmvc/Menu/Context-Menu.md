@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Context Menu in ASP.NET MVC Menu | Syncfusion
+title: Context Menu in ASP.NET MVC Menu Control | Syncfusion
 description: Learn here about context menu support in Syncfusion Essential ASP.NET MVC Menu Control, its elements, and more.
 platform: ejmvc
 control: Menu
@@ -102,7 +102,7 @@ In the following example, a context menu for the division containing text is cre
 
 The following screen shot displays the output of the above code.
 
-![Context Menu in ASP.NET MVC Menu](Context-Menu_images/Context-Menu_img1.png)
+![Context menu in ASP.NET MVC Menu](Context-Menu_images/Context-Menu_img1.png)
 
 Context Menu
 {:.caption}

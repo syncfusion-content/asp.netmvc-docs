@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Screen Tips in ASP.NET MVC Ribbon | Syncfusion
-description: Learn here about screen tips with Syncfusion Essential ASP.NET MVC Ribbon control, its elements, and more.
+title: Screen Tips in ASP.NET MVC Ribbon Control | Syncfusion
+description: Learn here about screen tips with Syncfusion Essential ASP.NET MVC Ribbon Control, its elements, and more.
 platform: ejmvc
 control: Ribbon
 documentation: ug
@@ -55,7 +55,7 @@ Standard `html tooltip` can be set using `ToolTip` property of each group item.
 
 {% endhighlight %}
 
-![HTML Tooltip in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img1.png)
+![HTML tooltip in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img1.png)
 
 ## Custom Tooltip
 
@@ -127,7 +127,7 @@ Custom Tooltip is used to set detailed help to the user about the controls. You 
 
 {% endhighlight %}
 
-![Custom Tooltips for Groups in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img2.png)
+![Custom tooltips for groups in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img2.png)
 
 ### For Gallery
 
@@ -264,4 +264,4 @@ N> Custom gallery item `Menu` is not supported to Custom tooltip.
 
 {% endhighlight %}
 
-![Custom Tooltips for Gallery in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img3.png)
+![Custom tooltips for gallery in ASP.NET MVC Ribbon](Screen-Tips_images/Screen-Tips_img3.png)

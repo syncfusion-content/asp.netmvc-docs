@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC DropDownList control | Syncfusion
+title: Getting Started with ASP.NET MVC DropDownList Control | Syncfusion
 description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC DropdownList Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
