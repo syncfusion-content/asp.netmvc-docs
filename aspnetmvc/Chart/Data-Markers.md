@@ -46,7 +46,7 @@ The following code example explains on how to enable series marker and add shape
 
 {% endhighlight %}
 
-![Add shapes in ASP.NET MVC Charts](Data-Markers_images/Data-Markers_img1.png)
+![Add shapes in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img1.png)
 
 
 ## Add image as marker
