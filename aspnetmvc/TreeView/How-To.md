@@ -11,7 +11,7 @@ keywords: TreeView,  Syncfusion, EJ MVC TreeView, UG Document, How To
 
 ## Update the modified data from tree to database.
 
-TreeView allows us to get the updated tree data after performing such operation like node editing, drag and drop, add and remove node. Using [getTreeData](http://help.syncfusion.com/js/api/ejtreeview#methods:gettreedata) method you can get the updated tree data.
+TreeView allows us to get the updated tree data after performing such operation like node editing, drag and drop, add and remove node. Using [getTreeData](https://help.syncfusion.com/api/js/ejtreeview#methods:gettreedata) method you can get the updated tree data.
 
 Refer the following code block to know how to get updated data from TreeView.
 
@@ -271,7 +271,7 @@ The output for the context menu for TreeView control is as follows.
 
 ## Sorted data using refresh method
 
-TreeView allows you to refresh the entire tree data by using [refresh](http://help.syncfusion.com/js/api/ejtreeview#methods:refresh) method. Refer the below code block to know how to sort entire tree data using refresh method.
+TreeView allows you to refresh the entire tree data by using [refresh](https://help.syncfusion.com/api/js/ejtreeview#methods:refresh) method. Refer the below code block to know how to sort entire tree data using refresh method.
 
 In the controller page, create a data list that contains the details about tree nodes.
     
@@ -726,7 +726,7 @@ TreeView allows us to bind and update tree data in mapped data component while a
     
 ## Set tooltip for TreeView nodes
 
-TreeView allows you to set tooltip option to TreeView nodes using [fields.linkAttribute](http://help.syncfusion.com/js/api/ejtreeview#members:fields-linkattribute) property of TreeView. Refer the below code block to know how to set tooltip for TreeView nodes.
+TreeView allows you to set tooltip option to TreeView nodes using [fields.linkAttribute](https://help.syncfusion.com/api/js/ejtreeview#members:fields-linkattribute) property of TreeView. Refer the below code block to know how to set tooltip for TreeView nodes.
 
 In the model page, add a class and define the properties as shown below.
     
