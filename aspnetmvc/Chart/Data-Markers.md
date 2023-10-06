@@ -235,7 +235,7 @@ The following code example shows how to set textPosition to display data label i
 
 {% endhighlight %}
 
-![Set textPosition in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img6.png)
+![Set text position in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img6.png)
 
 The label can be positioned inside or outside the perimeter of the series by using the **LabelPosition** option for the chart types such as Pie and Doughnut, .
 
@@ -277,17 +277,17 @@ The following code example shows how to set the LabelPosition,
 
 {% endhighlight %} 
 
-![Set labelPosition in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img7.png)
+![Set label position in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img7.png)
 
 
 The following screenshot displays the labels when the LabelPosition is set as *Inside* position.
 
-![LabelPosition set as inside in ASP.NET MVC Chart](/js/Chart/Data-Markers_images/Data-Markers_img8.png)
+![Label position set as inside in ASP.NET MVC Chart](/js/Chart/Data-Markers_images/Data-Markers_img8.png)
 
 
 The following screenshot displays the labels when the LabelPosition is set as *OutsideExtended* position.
 
-![LabelPosition set as outside extended in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img9.png)
+![Label position set as outside extended in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img9.png)
 
 
 The label can be wrapped for pie, doughnut, funnel, and pyramid series by setting the enableWrap property. 
@@ -313,7 +313,7 @@ The label can be wrapped for pie, doughnut, funnel, and pyramid series by settin
 
 {% endhighlight %} 
 
-![Setting the enableWrap property in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img13.png)
+![Setting the enable wrap property in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img13.png)
 
 
 ## Binding label from the datasource
@@ -501,7 +501,7 @@ When the data is bound to the series by using the DataSource option, you can cus
 
 {% endhighlight %}
 
-![Customizing the points in the seriesRendering in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img10.png)
+![Customizing the points in the series rendering in ASP.NET MVC Chart](Data-Markers_images/Data-Markers_img10.png)
 
 
 ## Connect Line

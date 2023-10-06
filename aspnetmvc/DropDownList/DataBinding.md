@@ -537,7 +537,7 @@ In code behind, fetch the data from classes and stored it to the ViewBag as foll
     
 {% endhighlight %}
     
-![ViewBag in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql2.jpg)
+![View bag in ASP.NET MVC DropDownList](DataBinding_images/LinqtoSql2.jpg)
 
 ## Remote data 
 
