@@ -145,7 +145,7 @@ The below code snippet demonstrates this.
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridtextwrap) here to view the online demo sample for text wrapping.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for text wrapping.
 
 ### Header Template
 
@@ -194,7 +194,7 @@ The below screenshot depicts column headers with custom templates.
 
 ![](Columns_images/Columns_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnheadertemplate) here to view the online demo sample for header template.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for header template.
 
 ## Frozen Columns
 
@@ -245,7 +245,7 @@ treegridObj.freezeColumn(field, true);
 
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridfrozencolumns) here to view the online demo sample for frozen column.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for frozen column.
 
 ## Resizing
 
@@ -289,7 +289,7 @@ The following code snippet explains how to set column resize mode in TreeGrid,
 The above screenshot shows the TreeGrid rendered with `FixedColumns` resize mode.
 {:.caption}
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnresize) here to view the online demo sample for column resizing.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for column resizing.
 
 ## Checkbox column 
 
@@ -353,7 +353,7 @@ The following code example show how to define template for the column,
 
 ![](Columns_images/Columns_img4.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumntemplate) here to view the online demo sample for frozen column.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for frozen column.
 
 ## Column Menu
 
@@ -483,7 +483,7 @@ It is possible to toggle the visibility of the columns using the [`hideColumn`](
 </script>
 {% endhighlight %}
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnchooser) here to view the online demo sample for column menu.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for column menu.
 
 ## Command Column
 
@@ -533,7 +533,7 @@ A command column can be customized by using the `Type` and `ButtonOptions` prope
 
 ![](Columns_images/Columns_img9.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcommandcolumn) here to view the online demo sample for command column.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for command column.
 
 ### Custom buttons
 
@@ -693,7 +693,7 @@ The below image displays the TreeGrid with validation rule applied for a date co
 
 ![](Columns_images/Columns_img7.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcustomvalidation) here to view the online demo sample for TreeGrid validation support.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for TreeGrid validation support.
 
 ## Column Reorder
 
@@ -715,7 +715,7 @@ The above screenshot shows the column reorder in TreeGrid.
 
 The TreeGrid columns can also be reordered by using the [`reorderColumn`](https://help.syncfusion.com/api/js/ejtreegrid#methods:reordercolumn "reorderColumn") method, where the column field name and the target index should be passed as the method parameters.
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridcolumnreorder) here to view the online demo sample for column re-ordering.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the online demo sample for column re-ordering.
 
 ## Text Alignment
 

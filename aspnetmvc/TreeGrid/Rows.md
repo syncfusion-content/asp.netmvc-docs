@@ -178,7 +178,7 @@ The output of TreeGrid with Row Template is as follows.
 
 ![ASP.NET MVC TreeGrid Row Height](Rows_images/Rows_img1.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridrowtemplate) here to view online sample for TreeGrid Row Template
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view online sample for TreeGrid Row Template
 
 N> In TreeGrid, the given row template is parsed for default row functionality like row selection, alt row and other default row customization. Using `ParseRowTemplate` property we can disable the row template parsing. If we disable that property, TreeGrid is rendered with given row template.
 
@@ -306,7 +306,7 @@ We can also customize row drag and drop actions by using below properties
 
 ![ASP.NET MVC TreeGrid Details row](Rows_images/Rows_img13.png)
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridrowdraganddrop) here to view the demo sample for multiple drag and drop action.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the demo sample for multiple drag and drop action.
 
 ## Details row
 
@@ -343,7 +343,7 @@ The above screenshot shows details row in TreeGrid.
 
 The visibility of the details view of a record can also be toggled with any custom actions by using the method `ShowHideDetailsRow`.
 
-[Click](http://mvc.syncfusion.com/demos/web/treegrid/treegridrowdetails) here to view the demo sample for details row template.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the demo sample for details row template.
 
 ### Disable details row info column
 
