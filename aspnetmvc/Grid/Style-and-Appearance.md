@@ -11,7 +11,7 @@ documentation: ug
 
 ## List of classes and its purposes
 
-To modify the Grid appearance, you need to override default CSS of the grid. Please find the list of CSS classes and its corresponding section in the grid. Also you have an option to create your own custom theme for all the ASP.NET MVC controls using our [Theme Studio](https://js.syncfusion.com/themestudio/ "Theme Studio").
+To modify the Grid appearance, you need to override default CSS of the grid. Please find the list of CSS classes and its corresponding section in the grid. Also you have an option to create your own custom theme for all the ASP.NET MVC controls using our [Theme Studio](https://js.syncfusion.com/themestudio/#flat-azure "Theme Studio").
 
   <table>
         <tr>

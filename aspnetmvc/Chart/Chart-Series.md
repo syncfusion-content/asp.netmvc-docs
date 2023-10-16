@@ -47,7 +47,7 @@ In EjChart, you can add multiple series object in the **Series** options. The se
 ![](Chart-Series_images/Chart-Series_img1.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/column) here to view the multiple series online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the multiple series online demo sample.
 
 
 ### Customizing all series together
@@ -129,7 +129,7 @@ EjChart allows you to render the combination of different series in the chart.
 ![](Chart-Series_images/Chart-Series_img3.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/combination) here to view the combination series online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the combination series online demo sample.
 
 ### Limitation of combination chart
 

@@ -7,7 +7,7 @@ control: Common
 documentation: ug
 ---
 
-> The Syncfusion ASP.NET MVC controls in the Essential JavaScript 1 library, which are based on jQuery widgets, are no longer under active development. The 2022 Volume 4 is the final release for these controls. We recommend that users migrate to the Syncfusion ASP.NET MVC controls available in the Essential JS 2 library, which has been designed to be lightweight and modular. To learn more, please refer to the [documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/introduction) and [demo](https://ej2.syncfusion.com/aspnetmvc/Grid/GridOverview) for the Syncfusion ASP.NET MVC controls in the Essential JS 2 library.
+> The Syncfusion ASP.NET MVC controls in the Essential JavaScript 1 library, which are based on jQuery widgets, are no longer under active development. The 2022 Volume 4 is the final release for these controls. We recommend that users migrate to the Syncfusion ASP.NET MVC controls available in the Essential JS 2 library, which has been designed to be lightweight and modular. To learn more, please refer to the [documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/introduction) and [demo](https://ej2.syncfusion.com/aspnetmvc/Grid/GridOverview#/bootstrap5) for the Syncfusion ASP.NET MVC controls in the Essential JS 2 library.
 
 # Welcome to Syncfusion Essential ASP.NET MVC
 
@@ -18,7 +18,7 @@ The **Syncfusion Essential Studio for ASP.NET MVC** is a set of server-side wrap
 * The best way to get started is to read the common “[Getting Started](/aspnetmvc/getting-started)” document for the component that you would like to start using first. The “Getting Started” guide gives enough information that you need to know before starting to write code. This is the only section that is recommended to read end-to-end before starting to write code, all the other information can be referred when needed.
 * Once you get familiar with the basics of using the component, the next step will be to start integrating the component into your application. A good starting point will be to refer to the code snippets in the [online sample browser](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) that contains hundreds of code samples, it is very likely that you will find a code sample that resembles your intended usage scenario.
 * After integrating the component into your application using one of the sample code snippets as a starting point, it is likely that you would need additional information on specific features and API. The best option will be to search a specific topic using the search box that is available at the top of the user guide.
-* Another valuable resource is the [API reference](https://help.syncfusion.com/cr/aspnetmvc/dociohelper) that provides detailed information on the object hierarchy as well as the settings available on every object.
+* Another valuable resource is the [API reference](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.Calculate.html) that provides detailed information on the object hierarchy as well as the settings available on every object.
 
 ## Additional Help Resources
 
