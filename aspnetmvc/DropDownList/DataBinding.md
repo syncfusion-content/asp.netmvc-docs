@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in ASP.NET MVC DropDownList Control | Syncfusion
-description: Learn here about data binding in Syncfusion Essential ASP.NET MVC DropDown List Control, its elements, and more.
+description: Learn here about data binding in Syncfusion Essential ASP.NET MVC DropDownList Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
 documentation: ug
