@@ -22,7 +22,7 @@ Apply the plugin and property assigning to the ColorPicker widget element throug
 
 To know more about the AngularJS binding, you can refer to the online documentation in the following link location,
 
-<http://help.syncfusion.com/js/angularjs>
+<https://help.syncfusion.com/js/angularjs>
 
 1. The following code example depicts the way to bind data to the ColorPicker widget through AngularJS support.
 
