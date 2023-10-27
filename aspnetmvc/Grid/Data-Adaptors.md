@@ -396,7 +396,7 @@ The custom Adaptor should be assigned to the Grid `DataSource` in the `Load` eve
 
 For instance, though we have not provided in-built support to bind XML data, you can achieve by creating custom Adaptor as explained in below KB.
  
-https://www.syncfusion.com/kb/3375/how-to-process-xml-data-from-server-using-datamanager-and-bound-to-grid 
+https://support.syncfusion.com/kb/article/3658/how-to-process-xml-data-from-server-using-datamanager-and-bound-to-net-mvc-grid 
 
 N> To create a custom Adaptor for remote service, the `UrlAdaptor` can be used as base Adaptor. 
 
