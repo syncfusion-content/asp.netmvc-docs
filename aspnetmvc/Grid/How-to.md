@@ -574,7 +574,7 @@ Grid  supports the SignalR features for live updates in record. Please find the 
 
 1) Before configure SignalR with the ejGrid. You need to setup the SignalR configuration in Visual Studio project. For reference, please find the link given below.
 
-N> [signalR](https://www.asp.net/signalr/overview/getting-started/tutorial-getting-started-with-signalr#setup "signalr") 
+N> [signalR](https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/tutorial-getting-started-with-signalr#setup) 
 
 
 
@@ -1687,7 +1687,7 @@ The following code example shows how to save the exported files in a target loca
 
 See Also
 
-For more information on enable unobtrusive please refer this [link]( http://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
+For more information on enable unobtrusive please refer this [link](https://help.syncfusion.com/aspnetmvc/getting-started#to-enable-unobtrusive-option-in-your-application).
 
 ## Hierarchy grid with different foreignKeyField in parent and child table
 
