@@ -44,7 +44,7 @@ Add the below scripts references and Syncfusion **ScriptManager** to execute the
 
 
     <!--  jquery script  -->
-    <script src="http://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/js/assets/external/jquery-1.10.2.min.js"></script>
     
     <!-- Essential JS UI widget -->
     <script src="http://cdn.syncfusion.com/{{ site.releaseversion }}/js/web/ej.web.all.min.js"></script>
@@ -60,7 +60,7 @@ N> If you are using the Essential Studio below 13.4.0.53 version, then you need 
 
 To render the MVC Chart in unobtrusive mode refer **ej.unobtrusive.js** script file. Otherwise set false to **UnobtrusiveJavaScriptEnabled** in Web.config file.
 
-In the above code, ej.web.all.min.js script reference has been added for demonstration purpose. It is not recommended to use this for deployment purpose, as its file size is larger since it contains all the widgets. Instead, you can use [`CSG`](https://csg.syncfusion.com/) utility to generate a custom script file with the required widgets for deployment purpose.
+In the above code, ej.web.all.min.js script reference has been added for demonstration purpose. It is not recommended to use this for deployment purpose, as its file size is larger since it contains all the widgets. Instead, you can use [`CSG`](https://csg.syncfusion.com) utility to generate a custom script file with the required widgets for deployment purpose.
 
 To know more about getting started, You can refer to [MVC Getting Started documentation](https://help.syncfusion.com/aspnetmvc/getting-started) to create a new project and add necessary dll’s and script files.
 

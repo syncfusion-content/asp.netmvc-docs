@@ -42,7 +42,7 @@ In client-side rendered chart can be exported as PNG image or as SVG file.
 
 {% endhighlight %}
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/exports) here to view the Export chart online demo sample.
+[Click](https://ej2.syncfusion.com/home/aspnetmvc.html#platform) here to view the Export chart online demo sample.
 
 
 ## Server-side Exporting
