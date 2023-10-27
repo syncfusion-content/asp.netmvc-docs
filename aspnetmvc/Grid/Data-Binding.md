@@ -735,7 +735,7 @@ The following code example describes the above behavior.
 {% endhighlight  %}
 {% endtabs %}
 
-N>  To add custom headers to the DataManager through JavaScript, refer to this [link]( https://www.syncfusion.com/kb/5963)
+N>  To add custom headers to the DataManager through JavaScript, refer to this [link](https://support.syncfusion.com/kb/article/5602/how-to-send-custom-headers-to-server-using-datamanager-in-net-mvc-)
 
 The following output is displayed as a result of the above code example.
 
