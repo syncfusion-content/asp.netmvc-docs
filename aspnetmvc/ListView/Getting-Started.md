@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC ListView control | Syncfusion
-description:  Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC ListView Control, its elements, and more.
+title: Getting Started with ASP.NET MVC ListView Control | Syncfusion
+description:  Learn here more about Getting Started with Syncfusion Essential ASP.NET MVC ListView control, its elements, and more.
 platform: ejmvc
 control: ListView
 documentation: ug
@@ -16,7 +16,7 @@ This section explains briefly on how to create a ListView control in your applic
 The Essential StudioListView widget builds an interactive list view interface. This control allows you to select an item from a list-like interface and provides the infrastructure to display a set of data items in different layouts or views. Lists display data, data navigation, result lists, and data entry.    
 
 
-![Create your first ListView in ASP.NET MVC](Getting-Started_images/Getting-Started_img1.png)
+![Create your first ListView in ASP.NET MVC](Getting-Started_images/aspnet-mvc-listview-first-creating.png)
 
 List view Control
 {:.caption}
@@ -79,7 +79,7 @@ In the View page, add ListView helper and map the Local data list to correspondi
 
 Run the above code to render the following output.
 
-![Create a simple ListView in ASP.NET MVC](Getting-Started_images/Getting-Started_img2.png)
+![Create a simple ListView in ASP.NET MVC](Getting-Started_images/aspnet-mvc-listview-creating.png)
 
 
 ## Add header
@@ -100,4 +100,4 @@ You can add a header for ListView using ShowHeader property. Refer to the follow
 
 Run the above code to render the following output.
 
-![ASP.NET MVC ListView Add header](Getting-Started_images/Getting-Started_img3.png)
+![ASP.NET MVC ListView Add header](Getting-Started_images/aspnet-mvc-listview-add-header.png)
