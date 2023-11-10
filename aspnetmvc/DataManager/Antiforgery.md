@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Antiforgery in ASP.NET MVC DataManager | Syncfusion
-description: Learn here about antiforgery in Syncfusion Essential ASP.NET MVC DataManager control, its elements, and more.
+description: Learn here about antiforgery support in Syncfusion Essential ASP.NET MVC DataManager control, its elements, and more.
 platform: ejmvc
 control: DataManager
 documentation: ug
@@ -81,8 +81,8 @@ For this purpose, the input element with hidden value field and name attribute i
       }
 {% endhighlight %}
 
-![](Antiforgery_images/Antiforgery.png)
+![Antiforgery Token in ASP.NET MVC DataManager](Antiforgery_images/Antiforgery.png)
 
 In the header, You can find the anti-forgery token value
 
-![](Antiforgery_images/Antiforgery_header.png)
+![Antiforgery Token Value in ASP.NET MVC DataManager](Antiforgery_images/Antiforgery_header.png)
