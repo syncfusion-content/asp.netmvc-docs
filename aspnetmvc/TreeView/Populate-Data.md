@@ -432,11 +432,11 @@ The following steps explain how you can bind remote data to TreeView control.
 
 ### OData
 
-**OData** is a standardized protocol for creating and consuming data. You can bind [OData service](http://www.odata.org/#) data to TreeView in two ways using [DataSource](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.TreeViewFieldsBuilder.html#Syncfusion_JavaScript_TreeViewFieldsBuilder_Datasource_Syncfusion_JavaScript_DataSource_#) API of “TreeView” control.
+**OData** is a standardized protocol for creating and consuming data. You can bind [OData service](https://www.odata.org/#) data to TreeView in two ways using [DataSource](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.TreeViewFieldsBuilder.html#Syncfusion_JavaScript_TreeViewFieldsBuilder_Datasource_Syncfusion_JavaScript_DataSource_#) API of “TreeView” control.
     
    **Using Datasource(DataSource) API**
     
-   Create an object for [DataSource](http://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataSource.html#) class using OData service URL and then assign it to [DataSource](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.TreeViewFieldsBuilder.html#Syncfusion_JavaScript_TreeViewFieldsBuilder_Datasource_Syncfusion_JavaScript_DataSource_#) API of “TreeView”. 
+   Create an object for [DataSource](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataSource.html#) class using OData service URL and then assign it to [DataSource](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.TreeViewFieldsBuilder.html#Syncfusion_JavaScript_TreeViewFieldsBuilder_Datasource_Syncfusion_JavaScript_DataSource_#) API of “TreeView”. 
     
     
     
@@ -468,7 +468,7 @@ The following steps explain how you can bind remote data to TreeView control.
     
    **Using Datasource(Action&lt;DataSourceBuilder&gt;) API**
     
-   Here directly, you can specify the OData service URL using Action<[DataSourceBuilder](http://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataSourceBuilder.html#)> 
+   Here directly, you can specify the OData service URL using Action<[DataSourceBuilder](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataSourceBuilder.html#)> 
     
     
     
@@ -498,7 +498,7 @@ The following steps explain how you can bind remote data to TreeView control.
     
     
     
-In above methods, you may also specify the **adaptor** as [ODataAdaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors#odata-adaptor) and it is optional to specify.
+In above methods, you may also specify the **adaptor** as [ODataAdaptor](https://help.syncfusion.com/js/datamanager/data-adaptors#odata-adaptor) and it is optional to specify.
 
 You can provide adaptor value either as string value (“ODataAdaptor”) or Enum type (AdaptorType.ODataAdaptor)
     
@@ -566,7 +566,7 @@ N>**You can use above code until OData service version 3. For OData Service vers
     
 ### Web API
 
-Using [ej.WebApiAdaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors#webapi-adaptor), you can bind Web API service data to TreeView as shown in below code example.
+Using [ej.WebApiAdaptor](https://help.syncfusion.com/js/datamanager/data-adaptors#webapi-adaptor), you can bind Web API service data to TreeView as shown in below code example.
     
     
     
@@ -591,11 +591,11 @@ Using [ej.WebApiAdaptor](http://helpjs.syncfusion.com/js/datamanager/data-adapto
     
 ### Other Restful web services
 
-The Custom Adaptor concept of [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager#) allow you to customize or generate your own adaptor which is used to process query and result data. 
+The Custom Adaptor concept of [ej.DataManager](https://help.syncfusion.com/api/js/ejdatamanager) allow you to customize or generate your own adaptor which is used to process query and result data. 
 
-[http://helpjs.syncfusion.com/js/datamanager/data-adaptors#custom-adaptor](http://helpjs.syncfusion.com/js/datamanager/data-adaptors#custom-adaptor)
+[https://help.syncfusion.com/js/datamanager/data-adaptors#custom-adaptor](https://help.syncfusion.com/js/datamanager/data-adaptors#custom-adaptor)
 
-When using remote data binding, the adaptor of [ej.DataManager](http://helpjs.syncfusion.com/js/api/ejdatamanager#) plays vital role in processing queries to make them suitable to sends along with data request and also process the response data from the server.
+When using remote data binding, the adaptor of [ej.DataManager](https://help.syncfusion.com/api/js/ejdatamanager) plays vital role in processing queries to make them suitable to sends along with data request and also process the response data from the server.
 
 In the controller page, create a data list that contains the details about tree nodes.
     
@@ -740,7 +740,7 @@ While expanding the parent node
 After expanding the parent node
 {:.caption}
 
-For more details about load on demand for local data source, refer the sample [here](http://mvc.syncfusion.com/demos/web/treeview/loadOnDemand).
+For more details about load on demand for local data source, refer the sample [here](https://ej2.syncfusion.com/home/aspnetmvc.html#platform).
 
 
 For remote data source, TreeView loads the first level nodes initially. While expand the node from TreeView, the data manager passes the query to the controller. Based on this query, you can filter the data from table and return to TreeView.

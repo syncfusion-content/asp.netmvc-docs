@@ -351,7 +351,7 @@ The following output is displayed as a result of the above code example.
 
 `Format` is the process of customizing the particular column data with specified jQuery recognized globalize formats, such as currency, numeric, decimal, percentage or dates. To specify the globalize format, by using Format property of `Columns`.
 
-The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/globalizejs/globalize/tree/v0.1.1#format "data format") strings available for the `Date` and `Number` types.
+The `Format` value should be wrapped within "{0:" and "}". (For ex: "{0:C3}"). The [data format](https://github.com/globalizejs/globalize/tree/v0.1.1#format"data format") strings available for the `Date` and `Number` types.
 
 The following code example describes the above behavior.
 
