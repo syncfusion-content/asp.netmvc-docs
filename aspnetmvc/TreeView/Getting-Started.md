@@ -13,7 +13,7 @@ This section explains briefly about how to create a TreeView in ASP.NET MVC plat
 
 ## Create your first TreeView in MVC
 
-Create a MVC Project and add necessary assemblies, CSS and scripts with the help of the given [MVC-Getting Started](http://help.syncfusion.com/aspnetmvc/getting-started) documentation. After creating this project, you can create a TreeView in following ways.
+Create a MVC Project and add necessary assemblies, CSS and scripts with the help of the given [MVC-Getting Started](https://help.syncfusion.com/aspnetmvc/getting-started) documentation. After creating this project, you can create a TreeView in following ways.
 
 ## TreeView using Helper element
 
@@ -116,7 +116,7 @@ Above data can be directly assigned to [DataSource](https://help.syncfusion.com/
     
 ## Create Instance for TreeView
 
-You can create an instance for existing TreeView in following ways. Once a reference has been established, you can use the [API’s](http://help.syncfusion.com/js/api/ejtreeview) of TreeView to control its behavior.
+You can create an instance for existing TreeView in following ways. Once a reference has been established, you can use the [API’s](https://help.syncfusion.com/api/js/ejtreeview) of TreeView to control its behavior.
     
         
     {% highlight javascript %}
@@ -133,7 +133,7 @@ You can create an instance for existing TreeView in following ways. Once a refer
     
     
     
-N>**To configure the API settings after TreeView creation, please refer [API configuration](http://help.syncfusion.com/js/api-configuration), [Invoking Methods](http://help.syncfusion.com/js/invoking-methods)**.
+N>**To configure the API settings after TreeView creation, please refer [API configuration](https://help.syncfusion.com/js/api-configuration), [Invoking Methods](https://help.syncfusion.com/js/invoking-methods)**.
  
 ## TreeView events
 
