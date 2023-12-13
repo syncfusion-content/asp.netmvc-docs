@@ -74,7 +74,7 @@ You can enable this feature by defining the `LayerType` as “Bing”.
 
 ### Key
 
-The bing Map Key is provided as input to this `key` property. The Bing Map key can be obtained from [https://www.microsoft.com/en-us/maps/create-a-bing-maps-key](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key). 
+The bing Map Key is provided as input to this `key` property. The Bing Map key can be obtained from [https://www.microsoft.com/en-us/maps/bing-maps/create-a-bing-maps-key](https://www.microsoft.com/en-us/maps/bing-maps/create-a-bing-maps-key). 
 
 
 ![](Map-Providers_images/Map-Providers_img2.png)
