@@ -33,7 +33,7 @@ For rendering a 3D Column Chart, specify the series **Type** as **Column** in th
 ![](3D-Chart_images/3D-Chart_img1.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/column3d) here to view the Column 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/Column#/bootstrap5) here to view the Column 3DChart online demo sample.
 
 
 ## 3D Bar Chart
@@ -57,7 +57,7 @@ You can create a 3D Bar Chart by setting the series **Type** as **Bar** in the c
 ![](3D-Chart_images/3D-Chart_img2.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/bar3d) here to view the Bar 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/Bar#/bootstrap5) here to view the Bar 3DChart online demo sample.
 
 
 ## 3D Stacked Column Chart
@@ -111,7 +111,7 @@ You can create a 3D Stacked Column Chart by setting the series **Type** as **Sta
 ![](3D-Chart_images/3D-Chart_img4.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/stackingcolumn1003d) here to view the 100% Stacked Column 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/StackedColumn#/bootstrap5) here to view the 100% Stacked Column 3DChart online demo sample.
 
 
 ## 3D Stacked Bar Chart
@@ -138,7 +138,7 @@ To create Stacking Bar 3DChart, set the series **Type** as **StackingBar** in th
 ![](3D-Chart_images/3D-Chart_img5.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/stackingbar3d) here to view the Stacked Bar 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/StackedBar#/bootstrap5) here to view the Stacked Bar 3DChart online demo sample.
 
 
 ## 3D 100% Stacked Bar Chart
@@ -165,7 +165,7 @@ You can create 100% Stacking Bar 3DChart by setting the series **Type** as **Sta
 ![](3D-Chart_images/3D-Chart_img6.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/stackingbar1003d) here to view the 100% Stacked Bar 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/StackedBar100#/bootstrap5) here to view the 100% Stacked Bar 3DChart online demo sample.
 
 
 ## 3D Pie Chart
@@ -240,7 +240,7 @@ To render the EjChart in 3D view, set the **Enable3D** option as **true** in the
 ![](3D-Chart_images/3D-Chart_img9.png)
 
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/column3d) here to view the 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/Column#/bootstrap5) here to view the 3DChart online demo sample.
 
 
 ### Placing Bar / Column kind of series side-by-side
