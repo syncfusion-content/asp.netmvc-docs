@@ -111,7 +111,7 @@ You can create a 3D Stacked Column Chart by setting the series **Type** as **Sta
 ![](3D-Chart_images/3D-Chart_img4.png)
 
 
-[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/StackedColumn#/bootstrap5) here to view the 100% Stacked Column 3DChart online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/ThreeDimensionalChart/StackedColumn100#/bootstrap5) here to view the 100% Stacked Column 3DChart online demo sample.
 
 
 ## 3D Stacked Bar Chart
