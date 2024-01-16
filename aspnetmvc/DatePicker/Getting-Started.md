@@ -53,7 +53,7 @@ You can make use of **ej.web.all.min.js** file which encapsulates all EJMVC comp
 
 If you are using NuGet packages, then required files to render the EJMVC components, will get included in corresponding location automatically in your application.
 
-N>  In production, we highly recommend you to use our [custom script generator](https://help.syncfusion.com/js/overview) to create custom script file with required controls and its dependencies only. Also to reduce the file size further please use [GZip compression](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer?hl=en#text-compression-with-gzip) in your server. 
+N>  In production, we highly recommend you to use our [custom script generator](https://help.syncfusion.com/js/custom-script-generator) to create custom script file with required controls and its dependencies only. Also to reduce the file size further please use [GZip compression](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer?hl=en#text-compression-with-gzip) in your server. 
 
 Below is a simple Layout CSHTML file with required CSS and script reference added to create the Essential ASP.NET MVC DatePicker
 
