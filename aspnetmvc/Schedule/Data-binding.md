@@ -863,7 +863,7 @@ The server-side code to load the Scheduler data on demand is as follows.
 
 ## Entity Framework Data Binding
 
-The appointment data can be bound to the Scheduler through Entity Framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the Entity Data Model, refer [here.](https://msdn.microsoft.com/en-us/library/bb399182%28v=vs.100%29.aspx)
+The appointment data can be bound to the Scheduler through Entity Framework which supports Entity Data Model(EDM) defining the data at conceptual level. To know more on how to create and use the Entity Data Model, refer [here.](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)?redirectedfrom=MSDN)
 
 {% highlight razor %}
 
