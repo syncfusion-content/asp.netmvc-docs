@@ -20,7 +20,7 @@ CSS file
 
 External script files
 
-* [jQuery](http://jquery.com/#) (from the version 1.7.1 to 3.1.0)
+* [jQuery](https://jquery.com/) (from the version 1.7.1 to 3.1.0)
 
 jQuery.easing external dependency has been removed from version 14.3.0.49 onwards. Kindly include this jQuery.easing dependency for versions lesser than 14.3.0.49 in order to support animation effects.
 Internal script files
@@ -53,7 +53,7 @@ You can make use of **ej.web.all.min.js** file which encapsulates all EJMVC comp
 
 If you are using NuGet packages, then required files to render the EJMVC components, will get included in corresponding location automatically in your application.
 
-N>  In production, we highly recommend you to use our [custom script generator](http://helpjs.syncfusion.com/js/include-only-the-needed-widgets#) to create custom script file with required controls and its dependencies only. Also to reduce the file size further please use [GZip compression](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer?hl=en#text-compression-with-gzip) in your server. 
+N>  In production, we highly recommend you to use our [custom script generator](https://help.syncfusion.com/js/custom-script-generator) to create custom script file with required controls and its dependencies only. Also to reduce the file size further please use [GZip compression](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer?hl=en#text-compression-with-gzip) in your server. 
 
 Below is a simple Layout CSHTML file with required CSS and script reference added to create the Essential ASP.NET MVC DatePicker
 
