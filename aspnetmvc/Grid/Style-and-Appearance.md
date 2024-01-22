@@ -11,7 +11,7 @@ documentation: ug
 
 ## List of classes and its purposes
 
-To modify the Grid appearance, you need to override default CSS of the grid. Please find the list of CSS classes and its corresponding section in the grid. Also you have an option to create your own custom theme for all the ASP.NET MVC controls using our [Theme Studio](https://js.syncfusion.com/themestudio/ "Theme Studio").
+To modify the Grid appearance, you need to override default CSS of the grid. Please find the list of CSS classes and its corresponding section in the grid. Also you have an option to create your own custom theme for all the ASP.NET MVC controls using our [Theme Studio](https://ej2.syncfusion.com/aspnetmvc/documentation/appearance/theme-studio "Theme Studio").
 
   <table>
         <tr>
@@ -228,5 +228,5 @@ To modify the Grid appearance, you need to override default CSS of the grid. Ple
 
 To customize toolbar, you need to use the toolbar default CSS class to override icon in toolbar. 
 
-{% seealso %} [customize toolbar ](https://support.syncfusion.com/kb/article/4868/how-to-change-custom-icons-for-default-edit-toolbar-items) {% endseealso %}
+{% seealso %} [customize toolbar](https://support.syncfusion.com/kb/article/4868/how-to-change-custom-icons-for-default-edit-toolbar-items) {% endseealso %}
 
