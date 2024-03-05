@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DateTimePicker| DateTimePicker  | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview of ASP.NET MVC DateTimePicker | Syncfusion
+description: Learn here all about overview of Syncfusion Essential ASP.NET MVC DateTimePicker control, its elements, and more.
 platform: ejmvc
 control: DateTimePicker
 documentation: ug
 ---
 
-# DateTimePicker
+# Overview of ASP.NET MVC DateTimePicker
 
 The Essential ASP.NET MVC DateTimePicker control is used to input the date and time with a specific format. The DateTimePicker control combines the DatePicker and TimePicker controls so that users can select the date and time with their desired format.
 
