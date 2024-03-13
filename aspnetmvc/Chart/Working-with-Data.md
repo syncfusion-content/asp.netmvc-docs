@@ -54,7 +54,7 @@ var chartData = [
 
 ![](Working-with-Data_images/Working-with-Data_img1.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/localdata) here to view the local data binding online demo sample.
+[Click](https://ej2.syncfusion.com/aspnetmvc/Chart/LocalData#/bootstrap5) here to view the local data binding online demo sample.
 
 
 2.You can also plot data to chart using **Points** option in the series. Using this property you can customize each and every point in the data.
@@ -111,7 +111,7 @@ You can bind the remote data to the chart by using the **DataSource** and you ca
 
 ![](Working-with-Data_images/Working-with-Data_img3.png)
 
-[Click](https://mvc.syncfusion.com/demos/web/chart/remotedata) here to view the remote data binding online demo sample.	
+[Click](https://ej2.syncfusion.com/aspnetmvc/Chart/RemoteData#/bootstrap5) here to view the remote data binding online demo sample.	
 
 
 ## AngularJS Data Binding
@@ -121,7 +121,7 @@ Typically, you will assign data directly to chart using **dataSource** property 
 
 I> Essential JS includes AngularJS directives for all controls in the **ej.widget.angular.min.js** script file. 
 
-N> All the properties in EjChart supports one way AngularJS binding except inner array properties like **series.points[]**, **series.trendlines[]**. [Click](http://help.syncfusion.com/js/angularjs) here to know more about Essential AngularJS and the properties which support two way AngularJS binding in chart.  
+N> All the properties in EjChart supports one way AngularJS binding except inner array properties like **series.points[]**, **series.trendlines[]**. [Click](https://help.syncfusion.com/js/angularjs) here to know more about Essential AngularJS and the properties which support two way AngularJS binding in chart.  
 
 {% highlight html %}
 
@@ -177,4 +177,4 @@ N> All the properties in EjChart supports one way AngularJS binding except inner
 
 ![](/js/Chart/Working-with-Data_images/Working-with-Data_img4.png)
 
-[Click](http://ngjq.syncfusion.com/#/chart/line) here to view the AngularJS data binding online demo sample.	
+[Click](https://ej2.syncfusion.com/aspnetmvc/Chart/Line#/bootstrap5) here to view the AngularJS data binding online demo sample.	
