@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started | Progress Bar | ASP.NET MVC | Syncfusion
+title: Getting Started with ASP.NET MVC Progress Bar | Syncfusion
 description: Learn here all about getting started with Syncfusion Essential ASP.NET MVC Progress Bar control, its elements, and more.
 platform: ejmvc
 control: Progress Bar
