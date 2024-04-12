@@ -25,7 +25,7 @@ You can set time interval between two adjacent time values in the time popup man
    
 2. The following screenshot displays the output for the above code.
 
-    ![](Time-Interval_images/Time-Interval_img1.png)
+    ![Time interval in ASP.NET MVC DateTimePicker.](Time-Interval_images/aspnetmvc-datetimepicker-time-interval.png)
 	
 	Showcase for DateTimePicker with I hour interval in time picker popup
 	{:.caption}

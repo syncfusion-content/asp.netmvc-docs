@@ -195,7 +195,7 @@ public void ExportChart(string Data, string ChartModel)
   
 Excel exporting is a server-side operation. In addition have to refer Syncfusion.XlsIO assembly to export as excel.
 
-![](Exporting_images/Exporting_img1.png)
+![Excel exporting in ASP.NET MVC Chart.](Exporting_images/aspnetmvc-chart-exporting.png)
 
 
 ## Multiple Chart Excel Exporting
@@ -265,7 +265,7 @@ Export multiple chart to excel at server-side
 
 
 
-![](Exporting_images/Exporting_img2.png)
+![ASP.NET MVC Chart exporting.](Exporting_images/aspnetmvc-chart-multiple-exporting.png)
 
 ## Naming the exported file
 
@@ -282,7 +282,7 @@ We can also rotate the chart and can export it. Possible angles of rotation are 
 
   {% endhighlight %}
 
-![](Exporting_images/Exporting_img3.png)
+![Rotating the ASP.NET MVC Chart.](Exporting_images/aspnetmvc-chart-rotation.png)
 
 ## Setting orientation for the document
 
