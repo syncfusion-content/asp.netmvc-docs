@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Exporting  |Chart  | ASP.NET MVC | Syncfusion 
-description: Learn how to export Chart as excel file or image.
+description: Learn here about how to export chart as excel file or image with Syncfusion Essential ASP.NET MVC Chart control, it's elements and more..
 platform: ejmvc
 control: Chart
 documentation: ug
 ---
 
-# Exporting Chart
+# Exporting in ASP.NET MVC Chart Component
 
 Exporting a chart can be done in both client-side and in server-side. This can be modified by setting values to the property “mode” in exporting. Default value for mode is client. 
 

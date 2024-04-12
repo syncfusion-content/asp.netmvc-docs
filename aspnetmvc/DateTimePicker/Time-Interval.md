@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Time Interval | DateTimePicker | ASP.NET MVC | Syncfusion
-description: time interval
+description: Learn hera about time interval with Syncfusion Essential ASP.NET MVC DateTimePicker Control, its elements and more.
 platform: ejmvc
 control: DateTimePicker
 documentation: ug
 ---
 
-# Time Interval
+# Time Interval in ASP.NET MVC DateTimePicker
 
 You can set time interval between two adjacent time values in the time popup manually using the “Interval” property. By default the value of the “Interval” property is 30 minutes. Setting this value as 60 is considered as 1 hour. Sometimes you need to update for every hour work log reports. In that case to select time from time popup window with 1 hour interval to update the every 1 hour report you can use Interval option by setting time interval value as “60 minutes”.
 
