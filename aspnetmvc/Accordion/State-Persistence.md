@@ -1,13 +1,13 @@
 ---
 layout: post
 title: State Persistence in ASP.NET MVC Accordion | Syncfusion
-description: Learn here about state persistence in Syncfusion Essential ASP.NET MVC Accordion control, its elements, and more.
+description: Learn here all about state persistence in Syncfusion Essential ASP.NET MVC Accordion control, its elements, and more.
 platform: ejmvc
 control: Accordion 
 documentation: ug
 ---
 
-# State Persistence
+# State Persistence in ASP.NET MVC Accordion
 
 Accordion widget can store the model value in the browser cookies and on every time after initial rendering, the control get the model from the cookie only. Using EnablePersistence property you can store the model value in cookies. Thus when any changes are made dynamically then those values are updated in cookie. On refreshing the page the past state of the Accordion control is maintained in cookie and control is rendered from it.
 
@@ -51,7 +51,7 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 
 
-   ![](State-Persistence_images/State-Persistence_img1.png)
+   ![ASP.NET MVC State Persistence](State-Persistence_images/aspnet-mvc-state-persistence.png)
 
 
 
@@ -59,7 +59,7 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 1. Accordion Selected Item changed
 
-   ![](State-Persistence_images/State-Persistence_img2.png)
+   ![ASP.NET MVC Configure State Persistence](State-Persistence_images/aspnet-mvc-configure-state-persistence.png)
 
 
 
