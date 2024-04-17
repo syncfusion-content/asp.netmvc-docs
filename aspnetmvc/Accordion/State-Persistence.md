@@ -51,7 +51,7 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 
 
-   ![ASP.NET MVC State Persistence](State-Persistence_images/aspnet-mvc-state-persistence.png)
+   ![ASP.NET MVC Accordion State Persistence](State-Persistence_images/aspnet-mvc-accordion-state-persistence.png)
 
 
 
@@ -59,7 +59,7 @@ Output after page refresh maintaining the previous state of Accordion widget is 
 
 1. Accordion Selected Item changed
 
-   ![ASP.NET MVC Configure State Persistence](State-Persistence_images/aspnet-mvc-configure-state-persistence.png)
+   ![ASP.NET MVC Accordion Configure State Persistence](State-Persistence_images/aspnet-mvc-accordion-configure-state-persistence.png)
 
 
 
