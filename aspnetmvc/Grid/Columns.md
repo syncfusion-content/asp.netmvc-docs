@@ -825,7 +825,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASP.NET MVC Grid grid](columns_images/aspnet-mvc-grid-grid.png)
+![Read Only in ASP.NET MVC Grid](columns_images/aspnet-mvc-grid-read-only.png)
 
 ## Expression Column
 
