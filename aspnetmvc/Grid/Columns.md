@@ -947,7 +947,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASP.NET MVC Grid Button](columns_images/aspnet-grid-button.png)
+![ASP.NET MVC Grid Button](columns_images/aspnet-mvc-grid-button.png)
 
 ### Custom buttons
 
