@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-# ASP.NET MVC Grid Control Overview
+# Overview of ASP.NET MVC Grid
 
 The grid control for ASP.NET MVC is an efficient display engine for tabular data. It will pull from a datasource, such as List of collections, OData web services, or DataManager, binding data fields to columns and displaying a column header to identify the field. It is a feature-rich control that provides extensive appearance customization options with support for grouped records. This grid is very useful for generating complex grid-based reports with rich formatting. The most important features available in the grid control for ASP.NET MVC are paging, sorting, filtering, searching, grouping, and editing. 
 
