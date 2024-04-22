@@ -7,11 +7,11 @@ control: Diagram
 documentation: ug
 ---
 
-# Node in ASP.NET MVC Diagram Control
+# Node in ASP.NET MVC Diagram
 
 Nodes are graphical object that represent visual data to be placed on the page.
 
-![Node in ASP.NET MVC Diagram Control](Node_images/aspnet-mvc-diagram-node.png)
+![Node in ASP.NET MVC Diagram](Node_images/aspnet-mvc-diagram-node.png)
 
 ## Create Node
 
