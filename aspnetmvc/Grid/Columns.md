@@ -1168,7 +1168,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASP.NET MVC Grid columns](columns_images/aspnet-mvc-grid.png)
+![ASP.NET MVC Grid Customize columns](columns_images/aspnet-mvc-grid-customize-columns.png)
 
 ## Type
 
