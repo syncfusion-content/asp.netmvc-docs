@@ -128,7 +128,7 @@ String Filter
 
 Date Filter
 
-![ASP.NET MVC Grid date filter](filtering_images/aspnet-mvc-grid-data-filter.png)
+![ASP.NET MVC Grid date filter](filtering_images/aspnet-mvc-grid-date-filter.png)
 
 Boolean Filter
 
