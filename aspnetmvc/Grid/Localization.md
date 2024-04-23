@@ -7,7 +7,7 @@ control: Grid
 documentation: ug
 ---
 
-# Globalization and localization in ASP.NET MVC Grid
+# Globalization and Localization in ASP.NET MVC Grid
 
 ## Localization
 
@@ -365,7 +365,7 @@ ej.Grid.Locale["de-DE"] = {
 {% endtabs %} 
 
 
-![ASP.NET MVC Grid localization](Localization_images/Globalizationandlocalization._img1.png)
+![ASP.NET MVC Grid localization](localization_images/aspnet-mvc-grid-localization.png)
 
 
 I> You need to change pager locale in `ej.Pager.Locale` object.
@@ -643,7 +643,7 @@ ej.ExcelFilter.Locale["de-DE"] = {
 {% endhighlight  %}
 {% endtabs %} 
 
-![ASP.NET MVC Grid globalization](Localization_images/Globalizationandlocalization._img2.png)
+![ASP.NET MVC Grid globalization](localization_images/aspnet-mvc-grid-globalization.png)
 
 I> We have uploaded the pre-defined language packs for some commonly used cultures in [`this`](https://github.com/syncfusion/ej-global/tree/master/l10n) github location. Refer to the github location for getting the pre-defined language packs for the corresponding culture. The culture file has localized texts for all the Syncfusion controls.
 
@@ -709,7 +709,7 @@ public partial class GridController : Controller
 {% endtabs %} 
 
 
-![ASP.NET MVC Grid RTL](Localization_images/Globalizationandlocalization._img3.png)
+![ASP.NET MVC Grid rtl](localization_images/aspnet-mvc-grid-rtl.png)
 
 I> To translate our control content from default English to any of the culture, say For example - German language, then you need to refer the **ej.culture.de-DE.min.js** file in your application, after the reference of ej.web.all.min.js file. For all culture files, please download from the [GitHub](https://github.com/syncfusion/ej-global/tree/master/i18n) location.
 
@@ -779,6 +779,6 @@ public partial class GridController : Controller
 {% endtabs %} 
 
 
-![ASP.NET MVC Grid dataSource](Localization_images/Globalizationandlocalization._img4.png)
+![ASP.NET MVC Grid datasource](localization_images/aspnet-mvc-grid-data-source.png)
 
 
