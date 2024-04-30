@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Node | Diagram | ASP.NET MVC | Syncfusion
-description: node
+description: Learn here all about Node in Syncfusion Essential ASP.NET MVC Diagram control, its elements, and more.
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Node
+# Node in ASP.NET MVC Diagram
 
 Nodes are graphical object that represent visual data to be placed on the page.
 
-![](Node_images/Node_img1.png)
+![Node in ASP.NET MVC Diagram](Node_images/aspnet-mvc-diagram-node.png)
 
 ## Create Node
 
@@ -49,7 +49,7 @@ To create a node, You have to create the node object and add that to `Nodes` col
     
 {% endhighlight %}
 
-![](Node_images/Node_img2.png)
+![Add Node in ASP.NET MVC Diagram](Node_images/aspnet-mvc-diagram-add-node.png)
 
 ### Add node at runtime
 
@@ -77,7 +77,7 @@ Nodes can be added at runtime by using public method, `add`. The following code 
 
 {% endhighlight %}
 
-![](Node_images/Node_img3.png)
+![Add Node at Runtime in ASP.NET MVC Diagram](Node_images/aspnet-mvc-diagram-add-node-at-runtime.png)
 
 ### Add node from palette
 
@@ -148,7 +148,7 @@ The following code illustrates how to change the `Pivot` value.
 
 {% endhighlight %}
 
-![](Node_images/Node_img4.png)
+![Position in ASP.NET MVC Diagram Node](Node_images/aspnet-mvc-diagram-node-position.png)
 
 ## Types
 
@@ -182,7 +182,7 @@ You can customize the appearance of a node by changing its font, fill colors, pa
 
 {% endhighlight %}
 
-![](Node_images/Node_img5.png)
+![Appearance in ASP.NET MVC Diagram Node](Node_images/aspnet-mvc-diagram-node-appearance.png)
 
 ### Gradient
 
@@ -245,7 +245,7 @@ The `Gradient` property of Node allows you to define and applies the gradient ef
      
 {% endhighlight %}
 
-![](Node_images/Node_img6.png)
+![Gradient in ASP.NET MVC Diagram Node](Node_images/aspnet-mvc-diagram-node-gradient.png)
 
 ## Shadow
 
@@ -267,7 +267,7 @@ The `Gradient` property of Node allows you to define and applies the gradient ef
 {% endhighlight %}
 
 
-![](Node_images/Node_img7.png)
+![Shadow in ASP.NET MVC Diagram Node](Node_images/aspnet-mvc-diagram-node-shadow.png)
 
 The following code illustrates how to disable shadow effect at runtime.
 
@@ -306,7 +306,7 @@ The angle, translation, and opacity of the Shadow can be customized with the `Sh
             
 {% endhighlight %}
 
-![](Node_images/Node_img8.png)
+![ASP.NET MVC Diagram Node Customizing Shadow](Node_images/aspnet-mvc-diagram-node-customizing-shadow.png)
 
 ## Interaction
 
