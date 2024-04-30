@@ -48,7 +48,7 @@ The columns are automatically generated when `Columns` declaration is empty or u
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid columns](columns_images/columns_img1.png)
+![ASP.NET MVC Grid columns](columns_images/aspnet-mvc-grid-columns.png)
 
 ### How to set the `IsPrimaryKey` for auto generated columns when editing is enabled:
 
@@ -192,7 +192,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Header Text](columns_images/columns_img2.png)
+![ASP.NET MVC Grid Header Text](columns_images/aspnet-mvc-grid-header-text.png)
 
 ### Header Text alignment
 
@@ -241,7 +241,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Header Text Alignment](columns_images/columns_img3.png)
+![ASP.NET MVC Grid Header Text Alignment](columns_images/aspnet-mvc-grid-header-text-alignment.png)
 
 ### Header Template
 
@@ -294,7 +294,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Header template](columns_images/columns_img4.png)
+![ASP.NET MVC Grid Header template](columns_images/aspnet-mvc-grid-header-template.png)
 
 ## Text alignment
 
@@ -345,7 +345,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Text Alignment](columns_images/columns_img5.png)
+![ASP.NET MVC Grid Text Alignment](columns_images/aspnet-mvc-grid-text-alignment.png)
 
 ## Format
 
@@ -389,7 +389,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Format](columns_images/columns_img6.png)
+![ASP.NET MVC Grid Format](columns_images/aspnet-mvc-grid-format.png)
 
 ## Width
 
@@ -431,7 +431,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Width](columns_images/columns_img7.png)
+![ASP.NET MVC Grid Width](columns_images/aspnet-mvc-grid-width.png)
 
 
 ## Resizing
@@ -547,7 +547,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Resizing](columns_images/columns_img8.png)
+![ASP.NET MVC Grid Resizing](columns_images/aspnet-mvc-grid-resizing.png)
 
 
 ## Reorder
@@ -591,7 +591,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Reorder](columns_images/columns_img10.png)
+![ASP.NET MVC Grid Reorder](columns_images/aspnet-mvc-grid-reorder.png)
 
 ## Visibility
 
@@ -633,7 +633,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid visibility](columns_images/columns_img11.png)
+![ASP.NET MVC Grid visibility](columns_images/aspnet-mvc-grid-visibility.png)
 
 
 ## Unbound Column
@@ -689,7 +689,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Unbound columns](columns_images/columns_img13.png)
+![ASP.NET MVC Grid Unbound columns](columns_images/aspnet-mvc-grid-unbound-columns.png)
 
 ## Column Template
 
@@ -738,7 +738,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid columns template](columns_images/columns_img14.png)
+![ASP.NET MVC Grid columns template](columns_images/aspnet-mvc-grid-columns-template.png)
 
 ## Controlling Grid actions
 
@@ -825,7 +825,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid grid](columns_images/columns_img15.png)
+![Read Only in ASP.NET MVC Grid](columns_images/aspnet-mvc-grid-read-only.png)
 
 ## Expression Column
 
@@ -872,7 +872,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Expression columns](columns_images/columns_img16.png)
+![ASP.NET MVC Grid Expression columns](columns_images/aspnet-mvc-grid-expression-columns.png)
 
 
 ## Command Column
@@ -947,7 +947,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Button](columns_images/columns_img17.png)
+![ASP.NET MVC Grid Button](columns_images/aspnet-mvc-grid-button.png)
 
 ### Custom buttons
 
@@ -1012,7 +1012,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid custom button](columns_images/columns_img18.png)
+![ASP.NET MVC Grid custom button](columns_images/aspnet-mvc-grid-custom-button.png)
 
 ## Column Chooser
 
@@ -1055,7 +1055,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid columns chooser](columns_images/columns_img19.png)
+![ASP.NET MVC Grid columns chooser](columns_images/aspnet-mvc-grid-columns-chooser.png)
 
 ## Foreign Key Column
 
@@ -1110,7 +1110,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid key columns](columns_images/columns_img20.png)
+![ASP.NET MVC Grid key columns](columns_images/aspnet-mvc-grid-key-columns.png)
 
 ## Customize column
 
@@ -1168,7 +1168,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid columns](columns_images/columns_img23.png)
+![ASP.NET MVC Grid Customize columns](columns_images/aspnet-mvc-grid-customize-columns.png)
 
 ## Type
 
@@ -1257,7 +1257,7 @@ The following code example describes the above behavior.
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid Type](columns_images/columns_img24.png)
+![ASP.NET MVC Grid Type](columns_images/aspnet-mvc-grid-type.png)
 
 ## Column Layout
 
@@ -1302,4 +1302,4 @@ You can set the Grid's columns layout based on either Grid width or its columns 
 
 The following output is displayed as a result of the above code example.
 
-![ASPNETMVC Grid columns layout](columns_images/columns_img25.png)
+![ASP.NET MVC Grid columns layout](columns_images/aspnet-mvc-grid-columns-layout.png)
