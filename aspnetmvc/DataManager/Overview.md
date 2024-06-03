@@ -7,7 +7,7 @@ control: DataManager
 documentation: ug
 ---
 
-# Overview of ASP.NET MVC DataManager Control | Syncfusion
+# Overview of ASP.NET MVC DataManager Control
 
 DataManager helps in managing relational data in the ASP.NET MVC. Its rich features make querying data sources easier. The ODataClient supports OData queries that are enabled in the Web API & WCF data services.
 
