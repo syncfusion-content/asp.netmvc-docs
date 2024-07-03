@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data binding in DropDownList control for Syncfusion ASP.NET MVC
-description: Describes about the data binding in DropDownList control for Syncfusion ASP.NET MVC
+title: Data binding in ASP.NET MVC DropDownList Control | Syncfusion 
+description: Learn here all about data binding support in Syncfusion ASP.NET MVC DropDownList control, it's element's and more.
 platform: ejmvc
 control: DropDownList
 documentation: ug
@@ -9,7 +9,7 @@ keywords: Validation, DropDownList, dropdown, jQuery Validator, Client side Vali
 
 ---
 
-# Validations
+# Validations in ASP.NET MVC DropDownList
 
 DropDownList value can be validated in following ways,
 1. Using jQuery Validator
@@ -93,7 +93,7 @@ Required field and min value validation is demonstrated in the below given examp
 
 {% endtabs %}
 
-![](Functionalities_images/Functionalities_img10.jpeg)
+![Validations messages in ASP.NET MVC DropDownList.](functionalities_images/aspnet-mvc-dropdownlist-validation-messages.jpeg)
 
 ## Client Side Validation
 
