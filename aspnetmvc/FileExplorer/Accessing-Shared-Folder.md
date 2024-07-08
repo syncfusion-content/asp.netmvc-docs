@@ -1,13 +1,13 @@
 ---
-title: Accessing shared folder | FileExplorer | ASP.NET MVC | Syncfusion
-description: Accessing shared folder in FileExplorer
+title: Accessing shared folder in ASP.NET MVC File Explorer | Syncfusion
+description: Learn here all about accessing shared folder in Syncfusion ASP.NET MVC File Explorer control, it's element's and more.
 platform: ejmvc
 control: FileExplorer
 documentation: UG
 keywords: Accessing shared folder option
 ---
 
-# Access shared folder using FileExplorer
+# Access shared folder using ASP.NET MVC File Explorer
 
 Using “FileExplorer”, you can manage the files that are available in a shared folder of another system which is connected through LAN. Refer following steps, here you will see the details about accessing the shared folder with FileExplorer. 
 
@@ -69,5 +69,5 @@ In the controller page, specify the file handling operation as shown below. This
 
 If shared folder is restricted with authentication, that time you are not able to access this folder using our FileExplorer. Here you will get an exception like “**System.UnauthorizedAccessException, Please add your windows credential details to open '\\server\'**”. In order to solve this problem, you have to add the shared folder credential details in the windows credential manager that is available in your service hosted machine.
 
-![](Accessingsharedfolder_images/Accessingsharedfolder_img1.jpeg)
+![Access shared folder using ASP.NET MVC File Explorer.](accessingsharedfolder_images/aspnet-mvc-file-explorer-access-shared-folder.jpeg)
 
