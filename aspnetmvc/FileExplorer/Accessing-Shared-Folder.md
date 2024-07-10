@@ -1,6 +1,6 @@
 ---
 title: Accessing shared folder in ASP.NET MVC File Explorer | Syncfusion
-description: Learn here all about accessing shared folder in Syncfusion ASP.NET MVC File Explorer control, it's element's and more.
+description: Learn here all about accessing shared folder in Syncfusion ASP.NET MVC File Explorer control, it's elements, and more.
 platform: ejmvc
 control: FileExplorer
 documentation: UG
