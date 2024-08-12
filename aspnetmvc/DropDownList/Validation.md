@@ -93,7 +93,7 @@ Required field and min value validation is demonstrated in the below given examp
 
 {% endtabs %}
 
-![](Functionalities_images/Functionalities_img10.jpeg)
+![Min value validation in ASP.NET MVC Dropdown List.](functionalities_images/aspnetmvc-dropdown-list-min-value-validation.jpeg)
 
 ## Client Side Validation
 
