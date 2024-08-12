@@ -19,14 +19,14 @@ This section explains briefly about the control structure and how to create a Ga
 
 Gantt chart is used to edit and visualize project schedule and also to track progress of a task. The following screen shot illustrates the elements of a Gantt chart.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Elements of Gantt Chart in ASP.NET MVC.](getting-started_images/aspnetmvc-gantt-chart-elements.png)
 
 Elements of a Gantt chart
 {:.caption}
 
 * Toolbar – It is a collection of toolbar buttons to add, edit, delete a task. You can outdent and indent a task using outdent and indent buttons. Following screen shot illustrates the function of each toolbar button,
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![Toolbar functions in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-toolbar-function.png)
 
 Toolbar of Gantt chart
 {:.caption}
@@ -40,7 +40,7 @@ Toolbar of Gantt chart
 * Task Relationship – It determines when to start or finish a task.
 * Interactive Editing – You can edit the duration of a task by dragging or resizing the task bar. Following screen shot illustrates this.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![Editing option in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-editing-option.png)
 
 Editing options Gantt chart
 {:.caption}
@@ -49,7 +49,7 @@ Editing options Gantt chart
 
 In this tutorial, you will learn how to create a simple Gantt chart, add tasks and subtasks, and set relationship between tasks for design phase of software project. The following screen shot displays the output after completing this tutorial.
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![Create Gantt Chart in ASP.NET MVC.](getting-started_images/aspnetmvc-gantt-chart-creation.png)
 
 Simple Gantt chart
 {:.caption}
@@ -167,7 +167,7 @@ public ActionResult SimpleGantt()
 
 The following screen shot displays the Gantt.
 
-![](Getting-Started_images/Getting-Started_img5.png)
+![ASP.NET MVC Gantt Chart Control.](getting-started_images/aspnetmvc-gantt-chart-control.png)
 
 Gantt chart
 {:.caption}
@@ -201,7 +201,7 @@ Gantt control contains the toolbar options to Add, Edit, Delete, Search, Indent,
 {% endhighlight %}
 
 The following screen shot displays a Tool bar in Gantt.
-![](Getting-Started_images/Getting-Started_img6.png)
+![Toolbar in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-toolbar.png)
 
 Toolbar in Gantt chart
 {:.caption}
@@ -269,7 +269,7 @@ Modify the predecessor details of a task by using mouse interactions by setting 
 
 The following screen shot displays the Gantt control with dialog editing option.
 
-![](Getting-Started_images/Getting-Started_img7.png)
+![Dialog editing in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-dialog-editing.png)
 
 ## Enable Context Menu
 
@@ -287,7 +287,7 @@ You can enable the context menu in Gantt by setting the `EnableContextMenu` as `
 
 The following screen shot displays Gantt chart with Enable Context menu option.
 
-![](Getting-Started_images/Getting-Started_img8.png)
+![Enable context menu in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-enable-context-menu.png)
 
 Gantt chart with Enable Context menu option
 {:.caption}
@@ -308,7 +308,7 @@ You can enable the column menu in Gantt, by setting the `ShowColumnChooser` as `
 
 The following screen shot displays Gantt control in which column chooser option is enabled
 
-![](Getting-Started_images/Getting-Started_img11.png)
+![Column Chooser in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-column-chooser.png)
 
 ## Provide tasks relationship
 
@@ -332,7 +332,7 @@ You can show the relationship in tasks, by using the `PredecessorsMapping` prope
 {% endhighlight %}
 The following screen shot displays the relationship between tasks.
 
-![](Getting-Started_images/Getting-Started_img9.png)
+![Task relationship in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-task-relationship.png)
 
 Gantt chart with relationships between tasks
 {:.caption}
@@ -393,7 +393,7 @@ Add the following code example in the index.cshtml file, to create the Gantt con
 
 The following screen shot displays resource allocation for tasks in Gantt.
 
-![](Getting-Started_images/Getting-Started_img10.png)
+![Resource allocation in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-resource-allocation.png)
 
 This section explains briefly about the control structure and how to create a Gantt chart.
 
@@ -413,7 +413,7 @@ In Gantt, you can on or off weekends high lighting by setting the `HighlightWeek
 
 The following screen shot displays Gantt chart in which highlight weekends is disabled:
 
-![](Getting-Started_images/Getting-Started_img12.png)
+![Disable highlight weekends in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-disable-highlight-weekends.png)
 
 ## Define dimension of Gantt
 
@@ -489,12 +489,12 @@ In Gantt, we can add additional information about the tasks, this information ca
 {% endtabs %}
 
 The below screenshot shows the output of above code example.
-![](Getting-Started_images/Getting-Started_img13.png)
+![Notes column in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-notes-column.png)
 
 Notes column in Gantt
 {:.caption}
 
-![](Getting-Started_images/Getting-Started_img14.png)
+![Edit notes in edit dialog in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-edit-notes-in-edit-dialog.png)
 
 Editing notes in edit dialog
 {:.caption}
@@ -558,4 +558,4 @@ Milestones are used to denote the important event/stages in project management. 
 {% endtabs %}
 
 The below screenshot shows the output of above code example.
-![](Getting-Started_images/Getting-Started_img15.png)
+![Milestones in ASP.NET MVC Gantt Chart.](getting-started_images/aspnetmvc-gantt-chart-milestones.png)
