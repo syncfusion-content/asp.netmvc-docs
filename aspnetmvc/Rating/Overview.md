@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rating | Rating | ASP.NET MVC | Syncfusion
-description: overview
+title: Overview of ASP.NET MVC Rating | Syncfusion
+description: Learn here about overview support in Syncfusion Essential ASP.NET MVC Rating control, its elements and more details.
 platform: ejmvc
 control: Rating
 documentation: ug
 ---
 
-# Rating
+# Overview of ASP.NET MVC Rating Control
 
 Essential Studio ASP.NET MVC Rating control provides an intuitive Rating experience that enables you to select a number of stars representing a Rating. You can configure the item size, orientation and the number of displayed items in the Rating control. You can also customize the Rating star image by using custom CSS.
 
