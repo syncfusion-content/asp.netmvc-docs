@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Multiple Selection | ListBox | ASP.NET MVC | Syncfusion
-description: Learn here all about Multiple Selection support in Syncfusion Essential Studio ASP.NET MVC ListBox Control, its elements, and more.
+title: Multiple Selection in ASP.NET MVC ListBox Control | Syncfusion
+description: Learn here all about multiple selection support in Syncfusion Essential Studio ASP.NET MVC ListBox Control, its elements, and more details.
 platform: ejmvc
 control: ListBox
 documentation: ug
@@ -55,7 +55,7 @@ The following steps explain you the configuration of the AllowMultiSelection for
 2. Output for ListBox control that provides multiple selection is as follows.
 
 
-   ![ASPNETMVC ListBox AllowMultiple Selection](Multiple-Selection_images/Multiple-Selection_img1.png)
+   ![ASPNETMVC ListBox AllowMultiple Selection](Multiple-Selection_images/aspnetmvc-listbox-multiple-selection-config.png)
 
 
 
@@ -122,7 +122,7 @@ The following steps explains you the configuration of SelectedItemList property 
 2. Output of the above steps.
 
 
-![ASPNETMVC ListBox Multiple Selection](Multiple-Selection_images/Multiple-Selection_img2.png)
+![ASPNETMVC ListBox Multiple Selection](Multiple-Selection_images/aspnetmvc-listbox-multiple-selection-output.png)
 
 
 
@@ -218,7 +218,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![ASPNETMVC ListBox Checkbox](Multiple-Selection_images/Multiple-Selection_img3.png)
+![ASPNETMVC ListBox Checkbox](Multiple-Selection_images/aspnetmvc-listbox-multiple-selection-checkbox.png)
 
 
 
@@ -282,7 +282,7 @@ The following steps explains you the configuration of checkbox options in ListBo
 
 
 
-![ASPNETMVC ListBox Check All](Multiple-Selection_images/Multiple-Selection_img4.png)
+![ASPNETMVC ListBox Check All](Multiple-Selection_images/aspnetmvc-listbox-multiple-selection-check-all.png)
 
 
 
