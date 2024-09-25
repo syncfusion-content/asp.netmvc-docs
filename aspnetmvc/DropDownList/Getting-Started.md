@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with ASP.NET MVC DropDownList control | Syncfusion
+title: Getting Started with ASP.NET MVC DropDownList Control | Syncfusion
 description: Learn here more about getting started with Syncfusion Essential ASP.NET MVC DropdownList Control, its elements, and more.
 platform: ejmvc
 control: DropDownList
@@ -24,7 +24,7 @@ keywords: DropDownList, dropdown, Populating data
 
 3. Execute the code and get a empty DropDownList control as below
 
-![](Getteing-Started_images/Getteing-Started_img1.jpeg)
+![Creating DropDownList in MVC application](Getteing-Started_images/Getteing-Started_img1.jpeg)
 
 ## Populating data
 
@@ -61,7 +61,7 @@ The DropDownList can be bounded to any local list data and remote data services.
 
 Execute the code and to get a DropDownList control with data bound from controller
 
-![](Getteing-Started_images/Getteing-Started_img2.jpeg)
+![Populating data in ASP.NET MVC DropDown List](Getteing-Started_images/Getteing-Started_img2.jpeg)
 
 ## Setting Dimensions
 

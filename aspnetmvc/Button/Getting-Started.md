@@ -202,7 +202,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![Create multimedia player in ASP.NET MVC Button](Getting-Started_images/Getting-Started_img1.png)
 
 Multimedia Player Control
 {:.caption}

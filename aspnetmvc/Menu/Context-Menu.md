@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu | Menu | ASP.NET MVC | Syncfusion
-description: context menu
+title: Context Menu in ASP.NET MVC Menu Control | Syncfusion
+description: Learn here about context menu support in Syncfusion Essential ASP.NET MVC Menu Control, its elements, and more.
 platform: ejmvc
 control: Menu
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in ASP.NET MVC Menu
 
 A context menu is a type of menu in a graphical user interface (GUI) that appears when you perform right click operation. In this Menu control you can use a context menu by specifying the type of menu as ContextMenu. A context also provides support for nested level of menu items.
 
@@ -102,7 +102,7 @@ In the following example, a context menu for the division containing text is cre
 
 The following screen shot displays the output of the above code.
 
-![](Context-Menu_images/Context-Menu_img1.png)
+![Context menu in ASP.NET MVC Menu](Context-Menu_images/Context-Menu_img1.png)
 
 Context Menu
 {:.caption}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pick the type of node among the predefined nodes and shapes
-description: How to choose the type of the node with respect to the requirement? 
+title: Pick the type of node in ASP.NET MVC Diagram Control | Syncfusion
+description: Learn here about how to choose the type of node with respect to the requirement in Syncfusion Essential ASP.NET MVC Diagram Control, its elements, and more.
 platform: ejmvc
 control: Diagram
 documentation: ug
 ---
 
-# Shapes
+# Shapes in ASP.NET MVC Diagram
 
 Diagram provides support to add different kind of nodes. They are as follows.
 
@@ -40,7 +40,7 @@ Texts can be added to the Diagram as text nodes. For text nodes, the text node c
 
 {% endhighlight %}
  
-![](Shapes_images/Shapes_img59.png)
+![Text in ASP.NET MVC Diagram](Shapes_images/Shapes_img59.png)
 
 ## Image
 Diagram allows to add images as image nodes. For image nodes,the **image** node can be created with ImageNode class. In addition, the `Source` property of node enables you to set the image source. The following code illustrates how an **Image** node is created.
@@ -60,7 +60,7 @@ Diagram allows to add images as image nodes. For image nodes,the **image** node 
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img60.png)
+![Image in ASP.NET MVC Diagram](Shapes_images/Shapes_img60.png)
 
 Deploy your HTML file in the web Application and export the diagram (image node) or else the image node will not be exported in the chrome and Firefox due to security issues. Please refer to the link below.
 
@@ -101,7 +101,7 @@ Link1: http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrom
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img61.png)
+![HTML in ASP.NET MVC Diagram](Shapes_images/Shapes_img61.png)
 
 N> HTML node cannot be exported to image format, like JPEG, PNG, and BMP. It is by design that while exporting, Diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. 
 
@@ -142,7 +142,7 @@ N> HTML node cannot be exported to image format, like JPEG, PNG, and BMP. It is 
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img62.png)
+![Native in ASP.NET MVC Diagram](Shapes_images/Shapes_img62.png)
 
 N> Like HTML node, Native node also cannot be exported to image format. Fill color of native node can be overridden by the inline style or fill of the SVG element specified in the template. 
 
@@ -171,7 +171,7 @@ The following code example illustrates how to create a basic shape.
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img1.png)
+![Basic shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img1.png)
 
 
 N> When the `Shape` is not set for a basic shape, it is considered a "rectangle".
@@ -202,11 +202,11 @@ Path node is a commonly used basic shape that allows visually to represent the g
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img58.png)
+![Path in ASP.NET MVC Diagram](Shapes_images/Shapes_img58.png)
 
 The list of basic shapes are as follows.
 
-![](Shapes_images/Shapes_img2.png)
+![List of basic shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img2.png)
 
 ## Flow Shapes
 
@@ -228,11 +228,11 @@ The flow shapes are used to represent the process flow. It is used for analyzing
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img3.png)
+![Flow shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img3.png)
 
 The list of flow shapes are as follows.
 
-![](Shapes_images/Shapes_img4.png)
+![List of flow shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img4.png)
 
 ## BPMN Shapes
 
@@ -258,7 +258,7 @@ BPMN shapes are used to represent the internal business procedure in a graphical
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img5.png)
+![BPMN shapes in ASP.NET MVC Diagram](Shapes_images/Shapes_img5.png)
 
 N> The default value for the property `Shape` is "Event".
 
@@ -309,7 +309,7 @@ The `Event` property of the node allows you to define the type of the event. The
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img12.png)
+![Event in ASP.NET MVC Diagram](Shapes_images/Shapes_img12.png)
 
 | Event | Image |
 |---|---|
@@ -361,7 +361,7 @@ Gateway is used to control the flow of a process. It is represented as a diamond
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img27.png)
+![Getaway in ASP.NET MVC Diagram](Shapes_images/Shapes_img27.png)
 
 N> By default, the `Gateway` will be set as "None".
 
@@ -410,7 +410,7 @@ To create a BPMN activity, you need to set the `Shape` as "Activity". You also n
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img33.png)
+![Activity in ASP.NET MVC Diagram](Shapes_images/Shapes_img33.png)
 
 The different activities of BPMN process are listed as follows.
 
@@ -445,7 +445,7 @@ The `Task` property of node allows you to define the `Type` of task such as send
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img34.png)
+![Tasks in ASP.NET MVC Diagram](Shapes_images/Shapes_img34.png)
 
 The various types of BPMN tasks are tabulated as follows.
 
@@ -502,7 +502,7 @@ Loop is a task that is internally being looped. The `Loop` property of task allo
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img43.png)
+![Loop in ASP.NET MVC Diagram](Shapes_images/Shapes_img43.png)
 
 The following table contains various types of BPMN loops.
 
@@ -554,7 +554,7 @@ Compensation is triggered when operation is partially failed and you can enable 
             Model.Nodes.Add(Node);
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img50.png)
+![Compensation in ASP.NET MVC Diagram](Shapes_images/Shapes_img50.png)
 
 #### Call
 
@@ -579,7 +579,7 @@ A call activity is a global sub-process that is reused at various points of the 
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img51.png)
+![Call in ASP.NET MVC Diagram](Shapes_images/Shapes_img51.png)
 
 #### Ad-Hoc
 
@@ -604,7 +604,7 @@ An ad hoc subprocess is a group of tasks that are executed in any order or skipp
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img52.png)
+![Ad-Hoc in ASP.NET MVC Diagram](Shapes_images/Shapes_img52.png)
 
 #### Boundary
 
@@ -658,7 +658,7 @@ A data object represents information flowing through the process, such as data p
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img56.png)
+![Data in ASP.NET MVC Diagram](Shapes_images/Shapes_img56.png)
 
 ### Datasource
 
@@ -681,4 +681,4 @@ DataSource is used to store or access data associated with a business process. T
 
 {% endhighlight %}
 
-![](Shapes_images/Shapes_img57.png)
+![DataSource in ASP.NET MVC Diagram](Shapes_images/Shapes_img57.png)
