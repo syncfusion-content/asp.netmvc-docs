@@ -69,5 +69,5 @@ In the controller page, specify the file handling operation as shown below. This
 
 If shared folder is restricted with authentication, that time you are not able to access this folder using our FileExplorer. Here you will get an exception like “**System.UnauthorizedAccessException, Please add your windows credential details to open '\\server\'**”. In order to solve this problem, you have to add the shared folder credential details in the windows credential manager that is available in your service hosted machine.
 
-![](Accessingsharedfolder_images/Accessingsharedfolder_img1.jpeg)
+![Access shared folder using FileExplorer in ASP.NET MVC.](accessingsharedfolder_images/aspnetmvc-file-explorer-access-shared-folder.jpeg)
 
