@@ -17,7 +17,7 @@ Essential ASP.NET MVC Button provides support to display a Button control within
 
 The following screenshot illustrates the functionality of Button in Multimedia player control.
 
-![Getting started with ASP.NET MVC Button](getting-started_images/aspnetmvc-button-getting-started.png)
+![Getting started with ASP.NET MVC Button.](getting-started_images/aspnetmvc-button-getting-started.png)
 Multimedia Player
 {:.caption}
 
@@ -202,7 +202,7 @@ Essential ASP.NET MVC Button control contains built-in features like Click and d
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![displays multimedia player control.](Getting-Started_images/Getting-Started_img1.png)
 
 Multimedia Player Control
 {:.caption}

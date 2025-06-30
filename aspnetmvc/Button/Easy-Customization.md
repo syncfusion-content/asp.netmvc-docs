@@ -83,7 +83,7 @@ The following steps explains you the details about rendering the button with dif
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img1.png)
+![list of predefined button size.](Easy-Customization_images/Easy-Customization_img1.png)
 
 Button with different sizes
 {:.caption}
@@ -210,7 +210,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	 Execute the above code to render the following output.
 
-	 ![](Easy-Customization_images/Easy-Customization_img2.png)
+	 ![button with different content types.](Easy-Customization_images/Easy-Customization_img2.png)
      
 	 Button with different content types
 	 {:.caption}
@@ -319,7 +319,7 @@ The following steps explains you the details about rendering the Button with abo
 
 	Execute the above code to render the following output.
 
-	![](Easy-Customization_images/Easy-Customization_img3.png)
+	![configure the button widget.](Easy-Customization_images/Easy-Customization_img3.png)
 
     Button with different image positions
 	{:.caption}
@@ -460,7 +460,7 @@ The following steps explains you the details about rendering the Button with abo
 
 Execute the above code to render the following output.
 
-![](Easy-Customization_images/Easy-Customization_img4.png)
+![button with custom css.](Easy-Customization_images/Easy-Customization_img4.png)
 
 Button with Custom CSS
 {:.caption}

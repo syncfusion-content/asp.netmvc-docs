@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started | DataManager  | ASP.NET MVC | Syncfusion
-description: getting started 
+title: Getting Started | DataManager | ASP.NET MVC | Syncfusion
+description: Check out and learn here all about getting started with Syncfusion ASP.NET MVC DataManager and much more details.
 platform: ejmvc
 control: DataManager
 documentation: ug
@@ -121,7 +121,7 @@ You can bind the DataManager with Grid by defining the ID of DataManager in the 
 
 When you run, the following table is displayed.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![data manager with grid control.](Getting-Started_images/Getting-Started_img1.png)
 
 DataManager with Grid Control
 {:.caption}
@@ -169,7 +169,7 @@ The select property of ejQuery is used to retrieve the specified columns from th
 When you run the filter query and bind the result to the Grid, the following table is displayed.
 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![data with filtering.](Getting-Started_images/Getting-Started_img2.png)
 
 Data with Filtering
 {:.caption}
@@ -217,7 +217,7 @@ The sortBy property of ejQuery is used to sort the records based on the field an
 
 When you run the sort query and bind the result to the table, the following table is displayed.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![data with sorting.](Getting-Started_images/Getting-Started_img3.png)
 
 Data with Sorting
 {:.caption}
@@ -265,7 +265,7 @@ The Page property of ejQuery is used to retrieve the records based on the given 
 
 {% endhighlight %}
 
-![](Getting-Started_images/Getting-Started_img4.png)
+![various queries in the datamanager.](Getting-Started_images/Getting-Started_img4.png)
 
 In this section, you can learn how to enable basic properties available in the DataManager and the usage of the various queries in the DataManager.  
 

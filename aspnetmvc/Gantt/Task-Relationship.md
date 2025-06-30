@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Dependency | Gantt | ASP.NET MVC | Syncfusion
-description: Task Dependency
+description: Check out and learn here all the task dependencies of Syncfusion Gantt ASP.NET MVC and much more details.
 platform: ejmvc
 control: Gantt
 documentation: ug
@@ -19,25 +19,25 @@ Task relationships are categorized into four types based on the start and finish
 
 You cannot start a task until the other task also starts.
 
-![](Task-Relationship_images/Task-Relationship_img1.png)
+![start to start.](Task-Relationship_images/Task-Relationship_img1.png)
 
 ### Start to Finish(SF)
 
 You cannot finish a task until the other task is started.
 
-![](Task-Relationship_images/Task-Relationship_img2.png)
+![start to finish.](Task-Relationship_images/Task-Relationship_img2.png)
 
 ### Finish to Start(FS)
 
 You cannot start a task until the other task is completed.
 
-![](Task-Relationship_images/Task-Relationship_img3.png)
+![finish to start.](Task-Relationship_images/Task-Relationship_img3.png)
 
 ### Finish to Finish(FF)
 
 You cannot finish a task until the other task is completed.
 
-![](Task-Relationship_images/Task-Relationship_img4.png)
+![finish to finish.](Task-Relationship_images/Task-Relationship_img4.png)
 
 ## Define task relationship
 
@@ -109,7 +109,7 @@ Task relationships are defined in data source as string value and this values ar
 
 The following screenshot displays the output of the above code. 
 
-![](Task-Relationship_images/Task-Relationship_img5.png)
+![predecessor in the gantt control.](Task-Relationship_images/Task-Relationship_img5.png)
 
 Task relationship
 {:.caption}
@@ -188,7 +188,7 @@ We can define offset with various offset duration units for predecessors by usin
 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
-![](Task-Relationship_images/Task-Relationship_img6.png)
+![predecessor offset with duration units.](Task-Relationship_images/Task-Relationship_img6.png)
 
 ## Enable/disable predecessor validation
 
@@ -209,12 +209,12 @@ By default Gantt tasks date values are validated as per predecessor task and it'
 
 The below screenshot shows the output of above code example.
 
-![](Task-Relationship_images/Task-Relationship_img8.png)
+![predecessor validation disabled mode.](Task-Relationship_images/Task-Relationship_img8.png)
 
 Predecessor validation disabled mode
 {:.caption}
 
-![](Task-Relationship_images/Task-Relationship_img9.png)
+![predecessor validation enabled mode.](Task-Relationship_images/Task-Relationship_img9.png)
 
 Predecessor validation enabled mode
 {:.caption}
@@ -319,4 +319,4 @@ The following code example explains this.
 
 In this case, if the user dragging action violated the predecessor type then the following dialog will be rendered to perform operation.
 
-![](Task-Relationship_images/Task-Relationship_img7.png)
+![validation popup.](Task-Relationship_images/Task-Relationship_img7.png)
