@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RichTextEditor control for Syncfusion Essential ASP.NET MVC
-description: RichTextEditor widget (toolbar, content area, and footer)
+description: Check out and learn here all about the RichTextEditor widget (toolbar, content area, and footer) and much more.
 platform: ejmvc
 control: RTE
 documentation: ug
@@ -231,13 +231,13 @@ public string xhtmlValidation(string value)
 
 N> If you have selected the document in .pdf format, the text only extracted from the document and set as value to the RichTextEditor.
 
-![](HowTo_images/Word1.png)
+![upload the content to RichTextEditor.](HowTo_images/Word1.png)
 
 In above screenshot, use Browse options to browse your files and upload the content to RichTextEditor.
 
 Use DropDownList control in the toolbar to choose the any one type be it is PDF or word document and click Export button to export the content of the RichTextEditor to the selected type.
 
-![](HowTo_images/Word2.png)
+![export the content of the RichTextEditor to the selected type.](HowTo_images/Word2.png)
 
 Upon clicking to the Export button, the post back action has been raised, in that content from the RichTextEditor retrieved and stored as the corresponding format.
 
@@ -308,7 +308,7 @@ public void CreateDocument(string rte2)
     
 {% endhighlight %}
 
-![](HowTo_images/Word3.png)
+![the RichTextEditor retrieved and stored as the corresponding format.](HowTo_images/Word3.png)
 
 ## Enable the Browser Spell checker in RTE
 

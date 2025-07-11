@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started | Accordion  | ASP.NET MVC | Syncfusion
-description: getting started
+description: Check out and learn here all about getting started with Syncfusion ASP.NET MVC Accordion and much more details.
 platform: ejmvc
 control: Accordion 
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains briefly about how to create an Accordion in your application with ASP.NET MVC.
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![accordion in your application.](Getting-Started_images/Getting-Started_img1.png)
 
 
 
@@ -25,7 +25,7 @@ This section explains you the details on how to configure the Accordion control 
 
 The following screenshot illustrates you the usage of Accordion control in listing the controls under the Essential Studio products. 
 
-![](Getting-Started_images/Getting-Started_img2.png)
+![configure the accordion control.](Getting-Started_images/Getting-Started_img2.png)
 
 
 In the above screenshot , the Accordion contains a template for its Header and its content. In this Accordion application, you can list the controls under Essential Studio.
@@ -139,7 +139,7 @@ ASP.NET MVC Accordion basically renders using a div element. The following step 
 
 Execute the above code example to display the Accordion control with simple control list.
 
-![](Getting-Started_images/Getting-Started_img3.png)
+![display the accordion control.](Getting-Started_images/Getting-Started_img3.png)
 
 
 You can customize the Accordion control using various properties. The Accordion control properties and its default values are described in the following section.
@@ -243,7 +243,7 @@ You can also open all the panels during initialization using the SelectedItems p
 {% endhighlight %}
 Accordion control with EnableMultipleOpen property is illustrated in the following screenshot.
 
-![](Getting-Started_images/Getting-Started_img5.png)
+![accordion control with enable multiple open property.](Getting-Started_images/Getting-Started_img5.png)
 
 
 
@@ -400,7 +400,7 @@ N> ShowRoundedCorner property is false by default.
 
 The following screenshot illustrates the Accordion control with rounded corners.
 
-![](Getting-Started_images/Getting-Started_img7.png)
+![accordion control with rounded corners.](Getting-Started_images/Getting-Started_img7.png)
 
 
 ## Customize Icon
@@ -548,6 +548,6 @@ You can set the Up/Down arrow icon to Accordion header, by adding e-arrowheadup 
 
 The following screenshot illustrates the customization of SelectedHeader and Header of the Accordion control.
 
-![](Getting-Started_images/Getting-Started_img8.png)
+![selected header and header of the accordion control.](Getting-Started_images/Getting-Started_img8.png)
 
 
