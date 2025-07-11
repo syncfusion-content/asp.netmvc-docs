@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Behavior Settings | MaskEdit | ASP.NET MVC | Syncfusion
-description: behavior settings
+description: Check out and learn here all about behavior settings for ASP.NET MVC MaskEdit in Syncfusion and much more details.
 platform: ejmvc
 control: MaskEdit
 documentation: ug
@@ -28,12 +28,12 @@ Output of MaskEditTextBox with EnablePersistence is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img1.png)
+![MaskEditTextBox at initial load in Behavior settings.](Behavior-Settings_images/Behavior-Settings_img1.png)
 
 MaskEditTextBox at initial load
 {:.caption}
 
-![](Behavior-Settings_images/Behavior-Settings_img2.png)
+![MaskEditTextBox after changing the value and after page refresh in Behavior setting.](Behavior-Settings_images/Behavior-Settings_img2.png)
 
 MaskEditTextBox after changing the value and after page refresh
 {:.caption}
@@ -56,12 +56,12 @@ In the View page add MaskEditTextBox helper, and configure the Enabled property.
 
 Output when Enabled is “true” and when Enabled is “false”.
 
-![](Behavior-Settings_images/Behavior-Settings_img3.png)
+![Textboxes with enabled as true.](Behavior-Settings_images/Behavior-Settings_img3.png)
 
 Textboxes with enabled as true
 {:.caption}
 
-![](Behavior-Settings_images/Behavior-Settings_img4.png)
+![Textboxes with enabled as false.](Behavior-Settings_images/Behavior-Settings_img4.png)
 
 Textboxes with enabled as false
 {:.caption}
@@ -82,7 +82,7 @@ MaskEditTextBox size can be modified by using the Height and Width properties.
 
 Output of MaskEditTextBox after setting “Height” and “Width” is as follows.
 
-![](Behavior-Settings_images/Behavior-Settings_img5.png)
+![MaskEditTextBox with height and width in Adkusting Textbox Size.](Behavior-Settings_images/Behavior-Settings_img5.png)
 
 MaskEditTextBox with height and width
 {:.caption}
@@ -108,7 +108,7 @@ In the View page add MaskEditTextBox helper, and configure the Value property
 Output of MaskEditTextBox with the value property is as follows.
 
 
-![](Behavior-Settings_images/Behavior-Settings_img6.png)
+![MaskEditTextBox with value in Configure Value.](Behavior-Settings_images/Behavior-Settings_img6.png)
 
 MaskEditTextBox with value
 {:.caption}
@@ -131,7 +131,7 @@ Output of MaskEditTextBox when ReadOnly is “true” is as follows. MaskEditTex
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img7.png)
+![MaskEditTextBox with readOnly.](Behavior-Settings_images/Behavior-Settings_img7.png)
 
 MaskEditTextBox with readOnly 
 {:.caption}
@@ -158,13 +158,13 @@ Output for MaskEditTextBox when ShowError is “true” is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img8.png)
+![Textbox with showError in Error Visibility.](Behavior-Settings_images/Behavior-Settings_img8.png)
 
 Textbox with showError
 {:.caption}
 
 
-![](Behavior-Settings_images/Behavior-Settings_img9.png)
+![Textbox without error in Error Visibility.](Behavior-Settings_images/Behavior-Settings_img9.png)
 
 Textbox without error
 {:.caption}
@@ -209,34 +209,34 @@ HidePromptOnLeave(true).InputMode(InputMode.Text).Render();}
 
 The output for MaskEditTextBox with its properties is as follows.
 
-![](Behavior-Settings_images/Behavior-Settings_img10.png)
+![MaskEdit with MaskFormat in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img10.png)
 
 MaskEdit with MaskFormat
 {:.caption}
 
 
-![](Behavior-Settings_images/Behavior-Settings_img11.png)
+![MaskEdit with HidePromptOnLeave in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img11.png)
 
 MaskEdit with HidePromptOnLeave
 {:.caption}
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img12.png)
+![MaskEdit with prompt focus in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img12.png)
 
 MaskEdit with prompt focus
 {:.caption}
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img13.png)
+![MaskEdit with InputMode text in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img13.png)
 
 MaskEdit with InputMode text
 {:.caption}
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img14.png)
+![MaskEdit with CustomCharacter in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img14.png)
 
 MaskEdit with CustomCharacter
 {:.caption}
@@ -316,7 +316,7 @@ The output for MaskEditTextBox after applying CssClass is as follows.
 
 
 
-![](Behavior-Settings_images/Behavior-Settings_img15.png)
+![Textboxes with cssClass in Behavior Setting.](Behavior-Settings_images/Behavior-Settings_img15.png)
 
 Textboxes with cssClass
 {:.caption}
@@ -339,7 +339,7 @@ In the View page add MaskEditTextBox helper, and configure the ShowRoundedCorner
 
 Output of MaskEditTextBox when ShowRoundedCorner is “true”.
 
-![](Behavior-Settings_images/Behavior-Settings_img16.png)
+![Textboxes with showRoundedCorner in Appearance.](Behavior-Settings_images/Behavior-Settings_img16.png)
 
 Textboxes with showRoundedCorner
 {:.caption}
@@ -360,7 +360,7 @@ In the View page use the corresponding Textbox helper for rendering Textbox cont
 
 Output of MaskEditTextBox when ShowRoundedCorner is “true”.
 
-![](Behavior-Settings_images/Behavior-Settings_img17.png)
+![MaskEditTextBox with watermark text in Appearance.](Behavior-Settings_images/Behavior-Settings_img17.png)
 
 MaskEditTextBox with watermark text
 {:.caption}
@@ -383,7 +383,7 @@ In the View page use the corresponding MaskEdit helper for rendering MaskEdit co
 
 The output for Textboxes when TextAlign is set to “right”.
 
-![](Behavior-Settings_images/Behavior-Settings_img18.png)
+![MaskEditTextBox with textAlign in Appearance.](Behavior-Settings_images/Behavior-Settings_img18.png)
 
 MaskEditTextBox with textAlign
 {:.caption}
@@ -443,7 +443,7 @@ The MaskEditTextBox provides support for adding HTML attributes to the component
 
 The output for MaskEditTextBox after configuring the HtmlAttributes property
 
-![](Behavior-Settings_images/Behavior-Settings_img19.png)
+![MaskEditTextBox with focus in Appearance.](Behavior-Settings_images/Behavior-Settings_img19.png)
 
 MaskEditTextBox with focus
 {:.caption}
