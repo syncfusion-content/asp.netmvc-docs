@@ -107,7 +107,7 @@ In the View page add MaskEditTextBox helper, and configure the Value property
 Output of MaskEditTextBox with the value property is as follows.
 
 
-![ASP.NET MVC Maskedit textbox with value in Define Value.](Behavior-Settings_images/Behavior-Settings_img6.png)
+![ASP.NET MVC Maskedit textbox with value in define value.](Behavior-Settings_images/Behavior-Settings_img6.png)
 
 MaskEditTextBox with value
 {:.caption}
@@ -235,7 +235,7 @@ MaskEdit with InputMode text
 
 
 
-![ASP.NET MVC Maskedit with ustom ccharacter.](Behavior-Settings_images/Behavior-Settings_img14.png)
+![ASP.NET MVC Maskedit with custom character.](Behavior-Settings_images/Behavior-Settings_img14.png)
 
 MaskEdit with CustomCharacter
 {:.caption}
@@ -382,7 +382,7 @@ In the View page use the corresponding MaskEdit helper for rendering MaskEdit co
 
 The output for Textboxes when TextAlign is set to “right”.
 
-![ASP.NET MVC Maskedit textbox with textAlign in appearance.](Behavior-Settings_images/Behavior-Settings_img18.png)
+![ASP.NET MVC Maskedit textbox with text align in appearance.](Behavior-Settings_images/Behavior-Settings_img18.png)
 
 MaskEditTextBox with textAlign
 {:.caption}
