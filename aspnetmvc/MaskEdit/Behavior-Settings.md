@@ -27,13 +27,12 @@ In the View page add MaskEditTextBox helper, and configure the EnablePersistence
 Output of MaskEditTextBox with EnablePersistence is as follows. 
 
 
-
-![MaskEditTextBox at initial load in behavior setting.](Behavior-Settings_images/Behavior-Settings_img1.png)
+![ASP.NET MVC MaskEditTextBox at initial load in behavior setting.](Behavior-Settings_images/Behavior-Settings_img1.png)
 
 MaskEditTextBox at initial load
 {:.caption}
 
-![MaskEditTextBox after changing the value and after page refresh in behavior setting.](Behavior-Settings_images/Behavior-Settings_img2.png)
+![ASP.NET MVC MaskEditTextBox after changing the value and after page refresh in behavior setting.](Behavior-Settings_images/Behavior-Settings_img2.png)
 
 MaskEditTextBox after changing the value and after page refresh
 {:.caption}
@@ -82,7 +81,7 @@ MaskEditTextBox size can be modified by using the Height and Width properties.
 
 Output of MaskEditTextBox after setting “Height” and “Width” is as follows.
 
-![MaskEditTextBox with height and width.](Behavior-Settings_images/Behavior-Settings_img5.png)
+![ASP.NET MVC MaskEditTextBox with height and width.](Behavior-Settings_images/Behavior-Settings_img5.png)
 
 MaskEditTextBox with height and width
 {:.caption}
@@ -108,7 +107,7 @@ In the View page add MaskEditTextBox helper, and configure the Value property
 Output of MaskEditTextBox with the value property is as follows.
 
 
-![MaskEditTextBox with value in Define Value.](Behavior-Settings_images/Behavior-Settings_img6.png)
+![ASP.NET MVC MaskEditTextBox with value in Define Value.](Behavior-Settings_images/Behavior-Settings_img6.png)
 
 MaskEditTextBox with value
 {:.caption}
@@ -131,7 +130,7 @@ Output of MaskEditTextBox when ReadOnly is “true” is as follows. MaskEditTex
 
 
 
-![MaskEditTextBox with readonly.](Behavior-Settings_images/Behavior-Settings_img7.png)
+![ASP.NET MVC MaskEditTextBox with readonly.](Behavior-Settings_images/Behavior-Settings_img7.png)
 
 MaskEditTextBox with readOnly 
 {:.caption}
@@ -209,34 +208,34 @@ HidePromptOnLeave(true).InputMode(InputMode.Text).Render();}
 
 The output for MaskEditTextBox with its properties is as follows.
 
-![MaskEdit with maskformat.](Behavior-Settings_images/Behavior-Settings_img10.png)
+![ASP.NET MVC MaskEdit with maskformat.](Behavior-Settings_images/Behavior-Settings_img10.png)
 
 MaskEdit with MaskFormat
 {:.caption}
 
 
-![MaskEdit with hide prompt on leave.](Behavior-Settings_images/Behavior-Settings_img11.png)
+![ASP.NET MVC MaskEdit with hide prompt on leave.](Behavior-Settings_images/Behavior-Settings_img11.png)
 
 MaskEdit with HidePromptOnLeave
 {:.caption}
 
 
 
-![MaskEdit with prompt focus.](Behavior-Settings_images/Behavior-Settings_img12.png)
+![ASP.NET MVC MaskEdit with prompt focus.](Behavior-Settings_images/Behavior-Settings_img12.png)
 
 MaskEdit with prompt focus
 {:.caption}
 
 
 
-![MaskEdit with input mode text.](Behavior-Settings_images/Behavior-Settings_img13.png)
+![ASP.NET MVC MaskEdit with input mode text.](Behavior-Settings_images/Behavior-Settings_img13.png)
 
 MaskEdit with InputMode text
 {:.caption}
 
 
 
-![MaskEdit with ustom ccharacter.](Behavior-Settings_images/Behavior-Settings_img14.png)
+![ASP.NET MVC MaskEdit with ustom ccharacter.](Behavior-Settings_images/Behavior-Settings_img14.png)
 
 MaskEdit with CustomCharacter
 {:.caption}
@@ -360,7 +359,7 @@ In the View page use the corresponding Textbox helper for rendering Textbox cont
 
 Output of MaskEditTextBox when ShowRoundedCorner is “true”.
 
-![MaskEditTextBox with watermark text in appearance.](Behavior-Settings_images/Behavior-Settings_img17.png)
+![ASP.NET MVC MaskEditTextBox with watermark text in appearance.](Behavior-Settings_images/Behavior-Settings_img17.png)
 
 MaskEditTextBox with watermark text
 {:.caption}
@@ -383,7 +382,7 @@ In the View page use the corresponding MaskEdit helper for rendering MaskEdit co
 
 The output for Textboxes when TextAlign is set to “right”.
 
-![MaskEditTextBox with textAlign in appearance.](Behavior-Settings_images/Behavior-Settings_img18.png)
+![ASP.NET MVC MaskEditTextBox with textAlign in appearance.](Behavior-Settings_images/Behavior-Settings_img18.png)
 
 MaskEditTextBox with textAlign
 {:.caption}
@@ -443,7 +442,7 @@ The MaskEditTextBox provides support for adding HTML attributes to the component
 
 The output for MaskEditTextBox after configuring the HtmlAttributes property
 
-![MaskEditTextBox with focus in appearance.](Behavior-Settings_images/Behavior-Settings_img19.png)
+![ASP.NET MVC MaskEditTextBox with focus in appearance.](Behavior-Settings_images/Behavior-Settings_img19.png)
 
 MaskEditTextBox with focus
 {:.caption}
