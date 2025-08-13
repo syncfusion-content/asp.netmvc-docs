@@ -24,7 +24,7 @@ keywords: DropDownList, dropdown, Populating data
 
 3. Execute the code and get a empty DropDownList control as below
 
-![](Getteing-Started_images/Getteing-Started_img1.jpeg)
+![creating your first DropDownList in MVC application.](Getteing-Started_images/Getteing-Started_img1.jpeg)
 
 ## Populating data
 
@@ -61,7 +61,7 @@ The DropDownList can be bounded to any local list data and remote data services.
 
 Execute the code and to get a DropDownList control with data bound from controller
 
-![](Getteing-Started_images/Getteing-Started_img2.jpeg)
+![populating data in ASP.NET MVC Dropdown List.](Getteing-Started_images/Getteing-Started_img2.jpeg)
 
 ## Setting Dimensions
 

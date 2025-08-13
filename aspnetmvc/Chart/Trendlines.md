@@ -32,7 +32,7 @@ EjChart can generate Trendlines for Cartesian type series *(Line, Column, Scatte
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img1.png)
+![trendlines in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img1.png)
 
 [Click](https://mvc.syncfusion.com/demos/web/chart/trendlines) here to view the Trendlines online demo sample.
 
@@ -62,7 +62,7 @@ A trendline can be customized by using the properties such as *Fill*, *Width*, *
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img2.png)
+![customize the trendline styles in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img2.png)
 
 
 ## Types of Trendline
@@ -101,7 +101,7 @@ To render Linear Trendline, you have to set the **Type** as *Linear*.
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img3.png)
+![to render linear trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img3.png)
 
 ### Exponential
 
@@ -128,7 +128,7 @@ Exponential Trendline can be rendered by setting the *Type* as Exponential.
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img4.png)
+![exponential trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img4.png)
 
 ### Logarithmic
 
@@ -155,7 +155,7 @@ Logarithmic Trendline can be rendered by setting the *Type* as Logarithmic.
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img5.png)
+![logarithmic trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img5.png)
 
 
 ### Power
@@ -183,7 +183,7 @@ Power Trendline can be rendered by setting the *Type* of the trendline as Power.
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img6.png)
+![power trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img6.png)
 
 
 ### Polynomial
@@ -211,7 +211,7 @@ Polynomial Trendline can be rendered by setting the trendline *Type* as Polynomi
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img7.png)
+![polynomial trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img7.png)
 
 
 ### MovingAverage
@@ -239,7 +239,7 @@ MovingAverage Trendline can be rendered by setting the Type of the trendline as 
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img8.png)
+![movingaverage trendline in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img8.png)
 
 
 ## Forecasting
@@ -274,7 +274,7 @@ The value set for **ForwardForecast** is used to determine the distance moving t
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img9.png)
+![forward forecasting in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img9.png)
 
 
 ### Backward Forecasting
@@ -302,7 +302,7 @@ The value set for the **BackwardForecast** is used to determine the past trends.
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img10.png)
+![backward forecasting in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img10.png)
 
 
 ## Trendlines Legend
@@ -330,4 +330,4 @@ To display the legend item for trendline, use the **Name** property. You can int
 
 {% endhighlight %}
 
-![](Trendlines_images/Trendlines_img11.png)
+![trendlines legend in ASP.NET MVC Chart.](Trendlines_images/Trendlines_img11.png)
