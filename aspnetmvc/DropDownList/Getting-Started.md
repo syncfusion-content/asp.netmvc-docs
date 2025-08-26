@@ -24,7 +24,7 @@ keywords: DropDownList, dropdown, Populating data
 
 3. Execute the code and get a empty DropDownList control as below
 
-![creating your first DropDownList in MVC application.](Getteing-Started_images/Getteing-Started_img1.jpeg)
+![creating your first DropDown List in MVC application.](Getteing-Started_images/Getteing-Started_img1.jpeg)
 
 ## Populating data
 
