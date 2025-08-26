@@ -35,7 +35,7 @@ public ActionResult Index()
 {% endhighlight %}
 {% endtabs %}
 
-![](Gridlines_images/Gridlines_img1.png)
+![customize the gridlines visibility in Diagram gridlines.](Gridlines_images/Gridlines_img1.png)
 
 To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataVisualization.Models.Diagram.SnapSettings.html#Syncfusion_JavaScript_DataVisualization_Models_Diagram_SnapSettings_SnapConstraints "Constraints")
 
@@ -61,7 +61,7 @@ public ActionResult Index()
 }
 {% endhighlight %}
 
-![](Gridlines_images/Gridlines_img4.png)
+![the appearance of the Diagram gridlines](Gridlines_images/Gridlines_img4.png)
 
 ### Line Intervals
 
@@ -95,9 +95,9 @@ public ActionResult Index()
 }
 {% endhighlight %}
 
-![](Gridlines_images/Gridlines_img2.png)
+![line intervals in Diagram gridlines.](Gridlines_images/Gridlines_img2.png)
 
-# Snapping
+## Snapping
 
 ## Snap To Lines
 
@@ -156,4 +156,4 @@ public ActionResult Index()
 }
 {% endhighlight %}
 
-![](Gridlines_images/Gridlines_img4.png)
+![snap to objects in Diagram gridlines.](Gridlines_images/Gridlines_img4.png)
