@@ -97,9 +97,9 @@ public ActionResult Index()
 
 ![](Gridlines_images/Gridlines_img2.png)
 
-# Snapping
+## Snapping
 
-## Snap To Lines
+### Snap To Lines
 
 This feature allows the Diagram objects to snap to the nearest intersection of gridlines while being dragged or resized. This feature enables easier alignment during layout or design.
 
@@ -121,7 +121,7 @@ public ActionResult Index()
 
 To enable/disable snapping to horizontal/vertical lines, refer to [Constraints](https://help.syncfusion.com/cr/aspnetmvc/Syncfusion.JavaScript.DataVisualization.Models.Diagram.SnapSettings.html#Syncfusion_JavaScript_DataVisualization_Models_Diagram_SnapSettings_SnapConstraints "Constraints")
 
-## Customization of Snap Intervals
+### Customization of Snap Intervals
 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the property, `snapInterval`. The following code example illustrates how to customize the snap intervals.
 
@@ -140,7 +140,7 @@ public ActionResult Index()
 }
 {% endhighlight %}
 
-## Snap To Objects
+### Snap To Objects
 
 The snap-to-object provides visual cues to assist with aligning and spacing Diagram elements. A node can be snapped with its neighboring objects based on certain alignments. Such alignments are visually represented as smart guides.
 
