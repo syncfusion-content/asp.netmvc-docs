@@ -36,7 +36,7 @@ You can assign Increases and decreases of zooming range using [zoomStep](http://
 
 ![](ZoomandPrint_images/zoom.png)
 
-# Print
+## Print
 
 The editor provides print tools which use to print the contents of the editor.
 
