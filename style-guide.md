@@ -95,7 +95,7 @@ to add the Syncfusion datepicker widget into the HTML page, refer the same steps
  
  
 ### External references
-* <http://www.bartleby.com/141/> 
+* <https://www.bartleby.com/lit-hub/the-elements-of-style/> 
 * <https://wiki.ubuntu.com/DocumentationTeam/StyleGuide/SpellingPunctuationGrammar> 
-* <http://wiki.openbravo.com/wiki/Documentation_Style_Guide#Use_US_English> 
-* <http://docs.basho.com/riak/latest/community/style-guide/>
+* <https://wiki.openbravo.com/wiki/Documentation_Style_Guide#Use_US_English> 
+* <https://docs.riak.com/riak/latest/community/style-guide/>

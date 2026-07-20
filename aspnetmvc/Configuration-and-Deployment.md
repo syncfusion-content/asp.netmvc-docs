@@ -19,7 +19,7 @@ I>Syncfusion JavaScript Bower package is available in [public Git Repository](ht
 
 ### Bower Installation
 
-To configure the Bower in your machine you need to install [node, npm](https://nodejs.org/) and [git](https://git-scm.com/). For more information to configure the Bower package, please refer to the official site for [bower](https://bower.io/#install-bower).
+To configure the Bower in your machine you need to install [node, npm](https://nodejs.org/en) and [git](https://git-scm.com/). For more information to configure the Bower package, please refer to the official site for [bower](https://bower.io/#install-bower).
 Syncfusion JavaScript Bower package can be configured in the following ways.
 
 1. Using command prompt.
@@ -92,7 +92,7 @@ Syncfusion JavaScript npm package is available in [public Git Repository](https:
 
 ### Syncfusion npm Installation
 
-To configure the npm,  install the [Nodejs](https://nodejs.org/) and update the npm. For more information to configure the npm packages refer to the official site of [npm](https://docs.npmjs.com/getting-started/installing-node/).
+To configure the npm,  install the [Nodejs](https://nodejs.org/en) and update the npm. For more information to configure the npm packages refer to the official site of [npm](https://docs.npmjs.com/getting-started/installing-node/).
 
 The syncfusion-javascript npm package can be configured by the following ways.
 
@@ -375,7 +375,7 @@ The following structure is maintained for ASP.NET MVC platform NuGet packages fr
 			    Syncfusion.AspNet.Mvc<br/>
 		  </td>
 		  <td>
-			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate to the following link.<br/>{{'<http://www.syncfusion.com/aspnet-mvc-ui-controls>'| markdownify }}<br/>
+			    Grid<br/>Data Visualization<br/>Layout<br/>Editors<br/>Navigation<br/>Notification<br/>To know more information about the controls for above categories navigate to the following link.<br/>{{'<https://www.syncfusion.com/aspnet-mvc-ui-controls>'| markdownify }}<br/>
 		  </td>
 		  <td>
 			    EJ.MVC<br/>

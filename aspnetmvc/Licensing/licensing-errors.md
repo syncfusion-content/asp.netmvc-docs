@@ -41,7 +41,7 @@ The following error message will be shown if the trial key has expired after 30 
 
 **Error Message:** Your Syncfusion trial license has expired. Please refer to this [help topic](https://help.syncfusion.com/aspnetmvc/licensing/licensing-errors#trial-expired) for more information.
 
-**Solution:** Purchase from [here](https://www.syncfusion.com/sales/products) to get a valid Syncfusion license.
+**Solution:** Purchase from [here](https://www.syncfusion.com/sales/pricing?category=ui-components) to get a valid Syncfusion license.
 
 ## Platform Mismatch
 

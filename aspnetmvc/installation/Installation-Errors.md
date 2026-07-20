@@ -55,7 +55,7 @@ This error message will appear if your license has expired.
 You can choose from the options listed below. 
 
 1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals). 
-2. You can get a new license [here](https://www.syncfusion.com/sales/products). 
+2. You can get a new license [here](https://www.syncfusion.com/sales/pricing?category=ui-components). 
 3. You can reach out to our sales team by emailing <sales@syncfusion.com>. 
 4. You can also extend the 30-day trial period after your trial license has expired.
 
@@ -86,7 +86,7 @@ The following are possible causes of this error:
 
 You can choose from the options listed below. 
 
-1. You can get a new license [here](https://www.syncfusion.com/sales/products). 
+1. You can get a new license [here](https://www.syncfusion.com/sales/pricing?category=ui-components). 
 2. Contact your account administrator. 
 3. Send an email to  <clientrelations@syncfusion.com> to request a license. 
 4. You can reach out to our sales team by emailing  <sales@syncfusion.com>.
@@ -140,7 +140,7 @@ You have enabled controlled folder access settings on your computer.
 **Suggestion 1:**
 
 1.	We will ship our demos in the public documents folder by default. 
-2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
+2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-US/Windows/Security/Threat-Malware-Protection/virus-and-threat-protection-in-the-windows-security-app) and disable the controlled folder access.
 3.	You can enable this option after the installing our Syncfusion setup.
 
 **Suggestion 2:**

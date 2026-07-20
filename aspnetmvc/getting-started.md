@@ -13,7 +13,7 @@ documentation: ug
  
 ## What is Html.EJ() ?
 
-EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://support.syncfusion.com/kb/article/4895/how-to-avoid-the-exception-does-not-contain-a-definition-for-ej-and-no-extension-method-ej).
+EJ refers to Essential JavaScript or Syncfusion Essential JS 1. It is a comprehensive collection of over 80 enterprise-grade HTML5 JavaScript components for building modern web applications. Refer to this [JavaScript Package](https://www.syncfusion.com/jquery-ui-widgets) for more information. This is inherited from `Syncfusion.EJ` Assembly and `Syncfusion.JavaScript` namespace. `Syncfusion.EJ` and `Syncfusion.EJ.MVC` assemblies have to be referred in the project to use this, and these namespaces have to be added in the Web.config file as shown in this [KB article](https://support.syncfusion.com/kb/article/4895/how-to-avoid-the-exception-%22does-not-contain-a-definition-for-ej-and-no-extension-method-ej%22).
 
 ## Getting started with Syncfusion MVC
 
@@ -61,7 +61,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 
 	![Reference](getting-started_images/getting-started_img6.png)
 
-5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
+5. Then, Syncfusion licensing registration required message box will be shown as follow, if you are installed the trial setup or NuGet packages since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Please navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) which is shown in the licensing message box to generate and register the Syncfusion license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio.
 
 	![license](getting-started_images/getting-started_img21.png)
 	
@@ -79,7 +79,7 @@ The **Project** **Configuration** **Wizard** automates the process of configurin
 	
 For more information about Project Configuration Templates and their options details, please visit [here](https://help.syncfusion.com/extension/aspnet-mvc-extension/syncfusion-project-templates)
 
-N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://support.syncfusion.com/kb/article/8050/resolving-jquery-multiple-references-error)
+N> Ensure whether your project has only a single reference to jQuery. Because, multiple reference to jQuery in same project will throws console error and control will not be rendered. For more details refer to the KB [here](https://support.syncfusion.com/kb/article/8050/resolving-jquery-multiple-references-error-in-aspnet-mvc)
 
 ## Through Syncfusion Project Conversion
 

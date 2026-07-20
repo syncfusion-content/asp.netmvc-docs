@@ -12,7 +12,7 @@ documentation: ug
 
 To perform the jQuery validation for EJ form controls, refer to the following steps.
 
-**Step 1:** First you need to include the [jquery.validate](http://www.nuget.org/packages/jQuery.Validation/#) (1.15.0) script in your HTML page.
+**Step 1:** First you need to include the [jquery.validate](https://www.nuget.org/packages/jQuery.Validation/) (1.15.0) script in your HTML page.
 
 **Step 2:** After adding this script file, you can validate the EJ form controls in same way as you have performed the jQuery validation for HTML form elements. But, here you have to do some little bit configuration along with that. It is discussed in the following.
 
